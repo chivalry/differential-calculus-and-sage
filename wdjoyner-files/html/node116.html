@@ -1,0 +1,3266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Problems</TITLE>
+<META NAME="description" CONTENT="Problems">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node117.html">
+<LINK REL="previous" HREF="node115.html">
+<LINK REL="up" HREF="node109.html">
+<LINK REL="next" HREF="node117.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2250"
+  HREF="node117.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2244"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2238"
+  HREF="node115.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2246"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2248"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2251"
+  HREF="node117.html">Points of inflection</A>
+<B> Up:</B> <A NAME="tex2html2245"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2239"
+  HREF="node115.html">Examining a function for</A>
+ &nbsp; <B>  <A NAME="tex2html2247"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2249"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001070000000000000000">
+Problems</A>
+</H1>
+
+<P>
+
+<OL>
+<LI>It is desired to make an open-top box of greatest possible volume 
+from a square piece of tin whose side is a, by cutting equal 
+squares out of the corners and then folding up the tin to form the 
+sides. What should be the length of a side of the squares cut out?
+
+<P>
+Solution. Let 	<SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> = side of small square = depth of box;
+then 	<SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2366.png"
+ ALT="$ a - 2x$"></SPAN> = side of square forming bottom of box,
+and volume is 	<!-- MATH
+ $V 	= (a - 2x)^2x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="112" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2367.png"
+ ALT="$ V = (a - 2x)^2x$"></SPAN>,
+which is the function to be made a maximum by varying <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>. Applying rule:
+
+<P>
+First step. <!-- MATH
+ $\frac{dV}{dx} = (a - 2x)^2 - 4x(a - 2x) = a^2 - 8ax + 12x^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="338" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2368.png"
+ ALT="$ \frac{dV}{dx} = (a - 2x)^2 - 4x(a - 2x) = a^2 - 8ax + 12x^2$"></SPAN>.
+
+<P>
+Second step. Solving <!-- MATH
+ $a^2 - 8ax + 12x^2 = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="146" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2369.png"
+ ALT="$ a^2 - 8ax + 12x^2 = 0$"></SPAN> gives critical values 
+<!-- MATH
+ $x = \frac{a}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2370.png"
+ ALT="$ x = \frac{a}{2}$"></SPAN> and <!-- MATH
+ $\frac{a}{6}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2371.png"
+ ALT="$ \frac{a}{6}$"></SPAN>.
+
+<P>
+It is evident that <!-- MATH
+ $x = \frac{a}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2370.png"
+ ALT="$ x = \frac{a}{2}$"></SPAN> must give a minimum, for 
+then all the tin would be cut away, leaving no material out of 
+which to make a box. By the usual test, <!-- MATH
+ $x = \frac{a}{6}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2372.png"
+ ALT="$ x = \frac{a}{6}$"></SPAN> is found 
+to give a maximum volume <!-- MATH
+ $\frac{2a^3}{27}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2373.png"
+ ALT="$ \frac{2a^3}{27}$"></SPAN>. Hence the side of the 
+square to be cut out is one sixth of the side of the given square.
+
+<P>
+The drawing of the graph of the function in this 
+and the following problems is left to the student.
+
+<P>
+</LI>
+<LI>Assuming that the strength of a beam with rectangular cross section 
+varies directly as the breadth and as the square of the depth, 
+what are the dimensions of the strongest beam that can be sawed 
+out of a round log whose diameter is <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2374.png"
+ ALT="$ d$"></SPAN>?
+
+<P>
+Solution. If <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> = breadth and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> = depth, then the beam will have 
+maximum strength when the function <SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2375.png"
+ ALT="$ xy^2$"></SPAN> is a maximum. From the 
+construction and the Pythagorean theorem, <!-- MATH
+ $y^2 = d^2 - x^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2376.png"
+ ALT="$ y^2 = d^2 - x^2$"></SPAN>; hence 
+we should test the function
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f(x) = x(d^2 - x^2).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="134" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2377.png"
+ ALT="$\displaystyle f(x) = x(d^2 - x^2).
+$">
+</DIV><P></P>
+First step. <!-- MATH
+ $f'(x) = - 2x^2 + d^2 - x^2 = d^2 - 3x^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="249" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2378.png"
+ ALT="$ f'(x) = - 2x^2 + d^2 - x^2 = d^2 - 3x^2$"></SPAN>.
+
+<P>
+Second step. <!-- MATH
+ $d^2 - 3x^2 = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="93" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2379.png"
+ ALT="$ d^2 - 3x^2 = 0$"></SPAN>. Therefore, <!-- MATH
+ $x = \frac{d}{\sqrt{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2380.png"
+ ALT="$ x = \frac{d}{\sqrt{3}}$"></SPAN> = 
+critical value which gives a maximum.
+
+<P>
+Therefore, if the beam is cut so that depth = <!-- MATH
+ $\sqrt{\frac{2}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="31" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2381.png"
+ ALT="$ \sqrt{\frac{2}{3}}$"></SPAN> 
+of diameter of log, and breadth = <!-- MATH
+ $\sqrt{\frac{1}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="31" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2382.png"
+ ALT="$ \sqrt{\frac{1}{3}}$"></SPAN> of diameter of log,
+the beam will have maximum strength.
+
+<P>
+</LI>
+<LI>What is the width of the rectangle of maximum area that can 
+be inscribed in a given segment <SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2383.png"
+ ALT="$ OAA'$"></SPAN> of a parabola?
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:parabola-pblm"></A><A NAME="18746"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.9:</STRONG>
+An inscribed rectangle in a parabola, <SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$ P=(x,y)$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="406" HEIGHT="271" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2384.png"
+ ALT="\includegraphics[height=6cm,width=9cm]{parabola-pblm3.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+HINT. If <SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2385.png"
+ ALT="$ OC = h$"></SPAN>, <!-- MATH
+ $BC = h - x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="89" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2386.png"
+ ALT="$ BC = h - x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2387.png"
+ ALT="$ PP' = 2y$"></SPAN>; therefore the 
+area of rectangle <SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2388.png"
+ ALT="$ PDD'P'$"></SPAN> is <SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2389.png"
+ ALT="$ 2(h - x)y$"></SPAN>.
+
+<P>
+But since P lies on the parabola <SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2390.png"
+ ALT="$ y^2 = 2px$"></SPAN>, the function to be tested is
+<!-- MATH
+ $2(h - x)\sqrt{2px}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="101" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2391.png"
+ ALT="$ 2(h - x)\sqrt{2px}$"></SPAN>
+
+<P>
+Ans. Width = <!-- MATH
+ $\frac{2}{3} h$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2392.png"
+ ALT="$ \frac{2}{3} h$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find the altitude of the cone of maximum volume that can be 
+inscribed in a sphere of radius <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img115.png"
+ ALT="$ r$"></SPAN> (see Figure <A HREF="#fig:cone-pblm">8.10</A>).
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:cone-pblm"></A><A NAME="18760"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.10:</STRONG>
+An inscribed cone, height <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> and base radius <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, in a sphere.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="406" HEIGHT="272" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2393.png"
+ ALT="\includegraphics[height=6cm,width=9cm]{cone-pblm3.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+HINT. Volume of cone = <!-- MATH
+ $\frac{1}{3} \pi x^2 y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2394.png"
+ ALT="$ \frac{1}{3} \pi x^2 y$"></SPAN>. But <!-- MATH
+ $x^2= BC \times CD = y(2r - y)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="198" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2395.png"
+ ALT="$ x^2= BC \times CD = y(2r - y)$"></SPAN>; 
+therefore the function to be tested is
+<!-- MATH
+ $f(y) = \frac{\pi}{3} y^2 (2r - y)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="139" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2396.png"
+ ALT="$ f(y) = \frac{\pi}{3} y^2 (2r - y)$"></SPAN>.
+
+<P>
+Ans. Altitude of cone = <!-- MATH
+ $\frac{4}{3}r$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2397.png"
+ ALT="$ \frac{4}{3}r$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find the altitude of the cylinder of maximum volume that can be inscribed 
+in a given right cone  (see Figure <A HREF="#fig:cone-pblm2">8.11</A>).
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:cone-pblm2"></A><A NAME="18777"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.11:</STRONG>
+An inscribed cylinder in a cone.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="271" HEIGHT="272" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2398.png"
+ ALT="\includegraphics[height=6cm,width=6cm]{cone-pblm4.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+HINT. Let <SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2399.png"
+ ALT="$ AU = r$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2400.png"
+ ALT="$ BC = h$"></SPAN>. Volume of cylinder = <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2401.png"
+ ALT="$ \pi x^2y$"></SPAN>. 
+But from similar triangles ABC and DBG,
+<!-- MATH
+ $r/x =h/(h-y)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2402.png"
+ ALT="$ r/x =h/(h-y)$"></SPAN>, so <!-- MATH
+ $x = \frac{r(h - y)}{h}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2403.png"
+ ALT="$ x = \frac{r(h - y)}{h}$"></SPAN>.
+Hence the function to be tested is
+<!-- MATH
+ $f(y) = \frac{r^2}{h^2} y(h - y)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="138" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2404.png"
+ ALT="$ f(y) = \frac{r^2}{h^2} y(h - y)^2$"></SPAN>.
+
+<P>
+Ans. Altitude = <!-- MATH
+ $\frac{1}{3}h$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2405.png"
+ ALT="$ \frac{1}{3}h$"></SPAN>.
+
+<P>
+</LI>
+<LI>Divide <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> into two parts such that their product is a maximum.
+
+<P>
+Ans. Each part <!-- MATH
+ $= \frac{a}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="32" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2406.png"
+ ALT="$ = \frac{a}{2}$"></SPAN>.
+
+<P>
+</LI>
+<LI>Divide <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> into two such parts that the sum of the double of one and 
+square of the other may be a minimum.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img588.png"
+ ALT="$ 9$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find the number that exceeds its square by the greatest possible quantity.
+
+<P>
+Ans. <!-- MATH
+ $\frac{1}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img219.png"
+ ALT="$ \frac{1}{2}$"></SPAN>.
+
+<P>
+</LI>
+<LI>What number added to its reciprocal gives the least possible sum?
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN>.
+
+<P>
+</LI>
+<LI>Assuming that the stiffness of a beam of rectangular cross 
+section varies directly as the breadth and the cube of the depth, 
+what must be the breadth of the stiffest beam that can be cut from 
+a log <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2407.png"
+ ALT="$ 16$"></SPAN> inches in diameter?
+
+<P>
+Ans. Breadth <SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2408.png"
+ ALT="$ = 8$"></SPAN> inches.
+
+<P>
+</LI>
+<LI>A water tank is to be constructed with a square base and open top, 
+and is to hold <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2409.png"
+ ALT="$ 64$"></SPAN> cubic yards. If the cost of the sides is $ 1 a 
+square yard, and of the bottom $ 2 a square yard, what are the 
+dimensions when the cost is a minimum? What is the minimum cost?
+
+<P>
+Ans. Side of base = <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> yd., height = <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> yd., cost $ 96.
+
+<P>
+</LI>
+<LI>A rectangular tract of land is to be bought for the purpose of 
+laying out a quarter-mile track with straightaway sides and 
+semicircular ends. In addition a strip <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2410.png"
+ ALT="$ 35$"></SPAN> yards wide along each 
+straightaway is to be bought for grand stands, training quarters, 
+etc. If the land costs $ 200 an acre, what will be the maximum 
+cost of the land required? 
+
+<P>
+Ans. $ 856.
+
+<P>
+</LI>
+<LI>A torpedo boat is anchored <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img588.png"
+ ALT="$ 9$"></SPAN> miles from the nearest point 
+of a beach, and it is desired to send a messenger in the shortest 
+possible time to a military camp situated <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2411.png"
+ ALT="$ 15$"></SPAN> miles from that 
+point along the shore. If he can walk <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> miles an hour but row 
+only <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> miles an hour, required the place he must land.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN> miles from the camp.
+
+<P>
+</LI>
+<LI>A gas holder is a cylindrical vessel closed at the top and 
+open at the bottom, where it sinks into the water. What should be 
+its proportions for a given volume to require the least material 
+(this would also give least weight)?
+
+<P>
+Ans. Diameter = double the height.
+
+<P>
+</LI>
+<LI>What should be the dimensions and weight of a gas holder of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2412.png"
+ ALT="$ 8,000,000$"></SPAN> cubic feet capacity, built in the most 
+economical manner out of sheet iron <!-- MATH
+ $\frac{1}{16}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2413.png"
+ ALT="$ \frac{1}{16}$"></SPAN> of an inch 
+thick and weighing <!-- MATH
+ $\frac{5}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2414.png"
+ ALT="$ \frac{5}{2}$"></SPAN> lb. per sq. ft.?
+
+<P>
+Ans. Height = <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2415.png"
+ ALT="$ 137$"></SPAN> ft., diameter = <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2416.png"
+ ALT="$ 273$"></SPAN> ft., weight = <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2417.png"
+ ALT="$ 220$"></SPAN> tons.
+
+<P>
+</LI>
+<LI>A sheet of paper is to contain <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2418.png"
+ ALT="$ 18$"></SPAN> sq. in. of printed matter. 
+The margins at the top and bottom are to be <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN> inches each and 
+at the sides <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN> inch each. Determine the dimensions of the 
+sheet which will require the least amount of paper.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> in. by <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> in.
+
+<P>
+</LI>
+<LI>A paper-box manufacturer has in stock a quantity of 
+strawboard <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2419.png"
+ ALT="$ 30$"></SPAN> inches by <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2420.png"
+ ALT="$ 14$"></SPAN> inches. Out of this material he 
+wishes to make open-top boxes by cutting equal squares out of each 
+corner and then folding up to form the sides. Find the side of 
+the square that should be cut out in order to give the 
+boxes maximum volume.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN> inches.
+
+<P>
+</LI>
+<LI>A roofer wishes to make an open gutter of maximum capacity whose 
+bottom and sides are each <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> inches wide and whose sides have the 
+same slope. What should be the width across the top?
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img595.png"
+ ALT="$ 8$"></SPAN> inches. <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN>
+
+<P>
+</LI>
+<LI>Assuming that the energy expended in driving a steamboat through 
+the water varies as the cube of her velocity, find her most economical 
+rate per hour when steaming against a current running <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2363.png"
+ ALT="$ c$"></SPAN> miles per hour.
+
+<P>
+HINT. Let 	<SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> = most economical speed;
+then 	<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2421.png"
+ ALT="$ av^3$"></SPAN> = energy expended each hour, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> being a 
+constant depending upon the particular conditions,
+and 	<SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2422.png"
+ ALT="$ v - c$"></SPAN>	= actual distance advanced per hour.
+Hence <!-- MATH
+ $\frac{av^3}{v - c}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="31" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2423.png"
+ ALT="$ \frac{av^3}{v - c}$"></SPAN> is the energy expended per mile of 
+distance advanced, and it is therefore the function whose minimum is wanted.
+
+<P>
+</LI>
+<LI>Prove that a conical tent of a given capacity will require 
+the least amount of canvas when the height is <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img228.png"
+ ALT="$ \sqrt{2}$"></SPAN> times the 
+radius of the base. Show that when the canvas is laid out flat it 
+will be a circle with a sector of <!-- MATH
+ $152^0 9'= 2.6555...$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="127" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2424.png"
+ ALT="$ 152^0 9'= 2.6555... $"></SPAN> cut out. 
+A bell tent <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> ft. high should then have a base of diameter <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2420.png"
+ ALT="$ 14$"></SPAN> ft. 
+and would require <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2425.png"
+ ALT="$ 272$"></SPAN> sq. ft. of canvas.
+
+<P>
+</LI>
+<LI>A cylindrical steam boiler is to be constructed having a capacity of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="36" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2426.png"
+ ALT="$ 1000$"></SPAN> cu. ft. The material for the side costs $ 2 a square foot, 
+and for the ends $ 3 a square foot. Find radius when the cost is the least.
+
+<P>
+Ans. <!-- MATH
+ $\frac{1}{\sqrt[3]{3\pi}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2427.png"
+ ALT="$ \frac{1}{\sqrt[3]{3\pi}}$"></SPAN> ft.
+
+<P>
+</LI>
+<LI>In the corner of a field bounded by two perpendicular roads a spring 
+is situated <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img720.png"
+ ALT="$ 6$"></SPAN> rods from one road and <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img595.png"
+ ALT="$ 8$"></SPAN> rods from the other. 
+
+<P>
+(a) How should a straight road be run by this spring and across the 
+corner so as to cut off as little of the field as possible?
+
+<P>
+(b) What would be the length of the shortest road that could be run across?
+
+<P>
+Ans. (a) <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2428.png"
+ ALT="$ 12$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2407.png"
+ ALT="$ 16$"></SPAN> rods from corner.
+(b) <!-- MATH
+ $(6^{\frac{2}{3}} + 8^{\frac{2}{3}})^{\frac{3}{2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2429.png"
+ ALT="$ (6^{\frac{2}{3}} + 8^{\frac{2}{3}})^{\frac{3}{2}}$"></SPAN> rods.
+
+<P>
+</LI>
+<LI>Show that a square is the rectangle of maximum perimeter that can be 
+inscribed in a given circle.
+
+<P>
+</LI>
+<LI>Two poles of height a and b feet are standing upright and are <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2363.png"
+ ALT="$ c$"></SPAN> feet apart. 
+Find the point on the line joining their bases such that the sum 
+of the squares of the distances from this point to the tops of the poles is a minimum.
+(Ans. Midway between the poles.)
+When will the sum of these distances be a minimum?
+
+<P>
+</LI>
+<LI>A conical tank with open top is to be built to contain <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2430.png"
+ ALT="$ V$"></SPAN> cubic feet. 
+Determine the shape if the material used is a minimum.
+
+<P>
+</LI>
+<LI>An isosceles triangle has a base <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2428.png"
+ ALT="$ 12$"></SPAN> in. long and altitude <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> in. 
+Find the rectangle of maximum area that can be inscribed 
+in it, one side of the rectangle coinciding with the base of the triangle.
+
+<P>
+</LI>
+<LI>Divide the number <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> into two such parts that the sum of the 
+cube of one part and three times the square of the other shall have a maximum value.
+
+<P>
+</LI>
+<LI>Divide the number <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> into two parts such that the product of 
+one part by the fourth power of the other part shall be a maximum.
+
+<P>
+</LI>
+<LI>A can buoy in the form of a double cone is to be made from two equal 
+circular iron plates of radius <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img115.png"
+ ALT="$ r$"></SPAN>. Find the radius of the base of the cone 
+when the buoy has the greatest displacement (maximum volume).
+
+<P>
+Ans. <!-- MATH
+ $r \sqrt{\frac{2}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2431.png"
+ ALT="$ r \sqrt{\frac{2}{3}}$"></SPAN>.
+
+<P>
+</LI>
+<LI>Into a full conical wineglass of depth <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and generating angle <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> 
+there is carefully dropped a sphere of such size as to cause the 
+greatest overflow. Show that the radius of the sphere is
+<!-- MATH
+ $\frac{\alpha \sin \alpha}{\sin \alpha \cos 2 \alpha}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2432.png"
+ ALT="$ \frac{\alpha \sin \alpha}{\sin \alpha \cos 2 \alpha}$"></SPAN>.
+
+<P>
+</LI>
+<LI>A wall <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2433.png"
+ ALT="$ 27$"></SPAN> ft. high is <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img595.png"
+ ALT="$ 8$"></SPAN> ft. from a house. Find the length of the 
+shortest ladder that will reach the house if one end rests on the 
+ground outside of the wall.
+
+<P>
+Ans. <!-- MATH
+ $13 \sqrt{13}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2434.png"
+ ALT="$ 13 \sqrt{13}$"></SPAN>.
+
+<P>
+Here's how to solve this using <I CLASS="sans">SAGE</I>:
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2435.png"
+ ALT="$ h$"></SPAN> be the height above ground at which the ladder hits the 
+house and let <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2374.png"
+ ALT="$ d$"></SPAN> be the distance from the wall that the ladder 
+hits the ground on the other side of the wall. By similar triangles,
+<!-- MATH
+ $h/27=(8+d)/d=1+\frac{8}{d}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="182" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2436.png"
+ ALT="$ h/27=(8+d)/d=1+\frac{8}{d}$"></SPAN>, so <!-- MATH
+ $d+8 = 8\frac{h}{h-27}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="103" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2437.png"
+ ALT="$ d+8 = 8\frac{h}{h-27}$"></SPAN>. 
+The length of the ladder is,
+by the Pythagorean theorem, 
+<!-- MATH
+ $f(h) = \sqrt{h^2+(8+d)^2}=\sqrt{h^2+(8\frac{h}{h-27})^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="298" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2438.png"
+ ALT="$ f(h) = \sqrt{h^2+(8+d)^2}=\sqrt{h^2+(8\frac{h}{h-27})^2}$"></SPAN>.
+
+<P>
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: h = var("h")
+sage: f(h) = sqrt(h^2+(8*h/(h-27))^2)
+sage: f1(h) = diff(f(h),h)
+sage: f2(h) = diff(f(h),h,2)
+sage: crit_pts = solve(f1(h) == 0,h); crit_pts
+[h == 21 - 6*sqrt(3)*I, h == 6*sqrt(3)*I + 21, h == 39, h == 0]
+sage: h0 = crit_pts[2].rhs(); h0
+39
+sage: f(h0)
+13*sqrt(13)
+sage: f2(h0)
+3/(4*sqrt(13))
+</PRE>
+<P>
+This says <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2439.png"
+ ALT="$ f(h)$"></SPAN> has four critical points, but only one of which is 
+meaningful, <SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2440.png"
+ ALT="$ h_0=39$"></SPAN>. At this point, <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2439.png"
+ ALT="$ f(h)$"></SPAN> is a minimum.
+
+<P>
+</LI>
+<LI>A vessel is anchored <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN> miles offshore, and opposite a point <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> 
+miles further along the shore another vessel is anchored <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img588.png"
+ ALT="$ 9$"></SPAN> miles 
+from the shore. A boat from the first vessel is to land a passenger 
+on the shore and then proceed to the other vessel.
+What is the shortest course of the boat?
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2441.png"
+ ALT="$ 13$"></SPAN> miles.
+
+<P>
+</LI>
+<LI>A steel girder <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2442.png"
+ ALT="$ 25$"></SPAN> ft. long is moved on rollers along a passageway 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2443.png"
+ ALT="$ 12.8$"></SPAN> ft. wide and into a corridor at right angles to the passageway. 
+Neglecting the width of the girder, how wide must the corridor be?
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2444.png"
+ ALT="$ 5.4$"></SPAN> ft.
+
+<P>
+</LI>
+<LI>A miner wishes to dig a tunnel from a point A to a point B <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2445.png"
+ ALT="$ 300$"></SPAN> 
+feet below and <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2446.png"
+ ALT="$ 500$"></SPAN> feet to the east of A. Below the level of A 
+it is bed rock and above A is soft earth. If the cost of tunneling 
+through earth is $ 1 and through rock $ 3 per linear foot, 
+find the minimum cost of a tunnel.
+
+<P>
+Ans. $ 1348.53.
+
+<P>
+</LI>
+<LI>A carpenter has <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2296.png"
+ ALT="$ 108$"></SPAN> sq. ft. of lumber with which to build a box with 
+a square base and open top. Find the dimensions of the largest 
+possible box he can make.
+
+<P>
+Ans. <!-- MATH
+ $6 \times 6 \times 3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2447.png"
+ ALT="$ 6 \times 6 \times 3$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find the right triangle of maximum area that can be constructed on a 
+line of length <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2435.png"
+ ALT="$ h$"></SPAN> as hypotenuse.
+
+<P>
+Ans. <!-- MATH
+ $\frac{h}{\sqrt{2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2448.png"
+ ALT="$ \frac{h}{\sqrt{2}}$"></SPAN> = length of both legs.
+
+<P>
+</LI>
+<LI>What is the isosceles triangle of maximum area that can be inscribed 
+in a given circle?
+
+<P>
+Ans. An equilateral triangle.
+
+<P>
+</LI>
+<LI>Find the altitude of the maximum rectangle that can be inscribed 
+in a right triangle with base <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN> and altitude <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2435.png"
+ ALT="$ h$"></SPAN>.
+
+<P>
+Ans. Altitude = <!-- MATH
+ $\frac{h}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2449.png"
+ ALT="$ \frac{h}{2}$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find the dimensions of the rectangle of maximum area that can be inscribed 
+in the ellipse <!-- MATH
+ $b^2x^2 + a^2y^2 = a^2b^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1434.png"
+ ALT="$ b^2x^2 + a^2y^2 = a^2b^2$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $a \sqrt{2}\times b \sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2450.png"
+ ALT="$ a \sqrt{2}\times b \sqrt{2}$"></SPAN>; area = <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2451.png"
+ ALT="$ 2ab$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find the altitude of the right cylinder of maximum volume that 
+can be inscribed in a sphere of radius <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img115.png"
+ ALT="$ r$"></SPAN>.
+
+<P>
+Ans. Altitude of cylinder = <!-- MATH
+ $\frac{2r}{\sqrt{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2452.png"
+ ALT="$ \frac{2r}{\sqrt{3}}$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find the altitude of the right cylinder of maximum convex (curved) 
+surface that can be inscribed in a given sphere.
+
+<P>
+Ans. Altitude of cylinder = <!-- MATH
+ $r \sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2453.png"
+ ALT="$ r \sqrt{2}$"></SPAN>.
+
+<P>
+</LI>
+<LI>What are the dimensions of the right hexagonal prism of minimum 
+surface whose volume is <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2454.png"
+ ALT="$ 36$"></SPAN> cubic feet?
+
+<P>
+Ans. Altitude = <!-- MATH
+ $2 \sqrt{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2455.png"
+ ALT="$ 2 \sqrt{3}$"></SPAN>; side of hexagon = <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find the altitude of the right cone of minimum volume circumscribed 
+about a given sphere.
+
+<P>
+Ans. Altitude = <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2456.png"
+ ALT="$ 4r$"></SPAN>, and volume = <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2457.png"
+ ALT="$ 2\times$"></SPAN> vol. of sphere.
+
+<P>
+</LI>
+<LI>A right cone of maximum volume is inscribed in a given right cone, 
+the vertex of the inside cone being at the center of the base of 
+the given cone. Show that the altitude of the inside cone is one 
+third the altitude of the given cone.
+
+<P>
+</LI>
+<LI>Given a point on the axis of the parabola <SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2390.png"
+ ALT="$ y^2 = 2px$"></SPAN> at a distance 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> from the vertex; find the abscissa of the point of the curve nearest to it.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2458.png"
+ ALT="$ x = a - p$"></SPAN>.
+
+<P>
+</LI>
+<LI>What is the length of the shortest line that can be drawn 
+tangent to the ellipse <!-- MATH
+ $b^2x^2 + a^2y^2 = a^2b^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1434.png"
+ ALT="$ b^2x^2 + a^2y^2 = a^2b^2$"></SPAN> and 
+meeting the coordinate axes?
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2459.png"
+ ALT="$ a + b$"></SPAN>.
+
+<P>
+</LI>
+<LI>A Norman window consists of a rectangle surmounted by a 
+semicircle. Given the perimeter, required the height and 
+breadth of the window when the quantity of light admitted is a maximum.
+
+<P>
+Ans. Radius of circle = height of rectangle.
+
+<P>
+</LI>
+<LI>A tapestry <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2460.png"
+ ALT="$ 7$"></SPAN> feet in height is hung on a wall so that its lower 
+edge is <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img588.png"
+ ALT="$ 9$"></SPAN> feet above an observer's eye. At what distance from the 
+wall should he stand in order to obtain the most favorable view?
+(HINT. The vertical angle subtended by the tapestry in the eye of the 
+observer must be at a maximum.)
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2428.png"
+ ALT="$ 12$"></SPAN> feet.
+
+<P>
+</LI>
+<LI>What are the most economical proportions of a tin can which shall have 
+a given capacity, making allowance for waste?
+(HINT. There is no waste in cutting out tin for the side of the can, but 
+for top and bottom a hexagon of tin circumscribing the circular pieces 
+required is used up.
+NOTE 1. If no allowance is made for waste, then height = diameter.
+NOTE 2. We know that the shape of a bee cell is hexagonal, giving a 
+certain capacity for honey with the greatest possible economy of wax.)
+
+<P>
+Ans. Height = <!-- MATH
+ $\frac{2 \sqrt{3}}{\pi} \times$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2461.png"
+ ALT="$ \frac{2 \sqrt{3}}{\pi} \times$"></SPAN> diameter of base.
+
+<P>
+</LI>
+<LI>An open cylindrical trough is constructed by bending a given sheet of 
+tin at breadth <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2462.png"
+ ALT="$ 2a$"></SPAN>. Find the radius of the cylinder of which the 
+trough forms a part when the capacity of the trough is a maximum.
+
+<P>
+Ans. Rad. = <!-- MATH
+ $\frac{2a}{\pi}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2463.png"
+ ALT="$ \frac{2a}{\pi}$"></SPAN>; i.e. it must be bent in the form of a semicircle.
+
+<P>
+</LI>
+<LI>A weight <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2464.png"
+ ALT="$ W$"></SPAN> is to be raised by means of a lever with the force <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2465.png"
+ ALT="$ F$"></SPAN> 
+at one end and the point of support at the other. If the weight is 
+suspended from a point at a distance <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> from the point of support, 
+and the weight of the beam is <SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img733.png"
+ ALT="$ w$"></SPAN> pounds per linear foot, what 
+should be the length of the lever in order that the force required 
+to lift it shall be a minimum?
+
+<P>
+Ans. <!-- MATH
+ $x = \sqrt{\frac{2aW}{w}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2466.png"
+ ALT="$ x = \sqrt{\frac{2aW}{w}}$"></SPAN> feet.
+
+<P>
+</LI>
+<LI>An electric arc light is to be placed directly over the center of a 
+circular plot of grass <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2467.png"
+ ALT="$ 100$"></SPAN> feet in diameter. Assuming that the 
+intensity of light varies directly as the sine of the angle under 
+which it strikes an illuminated surface, and inversely as the square 
+of its distance from the surface, how high should the light he 
+hung in order that the best possible light shall fall on a walk along 
+the circumference of the plot?
+
+<P>
+Ans. <!-- MATH
+ $\frac{50}{\sqrt{2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2468.png"
+ ALT="$ \frac{50}{\sqrt{2}}$"></SPAN> feet
+
+<P>
+</LI>
+<LI>The lower corner of a leaf, whose width is <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>, is folded over so as just 
+to reach the inner edge of the page. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:leaf"></A><A NAME="18844"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.12:</STRONG>
+A leafed page of width <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="136" HEIGHT="225" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2469.png"
+ ALT="\includegraphics[height=5cm,width=3cm]{leaf2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+(a) Find the width of the part folded over when the length of the 
+crease is a minimum. 
+
+<P>
+(b) Find the width when the area folded over is a minimum.
+
+<P>
+Ans. (a) <!-- MATH
+ $\frac{3}{4}a$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2470.png"
+ ALT="$ \frac{3}{4}a$"></SPAN>; (b) <!-- MATH
+ $\frac{2}{3}a$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2471.png"
+ ALT="$ \frac{2}{3}a$"></SPAN>.
+
+<P>
+</LI>
+<LI>A rectangular stockade is to be built which must have a certain 
+area. If a stone wall already constructed is available for one of 
+the sides, find the dimensions which would make the cost of construction the least.
+
+<P>
+Ans. Side parallel to wall = twice the length of each end.
+
+<P>
+</LI>
+<LI>When the resistance of air is taken into account, the inclination 
+of a pendulum to the vertical may be given by the formula
+<!-- MATH
+ $\theta= ae^{-kt}\cos\, (nt + \eta)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="154" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2472.png"
+ ALT="$ \theta= ae^{-kt}\cos\, (nt + \eta)$"></SPAN>.
+Show that the greatest elongations occur at equal intervals 
+<!-- MATH
+ $\frac{\pi}{n}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2473.png"
+ ALT="$ \frac{\pi}{n}$"></SPAN> of time.
+
+<P>
+</LI>
+<LI>It is required to measure a certain unknown magnitude <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> with precision. 
+Suppose that <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN> equally careful observations of the magnitude 
+are made, giving the results
+<!-- MATH
+ $a_1, a_2, a_3, \dots, a_n$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="118" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2474.png"
+ ALT="$ a_1, a_2, a_3, \dots, a_n$"></SPAN>.
+The errors of these observations are evidently
+<!-- MATH
+ $x - a_1, x - a_2, x - a_3, \cdots, x - a_n$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="235" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2475.png"
+ ALT="$ x - a_1, x - a_2, x - a_3, \cdots, x - a_n$"></SPAN>,
+some of which are positive and some negative.
+It has been agreed that the most probable value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> is such that it 
+renders the sum of the squares of the errors, namely
+<!-- MATH
+ $(x - a_1)^2 + (x - a_2)^2 + (x - a_3)^2 + \cdots + (x - a_n)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="357" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2476.png"
+ ALT="$ (x - a_1)^2 + (x - a_2)^2 + (x - a_3)^2 + \cdots + (x - a_n)^2$"></SPAN>,
+a minimum. Show that this gives the arithmetical mean of the 
+observations as the most probable value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>.
+
+<P>
+(This is related to the method of least squares, discovered by Gauss,
+a commonly used technique in statistical applications.) 
+
+<P>
+</LI>
+<LI>The bending moment at <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> of a beam of length <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2477.png"
+ ALT="$ \ell$"></SPAN>, uniformly loaded, 
+is given by the formula
+<!-- MATH
+ $M = \frac{1}{2} w\ell x - \frac{1}{2} wx^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="138" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2478.png"
+ ALT="$ M = \frac{1}{2} w\ell x - \frac{1}{2} wx^2$"></SPAN>,
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img733.png"
+ ALT="$ w$"></SPAN> = load per unit length. Show that the maximum bending 
+moment is at the center of the beam.
+
+<P>
+</LI>
+<LI>If the total waste per mile in an electric conductor is
+<!-- MATH
+ $W = c^2 r + \frac{t^2}{r}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="99" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2479.png"
+ ALT="$ W = c^2 r + \frac{t^2}{r}$"></SPAN>, 
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2363.png"
+ ALT="$ c$"></SPAN> = current in amperes (a constant), 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img115.png"
+ ALT="$ r$"></SPAN> = resistance in ohms per mile, and 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> = a constant depending on the interest on the investment 
+and the depreciation of the plant, what is the relation 
+between <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2363.png"
+ ALT="$ c$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img115.png"
+ ALT="$ r$"></SPAN>, and <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> when the waste is a minimum?
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2480.png"
+ ALT="$ cr = t$"></SPAN>.
+
+<P>
+</LI>
+<LI>A submarine telegraph cable consists of a core of copper wires 
+with a covering made of nonconducting material. If x denote the ratio 
+of the radius of the core to the thickness of the covering, it is known 
+that the speed of signaling varies as
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x^2 \log \frac{1}{x}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="64" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2481.png"
+ ALT="$\displaystyle x^2 \log \frac{1}{x}.
+$">
+</DIV><P></P>
+Show that the greatest speed is attained when <!-- MATH
+ $x = \frac{1}{\sqrt{e}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2482.png"
+ ALT="$ x = \frac{1}{\sqrt{e}}$"></SPAN>.
+
+<P>
+</LI>
+<LI>Assuming that the power given out by a voltaic cell is given by the formula
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+P = \frac{E^2 R}{(r + R)^2},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="105" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2483.png"
+ ALT="$\displaystyle P = \frac{E^2 R}{(r + R)^2},
+$">
+</DIV><P></P>
+when <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2484.png"
+ ALT="$ E$"></SPAN> = constant electromotive force, 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img115.png"
+ ALT="$ r$"></SPAN> = constant internal resistance, 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1975.png"
+ ALT="$ R$"></SPAN> = external resistance, prove that <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img251.png"
+ ALT="$ P$"></SPAN> is a maximum when <SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2485.png"
+ ALT="$ r = R$"></SPAN>.
+
+<P>
+</LI>
+<LI>The force exerted by a circular electric current of radius <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> on a small 
+magnet whose axis coincides with the axis of the circle varies as
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{x}{(a^2 + x^2)^{\frac{5}{2}}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="86" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2486.png"
+ ALT="$\displaystyle \frac{x}{(a^2 + x^2)^{\frac{5}{2}}}.
+$">
+</DIV><P></P>
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> = distance of magnet from plane of circle. Prove that the 
+force is a maximum when <!-- MATH
+ $x = \frac{a}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2370.png"
+ ALT="$ x = \frac{a}{2}$"></SPAN>.
+
+<P>
+</LI>
+<LI>We have two sources of heat at A and B, which we visualize on the
+real line (with B to the right or A), with intensities <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN> respectively. 
+The total intensity of heat at a point P between A and B at a distance of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> from A 
+is given by the formula
+<!-- MATH
+ $I = \frac{a}{x^2} + \frac{b}{(d - x)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2487.png"
+ ALT="$ I = \frac{a}{x^2} + \frac{b}{(d - x)^2}$"></SPAN>.
+Show that the temperature at P will be the lowest when
+<!-- MATH
+ $\frac{d - x}{x} = \frac{\sqrt[3]{b}}{\sqrt[3]{a}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2488.png"
+ ALT="$ \frac{d - x}{x} = \frac{\sqrt[3]{b}}{\sqrt[3]{a}}$"></SPAN>.
+that is, the distances BP and AP have the same ratio as the cube roots 
+of the corresponding heat intensities. The distance of P from A is
+<!-- MATH
+ $x = \frac{a^{\frac{1}{3}} d}{a^{\frac{1}{3}} + b^{\frac{1}{3}} }$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2489.png"
+ ALT="$ x = \frac{a^{\frac{1}{3}} d}{a^{\frac{1}{3}} + b^{\frac{1}{3}} }$"></SPAN>.
+
+<P>
+</LI>
+<LI>The range of a projectile in a vacuum is given by the formula
+<!-- MATH
+ $R = \frac{v_0^2 \sin 2\phi}{g}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="89" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2490.png"
+ ALT="$ R = \frac{v_0^2 \sin 2\phi}{g}$"></SPAN>,
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1988.png"
+ ALT="$ v_0$"></SPAN> = initial velocity, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2491.png"
+ ALT="$ g$"></SPAN> = acceleration due to gravity, 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img265.png"
+ ALT="$ \phi$"></SPAN> = angle of projection with the horizontal. 
+Find the angle of projection which gives the greatest range for a 
+given initial velocity.
+
+<P>
+Ans. <!-- MATH
+ $\phi  = 45^o=\pi/4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="105" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2492.png"
+ ALT="$ \phi = 45^o=\pi/4$"></SPAN>.
+
+<P>
+</LI>
+<LI>The total time of flight of the projectile in the last problem is given by the formula
+<!-- MATH
+ $T = \frac{2v_0 \sin \phi}{g}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2493.png"
+ ALT="$ T = \frac{2v_0 \sin \phi}{g}$"></SPAN>.
+At what angle should it be projected in order to make the time of flight a maximum?
+
+<P>
+Ans. <!-- MATH
+ $\phi  = 90^o=\pi/2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="105" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2494.png"
+ ALT="$ \phi = 90^o=\pi/2$"></SPAN>.
+
+<P>
+</LI>
+<LI>The time it takes a ball to roll down an inclined plane with angle
+<SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img265.png"
+ ALT="$ \phi$"></SPAN> (with respect to the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis) is given by the formula
+<!-- MATH
+ $T = 2\sqrt{\frac{2}{g \sin 2\phi}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="105" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2495.png"
+ ALT="$ T = 2\sqrt{\frac{2}{g \sin 2\phi}}$"></SPAN>.
+Neglecting friction, etc., what must be the value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img265.png"
+ ALT="$ \phi$"></SPAN> to 
+make the quickest descent?
+
+<P>
+Ans. <!-- MATH
+ $\phi  = 45^o=\pi/4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="105" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2492.png"
+ ALT="$ \phi = 45^o=\pi/4$"></SPAN>.
+
+<P>
+</LI>
+<LI>Examine the function <!-- MATH
+ $(x - 1)^2(x + 1)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2496.png"
+ ALT="$ (x - 1)^2(x + 1)^3$"></SPAN> for maximum and minimum 
+values. Use the first method.
+
+<P>
+Solution. <!-- MATH
+ $f(x) = (x - 1)^2(x + 1)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="169" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2497.png"
+ ALT="$ f(x) = (x - 1)^2(x + 1)^3$"></SPAN>.
+
+<P>
+First step. <!-- MATH
+ $f'(x) = 2(x - 1)(x + 1)^3 + 3(x - 1)^2(x + 1)^2
+= (x - 1)(x + 1)^2(5x - 1)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="496" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2498.png"
+ ALT="$ f'(x) = 2(x - 1)(x + 1)^3 + 3(x - 1)^2(x + 1)^2
+= (x - 1)(x + 1)^2(5x - 1)$"></SPAN>.
+
+<P>
+Second step. <!-- MATH
+ $(x - 1)(x + 1)^2(5x - 1)= 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="195" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2499.png"
+ ALT="$ (x - 1)(x + 1)^2(5x - 1)= 0$"></SPAN>,
+<!-- MATH
+ $x = 1, -1, \frac{1}{5}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2500.png"
+ ALT="$ x = 1, -1, \frac{1}{5}$"></SPAN>, which are critical values.
+
+<P>
+Third step. <!-- MATH
+ $f'(x) = 5(x -1) (x + 1)^2 (x - \frac{1}{5})$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="225" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2501.png"
+ ALT="$ f'(x) = 5(x -1) (x + 1)^2 (x - \frac{1}{5})$"></SPAN>.
+
+<P>
+Fourth step. 	Examine first for critical value <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>.
+
+<P>
+When <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2502.png"
+ ALT="$ x &lt; 1$"></SPAN>, <!-- MATH
+ $f'(x) = 5( - )( + )2( + ) = -$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="185" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2503.png"
+ ALT="$ f'(x) = 5( - )( + )2( + ) = -$"></SPAN>.
+When <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img397.png"
+ ALT="$ x &gt; 1$"></SPAN>, <!-- MATH
+ $f'(x) = 5( + )( + )2( + ) = +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="185" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2504.png"
+ ALT="$ f'(x) = 5( + )( + )2( + ) = +$"></SPAN>.
+Therefore, when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN> the function has a minimum value 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2505.png"
+ ALT="$ f(l) = 0$"></SPAN>.
+Examine now for the critical value <!-- MATH
+ $x = \frac{1}{5}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2506.png"
+ ALT="$ x = \frac{1}{5}$"></SPAN>.
+When <!-- MATH
+ $x < \frac{1}{5}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2507.png"
+ ALT="$ x &lt; \frac{1}{5}$"></SPAN>, <!-- MATH
+ $f'(x) = 5(-) (+)^2 (-) = +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="184" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2508.png"
+ ALT="$ f'(x) = 5(-) (+)^2 (-) = +$"></SPAN>.
+When <!-- MATH
+ $x > \frac{1}{5}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2509.png"
+ ALT="$ x &gt; \frac{1}{5}$"></SPAN>, <!-- MATH
+ $f'(x) = 5(-) (+)^2 (+) = -$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="184" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2510.png"
+ ALT="$ f'(x) = 5(-) (+)^2 (+) = -$"></SPAN>.
+Therefore, when <!-- MATH
+ $x = \frac{1}{5}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2506.png"
+ ALT="$ x = \frac{1}{5}$"></SPAN> the function has a maximum value 
+<!-- MATH
+ $f(\frac{1}{5}) = 1.11$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2511.png"
+ ALT="$ f(\frac{1}{5}) = 1.11$"></SPAN>.
+Examine lastly for the critical value <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img708.png"
+ ALT="$ x = -1$"></SPAN>.
+When <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2512.png"
+ ALT="$ x &lt; - 1$"></SPAN>, <!-- MATH
+ $f'(x) = 5( - )( - )2( - ) = +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="185" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2513.png"
+ ALT="$ f'(x) = 5( - )( - )2( - ) = +$"></SPAN>.
+When <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2514.png"
+ ALT="$ x &gt; - 1$"></SPAN>, <!-- MATH
+ $f'(x) = 5( - )( + )2( - ) = +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="185" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2515.png"
+ ALT="$ f'(x) = 5( - )( + )2( - ) = +$"></SPAN>.
+Therefore, when <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img708.png"
+ ALT="$ x = -1$"></SPAN> the function has neither a maximum nor a minimum value.
+
+<P>
+</LI>
+<LI><P>
+</LI>
+</OL>
+
+<P>
+Examine the following functions for maximum and minimum values:
+
+<P>
+
+<OL>
+<LI><!-- MATH
+ $(x - 3)^2(x - 2)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="109" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2516.png"
+ ALT="$ (x - 3)^2(x - 2)$"></SPAN>. 	
+
+<P>
+Ans. 	<!-- MATH
+ $x = \frac{7}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2517.png"
+ ALT="$ x = \frac{7}{3}$"></SPAN>, gives max. = <!-- MATH
+ $\frac{4}{27}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2518.png"
+ ALT="$ \frac{4}{27}$"></SPAN>;
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img426.png"
+ ALT="$ x=3$"></SPAN>, gives min. = <SPAN CLASS="MATH">0</SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $(x - 1)^3(x - 2)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2519.png"
+ ALT="$ (x - 1)^3(x - 2)^2$"></SPAN>. 
+
+<P>
+Ans. <!-- MATH
+ $x = \frac{8}{5}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2520.png"
+ ALT="$ x = \frac{8}{5}$"></SPAN>, gives max. = <SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2521.png"
+ ALT="$ 0.03456$"></SPAN>;
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, gives min. = <SPAN CLASS="MATH">0</SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>, gives neither.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $(x - 4)^5(x + 2)^4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2522.png"
+ ALT="$ (x - 4)^5(x + 2)^4$"></SPAN>. 	
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img425.png"
+ ALT="$ x=-2$"></SPAN>, gives max.;
+<!-- MATH
+ $x = \frac{2}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2523.png"
+ ALT="$ x = \frac{2}{3}$"></SPAN> gives min; <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img716.png"
+ ALT="$ x = 4$"></SPAN>, gives neither.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $(x - 2)^5(2x + 1)^4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="125" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2524.png"
+ ALT="$ (x - 2)^5(2x + 1)^4$"></SPAN>. 
+
+<P>
+Ans. <!-- MATH
+ $x = -\frac{1}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2525.png"
+ ALT="$ x = -\frac{1}{2}$"></SPAN>, gives max.;
+  <!-- MATH
+ $x = \frac{11}{18}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2526.png"
+ ALT="$ x = \frac{11}{18}$"></SPAN>, gives min.;
+  	<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, gives neither.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $(x + 1)^{\frac{2}{3}}(x - 5)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="119" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2527.png"
+ ALT="$ (x + 1)^{\frac{2}{3}}(x - 5)^2$"></SPAN>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ch8-prblm73"></A><A NAME="19242"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.13:</STRONG>
+<I CLASS="sans">SAGE</I> plot of <!-- MATH
+ $y=(x + 1)^{\frac{2}{3}}(x - 5)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="149" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$ y=(x + 1)^{\frac {2}{3}}(x - 5)^2$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="226" HEIGHT="136" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2528.png"
+ ALT="\includegraphics[height=3cm,width=5cm]{ch8-prblm73.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Ans. <!-- MATH
+ $x = \frac{1}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img698.png"
+ ALT="$ x = \frac{1}{2}$"></SPAN>, gives max.;
+ <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img708.png"
+ ALT="$ x = -1$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN>, give min.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $(2x - a)^{\frac{1}{3}} (x - a)^{\frac{2}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="131" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2529.png"
+ ALT="$ (2x - a)^{\frac{1}{3}} (x - a)^{\frac{2}{3}}$"></SPAN>. 
+
+<P>
+Ans. <!-- MATH
+ $x = \frac{2a}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2530.png"
+ ALT="$ x = \frac{2a}{3}$"></SPAN>, gives max.;
+  	<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN> and <!-- MATH
+ $-\frac{1}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2531.png"
+ ALT="$ -\frac{1}{3}$"></SPAN>, gives min.;
+  	<!-- MATH
+ $x = \frac{a}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2370.png"
+ ALT="$ x = \frac{a}{2}$"></SPAN>, gives neither.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x(x - 1)^2(x + 1)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="126" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2532.png"
+ ALT="$ x(x - 1)^2(x + 1)^3$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $x = \frac{1}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img698.png"
+ ALT="$ x = \frac{1}{2}$"></SPAN>, gives max.;
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN> and <!-- MATH
+ $-\frac{1}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2531.png"
+ ALT="$ -\frac{1}{3}$"></SPAN>, gives min.;
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img708.png"
+ ALT="$ x = -1$"></SPAN>, gives neither.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x(a + x)^2(a - x)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="126" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2533.png"
+ ALT="$ x(a + x)^2(a - x)^3$"></SPAN> 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2534.png"
+ ALT="$ x = -a$"></SPAN> and <!-- MATH
+ $\frac{a}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2535.png"
+ ALT="$ \frac{a}{3}$"></SPAN>, give max.;
+  	<!-- MATH
+ $x = -\frac{a}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2536.png"
+ ALT="$ x = -\frac{a}{2}$"></SPAN>;
+  	<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>, gives neither.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $b + c(x - a)^{\frac{2}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="97" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2537.png"
+ ALT="$ b + c(x - a)^{\frac{2}{3}}$"></SPAN>.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>, gives min. = <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $a - b(x - c)^{\frac{1}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="97" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2538.png"
+ ALT="$ a - b(x - c)^{\frac{1}{3}}$"></SPAN>. 
+
+<P>
+Ans. No max. or min.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{x^2 - 7x + 6}{x - 10}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2539.png"
+ ALT="$ \frac{x^2 - 7x + 6}{x - 10}$"></SPAN>.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img716.png"
+ ALT="$ x = 4$"></SPAN>, gives max.
+  <SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2540.png"
+ ALT="$ x = 16$"></SPAN>, gives min.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{(a - x)^3}{a - 2x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2541.png"
+ ALT="$ \frac{(a - x)^3}{a - 2x}$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $x = \frac{a}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2542.png"
+ ALT="$ x = \frac{a}{4}$"></SPAN>, gives min.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{1 - x + x^2}{1 + x - x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2543.png"
+ ALT="$ \frac{1 - x + x^2}{1 + x - x^2}$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $x = \frac{1}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img698.png"
+ ALT="$ x = \frac{1}{2}$"></SPAN>, gives min.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{x^2 - 3x + 2}{x^2 + 3x +2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2544.png"
+ ALT="$ \frac{x^2 - 3x + 2}{x^2 + 3x +2}$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $x = \sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2545.png"
+ ALT="$ x = \sqrt{2}$"></SPAN>, gives min. = <!-- MATH
+ $12\sqrt{2} - 17$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2546.png"
+ ALT="$ 12\sqrt{2} - 17$"></SPAN>;
+<!-- MATH
+ $x = -\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2547.png"
+ ALT="$ x = -\sqrt{2}$"></SPAN>, gives max. = <!-- MATH
+ $-12\sqrt{2} - 17$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="89" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2548.png"
+ ALT="$ -12\sqrt{2} - 17$"></SPAN>;
+<!-- MATH
+ $x = - 1, - 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2549.png"
+ ALT="$ x = - 1, - 2$"></SPAN>, give neither.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{(x - a)(b - x)}{x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2550.png"
+ ALT="$ \frac{(x - a)(b - x)}{x^2}$"></SPAN>.
+
+<P>
+<!-- MATH
+ $x = \frac{2ab}{a + b}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2551.png"
+ ALT="$ x = \frac{2ab}{a + b}$"></SPAN>, gives max. = <!-- MATH
+ $\frac{(a - b)^2}{4ab}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2552.png"
+ ALT="$ \frac{(a - b)^2}{4ab}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{a^2}{x} + \frac{b^2}{a - x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2553.png"
+ ALT="$ \frac{a^2}{x} + \frac{b^2}{a - x}$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $x = \frac{a^2}{a - b}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2554.png"
+ ALT="$ x = \frac{a^2}{a - b}$"></SPAN>, gives min.;
+<!-- MATH
+ $x = \frac{a^2}{a + b}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2555.png"
+ ALT="$ x = \frac{a^2}{a + b}$"></SPAN>, gives max.
+
+<P>
+</LI>
+<LI>Examine <!-- MATH
+ $x^3 - 3x^2 - 9x + 5$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="128" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2556.png"
+ ALT="$ x^3 - 3x^2 - 9x + 5$"></SPAN> for maxima and minima, 
+Use the second method, &#167;<A HREF="node115.html#sec:84">8.6</A>. 
+<P>
+Solution. <!-- MATH
+ $f(x) 	= x^3 - 3x^2 - 9x + 5$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="180" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2557.png"
+ ALT="$ f(x) = x^3 - 3x^2 - 9x + 5$"></SPAN>.
+
+<P>
+First step. 	<!-- MATH
+ $f'(x) 	= 3x^2 - 6x - 9$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="149" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2558.png"
+ ALT="$ f'(x) = 3x^2 - 6x - 9$"></SPAN>.
+
+<P>
+Second step, 	<!-- MATH
+ $3x^2 - 6x - 9 	= 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="122" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2559.png"
+ ALT="$ 3x^2 - 6x - 9 = 0$"></SPAN>;
+hence the critical values are <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img708.png"
+ ALT="$ x = -1$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN>.
+
+<P>
+Third step. 	<!-- MATH
+ $f''(x) 	= 6x - 6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="109" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2560.png"
+ ALT="$ f''(x) = 6x - 6$"></SPAN>.
+
+<P>
+Fourth step. <!-- MATH
+ $f''(-1) 	= -12$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="104" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2561.png"
+ ALT="$ f''(-1) = -12$"></SPAN>.
+
+<P>
+Therefore, <!-- MATH
+ $f(-1) 	= 10 =$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="101" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2562.png"
+ ALT="$ f(-1) = 10 =$"></SPAN> maximum value.
+<!-- MATH
+ $f''(3) = + 12$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2563.png"
+ ALT="$ f''(3) = + 12$"></SPAN>. Therefore, <!-- MATH
+ $f(3) = - 22 =$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="101" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2564.png"
+ ALT="$ f(3) = - 22 =$"></SPAN> minimum value.
+
+<P>
+</LI>
+<LI>Examine <!-- MATH
+ $\sin^2x\cos\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2565.png"
+ ALT="$ \sin^2x\cos\, x$"></SPAN> for maximum and minimum values.
+
+<P>
+Solution. <!-- MATH
+ $f(x) = \sin^2x\cos\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="133" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2566.png"
+ ALT="$ f(x) = \sin^2x\cos\, x$"></SPAN>.
+
+<P>
+First step. <!-- MATH
+ $f'(x) = 2\sin\, x\cos^2x - \sin^3x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="206" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2567.png"
+ ALT="$ f'(x) = 2\sin\, x\cos^2x - \sin^3x$"></SPAN>.
+
+<P>
+Second step. <!-- MATH
+ $2\sin\, x\cos^2x - \sin^3x = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="179" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2568.png"
+ ALT="$ 2\sin\, x\cos^2x - \sin^3x = 0$"></SPAN>;
+hence the critical values are <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2569.png"
+ ALT="$ x = n\pi$"></SPAN>
+and <!-- MATH
+ $x = n\pi \pm \arctan( -\sqrt{2}) = n\pi \pm \alpha$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="234" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2570.png"
+ ALT="$ x = n\pi \pm \arctan( -\sqrt{2}) = n\pi \pm \alpha$"></SPAN>.
+
+<P>
+Third step. 	<!-- MATH
+ $f''(x) = \cos\, x(2\cos^2x - 7\sin^2x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="232" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2571.png"
+ ALT="$ f''(x) = \cos\, x(2\cos^2x - 7\sin^2x)$"></SPAN>.
+
+<P>
+Fourth step. <!-- MATH
+ $f''(0) = +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2572.png"
+ ALT="$ f''(0) = +$"></SPAN>. Therefore,	<SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2573.png"
+ ALT="$ f(0)=0$"></SPAN> = minimum value.
+  	<!-- MATH
+ $f''(\pi) 	= -$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2574.png"
+ ALT="$ f''(\pi) = -$"></SPAN>. Therefore,<!-- MATH
+ $f(\pi) = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2575.png"
+ ALT="$ f(\pi) = 0$"></SPAN> = maximum value.
+  	<!-- MATH
+ $f''(\alpha) 	= -$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2576.png"
+ ALT="$ f''(\alpha) = -$"></SPAN>. Therefore, <SPAN CLASS="MATH"><IMG
+ WIDTH="37" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2577.png"
+ ALT="$ f(\alpha)$"></SPAN> maximum value.
+  	<!-- MATH
+ $f''(\pi - \alpha)= +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2578.png"
+ ALT="$ f''(\pi - \alpha)= +$"></SPAN>. Therefore,<!-- MATH
+ $f(\pi - \alpha)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2579.png"
+ ALT="$ f(\pi - \alpha)$"></SPAN> minimum value.
+
+<P>
+</LI>
+</OL>
+
+<P>
+Examine the following functions for maximum and minimum values:
+
+<P>
+
+<OL>
+<LI><!-- MATH
+ $3x^3 - 9x^2 - 27x + 30$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="152" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2580.png"
+ ALT="$ 3x^3 - 9x^2 - 27x + 30$"></SPAN>. 	
+
+<P>
+Ans. 	<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img708.png"
+ ALT="$ x = -1$"></SPAN>, gives max. = <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img226.png"
+ ALT="$ 45$"></SPAN>;
+  	<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img426.png"
+ ALT="$ x=3$"></SPAN>, gives min. = <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2581.png"
+ ALT="$ - 51$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $2x^3 - 21x^2 + 36x - 20$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="160" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2582.png"
+ ALT="$ 2x^3 - 21x^2 + 36x - 20$"></SPAN>. 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>, gives max. = <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img709.png"
+ ALT="$ -3$"></SPAN>;
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2307.png"
+ ALT="$ x = 6$"></SPAN>, gives min. = <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2583.png"
+ ALT="$ -128$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{x^3}{3} - 21x^2 + 3x + 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="137" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2584.png"
+ ALT="$ \frac{x^3}{3} - 21x^2 + 3x + 1$"></SPAN>. 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>, gives max. = <!-- MATH
+ $\frac{7}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2585.png"
+ ALT="$ \frac{7}{3}$"></SPAN>;
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img426.png"
+ ALT="$ x=3$"></SPAN>, gives min. = <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $2x^3 - 15x^2 + 36x + 10$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="160" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2586.png"
+ ALT="$ 2x^3 - 15x^2 + 36x + 10$"></SPAN>.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, gives max. = <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2587.png"
+ ALT="$ 38$"></SPAN>;
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img426.png"
+ ALT="$ x=3$"></SPAN>, gives min. = <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2588.png"
+ ALT="$ 37$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x^3 - 9x^2 + 15x - 3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2589.png"
+ ALT="$ x^3 - 9x^2 + 15x - 3$"></SPAN>. 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>, gives max. = <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN>;
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2590.png"
+ ALT="$ x = 5$"></SPAN>, gives min. = <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2591.png"
+ ALT="$ - 28$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x^3 - 3x^2 + 6x + 10$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2592.png"
+ ALT="$ x^3 - 3x^2 + 6x + 10$"></SPAN>.
+
+<P>
+Ans.  	No max. or min.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x^5 - 5x^4 + 5x^3 + 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="135" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2593.png"
+ ALT="$ x^5 - 5x^4 + 5x^3 + 1$"></SPAN>. <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>, gives max. = <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN>;
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img426.png"
+ ALT="$ x=3$"></SPAN>, gives min. = <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2594.png"
+ ALT="$ -26$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>, gives neither.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $3x^5 - 125x^2 + 2160x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="149" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2595.png"
+ ALT="$ 3x^5 - 125x^2 + 2160x$"></SPAN>. 
+
+<P>
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2596.png"
+ ALT="$ x = -4$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN>, give max.;
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img719.png"
+ ALT="$ x = -3$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN>, give min.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $2x^3 - 3x^2 - 12x + 4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="144" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2597.png"
+ ALT="$ 2x^3 - 3x^2 - 12x + 4$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $2x^3 - 21x^2 + 36x - 20$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="160" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2582.png"
+ ALT="$ 2x^3 - 21x^2 + 36x - 20$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x^4 - 2x^2 + 10$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="100" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2598.png"
+ ALT="$ x^4 - 2x^2 + 10$"></SPAN>.
+
+<P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2599.png"
+ ALT="$ x^4 - 4$"></SPAN>.
+
+<P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2600.png"
+ ALT="$ x^3 - 8$"></SPAN>.
+
+<P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2601.png"
+ ALT="$ 4 - x^6$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\sin\,x(1 + \cos\,x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2602.png"
+ ALT="$ \sin\,x(1 + \cos\,x)$"></SPAN>. 	
+
+<P>
+Ans. 	<!-- MATH
+ $x = 2n\pi + \frac{\pi}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="93" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2603.png"
+ ALT="$ x = 2n\pi + \frac{\pi}{3}$"></SPAN>, give max. <!-- MATH
+ $= \frac{3}{4}\sqrt{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="53" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2604.png"
+ ALT="$ = \frac{3}{4}\sqrt{3}$"></SPAN>;
+  	<!-- MATH
+ $x = 2n\pi - \frac{\pi}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="93" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2605.png"
+ ALT="$ x = 2n\pi - \frac{\pi}{3}$"></SPAN>, give min. <!-- MATH
+ $= \frac{3}{4}\sqrt{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="53" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2604.png"
+ ALT="$ = \frac{3}{4}\sqrt{3}$"></SPAN>;
+  	<SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2569.png"
+ ALT="$ x = n\pi$"></SPAN>, give neither.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{x}{\log x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2606.png"
+ ALT="$ \frac{x}{\log x}$"></SPAN>.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2607.png"
+ ALT="$ x = e$"></SPAN>, gives min. = <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$ e$"></SPAN>;
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>, gives neither.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\log\, \cos\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2608.png"
+ ALT="$ \log\, \cos\, x$"></SPAN>.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2569.png"
+ ALT="$ x = n\pi$"></SPAN>, gives max.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $ae^{kx} + be^{- kx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2609.png"
+ ALT="$ ae^{kx} + be^{- kx}$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $x = \frac{1}{k} \log \sqrt{\frac{b}{a}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="98" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2610.png"
+ ALT="$ x = \frac{1}{k} \log \sqrt{\frac{b}{a}}$"></SPAN>, gives min. <!-- MATH
+ $= 2\sqrt{ab}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2611.png"
+ ALT="$ = 2\sqrt{ab}$"></SPAN>.
+
+<P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2612.png"
+ ALT="$ x^x$"></SPAN>. 	  
+
+<P>
+<!-- MATH
+ $x = \frac{1}{e}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2613.png"
+ ALT="$ x = \frac{1}{e}$"></SPAN>, gives min.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x^{\frac{1}{x}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2614.png"
+ ALT="$ x^{\frac{1}{x}}$"></SPAN>.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2607.png"
+ ALT="$ x = e$"></SPAN>, gives max.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\cos\, x + \sin\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2615.png"
+ ALT="$ \cos\, x + \sin\, x$"></SPAN>. 
+
+<P>
+Ans. <!-- MATH
+ $x = \frac{\pi}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2616.png"
+ ALT="$ x = \frac{\pi}{4}$"></SPAN>, gives max. = <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img228.png"
+ ALT="$ \sqrt{2}$"></SPAN>.
+<!-- MATH
+ $x = \frac{5\pi}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="53" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2617.png"
+ ALT="$ x = \frac{5\pi}{4}$"></SPAN>, gives min. = <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2618.png"
+ ALT="$ -\sqrt{2}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\sin\, 2x - x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2619.png"
+ ALT="$ \sin\, 2x - x$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $x = \frac{\pi}{6}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2620.png"
+ ALT="$ x = \frac{\pi}{6}$"></SPAN>, gives max.;
+<!-- MATH
+ $x = -\frac{\pi}{6}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2621.png"
+ ALT="$ x = -\frac{\pi}{6}$"></SPAN>, gives min.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x + \tan\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2622.png"
+ ALT="$ x + \tan\, x$"></SPAN>.
+
+<P>
+Ans. 	No max. or min.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\sin^3x\cos\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2623.png"
+ ALT="$ \sin^3x\cos\, x$"></SPAN>. 
+
+<P>
+Ans. <!-- MATH
+ $x = n \pi + \frac{\pi}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2624.png"
+ ALT="$ x = n \pi + \frac{\pi}{3}$"></SPAN>, gives max. = <!-- MATH
+ $\frac{3}{16} \sqrt{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2625.png"
+ ALT="$ \frac{3}{16} \sqrt{3}$"></SPAN>;
+<!-- MATH
+ $x = n \pi - \frac{\pi}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2626.png"
+ ALT="$ x = n \pi - \frac{\pi}{3}$"></SPAN>, gives min. = <!-- MATH
+ $-\frac{3}{16} \sqrt{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2627.png"
+ ALT="$ -\frac{3}{16} \sqrt{3}$"></SPAN>;
+<SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2569.png"
+ ALT="$ x = n\pi$"></SPAN>, gives neither.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x \ \cos\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2628.png"
+ ALT="$ x \ \cos\, x$"></SPAN>. 	
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ch8-prblm11"></A><A NAME="19048"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+<I CLASS="sans">SAGE</I> plot of <!-- MATH
+ $y=x\cos(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="89" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2630.png"
+ ALT="$ y=x\cos(x)$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="226" HEIGHT="136" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2629.png"
+ ALT="\includegraphics[height=3cm,width=5cm]{ch8-prblm111.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> such that <!-- MATH
+ $x\sin\, x = \cos\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2631.png"
+ ALT="$ x\sin\, x = \cos\, x$"></SPAN>, gives max/min. 
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\sin\,x + \cos\, 2x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="102" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2632.png"
+ ALT="$ \sin\,x + \cos\, 2x$"></SPAN>. 
+
+<P>
+Ans. <!-- MATH
+ $\arcsin \frac{1}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2633.png"
+ ALT="$ \arcsin \frac{1}{4}$"></SPAN>, gives max.;
+ <!-- MATH
+ $x = \frac{\pi}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2634.png"
+ ALT="$ x = \frac{\pi}{2}$"></SPAN>, gives min.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $2\tan\, x - \tan^2x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2635.png"
+ ALT="$ 2\tan\, x - \tan^2x$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $x = \frac{\pi}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2616.png"
+ ALT="$ x = \frac{\pi}{4}$"></SPAN>, gives max.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{\sin x}{1 + \tan x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2636.png"
+ ALT="$ \frac{\sin x}{1 + \tan x}$"></SPAN>. 
+
+<P>
+Ans. <!-- MATH
+ $x = \frac{\pi}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2616.png"
+ ALT="$ x = \frac{\pi}{4}$"></SPAN>, gives max.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{x}{1 + x \tan x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2637.png"
+ ALT="$ \frac{x}{1 + x \tan x}$"></SPAN>. 
+
+<P>
+<!-- MATH
+ $x = \cos\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2638.png"
+ ALT="$ x = \cos\, x$"></SPAN>, gives max.;
+<!-- MATH
+ $x = -\cos\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2639.png"
+ ALT="$ x = -\cos\, x$"></SPAN>, gives min.
+
+<P>
+</LI>
+</OL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2250"
+  HREF="node117.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2244"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2238"
+  HREF="node115.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2246"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2248"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2251"
+  HREF="node117.html">Points of inflection</A>
+<B> Up:</B> <A NAME="tex2html2245"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2239"
+  HREF="node115.html">Examining a function for</A>
+ &nbsp; <B>  <A NAME="tex2html2247"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2249"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

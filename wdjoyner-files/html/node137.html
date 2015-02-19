@@ -1,0 +1,399 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Change of the independent variable</TITLE>
+<META NAME="description" CONTENT="Change of the independent variable">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node138.html">
+<LINK REL="previous" HREF="node136.html">
+<LINK REL="up" HREF="node134.html">
+<LINK REL="next" HREF="node138.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2554"
+  HREF="node138.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2548"
+  HREF="node134.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2542"
+  HREF="node136.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2550"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2552"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2555"
+  HREF="node138.html">Simultaneous change of both</A>
+<B> Up:</B> <A NAME="tex2html2549"
+  HREF="node134.html">Change of variable</A>
+<B> Previous:</B> <A NAME="tex2html2543"
+  HREF="node136.html">Change of the dependent</A>
+ &nbsp; <B>  <A NAME="tex2html2551"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2553"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001330000000000000000">
+Change of the independent variable</A>
+</H1>
+
+<P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> be a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, and at the same time let <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> 
+(and hence also <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>) be a function of a new variable <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN>. 
+It is required to express
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx}, \ \ \ \frac{d^2 y}{dx^2},\ \ {\rm etc.},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="124" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3019.png"
+ ALT="$\displaystyle \frac{dy}{dx}, \ \ \ \frac{d^2 y}{dx^2},\ \ {\rm etc.},
+$">
+</DIV><P></P>
+in terms of new derivatives having <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> as the independent variable.
+By XXV &#167;<A HREF="node44.html#sec:33">5.1</A>, 
+<!-- MATH
+ $\frac{dy}{dt} 	= \frac{dy}{dx} \frac{dx}{dt},$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3020.png"
+ ALT="$ \frac{dy}{dt} = \frac{dy}{dx} \frac{dx}{dt},
+$"></SPAN>
+or
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A-97"></A><!-- MATH
+ \begin{equation}
+\frac{dy}{dx} 	= \frac{ \frac{dy}{dt} }{ \frac{dx}{dt} }.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3021.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{ \frac{dy}{dt} }{ \frac{dx}{dt} }.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">11</SPAN>.<SPAN CLASS="arabic">5</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+This is another formulation of the so-called <I>chain rule</I>.
+<A NAME="24634"></A>
+Also 	
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2 y}{dx^2}
+= \frac{d}{dx} \left( \frac{dy}{dx} \right) 	
+= \frac{d}{dt} \left( \frac{dy}{dx} \right) \frac{dt}{dx} 
+= \frac{ \frac{d}{dt} \left( \frac{dy}{dx} \right) }{ \frac{dx}{dt} }.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="317" HEIGHT="78" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3022.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2}
+= \frac{d}{dx} \left( \frac{dy}{dx} \right)
+...
+...t}{dx}
+= \frac{ \frac{d}{dt} \left( \frac{dy}{dx} \right) }{ \frac{dx}{dt} }.
+$">
+</DIV><P></P>
+But differentiating <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN> with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d}{dt} \left( \frac{dy}{dx} \right)
+= \frac{d}{dt} \left( \frac{ \frac{dy}{dt} }{ \frac{dx}{dt} } \right) 	
+= \frac{ \frac{dx}{dt} \frac{d^2 y}{dt^2} 
+- \frac{dy}{dt} \frac{d^2 x}{dt^2} }{ \left( \frac{dx}{dt} \right)^2 }.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="289" HEIGHT="67" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3023.png"
+ ALT="$\displaystyle \frac{d}{dt} \left( \frac{dy}{dx} \right)
+= \frac{d}{dt} \left( ...
+...dt^2}
+- \frac{dy}{dt} \frac{d^2 x}{dt^2} }{ \left( \frac{dx}{dt} \right)^2 }.
+$">
+</DIV><P></P>
+Therefore
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:B-97"></A><!-- MATH
+ \begin{equation}
+\frac{d^2 y}{dx^2}
+= \frac{ \frac{dx}{dt} \frac{d^2 y}{dt^2} 
+ - \frac{dy}{dt} \frac{d^2 x}{dx^2} }{ \left( \frac{dx}{dt} \right)^3},
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="164" HEIGHT="67" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3024.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2} = \frac{ \frac{dx}{dt} \frac{d^2 y}{dt^2} - \frac{dy}{dt} \frac{d^2 x}{dx^2} }{ \left( \frac{dx}{dt} \right)^3},$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">11</SPAN>.<SPAN CLASS="arabic">6</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+and so on for higher derivatives. This transformation is called 
+changing the independent variable from <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN>. It is usually 
+better to work out examples by the methods illustrated above 
+rather than by using the formulas deduced.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">11</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Change the independent variable from <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> in the
+differential equation
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x^2 \frac{d^2 y}{dx^2} + x \frac{dy}{dx} + y = 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="156" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3025.png"
+ ALT="$\displaystyle x^2 \frac{d^2 y}{dx^2} + x \frac{dy}{dx} + y = 0
+$">
+</DIV><P></P>
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3026.png"
+ ALT="$ x = e^t$"></SPAN>.
+
+<P>
+Solution. <!-- MATH
+ $\frac{dx}{dt}= e^t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3027.png"
+ ALT="$ \frac{dx}{dt}= e^t$"></SPAN>, therefore
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dt}{dx} 	= e^{-t}\ .
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="80" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3028.png"
+ ALT="$\displaystyle \frac{dt}{dx} = e^{-t}\ .
+$">
+</DIV><P></P>
+Also <!-- MATH
+ $\frac{dy}{dx} 	= \frac{dy}{dt} \frac{dt}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3029.png"
+ ALT="$ \frac{dy}{dx} = \frac{dy}{dt} \frac{dt}{dx}$"></SPAN>; 
+therefore <!-- MATH
+ $\frac{dy}{dx} 	= e^{-t} \frac{dy}{dt}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="84" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3030.png"
+ ALT="$ \frac{dy}{dx} = e^{-t} \frac{dy}{dt}$"></SPAN>.
+Also 	
+<!-- MATH
+ $\frac{d^2 y}{dx^2}
+= e^{-t} \frac{d}{dx} \left( \frac{dy}{dt} \right) 
+- \frac{dy}{dt} e^{-t} \frac{dt}{dx} 	
+= e^{-t} \frac{d}{dt} \left( \frac{dy}{dt} \right) \frac{dt}{dx} 
+- \frac{dy}{dt} e^{-t} \frac{dt}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="403" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3031.png"
+ ALT="$ \frac{d^2 y}{dx^2}
+= e^{-t} \frac{d}{dx} \left( \frac{dy}{dt} \right)
+- \fra...
+...left( \frac{dy}{dt} \right) \frac{dt}{dx}
+- \frac{dy}{dt} e^{-t} \frac{dt}{dx}$"></SPAN>.
+Substituting into the last result <!-- MATH
+ $\frac{dt}{dx}= e^{-t}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3032.png"
+ ALT="$ \frac{dt}{dx}= e^{-t}$"></SPAN>, 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2 y}{dx^2}
+= e^{-2t} \frac{d^2 y}{dt^2} - \frac{dy}{dt} e^{-2t}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="185" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3033.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2}
+= e^{-2t} \frac{d^2 y}{dt^2} - \frac{dy}{dt} e^{-2t}.
+$">
+</DIV><P></P>
+Substituting these into the differential equation, 
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+e^{2t} \left( e^{-2t} \frac{d^2 y}{dt^2}
+- \frac{dy}{dt} e^{-2t} \right) 
++ e^t \left( e^{-t} \frac{dy}{dt} \right) + y = 0,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="339" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3034.png"
+ ALT="$\displaystyle e^{2t} \left( e^{-2t} \frac{d^2 y}{dt^2}
+- \frac{dy}{dt} e^{-2t} \right)
++ e^t \left( e^{-t} \frac{dy}{dt} \right) + y = 0,
+$">
+</DIV><P></P>
+and reducing, we get <!-- MATH
+ $\frac{d^2 y}{dt^2} + y 	= 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3035.png"
+ ALT="$ \frac{d^2 y}{dt^2} + y = 0$"></SPAN>. 
+
+<P></DIV><P></P>
+
+<P>
+Since the formulas deduced in the Differential Calculus 
+generally involve derivatives of y with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, such 
+formulas as the chain rule 
+are especially useful when the parametric 
+equations of a curve are given. Such examples were given in &#167;<A HREF="node86.html#sec:66">6.5</A>,
+and many others will be employed in what follows.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2554"
+  HREF="node138.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2548"
+  HREF="node134.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2542"
+  HREF="node136.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2550"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2552"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2555"
+  HREF="node138.html">Simultaneous change of both</A>
+<B> Up:</B> <A NAME="tex2html2549"
+  HREF="node134.html">Change of variable</A>
+<B> Previous:</B> <A NAME="tex2html2543"
+  HREF="node136.html">Change of the dependent</A>
+ &nbsp; <B>  <A NAME="tex2html2551"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2553"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

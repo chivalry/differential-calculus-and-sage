@@ -1,0 +1,397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Second method for finding center of curvature</TITLE>
+<META NAME="description" CONTENT="Second method for finding center of curvature">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node172.html">
+<LINK REL="previous" HREF="node170.html">
+<LINK REL="up" HREF="node169.html">
+<LINK REL="next" HREF="node172.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html3055"
+  HREF="node172.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html3049"
+  HREF="node169.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html3043"
+  HREF="node170.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html3051"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html3053"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html3056"
+  HREF="node172.html">Center of curvature</A>
+<B> Up:</B> <A NAME="tex2html3050"
+  HREF="node169.html">Circle of curvature. Center</A>
+<B> Previous:</B> <A NAME="tex2html3044"
+  HREF="node170.html">Circle of curvature</A>
+ &nbsp; <B>  <A NAME="tex2html3052"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html3054"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001620000000000000000"></A>
+<A NAME="sec:117"></A>
+<BR>
+Second method for finding center of curvature
+</H1>
+
+<P>
+Here we shall make use of the definition of circle of curvature 
+given in &#167;<A HREF="node146.html#sec:104">12.6</A>. Draw a figure showing the tangent line, 
+circle of curvature, radius of curvature, and center of curvature 
+<!-- MATH
+ $(\alpha, \beta)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$ (\alpha,\beta)$"></SPAN> corresponding to the point <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1695.png"
+ ALT="$ P(x,y)$"></SPAN> on the curve. Then
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\alpha = OA = OD - AD = OD - BP = x - BP,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="323" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3692.png"
+ ALT="$\displaystyle \alpha = OA = OD - AD = OD - BP = x - BP,
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+\beta = AC = AB + BC = DP + BC = y + BC.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="321" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3693.png"
+ ALT="$\displaystyle \beta = AC = AB + BC = DP + BC = y + BC.
+$">
+</DIV><P></P>
+But <!-- MATH
+ $BP = R\sin \tau$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="97" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3694.png"
+ ALT="$ BP = R\sin \tau$"></SPAN>, <!-- MATH
+ $BC = R\cos \tau$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="99" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3695.png"
+ ALT="$ BC = R\cos \tau$"></SPAN>. Hence
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:117-A"></A><!-- MATH
+ \begin{equation}
+\alpha = x -R\sin \tau,\ \ \ \ \beta = y + R\cos \tau.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="248" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3696.png"
+ ALT="$\displaystyle \alpha = x -R\sin \tau,\ \ \ \ \beta = y + R\cos \tau.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">8</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+From (<A HREF="node125.html#eqn:90-29">9.8</A>) [&#167;<A HREF="node125.html#sec:90">9.4</A>], and (<A HREF="node145.html#eqn:103-42">12.5</A>)
+[<A HREF="node145.html#sec:103">12.5</A>],
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\sin \tau
+= \frac{ \frac{dy}{dx} }{ \left[ 1 
++ \left( \frac{dy}{dx} \right)^2 \right]^{\frac{1}{2}} }, 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="163" HEIGHT="92" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3697.png"
+ ALT="$\displaystyle \sin \tau
+= \frac{ \frac{dy}{dx} }{ \left[ 1
++ \left( \frac{dy}{dx} \right)^2 \right]^{\frac{1}{2}} },
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+\cos \tau
+= \frac{1}{\left[ 1 + 
+\left( \frac{dy}{dx} \right)^{\frac{1}{2}} \right]^{\frac{1}{2}}}, 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="168" HEIGHT="93" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3698.png"
+ ALT="$\displaystyle \cos \tau
+= \frac{1}{\left[ 1 +
+\left( \frac{dy}{dx} \right)^{\frac{1}{2}} \right]^{\frac{1}{2}}},
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+R = \frac{ \left[ 1
++ \left( \frac{dy}{dx} \right)^2 \right]^{\frac{3}{2}} }{ \frac{d^2 y}{dx^2} }
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="140" HEIGHT="108" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3157.png"
+ ALT="$\displaystyle R = \frac{ \left[ 1 + \left( \frac{dy}{dx} \right)^2 \right]^{\frac{3}{2}} }{ \frac{d^2 y}{dx^2} }$">
+</DIV><P></P>
+Substituting these back in (<A HREF="#eqn:117-A">14.8</A>), we get
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:117-50"></A><!-- MATH
+ \begin{equation}
+\alpha = x - \frac{ \frac{dy}{dx}\left[ 1 + \left( \frac{dy}{dx} \right)^2 \right] }{\frac{d^2 y}{dx^2}};
+\ \ \ \ 
+\beta = y + \frac{1 + \left( \frac{dy}{dx} \right)^2}{\frac{d^2 y}{dx^2}}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="343" HEIGHT="97" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3699.png"
+ ALT="$\displaystyle \alpha = x - \frac{ \frac{dy}{dx}\left[ 1 + \left( \frac{dy}{dx} ...
+... \ \ \beta = y + \frac{1 + \left( \frac{dy}{dx} \right)^2}{\frac{d^2 y}{dx^2}}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">9</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+From Lemma <A HREF="node117.html#lemma:85-23">8.8.1</A> [&#167;<A HREF="node117.html#sec:85">8.8</A>], we know that at a 
+point of inflection (as Q in Figure <A HREF="#fig:circle-of-curvature2">14.2</A>)
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2 y}{dx^2} = 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="66" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3700.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2} = 0.
+$">
+</DIV><P></P>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:circle-of-curvature2"></A><A NAME="31453"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 14.2:</STRONG>
+Geometric visualization of a change in direction.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="179" HEIGHT="202" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3701.png"
+ ALT="\includegraphics[height=4.5cm,width=4cm]{circle-of-curvature2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Therefore, by (<A HREF="node144.html#eqn:102-40">12.3</A>) [&#167;<A HREF="node144.html#sec:102">12.4</A>], the curvature 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3702.png"
+ ALT="$ K = 0$"></SPAN>; and from (<A HREF="node145.html#eqn:103-42">12.5</A>) [&#167;<A HREF="node145.html#sec:103">12.5</A>], 
+and (<A HREF="#eqn:117-50">14.9</A>) [&#167;<A HREF="#sec:117">14.2</A>], we see that in general 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2748.png"
+ ALT="$ \alpha$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1909.png"
+ ALT="$ \beta$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1975.png"
+ ALT="$ R$"></SPAN> increase without limit as the second 
+derivative approaches zero. That is, if we suppose <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img251.png"
+ ALT="$ P$"></SPAN> with its 
+tangent to move along the curve to <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3703.png"
+ ALT="$ P'$"></SPAN>, at the point of 
+inflection <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img695.png"
+ ALT="$ Q$"></SPAN> the curvature is zero, the rotation of the tangent 
+is momentarily arrested, and as the direction of rotation changes, 
+the center of curvature moves out indefinitely and the radius 
+of curvature becomes infinite.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
+<I>Find the coordinates of the center of curvature of the 
+parabola <SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1430.png"
+ ALT="$ y^2 = 4px$"></SPAN> corresponding (a) to any point on the curve; 
+(b) to the vertex.
+</I>
+<P>
+<I>Solution. <!-- MATH
+ $\frac{dy}{dx} = \frac{2p}{y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1431.png"
+ ALT="$ \frac{dy}{dx} =\ \frac{2p}{y}$"></SPAN>; 
+<!-- MATH
+ $\frac{d^2 y}{dx^2} = -\frac{4p^2}{y^3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3704.png"
+ ALT="$ \frac{d^2 y}{dx^2} = -\frac{4p^2}{y^3}$"></SPAN>.
+</I>
+<P>
+<I>(a) Substituting in (<A HREF="node170.html#eqn:116E">14.7</A>) [&#167;<A HREF="node170.html#sec:116">14.1</A>],
+</I>
+<P><P><!-- MATH
+ \begin{displaymath}
+\alpha = x + \frac{y^2 + 4 p^2}{y^2} \cdot \frac{2p}{y}
+\cdot \frac{y^3}{4 p^2} = 3x + 2p.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="274" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3705.png"
+ ALT="$\displaystyle \alpha = x + \frac{y^2 + 4 p^2}{y^2} \cdot \frac{2p}{y}
+\cdot \frac{y^3}{4 p^2} = 3x + 2p.
+$">
+</DIV><P></P><P><!-- MATH
+ \begin{displaymath}
+\beta = y - \frac{y^2 + 4 p^2}{y^2} \cdot \frac{y^3}{4 p^2}
+= -\frac{y^3}{4 p ^2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="229" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3706.png"
+ ALT="$\displaystyle \beta = y - \frac{y^2 + 4 p^2}{y^2} \cdot \frac{y^3}{4 p^2}
+= -\frac{y^3}{4 p ^2}.
+$">
+</DIV><P></P><I>
+Therefore <!-- MATH
+ $\left( 3x + 2p, -\frac{y^3}{4 p^2} \right)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="118" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3707.png"
+ ALT="$ \left( 3x + 2p, -\frac{y^3}{4 p^2} \right)$"></SPAN> 
+is the center of curvature corresponding to any point on the curve.
+</I>
+<P>
+<I>(b) <SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3708.png"
+ ALT="$ (2p,0)$"></SPAN> is the center of curvature corresponding to the vertex 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2663.png"
+ ALT="$ (0, 0)$"></SPAN>.</I></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html3055"
+  HREF="node172.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html3049"
+  HREF="node169.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html3043"
+  HREF="node170.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html3051"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html3053"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html3056"
+  HREF="node172.html">Center of curvature</A>
+<B> Up:</B> <A NAME="tex2html3050"
+  HREF="node169.html">Circle of curvature. Center</A>
+<B> Previous:</B> <A NAME="tex2html3044"
+  HREF="node170.html">Circle of curvature</A>
+ &nbsp; <B>  <A NAME="tex2html3052"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html3054"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Tests for determining when a function is increasing or decreasing</TITLE>
+<META NAME="description" CONTENT="Tests for determining when a function is increasing or decreasing">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node113.html">
+<LINK REL="previous" HREF="node111.html">
+<LINK REL="up" HREF="node109.html">
+<LINK REL="next" HREF="node113.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2194"
+  HREF="node113.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2188"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2182"
+  HREF="node111.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2190"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2192"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2195"
+  HREF="node113.html">Maximum and minimum values</A>
+<B> Up:</B> <A NAME="tex2html2189"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2183"
+  HREF="node111.html">Increasing and decreasing functions</A>
+ &nbsp; <B>  <A NAME="tex2html2191"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2193"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001030000000000000000"></A>
+<A NAME="sec:81"></A>
+<BR>
+Tests for determining when a function is increasing or decreasing
+</H1>
+
+<P>
+It is evident from Figure <A HREF="node111.html#fig:cubic-fcn3">8.7</A> that at a point where a function
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = f(x)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img689.png"
+ ALT="$\displaystyle y = f(x)$">
+</DIV><P></P>
+is increasing, the tangent in general makes an acute angle with the 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis; hence
+
+<P>
+<DIV ALIGN="CENTER">
+slope <!-- MATH
+ $= \tan\, \tau = \frac{dy}{dx} = f'(x) =$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="171" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2320.png"
+ ALT="$ = \tan\, \tau = \frac{dy}{dx} = f'(x) =$"></SPAN> a positive number.
+
+</DIV>
+Similarly, at a point where a function is decreasing, the 
+tangent in general makes an obtuse angle with the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis; 
+therefore<A NAME="tex2html103"
+  HREF="footnode.html#foot18566"><SUP><SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">3</SPAN></SUP></A>
+<P>
+<DIV ALIGN="CENTER">
+slope <!-- MATH
+ $= \tan\, \tau = \frac{dy}{dx} = f'(x) =$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="171" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2320.png"
+ ALT="$ = \tan\, \tau = \frac{dy}{dx} = f'(x) =$"></SPAN> a negative number.
+
+</DIV>
+In order, then, that the function shall change from an increasing 
+to a decreasing function, or vice versa, it is a necessary and 
+sufficient condition that the first derivative shall change 
+sign. But this can only happen for a continuous derivative by 
+passing through the value zero. Thus in Figure <A HREF="node111.html#fig:cubic-fcn3">8.7</A>
+as we pass along the curve the derivative (= slope) changes sign 
+at the points where <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>. In general, then, we 
+have at ``turning points,''
+<A NAME="18572"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} = f'(x) = 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="116" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2324.png"
+ ALT="$\displaystyle \frac{dy}{dx} = f'(x) = 0.
+$">
+</DIV><P></P>
+A value of <SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img568.png"
+ ALT="$ y = f(x)$"></SPAN> satisfying this condition is called a 
+<I>critical point</I> of the function <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN>. 
+<A NAME="18576"></A>
+The derivative is continuous in nearly all our important 
+applications, but it is interesting to note the case when the derivative 
+(= slope) changes sign by passing through<A NAME="tex2html104"
+  HREF="footnode.html#foot18577"><SUP><SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">4</SPAN></SUP></A> <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ \infty $"></SPAN>. 
+This would evidently happen at the points one a curve where the 
+tangents (and curve) are perpendicular to the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis. At such 
+exceptional critical points 
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} = f'(x) = \inf;
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="127" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2325.png"
+ ALT="$\displaystyle \frac{dy}{dx} = f'(x) = \inf;
+$">
+</DIV><P></P>
+or, what amounts to the same thing,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{1}{f'(x)} = 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="77" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2326.png"
+ ALT="$\displaystyle \frac{1}{f'(x)} = 0.
+$">
+</DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2194"
+  HREF="node113.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2188"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2182"
+  HREF="node111.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2190"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2192"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2195"
+  HREF="node113.html">Maximum and minimum values</A>
+<B> Up:</B> <A NAME="tex2html2189"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2183"
+  HREF="node111.html">Increasing and decreasing functions</A>
+ &nbsp; <B>  <A NAME="tex2html2191"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2193"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,449 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differentiation of inverse functions</TITLE>
+<META NAME="description" CONTENT="Differentiation of inverse functions">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node56.html">
+<LINK REL="previous" HREF="node54.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node56.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1364"
+  HREF="node56.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1358"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1352"
+  HREF="node54.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1360"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1362"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1365"
+  HREF="node56.html">Differentiation of a logarithm</A>
+<B> Up:</B> <A NAME="tex2html1359"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1353"
+  HREF="node54.html">Differentiation of a function</A>
+ &nbsp; <B>  <A NAME="tex2html1361"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1363"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007120000000000000000">
+Differentiation of inverse functions</A>
+</H1>
+
+<P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> be given as a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> by means of the relation <SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img568.png"
+ ALT="$ y = f(x)$"></SPAN>.
+
+<P>
+It is usually possible in the case of functions considered in this book 
+to solve this equation for <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, giving
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x = \phi (y);
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img924.png"
+ ALT="$\displaystyle x = \phi (y);
+$">
+</DIV><P></P>
+that is, to consider <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> as the independent and <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> as the dependent variable. 
+In that case <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img925.png"
+ ALT="$ \phi (y)$"></SPAN> are said to be <I>inverse functions</I>. 
+<A NAME="6144"></A>
+When we wish to distinguish between the two it is customary to call the 
+first one given the <I>direct function</I> and the second one the 
+<I>inverse function</I>. Thus, in the examples which follow, if the 
+second members in the first column are taken as the direct functions, 
+then the corresponding members in the second column will be respectively their inverse functions.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">12</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
+<UL>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img926.png"
+ ALT="$ y=x^2 + 1$"></SPAN>, 	<!-- MATH
+ $x = \pm \sqrt{y - 1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="96" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img927.png"
+ ALT="$ x = \pm \sqrt{y - 1}$"></SPAN>.
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img928.png"
+ ALT="$ y = a^x$"></SPAN>, 	<!-- MATH
+ $x = \log_a y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img929.png"
+ ALT="$ x = \log_a y$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \sin\ x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img930.png"
+ ALT="$ y = \sin\ x$"></SPAN>, <!-- MATH
+ $x = \arcsin\ y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img931.png"
+ ALT="$ x = \arcsin\ y$"></SPAN>.
+</LI>
+</UL></DIV><P></P>
+
+<P>
+The plot of the inverse function <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img925.png"
+ ALT="$ \phi (y)$"></SPAN> is related to the plot of the function
+<SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> in a simple manner. The plot of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> over an interval <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img932.png"
+ ALT="$ (a,b)$"></SPAN> in which <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img253.png"
+ ALT="$ f$"></SPAN> is 
+increasing is the same as the plot of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img925.png"
+ ALT="$ \phi (y)$"></SPAN> over <!-- MATH
+ $(f(a),f(b))$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img933.png"
+ ALT="$ (f(a),f(b))$"></SPAN>. 
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">12</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; If <SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$ f(x)=x^2$"></SPAN>, for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img388.png"
+ ALT="$ x &gt; 0$"></SPAN>, and <!-- MATH
+ $\phi(y)=\sqrt{y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img934.png"
+ ALT="$ \phi(y)=\sqrt{y}$"></SPAN>, then the graphs are
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:fcn-x2"></A><A NAME="6161"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.1:</STRONG>
+The function <SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$ f(x)=x^2$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="226" HEIGHT="226" ALIGN="BOTTOM" BORDER="0"
+ SRC="img935.png"
+ ALT="\includegraphics[height=5cm,width=5cm]{fcn-x2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Now flip this graph about the <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img704.png"
+ ALT="$ 45^o$"></SPAN> line:
+
+<P>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:invx2"></A><A NAME="8484"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.2:</STRONG>
+The function <!-- MATH
+ $\phi(y)=f^{-1}(y)=\sqrt{y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="146" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$ \phi (y)=f^{-1}(y)=\sqrt {y}$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="226" HEIGHT="226" ALIGN="BOTTOM" BORDER="0"
+ SRC="img936.png"
+ ALT="\includegraphics[height=5cm,width=5cm]{invfcn-x2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The graph of inverse trig functions, for example,
+<SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img937.png"
+ ALT="$ \tan(x)$"></SPAN> and <!-- MATH
+ $\arctan(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img938.png"
+ ALT="$ \arctan(x)$"></SPAN>, are related in the same way.</DIV><P></P>
+
+<P>
+Let us now differentiate the inverse functions
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = f(x)\ \ {\rm and}\ \  x = \phi(y)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="172" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img939.png"
+ ALT="$\displaystyle y = f(x)\ \ {\rm and}\ \ x = \phi(y)
+$">
+</DIV><P></P>
+simultaneously by the General Rule.
+
+<P>
+
+<UL>
+<LI>FIRST STEP. <!-- MATH
+ $y + \Delta y 	= f(x + \Delta x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="148" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img940.png"
+ ALT="$ y + \Delta y = f(x + \Delta x)$"></SPAN>, <!-- MATH
+ $x + \Delta x =\phi(y + \Delta y)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="148" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img941.png"
+ ALT="$ x + \Delta x =\phi(y + \Delta y)$"></SPAN>
+</LI>
+<LI>SECOND STEP. 
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rlcrl}
+y + \Delta y &	= f(x + \Delta x),  & \qquad & 	x + \Delta x &=	\phi (y + \Delta y)\\
+  	y &= f(x),  & \qquad &	x &=\phi (y)\\
+\Delta y &= f(x + \Delta x) - f(x), & \qquad &	\Delta x &= \phi(y + \Delta y) - \phi (y)\\
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="444" HEIGHT="73" BORDER="0"
+ SRC="img942.png"
+ ALT="\begin{displaymath}
+\begin{array}{rlcrl}
+y + \Delta y &amp; = f(x + \Delta x), &amp; \qq...
+...quad &amp; \Delta x &amp;= \phi(y + \Delta y) - \phi (y)\\
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI>THIRD STEP. 
+<P><!-- MATH
+ \begin{displaymath}
+\frac{\Delta y}{\Delta x} = \frac{f(x + \Delta x) - f(x)}{\Delta x},
+\qquad
+\frac{\Delta x}{\Delta y} = \frac{\phi(y + \Delta y) - \phi(y)}{\Delta y}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="394" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img943.png"
+ ALT="$\displaystyle \frac{\Delta y}{\Delta x} = \frac{f(x + \Delta x) - f(x)}{\Delta ...
+...uad
+\frac{\Delta x}{\Delta y} = \frac{\phi(y + \Delta y) - \phi(y)}{\Delta y}.
+$">
+</DIV><P></P>
+Taking the product of the left-hand forms of these ratios, we get
+<!-- MATH
+ $\frac{\Delta y}{\Delta x} \cdot \frac{\Delta x}{\Delta y} 	= 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img944.png"
+ ALT="$ \frac{\Delta y}{\Delta x} \cdot \frac{\Delta x}{\Delta y} = 1$"></SPAN>,
+or, 	<!-- MATH
+ $\frac{\Delta y}{\Delta x} 	= \frac{1}{\frac{\Delta x}{\Delta y}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img945.png"
+ ALT="$ \frac{\Delta y}{\Delta x} = \frac{1}{\frac{\Delta x}{\Delta y}}$"></SPAN>.
+
+<P>
+</LI>
+<LI>FOURTH STEP. Passing to the limit,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:C-43"></A><!-- MATH
+ \begin{equation}
+\frac{dy}{dx} 	= \frac{1}{\frac{dx}{dy}},
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img946.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}},$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+or,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f'(x) 	= \frac{1}{\phi'(y)}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="104" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img947.png"
+ ALT="$\displaystyle f'(x) = \frac{1}{\phi'(y)}.
+$">
+</DIV><P></P>
+</LI>
+</UL>
+
+<P>
+<I>The derivative of the inverse function is equal to the reciprocal 
+of the derivative of the direct function.</I>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1364"
+  HREF="node56.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1358"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1352"
+  HREF="node54.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1360"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1362"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1365"
+  HREF="node56.html">Differentiation of a logarithm</A>
+<B> Up:</B> <A NAME="tex2html1359"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1353"
+  HREF="node54.html">Differentiation of a function</A>
+ &nbsp; <B>  <A NAME="tex2html1361"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1363"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

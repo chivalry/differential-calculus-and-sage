@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Description of the method</TITLE>
+<META NAME="description" CONTENT="Description of the method">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node100.html">
+<LINK REL="previous" HREF="node98.html">
+<LINK REL="up" HREF="node98.html">
+<LINK REL="next" HREF="node100.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1999"
+  HREF="node100.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1993"
+  HREF="node98.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1987"
+  HREF="node98.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1995"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1997"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2000"
+  HREF="node100.html">Analysis</A>
+<B> Up:</B> <A NAME="tex2html1994"
+  HREF="node98.html">Application: Newton's method</A>
+<B> Previous:</B> <A NAME="tex2html1988"
+  HREF="node98.html">Application: Newton's method</A>
+ &nbsp; <B>  <A NAME="tex2html1996"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1998"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION008171000000000000000">
+Description of the method</A>
+</H2>
+
+<P>
+The idea of the method is as follows: one starts with an initial 
+guess which is reasonably close to the true root, then the function 
+is approximated by its tangent line (which can be computed using 
+the tools of calculus), and one computes the x-intercept of this 
+tangent line (which is easily done with elementary algebra). 
+This x-intercept will typically be a better approximation to 
+the function's root than the original guess, and the method can be 
+iterated.
+
+<P>
+Suppose <!-- MATH
+ $f : [a, b] \to \mathbb{R}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="95" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2112.png"
+ ALT="$ f : [a, b] \to \mathbb{R}$"></SPAN> is a differentiable function defined 
+on the interval <SPAN CLASS="MATH"><IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2113.png"
+ ALT="$ [a, b]$"></SPAN> with values in the real numbers <!-- MATH
+ $\mathbb{R}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2114.png"
+ ALT="$ \mathbb{R}$"></SPAN>. The 
+formula for converging on the root can be easily derived. 
+Suppose we have some current approximation <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2115.png"
+ ALT="$ x_n$"></SPAN>. Then we can derive 
+the formula for a better approximation, <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2116.png"
+ ALT="$ x_{n+1}$"></SPAN> by referring to 
+the diagram on the right. We know from the definition of the 
+derivative at a given point that it is the slope of a tangent at that point.
+
+<P>
+That is
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f'(x_{n})
+= \frac{ \mathrm{rise} }{ \mathrm{run} } 
+= \frac{ \mathrm{\Delta y} }{ \mathrm{\Delta x} } 
+= \frac{ f( x_{n} ) - 0 }{ x_{n} - x_{n+1} } 
+= \frac{0 - f(x_{n})}{(x_{n+1} - x_{n})}\,\!.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="354" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2117.png"
+ ALT="$\displaystyle f'(x_{n})
+= \frac{ \mathrm{rise} }{ \mathrm{run} }
+= \frac{ \ma...
+..._{n} ) - 0 }{ x_{n} - x_{n+1} }
+= \frac{0 - f(x_{n})}{(x_{n+1} - x_{n})}\,\!.
+$">
+</DIV><P></P>
+Here, <SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2118.png"
+ ALT="$ f'$"></SPAN> denotes the derivative of the function <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img253.png"
+ ALT="$ f$"></SPAN>. Then by 
+simple algebra we can derive
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}\,\!.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="149" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2119.png"
+ ALT="$\displaystyle x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}\,\!.
+$">
+</DIV><P></P>
+We start the process off with some arbitrary initial value <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2120.png"
+ ALT="$ x_0$"></SPAN>. 
+(The closer to the zero, the better. But, in the absence of any 
+intuition about where the zero might lie, a ''guess and check'' 
+method might narrow the possibilities to a reasonably small 
+interval by appealing to the intermediate value theorem.) The 
+method will usually converge, provided this initial guess is close 
+enough to the unknown zero, and that <!-- MATH
+ $f'(x_0) \neq 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2121.png"
+ ALT="$ f'(x_0) \neq 0$"></SPAN>. Furthermore, 
+for a zero of multiplicity <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN>, the convergence is at least 
+quadratic (see rate of convergence) in a neighbourhood of the 
+zero, which intuitively means that the number of correct digits 
+roughly at least doubles in every step. More details can be found 
+in the analysis section below.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">17</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Consider the problem of finding the positive number <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> with 
+<!-- MATH
+ $\cos(x) = x^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2122.png"
+ ALT="$ \cos(x) = x^3$"></SPAN>. We can rephrase that as finding the zero of 
+<!-- MATH
+ $f(x) = \cos(x) - x^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="135" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2123.png"
+ ALT="$ f(x) = \cos(x) - x^3$"></SPAN>. We have <!-- MATH
+ $f'(x) = -\sin(x) - 3x^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="161" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2124.png"
+ ALT="$ f'(x) = -\sin(x) - 3x^2$"></SPAN>. 
+Since <!-- MATH
+ $\cos(x) \leq 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2125.png"
+ ALT="$ \cos(x) \leq 1$"></SPAN> for all <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2126.png"
+ ALT="$ x^3 &gt; 1$"></SPAN> for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img397.png"
+ ALT="$ x &gt; 1$"></SPAN>, 
+we know that our zero lies between <SPAN CLASS="MATH">0</SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN>. We try a starting 
+value of <SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2127.png"
+ ALT="$ x_0 = 0.5$"></SPAN>.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{lllll}
+x_1 & = & x_0 - \frac{f(x_0)}{f'(x_0)} & 
+= & 0.5 - \frac{\cos(0.5) - 0.5^3}{-\sin(0.5) - 3 \times 0.5^2} =  1.112141637097 \\
+x_2 & = & x_1 - \frac{f(x_1)}{f'(x_1)} & = & \underline{0.9}09672693736 \\
+x_3 &= & x_2 - \frac{f(x_2)}{f'(x_2)} & = & \underline{0.86}7263818209 \\
+x_4 &= & x_3 - \frac{f(x_3)}{f'(x_3)} & = & \underline{0.86547}7135298 \\
+x_5 &= & x_4 - \frac{f(x_4)}{f'(x_4)} & = & \underline{0.8654740331}11 \\
+x_6 &= & x_5 - \frac{f(x_5)}{f'(x_5)} & = & \underline{0.865474033102} 
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="455" HEIGHT="164" BORDER="0"
+ SRC="img2128.png"
+ ALT="\begin{displaymath}
+\begin{array}{lllll}
+x_1 &amp; = &amp; x_0 - \frac{f(x_0)}{f'(x_0)}...
+...{f(x_5)}{f'(x_5)} &amp; = &amp; \underline{0.865474033102}
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+The correct digits are underlined in the above example. In 
+particular, <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2129.png"
+ ALT="$ x_6$"></SPAN> is correct to the number of decimal places 
+given. We see that the number of correct digits after the 
+decimal point increases from <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN> (for <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2130.png"
+ ALT="$ x_3$"></SPAN>) to <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN>, 
+illustrating the quadratic convergence.</DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1999"
+  HREF="node100.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1993"
+  HREF="node98.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1987"
+  HREF="node98.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1995"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1997"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2000"
+  HREF="node100.html">Analysis</A>
+<B> Up:</B> <A NAME="tex2html1994"
+  HREF="node98.html">Application: Newton's method</A>
+<B> Previous:</B> <A NAME="tex2html1988"
+  HREF="node98.html">Application: Newton's method</A>
+ &nbsp; <B>  <A NAME="tex2html1996"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1998"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

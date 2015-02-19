@@ -1,0 +1,384 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differentiation of a function of a function</TITLE>
+<META NAME="description" CONTENT="Differentiation of a function of a function">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node55.html">
+<LINK REL="previous" HREF="node53.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node55.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1350"
+  HREF="node55.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1344"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1338"
+  HREF="node53.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1346"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1348"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1351"
+  HREF="node55.html">Differentiation of inverse functions</A>
+<B> Up:</B> <A NAME="tex2html1345"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1339"
+  HREF="node53.html">Examples</A>
+ &nbsp; <B>  <A NAME="tex2html1347"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1349"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007110000000000000000"></A>
+<A NAME="sec:42"></A>
+<BR>
+Differentiation of a function of a function
+</H1>
+
+<P>
+It sometimes happens that <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>, instead of being defined directly as 
+a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, is given as a function of another variable <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN>, which is 
+defined as a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>. In that case <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> is a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> through 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> and is called a <I>function of a function</I>
+or a <I>composite function</I>. 
+<A NAME="6096"></A> 
+The process of substituting one function into another is sometimes  
+called <I>composition</I>. 
+<A NAME="6098"></A> 
+
+<P>
+For example, if <!-- MATH
+ $y = \frac{2v}{1 - v^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img910.png"
+ ALT="$ y = \frac{2v}{1 - v^2}$"></SPAN>,
+and <SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img911.png"
+ ALT="$ v = 1-x^2$"></SPAN>,
+then <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> is a function of a function. By eliminating <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> we may express 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> directly as a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, but in general this is not the best plan when 
+we wish to find <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN>.
+
+<P>
+If <SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img912.png"
+ ALT="$ y = f(v)$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img913.png"
+ ALT="$ v = g (x)$"></SPAN>, then <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> is a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> through <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN>. 
+Hence, when we let <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> take on an increment <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> will take on an increment 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img914.png"
+ ALT="$ \Delta v$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> will also take on a corresponding increment <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.png"
+ ALT="$ \Delta y$"></SPAN>. 
+Keeping this in mind, let us apply the General Rule simultaneously 
+to the two functions <SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img912.png"
+ ALT="$ y = f(v)$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img913.png"
+ ALT="$ v = g (x)$"></SPAN>.
+
+<P>
+
+<UL>
+<LI>FIRST STEP. <!-- MATH
+ $y + \Delta y 	= f(v + \Delta v)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="146" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img915.png"
+ ALT="$ y + \Delta y = f(v + \Delta v)$"></SPAN>, <!-- MATH
+ $v + \Delta v = g(x + \Delta x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="146" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img916.png"
+ ALT="$ v + \Delta v = g(x + \Delta x)$"></SPAN>.
+
+<P>
+</LI>
+<LI>SECOND STEP.
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{rlcrl}
+y + \Delta y &	= f(v + \Delta v), & \qquad &	v + \Delta v &	= g (x + \Delta x)\\
+y 	&= f(v), & \qquad &	v &	= g (x)\\
+\Delta y 	&=f(v + \Delta v) - f(v),  & \qquad &	\Delta v &=g (x + \Delta x) - g (x)
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="440" HEIGHT="73" BORDER="0"
+ SRC="img917.png"
+ ALT="\begin{displaymath}
+\begin{array}{rlcrl}
+y + \Delta y &amp; = f(v + \Delta v), &amp; \qq...
+...(v), &amp; \qquad &amp; \Delta v &amp;=g (x + \Delta x) - g (x)
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI>THIRD STEP. <!-- MATH
+ $\frac{\Delta y}{\Delta v}
+= \frac{f(v + \Delta v) - f(v)}{\Delta v} $
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img918.png"
+ ALT="$ \frac{\Delta y}{\Delta v}
+= \frac{f(v + \Delta v) - f(v)}{\Delta v} $"></SPAN>,
+<!-- MATH
+ $\frac{\Delta v}{\Delta x} =	\frac{g(x + \Delta x) - g(x)}{\Delta x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img919.png"
+ ALT="$ \frac{\Delta v}{\Delta x} = \frac{g(x + \Delta x) - g(x)}{\Delta x}$"></SPAN>.
+
+<P>
+The left-hand members show one form of the ratio of the increment of 
+each function to the increment of the corresponding variable, and the right-hand 
+members exhibit the same ratios in another form. Before passing to the limit 
+let us form a product of these two ratios, choosing the left-hand forms for this purpose.
+
+<P>
+This gives <!-- MATH
+ $\frac{\Delta y}{\Delta v} \cdot \frac{\Delta v}{\Delta x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img920.png"
+ ALT="$ \frac{\Delta y}{\Delta v} \cdot \frac{\Delta v}{\Delta x}$"></SPAN>, 
+which equals <!-- MATH
+ $\frac{\Delta y}{\Delta x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img587.png"
+ ALT="$ \frac{\Delta y}{\Delta x}$"></SPAN>.
+Write this 	
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{\Delta y}{\Delta x} 	= \frac{\Delta y}{\Delta v} \cdot \frac{\Delta v}{\Delta x}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="119" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img921.png"
+ ALT="$\displaystyle \frac{\Delta y}{\Delta x} = \frac{\Delta y}{\Delta v} \cdot \frac{\Delta v}{\Delta x}.
+$">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI>FOURTH STEP. Passing to the limit,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A-42"></A><!-- MATH
+ \begin{equation}
+\frac{dy}{dx} 	= \frac{dy}{dv} \cdot \frac{dv}{dx},
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="105" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img922.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{dy}{dv} \cdot \frac{dv}{dx},$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+by Theorem <A HREF="node26.html#thrm:II-20">3.8.2</A>.This may also be written
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= f'(v) \cdot g'(x).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="132" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img923.png"
+ ALT="$\displaystyle \frac{dy}{dx} = f'(v) \cdot g'(x).
+$">
+</DIV><P></P>
+
+<P>
+</LI>
+</UL>
+The above formula is sometimes referred to as the <I>chain rule</I> 
+for differentiation. 
+<A NAME="6141"></A> 
+If <SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img912.png"
+ ALT="$ y = f(v)$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img913.png"
+ ALT="$ v = g (x)$"></SPAN>, the derivative of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> equals 
+the product of the derivative of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> and the derivative of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1350"
+  HREF="node55.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1344"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1338"
+  HREF="node53.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1346"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1348"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1351"
+  HREF="node55.html">Differentiation of inverse functions</A>
+<B> Up:</B> <A NAME="tex2html1345"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1339"
+  HREF="node53.html">Examples</A>
+ &nbsp; <B>  <A NAME="tex2html1347"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1349"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

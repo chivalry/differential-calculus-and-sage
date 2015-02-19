@@ -1,0 +1,313 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Increments</TITLE>
+<META NAME="description" CONTENT="Increments">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node35.html">
+<LINK REL="previous" HREF="node33.html">
+<LINK REL="up" HREF="node32.html">
+<LINK REL="next" HREF="node35.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1035"
+  HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1029"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1023"
+  HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1031"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1033"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1036"
+  HREF="node35.html">Comparison of increments</A>
+<B> Up:</B> <A NAME="tex2html1030"
+  HREF="node32.html">Differentiation</A>
+<B> Previous:</B> <A NAME="tex2html1024"
+  HREF="node33.html">Introduction</A>
+ &nbsp; <B>  <A NAME="tex2html1032"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1034"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00620000000000000000">
+Increments</A>
+</H1>
+The <I>increment</I> of a variable in changing from one 
+numerical value to another is the difference found by 
+subtracting the first value from the second. An increment of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> 
+is denoted by the symbol <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN>, read ``delta <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>''.
+<A NAME="3763"></A>
+
+<P>
+The student is warned against reading this symbol 
+``delta times <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>'', it having no such meaning. Evidently 
+this increment may be either positive or negative<A NAME="tex2html30"
+  HREF="footnode.html#foot3764"><SUP><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>according as the variable in changing is increasing or 
+decreasing in value. Similarly,
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.png"
+ ALT="$ \Delta y$"></SPAN> denotes an increment of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>,
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $\Delta \phi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img566.png"
+ ALT="$ \Delta \phi$"></SPAN> denotes an increment of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img265.png"
+ ALT="$ \phi$"></SPAN>,
+
+<P>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $\Delta f(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img567.png"
+ ALT="$ \Delta f(x)$"></SPAN> denotes an increment <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN>, etc.
+
+<P>
+If in <SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img568.png"
+ ALT="$ y = f(x)$"></SPAN> the independent variable <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, takes on an increment 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN>, then <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.png"
+ ALT="$ \Delta y$"></SPAN> is always understood to denote the 
+corresponding increment of the function <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> (or dependent variable <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>).
+
+<P>
+The increment <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.png"
+ ALT="$ \Delta y$"></SPAN> is always assumed to be reckoned 
+from a definite initial value of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> corresponding to the arbitrarily 
+fixed initial value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> from which the increment <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN> 
+is reckoned. 
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; For instance, consider the function
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = x^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="55" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img569.png"
+ ALT="$\displaystyle y = x^2.
+$">
+</DIV><P></P>
+Assuming <SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img570.png"
+ ALT="$ x = 10$"></SPAN> for the initial value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> fixes <SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img571.png"
+ ALT="$ y = 100$"></SPAN> as 
+the initial value of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>.
+Suppose <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> increases to <SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img572.png"
+ ALT="$ x = 12$"></SPAN>, that is, <!-- MATH
+ $\Delta x 	= 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img573.png"
+ ALT="$ \Delta x = 2$"></SPAN>;
+then <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> increases to <SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img574.png"
+ ALT="$ y = 144$"></SPAN>, and <!-- MATH
+ $\Delta y 	= 44$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img575.png"
+ ALT="$ \Delta y = 44$"></SPAN>.
+Suppose <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> decreases to <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img576.png"
+ ALT="$ x = 9$"></SPAN>, that is, <!-- MATH
+ $\Delta x = - 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img577.png"
+ ALT="$ \Delta x = - 1$"></SPAN>;
+then <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> increases to <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img578.png"
+ ALT="$ y= 81$"></SPAN>,	and <!-- MATH
+ $\Delta y 	= - 19$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img579.png"
+ ALT="$ \Delta y = - 19$"></SPAN>.</DIV><P></P>
+
+<P>
+It may happen that as <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> increases, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> decreases, or the reverse; 
+in either case <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.png"
+ ALT="$ \Delta y$"></SPAN> will have opposite signs.
+
+<P>
+It is also clear (as illustrated in the above example) that if 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img568.png"
+ ALT="$ y = f(x)$"></SPAN> is a continuous function and <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN> is decreasing in 
+numerical value, then <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.png"
+ ALT="$ \Delta y$"></SPAN> also decreases in numerical value.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1035"
+  HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1029"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1023"
+  HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1031"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1033"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1036"
+  HREF="node35.html">Comparison of increments</A>
+<B> Up:</B> <A NAME="tex2html1030"
+  HREF="node32.html">Differentiation</A>
+<B> Previous:</B> <A NAME="tex2html1024"
+  HREF="node33.html">Introduction</A>
+ &nbsp; <B>  <A NAME="tex2html1032"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1034"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

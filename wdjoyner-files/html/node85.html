@@ -1,0 +1,853 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Exercises</TITLE>
+<META NAME="description" CONTENT="Exercises">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node86.html">
+<LINK REL="previous" HREF="node84.html">
+<LINK REL="up" HREF="node81.html">
+<LINK REL="next" HREF="node86.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1802"
+  HREF="node86.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1796"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1790"
+  HREF="node84.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1798"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1800"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1803"
+  HREF="node86.html">Parametric equations of a</A>
+<B> Up:</B> <A NAME="tex2html1797"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1791"
+  HREF="node84.html">Equations of tangent and</A>
+ &nbsp; <B>  <A NAME="tex2html1799"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1801"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00840000000000000000">
+Exercises</A>
+</H1>
+
+<P>
+
+<OL>
+<LI>Find the equations of tangent and normal, lengths of subtangent, 
+subnormal tangent, and normal at the point <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1627.png"
+ ALT="$ (a,a)$"></SPAN> on the 
+cissoid <!-- MATH
+ $y^2 = \frac{x^3}{2a - x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$ y^2 = \frac {x^3}{2a - x}$"></SPAN>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:cissoid"></A><A NAME="13728"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.5:</STRONG>
+Graph of cissoid <!-- MATH
+ $y^2 = \frac{x^3}{2a - x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$ y^2 = \frac {x^3}{2a - x}$"></SPAN> with <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$ a=1$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="226" HEIGHT="225" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1628.png"
+ ALT="\includegraphics[height=5cm,width=5cm]{cissoid.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Solution. 	
+<!-- MATH
+ $\frac{dy}{dx} 	=\ \frac{3ax^2 - x^3}{y(2a - x)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="106" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1629.png"
+ ALT="$ \frac{dy}{dx} =\ \frac{3ax^2 - x^3}{y(2a - x)^2}$"></SPAN>.
+Hence 	
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy_1}{dx_1} = \left [ \frac{dy}{dx} \right ]_{x = a, y = a}
+=\ \frac{3a^3 - a^3}{a(2a - a)^2} = 2 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="276" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1630.png"
+ ALT="$\displaystyle \frac{dy_1}{dx_1} = \left [ \frac{dy}{dx} \right ]_{x = a, y = a}
+=\ \frac{3a^3 - a^3}{a(2a - a)^2} = 2
+$">
+</DIV><P></P>
+is the slope of tangent. Substituting in (<A HREF="node84.html#eqn:1-65">6.1</A>) 
+gives
+<P><!-- MATH
+ \begin{displaymath}
+y = 2x - a,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="83" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1631.png"
+ ALT="$\displaystyle y = 2x - a,
+$">
+</DIV><P></P>
+the equation of the tangent line.
+Substituting in (<A HREF="node84.html#eqn:65-2">6.2</A>) gives
+<P><!-- MATH
+ \begin{displaymath}
+2y + x 	= 3a,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="91" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1632.png"
+ ALT="$\displaystyle 2y + x = 3a,
+$">
+</DIV><P></P>
+the equation of the normal line.
+Substituting in (<A HREF="node84.html#eqn:3-65">6.3</A>) gives
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+TM 	= \frac{a}{2},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="71" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1633.png"
+ ALT="$\displaystyle TM = \frac{a}{2},
+$">
+</DIV><P></P>
+the length of subtangent.
+Substituting in (<A HREF="node84.html#eqn:4-65">6.4</A>) gives
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+MN 	= 2a,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="78" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1634.png"
+ ALT="$\displaystyle MN = 2a,
+$">
+</DIV><P></P>
+the length of subnormal.
+Also 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+PT = \sqrt{(TM)^2 + (MP)^2}
+= \sqrt{\frac{a^2}{4} + a^2} 
+= \frac{a}{2} \sqrt{5},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="333" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1635.png"
+ ALT="$\displaystyle PT = \sqrt{(TM)^2 + (MP)^2}
+= \sqrt{\frac{a^2}{4} + a^2}
+= \frac{a}{2} \sqrt{5},
+$">
+</DIV><P></P>
+which is the length of tangent,
+and 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+PN = \sqrt{(MN)^2 + (MP)^2}
+= \sqrt{4a^2 + a^2} = a \sqrt{5},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="339" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1636.png"
+ ALT="$\displaystyle PN = \sqrt{(MN)^2 + (MP)^2}
+= \sqrt{4a^2 + a^2} = a \sqrt{5},
+$">
+</DIV><P></P>
+the length of normal.
+
+<P>
+</LI>
+<LI>Find equations of tangent and normal to the ellipse 
+<!-- MATH
+ $x^2 + 2y^2 - 2xy - x = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="166" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1637.png"
+ ALT="$ x^2 + 2y^2 - 2xy - x = 0$"></SPAN> at the points where <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>.
+
+<P>
+Ans. At <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1638.png"
+ ALT="$ (1,0)$"></SPAN>, <!-- MATH
+ $2y = x - 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1639.png"
+ ALT="$ 2y = x - 1$"></SPAN>, <!-- MATH
+ $y + 2x = 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1640.png"
+ ALT="$ y + 2x = 2$"></SPAN>.
+At <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1583.png"
+ ALT="$ (1, 1)$"></SPAN>, <!-- MATH
+ $2y = x + 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1641.png"
+ ALT="$ 2y = x + 1$"></SPAN>, <!-- MATH
+ $y + 2x = 3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1642.png"
+ ALT="$ y + 2x = 3$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find equations of tangent and normal, lengths of subtangent 
+and subnormal at the point <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.png"
+ ALT="$ (x_1,y_1)$"></SPAN> on the 
+circle<A NAME="tex2html75"
+  HREF="footnode.html#foot12784"><SUP><SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">5</SPAN></SUP></A><!-- MATH
+ $x^2 + y^2 = r^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1432.png"
+ ALT="$ x^2 + y^2 = r^2$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $x_lx + y_1y = r^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="106" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1643.png"
+ ALT="$ x_lx + y_1y = r^2$"></SPAN>, <!-- MATH
+ $x_1y - y_1x = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="102" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1644.png"
+ ALT="$ x_1y - y_1x = 0$"></SPAN>, 
+<!-- MATH
+ $-x_1, -\frac{{y_1}^2}{x_1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1645.png"
+ ALT="$ -x_1, -\frac{{y_1}^2}{x_1}$"></SPAN>.
+
+<P>
+</LI>
+<LI>Show that the subtangent to the parabola <SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1430.png"
+ ALT="$ y^2 = 4px$"></SPAN> is bisected 
+at the vertex, and that the subnormal is constant and equal to <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1646.png"
+ ALT="$ 2p$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find the equation of the tangent at <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.png"
+ ALT="$ (x_1,y_1)$"></SPAN> to the ellipse 
+<!-- MATH
+ $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1647.png"
+ ALT="$ \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $\frac{x_1x}{a^2} + \frac{y_1y}{b^2} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="101" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1648.png"
+ ALT="$ \frac{x_1x}{a^2} + \frac{y_1y}{b^2} = 1$"></SPAN>.
+
+<P>
+Here's how to find the length of tangent, normal, 
+subtangent and subnormal of this in <I CLASS="sans">SAGE</I> 
+using the values <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$ a=1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1649.png"
+ ALT="$ b=2$"></SPAN>
+(so <!-- MATH
+ $x^2 + \frac{y^2}{4} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1650.png"
+ ALT="$ x^2 + \frac{y^2}{4} = 1$"></SPAN>) and <SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1651.png"
+ ALT="$ x_1=4/5$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1652.png"
+ ALT="$ y_1=6/5$"></SPAN>.
+
+<P>
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: x = var("x")
+sage: y = var("y")
+sage: F = x^2 + y^2/4 - 1
+sage: Dx = -diff(F,y)/diff(F,x); Dx; Dx(4/5,6/5)
+-y/(4*x)
+-3/8
+sage: Dy = -diff(F,x)/diff(F,y); Dy; Dy(4/5,6/5)
+-4*x/y
+-8/3
+</PRE>
+<P>
+
+(For this <I CLASS="sans">SAGE</I> calculation, we have used the fact that <SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1653.png"
+ ALT="$ F(x,y)=0$"></SPAN> implies
+<!-- MATH
+ $F_x(x,y)+\frac{dy}{dx}F_y(x,y)=0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="181" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1654.png"
+ ALT="$ F_x(x,y)+\frac{dy}{dx}F_y(x,y)=0$"></SPAN>, where <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> is regarded as a function of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>.) Therefore, we have (using (<A HREF="node84.html#eqn:3-65">6.3</A>))
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\rm length\ of\ subtangent} = y_1 \frac{dx}{dy}|_{x=x_1,y=y_1} =
+(6/5)(-3/8)=-9/20,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="451" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1655.png"
+ ALT="$\displaystyle {\rm length\ of\ subtangent} = y_1 \frac{dx}{dy}\vert _{x=x_1,y=y_1} =
+(6/5)(-3/8)=-9/20,
+$">
+</DIV><P></P>
+(using (<A HREF="node84.html#eqn:4-65">6.4</A>))
+<P><!-- MATH
+ \begin{displaymath}
+{\rm\ length\ of\ subnormal}
+ = y_1 \frac{dy}{dx}|_{x=x_1,y=y_1} = (6/5)(-8/3)=-16/5,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="452" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1656.png"
+ ALT="$\displaystyle {\rm\ length\ of\ subnormal}
+= y_1 \frac{dy}{dx}\vert _{x=x_1,y=y_1} = (6/5)(-8/3)=-16/5,
+$">
+</DIV><P></P>
+(using (<A HREF="node84.html#eqn:5-65">6.5</A>))
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+{\rm length\ of\ tangent}
+=y_1 \sqrt{ \left ( \frac{dx}{dy}|_{x=x_1,y=y_1} \right)^2 + 1}
+&= (6/5)\sqrt{1+\frac{9}{64}}\\
+&=3\sqrt{73}/20
+=1.2816...\ ,
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="493" HEIGHT="65" BORDER="0"
+ SRC="img1657.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+{\rm length\ of\ tangent}
+=y_1 \sqrt{ \lef...
+...rt{1+\frac{9}{64}}\\
+&amp;=3\sqrt{73}/20
+=1.2816...\ ,
+\end{array}\end{displaymath}">
+</DIV><P></P>
+and (using (<A HREF="node84.html#eqn:6-65">6.6</A>))
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+{\rm length\ of\ normal}
+= y_1 \sqrt{ \left ( \frac{dy}{dx}|_{x=x_1,y=y_1} \right)^2 + 1}
+&=(6/5)\sqrt{1+\frac{64}{9}}\\
+&=2\sqrt{73}/5
+=3.4176...\ .
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="481" HEIGHT="65" BORDER="0"
+ SRC="img1658.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+{\rm length\ of\ normal}
+= y_1 \sqrt{ \lef...
+...qrt{1+\frac{64}{9}}\\
+&amp;=2\sqrt{73}/5
+=3.4176...\ .
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI>Find equations of tangent and normal to the  Witch of Agnesi 
+<!-- MATH
+ $y = \frac{8a^3}{4a^2 + x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1659.png"
+ ALT="$ y = \frac{8a^3}{4a^2 + x^2}$"></SPAN> as at the point where <SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1660.png"
+ ALT="$ x = 2a$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $x + 2y = 4a$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1661.png"
+ ALT="$ x + 2y = 4a$"></SPAN>, <!-- MATH
+ $y = 2x - 3a$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1662.png"
+ ALT="$ y = 2x - 3a$"></SPAN>.
+
+<P>
+</LI>
+<LI>Prove that at any point on the catenary 
+<!-- MATH
+ $y = \frac{a}{2}(e^{\frac{x}{a}} + e^{-\frac{x}{a}})$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="123" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1663.png"
+ ALT="$ y = \frac{a}{2}(e^{\frac{x}{a}} + e^{-\frac{x}{a}})$"></SPAN> 
+the lengths of subnormal and normal are 
+<!-- MATH
+ $\frac{a}{4}(e^{\frac{2x}{a}} - e^{-\frac{2x}{a}})$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="104" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1664.png"
+ ALT="$ \frac{a}{4}(e^{\frac{2x}{a}} - e^{-\frac{2x}{a}})$"></SPAN> and 
+<!-- MATH
+ $\frac{y^2}{a}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1665.png"
+ ALT="$ \frac{y^2}{a}$"></SPAN> respectively.
+<A NAME="12849"></A>
+
+<P>
+</LI>
+<LI>Find equations of tangent and normal, lengths of subtangent 
+and subnormal, to each of the following curves at the points indicated:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+(a)\ \  y = x^3\ {\rm at}\
+(\frac{1}{2}, \frac{1}{8}) & 	(e)\ \  y = 9-x^2 \ {\rm at}\ (-3,0)\\
+ & \\
+(b)\ \  y^2 = 4x \ {\rm at}\  (9,-6) & 	(f)\ \  x^2 = 6y \ {\rm where}\ x = -6\\
+ & \\
+(c)\ \  x^2 + 5y^2 = 14\ {\rm where}\  y = 1 &	(g)\ \  x^2 - xy + 2x - 9 = 0\ {\rm at}\ (3,2)\\
+ & \\
+(d)\ \  x^2 + y^2 = 25 at (-3,-4)  & (h)\ \  2x^2 - y^2 = 14\ {\rm at}\ (3,-2)
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="465" HEIGHT="150" BORDER="0"
+ SRC="img1666.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+(a)\ \ y = x^3\ {\rm at}\
+(\frac{1}{2}, \...
+... (-3,-4) &amp; (h)\ \ 2x^2 - y^2 = 14\ {\rm at}\ (3,-2)
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI>Prove that the length of subtangent to <SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img928.png"
+ ALT="$ y = a^x$"></SPAN> is 
+constant and equal to <!-- MATH
+ $\frac{1}{\log a}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1667.png"
+ ALT="$ \frac{1}{\log a}$"></SPAN>.
+
+<P>
+</LI>
+<LI>Get the equation of tangent to the parabola 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1668.png"
+ ALT="$ y^2 = 20x$"></SPAN> which makes an angle of 
+<!-- MATH
+ $45^o=\pi/4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1579.png"
+ ALT="$ 45^o=\pi/4$"></SPAN> with the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1669.png"
+ ALT="$ y = x + 5$"></SPAN>.
+(Hint: First find point of contact by method of 
+Example <A HREF="node82.html#ex:64">6.1.1</A>.) 
+<P>
+</LI>
+<LI>Find equations of tangents to the circle <!-- MATH
+ $x^2 + y^2 = 52$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="93" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1670.png"
+ ALT="$ x^2 + y^2 = 52$"></SPAN> which 
+are parallel to the line <!-- MATH
+ $2x + 3y = 6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1671.png"
+ ALT="$ 2x + 3y = 6$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $2x + 3y \pm 26 = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="122" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1672.png"
+ ALT="$ 2x + 3y \pm 26 = 0$"></SPAN>
+
+<P>
+</LI>
+<LI>Find equations of tangents to the hyperbola 
+<!-- MATH
+ $4x^2 - 9y^2 + 36 = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1673.png"
+ ALT="$ 4x^2 - 9y^2 + 36 = 0$"></SPAN> which are perpendicular to the line 
+<!-- MATH
+ $2y + 5x = 10$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1674.png"
+ ALT="$ 2y + 5x = 10$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $2x - 5y \pm 8 = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1675.png"
+ ALT="$ 2x - 5y \pm 8 = 0$"></SPAN>.
+
+<P>
+</LI>
+<LI>Show that in the equilateral hyperbola 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1676.png"
+ ALT="$ 2xy = a^2$"></SPAN> the area of the triangle formed by a tangent 
+and the coordinate axes is constant and equal to <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1677.png"
+ ALT="$ a^2$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find equations of tangents and normals to the curve 
+<!-- MATH
+ $y^2 = 2x^2 - x^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="101" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1678.png"
+ ALT="$ y^2 = 2x^2 - x^3$"></SPAN> at the points where <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>.
+
+<P>
+Ans. At <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1583.png"
+ ALT="$ (1, 1)$"></SPAN>, <!-- MATH
+ $2y = x + 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1641.png"
+ ALT="$ 2y = x + 1$"></SPAN>, <!-- MATH
+ $y + 2x = 3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1642.png"
+ ALT="$ y + 2x = 3$"></SPAN>.
+At <SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1679.png"
+ ALT="$ (1,-1)$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="91" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1680.png"
+ ALT="$ 2y =-x-1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="91" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1681.png"
+ ALT="$ y-2x = -3$"></SPAN>.
+
+<P>
+</LI>
+<LI>Show that the sum of the intercepts of the tangent to the parabola
+<!-- MATH
+ $x^{\frac{1}{2}} + y^{\frac{1}{2}} = a^{\frac{1}{2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="101" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1438.png"
+ ALT="$ x^{\frac{1}{2}} + y^{\frac{1}{2}} = a^{\frac{1}{2}}$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find the equation of tangent to the curve 
+<!-- MATH
+ $x^2(x + y) = a^2(x-y)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="156" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1682.png"
+ ALT="$ x^2(x + y) = a^2(x-y)$"></SPAN> at the origin.
+
+<P>
+</LI>
+<LI>Show that for the hypocycloid 
+<!-- MATH
+ $x^{\frac{2}{3}} + y^{\frac{2}{3}} = a^{\frac{2}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="101" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1440.png"
+ ALT="$ x^{\frac{2}{3}} + y^{\frac{2}{3}} = a^{\frac{2}{3}}$"></SPAN> that 
+portion of the tangent included between the coordinate 
+axes is constant and equal to <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>.
+<A NAME="12879"></A>
+
+<P>
+
+(This curve is parameterized by <!-- MATH
+ $x=a\cos(t)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1683.png"
+ ALT="$ x=a\cos(t)^3$"></SPAN>, 
+<!-- MATH
+ $y=a\sin(t)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="90" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1684.png"
+ ALT="$ y=a\sin(t)^3$"></SPAN>, <!-- MATH
+ $0\leq t\leq 2\pi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1685.png"
+ ALT="$ 0\leq t\leq 2\pi$"></SPAN>. Parametric equations shall be 
+discussed in the next section.)
+
+<P>
+</LI>
+<LI>Show that the curve <!-- MATH
+ $y = ae^{\frac{x}{c}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1686.png"
+ ALT="$ y = ae^{\frac{x}{c}}$"></SPAN> has a constant subtangent.
+
+<P>
+</LI>
+</OL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1802"
+  HREF="node86.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1796"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1790"
+  HREF="node84.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1798"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1800"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1803"
+  HREF="node86.html">Parametric equations of a</A>
+<B> Up:</B> <A NAME="tex2html1797"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1791"
+  HREF="node84.html">Equations of tangent and</A>
+ &nbsp; <B>  <A NAME="tex2html1799"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1801"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

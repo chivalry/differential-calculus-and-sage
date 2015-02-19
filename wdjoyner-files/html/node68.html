@@ -1,0 +1,986 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Exercises</TITLE>
+<META NAME="description" CONTENT="Exercises">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node69.html">
+<LINK REL="previous" HREF="node67.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node69.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1546"
+  HREF="node69.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1540"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1534"
+  HREF="node67.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1542"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1544"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1547"
+  HREF="node69.html">Differentiation of</A>
+<B> Up:</B> <A NAME="tex2html1541"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1535"
+  HREF="node67.html">Differentiation of</A>
+ &nbsp; <B>  <A NAME="tex2html1543"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1545"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007250000000000000000">
+Exercises</A>
+</H1>
+
+<P>
+In the derivation of our formulas so far it has been necessary to 
+apply the General Rule, &#167;<A HREF="node39.html#sec:31">4.7</A>, (i.e. the four steps), only for the following:
+
+<P>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT">III</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\frac{d}{dx}(u + v - w) 	= \frac{du}{dx} + \frac{dv}{dx} - \frac{dw}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="240" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img736.png"
+ ALT="$ \frac{d}{dx}(u + v - w) = \frac{du}{dx}\ +\ \frac{dv}{dx}\ -\ \frac{dw}{dx}$"></SPAN></TD>
+<TD ALIGN="CENTER">Algebraic sum.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">V</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\frac{d}{dx}(uv) 	= u \frac{dv}{dx} + v \frac{du}{dx}.$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="150" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1167.png"
+ ALT="$ \frac{d}{dx}(uv) = u \frac{dv}{dx} + v \frac{du}{dx}. $"></SPAN></TD>
+<TD ALIGN="CENTER">Product.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">VII</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\frac{d}{dx} \left ( \frac{u}{v} \right ) 	= \frac{v \frac{du}{dx} - u \frac{dv}{dx}}{v^2}.$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="137" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1168.png"
+ ALT="$ \frac{d}{dx} \left ( \frac{u}{v} \right ) = \frac{v \frac{du}{dx} - u \frac{dv}{dx}}{v^2}. $"></SPAN></TD>
+<TD ALIGN="CENTER">Quotient.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">VIII</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\frac{d}{dx}(\log_a v) 	= \log_a e \frac{\frac{dv}{dx}}{v}.$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="157" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1169.png"
+ ALT="$ \frac{d}{dx}(\log_a v) = \log_a e \frac{\frac{dv}{dx}}{v}. $"></SPAN></TD>
+<TD ALIGN="CENTER">Logarithm.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">XI</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\frac{d}{dx}(\sin v) 	= \cos v \frac{dv}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="147" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img749.png"
+ ALT="$ \frac{d}{dx} (\sin\ v) = \cos\ v \frac{dv}{dx}$"></SPAN></TD>
+<TD ALIGN="CENTER">Sine.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">XXV</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\frac{dy}{dx} 	= \frac{dy}{dv} \cdot \frac{dv}{dx}.$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1170.png"
+ ALT="$ \frac{dy}{dx} = \frac{dy}{dv} \cdot \frac{dv}{dx}. $"></SPAN></TD>
+<TD ALIGN="CENTER">Function of a function.</TD>
+</TR>
+<TR><TD ALIGN="LEFT">XXVI</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $\frac{dy}{dx} 	= \frac{1}{\frac{dx}{dy}}.$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1171.png"
+ ALT="$ \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}}. $"></SPAN></TD>
+<TD ALIGN="CENTER">Inverse functions.</TD>
+</TR>
+</TABLE>
+</DIV>
+<P>
+Not only do all the other formulas we have deduced depend on these, but all 
+we shall deduce hereafter depend on them as well. Hence it follows that the 
+derivation of the fundamental formulas for differentiation involves the calculation 
+of only two limits of any difficulty, viz.,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{v \to 0} \frac{\sin v}{1} 	= 1\ \ \ \ \ \ {\rm by\ \S \ref{sec:22}},% § 22, p. 21
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="190" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1172.png"
+ ALT="% latex2html id marker 47362
+$\displaystyle \lim_{v \to 0} \frac{\sin v}{1} = 1\ \ \ \ \ \ {\rm by\ \S \ref{sec:22}},% § 22, p. 21
+$">
+</DIV><P></P>
+and 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{v \to 0}(1 + v)^{\frac{1}{v}} 	= e\  \ \ \ \ \ \ 	{\rm by\ \S \ref{sec:23}}. %By § 23, p. 22
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="217" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1173.png"
+ ALT="% latex2html id marker 47364
+$\displaystyle \lim_{v \to 0}(1 + v)^{\frac{1}{v}} = e\ \ \ \ \ \ \ {\rm by\ \S \ref{sec:23}}. %By § 23, p. 22
+$">
+</DIV><P></P>
+
+<P>
+
+<B>Examples/exercises:</B>
+
+<P>
+Differentiate the following:
+
+<P>
+
+<OL>
+<LI><!-- MATH
+ $y = \sin (ax^2)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="91" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1174.png"
+ ALT="$ y = \sin (ax^2)$"></SPAN> .
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= \cos ax^2 \frac{d}{dx}(ax^2),\ \ \ {\rm by\ XI\ } (v = ax^2).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="293" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1175.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \cos ax^2 \frac{d}{dx}(ax^2),\ \ \ {\rm by\ XI\ } (v = ax^2).
+$">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \tan \sqrt{1 - x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="110" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1176.png"
+ ALT="$ y = \tan \sqrt{1 - x}$"></SPAN>.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &	= \sec^2 \sqrt{1 - x} \frac{d}{dx}(1 - x)^{\frac{1}{2}},
+\ \ \ {\rm by\ XIII\ })v = \sqrt{1 - x})\\
+&  	= \sec^2 \sqrt{1 - x} \cdot \frac{1}{2} (1 - x)^{-\frac{1}{2}}(-1)\\
+&  	= -\frac{\sec^2 \sqrt{1 - x}}{2\sqrt{1 - x}}.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="376" HEIGHT="83" BORDER="0"
+ SRC="img1177.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &amp; = \sec^2 \sqrt{1 - x} \fra...
+...\\
+&amp; = -\frac{\sec^2 \sqrt{1 - x}}{2\sqrt{1 - x}}.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \cos^3x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1178.png"
+ ALT="$ y = \cos^3x$"></SPAN>.
+
+<P>
+This may also be written,
+<!-- MATH
+ $y 	= (\cos x)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1179.png"
+ ALT="$ y = (\cos x)^3$"></SPAN>.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx}
+&	= 3(\cos x)^2 \frac{d}{dx}(\cos x) \ \ \ {\rm by\ VI}\ (v = \cos x\ {\rm and}\ n = 3)\\
+&  	= 3\cos^2x( - \sin x)  \ \ \ {\rm by\ XII}\\
+&  	= - 3\sin x\cos^2x.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="382" HEIGHT="75" BORDER="0"
+ SRC="img1180.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx}
+&amp; = 3(\cos x)^2 \frac{d}{dx...
+...sin x) \ \ \ {\rm by\ XII}\\
+&amp; = - 3\sin x\cos^2x.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \sin nx\sin^nx$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1181.png"
+ ALT="$ y = \sin nx\sin^nx$"></SPAN>.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &
+= \sin nx \frac{d}{dx}(\sin x)^n + \sin^n x \frac{d}{dx}(\sin nx)  
+\ \ \ {\rm by\ V} (v = \sin nx\ {\rm and}\  v = \sin^nx)\\
+&  	= \sin nx \cdot n(\sin x)^{n - 1} \frac{d}{dx}(\sin x) + \sin^n x \cos nx \frac{d}{dx}(nx) 
+\ \ \ {\rm by\ 	VI\ and\  XI}\\
+&  	= n \sin nx \cdot \sin^{n - 1} x \cos x + n \sin^n x \cos nx\\
+&  	= n\sin^{n - 1}x(\sin nx \cos x + \cos nx\ sinx)\\
+&  	= n\sin^{n - 1}x \sin(n + 1)x.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="527" HEIGHT="106" BORDER="0"
+ SRC="img1182.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &amp;
+= \sin nx \frac{d}{dx}(\s...
+... \cos nx\ sinx)\\
+&amp; = n\sin^{n - 1}x \sin(n + 1)x.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \sec ax$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1183.png"
+ ALT="$ y = \sec ax$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	<!-- MATH
+ $\frac{dy}{dx} =	a\sec ax\tan ax$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="141" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1184.png"
+ ALT="$ \frac{dy}{dx} = a\sec ax\tan ax$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \tan(ax + b)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="113" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1185.png"
+ ALT="$ y = \tan(ax + b)$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	<!-- MATH
+ $\frac{dy}{dx} 	= a\sec^2(ax + b)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="138" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1186.png"
+ ALT="$ \frac{dy}{dx} = a\sec^2(ax + b)$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $s = \cos 3ax$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1187.png"
+ ALT="$ s = \cos 3ax$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	<!-- MATH
+ $\frac{ds}{dx} 	= - 3a\sin 3ax$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="122" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1188.png"
+ ALT="$ \frac{ds}{dx} = - 3a\sin 3ax$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $s = \cot(2t^2 + 3)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="115" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1189.png"
+ ALT="$ s = \cot(2t^2 + 3)$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	<!-- MATH
+ $\frac{ds}{dt} 	= - 4t\csc^2(2t^2 + 3)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="159" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1190.png"
+ ALT="$ \frac{ds}{dt} = - 4t\csc^2(2t^2 + 3)$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(y) = \sin 2y\cos y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="129" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1191.png"
+ ALT="$ f(y) = \sin 2y\cos y$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	<!-- MATH
+ $f'(y) 	= 2\cos 2y\cos y - \sin 2y\sin y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="238" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1192.png"
+ ALT="$ f'(y) = 2\cos 2y\cos y - \sin 2y\sin y$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $F(x) = \cot^2 5x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="108" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1193.png"
+ ALT="$ F(x) = \cot^2 5x$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	<!-- MATH
+ $F'(x) 	= - 10\cot 5x\csc^2 5x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="186" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1194.png"
+ ALT="$ F'(x) = - 10\cot 5x\csc^2 5x$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $F(\theta ) = \tan \theta - \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="119" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1195.png"
+ ALT="$ F(\theta ) = \tan \theta - \theta$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	<!-- MATH
+ $F'(\theta) 	= \tan^2 \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="104" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1196.png"
+ ALT="$ F'(\theta) = \tan^2 \theta$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(φ) = \phi \sin\phi  + \cos\phi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="152" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1197.png"
+ ALT="$ f(φ) = \phi \sin\phi + \cos\phi $"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	<!-- MATH
+ $f'(\phi )	= \phi \cos \phi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1198.png"
+ ALT="$ f'(\phi ) = \phi \cos \phi $"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(t) = \sin^3 t\cos t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="121" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1199.png"
+ ALT="$ f(t) = \sin^3 t\cos t$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	<!-- MATH
+ $f'(t) 	= \sin^2 t(3\cos t - \sin^2 t)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="200" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1200.png"
+ ALT="$ f'(t) = \sin^2 t(3\cos t - \sin^2 t)$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $r = a\cos 2\theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="84" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1201.png"
+ ALT="$ r = a\cos 2\theta$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	<!-- MATH
+ $\frac{dr}{d\theta} 	= - 2a\sin 2\theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="112" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1202.png"
+ ALT="$ \frac{dr}{d\theta} = - 2a\sin 2\theta$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} \sin^2 x = \sin 2x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="124" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1203.png"
+ ALT="$ \frac{d}{dx} \sin^2 x = \sin 2x$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} \cos^3 (x^2) = -6x \cos^2 (x^2) \sin (x^2)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="243" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1204.png"
+ ALT="$ \frac{d}{dx} \cos^3 (x^2) = -6x \cos^2 (x^2) \sin (x^2)$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dt} \csc \frac{t^2}{2} = -t \csc \frac{t^2}{2} \cot \frac{t^2}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="182" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1205.png"
+ ALT="$ \frac{d}{dt} \csc \frac{t^2}{2} = -t \csc \frac{t^2}{2} \cot \frac{t^2}{2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{ds} a \sqrt{\cos 2s} = -\frac{a \sin 2s}{\sqrt{\cos 2s}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="161" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1206.png"
+ ALT="$ \frac{d}{ds} a \sqrt{\cos 2s} = -\frac{a \sin 2s}{\sqrt{\cos 2s}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{d\theta} a(1 - \cos \theta) = a \sin \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="164" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1207.png"
+ ALT="$ \frac{d}{d\theta} a(1 - \cos \theta) = a \sin \theta$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx}(\log \cos x) = -\tan x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="162" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1208.png"
+ ALT="$ \frac{d}{dx}(\log \cos x) = -\tan x$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx}(\log \tan x) = \frac{2}{\sin 2x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="149" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1209.png"
+ ALT="$ \frac{d}{dx}(\log \tan x) = \frac{2}{\sin 2x}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx}(\log \sin^2 x) = 2 \cot x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="161" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1210.png"
+ ALT="$ \frac{d}{dx}(\log \sin^2 x) = 2 \cot x$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dt} \cos \frac{a}{t} = \frac{a}{t^2} \sin \frac{a}{t}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="129" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1211.png"
+ ALT="$ \frac{d}{dt} \cos \frac{a}{t} = \frac{a}{t^2} \sin \frac{a}{t}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{d\theta} \sin \frac{1}{\theta^2} = -\frac{2}{\theta^3} \cos \frac{1}{\theta^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="156" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1212.png"
+ ALT="$ \frac{d}{d\theta} \sin \frac{1}{\theta^2} = -\frac{2}{\theta^3} \cos \frac{1}{\theta^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} e^{\sin x} = e^{\sin x} \cos x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="146" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1213.png"
+ ALT="$ \frac{d}{dx} e^{\sin x} = e^{\sin x} \cos x$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} \sin(\log x) = \frac{\cos(\log x)}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="167" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1214.png"
+ ALT="$ \frac{d}{dx} \sin(\log x) = \frac{\cos(\log x)}{x}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} \tan(\log x) = \frac{\sec^2(\log x)}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="176" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1215.png"
+ ALT="$ \frac{d}{dx} \tan(\log x) = \frac{\sec^2(\log x)}{x}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} a \sin^3 \frac{\theta}{3} = a \sin^2 \frac{\theta}{3} \cos \frac{\theta}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="181" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1216.png"
+ ALT="$ \frac{d}{dx} a \sin^3 \frac{\theta}{3} = a \sin^2 \frac{\theta}{3} \cos \frac{\theta}{3}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{d\alpha} \sin(\cos \alpha) = -\sin \alpha \cos(\cos \alpha)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="231" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1217.png"
+ ALT="$ \frac{d}{d\alpha} \sin(\cos \alpha) = -\sin \alpha \cos(\cos \alpha)$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} \frac{\tan x - 1}{\sec x} = \sin x + \cos x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="175" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1218.png"
+ ALT="$ \frac{d}{dx} \frac{\tan x - 1}{\sec x} = \sin x + \cos x$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \log \sqrt{ \frac{1 + \sin x}{1 - \sin x} }$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="118" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1219.png"
+ ALT="$ y = \log \sqrt{ \frac{1 + \sin x}{1 - \sin x} }$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ans:  <!-- MATH
+ $\frac{dy}{dx} 	= \frac{1}{\cos x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1220.png"
+ ALT="$ \frac{dy}{dx} = \frac{1}{\cos x} $"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \log \tan \left ( \frac{\pi}{4} + \frac{x}{2} \right )$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="140" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1221.png"
+ ALT="$ y = \log \tan \left ( \frac{\pi}{4} + \frac{x}{2} \right )$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $\frac{dy}{dx} 	= \frac{1}{\cos x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1220.png"
+ ALT="$ \frac{dy}{dx} = \frac{1}{\cos x} $"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(x) = \sin(x + a)\cos(x - a)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="199" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1222.png"
+ ALT="$ f(x) = \sin(x + a)\cos(x - a)$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  <!-- MATH
+ $f'(x) 	= \cos 2x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="102" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1223.png"
+ ALT="$ f'(x) = \cos 2x$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = a^{\tan nx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1224.png"
+ ALT="$ y = a^{\tan nx}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  <!-- MATH
+ $y' 	= na^{\tan nx}\sec^2 nx\log a$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="179" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1225.png"
+ ALT="$ y' = na^{\tan nx}\sec^2 nx\log a$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = e^{\cos x}\sin x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="103" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1226.png"
+ ALT="$ y = e^{\cos x}\sin x$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  <!-- MATH
+ $y' = e^{\cos x} (\cos x - \sin^2 x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="176" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1227.png"
+ ALT="$ y' = e^{\cos x} (\cos x - \sin^2 x)$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = e^x\log\sin x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1228.png"
+ ALT="$ y = e^x\log\sin x$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  <!-- MATH
+ $y'= e^x(\cot x + \log\sin x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="173" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1229.png"
+ ALT="$ y'= e^x(\cot x + \log\sin x)$"></SPAN>
+
+<P>
+</LI>
+<LI>Compute the following derivatives: 
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{lll}
+(a) \ \  \frac{d}{dx} \sin 5x^2 &  	(f) \ \  \frac{d}{dx} \csc(\log x) &  	(k) \ \  \frac{d}{dt} e^{a - b\cos t}\\
+(b) \ \  \frac{d}{dx} \cos(a - bx) &  	(g) \ \  \frac{d}{dx} \sin^3 2x & (l) \ \  \frac{d}{dt} \sin \frac{t}{3} \cos^2 \frac{t}{3}\\
+(c) \ \  \frac{d}{dx} \tan \frac{ax}{b} &  	(h) \ \  \frac{d}{dx} \cos^2(\log x) &  	(m) \ \  \frac{d}{d\theta} \cot \frac{b}{\theta^2}\\
+(d) \ \  \frac{d}{dx} \cot \sqrt{ax} &  	(i) \ \  \frac{d}{dx} \tan^2 \sqrt{1 - x^2} &  	(n) \ \  \frac{d}{d\phi} \sqrt{1 + \cos^2 \phi}\\
+(e) \ \  \frac{d}{dx} \sec e^{3x} &  	(j) \ \  \frac{d}{dx} \log(\sin^2 ax) &  	(o) \ \  \frac{d}{ds} \log \sqrt{1 - 2\sin^2 s}
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="460" HEIGHT="121" BORDER="0"
+ SRC="img1230.png"
+ ALT="\begin{displaymath}
+\begin{array}{lll}
+(a) \ \ \frac{d}{dx} \sin 5x^2 &amp; (f) \ \ ...
+...x) &amp; (o) \ \ \frac{d}{ds} \log \sqrt{1 - 2\sin^2 s}
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx}(x^n e^{\sin x}) = x^{n - 1} e^{\sin x} (n + x\cos x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="260" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1231.png"
+ ALT="$ \frac{d}{dx}(x^n e^{\sin x}) = x^{n - 1} e^{\sin x} (n + x\cos x)$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} (e^{ax} \cos mx) = e^{ax}(a \cos mx - m \sin mx)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="302" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1232.png"
+ ALT="$ \frac{d}{dx} (e^{ax} \cos mx) = e^{ax}(a \cos mx - m \sin mx)$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(\theta) = \frac{1 + \cos \theta}{1 - \cos \theta}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="101" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1233.png"
+ ALT="$ f(\theta) = \frac{1 + \cos \theta}{1 - \cos \theta}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $f'(\theta) 	=\ -\frac{2 \sin \theta}{(1 - \cos \theta)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="140" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1234.png"
+ ALT="$ f'(\theta) =\ -\frac{2 \sin \theta}{(1 - \cos \theta)^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(\phi) = \frac{e^{a\phi}(a \sin \phi - \cos \phi)}{a^2 + 1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="162" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1235.png"
+ ALT="$ f(\phi) = \frac{e^{a\phi}(a \sin \phi - \cos \phi)}{a^2 + 1}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $f'(\phi) 	=\ e^{a\phi} \sin \phi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="124" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1236.png"
+ ALT="$ f'(\phi) =\ e^{a\phi} \sin \phi$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(s) = (s \cot s)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1237.png"
+ ALT="$ f(s) = (s \cot s)^2$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	 
+<!-- MATH
+ $f'(s) =\ 2s \cot s (\cot s - s \csc^2 s)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="225" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1238.png"
+ ALT="$ f'(s) =\ 2s \cot s (\cot s - s \csc^2 s)$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $r = \frac{1}{3} \tan^3 \theta - \tan \theta + \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="167" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1239.png"
+ ALT="$ r = \frac{1}{3} \tan^3 \theta - \tan \theta + \theta$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $\frac{dr}{d\theta} 	= \tan^4\theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1240.png"
+ ALT="$ \frac{dr}{d\theta} = \tan^4\theta$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = x^{\sin x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1241.png"
+ ALT="$ y = x^{\sin x}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $\frac{dy}{dx} 	=\ x^{\sin x} \left ( \frac{\sin x}{x} + \log x \cos x \right )$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="217" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1242.png"
+ ALT="$ \frac{dy}{dx} =\ x^{\sin x} \left ( \frac{\sin x}{x} + \log x \cos x \right )$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = (\sin x)^x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1243.png"
+ ALT="$ y = (\sin x)^x$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $y' 	=\ (\sin x)^x [ \log \sin x + x \cot x]$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="223" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1244.png"
+ ALT="$ y' =\ (\sin x)^x [ \log \sin x + x \cot x]$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = (\sin x)^{\tan x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="106" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1245.png"
+ ALT="$ y = (\sin x)^{\tan x}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $y' = (\sin x)^{\tan x} (1 + \sec^2 x \log \sin x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="247" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1246.png"
+ ALT="$ y' = (\sin x)^{\tan x} (1 + \sec^2 x \log \sin x)$"></SPAN>
+
+<P>
+</LI>
+<LI>Prove <!-- MATH
+ $\frac{d}{dx} \cos v = -\sin v \frac{dv}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="141" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1247.png"
+ ALT="$ \frac{d}{dx} \cos v = -\sin v \frac{dv}{dx}$"></SPAN>, using the General Rule.
+
+<P>
+</LI>
+<LI>Prove <!-- MATH
+ $\frac{d}{dx} \cot v = -\csc^2 v \frac{dv}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="149" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1248.png"
+ ALT="$ \frac{d}{dx} \cot v = -\csc^2 v \frac{dv}{dx}$"></SPAN> by replacing <SPAN CLASS="MATH"><IMG
+ WIDTH="37" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1147.png"
+ ALT="$ \cot v$"></SPAN> by 
+<!-- MATH
+ $\frac{\cos v}{\sin v}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1249.png"
+ ALT="$ \frac{\cos v}{\sin v}$"></SPAN>.
+
+<P>
+</LI>
+</OL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1546"
+  HREF="node69.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1540"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1534"
+  HREF="node67.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1542"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1544"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1547"
+  HREF="node69.html">Differentiation of</A>
+<B> Up:</B> <A NAME="tex2html1541"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1535"
+  HREF="node67.html">Differentiation of</A>
+ &nbsp; <B>  <A NAME="tex2html1543"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1545"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

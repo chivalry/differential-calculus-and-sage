@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Implicit functions</TITLE>
+<META NAME="description" CONTENT="Implicit functions">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node78.html">
+<LINK REL="previous" HREF="node76.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node78.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1672"
+  HREF="node78.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1666"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1660"
+  HREF="node76.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1668"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1670"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1673"
+  HREF="node78.html">Differentiation of implicit functions</A>
+<B> Up:</B> <A NAME="tex2html1667"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1661"
+  HREF="node76.html">Example</A>
+ &nbsp; <B>  <A NAME="tex2html1669"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1671"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007340000000000000000">
+Implicit functions</A>
+</H1>
+
+<P>
+When a relation between <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> is given by means of an equation 
+not solved for <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>, then <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> is called an implicit function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>. 
+For example, the equation
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x^2 - 4y = 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="86" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1415.png"
+ ALT="$\displaystyle x^2 - 4y = 0
+$">
+</DIV><P></P>
+defines <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> as an implicit function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>. Evidently <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> is also defined 
+by means of this equation as an implicit function of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>. Similarly,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x^2 + y^2 + z^2 - a^2 = 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="155" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1416.png"
+ ALT="$\displaystyle x^2 + y^2 + z^2 - a^2 = 0
+$">
+</DIV><P></P>
+defines anyone of the three variables as an implicit function of the other two.
+
+<P>
+It is sometimes possible to solve the equation defining an implicit 
+function for one of the variables and thus change it into an explicit 
+function. For instance, the above two implicit functions may be solved for <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>, 
+giving <!-- MATH
+ $y 	= \frac{x^2}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1417.png"
+ ALT="$ y = \frac{x^2}{4}$"></SPAN>
+and <!-- MATH
+ $y 	= \pm \sqrt{a^2 - x^2 - z^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="146" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1418.png"
+ ALT="$ y = \pm \sqrt{a^2 - x^2 - z^2}$"></SPAN>;
+the first showing <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> as an explicit function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, and the second as 
+an explicit function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1419.png"
+ ALT="$ z$"></SPAN>. In a given case, however, 
+such a solution may be either impossible or too complicated for convenient use.
+
+<P>
+The two implicit functions used in this section for illustration may be respectively denoted by
+<!-- MATH
+ $f(x,y) 	= 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1420.png"
+ ALT="$ f(x,y) = 0$"></SPAN> and <!-- MATH
+ $F(x,y,z) 	= 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="98" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1421.png"
+ ALT="$ F(x,y,z) = 0$"></SPAN>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1672"
+  HREF="node78.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1666"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1660"
+  HREF="node76.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1668"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1670"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1673"
+  HREF="node78.html">Differentiation of implicit functions</A>
+<B> Up:</B> <A NAME="tex2html1667"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1661"
+  HREF="node76.html">Example</A>
+ &nbsp; <B>  <A NAME="tex2html1669"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1671"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

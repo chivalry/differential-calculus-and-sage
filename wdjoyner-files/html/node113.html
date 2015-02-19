@@ -1,0 +1,390 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Maximum and minimum values of a function</TITLE>
+<META NAME="description" CONTENT="Maximum and minimum values of a function">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node114.html">
+<LINK REL="previous" HREF="node112.html">
+<LINK REL="up" HREF="node109.html">
+<LINK REL="next" HREF="node114.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2208"
+  HREF="node114.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2202"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2196"
+  HREF="node112.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2204"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2206"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2209"
+  HREF="node114.html">Examining a function for</A>
+<B> Up:</B> <A NAME="tex2html2203"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2197"
+  HREF="node112.html">Tests for determining when</A>
+ &nbsp; <B>  <A NAME="tex2html2205"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2207"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001040000000000000000"></A>
+<A NAME="sec:82"></A>
+<BR>
+Maximum and minimum values of a function
+</H1>
+
+<P>
+A <I>maximum value</I> of a function is one that is greater 
+than any values immediately preceding or following.
+A <I>minimum value</I> of a function is one that is less than 
+any values immediately preceding or following.
+<A NAME="18586"></A>
+<A NAME="18587"></A>
+
+<P>
+For example, in Figure <A HREF="node111.html#fig:cubic-fcn3">8.7</A>, it is clear that the 
+function has a maximum value (<SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2327.png"
+ ALT="$ y = 2$"></SPAN>) when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>, and a 
+minimum value (<SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2328.png"
+ ALT="$ y = l$"></SPAN>) when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>.
+
+<P>
+The student should observe that a maximum value is not 
+necessarily the greatest possible value of a function nor a 
+minimum value the least. For in Figure <A HREF="node111.html#fig:cubic-fcn3">8.7</A> it is seen that 
+the function (<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2312.png"
+ ALT="$ = y$"></SPAN>) has values to the right of <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN> that are 
+greater than the maximum <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN>, and values to the left of <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN> that 
+are less than the minimum <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:crazy-fcn"></A><A NAME="18597"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.8:</STRONG>
+A continuous function.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="497" HEIGHT="316" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2329.png"
+ ALT="\includegraphics[height=7cm,width=11cm]{curve-tangent3.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+A function may have several maximum and minimum values. Suppose 
+that Figure <A HREF="#fig:crazy-fcn">8.8</A> represents the graph of a function <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN>.
+
+<P>
+At B, F the function is at a local maximum, and at D, G 
+a minimum. That some particular minimum value of a function 
+may be greater than some particular maximum value is 
+shown in the figure, the minimum value at D being greater 
+than the maximum value at G.
+
+<P>
+At the ordinary critical points D, F, H the tangent (or curve) is parallel to the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis; 
+therefore
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\rm slope} = \frac{dy}{dx} = f'(x) = 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="172" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2330.png"
+ ALT="$\displaystyle {\rm slope} = \frac{dy}{dx} = f'(x) = 0.
+$">
+</DIV><P></P>
+At the exceptional critical points A, B, G the tangent (or curve) is perpendicular to the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis, 
+giving
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+{\rm slope} = \frac{dy}{dx} = f'(x) = \infty .
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="180" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2331.png"
+ ALT="$\displaystyle {\rm slope} = \frac{dy}{dx} = f'(x) = \infty .
+$">
+</DIV><P></P>
+
+<P>
+One of these two conditions is then necessary in order that 
+the function shall have a maximum or a minimum value. But such 
+a condition is not sufficient; for at H the slope is zero and 
+at A it is infinite, and yet the function has neither a maximum nor a 
+minimum value at either point. It is necessary for us to know, in 
+addition, how the function behaves in the neighborhood of each point. 
+Thus at the points of maximum value, B, F, the function 
+changes from an increasing to a decreasing function, and at the 
+points of minimum value, D, G, the function changes from a 
+decreasing to an increasing function. It therefore follows from 
+&#167;<A HREF="node112.html#sec:81">8.3</A> that at maximum points
+
+<P>
+<DIV ALIGN="CENTER">
+slope <!-- MATH
+ $= \frac{dy}{dx} = f'(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="96" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2332.png"
+ ALT="$ = \frac{dy}{dx} = f'(x)$"></SPAN> must change from + to -,
+
+</DIV>
+and at minimum points
+
+<P>
+<DIV ALIGN="CENTER">
+slope <!-- MATH
+ $= \frac{dy}{dx} = f'(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="96" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2332.png"
+ ALT="$ = \frac{dy}{dx} = f'(x)$"></SPAN> must change from - to +
+
+</DIV>
+when we move along the curve from left to right.
+
+<P>
+At such points as A and H where the slope is zero or infinite, 
+but which are neither maximum nor minimum points,
+
+<P>
+<DIV ALIGN="CENTER">
+slope <!-- MATH
+ $= \frac{dy}{dx} = f'(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="96" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2332.png"
+ ALT="$ = \frac{dy}{dx} = f'(x)$"></SPAN> does not change sign.
+
+</DIV>
+We may then state the conditions in general for maximum and minimum 
+values of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> for certain values of the variable as follows:
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:19-82"></A><!-- MATH
+ \begin{equation}
+f(x) \ {\rm is\ a\ maximum\ if\ }f'(x) = 0, \ {\rm and}\ f'(x)\
+{\rm changes\ from\ } +\ {\rm to}\ -.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="473" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2333.png"
+ ALT="$\displaystyle f(x) \ {\rm is\ a\ maximum\ if\ }f'(x) = 0, \ {\rm and}\ f'(x)\ {\rm changes\ from\ } +\ {\rm to}\ -.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:20-82"></A><!-- MATH
+ \begin{equation}
+f(x)  \ {\rm is\ a\ minimum\ if}\ f'(x) = 0,\ {\rm and}\ f'(x)\
+{\rm changes\ from}\ -\ {\rm to}\ +.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="470" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2334.png"
+ ALT="$\displaystyle f(x) \ {\rm is\ a\ minimum\ if}\ f'(x) = 0,\ {\rm and}\ f'(x)\ {\rm changes\ from}\ -\ {\rm to}\ +.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+The values of the variable at the turning points of a function 
+are called <I>critical values</I>; thus <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN> are the 
+critical values of the variable for the function whose 
+graph is shown in Figure <A HREF="node111.html#fig:cubic-fcn3">8.7</A>. The critical values at turning points where the 
+tangent is parallel to the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis are evidently found by 
+placing the first derivative equal to zero and solving 
+for real values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, just as under &#167;<A HREF="node82.html#sec:64">6.1</A>. <A NAME="18637"></A>
+(Similarly, if we wish to examine a function at exceptional 
+turning points where the tangent is perpendicular to the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis, 
+we set the reciprocal of the first derivative equal to 
+zero and solve to find critical values.)
+
+<P>
+To determine the sign of the first derivative at points near 
+a particular turning point, substitute in it, first, a value 
+of the variable just a little less than the corresponding critical 
+value, and then one a little greater<A NAME="tex2html106"
+  HREF="footnode.html#foot18638"><SUP><SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">5</SPAN></SUP></A>. 
+If the first gives <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2335.png"
+ ALT="$ +$"></SPAN> (as at L, Figure <A HREF="#fig:crazy-fcn">8.8</A>) 
+and the second - (as at M), then the function (<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2312.png"
+ ALT="$ = y$"></SPAN>) has a maximum value 
+in that interval (as at I).
+If the first gives <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2336.png"
+ ALT="$ -$"></SPAN> (as at P) and the second <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2335.png"
+ ALT="$ +$"></SPAN> (as at N), then 
+the function (<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2312.png"
+ ALT="$ = y$"></SPAN>) has a minimum value in that interval (as at C).
+
+<P>
+If the sign is the same in both cases (as at Q and R), 
+then the function (<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2312.png"
+ ALT="$ = y$"></SPAN>) has neither a maximum nor a minimum 
+value in that interval (as at F)<A NAME="tex2html107"
+  HREF="footnode.html#foot18640"><SUP><SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">6</SPAN></SUP></A>.
+
+<P>
+We shall now summarize our results into a compact working rule.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2208"
+  HREF="node114.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2202"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2196"
+  HREF="node112.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2204"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2206"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2209"
+  HREF="node114.html">Examining a function for</A>
+<B> Up:</B> <A NAME="tex2html2203"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2197"
+  HREF="node112.html">Tests for determining when</A>
+ &nbsp; <B>  <A NAME="tex2html2205"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2207"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

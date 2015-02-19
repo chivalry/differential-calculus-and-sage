@@ -1,0 +1,939 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Evolutes</TITLE>
+<META NAME="description" CONTENT="Evolutes">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node174.html">
+<LINK REL="previous" HREF="node172.html">
+<LINK REL="up" HREF="node169.html">
+<LINK REL="next" HREF="node174.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html3083"
+  HREF="node174.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html3077"
+  HREF="node169.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html3071"
+  HREF="node172.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html3079"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html3081"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html3084"
+  HREF="node174.html">Properties of the evolute</A>
+<B> Up:</B> <A NAME="tex2html3078"
+  HREF="node169.html">Circle of curvature. Center</A>
+<B> Previous:</B> <A NAME="tex2html3072"
+  HREF="node172.html">Center of curvature</A>
+ &nbsp; <B>  <A NAME="tex2html3080"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html3082"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001640000000000000000"></A>
+<A NAME="sec:119"></A>
+<BR>
+Evolutes
+</H1>
+
+<P>
+The locus of the centers of curvature of a given curve is called 
+the <I>evolute</I> of that curve. 
+<A NAME="31536"></A>
+Consider the circle of curvature corresponding to a point <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img251.png"
+ ALT="$ P$"></SPAN> on a curve. 
+If <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img251.png"
+ ALT="$ P$"></SPAN> moves along the given curve, we may suppose the corresponding 
+circle of curvature to roll along the curve with it, its radius 
+varying so as to be always equal to the radius of curvature 
+of the curve at the point <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img251.png"
+ ALT="$ P$"></SPAN>. The curve <SPAN CLASS="MATH"><IMG
+ WIDTH="36" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3720.png"
+ ALT="$ CC_7$"></SPAN> in Figure <A HREF="#fig:evolutes">14.4</A>
+described by the center of the circle is the evolute of <SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3721.png"
+ ALT="$ PP_7$"></SPAN>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:evolutes"></A><A NAME="31545"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 14.4:</STRONG>
+Geometric visualization of an evolute.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="271" HEIGHT="224" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3722.png"
+ ALT="\includegraphics[height=5cm,width=6cm]{evolutes.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+It is instructive to make an approximate construction of 
+the evolute of a curve by estimating (from the shape of the 
+curve) the lengths of the radii of curvature at different 
+points on the curve and then drawing them in and drawing the 
+locus of the centers of curvature.
+
+<P>
+Formula (<A HREF="node170.html#eqn:116E">14.7</A>) gives the coordinates of any 
+point <!-- MATH
+ $(\alpha,\beta)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$ (\alpha,\beta)$"></SPAN> on the evolute expressed in terms of the coordinates 
+of the corresponding point <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2746.png"
+ ALT="$ (x, y)$"></SPAN> of the given curve. But 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> is a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>; therefore
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\alpha
+= x - \frac{ \left[ 1 + \left( \frac{dy}{dx} \right)^2 \right] \frac{dy}{dx} }{ \frac{d^2 y}{dx^2} }, 
+\ \  \ \ \ \ \ \ 
+\beta = y + \frac{ 1 + \left( \frac{dy}{dx} \right)^2 }{ \frac{d^2 y}{dx^2} } 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="360" HEIGHT="97" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3723.png"
+ ALT="$\displaystyle \alpha
+= x - \frac{ \left[ 1 + \left( \frac{dy}{dx} \right)^2 \r...
+...\beta = y + \frac{ 1 + \left( \frac{dy}{dx} \right)^2 }{ \frac{d^2 y}{dx^2} }
+$">
+</DIV><P></P>
+give us at once the parametric equations of the evolute in 
+terms of the parameter x.
+
+<P>
+To find the ordinary rectangular equation of the evolute 
+we eliminate <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> between the two expressions. No general 
+process of elimination can be given that will apply in all 
+cases, the method to be adopted depending on the form of the 
+given equation. In a large number of cases, however, the 
+student can find the rectangular equation of the evolute by 
+taking the following steps:
+
+<P>
+General directions for finding the equation of the evolute in 
+rectangular coordinates.
+
+<P>
+
+<UL>
+<LI>FIRST STEP. Find <!-- MATH
+ $\alpha,\beta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="32" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3724.png"
+ ALT="$ \alpha,\beta$"></SPAN> from (<A HREF="node171.html#eqn:117-50">14.9</A>). 
+<P>
+</LI>
+<LI>SECOND STEP. Solve the two resulting equations for <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> 
+in terms of <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2748.png"
+ ALT="$ \alpha$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1909.png"
+ ALT="$ \beta$"></SPAN>.
+
+<P>
+</LI>
+<LI>THIRD STEP. Substitute these values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> in the given 
+equation. This gives a relation between the variables 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2748.png"
+ ALT="$ \alpha$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1909.png"
+ ALT="$ \beta$"></SPAN> which is the equation of the evolute.
+</LI>
+</UL>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
+<I>Find the equation of the evolute of the parabola <SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1430.png"
+ ALT="$ y^2 = 4px$"></SPAN>.
+</I>
+<P>
+<DIV ALIGN="CENTER"><A NAME="fig:evolute-of-parabola"></A><A NAME="31570"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 14.5:</STRONG>
+Evolute of a parabola.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="269" HEIGHT="181" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3725.png"
+ ALT="\includegraphics[height=4cm,width=6cm]{evolute-of-parabola.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+<P>
+<I>Solution. 	
+<!-- MATH
+ $\frac{dy}{dx} 	=\ \frac{2p}{y}, \frac{d^2 y}{dx^2} = -\frac{4p^2}{y^3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="153" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3726.png"
+ ALT="$ \frac{dy}{dx} =\ \frac{2p}{y}, \frac{d^2 y}{dx^2} = -\frac{4p^2}{y^3}$"></SPAN>.
+</I>
+<P>
+<I>First step. 	
+<!-- MATH
+ $\alpha= 3x + 2p$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3727.png"
+ ALT="$ \alpha= 3x + 2p$"></SPAN>, <!-- MATH
+ $\beta = -\frac{y^3}{4p^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3728.png"
+ ALT="$ \beta = -\frac{y^3}{4p^2}$"></SPAN>.
+</I>
+<P>
+<I>Second step. 	
+<!-- MATH
+ $x= \frac{\alpha - 2p}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3729.png"
+ ALT="$ x= \frac{\alpha - 2p}{3}$"></SPAN>, <!-- MATH
+ $y = -(4p^2 \beta)^{\frac{1}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="102" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3730.png"
+ ALT="$ y = -(4p^2 \beta)^{\frac{1}{3}}$"></SPAN>.
+</I>
+<P>
+<I>Third step 	
+<!-- MATH
+ $(4p^2 \beta)^{\frac{2}{3}} = 4p \left( \frac{\alpha - 2p}{3} \right)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="149" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3731.png"
+ ALT="$ (4p^2 \beta)^{\frac{2}{3}} = 4p \left( \frac{\alpha - 2p}{3} \right)$"></SPAN>;  
+or, <!-- MATH
+ $p\beta^2\frac{4}{27} (\alpha - 2p)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="111" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3732.png"
+ ALT="$ p\beta^2\frac{4}{27} (\alpha - 2p)^3$"></SPAN>.
+</I>
+<P>
+<I>Remembering that <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2748.png"
+ ALT="$ \alpha$"></SPAN> denotes the abscissa and <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1909.png"
+ ALT="$ \beta$"></SPAN> the 
+ordinate of a rectangular system of coordinates, 
+we see that the evolute of the parabola <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3733.png"
+ ALT="$ AOB$"></SPAN> is the semi-cubical 
+parabola <SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3734.png"
+ ALT="$ DC'E$"></SPAN>; the centers of curvature for <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img250.png"
+ ALT="$ O$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img251.png"
+ ALT="$ P$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3667.png"
+ ALT="$ P_1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3668.png"
+ ALT="$ P_2$"></SPAN> 
+being at <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1822.png"
+ ALT="$ C'$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img337.png"
+ ALT="$ C$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3735.png"
+ ALT="$ C_1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3736.png"
+ ALT="$ C_2$"></SPAN> respectively.</I></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; Find the equation of the evolute of the parabola <!-- MATH
+ $b^2x^2+a^2y^2 = a^2b^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1434.png"
+ ALT="$ b^2x^2 + a^2y^2 = a^2b^2$"></SPAN>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:evolute-of-an-ellipse"></A><A NAME="31602"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 14.6:</STRONG>
+Evolute of an ellipse.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="269" HEIGHT="181" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3737.png"
+ ALT="\includegraphics[height=4cm,width=6cm]{evolute-of-ellipse.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Solution. 	
+<!-- MATH
+ $\frac{dy}{dx} 	= -\frac{b^2 x}{a^2 y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1435.png"
+ ALT="$ \frac{dy}{dx} =\ -\frac{b^2x}{a^2y}$"></SPAN>, 
+<!-- MATH
+ $\frac{d^2 y}{dx^2} = -\frac{b^4}{a^2 y^3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2263.png"
+ ALT="$ \frac{d^2 y}{dx^2} = -\frac{b^4}{a^2 y^3}$"></SPAN>.
+
+<P>
+First step. <!-- MATH
+ $\alpha = \frac{(a^2 - b^2)x^3}{a^4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="98" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3738.png"
+ ALT="$ \alpha = \frac{(a^2 - b^2)x^3}{a^4}$"></SPAN>,
+<!-- MATH
+ $\beta 	= -\frac{(a^2 - b^2)y^3}{b^4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="110" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3739.png"
+ ALT="$ \beta = -\frac{(a^2 - b^2)y^3}{b^4}$"></SPAN>.
+
+<P>
+Second step. 	
+<!-- MATH
+ $x 	= \left( \frac{a^4 \alpha}{a^2 - b^2} \right)^{frac{1}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="132" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3740.png"
+ ALT="$ x = \left( \frac{a^4 \alpha}{a^2 - b^2} \right)^{frac{1}{3}}$"></SPAN>,
+<!-- MATH
+ $y 	= -\left( \frac{b^4 \beta}{a^2 - b^2} \right)^{\frac{1}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3741.png"
+ ALT="$ y = -\left( \frac{b^4 \beta}{a^2 - b^2} \right)^{\frac{1}{3}}$"></SPAN>.
+
+<P>
+Third step. <!-- MATH
+ $(a\alpha)^{\frac{2}{3}} + (b\beta)^{\frac{2}{3}}
+= (a^2 - b^2)^{\frac{2}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="197" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3742.png"
+ ALT="$ (a\alpha)^{\frac{2}{3}} + (b\beta)^{\frac{2}{3}}
+= (a^2 - b^2)^{\frac{2}{3}}$"></SPAN>, the equation of the evolute 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3743.png"
+ ALT="$ EHE'H'$"></SPAN> of the ellipse <SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3744.png"
+ ALT="$ ABA'B'$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2484.png"
+ ALT="$ E$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3745.png"
+ ALT="$ E'$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3746.png"
+ ALT="$ H'$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3747.png"
+ ALT="$ H$"></SPAN> are the 
+centers of curvature corresponding to the points <SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$ A$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3748.png"
+ ALT="$ A'$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ B$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3749.png"
+ ALT="$ B'$"></SPAN>, 
+on the curve, and <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img337.png"
+ ALT="$ C$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1822.png"
+ ALT="$ C'$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3750.png"
+ ALT="$ C''$"></SPAN> correspond to the points 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img251.png"
+ ALT="$ P$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3703.png"
+ ALT="$ P'$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3751.png"
+ ALT="$ P''$"></SPAN>.</DIV><P></P>
+
+<P>
+When the equations of the curve are given in parametric form, 
+we proceed to find <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN> and <!-- MATH
+ $\frac{d^2 y}{dx^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2193.png"
+ ALT="$ \frac{d^2 y}{dx^2}$"></SPAN>, 
+as in &#167;<A HREF="node145.html#sec:103">12.5</A>, from 
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:119A"></A><!-- MATH
+ \begin{equation}
+\frac{dy}{dx}
+= \frac{ \frac{dy}{dt} }{ \frac{dx}{dt} }, 
+\ \ \ \ \ \ \ 
+\frac{d^2 y}{dx^2} 
+= \frac{ \frac{dx}{dt} \frac{d^2 y}{dt^2} 
+- \frac{dy}{dt} \frac{d^2 x}{dt^2} }{ \left( \frac{dx}{dt} \right)^3 }
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="268" HEIGHT="67" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3752.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{ \frac{dy}{dt} }{ \frac{dx}{dt} }, \ \ \ \ ...
+...y}{dt^2} - \frac{dy}{dt} \frac{d^2 x}{dt^2} }{ \left( \frac{dx}{dt} \right)^3 }$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">12</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+and then substitute the results in 
+formulas (<A HREF="node171.html#eqn:117-50">14.9</A>). This gives the parametric equations of the evolute in terms 
+of the same parameter that occurs in the given equations.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN></B> &nbsp; The parametric equations of a curve are
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:119B"></A><!-- MATH
+ \begin{equation}
+x = \frac{t^2 + 1}{4}, \ \ \ \ \ \
+y = \frac{t^3}{6}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="168" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3753.png"
+ ALT="$\displaystyle x = \frac{t^2 + 1}{4}, \ \ \ \ \ \ y = \frac{t^3}{6}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">13</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Find the equation of the evolute in parametric form, 
+plot the curve and the evolute, find the radius of curvature 
+at the point where <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1731.png"
+ ALT="$ t = 1$"></SPAN>, and draw the corresponding circle of curvature.
+
+<P>
+Solution. 	
+<!-- MATH
+ $\frac{dx}{dt} = \frac{t}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3754.png"
+ ALT="$ \frac{dx}{dt} = \frac{t}{2}$"></SPAN>, <!-- MATH
+ $\frac{d^2 x}{dt^2} = \frac{1}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3755.png"
+ ALT="$ \frac{d^2 x}{dt^2} = \frac{1}{2}$"></SPAN>,
+<!-- MATH
+ $\frac{dy}{dt} = \frac{t^2}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3756.png"
+ ALT="$ \frac{dy}{dt} = \frac{t^2}{2}$"></SPAN>, <!-- MATH
+ $\frac{d^2 y}{dt^2} = t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3757.png"
+ ALT="$ \frac{d^2 y}{dt^2} = t$"></SPAN>.
+Substituting in above formulas (<A HREF="#eqn:119A">14.12</A>) and then in (<A HREF="node171.html#eqn:117-50">14.9</A>), gives
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:119C"></A><!-- MATH
+ \begin{equation}
+\alpha = \frac{1 - t^2 - 2t^4}{4}, \ \ \ \ \ \
+\beta = \frac{4t^3 + 3t}{6},
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="253" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3758.png"
+ ALT="$\displaystyle \alpha = \frac{1 - t^2 - 2t^4}{4}, \ \ \ \ \ \ \beta = \frac{4t^3 + 3t}{6},$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">14</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+the parametric equations of the evolute. Assuming values of 
+the parameter <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN>, we calculate <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>; <!-- MATH
+ $\alpha, \beta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="32" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3724.png"
+ ALT="$ \alpha,\beta$"></SPAN>
+from (<A HREF="#eqn:119B">14.13</A>) and (<A HREF="#eqn:119C">14.14</A>).
+Now plot the curve and its evolute.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:evolute-parametric-example"></A><A NAME="31699"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 14.7:</STRONG>
+Evolute of an parametric curve.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="270" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3759.png"
+ ALT="% latex2html id marker 57605
+\includegraphics[height=4cm,width=6cm]{evolute-parametric-example.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The point <!-- MATH
+ $(\frac{1}{4}, 0)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3760.png"
+ ALT="$ (\frac{1}{4}, 0)$"></SPAN> is common to the given curve 
+and its evolute. The given curve (a semi-cubical parabola) lies 
+entirely to the right and the evolute entirely to the left of 
+<!-- MATH
+ $x = \frac{1}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3761.png"
+ ALT="$ x = \frac{1}{4}$"></SPAN>.
+
+<P>
+The circle of curvature at <!-- MATH
+ $A= (\frac{1}{2}, \frac{1}{6})$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3762.png"
+ ALT="$ A= (\frac{1}{2}, \frac{1}{6})$"></SPAN>, 
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1731.png"
+ ALT="$ t = 1$"></SPAN>, will have its center at 
+<!-- MATH
+ $A'= (-\frac{1}{2}, -\frac{7}{6})$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3763.png"
+ ALT="$ A'= (-\frac{1}{2}, -\frac{7}{6})$"></SPAN> on the evolute and radius 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3764.png"
+ ALT="$ = AA'$"></SPAN>. To verify our work, find radius of curvature at <SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$ A$"></SPAN>. From 
+(<A HREF="node145.html#eqn:103-42">12.5</A>), we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+R = \frac{t(1 + t^2)^{\frac{3}{2}}}{2} = \sqrt{2},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="157" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3765.png"
+ ALT="$\displaystyle R = \frac{t(1 + t^2)^{\frac{3}{2}}}{2} = \sqrt{2},
+$">
+</DIV><P></P>
+when <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1731.png"
+ ALT="$ t = 1$"></SPAN>.
+This should equal the distance
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+AA'
+= \sqrt{(\frac{1}{2} + \frac{1}{2})^2 +
+(\frac{1}{6} - \frac{7}{6})^2} = \sqrt{2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="261" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3766.png"
+ ALT="$\displaystyle AA'
+= \sqrt{(\frac{1}{2} + \frac{1}{2})^2 +
+(\frac{1}{6} - \frac{7}{6})^2} = \sqrt{2}.
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><A NAME="ex:118-cycloid"><B>Example  <SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">4</SPAN></B></A> &nbsp; Find the parametric equations of the evolute of the cycloid,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:119C2"></A><!-- MATH
+ \begin{equation}
+\begin{cases}
+x = a(t - \sin t) \\
+y = a(1 - \cos t).
+\end{cases}
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="122" HEIGHT="64" BORDER="0"
+ SRC="img3767.png"
+ ALT="\begin{displaymath}\begin{cases}x = a(t - \sin t) \\ y = a(1 - \cos t). \end{cases}\end{displaymath}"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">15</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:evolute-of-cycloid"></A><A NAME="31743"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 14.8:</STRONG>
+Evolute of a cycloid.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="269" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3768.png"
+ ALT="\includegraphics[height=4cm,width=6cm]{evolute-of-cycloid.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Solution. As in Example <A HREF="node145.html#ex:103-2">12.5.2</A>, we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} = \frac{\sin t}{1 - \cos t},
+\ \ \ \ \ 
+\frac{d^2 y}{dx^2} = -\frac{1}{\alpha (1 - \cos t)^2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="298" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3769.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{\sin t}{1 - \cos t},
+\ \ \ \ \
+\frac{d^2 y}{dx^2} = -\frac{1}{\alpha (1 - \cos t)^2}.
+$">
+</DIV><P></P>
+Substituting these results in formulas (<A HREF="node171.html#eqn:117-50">14.9</A>), we get the answer:
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:119D"></A><!-- MATH
+ \begin{equation}
+\begin{cases}
+\alpha = a(t + \sin t), \\
+\beta = -a(1 - \cos t).
+\end{cases} 
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="135" HEIGHT="64" BORDER="0"
+ SRC="img3770.png"
+ ALT="\begin{displaymath}\begin{cases}\alpha = a(t + \sin t), \\ \beta = -a(1 - \cos t). \end{cases}\end{displaymath}"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">16</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Remark  <SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; In the previous example,
+if we eliminate <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> between equations (<A HREF="#eqn:119D">14.16</A>), there results 
+the rectangular equation of the evolute <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3771.png"
+ ALT="$ OO'Q^v$"></SPAN> referred to 
+the axes <SPAN CLASS="MATH"><IMG
+ WIDTH="32" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3772.png"
+ ALT="$ O'\alpha$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3773.png"
+ ALT="$ O'\beta$"></SPAN>. The coordinates of <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img250.png"
+ ALT="$ O$"></SPAN> with 
+respect to these axes are <!-- MATH
+ $(-\pi a, -2a)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3774.png"
+ ALT="$ (-\pi a, -2a)$"></SPAN>. Let us transform 
+equations (<A HREF="#eqn:119D">14.16</A>) to the new set of axes <SPAN CLASS="MATH"><IMG
+ WIDTH="31" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img393.png"
+ ALT="$ OX$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img394.png"
+ ALT="$ OY$"></SPAN>. Then
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\alpha = x -\pi a,\ \ \ \ \beta = y -2a,\ \ \ \ t = t' -\pi.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="285" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3775.png"
+ ALT="$\displaystyle \alpha = x -\pi a,\ \ \ \ \beta = y -2a,\ \ \ \ t = t' -\pi.
+$">
+</DIV><P></P>
+Substituting in (<A HREF="#eqn:119D">14.16</A>) and reducing, the 
+equations of the evolute become
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:119E"></A><!-- MATH
+ \begin{equation}
+\begin{cases}
+x = a(t' - \sin t'), \\
+y = a(1 - \cos t').
+\end{cases}
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="127" HEIGHT="64" BORDER="0"
+ SRC="img3776.png"
+ ALT="\begin{displaymath}\begin{cases}x = a(t' - \sin t'), \\ y = a(1 - \cos t'). \end{cases}\end{displaymath}"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">14</SPAN>.<SPAN CLASS="arabic">17</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Since (<A HREF="#eqn:119E">14.17</A>) and (<A HREF="#eqn:119C">14.14</A>) are identical in form, we have:
+<I>The evolute of a cycloid is itself a cycloid whose 
+generating circle equals that of the given cycloid.</I></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html3083"
+  HREF="node174.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html3077"
+  HREF="node169.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html3071"
+  HREF="node172.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html3079"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html3081"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html3084"
+  HREF="node174.html">Properties of the evolute</A>
+<B> Up:</B> <A NAME="tex2html3078"
+  HREF="node169.html">Circle of curvature. Center</A>
+<B> Previous:</B> <A NAME="tex2html3072"
+  HREF="node172.html">Center of curvature</A>
+ &nbsp; <B>  <A NAME="tex2html3080"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html3082"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

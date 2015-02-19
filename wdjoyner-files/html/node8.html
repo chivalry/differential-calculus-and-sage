@@ -1,0 +1,391 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Logarithms of numbers and trigonometric functions</TITLE>
+<META NAME="description" CONTENT="Logarithms of numbers and trigonometric functions">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html644"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html638"
+  HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html634"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html640"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html642"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html645"
+  HREF="node9.html">Variables and functions</A>
+<B> Up:</B> <A NAME="tex2html639"
+  HREF="node3.html">Collection of formulas</A>
+<B> Previous:</B> <A NAME="tex2html635"
+  HREF="node7.html">Natural values of the</A>
+ &nbsp; <B>  <A NAME="tex2html641"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html643"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00350000000000000000">
+Logarithms of numbers and trigonometric functions</A>
+</H1>
+
+<P>
+The common logarithm is the logarithm with base 10.
+The fractional part of the logarithm of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, is known as the 
+<I>mantissa</I> of the common logarithm of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>.
+For example, if <SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img239.png"
+ ALT="$ x=120$"></SPAN> then 
+<P><!-- MATH
+ \begin{displaymath}
+\log_{10}120=\log_{10}(10^2\times 1.2)=2+\log_{10}1.2\approx2+0.079181.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="414" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img240.png"
+ ALT="$\displaystyle \log_{10}120=\log_{10}(10^2\times 1.2)=2+\log_{10}1.2\approx2+0.079181.
+$">
+</DIV><P></P>
+so the very last number (<!-- MATH
+ $0.079181...$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img241.png"
+ ALT="$ 0.079181...$"></SPAN>) is the mantissa. In the table below, this is
+give simply as <SPAN CLASS="MATH"><IMG
+ WIDTH="36" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img242.png"
+ ALT="$ 0792$"></SPAN>.
+
+<P>
+Table of mantissas of the common logarithms of numbers:
+<P>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">No.</TD>
+<TD ALIGN="LEFT">0</TD>
+<TD ALIGN="LEFT">1</TD>
+<TD ALIGN="LEFT">2</TD>
+<TD ALIGN="LEFT">3</TD>
+<TD ALIGN="LEFT">4</TD>
+<TD ALIGN="LEFT">5</TD>
+<TD ALIGN="LEFT">6</TD>
+<TD ALIGN="LEFT">7</TD>
+<TD ALIGN="LEFT">8</TD>
+<TD ALIGN="LEFT">9</TD>
+</TR>
+<TR><TD ALIGN="LEFT">1</TD>
+<TD ALIGN="LEFT">0000</TD>
+<TD ALIGN="LEFT">0414</TD>
+<TD ALIGN="LEFT">0792</TD>
+<TD ALIGN="LEFT">1139</TD>
+<TD ALIGN="LEFT">1461</TD>
+<TD ALIGN="LEFT">1761</TD>
+<TD ALIGN="LEFT">2041</TD>
+<TD ALIGN="LEFT">2304</TD>
+<TD ALIGN="LEFT">2553</TD>
+<TD ALIGN="LEFT">2788</TD>
+</TR>
+<TR><TD ALIGN="LEFT">2</TD>
+<TD ALIGN="LEFT">3010</TD>
+<TD ALIGN="LEFT">3222</TD>
+<TD ALIGN="LEFT">3424</TD>
+<TD ALIGN="LEFT">3617</TD>
+<TD ALIGN="LEFT">3802</TD>
+<TD ALIGN="LEFT">3979</TD>
+<TD ALIGN="LEFT">4150</TD>
+<TD ALIGN="LEFT">4314</TD>
+<TD ALIGN="LEFT">4472</TD>
+<TD ALIGN="LEFT">4624</TD>
+</TR>
+<TR><TD ALIGN="LEFT">3</TD>
+<TD ALIGN="LEFT">4771</TD>
+<TD ALIGN="LEFT">4914</TD>
+<TD ALIGN="LEFT">5051</TD>
+<TD ALIGN="LEFT">5185</TD>
+<TD ALIGN="LEFT">5315</TD>
+<TD ALIGN="LEFT">5441</TD>
+<TD ALIGN="LEFT">5563</TD>
+<TD ALIGN="LEFT">5682</TD>
+<TD ALIGN="LEFT">5798</TD>
+<TD ALIGN="LEFT">5911</TD>
+</TR>
+<TR><TD ALIGN="LEFT">4</TD>
+<TD ALIGN="LEFT">6021</TD>
+<TD ALIGN="LEFT">6128</TD>
+<TD ALIGN="LEFT">6232</TD>
+<TD ALIGN="LEFT">6335</TD>
+<TD ALIGN="LEFT">6435</TD>
+<TD ALIGN="LEFT">6532</TD>
+<TD ALIGN="LEFT">6628</TD>
+<TD ALIGN="LEFT">6721</TD>
+<TD ALIGN="LEFT">6812</TD>
+<TD ALIGN="LEFT">6902</TD>
+</TR>
+<TR><TD ALIGN="LEFT">5</TD>
+<TD ALIGN="LEFT">6990</TD>
+<TD ALIGN="LEFT">7076</TD>
+<TD ALIGN="LEFT">7160</TD>
+<TD ALIGN="LEFT">7243</TD>
+<TD ALIGN="LEFT">7324</TD>
+<TD ALIGN="LEFT">7404</TD>
+<TD ALIGN="LEFT">7482</TD>
+<TD ALIGN="LEFT">7559</TD>
+<TD ALIGN="LEFT">7634</TD>
+<TD ALIGN="LEFT">7709</TD>
+</TR>
+<TR><TD ALIGN="LEFT">6</TD>
+<TD ALIGN="LEFT">7782</TD>
+<TD ALIGN="LEFT">7853</TD>
+<TD ALIGN="LEFT">7924</TD>
+<TD ALIGN="LEFT">7993</TD>
+<TD ALIGN="LEFT">8062</TD>
+<TD ALIGN="LEFT">8129</TD>
+<TD ALIGN="LEFT">8195</TD>
+<TD ALIGN="LEFT">8261</TD>
+<TD ALIGN="LEFT">8325</TD>
+<TD ALIGN="LEFT">8388</TD>
+</TR>
+<TR><TD ALIGN="LEFT">7</TD>
+<TD ALIGN="LEFT">8451</TD>
+<TD ALIGN="LEFT">8513</TD>
+<TD ALIGN="LEFT">8573</TD>
+<TD ALIGN="LEFT">8633</TD>
+<TD ALIGN="LEFT">8692</TD>
+<TD ALIGN="LEFT">8751</TD>
+<TD ALIGN="LEFT">8808</TD>
+<TD ALIGN="LEFT">8865</TD>
+<TD ALIGN="LEFT">8921</TD>
+<TD ALIGN="LEFT">8976</TD>
+</TR>
+<TR><TD ALIGN="LEFT">8</TD>
+<TD ALIGN="LEFT">9031</TD>
+<TD ALIGN="LEFT">9085</TD>
+<TD ALIGN="LEFT">9138</TD>
+<TD ALIGN="LEFT">9191</TD>
+<TD ALIGN="LEFT">9243</TD>
+<TD ALIGN="LEFT">9294</TD>
+<TD ALIGN="LEFT">9345</TD>
+<TD ALIGN="LEFT">9395</TD>
+<TD ALIGN="LEFT">9445</TD>
+<TD ALIGN="LEFT">9494</TD>
+</TR>
+<TR><TD ALIGN="LEFT">9</TD>
+<TD ALIGN="LEFT">9542</TD>
+<TD ALIGN="LEFT">9590</TD>
+<TD ALIGN="LEFT">9638</TD>
+<TD ALIGN="LEFT">9685</TD>
+<TD ALIGN="LEFT">9731</TD>
+<TD ALIGN="LEFT">9777</TD>
+<TD ALIGN="LEFT">9823</TD>
+<TD ALIGN="LEFT">9868</TD>
+<TD ALIGN="LEFT">9912</TD>
+<TD ALIGN="LEFT">9956</TD>
+</TR>
+<TR><TD ALIGN="LEFT">10</TD>
+<TD ALIGN="LEFT">0000</TD>
+<TD ALIGN="LEFT">0043</TD>
+<TD ALIGN="LEFT">0086</TD>
+<TD ALIGN="LEFT">0128</TD>
+<TD ALIGN="LEFT">0170</TD>
+<TD ALIGN="LEFT">0212</TD>
+<TD ALIGN="LEFT">0253</TD>
+<TD ALIGN="LEFT">0294</TD>
+<TD ALIGN="LEFT">0334</TD>
+<TD ALIGN="LEFT">0374</TD>
+</TR>
+<TR><TD ALIGN="LEFT">11</TD>
+<TD ALIGN="LEFT">0414</TD>
+<TD ALIGN="LEFT">0453</TD>
+<TD ALIGN="LEFT">0492</TD>
+<TD ALIGN="LEFT">0531</TD>
+<TD ALIGN="LEFT">0569</TD>
+<TD ALIGN="LEFT">0607</TD>
+<TD ALIGN="LEFT">0645</TD>
+<TD ALIGN="LEFT">0682</TD>
+<TD ALIGN="LEFT">07f9</TD>
+<TD ALIGN="LEFT">0755</TD>
+</TR>
+<TR><TD ALIGN="LEFT">12</TD>
+<TD ALIGN="LEFT">0792</TD>
+<TD ALIGN="LEFT">0828</TD>
+<TD ALIGN="LEFT">0864</TD>
+<TD ALIGN="LEFT">0899</TD>
+<TD ALIGN="LEFT">0934</TD>
+<TD ALIGN="LEFT">0969</TD>
+<TD ALIGN="LEFT">1004</TD>
+<TD ALIGN="LEFT">1038</TD>
+<TD ALIGN="LEFT">1072</TD>
+<TD ALIGN="LEFT">1106</TD>
+</TR>
+<TR><TD ALIGN="LEFT">13</TD>
+<TD ALIGN="LEFT">1139</TD>
+<TD ALIGN="LEFT">1173</TD>
+<TD ALIGN="LEFT">1206</TD>
+<TD ALIGN="LEFT">1239</TD>
+<TD ALIGN="LEFT">1271</TD>
+<TD ALIGN="LEFT">1303</TD>
+<TD ALIGN="LEFT">1335</TD>
+<TD ALIGN="LEFT">1367</TD>
+<TD ALIGN="LEFT">1399</TD>
+<TD ALIGN="LEFT">1430</TD>
+</TR>
+<TR><TD ALIGN="LEFT">14</TD>
+<TD ALIGN="LEFT">1461</TD>
+<TD ALIGN="LEFT">1492</TD>
+<TD ALIGN="LEFT">1523</TD>
+<TD ALIGN="LEFT">1553</TD>
+<TD ALIGN="LEFT">1584</TD>
+<TD ALIGN="LEFT">1614</TD>
+<TD ALIGN="LEFT">1644</TD>
+<TD ALIGN="LEFT">1673</TD>
+<TD ALIGN="LEFT">1703</TD>
+<TD ALIGN="LEFT">1732</TD>
+</TR>
+<TR><TD ALIGN="LEFT">15</TD>
+<TD ALIGN="LEFT">1761</TD>
+<TD ALIGN="LEFT">1790</TD>
+<TD ALIGN="LEFT">1818</TD>
+<TD ALIGN="LEFT">1847</TD>
+<TD ALIGN="LEFT">1875</TD>
+<TD ALIGN="LEFT">1903</TD>
+<TD ALIGN="LEFT">1931</TD>
+<TD ALIGN="LEFT">1959</TD>
+<TD ALIGN="LEFT">1987</TD>
+<TD ALIGN="LEFT">2014</TD>
+</TR>
+<TR><TD ALIGN="LEFT">16</TD>
+<TD ALIGN="LEFT">2041</TD>
+<TD ALIGN="LEFT">2068</TD>
+<TD ALIGN="LEFT">2095</TD>
+<TD ALIGN="LEFT">2122</TD>
+<TD ALIGN="LEFT">2148</TD>
+<TD ALIGN="LEFT">2175</TD>
+<TD ALIGN="LEFT">2201</TD>
+<TD ALIGN="LEFT">2227</TD>
+<TD ALIGN="LEFT">2253</TD>
+<TD ALIGN="LEFT">2279</TD>
+</TR>
+<TR><TD ALIGN="LEFT">17</TD>
+<TD ALIGN="LEFT">2304</TD>
+<TD ALIGN="LEFT">2330</TD>
+<TD ALIGN="LEFT">2355</TD>
+<TD ALIGN="LEFT">2380</TD>
+<TD ALIGN="LEFT">2405</TD>
+<TD ALIGN="LEFT">2430</TD>
+<TD ALIGN="LEFT">2455</TD>
+<TD ALIGN="LEFT">2480</TD>
+<TD ALIGN="LEFT">2504</TD>
+<TD ALIGN="LEFT">2529</TD>
+</TR>
+<TR><TD ALIGN="LEFT">18</TD>
+<TD ALIGN="LEFT">2553</TD>
+<TD ALIGN="LEFT">2577</TD>
+<TD ALIGN="LEFT">2601</TD>
+<TD ALIGN="LEFT">2625</TD>
+<TD ALIGN="LEFT">2648</TD>
+<TD ALIGN="LEFT">2672</TD>
+<TD ALIGN="LEFT">2695</TD>
+<TD ALIGN="LEFT">2718</TD>
+<TD ALIGN="LEFT">2742</TD>
+<TD ALIGN="LEFT">2765</TD>
+</TR>
+<TR><TD ALIGN="LEFT">19</TD>
+<TD ALIGN="LEFT">2788</TD>
+<TD ALIGN="LEFT">2810</TD>
+<TD ALIGN="LEFT">2833</TD>
+<TD ALIGN="LEFT">2856</TD>
+<TD ALIGN="LEFT">2878</TD>
+<TD ALIGN="LEFT">2900</TD>
+<TD ALIGN="LEFT">2923</TD>
+<TD ALIGN="LEFT">2945</TD>
+<TD ALIGN="LEFT">2967</TD>
+<TD ALIGN="LEFT">2989</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+The table of logarithms of the trigonometric functions 
+(given in Granville's original text) is
+omitted as they can be computed using a hand calculator or <I CLASS="sans">SAGE</I>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html644"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html638"
+  HREF="node3.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html634"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html640"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html642"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html645"
+  HREF="node9.html">Variables and functions</A>
+<B> Up:</B> <A NAME="tex2html639"
+  HREF="node3.html">Collection of formulas</A>
+<B> Previous:</B> <A NAME="tex2html635"
+  HREF="node7.html">Natural values of the</A>
+ &nbsp; <B>  <A NAME="tex2html641"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html643"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

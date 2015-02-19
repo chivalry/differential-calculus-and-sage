@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Circle of curvature</TITLE>
+<META NAME="description" CONTENT="Circle of curvature">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node147.html">
+<LINK REL="previous" HREF="node145.html">
+<LINK REL="up" HREF="node140.html">
+<LINK REL="next" HREF="node147.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2685"
+  HREF="node147.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2679"
+  HREF="node140.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2673"
+  HREF="node145.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2681"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2683"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2686"
+  HREF="node147.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html2680"
+  HREF="node140.html">Curvature; radius of curvature</A>
+<B> Previous:</B> <A NAME="tex2html2674"
+  HREF="node145.html">Radius of curvature</A>
+ &nbsp; <B>  <A NAME="tex2html2682"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2684"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001460000000000000000"></A>
+<A NAME="sec:104"></A>
+<BR>
+Circle of curvature
+</H1>
+
+<P>
+Consider any point P on the curve <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img337.png"
+ ALT="$ C$"></SPAN>. The tangent drawn to 
+the curve at P has the same slope as the curve itself 
+at P (see &#167;<A HREF="node82.html#sec:64">6.1</A>). In an analogous manner we may construct for each point of the 
+curve a circle whose curvature is the same as the curvature 
+of the curve itself at that point. To do this, proceed as 
+follows. Draw the normal to the curve at P on the concave 
+side of the curve. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:circle-curvature"></A><A NAME="26191"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 12.3:</STRONG>
+The circle of curvature.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="271" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3174.png"
+ ALT="\includegraphics[height=6cm,width=7cm]{circle-curvature2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Lay off on this normal the distance 
+PC = radius of curvature (= R) at P. With C as a center draw 
+the circle passing through P. The curvature of this circle is then
+<!-- MATH
+ $K = \frac{1}{R}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3175.png"
+ ALT="$ K = \frac{1}{R}$"></SPAN>, which also equals the curvature of the curve 
+itself at P. The circle so constructed is called the 
+<I>circle of curvature</I> for the point P on the curve.
+<A NAME="26197"></A>
+
+<P>
+In general, the circle of curvature of a curve at a point 
+will cross the curve at that point. This is illustrated in the 
+Figure <A HREF="#fig:circle-curvature">12.3</A>.
+
+<P>
+Just as the tangent at P shows the direction of the curve at P, 
+so the circle of curvature at P aids us very materially in 
+forming a geometric concept of the curvature of the curve 
+at P, the rate of change of direction of the curve and of 
+the circle being the same at P.
+
+<P>
+The circle of curvature can be 
+defined as the limiting position of a secant circle, a 
+definition analogous to that of the tangent given in 
+&#167;<A HREF="node41.html#sec:32">4.9</A>. 
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">12</SPAN>.<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Find the radius of curvature at the point <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3176.png"
+ ALT="$ (3, 4)$"></SPAN> on the 
+equilateral hyperbola <SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3177.png"
+ ALT="$ xy = 12$"></SPAN>, and draw the 
+corresponding circle of curvature.
+
+<P>
+Solution. 
+<!-- MATH
+ $\frac{dy}{dx} = -\frac{y}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3178.png"
+ ALT="$ \frac{dy}{dx} = -\frac{y}{x}$"></SPAN>, 
+<!-- MATH
+ $\frac{d^2 y}{dx^2} = \frac{2y}{x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3179.png"
+ ALT="$ \frac{d^2 y}{dx^2} = \frac{2y}{x^2}$"></SPAN>.
+For <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3176.png"
+ ALT="$ (3, 4)$"></SPAN>, 	
+<!-- MATH
+ $\frac{dy}{dx} = -\frac{4}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3180.png"
+ ALT="$ \frac{dy}{dx} = -\frac{4}{3}$"></SPAN>, 
+<!-- MATH
+ $\frac{d^2 y}{dx^2} = \frac{8}{9}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3181.png"
+ ALT="$ \frac{d^2 y}{dx^2} = \frac{8}{9}$"></SPAN>, so
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+R
+= \frac{ [1 + \frac{16}{9}]^{\frac{3}{2}} }{ \frac{8}{9} } 
+= \frac{125}{24} = 25\frac{5}{24}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="215" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3182.png"
+ ALT="$\displaystyle R
+= \frac{ [1 + \frac{16}{9}]^{\frac{3}{2}} }{ \frac{8}{9} }
+= \frac{125}{24} = 25\frac{5}{24}.
+$">
+</DIV><P></P>
+The circle of curvature crosses the curve at two points.
+
+<P>
+We solve for the circle of curvature using <I CLASS="sans">SAGE</I>.
+First, we solve for the intersection of the normal
+<!-- MATH
+ $y-4=(-1/m)(x-3)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="165" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3183.png"
+ ALT="$ y-4=(-1/m)(x-3)$"></SPAN>, where <!-- MATH
+ $m=y'(3)=-4/3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="130" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3184.png"
+ ALT="$ m=y'(3)=-4/3$"></SPAN>, and the circle
+of radius <SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3185.png"
+ ALT="$ R=125/24$"></SPAN> about <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3176.png"
+ ALT="$ (3, 4)$"></SPAN>:
+
+<P>
+<P>
+<PRE>[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: x = var("x")
+sage: y = 12/x
+sage: K = diff(y,x,2)/(1+diff(y,x)^2)^(3/2)
+sage: K
+24/((144/x^4 + 1)^(3/2)*x^3)
+sage: K(3)
+24/125
+sage: R = 1/K(3)
+sage: m = diff(y,x)(3); m
+-4/3
+sage: xx = var("xx")
+sage: yy = var("yy")
+sage: solve((xx-3)^2+(-1/m)^2*(xx-3)^2==R^2, xx)
+[xx == -7/6, xx == 43/6]
+</PRE>
+
+<P>
+This tells us that the normal line intersects the circle of radius <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1975.png"
+ ALT="$ R$"></SPAN> centered
+at <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3176.png"
+ ALT="$ (3, 4)$"></SPAN> in 2 points, one of which is at <!-- MATH
+ $(43/6, 57/8)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3186.png"
+ ALT="$ (43/6, 57/8)$"></SPAN>. This is the center
+of the circle of curvature, so the equation is <!-- MATH
+ $(x-43/6)^2+(y-57/8)^2=R^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="224" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3187.png"
+ ALT="$ (x-43/6)^2+(y-57/8)^2=R^2$"></SPAN>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:circle-curvature3"></A><A NAME="26236"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 12.4:</STRONG>
+The circle of curvature of a hyperbola.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="271" HEIGHT="225" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3188.png"
+ ALT="\includegraphics[height=5cm,width=6cm]{circle-curvature3.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2685"
+  HREF="node147.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2679"
+  HREF="node140.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2673"
+  HREF="node145.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2681"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2683"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2686"
+  HREF="node147.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html2680"
+  HREF="node140.html">Curvature; radius of curvature</A>
+<B> Previous:</B> <A NAME="tex2html2674"
+  HREF="node145.html">Radius of curvature</A>
+ &nbsp; <B>  <A NAME="tex2html2682"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2684"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

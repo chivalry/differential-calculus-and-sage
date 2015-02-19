@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differentiation of the product of two functions</TITLE>
+<META NAME="description" CONTENT="Differentiation of the product of two functions">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node50.html">
+<LINK REL="previous" HREF="node48.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node50.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1280"
+  HREF="node50.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1274"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1268"
+  HREF="node48.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1276"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1278"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1281"
+  HREF="node50.html">Differentiation of the product</A>
+<B> Up:</B> <A NAME="tex2html1275"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1269"
+  HREF="node48.html">Differentiation of the product</A>
+ &nbsp; <B>  <A NAME="tex2html1277"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1279"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00760000000000000000">
+Differentiation of the product of two functions</A>
+</H1>
+
+<P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img790.png"
+ ALT="$ y = uv$"></SPAN>. By the General Rule,
+
+<P>
+
+<UL>
+<LI>FIRST STEP. <!-- MATH
+ $y + \Delta y 	= (u + \Delta u)(v + \Delta v)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="200" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img791.png"
+ ALT="$ y + \Delta y = (u + \Delta u)(v + \Delta v)$"></SPAN>.
+Multiplying out this becomes
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y + \Delta y 	= uv + u \cdot \Delta v + v \cdot \Delta u + \Delta u \cdot \Delta v.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="295" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img792.png"
+ ALT="$\displaystyle y + \Delta y = uv + u \cdot \Delta v + v \cdot \Delta u + \Delta u \cdot \Delta v.
+$">
+</DIV><P></P>
+</LI>
+<LI>SECOND STEP. 
+<!-- MATH
+ $\Delta y
+= u \cdot \Delta v + v \cdot \Delta u + \Delta u \cdot \Delta v$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="226" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img793.png"
+ ALT="$ \Delta y
+= u \cdot \Delta v + v \cdot \Delta u + \Delta u \cdot \Delta v$"></SPAN>.
+</LI>
+<LI>THIRD STEP. 
+<!-- MATH
+ $\frac{\Delta y}{\Delta x}
+= u \frac{\Delta v}{\Delta x} + v \frac{\Delta u}{\Delta x} 
++ \Delta u \frac{\Delta v}{\Delta x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="191" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img794.png"
+ ALT="$ \frac{\Delta y}{\Delta x}
+= u \frac{\Delta v}{\Delta x} + v \frac{\Delta u}{\Delta x}
++ \Delta u \frac{\Delta v}{\Delta x}$"></SPAN>.
+</LI>
+<LI>FOURTH STEP. <!-- MATH
+ $\frac{dy}{dx} 	= u \frac{dv}{dx} + v \frac{du}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img795.png"
+ ALT="$ \frac{dy}{dx} = u \frac{dv}{dx} + v \frac{du}{dx}$"></SPAN>.
+[Applying Theorem <A HREF="node26.html#thrm:I-20">3.8.1</A>], since when <!-- MATH
+ $\Delta x \to 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img694.png"
+ ALT="$ \Delta x \to 0$"></SPAN>, <!-- MATH
+ $\Delta u \to 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img796.png"
+ ALT="$ \Delta u \to 0$"></SPAN>, and 
+<!-- MATH
+ $\left ( \Delta u \frac{\Delta v}{\Delta x} \right ) \to 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="96" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img797.png"
+ ALT="$ \left ( \Delta u \frac{\Delta v}{\Delta x} \right ) \to 0$"></SPAN>.]
+</LI>
+</UL>
+Therefore,
+<!-- MATH
+ $\frac{d}{dx} (uv) 	= u \frac{dv}{dx} + v \frac{du}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="156" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img738.png"
+ ALT="$ \frac{d}{dx} (uv) = u\frac{dv}{dx}\ +\ v\frac{du}{dx}$"></SPAN>
+(equation (V) above). 
+<P>
+<I>Product rule: The derivative of the product of two functions 
+is equal to the first 
+function times the derivative of the second, plus the second function times 
+the derivative of the first.</I>
+
+<P>
+Here's how to use <I CLASS="sans">SAGE</I> to compute an example of this rule:
+
+<P>
+<P>
+<PRE>[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: t = var("t")
+sage: f = cos(t)
+sage: g =  exp(2*t)
+sage: diff(f*g,t)
+2*e^(2*t)*cos(t) - e^(2*t)*sin(t)
+sage: diff(f,t)*g+f*diff(g,t)
+2*e^(2*t)*cos(t) - e^(2*t)*sin(t)
+</PRE>
+
+<P>
+This simply computes <!-- MATH
+ $\frac{d}{dt}(e^{2t}\cos(t)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img798.png"
+ ALT="$ \frac{d}{dt}(e^{2t}\cos(t)$"></SPAN> in two ways 
+(one: directly, the second: using the product rule) and checks that
+they are the same.
+
+<P>
+<BR><HR>
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

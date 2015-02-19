@@ -1,0 +1,393 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Interchange of dependent and independent variables</TITLE>
+<META NAME="description" CONTENT="Interchange of dependent and independent variables">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node136.html">
+<LINK REL="previous" HREF="node134.html">
+<LINK REL="up" HREF="node134.html">
+<LINK REL="next" HREF="node136.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2526"
+  HREF="node136.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2520"
+  HREF="node134.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2514"
+  HREF="node134.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2522"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2524"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2527"
+  HREF="node136.html">Change of the dependent</A>
+<B> Up:</B> <A NAME="tex2html2521"
+  HREF="node134.html">Change of variable</A>
+<B> Previous:</B> <A NAME="tex2html2515"
+  HREF="node134.html">Change of variable</A>
+ &nbsp; <B>  <A NAME="tex2html2523"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2525"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001310000000000000000">
+Interchange of dependent and independent variables</A>
+</H1>
+
+<P>
+It is sometimes desirable to transform an expression involving 
+derivatives of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> into an equivalent 
+expression involving instead derivatives of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>. 
+Our examples will show that in many cases such a change 
+transforms the given expression into a much simpler one. 
+Or perhaps <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> is given as an explicit function of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> in a 
+problem, and it is found more
+convenient to use a formula involving <!-- MATH
+ $\frac{dx}{dy}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1381.png"
+ ALT="$ \frac{dx}{dy}$"></SPAN>, 
+<!-- MATH
+ $\frac{d^2 x}{dy^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2642.png"
+ ALT="$ \frac{d^2 x}{dy^2}$"></SPAN>, etc., than one involving <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN>, 
+<!-- MATH
+ $\frac{d^2 y}{dx^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2193.png"
+ ALT="$ \frac{d^2 y}{dx^2}$"></SPAN>, etc. We shall now proceed to find the 
+formulas necessary for making such transformations.
+
+<P>
+Given <SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img568.png"
+ ALT="$ y = f(x)$"></SPAN>, then from item XXVI in &#167;<A HREF="node44.html#sec:33">5.1</A>, 
+we have
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:35-95"></A><!-- MATH
+ \begin{equation}
+\frac{dy}{dx} = \frac{1}{\frac{dx}{dy}}, \ \ \ 	\frac{dx}{dy} \ne 0
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="142" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2998.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}}, \ \ \ \frac{dx}{dy} \ne 0$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">11</SPAN>.<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+giving <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN> in terms of <!-- MATH
+ $\frac{dx}{dy}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1381.png"
+ ALT="$ \frac{dx}{dy}$"></SPAN>. Also, 
+by XXV in &#167;<A HREF="node44.html#sec:33">5.1</A>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2 y}{dx^2}
+= \frac{d}{dx} \left( \frac{dy}{dx} \right) 
+= \frac{d}{dy} \left( \frac{dy}{dx} \right) \frac{dy}{dx},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="240" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2999.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2}
+= \frac{d}{dx} \left( \frac{dy}{dx} \right)
+= \frac{d}{dy} \left( \frac{dy}{dx} \right) \frac{dy}{dx},
+$">
+</DIV><P></P>
+or
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A-95"></A><!-- MATH
+ \begin{equation}
+\frac{d^2 y}{dx^2}
+= \frac{d}{dy} \left( \frac{1}{\frac{dx}{dy}} \right) \frac{dy}{dx}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="152" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3000.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2} = \frac{d}{dy} \left( \frac{1}{\frac{dx}{dy}} \right) \frac{dy}{dx}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">11</SPAN>.<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+But 	
+<!-- MATH
+ $\frac{d}{dy} \left( \frac{1}{\frac{dx}{dy}} \right)
+= - \frac{\frac{d^2 x}{dy^2}}{\left( \frac{dx}{dy} \right)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="140" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3001.png"
+ ALT="$ \frac{d}{dy} \left( \frac{1}{\frac{dx}{dy}} \right)
+= - \frac{\frac{d^2 x}{dy^2}}{\left( \frac{dx}{dy} \right)^2}$"></SPAN>; 
+and <!-- MATH
+ $\frac{dy}{dx} = \frac{1}{\frac{dx}{dy}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img768.png"
+ ALT="$ \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}}$"></SPAN> from 
+(<A HREF="#eqn:35-95">11.1</A>).
+Substituting these in (<A HREF="#eqn:A-95">11.2</A>), we get
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:36-95"></A><!-- MATH
+ \begin{equation}
+\frac{d^2 y}{dx^2}
+= -\frac{ \frac{d^2 x}{dy^2} }{\left( \frac{dx}{dy} \right)^3}, 	 
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="118" HEIGHT="70" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3002.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2} = -\frac{ \frac{d^2 x}{dy^2} }{\left( \frac{dx}{dy} \right)^3},$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">11</SPAN>.<SPAN CLASS="arabic">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+giving <!-- MATH
+ $\frac{d^2 y}{dx^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2193.png"
+ ALT="$ \frac{d^2 y}{dx^2}$"></SPAN> in terms of 
+<!-- MATH
+ $\frac{dx}{dy}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1381.png"
+ ALT="$ \frac{dx}{dy}$"></SPAN> and <!-- MATH
+ $\frac{d^2 x}{dy^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2642.png"
+ ALT="$ \frac{d^2 x}{dy^2}$"></SPAN>. Similarly,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:37-95"></A><!-- MATH
+ \begin{equation}
+\frac{d^3 y}{dx^3}
+= -\frac{ \frac{d^3 x}{dy^3} \frac{dx}{dy} 
+- 3 \left( \frac{d^2 x}{dy^2} \right)^2 }{ \left( \frac{dx}{dy} \right)^5 }, 
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="196" HEIGHT="84" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3003.png"
+ ALT="$\displaystyle \frac{d^3 y}{dx^3} = -\frac{ \frac{d^3 x}{dy^3} \frac{dx}{dy} - 3 \left( \frac{d^2 x}{dy^2} \right)^2 }{ \left( \frac{dx}{dy} \right)^5 },$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">11</SPAN>.<SPAN CLASS="arabic">4</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+and so on for higher derivatives. This transformation is 
+called changing the independent variable from <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">11</SPAN>.<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Change the independent variable from <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> in the equation
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+3 \left( \frac{d^2 y}{dx^2} \right)^2
+- \frac{dy}{dx} \frac{d^3 y}{dx^3} 
+- \frac{d^2 y}{dx^2} \left( \frac{dy}{dx} \right)^2 = 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="279" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3004.png"
+ ALT="$\displaystyle 3 \left( \frac{d^2 y}{dx^2} \right)^2
+- \frac{dy}{dx} \frac{d^3 y}{dx^3}
+- \frac{d^2 y}{dx^2} \left( \frac{dy}{dx} \right)^2 = 0.
+$">
+</DIV><P></P>
+
+<P>
+Solution. Substituting from (<A HREF="#eqn:35-95">11.1</A>), 
+(<A HREF="#eqn:36-95">11.3</A>), (<A HREF="#eqn:37-95">11.4</A>),
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+3 \left( -\frac{ \frac{d^2 x}{dy^2} }{
+\left( \frac{dx}{dy} \right )^3 } \right)^2 
+- \left( \frac{1}{ \frac{dx}{dy} } \right) 
+\left( -\frac{ \frac{d^3 x}{dy^3} \frac{dx}{dy} 
+- 3 \left( \frac{d^2 x}{dy^2} \right)^2 }{ 
+\left( \frac{dx}{dy} \right)^5 } \right) 
+- \left( -\frac{ \frac{d^2 x}{dy^2} }{ 
+\left( \frac{dx}{dy} \right)^3 } \right) 
+\left( \frac{1}{ \frac{dx}{dy} } \right)^2 = 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="542" HEIGHT="91" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3005.png"
+ ALT="$\displaystyle 3 \left( -\frac{ \frac{d^2 x}{dy^2} }{
+\left( \frac{dx}{dy} \rig...
+...c{dx}{dy} \right)^3 } \right)
+\left( \frac{1}{ \frac{dx}{dy} } \right)^2 = 0.
+$">
+</DIV><P></P>
+Reducing, we get
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^3 x}{dy^3} + \frac{d^2 x}{dy^2} = 0,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="114" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3006.png"
+ ALT="$\displaystyle \frac{d^3 x}{dy^3} + \frac{d^2 x}{dy^2} = 0,
+$">
+</DIV><P></P>
+a much simpler equation.</DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2526"
+  HREF="node136.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2520"
+  HREF="node134.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2514"
+  HREF="node134.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2522"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2524"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2527"
+  HREF="node136.html">Change of the dependent</A>
+<B> Up:</B> <A NAME="tex2html2521"
+  HREF="node134.html">Change of variable</A>
+<B> Previous:</B> <A NAME="tex2html2515"
+  HREF="node134.html">Change of variable</A>
+ &nbsp; <B>  <A NAME="tex2html2523"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2525"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

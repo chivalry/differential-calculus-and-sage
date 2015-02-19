@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The -th derivative</TITLE>
+<META NAME="description" CONTENT="The -th derivative">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node106.html">
+<LINK REL="previous" HREF="node104.html">
+<LINK REL="up" HREF="node102.html">
+<LINK REL="next" HREF="node106.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2087"
+  HREF="node106.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2081"
+  HREF="node102.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2075"
+  HREF="node104.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2083"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2085"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2088"
+  HREF="node106.html">Leibnitz's Formula for the</A>
+<B> Up:</B> <A NAME="tex2html2082"
+  HREF="node102.html">Successive differentiation</A>
+<B> Previous:</B> <A NAME="tex2html2076"
+  HREF="node104.html">Notation</A>
+ &nbsp; <B>  <A NAME="tex2html2084"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2086"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00930000000000000000">
+The <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN>-th derivative</A>
+</H1>
+
+<P>
+For certain functions a general expression involving <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN> 
+may be found for the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN>-th derivative. The usual plan 
+is to find a number of the first successive derivatives, as 
+many as may be necessary to discover their law of formation, 
+and then by induction write down the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN>-th derivative.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Given <!-- MATH
+ $y = e^{ax}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2147.png"
+ ALT="$ y = e^{ax}$"></SPAN>, find <!-- MATH
+ $\frac{d^n y}{dx^n}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2148.png"
+ ALT="$ \frac{d^n y}{dx^n}$"></SPAN>.
+
+<P>
+Solution. <!-- MATH
+ $\frac{dy}{dx} = ae^{ax}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2149.png"
+ ALT="$ \frac{dy}{dx} = ae^{ax}$"></SPAN>,
+<!-- MATH
+ $\frac{d^2 y}{dx^2} 	= a^2e^{ax}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2150.png"
+ ALT="$ \frac{d^2 y}{dx^2} = a^2e^{ax}$"></SPAN>, ...,
+<!-- MATH
+ $\frac{d^n y}{dx^n} = a^ne^{ax}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="91" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2151.png"
+ ALT="$ \frac{d^n y}{dx^n} = a^ne^{ax}$"></SPAN>.
+
+<P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; Given <!-- MATH
+ $y = \log\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2152.png"
+ ALT="$ y = \log\, x$"></SPAN>, find <!-- MATH
+ $\frac{d^n y}{dx^n}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2148.png"
+ ALT="$ \frac{d^n y}{dx^n}$"></SPAN>.
+
+<P>
+Solution. <!-- MATH
+ $\frac{dy}{dx} 	= \frac{1}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2153.png"
+ ALT="$ \frac{dy}{dx} = \frac{1}{x}$"></SPAN>,
+<!-- MATH
+ $\frac{d^2 y}{dx^2} 	= -\frac{1}{x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2154.png"
+ ALT="$ \frac{d^2 y}{dx^2} = -\frac{1}{x^2}$"></SPAN>,
+<!-- MATH
+ $\frac{d^3 y}{dx^3} 	= \frac{1 \cdot 2}{x^3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2155.png"
+ ALT="$ \frac{d^3 y}{dx^3} = \frac{1 \cdot 2}{x^3}$"></SPAN>,
+<!-- MATH
+ $\frac{d^4 y}{dx^4} 	= \frac{1 \cdot 2 \cdot 3}{x^4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2156.png"
+ ALT="$ \frac{d^4 y}{dx^4} = \frac{1 \cdot 2 \cdot 3}{x^4}$"></SPAN>,
+...
+<!-- MATH
+ $\frac{d^n y}{dx^n} 	= (-1)^{n - 1} \frac{(n - 1)!}{x^n}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="150" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2157.png"
+ ALT="$ \frac{d^n y}{dx^n} = (-1)^{n - 1} \frac{(n - 1)!}{x^n}$"></SPAN>.</DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">3</SPAN></B> &nbsp; Given <!-- MATH
+ $y = \sin\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img381.png"
+ ALT="$ y = \sin\, x$"></SPAN>, find <!-- MATH
+ $\frac{d^n y}{dx^n}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2148.png"
+ ALT="$ \frac{d^n y}{dx^n}$"></SPAN>.
+
+<P>
+Solution.
+<!-- MATH
+ $\frac{dy}{dx} = \cos\, x = \sin \left ( x + \frac{\pi}{2} \right )$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="177" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2158.png"
+ ALT="$ \frac{dy}{dx} = \cos\, x = \sin \left ( x + \frac{\pi}{2} \right )$"></SPAN>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2 y}{dx^2}
+= \frac{d}{dx} \sin \left ( x + \frac{\pi}{2} \right ) 	
+= \cos \left ( x + \frac{\pi}{2} \right ) 
+= \sin \left ( x + \frac{2 \pi}{2} \right ),
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="391" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2159.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2}
+= \frac{d}{dx} \sin \left ( x + \frac{\pi}{2}...
+...eft ( x + \frac{\pi}{2} \right )
+= \sin \left ( x + \frac{2 \pi}{2} \right ),
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^3 y}{dx^3}
+= \frac{d}{dx} \sin \left ( x + \frac{2 \pi}{2} \right ) 	
+= \cos \left ( x + \frac{2 \pi}{2} \right ) 
+= \sin \left ( x + \frac{3 \pi}{2} \right )
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="409" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2160.png"
+ ALT="$\displaystyle \frac{d^3 y}{dx^3}
+= \frac{d}{dx} \sin \left ( x + \frac{2 \pi}{...
+...ft ( x + \frac{2 \pi}{2} \right )
+= \sin \left ( x + \frac{3 \pi}{2} \right )
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+\dots
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2161.png"
+ ALT="$\displaystyle \dots
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^n y}{dx^n} 	= \sin \left ( x + \frac{n \pi}{2} \right ).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="155" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2162.png"
+ ALT="$\displaystyle \frac{d^n y}{dx^n} = \sin \left ( x + \frac{n \pi}{2} \right ).
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

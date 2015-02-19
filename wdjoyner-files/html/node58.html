@@ -1,0 +1,373 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differentiation of the general exponential function</TITLE>
+<META NAME="description" CONTENT="Differentiation of the general exponential function">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node59.html">
+<LINK REL="previous" HREF="node57.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node59.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1406"
+  HREF="node59.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1400"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1394"
+  HREF="node57.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1402"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1404"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1407"
+  HREF="node59.html">Logarithmic differentiation</A>
+<B> Up:</B> <A NAME="tex2html1401"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1395"
+  HREF="node57.html">Differentiation of the simple</A>
+ &nbsp; <B>  <A NAME="tex2html1403"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1405"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007150000000000000000"></A>
+<A NAME="sec:46"></A>
+<BR>
+Differentiation of the general exponential function
+</H1>
+
+<P>
+Let<A NAME="tex2html45"
+  HREF="footnode.html#foot6347"><SUP><SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">6</SPAN></SUP></A><SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img984.png"
+ ALT="$ y = u^v$"></SPAN>.
+Taking the logarithm of both sides to the base <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$ e$"></SPAN>,
+<!-- MATH
+ $\log_e y= v \log_e u$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img985.png"
+ ALT="$ \log_e y= v \log_e u$"></SPAN>, or, <!-- MATH
+ $y 	= e^{v \log u}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img986.png"
+ ALT="$ y = e^{v \log u}$"></SPAN>.
+
+<P>
+Differentiating by formula (IXa),
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+  	\frac{dy}{dx} &	= e^{v \log u} \frac{d}{dx} (v \log u)\\
+  &	= e^{v \log u} \left ( \frac{v}{u} \frac{du}{dx} + \log u \frac{dv}{dx} \right ) \ \ {\rm by\ V}\\
+  &	= u^v \left ( \frac{v}{u} \frac{du}{dx} + \log u \frac{dv}{dx} \right )
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="255" HEIGHT="76" BORDER="0"
+ SRC="img987.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &amp; = e^{v \log u} \frac{d}{d...
+...v}{u} \frac{du}{dx} + \log u \frac{dv}{dx} \right )
+\end{array}\end{displaymath}">
+</DIV><P></P>
+Therefore, <!-- MATH
+ $\frac{d}{dx}(u^v) 	= vu^{v - 1}\frac{du}{dx} + \log u \cdot u^v \frac{dv}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="229" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img988.png"
+ ALT="$ \frac{d}{dx}(u^v) = vu^{v - 1}\frac{du}{dx} + \log u \cdot u^v \frac{dv}{dx}$"></SPAN>
+(equation (X) in &#167;<A HREF="node44.html#sec:33">5.1</A>  above).
+
+<P>
+<I>The derivative of a function with a variable exponent is equal to the 
+sum of the two results obtained by first differentiating by (VI), 
+regarding the exponent as constant, and again differentiating by (IX), 
+regarding the function as constant.</I>
+
+<P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img989.png"
+ ALT="$ v = n$"></SPAN>, any constant; then (X) reduces to
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d}{dx}(u^n) = nu^{n - 1} \frac{du}{dx}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="146" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img990.png"
+ ALT="$\displaystyle \frac{d}{dx}(u^n) = nu^{n - 1} \frac{du}{dx}.
+$">
+</DIV><P></P>
+But this is the form differentiated in &#167;<A HREF="node51.html#sec:40">5.8</A>; therefore (VI) holds true for any value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN>.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Differentiate <!-- MATH
+ $y = \log(x^2 + a)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="111" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img991.png"
+ ALT="$ y = \log(x^2 + a)$"></SPAN>.
+
+<P>
+Solution. 	
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} 	&= \frac{\frac{d}{dx}(x^2 + a)}{x^2 + a} \ \ {\rm by\ VIIIa}\ (v = x^2 + a)\\
+  	&= \frac{2x}{x^2 + a} .
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="270" HEIGHT="62" BORDER="0"
+ SRC="img992.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &amp;= \frac{\frac{d}{dx}(x^2 + ...
+...\ VIIIa}\ (v = x^2 + a)\\
+&amp;= \frac{2x}{x^2 + a} .
+\end{array}\end{displaymath}">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><A NAME="ex:2-46"><B>Example  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">2</SPAN></B></A> &nbsp; Differentiate <!-- MATH
+ $y = \log \sqrt{1 - x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img993.png"
+ ALT="$ y = \log \sqrt{1 - x^2}$"></SPAN>.
+
+<P>
+Solution. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+	\frac{dy}{dx}
+&	= \frac{\frac{d}{dx}(1 - x^2)^{\frac{1}{2}}}{(1 - x^2)^{\frac{1}{2}}} \ \ {\rm by\ VIIIa}\\
+&  	= \frac{\frac{1}{2} (1 - x^2)^{-\frac{1}{2}}(-2x)}{(1 - x^2)^{\frac{1}{2}}} \ \ {\rm by\ VI}\\
+&  	= \frac{x}{x^2 - 1}.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="205" HEIGHT="108" BORDER="0"
+ SRC="img994.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx}
+&amp; = \frac{\frac{d}{dx}(1 -...
+...{1}{2}}} \ \ {\rm by\ VI}\\
+&amp; = \frac{x}{x^2 - 1}.
+\end{array}\end{displaymath}">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">3</SPAN></B> &nbsp; Differentiate <!-- MATH
+ $y = a^{3x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img995.png"
+ ALT="$ y = a^{3x^2}$"></SPAN>.
+
+<P>
+Solution.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+ 	\frac{dy}{dx} &	= \log a \cdot a^{3x^2} \frac{d}{dx}(3 x^2) \ \ {\rm by\ IX}\\
+  &	= 6x \log a \cdot a^{3x^2}.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="225" HEIGHT="59" BORDER="0"
+ SRC="img996.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &amp; = \log a \cdot a^{3x^2} \...
+... \ \ {\rm by\ IX}\\
+&amp; = 6x \log a \cdot a^{3x^2}.
+\end{array}\end{displaymath}">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">4</SPAN></B> &nbsp; Differentiate <!-- MATH
+ $y = be^{c^2 + x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="84" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img997.png"
+ ALT="$ y = be^{c^2 + x^2}$"></SPAN>.
+
+<P>
+Solution. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+	\frac{dy}{dx}
+&=	b\frac{d}{dx} \left ( e^{c^2 + x^2} \right ) \ \ {\rm by\ IV}\\
+&  	= be^{c^2 + x^2} \frac{d}{dx} (c^2 + x^2)  \ \ {\rm by\ IXa}\\
+&  	= 2bxe^{c^2 + x^2}.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="237" HEIGHT="88" BORDER="0"
+ SRC="img998.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx}
+&amp;= b\frac{d}{dx} \left ( e...
+...2 + x^2) \ \ {\rm by\ IXa}\\
+&amp; = 2bxe^{c^2 + x^2}.
+\end{array}\end{displaymath}">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><A NAME="ex:5-46"><B>Example  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">5</SPAN></B></A> &nbsp; Differentiate <!-- MATH
+ $y = x^{e^x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img999.png"
+ ALT="$ y = x^{e^x}$"></SPAN>.
+
+<P>
+Solution.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+	\frac{dy}{dx}
+&	= e^x x^{e^x - 1} \frac{d}{dx} (x) + x^{e^x} \log x \frac{d}{dx} (e^x)  \ \ {\rm by\ X}\\
+&  	= e^x x^{e^x - 1} + x^{e^x} \log x \cdot e^x\\
+&  	= e^x x^{e^x} \left ( \frac{1}{x} + \log x \right ) 
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="311" HEIGHT="76" BORDER="0"
+ SRC="img1000.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx}
+&amp; = e^x x^{e^x - 1} \frac{...
+... e^x x^{e^x} \left ( \frac{1}{x} + \log x \right )
+\end{array}\end{displaymath}">
+</DIV><P></P></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1406"
+  HREF="node59.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1400"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1394"
+  HREF="node57.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1402"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1404"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1407"
+  HREF="node59.html">Logarithmic differentiation</A>
+<B> Up:</B> <A NAME="tex2html1401"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1395"
+  HREF="node57.html">Differentiation of the simple</A>
+ &nbsp; <B>  <A NAME="tex2html1403"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1405"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

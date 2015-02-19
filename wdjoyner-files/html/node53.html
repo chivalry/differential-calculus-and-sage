@@ -1,0 +1,1103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Examples</TITLE>
+<META NAME="description" CONTENT="Examples">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node54.html">
+<LINK REL="previous" HREF="node52.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node54.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1336"
+  HREF="node54.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1330"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1324"
+  HREF="node52.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1332"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1334"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1337"
+  HREF="node54.html">Differentiation of a function</A>
+<B> Up:</B> <A NAME="tex2html1331"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1325"
+  HREF="node52.html">Differentiation of a quotient</A>
+ &nbsp; <B>  <A NAME="tex2html1333"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1335"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007100000000000000000">
+Examples</A>
+</H1><A NAME="tex2html38"
+  HREF="footnode.html#foot5620"><SUP><SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>
+<P>
+Differentiate the following<A NAME="tex2html39"
+  HREF="footnode.html#foot5621"><SUP><SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>: 
+
+<P>
+
+<OL>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img652.png"
+ ALT="$ y = x^3$"></SPAN>.
+
+<P>
+Solution. <!-- MATH
+ $\frac{dy}{dx} = \frac{d}{dx}(x^3) = 3x^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="135" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img816.png"
+ ALT="$ \frac{dy}{dx} = \frac{d}{dx}(x^3) = 3x^2$"></SPAN>. 
+(By VIa, n = 3.)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = ax^4 - bx^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="101" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img817.png"
+ ALT="$ y = ax^4 - bx^2$"></SPAN>.
+
+<P>
+Solution. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &	= \frac{d}{dx} (ax^4 - bx^2) \\
+& = \frac{d}{dx} (ax^4) - \frac{d}{dx}( bx^2) \ \ \ {\rm by\ III}\\
+& = a\frac{d}{dx} (x^4) - b\frac{d}{dx} (x^2)  \ \ \ {\rm by\ IV}\\
+ & = 4ax^3 - 2bx  \ \ \ {\rm by\ VIa}.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="233" HEIGHT="95" BORDER="0"
+ SRC="img818.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &amp; = \frac{d}{dx} (ax^4 - bx^...
+...m by\ IV}\\
+&amp; = 4ax^3 - 2bx \ \ \ {\rm by\ VIa}.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = x^{\frac{4}{3}} + 5$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img819.png"
+ ALT="$ y = x^{\frac{4}{3}} + 5$"></SPAN>.
+
+<P>
+Solution. 
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &	= \frac{d}{dx}(x^{\frac{4}{3}}) + \frac{d}{dx}(5) \ \ \ {\rm by\ III}\\
+  &	= \frac{4}{3} x^{\frac{1}{3}}  \ \ \ {\rm by\  VIa\ and\ I}
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="211" HEIGHT="58" BORDER="0"
+ SRC="img820.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &amp; = \frac{d}{dx}(x^{\frac{4}...
+...c{4}{3} x^{\frac{1}{3}} \ \ \ {\rm by\ VIa\ and\ I}
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \frac{3x^3}{\sqrt[5]{x^2}} - \frac{7x}{\sqrt[3]{x^4}} + 8\sqrt[7]{x^3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="170" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img821.png"
+ ALT="$ y = \frac{3x^3}{\sqrt[5]{x^2}} - \frac{7x}{\sqrt[3]{x^4}} + 8\sqrt[7]{x^3}$"></SPAN>
+
+<P>
+Solution. 
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &	= \frac{d}{dx} \left ( 3 x^{\frac{13}{5}} \right )
++ \frac{d}{dx} \left ( 7 x^{-\frac{1}{3}} \right ) 
++ \frac{d}{dx} \left ( 8 x^{\frac{3}{7}} \right )   \ \ \ {\rm by\ III}\\
+&  	= \frac{39}{5} x^{\frac{8}{5}} + \frac{7}{3} x^{-\frac{4}{3}} + \frac{24}{7} x^{-\frac{4}{7}}
+  \ \ \ {\rm by\  IV\ and\ VIa}.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="361" HEIGHT="66" BORDER="0"
+ SRC="img822.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &amp; = \frac{d}{dx} \left ( 3 x...
+...{7} x^{-\frac{4}{7}}
+\ \ \ {\rm by\ IV\ and\ VIa}.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = (x^2 - 3)^5$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="97" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img823.png"
+ ALT="$ y = (x^2 - 3)^5$"></SPAN>.
+
+<P>
+Solution. 
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &=5 (x^2 - 3)^4 \frac{d}{dx} (x^2 - 3)   \ \ \ {\rm by\ VI,
+v = x^2 - 3 \ {\rm and\ } n = 5}\\
+  	5(x^2 - 3)^4 \cdot 2x & = 10x(x^2 - 3)^4.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="486" HEIGHT="46" BORDER="0"
+ SRC="img824.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &amp;=5 (x^2 - 3)^4 \frac{d}{dx}...
+...= 5}\\
+5(x^2 - 3)^4 \cdot 2x &amp; = 10x(x^2 - 3)^4.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+We might have expanded this function by the Binomial Theorem 
+and then applied III, etc., but the above process is to be preferred.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \sqrt{a^2 - x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="99" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img825.png"
+ ALT="$ y = \sqrt{a^2 - x^2}$"></SPAN>.
+
+<P>
+Solution. 
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &=	\frac{d}{dx}(a^2 - x^2)^{\frac{1}{2}}\\
+& = \frac{1}{2}(a^2 - x^2)^{-\frac{1}{2}}\frac{d}{dx} (a^2 - x^2),
+\ \ \ {\rm by\ VI}\ (v = a^2 - x^2,\ {\rm and\ }n = 5)\\
+& = \frac{1}{2} (a^2 - x^2)^{-\frac{1}{2}} (-2x) = -\frac{x}{\sqrt{a^2 - x^2}}. 
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="466" HEIGHT="82" BORDER="0"
+ SRC="img826.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &amp;= \frac{d}{dx}(a^2 - x^2)^{...
+...-\frac{1}{2}} (-2x) = -\frac{x}{\sqrt{a^2 - x^2}}.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = (3x^2 + 2)\sqrt{1 + 5x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="163" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img827.png"
+ ALT="$ y = (3x^2 + 2)\sqrt{1 + 5x^2}$"></SPAN>.
+
+<P>
+Solution. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &	= (3x^2 + 2) \frac{d}{dx} (1 + 5x^2)^{\frac{1}{2}}
++ (1 + 5x^2)^{\frac{1}{2}} \frac{d}{dx} (3x^2 + 2)\\
+ & \ \ \ \  \ \ \ ({\rm by\ V\ },
+u = 3x^2 + 2,\ {\rm and\ } v = (1 + 5x^2)^{\frac{1}{2}})\\
+& = (3x^2 + 2) \frac{1}{2} (1 + 5x^2)^{-\frac{1}{2}} \frac{d}{dx} (1 + 5x^2) 
++ (1 + 5x^2)^{\frac{1}{2}} 6x \ \ \ {\rm by\ VI,\ etc.}\\
+ & = (3x^2 + 2)(1 + 5x^2)^{-\frac{1}{2}} 5x + 6x(1 + 5x^2)^{\frac{1}{2}}\\
+ & = \frac{5x(3x^2 + 2)}{\sqrt{1 + 5x^2}} + 6x\sqrt{1 + 5x^2} \\
+& = \frac{45x^3 + 16x}{\sqrt{1 + 5x^2}}. 
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="491" HEIGHT="141" BORDER="0"
+ SRC="img828.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &amp; = (3x^2 + 2) \frac{d}{dx} ...
+...5x^2} \\
+&amp; = \frac{45x^3 + 16x}{\sqrt{1 + 5x^2}}.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \frac{a^2 + x^2}{\sqrt{a^2 - x^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img829.png"
+ ALT="$ y = \frac{a^2 + x^2}{\sqrt{a^2 - x^2}}$"></SPAN>.
+
+<P>
+Solution. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} & 	= \frac{(a^2 - x^2)^{\frac{1}{2}} \frac{d}{dx} (a^2 - x^2) - (a^2 + x^2) \frac{d}{dx} (a^2 - x^2)^{\frac{1}{2}}}{a^2 - x^2}  \ \ \ {\rm by\ VII}\\
+  &	= \frac{2x(a^2 - x^2) + x(a^2 + x^2)}{(a^2 - x^2)^{-\frac{3}{2}}}\\
+ & ({\rm multiplying\ both\ numerator\ and\ denominator\ by\ }(a^2 - x^2)^{\frac{1}{2}})\\
+ & = \frac{\frac3 x^2x - x^3}{(a^2 - x^2)^{\frac{3}{2}}}.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="463" HEIGHT="130" BORDER="0"
+ SRC="img830.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx} &amp; = \frac{(a^2 - x^2)^{\frac...
+...rac{\frac3 x^2x - x^3}{(a^2 - x^2)^{\frac{3}{2}}}.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $5x^4 + 3x^2 - 6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="100" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img831.png"
+ ALT="$ 5x^4 + 3x^2 - 6$"></SPAN>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $\frac{dy}{dx} = 20x^3 + 6x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="112" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img832.png"
+ ALT="$ \frac{dy}{dx} = 20x^3 + 6x$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = 3cx^2 - 8dx + 5e$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="145" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img833.png"
+ ALT="$ y = 3cx^2 - 8dx + 5e$"></SPAN>.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $\frac{dy}{dx} = 6cx - 8d$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="103" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img834.png"
+ ALT="$ \frac{dy}{dx} = 6cx - 8d$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = x^{a + b}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img835.png"
+ ALT="$ y = x^{a + b}$"></SPAN>.   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $\frac{dy}{dx} = (a + b)x^{a + b - 1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="139" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img836.png"
+ ALT="$ \frac{dy}{dx} = (a + b)x^{a + b - 1}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = x^n + nx + n$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="119" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img837.png"
+ ALT="$ y = x^n + nx + n$"></SPAN>.   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $\frac{dy}{dx} = nx^{n - 1} + n$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img838.png"
+ ALT="$ \frac{dy}{dx} = nx^{n - 1} + n$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(x) = \frac{2}{3} x^3 - \frac{3}{2} x^2 + 5$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="156" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img839.png"
+ ALT="$ f(x) = \frac{2}{3} x^3 - \frac{3}{2} x^2 + 5$"></SPAN>.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $f'(x) = 2x^2 - 3x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="122" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img840.png"
+ ALT="$ f'(x) = 2x^2 - 3x$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(x) = (a + b)x^2 + cx + d$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="183" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img841.png"
+ ALT="$ f(x) = (a + b)x^2 + cx + d$"></SPAN>.   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $f'(x) = 2(a + b)x + c$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="152" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img842.png"
+ ALT="$ f'(x) = 2(a + b)x + c$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx}(a + bx + cx^2) = b + 2cx$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="192" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img843.png"
+ ALT="$ \frac{d}{dx}(a + bx + cx^2) = b + 2cx$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dy}(5y^m - 3y + 6) = 5my^{m - 1} - 3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="233" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img844.png"
+ ALT="$ \frac{d}{dy}(5y^m - 3y + 6) = 5my^{m - 1} - 3$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx}(2 x^{-2} + 3x^{-3}) = -4x^{-3} - 9x^{-4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="244" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img845.png"
+ ALT="$ \frac{d}{dx}(2 x^{-2} + 3x^{-3}) = -4x^{-3} - 9x^{-4}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{ds}(3s^{-4} - s) = -12s^{-5} - 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="194" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img846.png"
+ ALT="$ \frac{d}{ds}(3s^{-4} - s) = -12s^{-5} - 1$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx}(4x^{\frac{1}{2}} + x^2) = 2x^{-\frac{1}{2}} + 2x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="192" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img847.png"
+ ALT="$ \frac{d}{dx}(4x^{\frac{1}{2}} + x^2) = 2x^{-\frac{1}{2}} + 2x$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dy}(y^{-2} - 4y^{-\frac{1}{2}}) = -2y^{-3} + 2y^{-\frac{3}{2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="238" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img848.png"
+ ALT="$ \frac{d}{dy}(y^{-2} - 4y^{-\frac{1}{2}}) = -2y^{-3} + 2y^{-\frac{3}{2}}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx}(2x^3 + 5) = 6x^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="131" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img849.png"
+ ALT="$ \frac{d}{dx}(2x^3 + 5) = 6x^2$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dt}(3t^5 - 2t^2) = 15t^4 - 4t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="176" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img850.png"
+ ALT="$ \frac{d}{dt}(3t^5 - 2t^2) = 15t^4 - 4t$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{d\theta}(a\theta^4 + b\theta) = 4a\theta^3 + b$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="170" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img851.png"
+ ALT="$ \frac{d}{d\theta}(a\theta^4 + b\theta) = 4a\theta^3 + b$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{d\alpha}(5 - 2\alpha^{\frac{3}{2}}) = -3\alpha^{\frac{1}{2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="153" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img852.png"
+ ALT="$ \frac{d}{d\alpha}(5 - 2\alpha^{\frac{3}{2}}) = -3\alpha^{\frac{1}{2}}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dt}(9t^{\frac{5}{3}} + t^{-1}) = 15t^{\frac{2}{3}} - t^{-2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="193" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img853.png"
+ ALT="$ \frac{d}{dt}(9t^{\frac{5}{3}} + t^{-1}) = 15t^{\frac{2}{3}} - t^{-2}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx}(2x^{12} - x^9) = 24x^{11} - 9x^8$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="204" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img854.png"
+ ALT="$ \frac{d}{dx}(2x^{12} - x^9) = 24x^{11} - 9x^8$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $r = c\theta^3 + d\theta^2 + e\theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="133" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img855.png"
+ ALT="$ r = c\theta^3 + d\theta^2 + e\theta$"></SPAN>.   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $r' = 3c\theta^2 + 2d\theta + e$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="138" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img856.png"
+ ALT="$ r' = 3c\theta^2 + 2d\theta + e$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = 6x^{\frac{7}{2}} + 4x^{\frac{5}{2}} + 2x^{\frac{3}{2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="154" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img857.png"
+ ALT="$ y = 6x^{\frac{7}{2}} + 4x^{\frac{5}{2}} + 2x^{\frac{3}{2}}$"></SPAN>.   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $y' = 21x^{\frac{5}{2}} + 10x^{\frac{3}{2}} + 3x^{\frac{1}{2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="175" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img858.png"
+ ALT="$ y' = 21x^{\frac{5}{2}} + 10x^{\frac{3}{2}} + 3x^{\frac{1}{2}}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \sqrt{3x} + \sqrt{3}{x} + \frac{1}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="145" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img859.png"
+ ALT="$ y = \sqrt{3x} + \sqrt{3}{x} + \frac{1}{x}$"></SPAN>. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $y' = \frac{3}{2\sqrt{3x}} + \frac{1}{3\sqrt[3]{x^2}} - \frac{1}{x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="165" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img860.png"
+ ALT="$ y' = \frac{3}{2\sqrt{3x}} + \frac{1}{3\sqrt[3]{x^2}} - \frac{1}{x^2}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \frac{a + bx + cx^2}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="96" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img861.png"
+ ALT="$ y = \frac{a + bx + cx^2}{x}$"></SPAN>. 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $y' = c - \frac{a}{x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img862.png"
+ ALT="$ y' = c - \frac{a}{x^2}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \frac{(x - 1)^3}{x^{\frac{1}{3}}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img863.png"
+ ALT="$ y = \frac{(x - 1)^3}{x^{\frac{1}{3}}}$"></SPAN>.
+ 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $y' = \frac{8}{3}x^{\frac{5}{3}} - 5x^{\frac{2}{3}}
++ 2x^{-\frac{1}{3}} + \frac{1}{3}x^{-\frac{4}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="230" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img864.png"
+ ALT="$ y' = \frac{8}{3}x^{\frac{5}{3}} - 5x^{\frac{2}{3}}
++ 2x^{-\frac{1}{3}} + \frac{1}{3}x^{-\frac{4}{3}}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = (2x3 + x^2 - 5)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="142" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img865.png"
+ ALT="$ y = (2x3 + x^2 - 5)^3$"></SPAN>. 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $y' = 6x(3x + 1)(2x^3 + x^2 - 5)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="219" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img866.png"
+ ALT="$ y' = 6x(3x + 1)(2x^3 + x^2 - 5)^2$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = (2x^3 + x^2 - 5)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="141" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img867.png"
+ ALT="$ y = (2x^3 + x^2 - 5)^3$"></SPAN>. 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. 	<!-- MATH
+ $y' = 6x(3x + 1)(2x^3 + x^2 - 5)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="219" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img866.png"
+ ALT="$ y' = 6x(3x + 1)(2x^3 + x^2 - 5)^2$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(x) = (a + bx^2)^{\frac{5}{4}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="130" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img868.png"
+ ALT="$ f(x) = (a + bx^2)^{\frac{5}{4}}$"></SPAN>. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. 	<!-- MATH
+ $f'(x) = \frac{5bx}{2}(a + bx^2)^{\frac{1}{4}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="157" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img869.png"
+ ALT="$ f'(x) = \frac{5bx}{2}(a + bx^2)^{\frac{1}{4}}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(x) = (1 + 4x^3)(1 + 2x^2)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="185" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img870.png"
+ ALT="$ f(x) = (1 + 4x^3)(1 + 2x^2)$"></SPAN>. 	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $f'(x) = 4x(1 + 3x + 10x^3)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="187" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img871.png"
+ ALT="$ f'(x) = 4x(1 + 3x + 10x^3)$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(x) = (a + x)\sqrt{a - x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="156" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img872.png"
+ ALT="$ f(x) = (a + x)\sqrt{a - x}$"></SPAN>. 	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $f'(x) = \frac{a - 3x}{2\sqrt{a - x}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="106" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img873.png"
+ ALT="$ f'(x) = \frac{a - 3x}{2\sqrt{a - x}}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(x) = (a + x)^m(b + x)^n$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="175" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img874.png"
+ ALT="$ f(x) = (a + x)^m(b + x)^n$"></SPAN>. 	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $f'(x) = (a + x)^m(b + x)^n \left [ \frac{m}{a + x} + \frac{n}{b + x} \right ]$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="270" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img875.png"
+ ALT="$ f'(x) = (a + x)^m(b + x)^n \left [ \frac{m}{a + x} + \frac{n}{b + x} \right ]$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \frac{1}{x^n}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="53" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img876.png"
+ ALT="$ y = \frac{1}{x^n}$"></SPAN> . &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. 	<!-- MATH
+ $\frac{y}{x} = -\frac{n}{x^{n + 1}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img877.png"
+ ALT="$ \frac{y}{x} = -\frac{n}{x^{n + 1}}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = x(a^2 + x^2)\sqrt{a^2 - x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="171" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img878.png"
+ ALT="$ y = x(a^2 + x^2)\sqrt{a^2 - x^2}$"></SPAN>. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $\frac{dy}{dx} = \frac{a^4 + a^2x^2 - 4x^4}{\sqrt{a^2 - x^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="126" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img879.png"
+ ALT="$ \frac{dy}{dx} = \frac{a^4 + a^2x^2 - 4x^4}{\sqrt{a^2 - x^2}}$"></SPAN>)
+
+<P>
+</LI>
+<LI>Differentiate the following functions:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{lll}
+(a)\ \  \frac{d}{dx}(2x^3 - 4x + 6) & 	(e)\ \  \frac{d}{dt}(b + at^2)^{\frac{1}{2}} & (i)\ \  \frac{d}{dx}(x^{\frac{2}{3}} - a^{\frac{2}{3}})\\
+(b)\ \  \frac{d}{dt}(at^7 + bt^5 - 9) &	(f)\ \  \frac{d}{dx}(x^2 - a^2)^{\frac{3}{2}} & 	(j)\ \  \frac{d}{dt}(5 + 2t)^{\frac{9}{2}}\\
+(c)\ \  \frac{d}{d\theta}(3\theta^{\frac{3}{2}} - 2\theta^{\frac{1}{2}} + 6\theta) & (g)\ \  \frac{d}{d\phi}(4 - \phi^{\frac{2}{5}}) & (k)\ \  \frac{d}{ds}\sqrt{a + b\sqrt{s}}\\
+(d)\ \  \frac{d}{dx}(2x^3 + x)^{\frac{5}{3}} &  	(h)\ \  \frac{d}{dt}\sqrt{1 + 9t^2} & (l)\ \  \frac{d}{dx}(2x^{\frac{1}{3}} + 2x^{\frac{5}{3}})
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="450" HEIGHT="102" BORDER="0"
+ SRC="img880.png"
+ ALT="\begin{displaymath}
+\begin{array}{lll}
+(a)\ \ \frac{d}{dx}(2x^3 - 4x + 6) &amp; (e)\...
+...\ \frac{d}{dx}(2x^{\frac{1}{3}} + 2x^{\frac{5}{3}})
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \frac{2x^4}{b^2 - x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img881.png"
+ ALT="$ y = \frac{2x^4}{b^2 - x^2}$"></SPAN>. 	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $\frac{dy}{dx} = \frac{8b^2x^3 - 4x^5}{(b^2 - x^2)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="109" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img882.png"
+ ALT="$ \frac{dy}{dx} = \frac{8b^2x^3 - 4x^5}{(b^2 - x^2)^2}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \frac{a - x}{a + x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img883.png"
+ ALT="$ y = \frac{a - x}{a + x}$"></SPAN>.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $\frac{dy}{dx} = -\frac{2a}{(a + x)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="100" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img884.png"
+ ALT="$ \frac{dy}{dx} = -\frac{2a}{(a + x)^2}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $s = \frac{t^3}{(1 + t)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img885.png"
+ ALT="$ s = \frac{t^3}{(1 + t)^2}$"></SPAN>. 	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $\frac{ds}{dt} = \frac{3t^2 + t^3}{(1 + t)^3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="84" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img886.png"
+ ALT="$ \frac{ds}{dt} = \frac{3t^2 + t^3}{(1 + t)^3}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(s) = \frac{(s + 4)^2}{s + 3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="97" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img887.png"
+ ALT="$ f(s) = \frac{(s + 4)^2}{s + 3}$"></SPAN>. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $f'(s) = \frac{(s + 2)(s + 4)}{(s + 3)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="127" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img888.png"
+ ALT="$ f'(s) = \frac{(s + 2)(s + 4)}{(s + 3)^2}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(\theta) = \frac{\theta}{\sqrt{a - b\theta^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="105" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img889.png"
+ ALT="$ f(\theta) = \frac{\theta}{\sqrt{a - b\theta^2}}$"></SPAN>. 	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $f'(\theta) = \frac{a}{(a - b\theta^2)^{\frac{3}{2}}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="119" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img890.png"
+ ALT="$ f'(\theta) = \frac{a}{(a - b\theta^2)^{\frac{3}{2}}}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $F(r) = \sqrt{\frac{1 + r}{1 - r}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="100" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img891.png"
+ ALT="$ F(r) = \sqrt{\frac{1 + r}{1 - r}}$"></SPAN>.     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $F'(r) = \sqrt{1}{(1 - r)\sqrt{1 - r^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="187" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img892.png"
+ ALT="$ F'(r) = \sqrt{1}{(1 - r)\sqrt{1 - r^2}}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\psi(y) = \left ( \frac{y}{1 - y} \right )^m$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="115" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img893.png"
+ ALT="$ \psi(y) = \left ( \frac{y}{1 - y} \right )^m$"></SPAN>. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $\psi'(y) = \frac{my^{m - 1}}{(1 - y)^{m + 1}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="123" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img894.png"
+ ALT="$ \psi'(y) = \frac{my^{m - 1}}{(1 - y)^{m + 1}}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\phi(x) = \frac{2x^2 - 1}{x\sqrt{1 + x^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="108" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img895.png"
+ ALT="$ \phi(x) = \frac{2x^2 - 1}{x\sqrt{1 + x^2}}$"></SPAN>. 	
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans. <!-- MATH
+ $\phi'(x) = \frac{1 + 4x^2}{x^2(1 + x^2)^{\frac{3}{2}}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="128" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img896.png"
+ ALT="$ \phi'(x) = \frac{1 + 4x^2}{x^2(1 + x^2)^{\frac{3}{2}}}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \sqrt{2px}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img897.png"
+ ALT="$ y = \sqrt{2px}$"></SPAN>.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $y' = \frac{p}{y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img898.png"
+ ALT="$ y' = \frac{p}{y}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \frac{b}{a}\sqrt{a^2 - x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="109" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img899.png"
+ ALT="$ y = \frac{b}{a}\sqrt{a^2 - x^2}$"></SPAN>. 	
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $y' = -\frac{b^2x}{a^2y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img900.png"
+ ALT="$ y' = -\frac{b^2x}{a^2y}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = (a^{\frac{2}{3}} - x^{\frac{2}{3}})^{\frac{3}{2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="113" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img901.png"
+ ALT="$ y = (a^{\frac{2}{3}} - x^{\frac{2}{3}})^{\frac{3}{2}}$"></SPAN>. 	
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $y' = -\sqrt[3]{\frac{y}{x}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img902.png"
+ ALT="$ y' = -\sqrt[3]{\frac{y}{x}}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $r = \sqrt{a\phi} + c\sqrt{\phi^3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="123" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img903.png"
+ ALT="$ r = \sqrt{a\phi} + c\sqrt{\phi^3}$"></SPAN>.
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $r' = \frac{\sqrt{a} + 3c\phi}{2\sqrt{\phi}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img904.png"
+ ALT="$ r' = \frac{\sqrt{a} + 3c\phi}{2\sqrt{\phi}}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $u = \frac{v^c + v^d}{cd}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img905.png"
+ ALT="$ u = \frac{v^c + v^d}{cd}$"></SPAN>. 	
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $u' = \frac{v^{c - 1}}{d} + \frac{v^{d - 1}}{c}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="121" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img906.png"
+ ALT="$ u' = \frac{v^{c - 1}}{d} + \frac{v^{d - 1}}{c}$"></SPAN>)
+
+<P>
+</LI>
+<LI><!-- MATH
+ $p = \frac{(q + 1)^{\frac{3}{2}}}{\sqrt{q - 1}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img907.png"
+ ALT="$ p = \frac{(q + 1)^{\frac{3}{2}}}{\sqrt{q - 1}}$"></SPAN>. 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Ans.	<!-- MATH
+ $p' = \frac{(q - 2)\sqrt{q + 1}}{(q - 1)^{\frac{3}{2}}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img908.png"
+ ALT="$ p' = \frac{(q - 2)\sqrt{q + 1}}{(q - 1)^{\frac{3}{2}}}$"></SPAN>)
+
+<P>
+</LI>
+<LI>Differentiate the following functions:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{lll}
+(a) \ \ \frac{d}{dx} \left ( \frac{a^2 - x^2}{a^2 + x^2} \right ) & 	(d) \ \ \frac{d}{dy} \left ( \frac{ay^2}{b + y^3} \right ) & 	(g) \ \ \frac{d}{dx} \frac{x^2}{\sqrt{1 - x^2}}\\
+(b) \ \ \frac{d}{dx} \left ( \frac{x^3}{1 + x^4} \right ) & 	(e) \ \ \frac{d}{ds} \left ( \frac{a^2 - s^2}{\sqrt{a^2 + s^2}} \right ) & 	(h) \ \ \frac{d}{dx} \frac{1 + x^2}{(1 - x^2)^{\frac{3}{2}}}\\
+(c) \ \ \frac{d}{dx} \left ( \frac{1 + x}{\sqrt{1 - x}} \right ) & 	(f) \ \ \frac{d}{dx} \frac{\sqrt{4 - 2x^3}}{x} & 	(i) \ \ \frac{d}{dt} \sqrt{\frac{1 + t^2}{1 - t^2}}
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="361" HEIGHT="106" BORDER="0"
+ SRC="img909.png"
+ ALT="\begin{displaymath}
+\begin{array}{lll}
+(a) \ \ \frac{d}{dx} \left ( \frac{a^2 - ...
+...(i) \ \ \frac{d}{dt} \sqrt{\frac{1 + t^2}{1 - t^2}}
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+</OL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1336"
+  HREF="node54.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1330"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1324"
+  HREF="node52.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1332"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1334"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1337"
+  HREF="node54.html">Differentiation of a function</A>
+<B> Up:</B> <A NAME="tex2html1331"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1325"
+  HREF="node52.html">Differentiation of a quotient</A>
+ &nbsp; <B>  <A NAME="tex2html1333"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1335"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differentiation of </TITLE>
+<META NAME="description" CONTENT="Differentiation of ">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node70.html">
+<LINK REL="previous" HREF="node68.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node70.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1560"
+  HREF="node70.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1554"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1548"
+  HREF="node68.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1556"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1558"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1561"
+  HREF="node70.html">Differentiation of</A>
+<B> Up:</B> <A NAME="tex2html1555"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1549"
+  HREF="node68.html">Exercises</A>
+ &nbsp; <B>  <A NAME="tex2html1557"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1559"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007260000000000000000">
+Differentiation of <SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1250.png"
+ ALT="$ \arcsin v$"></SPAN></A>
+</H1>
+
+<P>
+Let <!-- MATH
+ $y 	= \arcsin\ v$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="91" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1251.png"
+ ALT="$ y = \arcsin\ v$"></SPAN>, then <!-- MATH
+ $v 	= \sin\ y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1252.png"
+ ALT="$ v = \sin\ y$"></SPAN>.
+
+<P>
+It should be remembered that this function is defined only for values of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> between <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img280.png"
+ ALT="$ -1$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img279.png"
+ ALT="$ +1$"></SPAN> inclusive and that <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> (the function) is many-valued,
+there being infinitely many arcs whose sines will equal <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN>. Thus, Figure 
+<A HREF="#fig:arcsin">5.4</A>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:arcsin2"></A><A NAME="8578"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+The inverse sine <!-- MATH
+ $\sin^{-1}\ x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1254.png"
+ ALT="$ \sin^{-1}\ x$"></SPAN> using <I CLASS="sans">SAGE</I>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="271" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1253.png"
+ ALT="\includegraphics[height=6cm,width=7cm]{arcsin2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:arcsin"></A><A NAME="7426"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+A single branch of the function <!-- MATH
+ $f(x)=\arcsin(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="119" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1256.png"
+ ALT="$ f(x)=\arcsin(x)$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="136" HEIGHT="136" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1255.png"
+ ALT="\includegraphics[height=3cm,width=3cm]{arcsin.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+represents only a piece of the multi-valued inverse function of <SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img234.png"
+ ALT="$ \sin(x)$"></SPAN>,
+represented by taking the graph of <SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img234.png"
+ ALT="$ \sin(x)$"></SPAN> and flipping it about the 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img704.png"
+ ALT="$ 45^o$"></SPAN> line.
+In the above discussion, in order to make the function single-valued; 
+only values of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> between <!-- MATH
+ $-\frac{\pi}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$ -\frac{\pi}{2}$"></SPAN> and <!-- MATH
+ $\frac{\pi}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img230.png"
+ ALT="$ \frac{\pi}{2}$"></SPAN> inclusive are considered; that is, the arc of smallest numerical value whose sine is <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN>. 
+
+<P>
+Differentiating <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> by XI, <!-- MATH
+ $\frac{dv}{dy} 	= \cos\ y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1257.png"
+ ALT="$ \frac{dv}{dy} = \cos\ y$"></SPAN>;
+therefore <!-- MATH
+ $\frac{dy}{dv} = \frac{1}{\cos y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1258.png"
+ ALT="$ \frac{dy}{dv} = \frac{1}{\cos y}$"></SPAN>, by (<A HREF="node55.html#eqn:C-43">5.2</A>). But since <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> is a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, this may be substituted in
+<!-- MATH
+ $\frac{dy}{dx} 	= \frac{dy}{dv} \cdot \frac{dv}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="90" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img767.png"
+ ALT="$ \frac{dy}{dx} = \frac{dy}{dv} \cdot \frac{dv}{dx}$"></SPAN> (see (<A HREF="node54.html#eqn:A-42">5.1</A>)),giving 	
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= \frac{1}{\cos y} \cdot \frac{dv}{dx} 	= \frac{1}{\sqrt{1 - v^2}} \frac{dv}{dx},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="222" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1259.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{1}{\cos y} \cdot \frac{dv}{dx} = \frac{1}{\sqrt{1 - v^2}} \frac{dv}{dx},
+$">
+</DIV><P></P>
+(since <!-- MATH
+ $\cos y = \sqrt{1 - \sin^2 y} = \sqrt{1 - v^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="216" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1260.png"
+ ALT="$ \cos y = \sqrt{1 - \sin^2 y} = \sqrt{1 - v^2}$"></SPAN>), the positive sign 
+of the radical being taken, since <SPAN CLASS="MATH"><IMG
+ WIDTH="37" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1261.png"
+ ALT="$ \cos y$"></SPAN> is positive for all values of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> between <!-- MATH
+ $-\frac{\pi}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$ -\frac{\pi}{2}$"></SPAN> and <!-- MATH
+ $\frac{\pi}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img230.png"
+ ALT="$ \frac{\pi}{2}$"></SPAN> inclusive). Therefore,
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d}{dx}(\arcsin\, v) 	= \frac{\frac{dv}{dx}}{\sqrt{1 - v^2}}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="174" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1262.png"
+ ALT="$\displaystyle \frac{d}{dx}(\arcsin\, v) = \frac{\frac{dv}{dx}}{\sqrt{1 - v^2}}
+$">
+</DIV><P></P>
+(equation (XVIII) in &#167;<A HREF="node44.html#sec:33">5.1</A>  above).
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1560"
+  HREF="node70.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1554"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1548"
+  HREF="node68.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1556"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1558"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1561"
+  HREF="node70.html">Differentiation of</A>
+<B> Up:</B> <A NAME="tex2html1555"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1549"
+  HREF="node68.html">Exercises</A>
+ &nbsp; <B>  <A NAME="tex2html1557"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1559"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

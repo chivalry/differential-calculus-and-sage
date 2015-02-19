@@ -1,0 +1,402 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Limit of a variable</TITLE>
+<META NAME="description" CONTENT="Limit of a variable">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node20.html">
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="up" HREF="node18.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html817"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html811"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html805"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html813"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html815"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html818"
+  HREF="node20.html">Division by zero excluded</A>
+<B> Up:</B> <A NAME="tex2html812"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html806"
+  HREF="node18.html">Theory of limits</A>
+ &nbsp; <B>  <A NAME="tex2html814"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html816"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00510000000000000000"></A>
+<A NAME="sec:13"></A>
+<BR>
+Limit of a variable
+</H1>
+
+<P>
+If a variable <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> takes on successively a series of values 
+that approach nearer and nearer to a constant value <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img321.png"
+ ALT="$ L$"></SPAN> 
+in such a manner that <SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img322.png"
+ ALT="$ \vert v - L \vert$"></SPAN> becomes and remains 
+less than any assigned arbitrarily small positive quantity, 
+then <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> is said to approach the limit <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img321.png"
+ ALT="$ L$"></SPAN>, or to converge 
+to the limit <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img321.png"
+ ALT="$ L$"></SPAN>. Symbolically this is written
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{v = L},\ \ {\rm or},\ \ \lim_{v \rightarrow L}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="115" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img323.png"
+ ALT="$\displaystyle \lim_{v = L},\ \ {\rm or},\ \ \lim_{v \rightarrow L}.
+$">
+</DIV><P></P>
+
+<P>
+The following familiar examples illustrate what is meant:
+
+<P>
+
+<OL>
+<LI>As the number of sides of a regular inscribed polygon is 
+indefinitely increased, the limit of the area of the polygon 
+is the area of the circle. In this case the variable is always 
+less than its limit.
+
+<P>
+</LI>
+<LI>Similarly, the limit of the area of the circumscribed polygon 
+is also the area of the circle, but now the variable is 
+always greater than its limit.
+
+<P>
+</LI>
+<LI>Consider the series
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A"></A><!-- MATH
+ \begin{equation}
+1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} + \cdots
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="147" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img324.png"
+ ALT="$\displaystyle 1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} + \cdots$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The sum of any even number <SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img325.png"
+ ALT="$ (2n)$"></SPAN> of the first terms of this series is
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:B"></A><!-- MATH
+ \begin{equation}
+\begin{array}{ll}
+ S_{2n}	&= 1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} + \cdots
++ \frac{1}{2^{2n - 2}} - \frac{1}{2^{2n - 1}}\\
+&= \frac{\frac{1}{2^{2n}} - 1}{-\frac{1}{2} - 1} \\
+&= \frac{2}{3} - \frac{1}{3 \cdot 2^{2n - 1}},
+\end{array}
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="304" HEIGHT="84" BORDER="0"
+ SRC="img326.png"
+ ALT="\begin{displaymath}\begin{array}{ll} S_{2n} &amp;= 1 - \frac{1}{2} + \frac{1}{4} - \...
+...} \\ &amp;= \frac{2}{3} - \frac{1}{3 \cdot 2^{2n - 1}}, \end{array}\end{displaymath}"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+by item 6, Ch. <A HREF="node3.html#ch:1">1</A>, &#167;<A HREF="node4.html#sec:1">1.1</A>.
+Similarly, the sum of any odd number <SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img327.png"
+ ALT="$ (2n + 1)$"></SPAN> of the first terms of 
+the series is
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:C"></A><!-- MATH
+ \begin{equation}
+\begin{array}{ll}
+S_{2n + 1} 	&
+= 1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8} +
+\cdots - \frac{1}{2^{2n - 1}} + \frac{1}{2^{2n}}\\
+&= \frac{-\frac{1}{2^{2n + 1}} - 1}{-\frac{1}{2} - 1} \\
+&= \frac{2}{3} + \frac{1}{3 \cdot 2^{2n}},
+\end{array}
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="306" HEIGHT="85" BORDER="0"
+ SRC="img328.png"
+ ALT="\begin{displaymath}\begin{array}{ll} S_{2n + 1} &amp; = 1 - \frac{1}{2} + \frac{1}{4...
+... - 1} \\ &amp;= \frac{2}{3} + \frac{1}{3 \cdot 2^{2n}}, \end{array}\end{displaymath}"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+again by item 6, Ch. <A HREF="node3.html#ch:1">1</A>, &#167;<A HREF="node4.html#sec:1">1.1</A>.
+
+<P>
+Writing (<A HREF="#eqn:B">3.2</A>) and (<A HREF="#eqn:C">3.3</A>) in the forms
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{2}{3} - S_{2n}
+= \frac{1}{3 \cdot 2^{2n - 1}}, 
+\ \ \ \ \ S_{2n + 1} - \frac{2}{3} 
+= \frac{1}{3 \cdot 2^{2n}}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="317" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img329.png"
+ ALT="$\displaystyle \frac{2}{3} - S_{2n}
+= \frac{1}{3 \cdot 2^{2n - 1}},
+\ \ \ \ \ S_{2n + 1} - \frac{2}{3}
+= \frac{1}{3 \cdot 2^{2n}}
+$">
+</DIV><P></P>
+we have 
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{n \to \infty} \left ( \frac{2}{3} - S_{2n} \right )
+= \lim_{n \to \infty} \frac{1}{3 \cdot 2^{2n - 1}} = 0,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="273" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img330.png"
+ ALT="$\displaystyle \lim_{n \to \infty} \left ( \frac{2}{3} - S_{2n} \right )
+= \lim_{n \to \infty} \frac{1}{3 \cdot 2^{2n - 1}} = 0,
+$">
+</DIV><P></P>
+and 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{n \to \infty} \left ( S_{2n + 1} - \frac{2}{3} \right )
+= \lim_{n \to \infty} \frac{1}{3 \cdot 2^{2n}} = 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="273" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img331.png"
+ ALT="$\displaystyle \lim_{n \to \infty} \left ( S_{2n + 1} - \frac{2}{3} \right )
+= \lim_{n \to \infty} \frac{1}{3 \cdot 2^{2n}} = 0.
+$">
+</DIV><P></P>
+Hence, by definition of the limit of a variable, it is seen 
+that both <SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img332.png"
+ ALT="$ S_{2n}$"></SPAN> and <!-- MATH
+ $S_{2n + 1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img333.png"
+ ALT="$ S_{2n + 1}$"></SPAN> are variables approaching 
+<!-- MATH
+ $\frac{2}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img334.png"
+ ALT="$ \frac{2}{3}$"></SPAN> as a limit as the number of terms increases without limit.
+
+<P>
+Summing up the first two, three, four, etc., terms of (<A HREF="#eqn:A">3.1</A>), 
+the sums are found by ((<A HREF="#eqn:B">3.2</A>) and ((<A HREF="#eqn:C">3.3</A>) to 
+be alternately less and greater than <!-- MATH
+ $\frac{2}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img334.png"
+ ALT="$ \frac{2}{3}$"></SPAN>, illustrating 
+the case when the variable, in this case the sum of the terms 
+of ((<A HREF="#eqn:A">3.1</A>), is alternately less and greater than its limit.
+</LI>
+</OL>
+
+<P>
+In the examples shown the variable never reaches its limit. 
+This is not by any means always the case, for from the definition 
+of the limit of a variable it is clear that the essence of the 
+definition is simply that the numerical value of the difference 
+between the variable and its limit shall ultimately become and 
+remain less than any positive number we may choose, however small.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
+<I>As an example illustrating the fact that the variable may 
+reach its limit, consider the following. Let a series of regular 
+polygons be inscribed in a circle, the number of sides increasing 
+indefinitely. Choosing anyone of these, construct. the circumscribed 
+polygon whose sides touch the circle at the vertices of the inscribed
+polygon. Let <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img335.png"
+ ALT="$ p_n$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="23" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img336.png"
+ ALT="$ P_n$"></SPAN> be the perimeters of the inscribed and 
+circumscribed polygons of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN> sides, and <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img337.png"
+ ALT="$ C$"></SPAN> the circumference 
+of the circle, and suppose the values of a variable <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> to be as follows:
+</I>
+<P><P><!-- MATH
+ \begin{displaymath}
+P_n,\ \  p_{n + 1},\ \  C,\ \  P_{n + 1},\ \  p_{n + 2},\ \  C,\ \  P_{n + 2},
+\ \ \ \ {\rm etc.}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="341" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img338.png"
+ ALT="$\displaystyle P_n,\ \ p_{n + 1},\ \ C,\ \ P_{n + 1},\ \ p_{n + 2},\ \ C,\ \ P_{n + 2},
+\ \ \ \ {\rm etc.}
+$">
+</DIV><P></P><I>
+Then, evidently,
+</I>
+<P><P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to \infty} x = C
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img339.png"
+ ALT="$\displaystyle \lim_{x \to \infty} x = C
+$">
+</DIV><P></P><I>
+and the limit is reached by the variable, every third value of the 
+variable being <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img337.png"
+ ALT="$ C$"></SPAN>.</I></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html817"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html811"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html805"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html813"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html815"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html818"
+  HREF="node20.html">Division by zero excluded</A>
+<B> Up:</B> <A NAME="tex2html812"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html806"
+  HREF="node18.html">Theory of limits</A>
+ &nbsp; <B>  <A NAME="tex2html814"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html816"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

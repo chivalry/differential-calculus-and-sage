@@ -1,0 +1,1625 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Examples</TITLE>
+<META NAME="description" CONTENT="Examples">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node98.html">
+<LINK REL="previous" HREF="node96.html">
+<LINK REL="up" HREF="node81.html">
+<LINK REL="next" HREF="node98.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1970"
+  HREF="node98.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1964"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1958"
+  HREF="node96.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1966"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1968"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1971"
+  HREF="node98.html">Application: Newton's method</A>
+<B> Up:</B> <A NAME="tex2html1965"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1959"
+  HREF="node96.html">Component accelerations. Curvilinear motion.</A>
+ &nbsp; <B>  <A NAME="tex2html1967"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1969"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION008160000000000000000">
+Examples</A>
+</H1>
+
+<P>
+
+<OL>
+<LI>By experiment it has been found that a body falling 
+freely from rest in a vacuum near the earth's surface follows 
+approximately the law <!-- MATH
+ $s = 16.1t^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1978.png"
+ ALT="$ s = 16.1t^2$"></SPAN>, where <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="$ s$"></SPAN> = space (height) in feet, 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> = time in seconds. Find the velocity and acceleration 
+
+<P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>at any instant; 
+
+<P>
+</DD>
+<DT>(b)</DT>
+<DD>at end of the first second; 
+
+<P>
+</DD>
+<DT>(c)</DT>
+<DD>at end of the fifth second.
+</DD>
+</DL>
+
+<P>
+Solution. We have <!-- MATH
+ $s = 16.1t^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1978.png"
+ ALT="$ s = 16.1t^2$"></SPAN>.
+
+<P>
+(a) Differentiating, <!-- MATH
+ $\frac{ds}{dt} = 32.2 t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1979.png"
+ ALT="$ \frac{ds}{dt} = 32.2 t$"></SPAN>, or, from 
+(<A HREF="node93.html#eqn:9-70">6.21</A>), <SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1980.png"
+ ALT="$ v = 32.2t$"></SPAN> ft./sec.
+Differentiating again, <!-- MATH
+ $\frac{dv}{dt} = 32.2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1981.png"
+ ALT="$ \frac{dv}{dt} = 32.2$"></SPAN>, or, from 
+(<A HREF="node95.html#eqn:14-72">6.28</A>), 
+<!-- MATH
+ $a = 32.2\  \fps2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1982.png"
+ ALT="$ a = 32.2\ \fps2$"></SPAN>,
+which tells us that the acceleration of a falling body 
+is constant; in other words, the velocity increases <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1983.png"
+ ALT="$ 32.2$"></SPAN> ft./sec. 
+every second it keeps on falling.
+
+<P>
+(b) To find <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> at the end of the first second, substitute 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1731.png"
+ ALT="$ t = 1$"></SPAN> to get <SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1984.png"
+ ALT="$ v = 32.2$"></SPAN> ft./sec., <!-- MATH
+ $a = 32.2\  \fps2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1982.png"
+ ALT="$ a = 32.2\ \fps2$"></SPAN>.
+
+<P>
+(c) To find <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> at the end of the fifth second, 
+substitute <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1985.png"
+ ALT="$ t = 5$"></SPAN> to get <SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1986.png"
+ ALT="$ v = 161$"></SPAN> ft./sec., 
+<!-- MATH
+ $a = 32.2\  \fps2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1982.png"
+ ALT="$ a = 32.2\ \fps2$"></SPAN>.
+
+<P>
+</LI>
+<LI>Neglecting the resistance of the air, the equations of motion for a 
+projectile are
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x = v_0 \cos \phi \cdot t,\ \ \  y = v_0 \sin \phi \cdot t - 16.1 t^2;
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="287" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1987.png"
+ ALT="$\displaystyle x = v_0 \cos \phi \cdot t,\ \ \ y = v_0 \sin \phi \cdot t - 16.1 t^2;
+$">
+</DIV><P></P>
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1988.png"
+ ALT="$ v_0$"></SPAN> = initial velocity, <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img265.png"
+ ALT="$ \phi$"></SPAN> = angle of projection with 
+horizon, <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> = time of flight in seconds, <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> being 
+measured in feet. Find the velocity, acceleration, component velocities, 
+and component accelerations 
+
+<P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>at any instant; 
+
+<P>
+</DD>
+<DT>(b)</DT>
+<DD>at the end of the first second, having given <SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1989.png"
+ ALT="$ v_0 = 100$"></SPAN> ft. per sec., 
+<!-- MATH
+ $\phi = 30^0 = \pi/6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="105" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1990.png"
+ ALT="$ \phi = 30^0 = \pi/6$"></SPAN>; 
+
+<P>
+</DD>
+<DT>(c)</DT>
+<DD>find direction of motion at the end of the first second.
+</DD>
+</DL>
+
+<P>
+Solution. From (<A HREF="node94.html#eqn:10-71">6.24</A>) and (<A HREF="node94.html#eqn:11-71">6.25</A>),
+(a) <!-- MATH
+ $v_x = v_0 \cos \phi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1991.png"
+ ALT="$ v_x = v_0 \cos \phi$"></SPAN>;  <!-- MATH
+ $v_y = v_0 \sin \phi - 32.2 t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="144" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1992.png"
+ ALT="$ v_y = v_0 \sin \phi - 32.2 t$"></SPAN>.
+Also, from (<A HREF="node94.html#eqn:12-71">6.26</A>), 
+<!-- MATH
+ $v = \sqrt{{v_0}^2 - 64.4 t v_0 \sin \phi + 1036.8 t^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="251" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1993.png"
+ ALT="$ v = \sqrt{{v_0}^2 - 64.4 t v_0 \sin \phi + 1036.8 t^2}$"></SPAN>.
+From (<A HREF="node96.html#eqn:15-73">6.30</A>) and (<A HREF="node96.html#eqn:16-73">6.31</A>), 	
+<SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1994.png"
+ ALT="$ a_x = 0$"></SPAN>; <!-- MATH
+ $a_y = − 32.2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1995.png"
+ ALT="$ a_y = − 32.2$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1996.png"
+ ALT="$ a = 32.2$"></SPAN>.
+
+<P>
+(b) Substituting <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1731.png"
+ ALT="$ t = 1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1989.png"
+ ALT="$ v_0 = 100$"></SPAN>, <!-- MATH
+ $\phi = 30^0=\pi/6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="105" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1990.png"
+ ALT="$ \phi = 30^0 = \pi/6$"></SPAN> in these 
+results, we get
+  	<!-- MATH
+ $v_x = 86.6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1997.png"
+ ALT="$ v_x = 86.6$"></SPAN> ft./sec., <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1994.png"
+ ALT="$ a_x = 0$"></SPAN>;
+  	<!-- MATH
+ $v_y = 17.8$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1998.png"
+ ALT="$ v_y = 17.8$"></SPAN> ft./sec., <!-- MATH
+ $a_y = - 32.2\ \fps2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="96" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1999.png"
+ ALT="$ a_y = - 32.2\ \fps2$"></SPAN>;
+  	<SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2000.png"
+ ALT="$ v = 88.4$"></SPAN> ft./sec., <!-- MATH
+ $a = 32.2\ \fps2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1982.png"
+ ALT="$ a = 32.2\ \fps2$"></SPAN>.
+
+<P>
+(c) 	
+<!-- MATH
+ $\tau = \arctan \frac{v_y}{v_x} = \arctan \frac{17.8}{86.6} = 0.2027...
+\approx 11^o$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="316" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2001.png"
+ ALT="$ \tau = \arctan \frac{v_y}{v_x} = \arctan \frac{17.8}{86.6} = 0.2027...
+\approx 11^o$"></SPAN>, which is the angle of direction of motion with the horizontal.
+
+<P>
+</LI>
+<LI>Given the following equations of rectilinear motion. 
+Find the distance, velocity, and acceleration at the instant indicated:
+
+<P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD><!-- MATH
+ $s = t^3 + 2t^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2002.png"
+ ALT="$ s = t^3 + 2t^2$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1737.png"
+ ALT="$ t = 2$"></SPAN>. 	
+
+<P>
+Ans. 	<SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2003.png"
+ ALT="$ s = 16$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2004.png"
+ ALT="$ v = 20$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2005.png"
+ ALT="$ a = 16$"></SPAN>.
+
+<P>
+</DD>
+<DT>(b)</DT>
+<DD><P>
+<!-- MATH
+ $s = t^2 + 2t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2006.png"
+ ALT="$ s = t^2 + 2t$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1760.png"
+ ALT="$ t = 3$"></SPAN>. 	
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2007.png"
+ ALT="$ s = 15$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2008.png"
+ ALT="$ v = 8$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2009.png"
+ ALT="$ a = 2$"></SPAN>.
+
+<P>
+</DD>
+<DT>(c)</DT>
+<DD><!-- MATH
+ $s = 3 - 4t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2010.png"
+ ALT="$ s = 3 - 4t$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2011.png"
+ ALT="$ t = 4$"></SPAN>. 	
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2012.png"
+ ALT="$ s = - 13$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2013.png"
+ ALT="$ v = - 4$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2014.png"
+ ALT="$ a = 0$"></SPAN>.
+
+<P>
+</DD>
+<DT>(d)</DT>
+<DD><!-- MATH
+ $x = 2t - t^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2015.png"
+ ALT="$ x = 2t - t^2$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1731.png"
+ ALT="$ t = 1$"></SPAN>. 	
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2016.png"
+ ALT="$ v = 0$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2017.png"
+ ALT="$ a = - 2$"></SPAN>.
+
+<P>
+</DD>
+<DT>(e)</DT>
+<DD><!-- MATH
+ $y = 2t - t^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2018.png"
+ ALT="$ y = 2t - t^3$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1745.png"
+ ALT="$ t = 0$"></SPAN>. 	
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2019.png"
+ ALT="$ y = 0$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2020.png"
+ ALT="$ v = 2$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2014.png"
+ ALT="$ a = 0$"></SPAN>.
+
+<P>
+</DD>
+<DT>(f)</DT>
+<DD><!-- MATH
+ $h = 20t + 16t^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="105" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2021.png"
+ ALT="$ h = 20t + 16t^2$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2022.png"
+ ALT="$ t = 10$"></SPAN>. 	
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2023.png"
+ ALT="$ h = 1800$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2024.png"
+ ALT="$ v = 340$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2025.png"
+ ALT="$ a = 32$"></SPAN>.
+
+<P>
+</DD>
+<DT>(g)</DT>
+<DD><!-- MATH
+ $s = 2 \sin\, t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2026.png"
+ ALT="$ s = 2 \sin\, t$"></SPAN>; <!-- MATH
+ $t = \frac{\pi}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1774.png"
+ ALT="$ t = \frac{\pi}{4}$"></SPAN>. 	
+
+<P>
+Ans. <!-- MATH
+ $s = \sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2027.png"
+ ALT="$ s = \sqrt{2}$"></SPAN>, <!-- MATH
+ $v = \sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2028.png"
+ ALT="$ v = \sqrt{2}$"></SPAN>, <!-- MATH
+ $a= - \sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2029.png"
+ ALT="$ a= - \sqrt{2}$"></SPAN>.
+
+<P>
+</DD>
+<DT>(h)</DT>
+<DD><!-- MATH
+ $y = a \cos \frac{\pi t}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2030.png"
+ ALT="$ y = a \cos \frac{\pi t}{3}$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1731.png"
+ ALT="$ t = 1$"></SPAN>. 	
+
+<P>
+Ans. <!-- MATH
+ $y = \frac{a}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2031.png"
+ ALT="$ y = \frac{a}{2}$"></SPAN>, <!-- MATH
+ $v = -\frac{\pi a \sqrt{3}}{6}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2032.png"
+ ALT="$ v = -\frac{\pi a \sqrt{3}}{6}$"></SPAN>, <!-- MATH
+ $a = -\frac{\pi^2 a}{18}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2033.png"
+ ALT="$ a = -\frac{\pi^2 a}{18}$"></SPAN>.
+
+<P>
+</DD>
+<DT>(i)</DT>
+<DD><!-- MATH
+ $s = 2e^{3t}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2034.png"
+ ALT="$ s = 2e^{3t}$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1745.png"
+ ALT="$ t = 0$"></SPAN>. 	
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2035.png"
+ ALT="$ s = 2$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2036.png"
+ ALT="$ v = 6$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2037.png"
+ ALT="$ a = 18$"></SPAN>.
+
+<P>
+</DD>
+<DT>(j)</DT>
+<DD><!-- MATH
+ $s = 2t^2 - 3t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2038.png"
+ ALT="$ s = 2t^2 - 3t$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1737.png"
+ ALT="$ t = 2$"></SPAN>.
+
+<P>
+</DD>
+<DT>(k)</DT>
+<DD><!-- MATH
+ $x = 4 + t^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2039.png"
+ ALT="$ x = 4 + t^3$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1760.png"
+ ALT="$ t = 3$"></SPAN>.
+
+<P>
+</DD>
+<DT>(l)</DT>
+<DD><!-- MATH
+ $y = 5 \cos\, 2t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2040.png"
+ ALT="$ y = 5 \cos\, 2t$"></SPAN>; <!-- MATH
+ $t = \frac{\pi}{6}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1751.png"
+ ALT="$ t = \frac{\pi}{6}$"></SPAN>.
+
+<P>
+</DD>
+<DT>(m)</DT>
+<DD><!-- MATH
+ $s = b \sin \frac{\pi t}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2041.png"
+ ALT="$ s = b \sin \frac{\pi t}{4}$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1737.png"
+ ALT="$ t = 2$"></SPAN>.
+
+<P>
+</DD>
+<DT>(n)</DT>
+<DD><!-- MATH
+ $x = ae^{- 2t}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2042.png"
+ ALT="$ x = ae^{- 2t}$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1731.png"
+ ALT="$ t = 1$"></SPAN>.
+
+<P>
+</DD>
+<DT>(o)</DT>
+<DD><!-- MATH
+ $s = \frac{a}{t} + bt^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2043.png"
+ ALT="$ s = \frac{a}{t} + bt^2$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2044.png"
+ ALT="$ t = t_0$"></SPAN>.
+
+<P>
+</DD>
+<DT>(p)</DT>
+<DD><!-- MATH
+ $s = 10 \log \frac{4}{4 + t}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="100" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2045.png"
+ ALT="$ s = 10 \log \frac{4}{4 + t}$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1731.png"
+ ALT="$ t = 1$"></SPAN>.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</LI>
+<LI>If a projectile be given an initial velocity of <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2046.png"
+ ALT="$ 200$"></SPAN> ft. per sec. 
+in a direction inclined <!-- MATH
+ $45^o=\pi/4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1579.png"
+ ALT="$ 45^o=\pi/4$"></SPAN> with the horizontal, find
+
+<P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>the velocity and direction of motion at the end of the third and sixth seconds;
+
+<P>
+</DD>
+<DT>(b)</DT>
+<DD>the component velocities at the same instants.
+</DD>
+</DL>
+
+<P>
+Conditions are the same as for Exercise 2.
+
+<P>
+Ans. 	
+<BR>
+(a) 	When <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1760.png"
+ ALT="$ t = 3$"></SPAN>, 	<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2047.png"
+ ALT="$ v = 148.3$"></SPAN> ft. per sec., <!-- MATH
+ $\tau = 0.3068... = 17^o 35'$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="157" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2048.png"
+ ALT="$ \tau = 0.3068... = 17^o 35'$"></SPAN>;
+when <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2049.png"
+ ALT="$ t = 6$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2050.png"
+ ALT="$ v = 150.5$"></SPAN> ft. per sec., <!-- MATH
+ $\tau = 2.79049... = 159^o 53'$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="172" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2051.png"
+ ALT="$ \tau = 2.79049... = 159^o 53'$"></SPAN>;
+
+<P>
+(b) When <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1760.png"
+ ALT="$ t = 3$"></SPAN>, <!-- MATH
+ $v_x = 141.4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2052.png"
+ ALT="$ v_x = 141.4$"></SPAN> ft. per sec., <!-- MATH
+ $v_y = 44.8$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2053.png"
+ ALT="$ v_y = 44.8$"></SPAN> ft. per sec.;
+when <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2049.png"
+ ALT="$ t = 6$"></SPAN>, <!-- MATH
+ $v_x = 141.4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2052.png"
+ ALT="$ v_x = 141.4$"></SPAN> ft. per sec., <!-- MATH
+ $v_y = - 51.8$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2054.png"
+ ALT="$ v_y = - 51.8$"></SPAN> ft. per sec.
+
+<P>
+</LI>
+<LI>The height (= <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="$ s$"></SPAN>) in feet reached in <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> seconds by a body 
+projected vertically upwards with a velocity of <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1988.png"
+ ALT="$ v_0$"></SPAN> ft. per sec. 
+is given by the formula
+<!-- MATH
+ $s = v_0t - 16.1t^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2055.png"
+ ALT="$ s = v_0t - 16.1t^2$"></SPAN>.
+Find 
+
+<P>
+(a) velocity and acceleration at any instant; and, if 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2056.png"
+ ALT="$ v_0 = 300$"></SPAN> ft. per sec., find velocity and acceleration 
+
+<P>
+(b) at end of 2 seconds; 
+
+<P>
+(c) at end of 15 seconds. Resistance of air is neglected.
+
+<P>
+Ans. 	(a) <!-- MATH
+ $v = v_0 - 32.2t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="102" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2057.png"
+ ALT="$ v = v_0 - 32.2t$"></SPAN>, <!-- MATH
+ $a = - 32.2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2058.png"
+ ALT="$ a = - 32.2$"></SPAN>;
+  	(b) <SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2059.png"
+ ALT="$ v = 235.6$"></SPAN> ft. per sec. Upwards,
+  	<SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1996.png"
+ ALT="$ a = 32.2$"></SPAN> ft. per (sec.)<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2060.png"
+ ALT="$ ^2$"></SPAN> downwards;
+  	(c) <SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2061.png"
+ ALT="$ v = 183$"></SPAN> ft. per sec. Downwards,
+  	<SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1996.png"
+ ALT="$ a = 32.2$"></SPAN> ft. per (sec.)<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2060.png"
+ ALT="$ ^2$"></SPAN> downwards.
+
+<P>
+</LI>
+<LI>A cannon ball is fired vertically upwards with a muzzle 
+velocity of <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2062.png"
+ ALT="$ 644$"></SPAN> ft. per sec. Find (a) its velocity at the end of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> seconds; (b) for how long it will continue to rise. 
+Conditions same as for Exercise 5.
+
+<P>
+Ans. (a) <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2063.png"
+ ALT="$ 322$"></SPAN> ft. per sec. Upwards; (b) <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2064.png"
+ ALT="$ 20$"></SPAN> seconds.
+
+<P>
+</LI>
+<LI>A train left a station and in <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> hours was at a distance (space) of
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+s = t^3 + 2t^2 + 3t
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="119" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2065.png"
+ ALT="$\displaystyle s = t^3 + 2t^2 + 3t
+$">
+</DIV><P></P>
+miles from the starting point. Find its acceleration 
+(a) at the end of <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> hours; (b) at the end of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN> hours.
+
+<P>
+Ans. 	(a) <!-- MATH
+ $a = 6t + 4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2066.png"
+ ALT="$ a = 6t + 4$"></SPAN>; (b) <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2005.png"
+ ALT="$ a = 16$"></SPAN> miles/(hour)<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2060.png"
+ ALT="$ ^2$"></SPAN>.
+</LI>
+<LI>In <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> hours a train had reached a point at the distance of 
+<!-- MATH
+ $\frac{1}{4} t^4 - 4t^3 + 16t^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2067.png"
+ ALT="$ \frac{1}{4} t^4 - 4t^3 + 16t^2$"></SPAN> miles from the starting point. 
+
+<P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>Find its velocity and acceleration. 
+
+<P>
+</DD>
+<DT>(b)</DT>
+<DD>When will the train stop to change the direction of its motion? 
+
+<P>
+</DD>
+<DT>(c)</DT>
+<DD>Describe the motion during the first 10 hours.
+</DD>
+</DL>
+
+<P>
+Ans. 	(a) <!-- MATH
+ $v = t^3 - 12t^2 + 32t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2068.png"
+ ALT="$ v = t^3 - 12t^2 + 32t$"></SPAN>, <!-- MATH
+ $a = 3t^2 - 24t + 32$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="131" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2069.png"
+ ALT="$ a = 3t^2 - 24t + 32$"></SPAN>;
+
+<P>
+(b) at end of fourth and eighth hours;
+
+<P>
+(c) forward first <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> hours, backward the next <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> hours, 
+forward again after <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img595.png"
+ ALT="$ 8$"></SPAN> hours.
+
+<P>
+</LI>
+<LI>The space in feet described in <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> seconds by a point is expressed by the formula
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+s = 48t - 16t^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="108" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2070.png"
+ ALT="$\displaystyle s = 48t - 16t^2.
+$">
+</DIV><P></P>
+Find the velocity and acceleration at the end of 
+<!-- MATH
+ $\frac{3}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1578.png"
+ ALT="$ \frac{3}{2}$"></SPAN> seconds.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2016.png"
+ ALT="$ v = 0$"></SPAN>,<!-- MATH
+ $a = - 32\ \fps2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2071.png"
+ ALT="$ a = - 32\ \fps2$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find the acceleration, having given
+
+<P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD><!-- MATH
+ $v = t^2 + 2t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2072.png"
+ ALT="$ v = t^2 + 2t$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1760.png"
+ ALT="$ t = 3$"></SPAN>. 	
+
+<P>
+Ans. 	<SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2073.png"
+ ALT="$ a = 8$"></SPAN>.
+
+<P>
+</DD>
+<DT>(b)</DT>
+<DD><!-- MATH
+ $v = 3t- t^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2074.png"
+ ALT="$ v = 3t- t^3$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1737.png"
+ ALT="$ t = 2$"></SPAN>. 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2075.png"
+ ALT="$ a = - 9$"></SPAN>.
+
+<P>
+</DD>
+<DT>(c)</DT>
+<DD><!-- MATH
+ $v = 4 \sin \frac{t}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2076.png"
+ ALT="$ v = 4 \sin \frac{t}{2}$"></SPAN>; <!-- MATH
+ $t = \frac{\pi}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1770.png"
+ ALT="$ t = \frac{\pi}{3}$"></SPAN>. 
+
+<P>
+Ans. <!-- MATH
+ $a = \sqrt{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2077.png"
+ ALT="$ a = \sqrt{3}$"></SPAN>.
+
+<P>
+</DD>
+<DT>(d)</DT>
+<DD><!-- MATH
+ $v = r \cos\, 3t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2078.png"
+ ALT="$ v = r \cos\, 3t$"></SPAN>; <!-- MATH
+ $t = \frac{\pi}{6}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1751.png"
+ ALT="$ t = \frac{\pi}{6}$"></SPAN>.
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2079.png"
+ ALT="$ a = - 3r$"></SPAN>.
+
+<P>
+</DD>
+<DT>(e)</DT>
+<DD><!-- MATH
+ $v = 5e^{2t}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2080.png"
+ ALT="$ v = 5e^{2t}$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1731.png"
+ ALT="$ t = 1$"></SPAN>. 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2081.png"
+ ALT="$ a = 10e^2$"></SPAN>.
+</DD>
+</DL>
+
+<P>
+</LI>
+<LI>At the end of <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> seconds a body has a velocity of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2082.png"
+ ALT="$ 3t^2 + 2t$"></SPAN> ft. per sec.; find its acceleration (a) in general; 
+(b) at the end of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> seconds.
+
+<P>
+Ans. (a) <!-- MATH
+ $a = 6t + 2\ \fps2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2083.png"
+ ALT="$ a = 6t + 2\ \fps2$"></SPAN>; (b) 
+<!-- MATH
+ $a = 26\ \fps2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2084.png"
+ ALT="$ a = 26\ \fps2$"></SPAN>
+</LI>
+<LI>The vertical component of velocity of a point at the end of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> seconds is
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v_y = 3t^2 - 2t + 6
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="122" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2085.png"
+ ALT="$\displaystyle v_y = 3t^2 - 2t + 6
+$">
+</DIV><P></P>
+in ft. per sec.
+Find the vertical component of acceleration (a) at any instant; 
+(b) at the end of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN> seconds.
+
+<P>
+Ans. (a) <!-- MATH
+ $a_y = 6t - 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2086.png"
+ ALT="$ a_y = 6t - 2$"></SPAN>; (b) <SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2087.png"
+ ALT="$ 10\ \fps2$"></SPAN> .
+
+<P>
+</LI>
+<LI>If a point moves in a fixed path so that
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+s = \sqrt{t},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="57" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2088.png"
+ ALT="$\displaystyle s = \sqrt{t},
+$">
+</DIV><P></P>
+show that the acceleration is negative and proportional to the 
+cube of the velocity.
+
+<P>
+</LI>
+<LI>If the distance travelled at time <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> is given by
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+s = c_1e^t + c_2e^{-t},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="121" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2089.png"
+ ALT="$\displaystyle s = c_1e^t + c_2e^{-t},
+$">
+</DIV><P></P>
+for some constants <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2090.png"
+ ALT="$ c_1$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2091.png"
+ ALT="$ c_2$"></SPAN>,
+show that the acceleration is always equal in magnitude to the space 
+passed over.
+
+<P>
+</LI>
+<LI>If a point referred to rectangular coordinates moves so that
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x = a_1+a_2\cos\,t , \ \ \ y = b_1+b_2\sin\, t ,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="258" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2092.png"
+ ALT="$\displaystyle x = a_1+a_2\cos\,t , \ \ \ y = b_1+b_2\sin\, t ,
+$">
+</DIV><P></P>
+for some constants <SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2093.png"
+ ALT="$ a_i$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2094.png"
+ ALT="$ b_i$"></SPAN>,show that its velocity has a 
+constant magnitude.
+
+<P>
+</LI>
+<LI>If the path of a moving point is the sine curve
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{cases}
+x = at, \\
+y = b \sin\, at 
+\end{cases}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="89" HEIGHT="64" BORDER="0"
+ SRC="img2095.png"
+ ALT="\begin{displaymath}
+\begin{cases}
+x = at, \\
+y = b \sin\, at
+\end{cases}\end{displaymath}">
+</DIV><P></P>
+show (a) that the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-component of the velocity is constant; (b) that 
+the acceleration of the point at any instant is proportional 
+to its distance from the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis.
+
+<P>
+</LI>
+<LI>Given the following equations of curvilinear motion, 
+find at the given instant 
+
+<P>
+
+<UL>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1963.png"
+ ALT="$ v_x$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2096.png"
+ ALT="$ v_y$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN>;
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2097.png"
+ ALT="$ a_x$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2098.png"
+ ALT="$ a_y$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>; 
+</LI>
+<LI>position of point (coordinates); 
+</LI>
+<LI>direction of motion. 
+</LI>
+<LI>the equation of the path in rectangular coordinates.
+</LI>
+</UL>
+
+<P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD><SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1729.png"
+ ALT="$ x = t^2$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1764.png"
+ ALT="$ y = t$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1737.png"
+ ALT="$ t = 2$"></SPAN>.
+
+<P>
+</DD>
+<DT>(g)</DT>
+<DD><!-- MATH
+ $x = 2\sin\, t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2099.png"
+ ALT="$ x = 2\sin\, t$"></SPAN>, <!-- MATH
+ $y = 3\cos\, t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2100.png"
+ ALT="$ y = 3\cos\, t$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2101.png"
+ ALT="$ t = \pi$"></SPAN>.
+
+<P>
+</DD>
+<DT>(b)</DT>
+<DD><SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1735.png"
+ ALT="$ x = t$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1736.png"
+ ALT="$ y = t^3$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1731.png"
+ ALT="$ t = 1$"></SPAN>.
+
+<P>
+</DD>
+<DT>(h)</DT>
+<DD><!-- MATH
+ $x = \sin\, t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1749.png"
+ ALT="$ x = \sin\, t$"></SPAN>, <!-- MATH
+ $y = \cos\, 2t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1750.png"
+ ALT="$ y = \cos\, 2t$"></SPAN>; <!-- MATH
+ $t = \frac{\pi}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1774.png"
+ ALT="$ t = \frac{\pi}{4}$"></SPAN>.
+
+<P>
+</DD>
+<DT>(c)</DT>
+<DD><SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1729.png"
+ ALT="$ x = t^2$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1736.png"
+ ALT="$ y = t^3$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1760.png"
+ ALT="$ t = 3$"></SPAN>.
+
+<P>
+</DD>
+<DT>(i)</DT>
+<DD><SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2102.png"
+ ALT="$ x = 2t$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2103.png"
+ ALT="$ y = 3e^t$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1745.png"
+ ALT="$ t = 0$"></SPAN>.
+
+<P>
+</DD>
+<DT>(d)</DT>
+<DD><SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2102.png"
+ ALT="$ x = 2t$"></SPAN>, <!-- MATH
+ $y = t^2 + 3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2104.png"
+ ALT="$ y = t^2 + 3$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1745.png"
+ ALT="$ t = 0$"></SPAN>.
+
+<P>
+</DD>
+<DT>(e)</DT>
+<DD><!-- MATH
+ $x = 1 - t^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2105.png"
+ ALT="$ x = 1 - t^2$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2106.png"
+ ALT="$ y = 2t$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1737.png"
+ ALT="$ t = 2$"></SPAN>.
+
+<P>
+</DD>
+<DT>(j)</DT>
+<DD><SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1761.png"
+ ALT="$ x = 3t$"></SPAN>, <!-- MATH
+ $y = \log\, t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2107.png"
+ ALT="$ y = \log\, t$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1731.png"
+ ALT="$ t = 1$"></SPAN>.
+
+<P>
+</DD>
+<DT>(f)</DT>
+<DD><!-- MATH
+ $x = r \sin\, t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2108.png"
+ ALT="$ x = r \sin\, t$"></SPAN>, <!-- MATH
+ $y = r \cos\, t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2109.png"
+ ALT="$ y = r \cos\, t$"></SPAN>; 
+<!-- MATH
+ $t = \frac{3\pi}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2110.png"
+ ALT="$ t = \frac{3\pi}{4}$"></SPAN>.
+
+<P>
+</DD>
+<DT>(k)</DT>
+<DD><SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1735.png"
+ ALT="$ x = t$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2111.png"
+ ALT="$ y = 12/t$"></SPAN>; <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1760.png"
+ ALT="$ t = 3$"></SPAN>.
+
+<P>
+</DD>
+</DL>
+
+<P>
+</LI>
+</OL>
+
+<P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1970"
+  HREF="node98.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1964"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1958"
+  HREF="node96.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1966"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1968"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1971"
+  HREF="node98.html">Application: Newton's method</A>
+<B> Up:</B> <A NAME="tex2html1965"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1959"
+  HREF="node96.html">Component accelerations. Curvilinear motion.</A>
+ &nbsp; <B>  <A NAME="tex2html1967"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1969"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

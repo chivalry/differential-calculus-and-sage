@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Successive differentiation of implicit functions</TITLE>
+<META NAME="description" CONTENT="Successive differentiation of implicit functions">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node108.html">
+<LINK REL="previous" HREF="node106.html">
+<LINK REL="up" HREF="node102.html">
+<LINK REL="next" HREF="node108.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2115"
+  HREF="node108.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2109"
+  HREF="node102.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2103"
+  HREF="node106.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2111"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2113"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2116"
+  HREF="node108.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html2110"
+  HREF="node102.html">Successive differentiation</A>
+<B> Previous:</B> <A NAME="tex2html2104"
+  HREF="node106.html">Leibnitz's Formula for the</A>
+ &nbsp; <B>  <A NAME="tex2html2112"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2114"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00950000000000000000">
+Successive differentiation of implicit functions</A>
+</H1>
+
+<P>
+To illustrate the process we shall find 
+<!-- MATH
+ $\frac{d^2 y}{dx^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2193.png"
+ ALT="$ \frac{d^2 y}{dx^2}$"></SPAN> from the equation of the hyperbola
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+b^2x^2 - a^2y^2 = a^2b^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="140" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2194.png"
+ ALT="$\displaystyle b^2x^2 - a^2y^2 = a^2b^2.
+$">
+</DIV><P></P>
+Differentiating with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, as in &#167;<A HREF="node78.html#sec:63">5.35</A>, 
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+2b^2 x - 2a^2 y \frac{dy}{dx} = 0,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="142" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2195.png"
+ ALT="$\displaystyle 2b^2 x - 2a^2 y \frac{dy}{dx} = 0,
+$">
+</DIV><P></P>
+or,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A-78"></A><!-- MATH
+ \begin{equation}
+\frac{dy}{dx} = \frac{b^2 x}{a^2 y}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2196.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{b^2 x}{a^2 y}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Differentiating again, remembering that <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> is a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2 y}{dx^2}
+= \frac{a^2 y b^2 - b^2 x a^2 \frac{dy}{dx}}{a^4 y^2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="176" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2197.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2}
+= \frac{a^2 y b^2 - b^2 x a^2 \frac{dy}{dx}}{a^4 y^2}.
+$">
+</DIV><P></P>
+Substituting for <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN> its value from (<A HREF="#eqn:A-78">7.2</A>),
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2 y}{dx^2}
+= \frac{a^2 b^2 y - a^2 b^2 x \left ( \frac{b^2 y}{a^2 y} \right ) }{a^4 y^2} 
+= -\frac{b^2 (b^2 x^2 - a^2 y^2)}{a^4 y^3}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="348" HEIGHT="78" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2198.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2}
+= \frac{a^2 b^2 y - a^2 b^2 x \left ( \frac{b^2 y}{a^2 y} \right ) }{a^4 y^2}
+= -\frac{b^2 (b^2 x^2 - a^2 y^2)}{a^4 y^3}.
+$">
+</DIV><P></P>
+The given equation, <!-- MATH
+ $b^2x^2 - a^2y^2 = a^2b^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2199.png"
+ ALT="$ b^2x^2 - a^2y^2 = a^2b^2$"></SPAN>,
+therefore gives, 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2 y}{dx^2} = - \frac{b^4}{a^2 y^3}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="106" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2200.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2} = - \frac{b^4}{a^2 y^3}.
+$">
+</DIV><P></P>
+
+<P>
+<I CLASS="sans">SAGE</I> can be made to do a lot of this work for you (though
+the notation doesn't get any prettier):
+
+<P>
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: x = var("x")
+sage: y = function("y",x)
+sage: a = var("a")
+sage: b = var("b")
+sage: F = x^2/a^2 - y^2/b^2 - 1
+sage: F.diff(x)
+2*x/a^2 - 2*y(x)*diff(y(x), x, 1)/b^2
+sage: F.diff(x,2)
+-2*y(x)*diff(y(x), x, 2)/b^2 - 2*diff(y(x), x, 1)^2/b^2 + 2/a^2
+sage: solve(F.diff(x) == 0, diff(y(x), x, 1))
+[diff(y(x), x, 1) == b^2*x/(a^2*y(x))]
+sage: solve(F.diff(x,2) == 0, diff(y(x), x, 2))
+[diff(y(x), x, 2) == (b^2 - a^2*diff(y(x), x, 1)^2)/(a^2*y(x))]
+</PRE>
+<P>
+This basically says
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y'=\frac{d y}{dx} =  \frac{b^2x}{a^2 y},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="113" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2201.png"
+ ALT="$\displaystyle y'=\frac{d y}{dx} = \frac{b^2x}{a^2 y},
+$">
+</DIV><P></P>
+and
+<P><!-- MATH
+ \begin{displaymath}
+y''=\frac{d^2 y}{dx^2} = - \frac{b^2-a^2(y')^2}{a^2 y}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="194" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2202.png"
+ ALT="$\displaystyle y''=\frac{d^2 y}{dx^2} = - \frac{b^2-a^2(y')^2}{a^2 y}.
+$">
+</DIV><P></P>
+Now simply plug the first equation into the second,
+obtaining <!-- MATH
+ $y''=-b^2\frac{1-a^{-2}b^2x^2/y^2}{a^2y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="155" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2203.png"
+ ALT="$ y''=-b^2\frac{1-a^{-2}b^2x^2/y^2}{a^2y}$"></SPAN>.
+Next, use the given equation in the form
+<!-- MATH
+ $a^{-2}b^2x^2/y^2-1=b^2/y^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="170" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2204.png"
+ ALT="$ a^{-2}b^2x^2/y^2-1=b^2/y^2$"></SPAN> to get the result above.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2115"
+  HREF="node108.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2109"
+  HREF="node102.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2103"
+  HREF="node106.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2111"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2113"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2116"
+  HREF="node108.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html2110"
+  HREF="node102.html">Successive differentiation</A>
+<B> Previous:</B> <A NAME="tex2html2104"
+  HREF="node106.html">Leibnitz's Formula for the</A>
+ &nbsp; <B>  <A NAME="tex2html2112"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2114"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Derivative of a function of one variable</TITLE>
+<META NAME="description" CONTENT="Derivative of a function of one variable">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node37.html">
+<LINK REL="previous" HREF="node35.html">
+<LINK REL="up" HREF="node32.html">
+<LINK REL="next" HREF="node37.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1063"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1057"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1051"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1059"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1061"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1064"
+  HREF="node37.html">Symbols for derivatives</A>
+<B> Up:</B> <A NAME="tex2html1058"
+  HREF="node32.html">Differentiation</A>
+<B> Previous:</B> <A NAME="tex2html1052"
+  HREF="node35.html">Comparison of increments</A>
+ &nbsp; <B>  <A NAME="tex2html1060"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1062"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00640000000000000000">
+Derivative of a function of one variable</A>
+</H1>
+
+<P>
+The fundamental definition of the Differential Calculus is:
+
+<P>
+<P>
+<DIV><B>Definition  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; The <I>derivative</I><A NAME="tex2html32"
+  HREF="footnode.html#foot3792"><SUP><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">4</SPAN></SUP></A> 
+of a function is the limit of the ratio 
+of the increment of the function to the increment of the independent 
+variable, when the latter increment varies and approaches the limit zero.</DIV><P></P>
+
+<A NAME="3794"></A>
+
+<P>
+When the limit of this ratio exists, the function is said to be 
+<I>differentiable</I>, or to <I>possess a derivative</I>.
+<A NAME="3797"></A>
+
+<P>
+The above definition may be given in a more compact form 
+symbolically as follows: Given the function
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A-28"></A><!-- MATH
+ \begin{equation}
+y = f(x),
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img596.png"
+ ALT="$\displaystyle y = f(x),$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+and consider <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> to have a fixed value.
+
+<P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> take on an increment <!-- MATH
+ $\Delta\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img585.png"
+ ALT="$ \Delta\, x$"></SPAN>; then the function <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> takes on an 
+increment <!-- MATH
+ $\Delta\, y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img586.png"
+ ALT="$ \Delta\, y$"></SPAN>, the new value of the function being
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:B-28"></A><!-- MATH
+ \begin{equation}
+y + \Delta\, y = f(x + \Delta\, x).
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="158" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img597.png"
+ ALT="$\displaystyle y + \Delta\, y = f(x + \Delta\, x).$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+To find the increment of the function, subtract (<A HREF="#eqn:A-28">4.2</A>) from (<A HREF="#eqn:B-28">4.3</A>), giving
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\Delta\, y = f(x + \Delta\, x) - f(x).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="180" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img598.png"
+ ALT="$\displaystyle \Delta\, y = f(x + \Delta\, x) - f(x).
+$">
+</DIV><P></P>
+Dividing by the increment of the variable, <!-- MATH
+ $\Delta\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img585.png"
+ ALT="$ \Delta\, x$"></SPAN>, we get
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:D-28"></A><!-- MATH
+ \begin{equation}
+\frac{\Delta y}{\Delta x} = \frac{f(x + \Delta x) - f(x)}{\Delta x}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="183" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img599.png"
+ ALT="$\displaystyle \frac{\Delta y}{\Delta x} = \frac{f(x + \Delta x) - f(x)}{\Delta x}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">4</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The limit of this ratio when <!-- MATH
+ $\Delta\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img585.png"
+ ALT="$ \Delta\, x$"></SPAN> approaches the limit 
+zero is, from our definition, the derivative and is denoted 
+by the symbol <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN>.
+<A NAME="4123"></A>
+Therefore
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="218" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img601.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}.
+$">
+</DIV><P></P>
+defines the <I>derivative of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> [or <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN>] with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN></I>.
+From (<A HREF="#eqn:B-28">4.3</A>), we also get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="112" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img602.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x}
+$">
+</DIV><P></P>
+The process of finding the derivative of a function is called <I>differentiation</I>.
+<A NAME="3830"></A>
+
+<P>
+It should be carefully noted that the derivative is the limit of the 
+ratio, not the ratio of the limits. The latter ratio would assume the 
+form <!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN>, which is indeterminate (&#167;<A HREF="node20.html#sec:14">3.2</A>).
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1063"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1057"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1051"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1059"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1061"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1064"
+  HREF="node37.html">Symbols for derivatives</A>
+<B> Up:</B> <A NAME="tex2html1058"
+  HREF="node32.html">Differentiation</A>
+<B> Previous:</B> <A NAME="tex2html1052"
+  HREF="node35.html">Comparison of increments</A>
+ &nbsp; <B>  <A NAME="tex2html1060"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1062"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

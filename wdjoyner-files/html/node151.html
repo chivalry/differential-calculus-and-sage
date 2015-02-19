@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The Extended Mean Value Theorem</TITLE>
+<META NAME="description" CONTENT="The Extended Mean Value Theorem">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node152.html">
+<LINK REL="previous" HREF="node150.html">
+<LINK REL="up" HREF="node148.html">
+<LINK REL="next" HREF="node152.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2773"
+  HREF="node152.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2767"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2761"
+  HREF="node150.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2769"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2771"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2774"
+  HREF="node152.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html2768"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2762"
+  HREF="node150.html">The Mean-value Theorem</A>
+ &nbsp; <B>  <A NAME="tex2html2770"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2772"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001530000000000000000"></A>
+<A NAME="27565"></A>
+<A NAME="sec:107"></A>
+<BR>
+The Extended Mean Value Theorem
+</H1>
+
+<P>
+Following the method of the last section, 
+let <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1975.png"
+ ALT="$ R$"></SPAN> be defined by the equation
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A-107"></A><!-- MATH
+ \begin{equation}
+f(b) - f(a) - (b - a)f'(a) - \frac{1}{2} (x - a)^2R = 0.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="318" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3295.png"
+ ALT="$\displaystyle f(b) - f(a) - (b - a)f'(a) - \frac{1}{2} (x - a)^2R = 0.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">7</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$ F(x)$"></SPAN> be a function formed by replacing <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN> by <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> in the 
+left-hand member of (<A HREF="node150.html#eqn:A-106">13.1</A>); that is,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:B-107"></A><!-- MATH
+ \begin{equation}
+F(x) = f(x) - f(a) - (x - a) f'(a) - \frac{1}{2} (x - a)^2 R.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="348" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3296.png"
+ ALT="$\displaystyle F(x) = f(x) - f(a) - (x - a) f'(a) - \frac{1}{2} (x - a)^2 R.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">8</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+From (<A HREF="#eqn:A-107">13.7</A>), <SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3271.png"
+ ALT="$ F(b) = 0$"></SPAN>; and from (<A HREF="#eqn:B-107">13.8</A>), 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3272.png"
+ ALT="$ F(a) = 0$"></SPAN>; therefore, by Rolle's Theorem, at least one value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> 
+between <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN>, say <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3274.png"
+ ALT="$ x_1$"></SPAN> will cause 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3273.png"
+ ALT="$ F'(x)$"></SPAN> to vanish. Hence, since
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F'(x) = f'(x) - f'(a) - (x - a)R,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="239" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3297.png"
+ ALT="$\displaystyle F'(x) = f'(x) - f'(a) - (x - a)R,
+$">
+</DIV><P></P>
+we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F'(x_1) = f'(x_1) - f'(a) - (x_1 - a)R = 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="290" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3298.png"
+ ALT="$\displaystyle F'(x_1) = f'(x_1) - f'(a) - (x_1 - a)R = 0.
+$">
+</DIV><P></P>
+Since <!-- MATH
+ $F'(x_1) = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3276.png"
+ ALT="$ F'(x_1) = 0$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3299.png"
+ ALT="$ F'(a) = 0$"></SPAN>, it is evident that <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3273.png"
+ ALT="$ F'(x)$"></SPAN> 
+also satisfies the conditions of Rolle's Theorem, so that 
+its derivative, namely <SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3300.png"
+ ALT="$ F''(x)$"></SPAN>, must vanish for at least one 
+value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> between <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3274.png"
+ ALT="$ x_1$"></SPAN>, say <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3301.png"
+ ALT="$ x_2$"></SPAN>, and therefore 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3301.png"
+ ALT="$ x_2$"></SPAN> also lies between <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN>. But
+<!-- MATH
+ $F''(x) = f''(x) - R$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="139" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3302.png"
+ ALT="$ F''(x) = f''(x) - R$"></SPAN>; 
+therefore <!-- MATH
+ $F''(x_2) = f''(x_2) - R = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="182" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3303.png"
+ ALT="$ F''(x_2) = f''(x_2) - R = 0$"></SPAN>,
+and <!-- MATH
+ $R = f''(x_2)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="84" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3304.png"
+ ALT="$ R = f''(x_2)$"></SPAN>.
+Substituting this result in (<A HREF="#eqn:A-107">13.7</A>), we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f(b) = f(a) + (b - a)f'(a) + \frac{1}{2!} (b - a)^2 f''(x_2),
+\ \ \ \ a < x_2 < b.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="429" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3305.png"
+ ALT="$\displaystyle f(b) = f(a) + (b - a)f'(a) + \frac{1}{2!} (b - a)^2 f''(x_2),
+\ \ \ \ a &lt; x_2 &lt; b.
+$">
+</DIV><P></P>
+In the same manner, if we define <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2971.png"
+ ALT="$ S$"></SPAN> by means of the equation
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f(b) -f(a) - (b - a) f'(a)
+- \frac{1}{2!} (b - a)^2 f''(a) 
+- \frac{1}{3!}(b - a)^2 f''(a) S = 0,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="485" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3306.png"
+ ALT="$\displaystyle f(b) -f(a) - (b - a) f'(a)
+- \frac{1}{2!} (b - a)^2 f''(a)
+- \frac{1}{3!}(b - a)^2 f''(a) S = 0,
+$">
+</DIV><P></P>
+we can derive the equation
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:107-D"></A><!-- MATH
+ \begin{equation}
+\begin{array}{ll}
+f(b) = f(a) & + (b - a)f'(a) + \frac{1}{2!} (b - a)^2 f''(a) \\
+& + \frac{1}{3!} (b - a)^3 f'''(x_3), a < x_3 < b ,
+\end{array}
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="314" HEIGHT="54" BORDER="0"
+ SRC="img3307.png"
+ ALT="\begin{displaymath}\begin{array}{ll} f(b) = f(a) &amp; + (b - a)f'(a) + \frac{1}{2!}...
+...&amp; + \frac{1}{3!} (b - a)^3 f'''(x_3), a &lt; x_3 &lt; b , \end{array}\end{displaymath}"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">9</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2130.png"
+ ALT="$ x_3$"></SPAN> lies between <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN>.
+By continuing this process we get the general result,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+f(b) = f(a) & 
++ \frac{(b - a)}{1!}f'(a) + \frac{(b - a)^2}{2!}f''(a) \\
+& + \frac{(b - a)^3}{3!}f'''(a) + \cdots 
++ \frac{(b - a)^{(n - 1)}}{(n - 1)!}f^{(n - 1)} (a) \\
+& + \frac{(b - a)^n}{n!}f^{(n)} (x_1), \ \ \ \ a < x_1 < b, 
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="380" HEIGHT="88" BORDER="0"
+ SRC="img3308.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+f(b) = f(a) &amp;
++ \frac{(b - a)}{1!}f'(a) ...
+...{(b - a)^n}{n!}f^{(n)} (x_1), \ \ \ \ a &lt; x_1 &lt; b,
+\end{array}\end{displaymath}">
+</DIV><P></P>
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3274.png"
+ ALT="$ x_1$"></SPAN> lies between <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN>. 
+This equation is called the Extended Theorem of Mean Value<A NAME="tex2html140"
+  HREF="footnode.html#foot27612"><SUP><SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>, or Taylor's formula.
+<A NAME="27613"></A>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2773"
+  HREF="node152.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2767"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2761"
+  HREF="node150.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2769"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2771"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2774"
+  HREF="node152.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html2768"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2762"
+  HREF="node150.html">The Mean-value Theorem</A>
+ &nbsp; <B>  <A NAME="tex2html2770"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2772"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

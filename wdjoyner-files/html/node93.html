@@ -1,0 +1,431 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Applications of the derivative in mechanics</TITLE>
+<META NAME="description" CONTENT="Applications of the derivative in mechanics">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node94.html">
+<LINK REL="previous" HREF="node92.html">
+<LINK REL="up" HREF="node81.html">
+<LINK REL="next" HREF="node94.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1914"
+  HREF="node94.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1908"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1902"
+  HREF="node92.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1910"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1912"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1915"
+  HREF="node94.html">Component velocities. Curvilinear motion.</A>
+<B> Up:</B> <A NAME="tex2html1909"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1903"
+  HREF="node92.html">Examples</A>
+ &nbsp; <B>  <A NAME="tex2html1911"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1913"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION008120000000000000000">
+Applications of the derivative in mechanics</A>
+</H1>
+
+<P>
+Included also are applications to velocity and rectilinear motion. 
+
+<P>
+Consider the motion of a point P on the straight line AB.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:linear-motion"></A><A NAME="13494"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.12:</STRONG>
+Scan of Granville's graphic of the rectilinear motion.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="362" HEIGHT="89" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1940.png"
+ ALT="\includegraphics[height=2cm,width=8cm]{linear-motion2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="$ s$"></SPAN> be the distance measured from some fixed point as A to any 
+position of P, and let <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> be the corresponding elapsed time. 
+To each value of <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> corresponds a position of P and 
+therefore a distance (or space) <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="$ s$"></SPAN>. Hence <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="$ s$"></SPAN> will be a 
+function of <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN>, and we may write
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+s = f(t)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="61" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1941.png"
+ ALT="$\displaystyle s = f(t)
+$">
+</DIV><P></P>
+Now let <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> take on an increment <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1942.png"
+ ALT="$ \Delta t$"></SPAN>; then <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="$ s$"></SPAN> takes on an 
+increment<A NAME="tex2html86"
+  HREF="footnode.html#foot13497"><SUP><SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">9</SPAN></SUP></A> <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1943.png"
+ ALT="$ \Delta s$"></SPAN>, and
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A-70"></A><!-- MATH
+ \begin{equation}
+\frac{\Delta s}{\Delta t} = {\rm the\ average\ velocity}
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="188" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1944.png"
+ ALT="$\displaystyle \frac{\Delta s}{\Delta t} = {\rm the\ average\ velocity}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">20</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+of P during the time interval <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1942.png"
+ ALT="$ \Delta t$"></SPAN>. If P moves with uniform 
+motion, the above ratio will have the same value for every 
+interval of time and is the velocity at any instant.
+
+<P>
+For the general case of any kind of motion, uniform 
+or not, we define the <I>velocity</I> (or, time rate of change of s) 
+at any instant as the limit of the ratio <!-- MATH
+ $\frac{\Delta s}{\Delta t}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1945.png"
+ ALT="$ \frac{\Delta s}{\Delta t}$"></SPAN> as 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1942.png"
+ ALT="$ \Delta t$"></SPAN> approaches the limit zero; that is, 
+<A NAME="13507"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v = \lim_{\Delta t \to 0} \frac{\Delta s}{\Delta t},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="100" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1946.png"
+ ALT="$\displaystyle v = \lim_{\Delta t \to 0} \frac{\Delta s}{\Delta t},
+$">
+</DIV><P></P>
+or
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:9-70"></A><!-- MATH
+ \begin{equation}
+v = \frac{ds}{dt}
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1947.png"
+ ALT="$\displaystyle v = \frac{ds}{dt}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">21</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>	
+<I>The velocity is the derivative of the distance (= space) with respect to the time.</I>
+
+<P>
+To show that this agrees with the conception we already have 
+of velocity, let us find the velocity of a falling body at the end of two seconds.
+
+<P>
+By experiment it has been found that a body falling freely from 
+rest in a vacuum near the earth's surface follows approximately the law
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:B-70"></A><!-- MATH
+ \begin{equation}
+s = 16.1t^2
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1948.png"
+ ALT="$\displaystyle s = 16.1t^2$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">22</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="$ s$"></SPAN> = space fallen in feet, <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> = time in seconds. 
+Apply the General Rule, &#167;<A HREF="node39.html#sec:31">4.7</A>, to (<A HREF="#eqn:B-70">6.22</A>).
+
+<P>
+FIRST STEP. 	
+<!-- MATH
+ $s + \Delta s = 16.1(t + \Delta t)^2
+= 16.1 t^2 + 32.2 t \cdot \Delta t + 16.1(\Delta t)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="398" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1949.png"
+ ALT="$ s + \Delta s = 16.1(t + \Delta t)^2
+= 16.1 t^2 + 32.2 t \cdot \Delta t + 16.1(\Delta t)^2$"></SPAN>.
+
+<P>
+SECOND STEP. 	
+<!-- MATH
+ $\Delta s 	= 32.2t \cdot \Delta t + 16.1(\Delta t)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="197" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1950.png"
+ ALT="$ \Delta s = 32.2t \cdot \Delta t + 16.1(\Delta t)^2$"></SPAN>.
+
+<P>
+THIRD STEP. 
+<!-- MATH
+ $\frac{\Delta s}{\Delta t}
+= 32.2t + 16.1\Delta t =$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="164" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1951.png"
+ ALT="$ \frac{\Delta s}{\Delta t}
+= 32.2t + 16.1\Delta t = $"></SPAN> average velocity throughout the time interval <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1942.png"
+ ALT="$ \Delta t$"></SPAN>.
+
+<P>
+Placing <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1737.png"
+ ALT="$ t = 2$"></SPAN>,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:C-70"></A><!-- MATH
+ \begin{equation}
+\frac{\Delta s}{\Delta t} 	= 64.4 + 16.1\Delta t
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="145" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1952.png"
+ ALT="$\displaystyle \frac{\Delta s}{\Delta t} = 64.4 + 16.1\Delta t$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">23</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+which equals the average velocity throughout the time 
+interval <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1942.png"
+ ALT="$ \Delta t$"></SPAN> after two seconds of falling.
+Our notion of velocity tells us at once that (<A HREF="#eqn:C-70">6.23</A>) does not give us 
+the actual velocity at the end of two seconds; for even if we take 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1942.png"
+ ALT="$ \Delta t$"></SPAN> very small, say <!-- MATH
+ $\frac{1}{100}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1953.png"
+ ALT="$ \frac{1}{100}$"></SPAN> or <!-- MATH
+ $\frac{1}{1000}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1954.png"
+ ALT="$ \frac{1}{1000}$"></SPAN> of a second, 
+(<A HREF="#eqn:C-70">6.23</A>) still gives only the average velocity during the corresponding 
+small interval of time. But what we do mean by the velocity at the 
+end of two seconds is the limit of the average velocity when <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1942.png"
+ ALT="$ \Delta t$"></SPAN> 
+diminishes towards zero; that is, the velocity at the end of two 
+seconds is from (<A HREF="#eqn:C-70">6.23</A>), <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1955.png"
+ ALT="$ 64.4$"></SPAN> ft. per second.
+
+<P>
+Thus even the everyday notion of velocity which we get from 
+experience involves the idea of a limit, or in our notation
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v = \lim_{\Delta t \to 0} \left ( \frac{\Delta s}{\Delta t} \right ) = 64.4 \ ft./sec.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="228" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1956.png"
+ ALT="$\displaystyle v = \lim_{\Delta t \to 0} \left ( \frac{\Delta s}{\Delta t} \right ) = 64.4 \ ft./sec.
+$">
+</DIV><P></P>
+
+<P>
+The above example illustrates well the notion of a limiting value. 
+The student should be impressed with the idea that a limiting value is a 
+definite, fixed value, not something that is only approximated. 
+Observe that it does not make any difference how small 
+<!-- MATH
+ $16.1 \Delta t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1957.png"
+ ALT="$ 16.1 \Delta t$"></SPAN> may be taken; it is only the limiting value of
+<!-- MATH
+ $64.4 + 16.1\Delta t$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="100" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1958.png"
+ ALT="$ 64.4 + 16.1\Delta t$"></SPAN>,
+when <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1942.png"
+ ALT="$ \Delta t$"></SPAN> diminishes towards zero, that is of importance, 
+and that value is exactly <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1955.png"
+ ALT="$ 64.4$"></SPAN>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1914"
+  HREF="node94.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1908"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1902"
+  HREF="node92.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1910"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1912"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1915"
+  HREF="node94.html">Component velocities. Curvilinear motion.</A>
+<B> Up:</B> <A NAME="tex2html1909"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1903"
+  HREF="node92.html">Examples</A>
+ &nbsp; <B>  <A NAME="tex2html1911"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1913"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

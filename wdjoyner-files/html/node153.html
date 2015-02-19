@@ -1,0 +1,718 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Maxima and minima treated analytically</TITLE>
+<META NAME="description" CONTENT="Maxima and minima treated analytically">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node154.html">
+<LINK REL="previous" HREF="node152.html">
+<LINK REL="up" HREF="node148.html">
+<LINK REL="next" HREF="node154.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2801"
+  HREF="node154.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2795"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2789"
+  HREF="node152.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2797"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2799"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2802"
+  HREF="node154.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html2796"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2790"
+  HREF="node152.html">Exercises</A>
+ &nbsp; <B>  <A NAME="tex2html2798"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2800"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001550000000000000000"></A>
+<A NAME="sec:108"></A>
+<BR>
+Maxima and minima treated analytically
+</H1>
+
+<P>
+By making use of the results of the last two sections we 
+can now give a general discussion of maxima and minima of 
+functions of a single independent variable.
+
+<P>
+Given the function <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN>. Let <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2435.png"
+ ALT="$ h$"></SPAN> be a positive number as small 
+as we please; then the definitions given in &#167;<A HREF="node113.html#sec:82">8.4</A>, 
+may be stated as follows:
+If, for all values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> different from <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> in the interval <!-- MATH
+ $[a - h, a + h]$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3315.png"
+ ALT="$ [a - h, a + h]$"></SPAN>,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:108A"></A><!-- MATH
+ \begin{equation}
+f(x)-f(a) =\ {\rm a\ negative\ number},
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="245" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3316.png"
+ ALT="$\displaystyle f(x)-f(a) =\ {\rm a\ negative\ number},$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">10</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+then <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> is said to be a <I>maximum</I> when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>.
+<A NAME="27626"></A>
+If, on the other hand,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:108B"></A><!-- MATH
+ \begin{equation}
+f(x)-f(a) =\ {\rm a\ positive\ number},
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="241" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3317.png"
+ ALT="$\displaystyle f(x)-f(a) =\ {\rm a\ positive\ number},$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">11</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+then <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> is said to be a <I>minimum</I> when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>.
+<A NAME="27632"></A>
+Consider the following cases:
+
+<P>
+<DL COMPACT>
+<DT>I</DT>
+<DD>Let <!-- MATH
+ $f'(a) \ne 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3318.png"
+ ALT="$ f'(a) \ne 0$"></SPAN>.
+From (<A HREF="node150.html#eqn:106-45">13.5</A>), [&#167;<A HREF="node150.html#sec:106">13.2</A>], 
+replacing b by x and transposing f(a),
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:108C"></A><!-- MATH
+ \begin{equation}
+f(x)-f(a) = (x-a)f'(x_1),\ \ \ \ a < x_1 < x,
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="307" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3319.png"
+ ALT="$\displaystyle f(x)-f(a) = (x-a)f'(x_1),\ \ \ \ a &lt; x_1 &lt; x,$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">12</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Since <!-- MATH
+ $f'(a) \ne 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3318.png"
+ ALT="$ f'(a) \ne 0$"></SPAN>, and <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$ f'(x)$"></SPAN> is assumed as continuous, <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2435.png"
+ ALT="$ h$"></SPAN> 
+may be chosen so small that <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$ f'(x)$"></SPAN> will have the same sign 
+as <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3320.png"
+ ALT="$ f'(a)$"></SPAN> for all values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> in the interval <!-- MATH
+ $[a - h, a + h]$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3315.png"
+ ALT="$ [a - h, a + h]$"></SPAN>. 
+Therefore <SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3321.png"
+ ALT="$ f'(x_1)$"></SPAN> has the same sign as <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3320.png"
+ ALT="$ f'(a)$"></SPAN> (Chap. <A HREF="node18.html#ch:3">3</A>). 
+But <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3322.png"
+ ALT="$ x-a$"></SPAN> changes sign according as <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> is less or greater than <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>. 
+Therefore, from (<A HREF="#eqn:108C">13.12</A>), the difference
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3323.png"
+ ALT="$ f(x)-f(a)$"></SPAN>
+will also change sign, and, by (<A HREF="#eqn:108A">13.10</A>) and (<A HREF="#eqn:108B">13.11</A>), 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3324.png"
+ ALT="$ f(a)$"></SPAN> will be neither a maximum nor a minimum. This result 
+agrees with the discussion in &#167;<A HREF="node113.html#sec:82">8.4</A>, where it was 
+shown that for all values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> for which <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> is a maximum 
+or a minimum, the first derivative <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$ f'(x)$"></SPAN> must vanish.
+
+<P>
+</DD>
+<DT>II</DT>
+<DD>Let <SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3325.png"
+ ALT="$ f'(a) = 0$"></SPAN>, and <!-- MATH
+ $f''(a) \ne 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3326.png"
+ ALT="$ f''(a) \ne 0$"></SPAN>.
+From (<A HREF="#eqn:108C">13.12</A>), replacing <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN> by <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and transposing <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3324.png"
+ ALT="$ f(a)$"></SPAN>,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:108D"></A><!-- MATH
+ \begin{equation}
+f(x)-f(a) = \frac{(x - a)^2}{2!} f''(x_2),\ \ \ \ a < x_2 < x.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="322" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3327.png"
+ ALT="$\displaystyle f(x)-f(a) = \frac{(x - a)^2}{2!} f''(x_2),\ \ \ \ a &lt; x_2 &lt; x.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">13</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Since <!-- MATH
+ $f''(a) \ne 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3326.png"
+ ALT="$ f''(a) \ne 0$"></SPAN>, and <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2349.png"
+ ALT="$ f''(x)$"></SPAN> is assumed as continuous, we 
+may choose our interval <!-- MATH
+ $[a - h, a + h]$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3315.png"
+ ALT="$ [a - h, a + h]$"></SPAN> so small that 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3328.png"
+ ALT="$ f''(x_2)$"></SPAN> will have the same sign as <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3329.png"
+ ALT="$ f''(a)$"></SPAN> (Chap. <A HREF="node18.html#ch:3">3</A>). 
+Also <SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3330.png"
+ ALT="$ (x-a)^2$"></SPAN> does not change sign. Therefore the second 
+member of (<A HREF="#eqn:108D">13.13</A>) will not change sign, and the difference
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3323.png"
+ ALT="$ f(x)-f(a)$"></SPAN>
+will have the same sign for all values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> in the interval 
+<!-- MATH
+ $[a - h, a + h]$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3315.png"
+ ALT="$ [a - h, a + h]$"></SPAN>, and, moreover, this sign will be the same 
+as the sign of <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3329.png"
+ ALT="$ f''(a)$"></SPAN>.
+It therefore follows from our definitions 
+(<A HREF="#eqn:108A">13.10</A>) and (<A HREF="#eqn:108B">13.11</A>) that
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:108E"></A><!-- MATH
+ \begin{equation}
+f(a)\ {\rm is\ a\ maximum\ if}\ f'(a) = 0 \ {\rm and}\ f''(a)
+=\ {\rm a\ negative\ number};
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="458" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3331.png"
+ ALT="$\displaystyle f(a)\ {\rm is\ a\ maximum\ if}\ f'(a) = 0 \ {\rm and}\ f''(a) =\ {\rm a\ negative\ number};$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">14</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:108F"></A><!-- MATH
+ \begin{equation}
+f(a)\ {\rm is\ a\ minimum\ if}\ f'(a) = 0 \ {\rm and}\ f''(a)
+=\ {\rm a\ positive\ number}
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="446" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3332.png"
+ ALT="$\displaystyle f(a)\ {\rm is\ a\ minimum\ if}\ f'(a) = 0 \ {\rm and}\ f''(a) =\ {\rm a\ positive\ number}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">15</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+These conditions are the same as (<A HREF="node115.html#eqn:84-21">8.3</A>) and (<A HREF="node115.html#eqn:84-22">8.4</A>), 
+[&#167;<A HREF="node115.html#sec:84">8.6</A>].
+
+<P>
+</DD>
+<DT>III</DT>
+<DD>Let <!-- MATH
+ $f'(a) = f''(a) = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="128" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3333.png"
+ ALT="$ f'(a) = f''(a) = 0$"></SPAN>, and <!-- MATH
+ $f'''(a) \ne 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3334.png"
+ ALT="$ f'''(a) \ne 0$"></SPAN>.
+From (<A HREF="node151.html#eqn:107-D">13.9</A>), [&#167;<A HREF="node151.html#sec:107">13.3</A>], replacing <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN> by <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> 
+and transposing <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3324.png"
+ ALT="$ f(a)$"></SPAN>,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:108G"></A><!-- MATH
+ \begin{equation}
+f(x)-f(a) = \frac{1}{3!} (x-a)^3 f'''(x_3),\ \ \ \ a < x_3 < x.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="338" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3335.png"
+ ALT="$\displaystyle f(x)-f(a) = \frac{1}{3!} (x-a)^3 f'''(x_3),\ \ \ \ a &lt; x_3 &lt; x.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">16</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+As before, <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3336.png"
+ ALT="$ f'''(x_3)$"></SPAN> will have the same sign as <SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3337.png"
+ ALT="$ f'''(a)$"></SPAN>. But 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3338.png"
+ ALT="$ (x-a)^3$"></SPAN> changes its sign from <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2336.png"
+ ALT="$ -$"></SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2335.png"
+ ALT="$ +$"></SPAN> as <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> increases through <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>. 
+Therefore the difference
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3323.png"
+ ALT="$ f(x)-f(a)$"></SPAN>
+must change sign, and <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3324.png"
+ ALT="$ f(a)$"></SPAN> is neither a maximum nor a minimum.
+
+<P>
+</DD>
+<DT>IV</DT>
+<DD>Let <!-- MATH
+ $f'(a) = f''(a) = \cdots = f^{(n-l)}(a) = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="252" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3339.png"
+ ALT="$ f'(a) = f''(a) = \cdots = f^{(n-l)}(a) = 0$"></SPAN>, and <!-- MATH
+ $f^{(n)}(a) \ne 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3340.png"
+ ALT="$ f^{(n)}(a) \ne 0$"></SPAN>.
+By continuing the process as illustrated in I, II, and III, it is 
+seen that if the first derivative of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> which does not vanish for 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN> is of even order (<SPAN CLASS="MATH"><IMG
+ WIDTH="31" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3341.png"
+ ALT="$ = n$"></SPAN>), then<A NAME="tex2html141"
+  HREF="footnode.html#foot28591"><SUP><SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">3</SPAN></SUP></A>
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:108-47"></A><!-- MATH
+ \begin{equation}
+f(a)\ {\rm is\ a\ maximum\ if}\ f^{(n)}(a) =\ {\rm a\ negative\ number};
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="368" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3342.png"
+ ALT="$\displaystyle f(a)\ {\rm is\ a\ maximum\ if}\ f^{(n)}(a) =\ {\rm a\ negative\ number};$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">17</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:108-48"></A><!-- MATH
+ \begin{equation}
+f(a)\ {\rm is\ a\ minimum\ if}\ f^{(n)}(a) =\ {\rm a\ positive\ number}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="361" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3343.png"
+ ALT="$\displaystyle f(a)\ {\rm is\ a\ minimum\ if}\ f^{(n)}(a) =\ {\rm a\ positive\ number}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">18</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+If the firstderivative of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> which does not vanish for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN> is of odd order, 
+then <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3324.png"
+ ALT="$ f(a)$"></SPAN> will be neither a maximum nor a minimum.
+</DD>
+</DL>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
+<I>Examine <!-- MATH
+ $x^3-9x^2 + 24x-7$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3344.png"
+ ALT="$ x^3-9x^2 + 24x-7$"></SPAN> for maximum and minimum values.
+</I>
+<P>
+<I>Solution. <!-- MATH
+ $f(x) = x^3-9x^2 + 24x-7$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="188" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3345.png"
+ ALT="$ f(x) = x^3-9x^2 + 24x-7$"></SPAN>.
+<!-- MATH
+ $f'(x) = 3x^2-18x + 24$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="165" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3346.png"
+ ALT="$ f'(x) = 3x^2-18x + 24$"></SPAN>.
+Solving <!-- MATH
+ $3x^2-18x + 24 = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="138" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2675.png"
+ ALT="$ 3x^2 - 18x + 24 = 0$"></SPAN>
+gives the critical values <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img716.png"
+ ALT="$ x = 4$"></SPAN>. Thus
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3347.png"
+ ALT="$ f'(2) = 0$"></SPAN>, and <SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3348.png"
+ ALT="$ f'(4) = 0$"></SPAN>.
+Differentiating again, 	<!-- MATH
+ $f''(x) = 6x-18$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3349.png"
+ ALT="$ f''(x) = 6x-18$"></SPAN>.
+Since <!-- MATH
+ $f''(2) =-6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="84" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3350.png"
+ ALT="$ f''(2) =-6$"></SPAN>, we know from (<A HREF="#eqn:108-47">13.17</A>) that <SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3351.png"
+ ALT="$ f(2) = 13$"></SPAN> is a maximum.
+Since <!-- MATH
+ $f''(4) = + 6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="84" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3352.png"
+ ALT="$ f''(4) = + 6$"></SPAN>, we know from (<A HREF="#eqn:108-48">13.18</A>) that <SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3353.png"
+ ALT="$ f(4) = 9$"></SPAN> is a minimum.</I></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; 
+<I>Examine <!-- MATH
+ $e^x + 2\cos(x) + e^{-x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="138" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3354.png"
+ ALT="$ e^x + 2\cos(x) + e^{-x}$"></SPAN> for maximum and minimum values.
+</I>
+<P>
+<I>Solution. <!-- MATH
+ $f(x) = e^x + 2\cos(x) + e^{-x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="190" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3355.png"
+ ALT="$ f(x) = e^x + 2\cos(x) + e^{-x}$"></SPAN>,
+<!-- MATH
+ $f'(x) = e^x-2\sin x-e^{-x} = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="212" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3356.png"
+ ALT="$ f'(x) = e^x-2\sin x-e^{-x} = 0$"></SPAN>, for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>
+(and <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN> is the <I>only</I> root of the equation <!-- MATH
+ $e^x-2\sin x-e^{-x} = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="155" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3357.png"
+ ALT="$ e^x-2\sin x-e^{-x} = 0$"></SPAN>),
+  	<!-- MATH
+ $f''(x) = e^x - 2\cos(x) + e^{-x} = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="227" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3358.png"
+ ALT="$ f''(x) = e^x - 2\cos(x) + e^{-x} = 0$"></SPAN>, for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>,
+  	<!-- MATH
+ $f'''(x) = e^x+2\sin x-e^{-x} = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="219" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3359.png"
+ ALT="$ f'''(x) = e^x+2\sin x-e^{-x} = 0$"></SPAN>, for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>,
+  	<!-- MATH
+ $f^{(4)}(x) = e^x + 2\cos(x) + e^{-x} = 4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="236" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3360.png"
+ ALT="$ f^{(4)}(x) = e^x + 2\cos(x) + e^{-x} = 4$"></SPAN>, for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>.
+Hence from (<A HREF="#eqn:108-48">13.18</A>), <SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3361.png"
+ ALT="$ f(0) = 4$"></SPAN> is a minimum.</I></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2801"
+  HREF="node154.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2795"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2789"
+  HREF="node152.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2797"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2799"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2802"
+  HREF="node154.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html2796"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2790"
+  HREF="node152.html">Exercises</A>
+ &nbsp; <B>  <A NAME="tex2html2798"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2800"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

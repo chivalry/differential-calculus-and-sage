@@ -1,0 +1,435 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Comparison of increments</TITLE>
+<META NAME="description" CONTENT="Comparison of increments">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node36.html">
+<LINK REL="previous" HREF="node34.html">
+<LINK REL="up" HREF="node32.html">
+<LINK REL="next" HREF="node36.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1049"
+  HREF="node36.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1043"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1037"
+  HREF="node34.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1045"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1047"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1050"
+  HREF="node36.html">Derivative of a function</A>
+<B> Up:</B> <A NAME="tex2html1044"
+  HREF="node32.html">Differentiation</A>
+<B> Previous:</B> <A NAME="tex2html1038"
+  HREF="node34.html">Increments</A>
+ &nbsp; <B>  <A NAME="tex2html1046"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1048"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00630000000000000000">
+Comparison of increments</A>
+</H1>
+Consider the function
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = x^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="55" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img569.png"
+ ALT="$\displaystyle y = x^2.
+$">
+</DIV><P></P>
+Assuming a fixed initial value for <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, let <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> take on an 
+increment <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN>. Then <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> will take on a corresponding 
+increment <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.png"
+ ALT="$ \Delta y$"></SPAN>, and we have
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y + \Delta y 	= (x + \Delta x)^2,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="150" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img580.png"
+ ALT="$\displaystyle y + \Delta y = (x + \Delta x)^2,
+$">
+</DIV><P></P>
+or, 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y + \Delta y 	= x^2+ 2x \cdot \Delta x + (\Delta x)^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="227" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img581.png"
+ ALT="$\displaystyle y + \Delta y = x^2+ 2x \cdot \Delta x + (\Delta x)^2.
+$">
+</DIV><P></P>
+Subtracting <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$ y=x^2$"></SPAN> 
+from this, 
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:B-IV"></A><!-- MATH
+ \begin{equation}
+\Delta y = 2x \cdot \Delta x + (\Delta x)^2,
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="164" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img582.png"
+ ALT="$\displaystyle \Delta y = 2x \cdot \Delta x + (\Delta x)^2,$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+we get the increment <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.png"
+ ALT="$ \Delta y$"></SPAN> in terms of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN>.
+To find the ratio of the increments, divide 
+(<A HREF="#eqn:B-IV">4.1</A>)  by <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN>, giving
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{\Delta y}{\Delta x} = 2x + \Delta x.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="115" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img583.png"
+ ALT="$\displaystyle \frac{\Delta y}{\Delta x} = 2x + \Delta x.
+$">
+</DIV><P></P>
+If the initial value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> is <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN>, it is evident that
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = 8.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="104" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img584.png"
+ ALT="$\displaystyle \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = 8.
+$">
+</DIV><P></P>
+Let us carefully note the behavior of the ratio of the increments 
+of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> as the increment of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> diminishes.
+
+<P>
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT"><SMALL CLASS="SMALL">
+Initial      </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">      New        </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">  Increment   </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">  Initial  </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">   New   </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">   Increment       </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">    </SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 
+value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">    value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">  <!-- MATH
+ $\Delta\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img585.png"
+ ALT="$ \Delta\, x$"></SPAN> </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> value of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> value of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> <!-- MATH
+ $\Delta\, y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img586.png"
+ ALT="$ \Delta\, y$"></SPAN> </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> <!-- MATH
+ $\frac{\Delta y}{\Delta x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img587.png"
+ ALT="$ \frac{\Delta y}{\Delta x}$"></SPAN> </SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><SMALL CLASS="SMALL">  
+4 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	5.0 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	1.0 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	16 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	25.     </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 9.   </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 9.  </SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 
+4 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	4.8 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	0.8 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	16 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	23.04   </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 7.04 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 8.8  </SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 
+4 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	4.6 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	0.6 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	16 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	21.16   </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 5.16 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 8.6  </SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 
+4 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	4.4 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	0.4 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	16 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	19.36   </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 3.36 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 8.4  </SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 
+4 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	4.2 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	0.2 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	16 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	17.64   </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 1.64 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 8.2  </SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 
+4 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	4.1 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	0.1 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	16 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	16.81   </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 0.81 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 8.1  </SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 
+4 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	4.01 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	0.01 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	16 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">	16.0801 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL"> 0.0801 </SMALL></TD>
+<TD ALIGN="LEFT"><SMALL CLASS="SMALL">8.01  </SMALL></TD>
+</TR>
+</TABLE>
+<P>
+It is apparent that as <!-- MATH
+ $\Delta\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img585.png"
+ ALT="$ \Delta\, x$"></SPAN> decreases, <!-- MATH
+ $\Delta\, y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img586.png"
+ ALT="$ \Delta\, y$"></SPAN> also diminishes, 
+but their ratio takes on the successive values <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img588.png"
+ ALT="$ 9$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img589.png"
+ ALT="$ 8.8$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img590.png"
+ ALT="$ 8.6$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img591.png"
+ ALT="$ 8.4$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img592.png"
+ ALT="$ 8.2$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img593.png"
+ ALT="$ 8.1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img594.png"
+ ALT="$ 8.01$"></SPAN>; 
+illustrating the fact that <!-- MATH
+ $\frac{\Delta y}{\Delta x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img587.png"
+ ALT="$ \frac{\Delta y}{\Delta x}$"></SPAN> can be brought as near to <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img595.png"
+ ALT="$ 8$"></SPAN> 
+in value as we please by making <!-- MATH
+ $\Delta\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img585.png"
+ ALT="$ \Delta\, x$"></SPAN> small enough. Therefore<A NAME="tex2html31"
+  HREF="footnode.html#foot3785"><SUP><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">3</SPAN></SUP></A>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = 8.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="104" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img584.png"
+ ALT="$\displaystyle \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = 8.
+$">
+</DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1049"
+  HREF="node36.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1043"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1037"
+  HREF="node34.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1045"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1047"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1050"
+  HREF="node36.html">Derivative of a function</A>
+<B> Up:</B> <A NAME="tex2html1044"
+  HREF="node32.html">Differentiation</A>
+<B> Previous:</B> <A NAME="tex2html1038"
+  HREF="node34.html">Increments</A>
+ &nbsp; <B>  <A NAME="tex2html1046"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1048"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

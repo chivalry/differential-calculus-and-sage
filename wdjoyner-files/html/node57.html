@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differentiation of the simple exponential function</TITLE>
+<META NAME="description" CONTENT="Differentiation of the simple exponential function">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node58.html">
+<LINK REL="previous" HREF="node56.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node58.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1392"
+  HREF="node58.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1386"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1380"
+  HREF="node56.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1388"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1390"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1393"
+  HREF="node58.html">Differentiation of the general</A>
+<B> Up:</B> <A NAME="tex2html1387"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1381"
+  HREF="node56.html">Differentiation of a logarithm</A>
+ &nbsp; <B>  <A NAME="tex2html1389"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1391"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007140000000000000000">
+Differentiation of the simple exponential function</A>
+</H1>
+
+<P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img973.png"
+ ALT="$ y = a^v$"></SPAN>, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img465.png"
+ ALT="$ a &gt; 0$"></SPAN>.
+Taking the logarithm of both sides to the base <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$ e$"></SPAN>, we get
+<!-- MATH
+ $\log y = v \log a$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="100" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img974.png"
+ ALT="$ \log y = v \log a$"></SPAN>,
+or <!-- MATH
+ $v 	= \frac{\log y}{\log a}	= \frac{1}{\log a} \cdot \log y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="157" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img975.png"
+ ALT="$ v = \frac{\log y}{\log a} = \frac{1}{\log a} \cdot \log y$"></SPAN>.
+Differentiate with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> by formula (VIIIa),
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dv}{dy} 	= \frac{1}{\log a} \cdot \frac{1}{y};
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="110" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img976.png"
+ ALT="$\displaystyle \frac{dv}{dy} = \frac{1}{\log a} \cdot \frac{1}{y};
+$">
+</DIV><P></P>
+and from (<A HREF="node55.html#eqn:C-43">5.2</A>),relating to inverse functions, we get
+<!-- MATH
+ $\frac{dy}{dv} 	= \log a \cdot y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img977.png"
+ ALT="$ \frac{dy}{dv} = \log a \cdot y$"></SPAN>,
+or,
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dv} 	= \log a \cdot a^v.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="110" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img978.png"
+ ALT="$\displaystyle \frac{dy}{dv} = \log a \cdot a^v.
+$">
+</DIV><P></P>
+Since <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> is a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and it is required to differentiate 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img979.png"
+ ALT="$ a^v$"></SPAN> with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, we must use formula (<A HREF="node54.html#eqn:A-42">5.1</A>), 
+for differentiating a function of a function, namely,
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= \frac{dy}{dv} \cdot \frac{dv}{dx}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="104" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img961.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{dy}{dv} \cdot \frac{dv}{dx}.
+$">
+</DIV><P></P>
+Substituting the value of <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN> from above, we get
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= \log a \cdot a^v \cdot \frac{dv}{dx}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="143" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img980.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \log a \cdot a^v \cdot \frac{dv}{dx}.
+$">
+</DIV><P></P>
+Therefore, <!-- MATH
+ $\frac{d}{dx} (a^v) 	= \log a \cdot a^v \cdot \frac{dv}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="160" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img981.png"
+ ALT="$ \frac{d}{dx} (a^v) = \log a \cdot a^v \cdot \frac{dv}{dx}$"></SPAN>
+(equation (IX) in &#167;<A HREF="node44.html#sec:33">5.1</A>  above).
+When <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img965.png"
+ ALT="$ a = e$"></SPAN>, <!-- MATH
+ $\log a = \log e = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img982.png"
+ ALT="$ \log a = \log e = 1$"></SPAN>, and (IX) becomes
+<!-- MATH
+ $\frac{d}{dx} (e^v) 	= e^v \frac{dv}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="103" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img983.png"
+ ALT="$ \frac{d}{dx} (e^v) = e^v \frac{dv}{dx}$"></SPAN> (equation (IXa) in &#167;<A HREF="node44.html#sec:33">5.1</A> above) .
+
+<P>
+<I>The derivative of a constant with a variable exponent is equal to the 
+product of the natural logarithm of the constant, the constant with the 
+variable exponent, and the derivative of the exponent.</I>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1392"
+  HREF="node58.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1386"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1380"
+  HREF="node56.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1388"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1390"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1393"
+  HREF="node58.html">Differentiation of the general</A>
+<B> Up:</B> <A NAME="tex2html1387"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1381"
+  HREF="node56.html">Differentiation of a logarithm</A>
+ &nbsp; <B>  <A NAME="tex2html1389"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1391"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

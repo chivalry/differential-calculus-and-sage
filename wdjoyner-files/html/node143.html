@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Curvature at a point</TITLE>
+<META NAME="description" CONTENT="Curvature at a point">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node144.html">
+<LINK REL="previous" HREF="node142.html">
+<LINK REL="up" HREF="node140.html">
+<LINK REL="next" HREF="node144.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2643"
+  HREF="node144.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2637"
+  HREF="node140.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2631"
+  HREF="node142.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2639"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2641"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2644"
+  HREF="node144.html">Formulas for curvature</A>
+<B> Up:</B> <A NAME="tex2html2638"
+  HREF="node140.html">Curvature; radius of curvature</A>
+<B> Previous:</B> <A NAME="tex2html2632"
+  HREF="node142.html">Curvature of a circle</A>
+ &nbsp; <B>  <A NAME="tex2html2640"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2642"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001430000000000000000">
+Curvature at a point</A>
+</H1>
+
+<P>
+Consider any curve. As in the last section,
+<!-- MATH
+ $\Delta \tau$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3105.png"
+ ALT="$ \Delta \tau$"></SPAN> = total curvature of the arc PP<SPAN CLASS="MATH"><IMG
+ WIDTH="9" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1824.png"
+ ALT="$ '$"></SPAN>,
+and 
+<!-- MATH
+ $\frac{\Delta \tau}{\Delta s}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3107.png"
+ ALT="$ \frac{\Delta \tau}{\Delta s}$"></SPAN> = 
+average curvature of the arc PP<SPAN CLASS="MATH"><IMG
+ WIDTH="9" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1824.png"
+ ALT="$ '$"></SPAN>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:curvature-point"></A><A NAME="25818"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 12.2:</STRONG>
+Geometry of the curvature at a point.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="272" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3114.png"
+ ALT="\includegraphics[height=6cm,width=7cm]{curvature-point2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+More important, however, than the notion of the average 
+curvature of an arc is that of curvature at a point. 
+This is obtained as follows. Imagine P to approach P 
+along the curve; then the limiting value of the average 
+curvature <!-- MATH
+ $\left( = \frac{\Delta \tau}{\Delta s} \right)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3115.png"
+ ALT="$ \left( = \frac{\Delta \tau}{\Delta s} \right)$"></SPAN> 
+as P<SPAN CLASS="MATH"><IMG
+ WIDTH="9" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1824.png"
+ ALT="$ '$"></SPAN> approaches P along the curve is defined as the 
+<I>curvature at P</I>, that is,
+<A NAME="25824"></A>
+
+<P>
+<DIV ALIGN="CENTER">
+Curvature at a point = 
+<!-- MATH
+ $\lim_{\Delta s \to 0} \left( \frac{\Delta \tau}{\Delta s} \right)
+= \frac{d\tau}{ds}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="140" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3116.png"
+ ALT="$ \lim_{\Delta s \to 0} \left( \frac{\Delta \tau}{\Delta s} \right)
+= \frac{d\tau}{ds}$"></SPAN>.
+
+</DIV>
+Thefore,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:101-39"></A><!-- MATH
+ \begin{equation}
+K = \frac{d\tau}{ds} = \ {\rm curvature}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="158" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3117.png"
+ ALT="$\displaystyle K = \frac{d\tau}{ds} = \ {\rm curvature}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">12</SPAN>.<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Since the angle <!-- MATH
+ $\Delta \tau$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3105.png"
+ ALT="$ \Delta \tau$"></SPAN> is measured in radians and 
+the length of arc <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1943.png"
+ ALT="$ \Delta s$"></SPAN> in units of length, 
+it follows that the unit of curvature at a point is one 
+radian per unit of length.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2643"
+  HREF="node144.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2637"
+  HREF="node140.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2631"
+  HREF="node142.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2639"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2641"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2644"
+  HREF="node144.html">Formulas for curvature</A>
+<B> Up:</B> <A NAME="tex2html2638"
+  HREF="node140.html">Curvature; radius of curvature</A>
+<B> Previous:</B> <A NAME="tex2html2632"
+  HREF="node142.html">Curvature of a circle</A>
+ &nbsp; <B>  <A NAME="tex2html2640"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2642"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

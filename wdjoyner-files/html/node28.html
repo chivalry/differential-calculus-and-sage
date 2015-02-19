@@ -1,0 +1,402 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Show that </TITLE>
+<META NAME="description" CONTENT="Show that ">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node29.html">
+<LINK REL="previous" HREF="node27.html">
+<LINK REL="up" HREF="node18.html">
+<LINK REL="next" HREF="node29.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html943"
+  HREF="node29.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html937"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html931"
+  HREF="node27.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html939"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html941"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html944"
+  HREF="node29.html">The number</A>
+<B> Up:</B> <A NAME="tex2html938"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html932"
+  HREF="node27.html">Special limiting values</A>
+ &nbsp; <B>  <A NAME="tex2html940"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html942"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION005100000000000000000"></A>
+<A NAME="sec:22"></A>
+<BR>
+Show that <!-- MATH
+ $\lim_{x \to 0} \frac{\sin\, x}{x} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img493.png"
+ ALT="$ \lim_{x \to 0} \frac{\sin\, x}{x} = 1$"></SPAN>
+</H1>
+
+<P>
+To motivate the limit computation of this section, using <I CLASS="sans">SAGE</I> 
+we compute a number of values of the function
+<!-- MATH
+ $\frac{\sin\, x}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="36" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img494.png"
+ ALT="$ \frac{\sin\, x}{x}$"></SPAN>, as <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> gets closer and closer to <SPAN CLASS="MATH">0</SPAN>:
+
+<P>
+<P>
+<DIV ALIGN="CENTER">
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN></TD>
+<TD ALIGN="LEFT">0.5000</TD>
+<TD ALIGN="LEFT">0.2500</TD>
+<TD ALIGN="LEFT">0.1250</TD>
+<TD ALIGN="LEFT">0.06250</TD>
+<TD ALIGN="LEFT">0.03125</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $\frac{\sin(x)}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img495.png"
+ ALT="$ \frac{\sin(x)}{x}$"></SPAN></TD>
+<TD ALIGN="LEFT">0.9589</TD>
+<TD ALIGN="LEFT">0.9896</TD>
+<TD ALIGN="LEFT">0.9974</TD>
+<TD ALIGN="LEFT">0.9994</TD>
+<TD ALIGN="LEFT">0.9998</TD>
+</TR>
+</TABLE>
+</DIV>
+
+<P>
+<P>
+Indeed, if we refer to the table in &#167;<A HREF="node7.html#sec:4">1.4</A>,
+it will be seen that for all angles less than <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img496.png"
+ ALT="$ 10^o$"></SPAN> the angle in radians 
+and the sine of that angle are equal to three decimal places. 
+To compute the table of values above using <I CLASS="sans">SAGE</I>, simply use the 
+following commands.
+
+<P>
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: f = lambda x: sin(x)/x
+sage: R = RealField(15)
+sage: L = [1/2^i for i in range(1,6)]; L
+[1/2, 1/4, 1/8, 1/16, 1/32]
+sage: [R(x) for x in L]
+[0.5000, 0.2500, 0.1250, 0.06250, 0.03125]
+sage: [R(f(x)) for x in L]
+[0.9589, 0.9896, 0.9974, 0.9994, 0.9998]
+</PRE>
+<P>
+From this we may well suspect that
+<!-- MATH
+ $\lim_{x \to 0} \frac{\sin\, x}{x} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img493.png"
+ ALT="$ \lim_{x \to 0} \frac{\sin\, x}{x} = 1$"></SPAN>.
+
+<P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img250.png"
+ ALT="$ O$"></SPAN> be the center of a circle whose radius is unity.
+
+<P>
+Let <!-- MATH
+ $\operatorname{arc}\ AM = \operatorname{arc}\ AM' = x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="177" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img497.png"
+ ALT="$ \operatorname{arc}\ AM = \operatorname{arc}\ AM' = x$"></SPAN>, and let 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img498.png"
+ ALT="$ MT$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img499.png"
+ ALT="$ M'T$"></SPAN> 
+be tangents drawn to the circle at <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img500.png"
+ ALT="$ M$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img501.png"
+ ALT="$ M'$"></SPAN>. From Geometry 
+(see Figure <A HREF="#fig:limit-proof">3.12</A>), 
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:limit-proof"></A><A NAME="2158"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.12:</STRONG>
+Comparing <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img234.png"
+ ALT="$ \sin(x)$"></SPAN> on the unit circle.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="271" HEIGHT="225" ALIGN="BOTTOM" BORDER="0"
+ SRC="img502.png"
+ ALT="\includegraphics[height=5cm,width=6cm]{circle-tangent.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+we have <P><!-- MATH
+ \begin{displaymath}
+MPM' < MAM' < MTM';
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="204" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img503.png"
+ ALT="$\displaystyle MPM' &lt; MAM' &lt; MTM';
+$">
+</DIV><P></P>
+or <!-- MATH
+ $2 \sin\, x < 2x < 2 \tan\ x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="159" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img504.png"
+ ALT="$ 2 \sin\, x &lt; 2x &lt; 2 \tan\ x$"></SPAN>.
+Dividing through by <!-- MATH
+ $2 \sin\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img505.png"
+ ALT="$ 2 \sin\, x$"></SPAN>, we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+1 < \frac{x}{\sin\, x} < \frac{1}{\cos\ x}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="139" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img506.png"
+ ALT="$\displaystyle 1 &lt; \frac{x}{\sin\, x} &lt; \frac{1}{\cos\ x}.
+$">
+</DIV><P></P>
+If now <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> approaches the limit zero,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to 0} \frac{x}{\sin\, x}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="71" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img507.png"
+ ALT="$\displaystyle \lim_{x \to 0} \frac{x}{\sin\, x}
+$">
+</DIV><P></P>
+must lie between the constant <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN> and <!-- MATH
+ $\lim_{x \to 0} \frac{1}{\cos\ x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img508.png"
+ ALT="$ \lim_{x \to 0} \frac{1}{\cos\ x}$"></SPAN>, which is also <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN>.
+Therefore <!-- MATH
+ $\lim_{x \to 0} \frac{x}{\sin\, x} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img509.png"
+ ALT="$ \lim_{x \to 0} \frac{x}{\sin\, x} = 1$"></SPAN>, or, 
+<!-- MATH
+ $\lim_{x \to 0} \frac{\sin\, x}{x} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img493.png"
+ ALT="$ \lim_{x \to 0} \frac{\sin\, x}{x} = 1$"></SPAN> Theorem <A HREF="node26.html#thrm:III-20">3.8.3</A>.
+<SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img455.png"
+ ALT="$ \Box$"></SPAN>
+
+<P>
+It is interesting to note the behavior of this function from its graph, the locus of equation
+<P><!-- MATH
+ \begin{displaymath}
+y = \frac{\sin\, x}{x}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="72" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img510.png"
+ ALT="$\displaystyle y = \frac{\sin\, x}{x}
+$">
+</DIV><P></P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:limit-proof2"></A><A NAME="2408"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+The function <!-- MATH
+ $\frac{\sin(x)}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img495.png"
+ ALT="$ \frac{\sin(x)}{x}$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="362" HEIGHT="181" ALIGN="BOTTOM" BORDER="0"
+ SRC="img511.png"
+ ALT="\includegraphics[height=4cm,width=8cm]{limit_proof2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Although the function is not defined for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>, yet it is not discontinuous 
+when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN> if we define <!-- MATH
+ $\frac{\sin\, 0}{0} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img512.png"
+ ALT="$ \frac{\sin\, 0}{0} = 1$"></SPAN> (see Case II in &#167;<A HREF="node24.html#sec:18">3.6</A>).
+
+<P>
+Finally, we show how to use the <I CLASS="sans">SAGE</I> command <TT>limit</TT> to compute the 
+limit above<A NAME="tex2html27"
+  HREF="footnode.html#foot2195"><SUP><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">5</SPAN></SUP></A>.
+
+<P>
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: limit(sin(x)/x,x=0)
+1
+</PRE>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html943"
+  HREF="node29.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html937"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html931"
+  HREF="node27.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html939"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html941"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html944"
+  HREF="node29.html">The number</A>
+<B> Up:</B> <A NAME="tex2html938"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html932"
+  HREF="node27.html">Special limiting values</A>
+ &nbsp; <B>  <A NAME="tex2html940"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html942"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

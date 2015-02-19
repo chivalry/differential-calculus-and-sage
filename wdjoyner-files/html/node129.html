@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Successive differentials</TITLE>
+<META NAME="description" CONTENT="Successive differentials">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node130.html">
+<LINK REL="previous" HREF="node128.html">
+<LINK REL="up" HREF="node121.html">
+<LINK REL="next" HREF="node130.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2439"
+  HREF="node130.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2433"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2427"
+  HREF="node128.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2435"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2437"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2440"
+  HREF="node130.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html2434"
+  HREF="node121.html">Differentials</A>
+<B> Previous:</B> <A NAME="tex2html2428"
+  HREF="node128.html">Formulas for finding the</A>
+ &nbsp; <B>  <A NAME="tex2html2436"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2438"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001180000000000000000">
+Successive differentials</A>
+</H1>
+
+<P>
+As the differential of a function is in general also a function of the 
+independent variable, we may deal with its differential.
+Consider the function
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = f(x).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2850.png"
+ ALT="$\displaystyle y = f(x).
+$">
+</DIV><P></P>
+<SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2851.png"
+ ALT="$ d(dy)$"></SPAN> is called the <I>second differential</I> of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> 
+(or of the function) and is denoted by the symbol
+<A NAME="22400"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+d^2y.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="33" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2852.png"
+ ALT="$\displaystyle d^2y.
+$">
+</DIV><P></P>
+Similarly, the third differential of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2853.png"
+ ALT="$ d[d(dy)]$"></SPAN>, is written
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2854.png"
+ ALT="$ d^3y$"></SPAN>, and so on, to the <I><SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN>-th differential of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN></I>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+d^ny.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2855.png"
+ ALT="$\displaystyle d^ny.
+$">
+</DIV><P></P>
+
+<P>
+Since <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img606.png"
+ ALT="$ dx$"></SPAN>, the differential of the independent variable, is 
+independent of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> (see &#167;<A HREF="node123.html#sec:88">9.2</A>), it must be treated as a constant when differentiating with 
+respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>. Bearing this in mind, we get very simple 
+relations between successive differentials and successive derivatives.
+
+<P>
+For 	<!-- MATH
+ $dy 	= f'(x)dx$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="95" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2856.png"
+ ALT="$ dy = f'(x)dx$"></SPAN>,
+and 	<!-- MATH
+ $d^2y 	= f''(x)(dx)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="125" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2857.png"
+ ALT="$ d^2y = f''(x)(dx)^2$"></SPAN>,
+since <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img606.png"
+ ALT="$ dx$"></SPAN> is regarded as a constant.
+Also, 	<!-- MATH
+ $d^3y 	= f'''(x)(dx)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="129" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2858.png"
+ ALT="$ d^3y = f'''(x)(dx)^3$"></SPAN>,
+and in general 	<!-- MATH
+ $d^ny 	= f^{(n)}(x)(dx)^n$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="139" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2859.png"
+ ALT="$ d^ny = f^{(n)}(x)(dx)^n$"></SPAN>.
+
+<P>
+Dividing both sides of each expression by the power of <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img606.png"
+ ALT="$ dx$"></SPAN> occurring on 
+the right, we get our ordinary derivative notation
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2 y}{dx^2} = f''(x),
+\frac{d^3 y}{dx^3} = f'''(x), \dots, 
+\frac{d^n y}{dx^n} = f^{(n)} (x).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="333" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2860.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2} = f''(x),
+\frac{d^3 y}{dx^3} = f'''(x), \dots,
+\frac{d^n y}{dx^n} = f^{(n)} (x).
+$">
+</DIV><P></P>
+Powers of an infinitesimal are called <I>infinitesimals of a higher order</I>. 
+<A NAME="22412"></A>
+More generally, if for the infinitesimals <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN>, then <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN> is said 
+to be an infinitesimal of a higher order than <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Find the third differential of
+<!-- MATH
+ $y =	x^5 - 2x^3 + 3x - 5$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="158" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2861.png"
+ ALT="$ y = x^5 - 2x^3 + 3x - 5$"></SPAN>.
+
+<P>
+Solution. <!-- MATH
+ $dy 	= (5x^4 - 6x^2 + 3)dx$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="167" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2862.png"
+ ALT="$ dy = (5x^4 - 6x^2 + 3)dx$"></SPAN>,
+  	<!-- MATH
+ $d^2y 	= (20x^3 - 12x)(dx)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="175" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2863.png"
+ ALT="$ d^2y = (20x^3 - 12x)(dx)^2$"></SPAN>,
+  	<!-- MATH
+ $d^3y 	= (60x^2 - 12)(dx)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="166" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2864.png"
+ ALT="$ d^3y = (60x^2 - 12)(dx)^3$"></SPAN>. .
+
+<P>
+NOTE. This is evidently the third derivative of the function 
+multiplied by the cube of the differential of the independent 
+variable. Dividing through by <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2865.png"
+ ALT="$ (dx)^3$"></SPAN>, we get the third derivative
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^3 y}{dx^3} = 60x^2 - 12.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="126" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2866.png"
+ ALT="$\displaystyle \frac{d^3 y}{dx^3} = 60x^2 - 12.
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2439"
+  HREF="node130.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2433"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2427"
+  HREF="node128.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2435"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2437"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2440"
+  HREF="node130.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html2434"
+  HREF="node121.html">Differentials</A>
+<B> Previous:</B> <A NAME="tex2html2428"
+  HREF="node128.html">Formulas for finding the</A>
+ &nbsp; <B>  <A NAME="tex2html2436"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2438"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

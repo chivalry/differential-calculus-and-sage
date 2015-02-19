@@ -1,0 +1,737 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Evaluation of the indeterminate form </TITLE>
+<META NAME="description" CONTENT="Evaluation of the indeterminate form ">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node161.html">
+<LINK REL="previous" HREF="node157.html">
+<LINK REL="up" HREF="node148.html">
+<LINK REL="next" HREF="node159.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2870"
+  HREF="node159.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2864"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2858"
+  HREF="node157.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2866"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2868"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2871"
+  HREF="node159.html">Rule for evaluating the</A>
+<B> Up:</B> <A NAME="tex2html2865"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2859"
+  HREF="node157.html">Evaluation of a function</A>
+ &nbsp; <B>  <A NAME="tex2html2867"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2869"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001590000000000000000"></A>
+<A NAME="sec:111"></A>
+<BR>
+Evaluation of the indeterminate form <!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN>
+</H1>
+
+<P>
+Given a function of the form <!-- MATH
+ $\frac{f(x)}{F(x)}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3388.png"
+ ALT="$ \frac{f(x)}{F(x)}$"></SPAN> such that 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2131.png"
+ ALT="$ f(a) = 0$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3272.png"
+ ALT="$ F(a) = 0$"></SPAN>; that is, the function takes on the indeterminate 
+form <!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN> when <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> is substituted for <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>. It is then required to find
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to a} \frac{f(x)}{F(x)}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="76" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3389.png"
+ ALT="$\displaystyle \lim_{x \to a} \frac{f(x)}{F(x)}.
+$">
+</DIV><P></P>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ch13-0over0form"></A><A NAME="27803"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.6:</STRONG>
+The graphs of the functions <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$ F(x)$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="269" HEIGHT="224" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3390.png"
+ ALT="\includegraphics[height=5cm,width=6cm]{ch13-0over0form.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+Since, by hypothesis, <SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2131.png"
+ ALT="$ f(a) = 0$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3272.png"
+ ALT="$ F(a) = 0$"></SPAN>, these graphs intersect at <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3189.png"
+ ALT="$ (a,0)$"></SPAN>.
+
+<P>
+Applying the Theorem of Mean Value to each of these functions (replacing <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN> by <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>), 
+we get
+<!-- MATH
+ $f(x) = f(a) + (x-a)f'(x_1)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="198" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3391.png"
+ ALT="$ f(x) = f(a) + (x-a)f'(x_1)$"></SPAN>, <!-- MATH
+ $a < x_l < x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3392.png"
+ ALT="$ a &lt; x_l &lt; x$"></SPAN>, and
+<!-- MATH
+ $F(x) = F(a) + (x-a)F'(x_2)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="207" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3393.png"
+ ALT="$ F(x) = F(a) + (x-a)F'(x_2)$"></SPAN>. <!-- MATH
+ $a < x_2 < x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3394.png"
+ ALT="$ a &lt; x_2 &lt; x$"></SPAN>.
+Since <SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2131.png"
+ ALT="$ f(a) = 0$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3272.png"
+ ALT="$ F(a) = 0$"></SPAN>, we get, after canceling out <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1907.png"
+ ALT="$ (x - a)$"></SPAN>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{f(x)}{F(x)} = \frac{f'(x_1)}{F'(x_2)}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="117" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3395.png"
+ ALT="$\displaystyle \frac{f(x)}{F(x)} = \frac{f'(x_1)}{F'(x_2)}.
+$">
+</DIV><P></P>
+Now let <SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3396.png"
+ ALT="$ x \to a$"></SPAN>; then <SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3397.png"
+ ALT="$ x_l \to a$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3398.png"
+ ALT="$ x_2 \to a$"></SPAN>, and
+<!-- MATH
+ $\lim_{x \to a} f'(x_1) = f'(a), \lim_{x \to a} F'(x_2) = F'(a).$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="324" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3399.png"
+ ALT="$ \lim_{x \to a} f'(x_1) = f'(a), \lim_{x \to a} F'(x_2) = F'(a).
+$"></SPAN>
+Therefore,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:111-49"></A><!-- MATH
+ \begin{equation}
+\lim_{x \to a} \frac{f(x)}{F(x)} = \frac{f'(a)}{F'(a)},
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="139" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3400.png"
+ ALT="$\displaystyle \lim_{x \to a} \frac{f(x)}{F(x)} = \frac{f'(a)}{F'(a)},$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">19</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+provided <!-- MATH
+ $F'(a) \ne 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3401.png"
+ ALT="$ F'(a) \ne 0$"></SPAN>.
+This is a special case of the so-called 
+
+<P>
+
+<B>L'Hospital's Rule<A NAME="tex2html145"
+  HREF="footnode.html#foot27820"><SUP><SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">4</SPAN></SUP></A>:</B>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$ F(x)$"></SPAN> be differentiable and <!-- MATH
+ $f(a) = F(a) = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="118" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3402.png"
+ ALT="$ f(a) = F(a) = 0$"></SPAN>.  
+Further, let <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$ F(x)$"></SPAN> be nonzero in a punctured neighborhood of <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>, 
+(for some small <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3403.png"
+ ALT="$ \delta$"></SPAN>, <!-- MATH
+ $F(x) \neq 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3404.png"
+ ALT="$ F(x) \neq 0$"></SPAN> for <!-- MATH
+ $x \in \{0 < |x - a| < \delta\}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="153" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3405.png"
+ ALT="$ x \in \{0 &lt; \vert x - a\vert &lt; \delta\}$"></SPAN>).  
+Then
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to a} \frac{f(x)}{F(x)} = \lim_{x \to a} \frac{f'(x)}{F'(x)}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="169" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3406.png"
+ ALT="$\displaystyle \lim_{x \to a} \frac{f(x)}{F(x)} = \lim_{x \to a} \frac{f'(x)}{F'(x)}.
+$">
+</DIV><P></P>
+
+<P>
+The rule is named after the 17th-century French mathematician 
+Guillaume de l'Hospital, who published the rule in his book 
+<B>l'Analyse des Infiniment Petits pour l'Intelligence des Lignes Courbes</B>
+(translation: Analysis of the infinitely small to understand curves) (1696), 
+the first book about differential calculus, which consisted of the lectures 
+of his teacher Johann Bernoulli. In particular, this rule is in fact due to
+Johann Bernoulli (1667 - 1748).
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp;   Consider the three functions <!-- MATH
+ $\frac{\sin x}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3372.png"
+ ALT="$ \frac{\sin x}{x}$"></SPAN>, <!-- MATH
+ $\frac{\sin x}{|x|}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3373.png"
+ ALT="$ \frac{\sin x}{\vert x\vert}$"></SPAN> and
+  <!-- MATH
+ $\frac{\sin x}{1 - \cos x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3374.png"
+ ALT="$ \frac{\sin x}{1 - \cos x}$"></SPAN> at the point <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>.
+  <P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to 0} \frac{\sin x}{x}
+  = \lim_{x \to 0} \frac{\cos x}{1}
+  = 1
+  
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="185" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3407.png"
+ ALT="$\displaystyle \lim_{x \to 0} \frac{\sin x}{x}
+= \lim_{x \to 0} \frac{\cos x}{1}
+= 1
+$">
+</DIV><P></P>
+Thus <!-- MATH
+ $\frac{\sin x}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3372.png"
+ ALT="$ \frac{\sin x}{x}$"></SPAN> has a removable discontinuity at <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>.
+  <P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to 0^+} \frac{\sin x}{|x|}
+  = \lim_{x \to 0^+} \frac{\sin x}{x} = 1
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="201" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3408.png"
+ ALT="$\displaystyle \lim_{x \to 0^+} \frac{\sin x}{\vert x\vert}
+= \lim_{x \to 0^+} \frac{\sin x}{x} = 1
+$">
+</DIV><P></P>
+  <P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to 0^-} \frac{\sin x}{|x|}
+  = \lim_{x \to 0^-} \frac{\sin x}{-x} = -1
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="214" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3409.png"
+ ALT="$\displaystyle \lim_{x \to 0^-} \frac{\sin x}{\vert x\vert}
+= \lim_{x \to 0^-} \frac{\sin x}{-x} = -1
+$">
+</DIV><P></P>
+Thus <!-- MATH
+ $\frac{\sin x}{|x|}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3373.png"
+ ALT="$ \frac{\sin x}{\vert x\vert}$"></SPAN> has a finite discontinuity at <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>.
+  <P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to 0} \frac{\sin x}{1 - \cos x}
+  = \lim_{x \to 0} \frac{\cos x}{\sin x}
+  = \frac{1}{0} = \infty
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="255" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3410.png"
+ ALT="$\displaystyle \lim_{x \to 0} \frac{\sin x}{1 - \cos x}
+= \lim_{x \to 0} \frac{\cos x}{\sin x}
+= \frac{1}{0} = \infty
+$">
+</DIV><P></P>
+Thus <!-- MATH
+ $\frac{\sin x}{1 - \cos x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3374.png"
+ ALT="$ \frac{\sin x}{1 - \cos x}$"></SPAN> has an infinite discontinuity at <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>.</DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; We use <I CLASS="sans">SAGE</I> to compute 
+<!-- MATH
+ $\lim_{x\rightarrow 0}
+\frac{\cos(x)-1}{x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="111" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3411.png"
+ ALT="$ \lim_{x\rightarrow 0}
+\frac{\cos(x)-1}{x^2}$"></SPAN>.
+
+<P>
+<P>
+<PRE>[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: limit((cos(x)-1)/x^2,x=0)
+-1/2
+sage: limit((-sin(x))/(2*x),x=0)
+-1/2
+sage: limit((-cos(x))/(2),x=0)
+-1/2
+</PRE>
+
+<P>
+This verifies 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x\rightarrow 0}\frac{\cos(x)-1}{x^2}
+=\lim_{x\rightarrow 0}\frac{-\sin(x)}{2x}
+=\lim_{x\rightarrow 0}\frac{-\cos(x)}{2}=-1/2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="391" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3412.png"
+ ALT="$\displaystyle \lim_{x\rightarrow 0}\frac{\cos(x)-1}{x^2}
+=\lim_{x\rightarrow 0}\frac{-\sin(x)}{2x}
+=\lim_{x\rightarrow 0}\frac{-\cos(x)}{2}=-1/2.
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">3</SPAN></B> &nbsp;   Let <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2374.png"
+ ALT="$ d$"></SPAN> be nonzero.
+  <P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="133" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3413.png"
+ ALT="$\displaystyle \lim_{x \to \infty} \frac{a x^2 + b x + c}{d x^2 + e x + f}$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="113" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3414.png"
+ ALT="$\displaystyle = \lim_{x \to \infty} \frac{2 a x + b}{2 d x + e}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3415.png"
+ ALT="$\displaystyle = \lim_{x \to \infty} \frac{2 a}{2 d}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3416.png"
+ ALT="$\displaystyle = \frac{a}{d}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">4</SPAN></B> &nbsp; Consider
+  <P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to 0} \frac{\cos x - 1}{x \sin x}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="102" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3417.png"
+ ALT="$\displaystyle \lim_{x \to 0} \frac{\cos x - 1}{x \sin x}.
+$">
+</DIV><P></P>
+This limit is an indeterminate of the form <!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN>.  Applying
+  L'Hospital's rule we see that limit is equal to
+  <P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to 0} \frac{-\sin x}{x \cos x + \sin x}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="137" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3418.png"
+ ALT="$\displaystyle \lim_{x \to 0} \frac{-\sin x}{x \cos x + \sin x}.
+$">
+</DIV><P></P>
+This limit is again an indeterminate of the form <!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN>.  We apply
+  L'Hospital's rule again.
+  <P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to 0} \frac{- \cos x}{ - x \sin x + 2 \cos x } = - \frac{1}{2}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="201" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3419.png"
+ ALT="$\displaystyle \lim_{x \to 0} \frac{- \cos x}{ - x \sin x + 2 \cos x } = - \frac{1}{2}
+$">
+</DIV><P></P>
+Thus the value of the original limit is <!-- MATH
+ $- \frac{1}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img711.png"
+ ALT="$ -\frac{1}{2}$"></SPAN>.  We could also
+  obtain this result by expanding the functions in Taylor series.
+  <P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="98" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3420.png"
+ ALT="$\displaystyle \lim_{x \to 0} \frac{\cos x - 1}{x \sin x}$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="222" HEIGHT="78" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3421.png"
+ ALT="$\displaystyle = \lim_{x \to 0} \frac{\left( 1 - \frac{x^2}{2} + \frac{x^4}{24} ...
+...s \right) - 1 }{ x \left( x - \frac{x^3}{6} + \frac{x^5}{120} - \cdots \right)}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="187" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3422.png"
+ ALT="$\displaystyle = \lim_{x \to 0} \frac{- \frac{x^2}{2} + \frac{x^4}{24} - \cdots } { x^2 - \frac{x^4}{6} + \frac{x^6}{120} - \cdots }$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="179" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3423.png"
+ ALT="$\displaystyle = \lim_{x \to 0} \frac{- \frac{1}{2} + \frac{x^2}{24} - \cdots } { 1 - \frac{x^2}{6} + \frac{x^4}{120} - \cdots }$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3424.png"
+ ALT="$\displaystyle = - \frac{1}{2}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">5</SPAN></B> &nbsp; We use <I CLASS="sans">SAGE</I> to compute 
+<!-- MATH
+ $\lim_{x\rightarrow 0}
+\frac{\cos(x)-1}{x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="111" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3411.png"
+ ALT="$ \lim_{x\rightarrow 0}
+\frac{\cos(x)-1}{x^2}$"></SPAN>.
+
+<P>
+<P>
+<PRE>[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: limit((cos(x)-1)/x^2,x=0)
+-1/2
+sage: limit((-sin(x))/(2*x),x=0)
+-1/2
+sage: limit((-cos(x))/(2),x=0)
+-1/2
+</PRE>
+
+<P>
+This verifies 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x\rightarrow 0}\frac{\cos(x)-1}{x^2}
+=\lim_{x\rightarrow 0}\frac{-\sin(x)}{2x}
+=\lim_{x\rightarrow 0}\frac{-\cos(x)}{2}=-1/2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="391" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3412.png"
+ ALT="$\displaystyle \lim_{x\rightarrow 0}\frac{\cos(x)-1}{x^2}
+=\lim_{x\rightarrow 0}\frac{-\sin(x)}{2x}
+=\lim_{x\rightarrow 0}\frac{-\cos(x)}{2}=-1/2.
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html2872"
+  HREF="node159.html">Rule for evaluating the indeterminate form <!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN></A>
+<LI><A NAME="tex2html2873"
+  HREF="node160.html">Exercises</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2870"
+  HREF="node159.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2864"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2858"
+  HREF="node157.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2866"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2868"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2871"
+  HREF="node159.html">Rule for evaluating the</A>
+<B> Up:</B> <A NAME="tex2html2865"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2859"
+  HREF="node157.html">Evaluation of a function</A>
+ &nbsp; <B>  <A NAME="tex2html2867"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2869"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

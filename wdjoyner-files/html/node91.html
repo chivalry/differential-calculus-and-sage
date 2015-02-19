@@ -1,0 +1,449 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Solution of equations having multiple roots</TITLE>
+<META NAME="description" CONTENT="Solution of equations having multiple roots">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node92.html">
+<LINK REL="previous" HREF="node90.html">
+<LINK REL="up" HREF="node81.html">
+<LINK REL="next" HREF="node92.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1886"
+  HREF="node92.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1880"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1874"
+  HREF="node90.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1882"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1884"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1887"
+  HREF="node92.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html1881"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1875"
+  HREF="node90.html">Examples</A>
+ &nbsp; <B>  <A NAME="tex2html1883"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1885"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION008100000000000000000">
+Solution of equations having multiple roots</A>
+</H1>
+
+<P>
+Any root which occurs more than once in an equation is 
+called a <I>multiple root</I>. Thus <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1748.png"
+ ALT="$ -2$"></SPAN> are the roots of
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x^4 - 7x^3 + 9x^2 + 27x - 54 = 0;
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="221" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1902.png"
+ ALT="$\displaystyle x^4 - 7x^3 + 9x^2 + 27x - 54 = 0;
+$">
+</DIV><P></P>
+hence <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN> is a multiple root occurring three times.
+<A NAME="13445"></A>
+Evidently this equation may also be written in the form
+<P><!-- MATH
+ \begin{displaymath}
+(x - 3)^3(x + 2) = 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="143" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1903.png"
+ ALT="$\displaystyle (x - 3)^3(x + 2) = 0.
+$">
+</DIV><P></P>
+
+<P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> denote an integral rational function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> having 
+a multiple root <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>, and suppose it occurs <SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1605.png"
+ ALT="$ m$"></SPAN> times. Then we may write
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:B-69"></A><!-- MATH
+ \begin{equation}
+f(x) = (x-a)^m\phi (x),
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="153" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1904.png"
+ ALT="$\displaystyle f(x) = (x-a)^m\phi (x),$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">18</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img254.png"
+ ALT="$ \phi(x)$"></SPAN> is the product of the factors corresponding to all 
+the roots of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> differing from <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>. Differentiating (<A HREF="#eqn:B-69">6.18</A>),
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f'(x) = (x-a)^m\phi '(x) + m\phi (x)(x - a)^{m - 1},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="304" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1905.png"
+ ALT="$\displaystyle f'(x) = (x-a)^m\phi '(x) + m\phi (x)(x - a)^{m - 1},
+$">
+</DIV><P></P>
+or,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:C-69"></A><!-- MATH
+ \begin{equation}
+f'(x) = (x-a)^{m - 1}[(x - a)\phi '(x) + m\phi (x)].
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="301" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1906.png"
+ ALT="$\displaystyle f'(x) = (x-a)^{m - 1}[(x - a)\phi '(x) + m\phi (x)].$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">19</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Therefore <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$ f'(x)$"></SPAN> contains the factor <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1907.png"
+ ALT="$ (x - a)$"></SPAN> repeated <SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1908.png"
+ ALT="$ m - 1$"></SPAN> 
+times and no more; that is, the <I>highest common factor</I> (H.C.F.) 
+of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$ f'(x)$"></SPAN> has <SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1908.png"
+ ALT="$ m - 1$"></SPAN> roots equal to <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>.
+<A NAME="13456"></A>
+
+<P>
+In case <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> has a second multiple root <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1909.png"
+ ALT="$ \beta$"></SPAN> occurring <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img115.png"
+ ALT="$ r$"></SPAN> times, 
+it is evident that the H.C.F. would also contain the factor 
+<!-- MATH
+ $(x -\beta)^{r - 1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1910.png"
+ ALT="$ (x -\beta)^{r - 1}$"></SPAN> and so on for any number of different 
+multiple roots, each occurring once more in <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> than in the H.C.F.
+
+<P>
+We may then state a <I>rule for finding the multiple roots</I> 
+of an equation <SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1911.png"
+ ALT="$ f(x) = 0$"></SPAN> as follows:
+
+<P>
+
+<UL>
+<LI>FIRST STEP. Find <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$ f'(x)$"></SPAN>.
+
+<P>
+</LI>
+<LI>SECOND STEP. Find the H.C.F. of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$ f'(x)$"></SPAN>.
+
+<P>
+</LI>
+<LI>THIRD STEP. Find the roots of the H.C.F. Each different 
+root of the H.C.F. will occur once more in <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> than it does in the H.C.F.
+</LI>
+</UL>
+If it turns out that the H.C.F. does not involve <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, then <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> 
+has no multiple roots and the above process is of no assistance 
+in the solution of the equation, but it may be of interest to know 
+that the equation has no equal, i.e. multiple, roots.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">10</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Solve the equation <!-- MATH
+ $x^3 - 8x^2 + 13x - 6 = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="165" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1912.png"
+ ALT="$ x^3 - 8x^2 + 13x - 6 = 0$"></SPAN>.
+
+<P>
+Solution. Place 	<!-- MATH
+ $f(x) = x^3 - 8x^2 + 13x - 6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="188" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1913.png"
+ ALT="$ f(x) = x^3 - 8x^2 + 13x - 6$"></SPAN>.
+
+<P>
+First step. <!-- MATH
+ $f'(x) 	= 3x^2 - 16x + 13$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="165" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1914.png"
+ ALT="$ f'(x) = 3x^2 - 16x + 13$"></SPAN>.
+
+<P>
+Second step. 	H.C.F. 	= <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.png"
+ ALT="$ x-1$"></SPAN>.
+
+<P>
+Third step. <SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1915.png"
+ ALT="$ x - 1 = 0$"></SPAN>, therefore <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>.
+
+<P>
+Since 1 occurs once as a root in the H.C.F., it will occur twice 
+in the given equation; that is, <SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1916.png"
+ ALT="$ (x - 1)^2$"></SPAN> will occur there as 
+a factor. Dividing <!-- MATH
+ $x^3 - 8x^2 + 13x - 6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1917.png"
+ ALT="$ x^3 - 8x^2 + 13x - 6$"></SPAN> by <SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1916.png"
+ ALT="$ (x - 1)^2$"></SPAN> gives the 
+only remaining factor <SPAN CLASS="MATH"><IMG
+ WIDTH="53" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1918.png"
+ ALT="$ (x - 6)$"></SPAN>, yielding the root <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img720.png"
+ ALT="$ 6$"></SPAN>. The roots 
+of our equation are then <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img720.png"
+ ALT="$ 6$"></SPAN>. Drawing the graph of the function, 
+we see that at the double root <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN> the graph touches the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis
+but does not cross it.
+
+<P>
+Note: Since the first derivative vanishes 
+for every multiple root, it follows that the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis is tangent 
+to the graph at all points corresponding to multiple roots. If a 
+multiple root occurs an even number of times, the graph will not 
+cross the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis at such a point (see Figure <A HREF="#fig:multiple-roots">6.11</A>); 
+if it occurs an odd number of times, the graph will cross.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:multiple-roots"></A><A NAME="13470"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.11:</STRONG>
+plot of <!-- MATH
+ $f(x) = (x-1)^2(x-6)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="162" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$ f(x) = (x-1)^2(x-6)$"></SPAN> illustrating a multiple root.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="158" HEIGHT="113" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1919.png"
+ ALT="\includegraphics[height=2.5cm,width=3.5cm]{multiple-roots.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1886"
+  HREF="node92.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1880"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1874"
+  HREF="node90.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1882"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1884"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1887"
+  HREF="node92.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html1881"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1875"
+  HREF="node90.html">Examples</A>
+ &nbsp; <B>  <A NAME="tex2html1883"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1885"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

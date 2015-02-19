@@ -1,0 +1,357 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Example/Application: Finite Difference Schemes</TITLE>
+<META NAME="description" CONTENT="Example/Application: Finite Difference Schemes">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="previous" HREF="node167.html">
+<LINK REL="up" HREF="node148.html">
+<LINK REL="next" HREF="node169.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html3007"
+  HREF="node169.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html3001"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2997"
+  HREF="node167.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html3003"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html3005"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html3008"
+  HREF="node169.html">Circle of curvature. Center</A>
+<B> Up:</B> <A NAME="tex2html3002"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2998"
+  HREF="node167.html">Application: Using Taylor's Theorem</A>
+ &nbsp; <B>  <A NAME="tex2html3004"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html3006"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION0015160000000000000000">
+Example/Application: Finite Difference Schemes</A>
+</H1>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">16</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
+<I>Suppose you sample a function at the discrete points <!-- MATH
+ $n \Delta x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="36" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3649.png"
+ ALT="$ n \Delta x$"></SPAN>, 
+<!-- MATH
+ $n \in \mathbb{Z}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3650.png"
+ ALT="$ n \in \mathbb{Z}$"></SPAN>.  In Figure&nbsp;<A HREF="#sindata">13.11</A> we sample the function 
+<!-- MATH
+ $f(x) = \sin x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3651.png"
+ ALT="$ f(x) = \sin x$"></SPAN> on the interval <SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3652.png"
+ ALT="$ [-4,4]$"></SPAN> with <!-- MATH
+ $\Delta x = 1/4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3653.png"
+ ALT="$ \Delta x = 1/4$"></SPAN> and 
+plot the data points.  
+</I>
+<P>
+<DIV ALIGN="CENTER"><A NAME="fig:sindata"></A><A NAME="sindata"></A><A NAME="30915"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.11:</STRONG>
+Sine function sampling.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="182" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3654.png"
+ ALT="\includegraphics[height=4cm,width=7cm]{sindata.eps}">
+
+</DIV></TD></TR>
+</TABLE>
+ </TD></TR>
+</TABLE>
+</DIV>
+<P>
+<I>We wish to approximate the derivative of the function on the grid points
+using only the value of the function on those discrete points.  From
+the definition of the derivative, one is lead to the formula
+</I>
+<P><P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="first_order_scheme"></A><!-- MATH
+ \begin{equation}
+f'(x) \approx \frac{f(x+\Delta x) - f(x)}{\Delta x}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="193" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3655.png"
+ ALT="$\displaystyle f'(x) \approx \frac{f(x+\Delta x) - f(x)}{\Delta x}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">21</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+<I>Taylor's theorem states that
+  </I><P><!-- MATH
+ \begin{displaymath}
+f(x + \Delta x) = f(x) + \Delta x f'(x) + \frac{\Delta x^2}{2} f''(\xi).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="302" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3656.png"
+ ALT="$\displaystyle f(x + \Delta x) = f(x) + \Delta x f'(x) + \frac{\Delta x^2}{2} f''(\xi).
+$">
+</DIV><P></P><I>
+Substituting this expression into our formula for approximating the derivative
+we obtain
+</I>
+<P><P><!-- MATH
+ \begin{displaymath}
+\frac{f(x+\Delta x) - f(x)}{\Delta x} = \frac{f(x) + \Delta x f'(x)
+    + \frac{\Delta x^2}{2} f''(\xi) - f(x) }{\Delta x}
+  = f'(x) + \frac{\Delta x}{2} f''(\xi).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="544" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3657.png"
+ ALT="$\displaystyle \frac{f(x+\Delta x) - f(x)}{\Delta x} = \frac{f(x) + \Delta x f'(...
+...lta x^2}{2} f''(\xi) - f(x) }{\Delta x}
+= f'(x) + \frac{\Delta x}{2} f''(\xi).
+$">
+</DIV><P></P><I>
+Thus we see that the error in our approximation of the first derivative is
+<!-- MATH
+ $\frac{\Delta x}{2} f''(\xi)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3658.png"
+ ALT="$ \frac{\Delta x}{2} f''(\xi)$"></SPAN>.  Since the error has a linear factor of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN>, we call this a first order accurate method.  Equation
+&nbsp;<A HREF="#first_order_scheme">13.21</A> is called the 
+<SPAN  CLASS="textit">forward difference scheme</SPAN> for calculating the 
+first derivative.  Figure&nbsp;<A HREF="#fwdsin">13.12</A> shows 
+a plot of the value of this scheme for the function <!-- MATH
+ $f(x) = \sin x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3651.png"
+ ALT="$ f(x) = \sin x$"></SPAN> and 
+<!-- MATH
+ $\Delta x = 1/4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3653.png"
+ ALT="$ \Delta x = 1/4$"></SPAN>.  The first derivative of the function <!-- MATH
+ $f'(x) = \cos x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3659.png"
+ ALT="$ f'(x) = \cos x$"></SPAN> 
+is shown for comparison.
+</I>
+<P>
+<DIV ALIGN="CENTER"><A NAME="fig:fwdsin"></A><A NAME="fwdsin"></A><A NAME="30945"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.12:</STRONG>
+Forward Difference Scheme Approximation of the Derivative.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="317" HEIGHT="182" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3660.png"
+ ALT="\includegraphics[height=4cm,width=7cm]{fwdsin.eps}">
+
+</DIV></TD></TR>
+</TABLE>
+ </TD></TR>
+</TABLE>
+</DIV>
+<P>
+<I>Another scheme for approximating the first derivative is the 
+<SPAN  CLASS="textit">centered difference scheme</SPAN>,
+</I>
+<P><P><!-- MATH
+ \begin{displaymath}
+f'(x) \approx \frac{f(x+\Delta x) - f(x-\Delta x)}{2 \Delta x}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="234" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3661.png"
+ ALT="$\displaystyle f'(x) \approx \frac{f(x+\Delta x) - f(x-\Delta x)}{2 \Delta x}.
+$">
+</DIV><P></P><I>
+Expanding the numerator using Taylor's theorem,
+</I>
+<P><P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="173" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3662.png"
+ ALT="$\displaystyle \frac{f(x+\Delta x) - f(x-\Delta x)}{2 \Delta x}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="643" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3663.png"
+ ALT="$\displaystyle \qquad= \frac{f(x) + \Delta x f'(x) + \frac{\Delta x^2}{2} f''(x)...
+...) - \frac{\Delta x^2}{2} f''(x) + \frac{\Delta x^3}{6} f'''(\psi) }{2 \Delta x}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="264" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3664.png"
+ ALT="$\displaystyle \qquad= f'(x) + \frac{\Delta x^2}{12}(f'''(\xi) + f'''(\psi)).$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P><I>
+The error in the approximation is quadratic in <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN>.  Therefore
+this is a second order accurate scheme.
+Below is a plot of the derivative of the function and the 
+value of this scheme for the function <!-- MATH
+ $f(x) = \sin x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3651.png"
+ ALT="$ f(x) = \sin x$"></SPAN> and <!-- MATH
+ $\Delta x = 1/4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3653.png"
+ ALT="$ \Delta x = 1/4$"></SPAN>.
+</I>
+<P>
+<DIV ALIGN="CENTER"><A NAME="fig:ctrsin"></A><A NAME="ctrsin"></A><A NAME="30974"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.13:</STRONG>
+Centered Difference Scheme Approximation of the Derivative.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="317" HEIGHT="182" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3665.png"
+ ALT="\includegraphics[height=4cm,width=7cm]{ctrsin.eps}">
+
+</DIV></TD></TR>
+</TABLE>
+ </TD></TR>
+</TABLE>
+</DIV>
+<P>
+<I>Notice how the centered difference scheme gives a better approximation of the 
+derivative than the forward difference scheme.</I></DIV><P></P>
+
+<P>
+
+<P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html3007"
+  HREF="node169.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html3001"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2997"
+  HREF="node167.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html3003"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html3005"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html3008"
+  HREF="node169.html">Circle of curvature. Center</A>
+<B> Up:</B> <A NAME="tex2html3002"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2998"
+  HREF="node167.html">Application: Using Taylor's Theorem</A>
+ &nbsp; <B>  <A NAME="tex2html3004"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html3006"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

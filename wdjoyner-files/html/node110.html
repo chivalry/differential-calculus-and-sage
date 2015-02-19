@@ -1,0 +1,629 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction</TITLE>
+<META NAME="description" CONTENT="Introduction">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node111.html">
+<LINK REL="previous" HREF="node109.html">
+<LINK REL="up" HREF="node109.html">
+<LINK REL="next" HREF="node111.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2166"
+  HREF="node111.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2160"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2154"
+  HREF="node109.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2162"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2164"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2167"
+  HREF="node111.html">Increasing and decreasing functions</A>
+<B> Up:</B> <A NAME="tex2html2161"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2155"
+  HREF="node109.html">Maxima, minima and inflection</A>
+ &nbsp; <B>  <A NAME="tex2html2163"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2165"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001010000000000000000"></A>
+<A NAME="sec:79"></A>
+<BR>
+Introduction
+</H1>
+
+<P>
+A great many practical problems occur where we have to 
+deal with functions of such a nature that they have a 
+greatest (maximum) value or a least 
+(minimum) value<A NAME="tex2html94"
+  HREF="footnode.html#foot18427"><SUP><SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>and it is very important to know what particular value of the 
+variable gives such a value of the function. 
+
+<P>
+<P>
+<DIV><A NAME="ex:circle"><B>Example  <SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></B></A> &nbsp; For instance, suppose that it is required to find the dimensions 
+of the rectangle of greatest area that can be inscribed 
+in a circle of radius <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> inches. Consider the circle in 
+Figure <A HREF="#fig:circle-example">8.1</A>:
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:circle-example"></A><A NAME="18438"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.1:</STRONG>
+A rectangle with circumscribed circle.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="270" HEIGHT="271" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2277.png"
+ ALT="% latex2html id marker 51262
+\includegraphics[height=6cm,width=6cm]{circle-example3.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Inscribe any rectangle, as BCDE.
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2278.png"
+ ALT="$ CD = x$"></SPAN>; then <!-- MATH
+ $DE = \sqrt{100 - x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="125" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2279.png"
+ ALT="$ DE = \sqrt{100 - x^2}$"></SPAN>, and the area of the 
+rectangle is evidently
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+A = A(x) = x\sqrt{100 - x^2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="181" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2280.png"
+ ALT="$\displaystyle A = A(x) = x\sqrt{100 - x^2}.
+$">
+</DIV><P></P>
+That a rectangle of maximum area must exist may be seen as follows: 
+Let the base <SPAN CLASS="MATH"><IMG
+ WIDTH="31" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1307.png"
+ ALT="$ CD$"></SPAN> (<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2281.png"
+ ALT="$ = x$"></SPAN>) increase to <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> inches (the diameter); 
+then the altitude <SPAN CLASS="MATH"><IMG
+ WIDTH="31" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2282.png"
+ ALT="$ DE$"></SPAN> (<!-- MATH
+ $= \sqrt{100 - x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2283.png"
+ ALT="$ = \sqrt{100 - x^2}$"></SPAN>) will decrease to zero 
+and the area will become zero. Now let the base decrease to zero; 
+then the altitude will increase to <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> inches and the area will 
+again become zero. It is therefore intuitionally evident that there 
+exists a greatest rectangle. By a careful study of the figure 
+we might suspect that when the rectangle becomes a square its 
+area would be the greatest, but this would at best be mere 
+guesswork. A better way would evidently be to plot the graph 
+of the function <SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2284.png"
+ ALT="$ A=A(x)$"></SPAN> and note its behavior. To aid us in drawing 
+the graph of <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2285.png"
+ ALT="$ A(x)$"></SPAN>, we observe that
+
+<P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>from the nature of the problem it is 
+evident that <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$ A$"></SPAN> must both be positive; and
+
+<P>
+</DD>
+<DT>(b)</DT>
+<DD>the values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> range from zero to <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> inclusive.
+</DD>
+</DL>
+Now construct a table of values and draw the graph.
+What do we learn from the graph?
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:circle-example2"></A><A NAME="18453"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.2:</STRONG>
+The area of a rectangle with fixed circumscribed circle.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2286.png"
+ ALT="% latex2html id marker 51301
+\includegraphics[height=4cm,width=7cm]{circle-example2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+(a) If the rectangle is carefully drawn, we may find quite accurately the area 
+of the rectangle corresponding to any value <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> by measuring 
+the length of the corresponding ordinate. Thus,
+when 	<!-- MATH
+ $x = OM = 3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2287.png"
+ ALT="$ x = OM = 3$"></SPAN> inches,
+then 	<!-- MATH
+ $A = MP = 28.6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2288.png"
+ ALT="$ A = MP = 28.6$"></SPAN> square inches;
+and when 	<!-- MATH
+ $x = ON = \frac{9}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="93" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2289.png"
+ ALT="$ x = ON = \frac{9}{2}$"></SPAN> inches,
+then 	<!-- MATH
+ $A = NQ \approx 39.8$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2290.png"
+ ALT="$ A = NQ \approx 39.8$"></SPAN> sq. in. (found by measurement).
+
+<P>
+(b) There is one horizontal tangent (RS). The ordinate TH from its 
+point of contact T is greater than any other ordinate. Hence this 
+discovery: One of the inscribed rectangles has evidently a 
+greater area than any of the others. In other words, we may 
+infer from this that the function defined by <SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2284.png"
+ ALT="$ A=A(x)$"></SPAN> has a maximum 
+value. We cannot find this value (= HT) exactly by measurement, 
+but it is very easy to find, using Calculus methods. We 
+observed that at T the tangent was horizontal; hence the 
+slope will be zero at that point (Example <A HREF="node82.html#ex:64">6.1.1</A>). To find the abscissa of T we then find the first 
+derivative of <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2285.png"
+ ALT="$ A(x)$"></SPAN>, place it equal to zero, and solve for <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>. Thus
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\ A 	&= x\sqrt{100 - x^2},\\
+  \frac{dA}{dx} &=\ \frac{100 - 2 x^2}{\sqrt{100 - x^2}},\\
+  \frac{100 - 2 x^2}{\sqrt{100 - x^2}} 	&=\ 0.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="174" HEIGHT="86" BORDER="0"
+ SRC="img2291.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\ A &amp;= x\sqrt{100 - x^2},\\
+\frac{dA}{dx...
+...}},\\
+\frac{100 - 2 x^2}{\sqrt{100 - x^2}} &amp;=\ 0.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+Solving, <!-- MATH
+ $x 	=\ 5\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2292.png"
+ ALT="$ x =\ 5\sqrt{2}$"></SPAN>.
+Substituting back, we get <!-- MATH
+ $DE 	= \sqrt{100 - x^2} = 5\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="175" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2293.png"
+ ALT="$ DE = \sqrt{100 - x^2} = 5\sqrt{2}$"></SPAN>.
+Hence the rectangle of maximum area inscribed in the circle is 
+a square of area
+<!-- MATH
+ $A = CD \times DE = 5\sqrt{2} \times 5\sqrt{2} = 50$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="246" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2294.png"
+ ALT="$ A = CD \times DE = 5\sqrt{2} \times 5\sqrt{2} = 50$"></SPAN> square inches. 
+The length of HT is therefore <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2295.png"
+ ALT="$ 50$"></SPAN>.
+
+<P></DIV><P></P>
+
+<P>
+<P>
+<DIV><A NAME="ex:box"><B>Example  <SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN></B></A> &nbsp; A wooden box is to be built to contain <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2296.png"
+ ALT="$ 108$"></SPAN> cu. ft. It 
+is to have an open top and a square base. What must be its 
+dimensions in order that the amount of material required 
+shall be a minimum; that is, what dimensions will make the 
+cost the least?
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:volume-box"></A><A NAME="18484"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.3:</STRONG>
+A box with square <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$ x\times x$"></SPAN> base, height <SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$ y=108/x^2$"></SPAN>, 
+and fixed volume.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="226" HEIGHT="271" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2297.png"
+ ALT="\includegraphics[height=6cm,width=5cm]{volume-box3b.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> denote the length of side of square base in feet,
+and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> denote the height of box.
+Since the volume of the box is given, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> may be found in terms of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>. Thus
+<!-- MATH
+ ${\rm volume} =\ x^2 y\ =\ 108$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="161" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2298.png"
+ ALT="$ {\rm volume} =\ x^2 y\ =\ 108$"></SPAN>,
+so <!-- MATH
+ $y\ =\ \frac{108}{x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2299.png"
+ ALT="$ y\ =\ \frac{108}{x^2}$"></SPAN>.
+We may now express the number (= <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img500.png"
+ ALT="$ M$"></SPAN>) of square feet of lumber required 
+as a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> as follows: 
+
+<P>
+<DIV ALIGN="CENTER">
+area of base = 	<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img377.png"
+ ALT="$ x^2$"></SPAN> sq. ft.,
+
+<BR>
+area of four sides = <!-- MATH
+ $4xy\ =\ \frac{432}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2300.png"
+ ALT="$ 4xy\ =\ \frac{432}{x}$"></SPAN> sq. ft. 
+
+</DIV>
+Hence
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+M = M(x)	=\ x^2 + \frac{432}{x}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="171" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2301.png"
+ ALT="$\displaystyle M = M(x) =\ x^2 + \frac{432}{x}
+$">
+</DIV><P></P>
+is a formula giving the number of square feet required in 
+any such box having a capacity of <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2296.png"
+ ALT="$ 108$"></SPAN> cu. ft. 
+Draw a graph of <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2302.png"
+ ALT="$ M(x)$"></SPAN>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:volume-box2"></A><A NAME="19187"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.4:</STRONG>
+<I CLASS="sans">SAGE</I> plot of <!-- MATH
+ $y=x^2 + \frac{432}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="93" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$ y=x^2 + \frac {432}{x}$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$ 1&lt;x&lt;10$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2303.png"
+ ALT="\includegraphics[height=4cm,width=7cm]{volume-box2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+What do we learn from the graph?
+
+<P>
+(a) If the box is carefully drawn, we may measure the ordinate corresponding 
+to any length (<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2281.png"
+ ALT="$ = x$"></SPAN>) of the side of the square base and so determine 
+the number of square feet of lumber required.
+
+<P>
+(b) There is one horizontal tangent (RS). The ordinate from its 
+point of contact T is less than any other ordinate. 
+Hence this discovery: One of the boxes evidently takes less lumber 
+than any of the others. In other words, we may infer that the 
+function defined by <SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2304.png"
+ ALT="$ M=M(x)$"></SPAN> has a minimum value. Let us find this 
+point on the graph exactly, using our Calculus. Differentiating <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2302.png"
+ ALT="$ M(x)$"></SPAN>
+to get the slope at any point, we have
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dM}{dx} = 2x - \frac{432}{x^2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="124" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2305.png"
+ ALT="$\displaystyle \frac{dM}{dx} = 2x - \frac{432}{x^2}.
+$">
+</DIV><P></P>
+At the lowest point T the slope will be zero. Hence
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+2x - \frac{432}{x^2} = 0;
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="102" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2306.png"
+ ALT="$\displaystyle 2x - \frac{432}{x^2} = 0;
+$">
+</DIV><P></P>
+that is, when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2307.png"
+ ALT="$ x = 6$"></SPAN> the least amount of lumber will be needed.
+
+<P>
+Substituting in <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2302.png"
+ ALT="$ M(x)$"></SPAN>, we see that this is <SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2308.png"
+ ALT="$ M = 108$"></SPAN> sq. ft.
+
+<P>
+The fact that a least value of <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img500.png"
+ ALT="$ M$"></SPAN> exists is also shown by the 
+following reasoning. Let the base increase from a very small square to 
+a very large one. In the former case the height must be very great 
+and therefore the amount of lumber required will be large. In the 
+latter case, while the height is small, the base will take a 
+great deal of lumber. Hence <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img500.png"
+ ALT="$ M$"></SPAN> varies from a large value, grows less, 
+then increases again to another large value. It follows, then, 
+that the graph must have a ``lowest'' point corresponding to the 
+dimensions which require the least amount of lumber, and therefore 
+would involve the least cost.
+
+<P>
+Here is how to compute the critical points in <I CLASS="sans">SAGE</I>:
+
+<P>
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: x = var("x")
+sage: f = x^2 + 432/x
+sage: solve(f.diff(x)==0,x)
+[x == 3*sqrt(3)*I - 3, x == -3*sqrt(3)*I - 3, x == 6]
+</PRE>
+<P>
+This says that <!-- MATH
+ $(x^2 + 432/x)'=0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="127" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2309.png"
+ ALT="$ (x^2 + 432/x)'=0$"></SPAN> has three roots, but only one
+real root - the one reported above at <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2307.png"
+ ALT="$ x = 6$"></SPAN>.</DIV><P></P>
+
+<P>
+We will now proceed to the treatment in detail of the subject 
+of maxima and minima.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2166"
+  HREF="node111.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2160"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2154"
+  HREF="node109.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2162"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2164"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2167"
+  HREF="node111.html">Increasing and decreasing functions</A>
+<B> Up:</B> <A NAME="tex2html2161"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2155"
+  HREF="node109.html">Maxima, minima and inflection</A>
+ &nbsp; <B>  <A NAME="tex2html2163"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2165"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

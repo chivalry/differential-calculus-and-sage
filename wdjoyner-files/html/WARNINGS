@@ -1,0 +1,40 @@
+No implementation found for style `fancyvrb'
+No implementation found for style `moreverb'
+No implementation found for style `helvet'
+No implementation found for style `fancyheadings'
+No implementation found for style `amsbsy'
+No implementation found for style `amsthm'
+No implementation found for style `amsgen'
+No implementation found for style `rotating'
+No implementation found for style `graphicx'
+No implementation found for style `texdraw'
+No implementation found for style `hyperref'
+No implementation found for style `url'
+
+? brace missing for \
+
+Substitution of arg to newlabelxx delayed.
+
+No number for "Thefunction<SPANCLASS="MATH">$y=arctan(1/x)$</SPAN>."
+
+No number for "Thefunction<SPANCLASS="MATH">$frac{sin(x)}{x}$</SPAN>."
+
+No number for "Theinversesine<SPANCLASS="MATH">$sin^{-1}x$</SPAN>using<ICLASS="sans">SAGE</I>."
+
+No number for "Asinglebranchofthefunction<SPANCLASS="MATH">$f(x)=arcsin(x)$</SPAN>."
+
+No number for "Asinglebranchofthefunction<SPANCLASS="MATH">$f(x)=arccos(x)$</SPAN>."
+
+No number for "Theinversecosine<SPANCLASS="MATH">$cos^{-1}x$</SPAN>using<ICLASS="sans">SAGE</I>."
+
+No number for "Theinversetangent<SPANCLASS="MATH">$tan^{-1}x$</SPAN>using<ICLASS="sans">SAGE</I>."
+
+No number for "Thestandardbranchof<SPANCLASS="MATH">$arctanx$</SPAN>using<ICLASS="sans">SAGE</I>."
+
+No number for "Theinversesecant<SPANCLASS="MATH">$sec^{-1}x$</SPAN>using<ICLASS="sans">SAGE</I>."
+
+No number for "<ICLASS="sans">SAGE</I>plotof<SPANCLASS="MATH">$y=xcos(x)$</SPAN>."
+
+No number for "<SPANCLASS="MATH">$frac{cos(x)}{x}$</SPAN>."
+
+No number for "Thefunctions<SPANCLASS="MATH">$frac{sinx}{x}$</SPAN>,<SPANCLASS="MATH"></SPAN>and<SPANCLASS="MATH"></SPAN>."

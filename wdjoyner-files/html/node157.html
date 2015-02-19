@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Evaluation of a function taking on an indeterminate form</TITLE>
+<META NAME="description" CONTENT="Evaluation of a function taking on an indeterminate form">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node158.html">
+<LINK REL="previous" HREF="node155.html">
+<LINK REL="up" HREF="node148.html">
+<LINK REL="next" HREF="node158.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2856"
+  HREF="node158.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2850"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2844"
+  HREF="node156.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2852"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2854"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2857"
+  HREF="node158.html">Evaluation of the indeterminate</A>
+<B> Up:</B> <A NAME="tex2html2851"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2845"
+  HREF="node156.html">.</A>
+ &nbsp; <B>  <A NAME="tex2html2853"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2855"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001580000000000000000"></A>
+<A NAME="sec:110"></A>
+<BR>
+Evaluation of a function taking on an indeterminate form
+</H1>
+
+<P>
+If when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN> the function <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> assumes an indeterminate form, then
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x = a} f(x)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="62" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3380.png"
+ ALT="$\displaystyle \lim_{x = a} f(x)
+$">
+</DIV><P></P>
+is taken as the value of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>.
+The calculation of this limiting value is called <I>evaluating the indeterminate form</I>.
+
+<P>
+The assumption of this limiting value makes <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> continuous for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>. 
+This agrees with the theorem under Case II [&#167;<A HREF="node24.html#sec:18">3.6</A>], and also with our 
+practice in Chapter <A HREF="node18.html#ch:3">3</A>, where several functions assuming 
+the indeterminate form 
+<!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN>
+were evaluated. Thus, for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN> the function 
+<!-- MATH
+ $\frac{x^2 - 4}{x - 2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3381.png"
+ ALT="$ \frac{x^2 - 4}{x - 2}
+$"></SPAN> 
+assumes the form 
+<!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN>
+but
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to 2} \frac{x^2 - 4}{x - 2} = 4.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="114" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3382.png"
+ ALT="$\displaystyle \lim_{x \to 2} \frac{x^2 - 4}{x - 2} = 4.
+$">
+</DIV><P></P>
+Hence <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> is taken as the value of the function for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>. 
+Let us now illustrate graphically the fact that if we assume <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> as 
+the value of the function for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, then the function is continuous for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>.
+Let 
+<!-- MATH
+ $y = \frac{x^2 - 4}{x - 2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3383.png"
+ ALT="$ y = \frac{x^2 - 4}{x - 2}
+$"></SPAN>
+This equation may also be written in the form
+<!-- MATH
+ $y(x-2)= (x-2)(x + 2)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="181" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3384.png"
+ ALT="$ y(x-2)= (x-2)(x + 2)$"></SPAN>; or <!-- MATH
+ $(x-2)(y-x-2)= 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="159" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3385.png"
+ ALT="$ (x-2)(y-x-2)= 0$"></SPAN>.
+Placing each factor separately equal to zero, we have
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, and <SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3386.png"
+ ALT="$ y = x + 2$"></SPAN>. Also, when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, we get <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3387.png"
+ ALT="$ y=4$"></SPAN>.
+
+<P>
+In plotting, the loci of these equations are found to be two lines. 
+Since there are infinitely many points on a line, it is clear that when 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, the value of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> (or the function) may be taken as any number 
+whatever. When <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> is different from <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN>, it is seen from the 
+graph of the function that the corresponding value of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> 
+(or the function) is always found from
+<SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3386.png"
+ ALT="$ y = x + 2$"></SPAN>,
+which we saw was also the limiting value of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> (or the function) for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>.
+It is evident from geometrical considerations that if we assume <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> 
+as the value of the function for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, then the function is continuous for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>.
+
+<P>
+Similarly, several of the examples given in Chapter <A HREF="node18.html#ch:3">3</A> illustrate 
+how the limiting values of many functions assuming indeterminate forms 
+may be found by employing suitable algebraic or trigonometric transformations, 
+and how in general these limiting values make the corresponding functions 
+continuous at the points in question. The most general methods, however, 
+for evaluating indeterminate forms depend on differentiation.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2856"
+  HREF="node158.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2850"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2844"
+  HREF="node156.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2852"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2854"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2857"
+  HREF="node158.html">Evaluation of the indeterminate</A>
+<B> Up:</B> <A NAME="tex2html2851"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2845"
+  HREF="node156.html">.</A>
+ &nbsp; <B>  <A NAME="tex2html2853"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2855"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

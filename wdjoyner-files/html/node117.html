@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Points of inflection</TITLE>
+<META NAME="description" CONTENT="Points of inflection">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node118.html">
+<LINK REL="previous" HREF="node116.html">
+<LINK REL="up" HREF="node109.html">
+<LINK REL="next" HREF="node118.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2264"
+  HREF="node118.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2258"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2252"
+  HREF="node116.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2260"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2262"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2265"
+  HREF="node118.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html2259"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2253"
+  HREF="node116.html">Problems</A>
+ &nbsp; <B>  <A NAME="tex2html2261"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2263"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001080000000000000000"></A>
+<A NAME="sec:85"></A>
+<BR>
+Points of inflection
+</H1>
+
+<P>
+<P>
+<DIV><B>Definition  <SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; <I>Points of inflection</I> separate arcs concave upwards from arcs 
+concave downwards. They may also be defined as points where
+
+<P>
+(a) <!-- MATH
+ $\frac{d^2 y}{dx^2} = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2640.png"
+ ALT="$ \frac{d^2 y}{dx^2} = 0$"></SPAN> and <!-- MATH
+ $\frac{d^2 y}{dx^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2193.png"
+ ALT="$ \frac{d^2 y}{dx^2}$"></SPAN> changes sign,
+
+<P>
+or 
+
+<P>
+(b) <!-- MATH
+ $\frac{d^2 x}{dy^2} = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2641.png"
+ ALT="$ \frac{d^2 x}{dy^2} = 0$"></SPAN> and <!-- MATH
+ $\frac{d^2 x}{dy^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2642.png"
+ ALT="$ \frac{d^2 x}{dy^2}$"></SPAN> changes sign.</DIV><P></P>
+
+<P>
+Thus, if a curve <SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img568.png"
+ ALT="$ y = f(x)$"></SPAN> changes from concave upwards to concave 
+downwards at a point, or the reverse, then such a point 
+is called a <I>point of inflection</I>.
+<A NAME="19078"></A>
+
+<P>
+From the discussion of &#167;<A HREF="node115.html#sec:84">8.6</A>, it follows at once that where the curve is concave up, <!-- MATH
+ $f''(x) = +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2643.png"
+ ALT="$ f''(x) = +$"></SPAN>, 
+and where the curve is concave down, <!-- MATH
+ $f''(x) = -$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2644.png"
+ ALT="$ f''(x) = -$"></SPAN>. 
+In order to change sign it must pass through the value 
+zero<A NAME="tex2html115"
+  HREF="footnode.html#foot19229"><SUP><SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">8</SPAN></SUP></A>;
+hence we have:
+
+<P>
+<P>
+<DIV><A NAME="lemma:85-23"><B>Lemma  <SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">1</SPAN></B></A> &nbsp; At points of inflection, <!-- MATH
+ $f''(x) = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2353.png"
+ ALT="$ f''(x) = 0$"></SPAN><I>. </I></DIV><P></P>
+
+<P>
+Solving the equation resulting from Lemma <A HREF="#lemma:85-23">8.8.1</A>
+gives the abscissas of the points of inflection. To determine the 
+direction of curving or direction of bending in the vicinity of a 
+point of inflection, test <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2349.png"
+ ALT="$ f''(x)$"></SPAN> for values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, first a trifle 
+less and then a trifle greater than the abscissa at that point.
+
+<P>
+If <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2349.png"
+ ALT="$ f''(x)$"></SPAN> changes sign, we have a point of inflection, and the 
+signs obtained determine if the curve is concave upwards or concave 
+downwards in the neighborhood of each point of inflection.
+
+<P>
+The student should observe that near a point where the curve 
+is concave upwards the curve lies above the tangent, and at a 
+point where the curve is concave downwards the curve lies below the 
+tangent. At a point of inflection the tangent evidently crosses the curve.
+
+<P>
+Following is a <I>rule for finding points of inflection</I> of 
+the curve whose equation is <SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img568.png"
+ ALT="$ y = f(x)$"></SPAN>. This rule includes also 
+directions for examining the direction of curvature of the curve 
+in the neighborhood of each point of inflection.
+
+<P>
+
+<UL>
+<LI>FIRST STEP. Find <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2349.png"
+ ALT="$ f''(x)$"></SPAN>.
+
+<P>
+</LI>
+<LI>SECOND STEP. Set <!-- MATH
+ $f''(x) = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2353.png"
+ ALT="$ f''(x) = 0$"></SPAN>, and solve the resulting equation for real roots.
+
+<P>
+</LI>
+<LI>THIRD STEP. Write <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2349.png"
+ ALT="$ f''(x)$"></SPAN> in factor form.
+
+<P>
+</LI>
+<LI>FOURTH STEP. Test <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2349.png"
+ ALT="$ f''(x)$"></SPAN> for values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, first a trifle less and 
+then a trifle greater than each root found in the second step. 
+If <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2349.png"
+ ALT="$ f''(x)$"></SPAN> changes sign, we have a point of inflection.
+</LI>
+</UL>
+
+<P>
+When <!-- MATH
+ $f''(x) = +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2643.png"
+ ALT="$ f''(x) = +$"></SPAN>, the curve is concave upwards<A NAME="tex2html116"
+  HREF="footnode.html#foot19089"><SUP><SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">9</SPAN></SUP></A>.
+
+<P>
+When <!-- MATH
+ $f''(x) = -$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2644.png"
+ ALT="$ f''(x) = -$"></SPAN>, the curve is concave downwards.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2264"
+  HREF="node118.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2258"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2252"
+  HREF="node116.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2260"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2262"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2265"
+  HREF="node118.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html2259"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2253"
+  HREF="node116.html">Problems</A>
+ &nbsp; <B>  <A NAME="tex2html2261"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2263"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

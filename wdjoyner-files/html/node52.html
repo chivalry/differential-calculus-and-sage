@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differentiation of a quotient</TITLE>
+<META NAME="description" CONTENT="Differentiation of a quotient">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node53.html">
+<LINK REL="previous" HREF="node51.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node53.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1322"
+  HREF="node53.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1316"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1310"
+  HREF="node51.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1318"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1320"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1323"
+  HREF="node53.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html1317"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1311"
+  HREF="node51.html">Differentiation of a function</A>
+ &nbsp; <B>  <A NAME="tex2html1319"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1321"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00790000000000000000">
+Differentiation of a quotient</A>
+</H1>
+
+<P>
+Let <!-- MATH
+ $y 	= \frac{u}{v} 	v \ne 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img807.png"
+ ALT="$ y = \frac{u}{v} v \ne 0$"></SPAN>.
+By the General Rule,
+
+<P>
+
+<UL>
+<LI>FIRST STEP. <!-- MATH
+ $y + \Delta y 	= \frac{u + \Delta u}{v + \Delta v}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img808.png"
+ ALT="$ y + \Delta y = \frac{u + \Delta u}{v + \Delta v}$"></SPAN>.
+</LI>
+<LI>SECOND STEP. <!-- MATH
+ $\Delta y 	= \frac{u + \Delta u}{v \Delta v} - \frac{u}{v} = \frac{v \cdot \Delta u - u \cdot \Delta v}{v(v + \Delta v)}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="209" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img809.png"
+ ALT="$ \Delta y = \frac{u + \Delta u}{v \Delta v} - \frac{u}{v} = \frac{v \cdot \Delta u - u \cdot \Delta v}{v(v + \Delta v)}$"></SPAN>.
+</LI>
+<LI>THIRD STEP. <!-- MATH
+ $\frac{\Delta y}{\Delta x} 	= \frac{v\frac{\Delta u}{\Delta x} - u\frac{\Delta v}{\Delta x}}{v(v + \Delta v)}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="113" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img810.png"
+ ALT="$ \frac{\Delta y}{\Delta x} = \frac{v\frac{\Delta u}{\Delta x} - u\frac{\Delta v}{\Delta x}}{v(v + \Delta v)}$"></SPAN>.
+</LI>
+<LI>FOURTH STEP. <!-- MATH
+ $\frac{dy}{dx} 	= \frac{v\frac{du}{dx} - u\frac{dv}{dx}}{v^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="104" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img811.png"
+ ALT="$ \frac{dy}{dx} = \frac{v\frac{du}{dx} - u\frac{dv}{dx}}{v^2}$"></SPAN>.
+[Applying Theorems <A HREF="node26.html#thrm:II-20">3.8.2</A> and <A HREF="node26.html#thrm:III-20">3.8.3</A>]
+</LI>
+</UL>
+Therefore, 
+<!-- MATH
+ $\frac{d}{dx} \left ( \frac{u}{v} \right )
+\frac{v\frac{du}{dx} - u\frac{dv}{dx}}{v^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img812.png"
+ ALT="$ \frac{d}{dx} \left ( \frac{u}{v} \right )
+\frac{v\frac{du}{dx} - u\frac{dv}{dx}}{v^2}$"></SPAN>
+(equation (VII) above). 
+<P>
+<I>The derivative of a fraction is equal to the denominator 
+times the derivative of the numerator, minus the numerator 
+times the derivative of the denominator, all divided by the 
+square of the denominator.</I>
+
+<P>
+When the denominator is constant, set <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img813.png"
+ ALT="$ v = c$"></SPAN> in (VII), giving
+(VIIa)
+<!-- MATH
+ $\frac{d}{dx} \left ( \frac{u}{c} \right )
+= \frac{\frac{du}{dx}}{c}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img744.png"
+ ALT="$ \frac{d}{dx} \left ( \frac{u}{c} \right ) = \frac{\frac{du}{dx}}{c}$"></SPAN>.
+[Since <!-- MATH
+ $\frac{dv}{dx} = \frac{dc}{dx} = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img814.png"
+ ALT="$ \frac{dv}{dx} = \frac{dc}{dx} = 0$"></SPAN>.]
+We may also get (VIIa) from (IV) as follows:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d}{dx} \left ( \frac{u}{c} \right )
+= \frac{1}{c} \frac{du}{dx} = \frac{\frac{du}{dx}}{c}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="162" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img815.png"
+ ALT="$\displaystyle \frac{d}{dx} \left ( \frac{u}{c} \right )
+= \frac{1}{c} \frac{du}{dx} = \frac{\frac{du}{dx}}{c}.
+$">
+</DIV><P></P>
+<I>The derivative of the quotient of a function by a constant 
+is equal to the derivative of the function divided by the constant.</I>
+
+<P>
+All explicit algebraic functions of one independent variable 
+may be differentiated by following the rules we have deduced so far.
+
+<P>
+<BR><HR>
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

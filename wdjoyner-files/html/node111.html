@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Increasing and decreasing functions</TITLE>
+<META NAME="description" CONTENT="Increasing and decreasing functions">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node112.html">
+<LINK REL="previous" HREF="node110.html">
+<LINK REL="up" HREF="node109.html">
+<LINK REL="next" HREF="node112.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2180"
+  HREF="node112.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2174"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2168"
+  HREF="node110.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2176"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2178"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2181"
+  HREF="node112.html">Tests for determining when</A>
+<B> Up:</B> <A NAME="tex2html2175"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2169"
+  HREF="node110.html">Introduction</A>
+ &nbsp; <B>  <A NAME="tex2html2177"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2179"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001020000000000000000">
+Increasing and decreasing functions</A>
+</H1>
+<A NAME="tex2html99"
+  HREF="footnode.html#foot18517"><SUP><SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">2</SPAN></SUP></A>
+<P>
+A function is said to be <I>increasing</I> when it increases as 
+the variable increases and decreases as the variable decreases. 
+A function is said to be <I>decreasing</I> when it decreases 
+as the variable increases and increases as the variable decreases.
+<A NAME="18520"></A>
+<A NAME="18521"></A>
+
+<P>
+The graph of a function indicates plainly whether it is 
+increasing or decreasing. 
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">2</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; (1) For instance, consider the function <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2310.png"
+ ALT="$ a^x$"></SPAN> whose graph 
+(Figure <A HREF="#fig:exp-fcn2">8.5</A>) is the locus of the equation
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img928.png"
+ ALT="$ y = a^x$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img481.png"
+ ALT="$ a &gt; 1$"></SPAN>:
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:exp-fcn2"></A><A NAME="18531"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.5:</STRONG>
+<I CLASS="sans">SAGE</I> plot of <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$ y=2^x$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="84" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$ -1&lt;x&lt;1$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="180" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2311.png"
+ ALT="\includegraphics[height=4cm,width=4cm]{exp-fcn2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+As we move along the curve from left to right the curve is rising; 
+that is, as <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> increases the function (<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2312.png"
+ ALT="$ = y$"></SPAN>) always increases. Therefore 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2310.png"
+ ALT="$ a^x$"></SPAN> is an increasing function for all values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>.
+
+<P>
+(2) On the other hand, consider the function <SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2313.png"
+ ALT="$ (a - x)^3$"></SPAN> whose graph 
+(Figure <A HREF="#fig:cubic-fcn2">8.6</A>) is the locus of the equation <!-- MATH
+ $y = (a - x)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="91" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2314.png"
+ ALT="$ y = (a - x)^3$"></SPAN>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:cubic-fcn2"></A><A NAME="18542"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.6:</STRONG>
+<I CLASS="sans">SAGE</I> plot of <SPAN CLASS="MATH"><IMG
+ WIDTH="90" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$ y=(2-x)^3$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$ 1&lt;x&lt;3$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2315.png"
+ ALT="\includegraphics[height=4cm,width=7cm]{cubic-fcn2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Now as we move along the curve from left to right the curve is 
+falling; that is, as <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> increases, the function (<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2312.png"
+ ALT="$ = y$"></SPAN>) always 
+decreases. Hence <SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2313.png"
+ ALT="$ (a - x)^3$"></SPAN> is a decreasing function for all values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>.
+
+<P>
+(3) That a function may be sometimes increasing and sometimes 
+decreasing is shown by the graph (Figure <A HREF="#fig:cubic-fcn3">8.7</A>) of
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = 2x^3 - 9x^2 + 12x - 3.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="178" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2316.png"
+ ALT="$\displaystyle y = 2x^3 - 9x^2 + 12x - 3.
+$">
+</DIV><P></P>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:cubic-fcn3"></A><A NAME="18553"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.7:</STRONG>
+<I CLASS="sans">SAGE</I> plot of <!-- MATH
+ $y=2x^3 - 9x^2 + 12x - 3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="174" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$ y=2x^3 - 9x^2 + 12x - 3$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$ 0&lt;x&lt;3$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2317.png"
+ ALT="\includegraphics[height=4cm,width=7cm]{cubic-fcn3.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+As we move along the curve from left to right the curve rises 
+until we reach the point A when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>, then it falls from A to the point B
+when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, and to the  right of B it is always rising. Hence
+
+<P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>from <!-- MATH
+ $x = -\infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2318.png"
+ ALT="$ x = -\infty$"></SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN> the function is increasing;
+
+<P>
+</DD>
+<DT>(b)</DT>
+<DD>from <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN> the function is decreasing;
+
+<P>
+</DD>
+<DT>(c)</DT>
+<DD>from <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN> to <!-- MATH
+ $x = +\infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2319.png"
+ ALT="$ x = +\infty$"></SPAN> the function is increasing.
+</DD>
+</DL>
+
+<P>
+The student should study the curve carefully in order to note 
+the behavior of the function when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>. Evidently A and B 
+are turning points. At A the function ceases to increase and 
+commences to decrease; at B, the reverse is true. At A and B the 
+tangent (or curve) is evidently parallel to the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis, and 
+therefore the slope is zero.</DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2180"
+  HREF="node112.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2174"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2168"
+  HREF="node110.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2176"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2178"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2181"
+  HREF="node112.html">Tests for determining when</A>
+<B> Up:</B> <A NAME="tex2html2175"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2169"
+  HREF="node110.html">Introduction</A>
+ &nbsp; <B>  <A NAME="tex2html2177"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2179"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

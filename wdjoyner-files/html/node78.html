@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differentiation of implicit functions</TITLE>
+<META NAME="description" CONTENT="Differentiation of implicit functions">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node79.html">
+<LINK REL="previous" HREF="node77.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node79.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1686"
+  HREF="node79.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1680"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1674"
+  HREF="node77.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1682"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1684"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1687"
+  HREF="node79.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html1681"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1675"
+  HREF="node77.html">Implicit functions</A>
+ &nbsp; <B>  <A NAME="tex2html1683"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1685"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007350000000000000000"></A>
+<A NAME="sec:63"></A>
+<BR>
+Differentiation of implicit functions
+</H1>
+
+<P>
+When <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> is defined as an implicit function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> by means of an equation in the form
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A-63"></A><!-- MATH
+ \begin{equation}
+f(x,y) = 0,
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1422.png"
+ ALT="$\displaystyle f(x,y) = 0,$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">4</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+it was explained in the last section how it might be inconvenient to solve 
+for <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> in terms of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>; that is, to find <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> as an explicit function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> 
+so that the formulas we have deduced in this chapter may be applied 
+directly. Such, for instance, would be the case for the equation
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:B-63"></A><!-- MATH
+ \begin{equation}
+ax^6 + 2x^3y - y^7x - 10 = 0.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="194" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1423.png"
+ ALT="$\displaystyle ax^6 + 2x^3y - y^7x - 10 = 0.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">5</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+We then follow the rule:
+
+<P>
+<I>Differentiate, regarding <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> as a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, 
+and put the result equal to zero
+<A NAME="tex2html62"
+  HREF="footnode.html#foot8097"><SUP><SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">13</SPAN></SUP></A>.</I>
+That is,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:C-63"></A><!-- MATH
+ \begin{equation}
+\frac{d}{dx} f(x, y) = 0.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="106" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1424.png"
+ ALT="$\displaystyle \frac{d}{dx} f(x, y) = 0.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">6</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Let us apply this rule in finding <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN> from (<A HREF="#eqn:B-63">5.5</A>):
+by (<A HREF="#eqn:C-63">5.6</A>),
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d}{dx}(ax^6 + 2x^3y - y^7x - 10) = 0,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="228" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1425.png"
+ ALT="$\displaystyle \frac{d}{dx}(ax^6 + 2x^3y - y^7x - 10) = 0,
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d}{dx}(ax^6) + \frac{d}{dx}(2x^3y) - \frac{d}{dx}(y^7x) - \frac{d}{dx}(10) = 0;
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="328" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1426.png"
+ ALT="$\displaystyle \frac{d}{dx}(ax^6) + \frac{d}{dx}(2x^3y) - \frac{d}{dx}(y^7x) - \frac{d}{dx}(10) = 0;
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+6ax^5 + 2x^3 \frac{dy}{dx} + 6x^2y - y^7 - 7xy^6\frac{dy}{dx} = 0;
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="296" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1427.png"
+ ALT="$\displaystyle 6ax^5 + 2x^3 \frac{dy}{dx} + 6x^2y - y^7 - 7xy^6\frac{dy}{dx} = 0;
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+(2x^3 - 7xy^6)\frac{dy}{dx} = y^7 - 6ax^5 - 6x^2y;
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="259" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1428.png"
+ ALT="$\displaystyle (2x^3 - 7xy^6)\frac{dy}{dx} = y^7 - 6ax^5 - 6x^2y;
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} = \frac{y^7 - 6ax^5 - 6x^2y}{2x^3 - 7xy^6} .
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="175" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1429.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{y^7 - 6ax^5 - 6x^2y}{2x^3 - 7xy^6} .
+$">
+</DIV><P></P>
+This is the final answer.
+
+<P>
+The student should observe that in general the result will contain both <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1686"
+  HREF="node79.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1680"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1674"
+  HREF="node77.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1682"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1684"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1687"
+  HREF="node79.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html1681"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1675"
+  HREF="node77.html">Implicit functions</A>
+ &nbsp; <B>  <A NAME="tex2html1683"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1685"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

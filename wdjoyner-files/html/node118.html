@@ -1,0 +1,493 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Examples</TITLE>
+<META NAME="description" CONTENT="Examples">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node119.html">
+<LINK REL="previous" HREF="node117.html">
+<LINK REL="up" HREF="node109.html">
+<LINK REL="next" HREF="node119.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2278"
+  HREF="node119.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2272"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2266"
+  HREF="node117.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2274"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2276"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2279"
+  HREF="node119.html">Curve tracing</A>
+<B> Up:</B> <A NAME="tex2html2273"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2267"
+  HREF="node117.html">Points of inflection</A>
+ &nbsp; <B>  <A NAME="tex2html2275"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2277"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001090000000000000000">
+Examples</A>
+</H1>
+
+<P>
+Examine the following curves for points of inflection and direction 
+of bending.
+
+<P>
+
+<OL>
+<LI><!-- MATH
+ $y = 3x^4 - 4x^3 + 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="129" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2645.png"
+ ALT="$ y = 3x^4 - 4x^3 + 1$"></SPAN>.
+
+<P>
+Solution. <!-- MATH
+ $f(x) = 3x^4 - 4x^3 + 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="152" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2646.png"
+ ALT="$ f(x) = 3x^4 - 4x^3 + 1$"></SPAN>.
+
+<P>
+First step. <!-- MATH
+ $f''(x) 	= 36x^2 - 24x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="141" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2647.png"
+ ALT="$ f''(x) = 36x^2 - 24x$"></SPAN>.
+
+<P>
+Second step. <!-- MATH
+ $36x^2 - 24x 	= 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="110" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2648.png"
+ ALT="$ 36x^2 - 24x = 0$"></SPAN>,
+<!-- MATH
+ $x = \frac{2}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2523.png"
+ ALT="$ x = \frac{2}{3}$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>, critical values.
+
+<P>
+Third step. <!-- MATH
+ $f''(x) = 36x(x - \frac{2}{3})$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="141" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2649.png"
+ ALT="$ f''(x) = 36x(x - \frac{2}{3})$"></SPAN>.
+
+<P>
+Fourth step. 	When <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img390.png"
+ ALT="$ x &lt; 0$"></SPAN>, <!-- MATH
+ $f''(x) = +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2643.png"
+ ALT="$ f''(x) = +$"></SPAN>; and when 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img388.png"
+ ALT="$ x &gt; 0$"></SPAN>, <!-- MATH
+ $f''(x) = -$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2644.png"
+ ALT="$ f''(x) = -$"></SPAN>. Therefore, the curve is concave upwards 
+to the left and concave downwards to the right of <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>. When <!-- MATH
+ $x < \frac{2}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2650.png"
+ ALT="$ x &lt; \frac{2}{3}$"></SPAN>, <!-- MATH
+ $f''(x) = -$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2644.png"
+ ALT="$ f''(x) = -$"></SPAN>; and when <!-- MATH
+ $x > \frac{2}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2651.png"
+ ALT="$ x &gt; \frac{2}{3}$"></SPAN>, <!-- MATH
+ $f''(x) = +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2643.png"
+ ALT="$ f''(x) = +$"></SPAN>.
+Therefore, the curve is concave downwards to the left and 
+concave upwards to the right of <!-- MATH
+ $x = \frac{2}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2523.png"
+ ALT="$ x = \frac{2}{3}$"></SPAN>. 
+<P>
+The curve is evidently concave upwards everywhere to the 
+left of <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>, concave downwards between <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2652.png"
+ ALT="$ (0,1)$"></SPAN> and 
+<!-- MATH
+ $(\frac{2}{3}, \frac{11}{27})$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2653.png"
+ ALT="$ (\frac{2}{3}, \frac{11}{27})$"></SPAN>, and concave upwards everywhere to the 
+right of <!-- MATH
+ $(\frac{2}{3}, \frac{11}{27})$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2653.png"
+ ALT="$ (\frac{2}{3}, \frac{11}{27})$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $(y - 2)^3 = (x - 4)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="130" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2654.png"
+ ALT="$ (y - 2)^3 = (x - 4)$"></SPAN>.
+
+<P>
+Solution. <!-- MATH
+ $y 	= 2 + (x - 4)^{-\frac{1}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="130" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2655.png"
+ ALT="$ y = 2 + (x - 4)^{-\frac{1}{3}}$"></SPAN>.
+
+<P>
+First step. <!-- MATH
+ $\frac{dy}{dx} 	= \frac{1}{3}(x - 4)^{-\frac{2}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="122" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2656.png"
+ ALT="$ \frac{dy}{dx} = \frac{1}{3}(x - 4)^{-\frac{2}{3}}$"></SPAN>.
+
+<P>
+Second step. 	When <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img716.png"
+ ALT="$ x = 4$"></SPAN>, both first and second derivatives are infinite.
+
+<P>
+Third step. 	When <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2657.png"
+ ALT="$ x &lt; 4$"></SPAN>, <!-- MATH
+ $\frac{d^2 y}{dx^2} = +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2658.png"
+ ALT="$ \frac{d^2 y}{dx^2} = +$"></SPAN>; but when 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2659.png"
+ ALT="$ x &gt; 4$"></SPAN>, <!-- MATH
+ $\frac{d^2 y}{dx^2} = -$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2660.png"
+ ALT="$ \frac{d^2 y}{dx^2} = -$"></SPAN>.
+
+<P>
+We may therefore conclude that the tangent at <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2661.png"
+ ALT="$ (4, 2)$"></SPAN> is 
+perpendicular to the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis, that to the left of <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2661.png"
+ ALT="$ (4, 2)$"></SPAN> the curve 
+is concave upwards, and to the right of <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2661.png"
+ ALT="$ (4, 2)$"></SPAN> it is concave downwards. 
+Therefore <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2661.png"
+ ALT="$ (4, 2)$"></SPAN> must be considered a point of inflection.
+
+<P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$ y=x^2$"></SPAN>. 	
+
+<P>
+Ans. 	Concave upwards everywhere.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = 5 - 2x - x^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2662.png"
+ ALT="$ y = 5 - 2x - x^2$"></SPAN>. 
+
+<P>
+Ans.  	Concave downwards everywhere.
+
+<P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img652.png"
+ ALT="$ y = x^3$"></SPAN>. 	  	
+
+<P>
+Ans. Concave downwards to the left and concave upwards to the right of <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2663.png"
+ ALT="$ (0, 0)$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = x^3 - 3x^2 - 9x + 9$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="158" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2664.png"
+ ALT="$ y = x^3 - 3x^2 - 9x + 9$"></SPAN>. 
+
+<P>
+Ans.  	Concave downwards to the left and concave upwards to the right of <SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1552.png"
+ ALT="$ (1, -2)$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = a + (x - b)^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2665.png"
+ ALT="$ y = a + (x - b)^3$"></SPAN>. 	  	
+
+<P>
+Ans. Concave downwards to the left and concave upwards to the right of <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2666.png"
+ ALT="$ (b, a)$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $a^2 y = \frac{x^3}{3} - a x^2 + 2 a^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="154" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2667.png"
+ ALT="$ a^2 y = \frac{x^3}{3} - a x^2 + 2 a^3$"></SPAN>.
+
+<P>
+Ans. Concave downwards to the left and concave upwards to 
+the right of <!-- MATH
+ $(a, \frac{4a}{3})$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2668.png"
+ ALT="$ (a, \frac{4a}{3})$"></SPAN>.
+
+<P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2669.png"
+ ALT="$ y = x^4$"></SPAN>. 	  	
+
+<P>
+Ans. Concave upwards everywhere.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = x^4 - 12x^3 + 48x^2 - 50$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="189" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2670.png"
+ ALT="$ y = x^4 - 12x^3 + 48x^2 - 50$"></SPAN>. 	
+
+<P>
+Ans. Concave upwards to the left of <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, concave downwards 
+between <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img716.png"
+ ALT="$ x = 4$"></SPAN>, concave upwards to the right of <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img716.png"
+ ALT="$ x = 4$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \sin\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img381.png"
+ ALT="$ y = \sin\, x$"></SPAN>. 
+
+<P>
+Ans. 	Points of inflection are <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2569.png"
+ ALT="$ x = n\pi$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN> being any integer.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \tan\,x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2671.png"
+ ALT="$ y = \tan\,x$"></SPAN>. 	
+
+<P>
+Ans. 	Points of inflection are x = nπ, n being any integer.
+
+<P>
+</LI>
+<LI>Show that no conic section can have a point of inflection.
+
+<P>
+</LI>
+<LI>Show that the graphs of <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img81.png"
+ ALT="$ e^x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2672.png"
+ ALT="$ \log\, x$"></SPAN> have no points of inflection.
+
+<P>
+</LI>
+</OL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2278"
+  HREF="node119.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2272"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2266"
+  HREF="node117.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2274"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2276"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2279"
+  HREF="node119.html">Curve tracing</A>
+<B> Up:</B> <A NAME="tex2html2273"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2267"
+  HREF="node117.html">Points of inflection</A>
+ &nbsp; <B>  <A NAME="tex2html2275"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2277"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

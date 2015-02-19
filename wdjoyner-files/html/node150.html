@@ -1,0 +1,482 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The Mean-value Theorem</TITLE>
+<META NAME="description" CONTENT="The Mean-value Theorem">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node151.html">
+<LINK REL="previous" HREF="node149.html">
+<LINK REL="up" HREF="node148.html">
+<LINK REL="next" HREF="node151.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2759"
+  HREF="node151.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2753"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2747"
+  HREF="node149.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2755"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2757"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2760"
+  HREF="node151.html">The Extended Mean Value</A>
+<B> Up:</B> <A NAME="tex2html2754"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2748"
+  HREF="node149.html">Rolle's Theorem</A>
+ &nbsp; <B>  <A NAME="tex2html2756"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2758"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001520000000000000000"></A>
+<A NAME="sec:106"></A>
+<BR>
+The Mean-value Theorem
+</H1>
+
+<P>
+Consider the quantity Q defined by the 
+equation
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A-106"></A><!-- MATH
+ \begin{equation}
+\frac{f(b) - f(a)}{b - a} = Q,
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="125" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3268.png"
+ ALT="$\displaystyle \frac{f(b) - f(a)}{b - a} = Q,$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+or
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:B-106"></A><!-- MATH
+ \begin{equation}
+f(b) - f(a) - (b - a)Q = 0.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="196" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3269.png"
+ ALT="$\displaystyle f(b) - f(a) - (b - a)Q = 0.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$ F(x)$"></SPAN> be a function formed by replacing <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN> by <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> 
+in the left-hand member of (<A HREF="#eqn:B-106">13.2</A>); that is,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:C-106"></A><!-- MATH
+ \begin{equation}
+F(x) = f(x) - f(a) - (x - a)Q.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="226" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3270.png"
+ ALT="$\displaystyle F(x) = f(x) - f(a) - (x - a)Q.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+From (<A HREF="#eqn:B-106">13.2</A>), 	
+<SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3271.png"
+ ALT="$ F(b) = 0$"></SPAN>, and from (<A HREF="#eqn:C-106">13.3</A>), <SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3272.png"
+ ALT="$ F(a) = 0$"></SPAN>;
+therefore, by Rolle's Theorem (see &#167;<A HREF="node149.html#sec:105">13.1</A>), <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3273.png"
+ ALT="$ F'(x)$"></SPAN> must be zero for at least one value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> between 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN>, say for <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3274.png"
+ ALT="$ x_1$"></SPAN>. But by differentiating (<A HREF="#eqn:C-106">13.3</A>) we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+F'(x) = f'(x) - Q.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="136" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3275.png"
+ ALT="$\displaystyle F'(x) = f'(x) - Q.
+$">
+</DIV><P></P>
+Therefore, since <!-- MATH
+ $F'(x_1) = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3276.png"
+ ALT="$ F'(x_1) = 0$"></SPAN>, then also 
+<!-- MATH
+ $f'(x_1) - Q = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="108" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3277.png"
+ ALT="$ f'(x_1) - Q = 0$"></SPAN>, and 	<!-- MATH
+ $Q = f'(x_1)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3278.png"
+ ALT="$ Q = f'(x_1)$"></SPAN>.
+Substituting this value of Q in (<A HREF="#eqn:A-106">13.1</A>), we get the 
+Theorem of Mean Value<A NAME="tex2html138"
+  HREF="footnode.html#foot27529"><SUP><SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:44-106"></A><!-- MATH
+ \begin{equation}
+\frac{f(b) - f(a)}{b - a} = f'(x_1),\ a < x_1 < b
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="237" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3279.png"
+ ALT="$\displaystyle \frac{f(b) - f(a)}{b - a} = f'(x_1),\ a &lt; x_1 &lt; b$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">4</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where in general all we know about <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3274.png"
+ ALT="$ x_1$"></SPAN> is that it lies 
+between <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN>.
+
+<P>
+
+<B>The Theorem of Mean Value interpreted Geometrically</B>. 
+
+<P>
+Let the curve in the figure be the locus of <SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img568.png"
+ ALT="$ y = f(x)$"></SPAN>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:mean-value"></A><A NAME="27543"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.3:</STRONG>
+Geometric illustration of the Mean value theorem.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="362" HEIGHT="225" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3280.png"
+ ALT="\includegraphics[height=5cm,width=8cm]{mean-value2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Take <SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3281.png"
+ ALT="$ OC = a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3282.png"
+ ALT="$ OD = b$"></SPAN>; then <SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3283.png"
+ ALT="$ f(a) = CA$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3284.png"
+ ALT="$ f(b) = DB$"></SPAN>, giving 
+<!-- MATH
+ $AE = b - a$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3285.png"
+ ALT="$ AE = b - a$"></SPAN> and <!-- MATH
+ $EB = f(b) - f(a)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="130" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3286.png"
+ ALT="$ EB = f(b) - f(a)$"></SPAN>.
+Therefore the slope of the chord AB is
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan EAB = \frac{EB}{AE} = \frac{f(b) - f(a)}{b - a}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="226" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3287.png"
+ ALT="$\displaystyle \tan EAB = \frac{EB}{AE} = \frac{f(b) - f(a)}{b - a}.
+$">
+</DIV><P></P>
+There is at least one point on the curve between A and B (as P) 
+where the tangent (or curve) is parallel to the chord AB. 
+If the abscissa of P is <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3274.png"
+ ALT="$ x_1$"></SPAN> the slope at P is
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan\, t = f'(x_1) = \tan\, EAB.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="194" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3288.png"
+ ALT="$\displaystyle \tan\, t = f'(x_1) = \tan\, EAB.
+$">
+</DIV><P></P>
+Equating these last two equations, we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{f(b) - f(a)}{b - a} = f'(x_1),
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="155" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3289.png"
+ ALT="$\displaystyle \frac{f(b) - f(a)}{b - a} = f'(x_1),
+$">
+</DIV><P></P>
+which is the Theorem of Mean Value.
+<A NAME="27552"></A>
+
+<P>
+The student should draw curves (as the one in &#167;<A HREF="node149.html#sec:105">13.1</A>), 
+to show that there may be more than one such point in the 
+interval; and curves to illustrate, on the other hand, 
+that the theorem may not be true if <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> becomes discontinuous 
+for any value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> between <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN> 
+(see Figure <A HREF="node149.html#fig:rolles-theorem2">13.2</A> (a)), or if <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$ f'(x)$"></SPAN> becomes discontinuous 
+(see Figure <A HREF="node149.html#fig:rolles-theorem2">13.2</A> (b)). 
+<P>
+Clearing (<A HREF="#eqn:44-106">13.4</A>) of fractions, we may also write 
+the theorem in the form
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:106-45"></A><!-- MATH
+ \begin{equation}
+f(b) = f(a) + (b - a)f'(x_1).
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="198" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3290.png"
+ ALT="$\displaystyle f(b) = f(a) + (b - a)f'(x_1).$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">5</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Let <!-- MATH
+ $b = a + \Delta a$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3291.png"
+ ALT="$ b = a + \Delta a$"></SPAN>; then <!-- MATH
+ $b - a = \Delta a$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3292.png"
+ ALT="$ b - a = \Delta a$"></SPAN>, and since <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3274.png"
+ ALT="$ x_1$"></SPAN> is a 
+number lying between <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN>, we may write
+<P><!-- MATH
+ \begin{displaymath}
+x_1 = a + \theta \cdot \Delta a,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="115" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3293.png"
+ ALT="$\displaystyle x_1 = a + \theta \cdot \Delta a,
+$">
+</DIV><P></P>
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$ \theta$"></SPAN> is a positive proper fraction. Substituting 
+in (<A HREF="#eqn:44-106">13.4</A>), we get another form of the 
+Theorem of Mean Value.
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:46-106"></A><!-- MATH
+ \begin{equation}
+f(a + \Delta a) - f(a) = \Delta a f'(a + \theta \cdot \Delta a),
+\ \ \ 0 < \theta < 1.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="358" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3294.png"
+ ALT="$\displaystyle f(a + \Delta a) - f(a) = \Delta a f'(a + \theta \cdot \Delta a), \ \ \ 0 &lt; \theta &lt; 1.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">6</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2759"
+  HREF="node151.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2753"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2747"
+  HREF="node149.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2755"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2757"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2760"
+  HREF="node151.html">The Extended Mean Value</A>
+<B> Up:</B> <A NAME="tex2html2754"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2748"
+  HREF="node149.html">Rolle's Theorem</A>
+ &nbsp; <B>  <A NAME="tex2html2756"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2758"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

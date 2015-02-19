@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Simultaneous change of both independent and dependent variables</TITLE>
+<META NAME="description" CONTENT="Simultaneous change of both independent and dependent variables">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node139.html">
+<LINK REL="previous" HREF="node137.html">
+<LINK REL="up" HREF="node134.html">
+<LINK REL="next" HREF="node139.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2568"
+  HREF="node139.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2562"
+  HREF="node134.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2556"
+  HREF="node137.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2564"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2566"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2569"
+  HREF="node139.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html2563"
+  HREF="node134.html">Change of variable</A>
+<B> Previous:</B> <A NAME="tex2html2557"
+  HREF="node137.html">Change of the independent</A>
+ &nbsp; <B>  <A NAME="tex2html2565"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2567"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001340000000000000000"></A>
+<A NAME="sec:98"></A>
+<BR>
+Simultaneous change of both independent and dependent variables
+</H1>
+
+<P>
+It is often desirable to change both variables simultaneously. 
+An important case is that arising in the transformation from 
+rectangular to polar coordinates. Since
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x = \rho \cos\theta, \ \ {\rm and}\ \  y = \rho \sin\theta,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="206" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3036.png"
+ ALT="$\displaystyle x = \rho \cos\theta, \ \ {\rm and}\ \ y = \rho \sin\theta,
+$">
+</DIV><P></P>
+the equation
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f(x,y) = 0
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="80" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3037.png"
+ ALT="$\displaystyle f(x,y) = 0
+$">
+</DIV><P></P>
+becomes by substitution an equation between 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1793.png"
+ ALT="$ \rho$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$ \theta$"></SPAN>, defining <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1793.png"
+ ALT="$ \rho$"></SPAN> as a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$ \theta$"></SPAN>. 
+Hence <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1793.png"
+ ALT="$ \rho$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> are all functions of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$ \theta$"></SPAN>.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">11</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Transform the formula for the radius of curvature (<A HREF="node145.html#eqn:103-42">12.5</A>), 
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+R
+= \frac{ \left[ 1 + \left( \frac{dy}{dx} \right)^2 
+\right]^{\frac{3}{2}} }{ \frac{d^2 y}{dx^2} },
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="144" HEIGHT="108" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3038.png"
+ ALT="$\displaystyle R
+= \frac{ \left[ 1 + \left( \frac{dy}{dx} \right)^2
+\right]^{\frac{3}{2}} }{ \frac{d^2 y}{dx^2} },
+$">
+</DIV><P></P>
+into polar coordinates.
+
+<P>
+Solution. 
+Since in (<A HREF="node137.html#eqn:A-97">11.5</A>) and (<A HREF="node137.html#eqn:B-97">11.6</A>), <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> is any variable on which <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> depend, we 
+may in this case let <!-- MATH
+ $t = \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3039.png"
+ ALT="$ t = \theta$"></SPAN>, giving
+<!-- MATH
+ $\frac{dy}{dx} 	= \frac{ \frac{dy}{d\theta} }{ \frac{dx}{d\theta} }$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3040.png"
+ ALT="$ \frac{dy}{dx} = \frac{ \frac{dy}{d\theta} }{ \frac{dx}{d\theta} }$"></SPAN>, and
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2 y}{dx^2}
+= \frac{ \frac{dx}{d\theta} \frac{d^2 y}{d\theta^2} 
+- \frac{dy}{d\theta} \frac{d^2 x}{d\theta^2} }{ \left( \frac{dx}{d\theta} \right)^3 }.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="164" HEIGHT="67" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3041.png"
+ ALT="$\displaystyle \frac{d^2 y}{dx^2}
+= \frac{ \frac{dx}{d\theta} \frac{d^2 y}{d\th...
+...dy}{d\theta} \frac{d^2 x}{d\theta^2} }{ \left( \frac{dx}{d\theta} \right)^3 }.
+$">
+</DIV><P></P>
+Substituting these into <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1975.png"
+ ALT="$ R$"></SPAN>, we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+R =
+\left[ \frac{ \left( \frac{dx}{d\theta} \right)^2 
++ \left( \frac{dy}{d\theta} \right)^2 }{ 
+\left( \frac{dx}{d\theta} \right)^2 } \right]^{\frac{3}{2}} 
+\div \frac{ \frac{dx}{d\theta} \frac{d^2 y}{d\theta^2} 
+- \frac{dy}{d\theta} \frac{d^2 x}{d\theta^2} }{ 
+\left( \frac{dx}{d\theta} \right)^3 }, 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="305" HEIGHT="95" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3042.png"
+ ALT="$\displaystyle R =
+\left[ \frac{ \left( \frac{dx}{d\theta} \right)^2
++ \left( ...
+...}{d\theta} \frac{d^2 x}{d\theta^2} }{
+\left( \frac{dx}{d\theta} \right)^3 },
+$">
+</DIV><P></P>
+or
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:D-98"></A><!-- MATH
+ \begin{equation}
+R = 	\frac{ \left[ \left( \frac{dx}{d\theta} \right)^2
++ \left( \frac{dy}{d\theta} \right)^2 \right]^{\frac{3}{2}} }{ 
+\frac{dx}{d\theta} \frac{d^2 y}{d\theta^2} 
+- \frac{dy}{d\theta} \frac{d^2 x}{d\theta^2} }.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="175" HEIGHT="108" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3043.png"
+ ALT="$\displaystyle R = \frac{ \left[ \left( \frac{dx}{d\theta} \right)^2 + \left( \f...
+...\theta} \frac{d^2 y}{d\theta^2} - \frac{dy}{d\theta} \frac{d^2 x}{d\theta^2} }.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">11</SPAN>.<SPAN CLASS="arabic">7</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+But since <!-- MATH
+ $x = \rho \cos\theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img178.png"
+ ALT="$ x = \rho\ \cos \theta\ $"></SPAN> and <!-- MATH
+ $y = \rho \sin\theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img179.png"
+ ALT="$ y = \rho\ \sin \theta$"></SPAN>, we have
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dx}{d\theta}
+= - \rho \sin \theta + \cos \theta \frac{d\rho}{d\theta}; 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="176" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3044.png"
+ ALT="$\displaystyle \frac{dx}{d\theta}
+= - \rho \sin \theta + \cos \theta \frac{d\rho}{d\theta};
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{d\theta} = \rho \cos \theta + \sin \theta \frac{d\rho}{d\theta};
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="163" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3045.png"
+ ALT="$\displaystyle \frac{dy}{d\theta} = \rho \cos \theta + \sin \theta \frac{d\rho}{d\theta};
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2 x}{d\theta^2}
+= -\rho \cos \theta - 2 \sin \theta \frac{d\rho}{d\theta} 
++ \cos \theta \frac{d^2 \rho}{d\theta^2}; 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="273" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3046.png"
+ ALT="$\displaystyle \frac{d^2 x}{d\theta^2}
+= -\rho \cos \theta - 2 \sin \theta \frac{d\rho}{d\theta}
++ \cos \theta \frac{d^2 \rho}{d\theta^2};
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2 y}{d\theta^2} = -\rho \sin \theta
++ 2 \cos \theta \frac{d\rho}{d\theta} + \sin \theta \frac{d^2 \rho}{d\theta^2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="270" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3047.png"
+ ALT="$\displaystyle \frac{d^2 y}{d\theta^2} = -\rho \sin \theta
++ 2 \cos \theta \frac{d\rho}{d\theta} + \sin \theta \frac{d^2 \rho}{d\theta^2}.
+$">
+</DIV><P></P>
+Substituting these in (D) and reducing,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+R
+= \frac{ \left[ \rho^2 + \left( \frac{d\rho}{d\theta} 
+\right)^2 \right]^{\frac{3}{2}} }{ \rho^2 + 2 
+\left( \frac{d\rho}{d\theta} \right)^2 
+- \rho \frac{d^2 \rho}{d\theta^2} }. 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="186" HEIGHT="108" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3048.png"
+ ALT="$\displaystyle R
+= \frac{ \left[ \rho^2 + \left( \frac{d\rho}{d\theta}
+\right)...
+...
+\left( \frac{d\rho}{d\theta} \right)^2
+- \rho \frac{d^2 \rho}{d\theta^2} }.
+$">
+</DIV><P></P>
+
+<P></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2568"
+  HREF="node139.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2562"
+  HREF="node134.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2556"
+  HREF="node137.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2564"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2566"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2569"
+  HREF="node139.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html2563"
+  HREF="node134.html">Change of variable</A>
+<B> Previous:</B> <A NAME="tex2html2557"
+  HREF="node137.html">Change of the independent</A>
+ &nbsp; <B>  <A NAME="tex2html2565"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2567"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

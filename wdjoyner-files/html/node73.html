@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differentiation of </TITLE>
+<META NAME="description" CONTENT="Differentiation of ">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node74.html">
+<LINK REL="previous" HREF="node72.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node74.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1616"
+  HREF="node74.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1610"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1604"
+  HREF="node72.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1612"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1614"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1617"
+  HREF="node74.html">Differentiation of</A>
+<B> Up:</B> <A NAME="tex2html1611"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1605"
+  HREF="node72.html">Differentiation of</A>
+ &nbsp; <B>  <A NAME="tex2html1613"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1615"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007300000000000000000">
+Differentiation of <!-- MATH
+ ${\rm arcsec}u$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$ {\rm arcsec}u$"></SPAN></A>
+</H1>
+
+<P>
+Let
+ <!-- MATH
+ $y 	=\ {\rm arcsec}v$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="89" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1290.png"
+ ALT="$ y =\ {\rm arcsec}v$"></SPAN>; then <!-- MATH
+ $v 	=\ \sec y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1291.png"
+ ALT="$ v =\ \sec y$"></SPAN>.
+This function is defined for all values of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> except those lying between <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img280.png"
+ ALT="$ -1$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img279.png"
+ ALT="$ +1$"></SPAN>, 
+and is seen to be many-valued. To make the function single-valued, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> is taken as 
+the arc of smallest numerical value whose secant is <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN>. This means that if <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> is positive, 
+we confine ourselves to points on arc <SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img252.png"
+ ALT="$ AB$"></SPAN> (Figure <A HREF="#fig:arcsec3">5.9</A>), <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> taking on 
+values between <SPAN CLASS="MATH">0</SPAN> and <!-- MATH
+ $\frac{\pi}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img230.png"
+ ALT="$ \frac{\pi}{2}$"></SPAN> (<SPAN CLASS="MATH">0</SPAN> may be included); and if <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> is negative, 
+we confine ourselves to points on arc <SPAN CLASS="MATH"><IMG
+ WIDTH="31" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1292.png"
+ ALT="$ DC$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> taking on values between <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1293.png"
+ ALT="$ -\pi$"></SPAN> and 
+<!-- MATH
+ $-\frac{\pi}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$ -\frac{\pi}{2}$"></SPAN> (<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1293.png"
+ ALT="$ -\pi$"></SPAN> may be included).
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:arcsec3"></A><A NAME="8590"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+The inverse secant <!-- MATH
+ $\sec^{-1}\ x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1295.png"
+ ALT="$ \sec^{-1}\ x$"></SPAN> using <I CLASS="sans">SAGE</I>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="271" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1294.png"
+ ALT="\includegraphics[height=6cm,width=7cm]{arcsec3.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:arcsec2"></A><A NAME="7611"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.10:</STRONG>
+The standard branch of <!-- MATH
+ ${\rm arcsec}\ x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$ {\rm arcsec}\x$"></SPAN> using <I CLASS="sans">SAGE</I>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="362" HEIGHT="225" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1296.png"
+ ALT="\includegraphics[height=5cm,width=8cm]{arcsec2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Differentiating with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> by IV,
+<!-- MATH
+ $\frac{dv}{dy} 	=\ \sec y \tan y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1297.png"
+ ALT="$ \frac{dv}{dy} =\ \sec y \tan y$"></SPAN>;
+therefore <!-- MATH
+ $\frac{dy}{dv} 	= \frac{1}{\sec y \tan y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="102" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1298.png"
+ ALT="$ \frac{dy}{dv} = \frac{1}{\sec y \tan y}$"></SPAN>, by (<A HREF="node55.html#eqn:C-43">5.2</A>). But since <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> is a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, this may be substituted in the formula
+<!-- MATH
+ $\frac{dy}{dx} 	= \frac{dy}{dv} \cdot \frac{dv}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="90" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img767.png"
+ ALT="$ \frac{dy}{dx} = \frac{dy}{dv} \cdot \frac{dv}{dx}$"></SPAN>, by (<A HREF="node54.html#eqn:A-42">5.1</A>).giving 	
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= \frac{1}{\sec y \tan y} \frac{dv}{dx}
+  	= \frac{1}{v \sqrt{v^2 - 1}} \frac{dv}{dx}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="251" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1299.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{1}{\sec y \tan y} \frac{dv}{dx}
+= \frac{1}{v \sqrt{v^2 - 1}} \frac{dv}{dx}
+$">
+</DIV><P></P>
+(since <!-- MATH
+ $\sec y = v$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1300.png"
+ ALT="$ \sec y = v$"></SPAN>, and <!-- MATH
+ $\tan y = \sqrt{\sec y - 1} = \sqrt{v^2 - 1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="209" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1301.png"
+ ALT="$ \tan y = \sqrt{\sec y - 1} = \sqrt{v^2 - 1}$"></SPAN>, the plus sign 
+of the radical being taken, since <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1302.png"
+ ALT="$ \tan y$"></SPAN> is positive for an values of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> between 
+<SPAN CLASS="MATH">0</SPAN> and <!-- MATH
+ $\frac{\pi}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img230.png"
+ ALT="$ \frac{\pi}{2}$"></SPAN> and between <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1293.png"
+ ALT="$ -\pi$"></SPAN> and <!-- MATH
+ $-\frac{\pi}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$ -\frac{\pi}{2}$"></SPAN>, including 
+<SPAN CLASS="MATH">0</SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1293.png"
+ ALT="$ -\pi$"></SPAN>). Therefore,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d}{dx} ({\rm arcsec}v) 	= \frac{\frac{dv}{dx}}{v \sqrt{v^2 - 1}}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="177" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1303.png"
+ ALT="$\displaystyle \frac{d}{dx} ({\rm arcsec}v) = \frac{\frac{dv}{dx}}{v \sqrt{v^2 - 1}}
+$">
+</DIV><P></P>
+(equation (XXII) in &#167;<A HREF="node44.html#sec:33">5.1</A>  above).
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1616"
+  HREF="node74.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1610"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1604"
+  HREF="node72.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1612"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1614"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1617"
+  HREF="node74.html">Differentiation of</A>
+<B> Up:</B> <A NAME="tex2html1611"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1605"
+  HREF="node72.html">Differentiation of</A>
+ &nbsp; <B>  <A NAME="tex2html1613"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1615"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

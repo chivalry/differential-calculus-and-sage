@@ -1,0 +1,591 @@
+
+\chapter{Successive differentiation}
+
+ 
+%74. 
+\section{Definition of successive derivatives}
+
+We have seen that the derivative of a function of $x$ 
+is in general also a function of $x$. This new function may 
+also be differentiable, in which case the derivative of 
+the first derivative is called the second derivative of 
+the original function. Similarly, the derivative of the 
+second derivative is called the third derivative; and 
+so on to the $n$-th derivative. Thus, if
+
+\[
+\begin{array}{rl}
+\ y 	&=\ 3x^4,\\
+\frac{dy}{dx} 	&=\ 12x^3,\\
+\frac{d}{dx} \left ( \frac{dy}{dx} \right ) 	&=\ 36x^2,\\
+\frac{d}{dx} \left [ \frac{d}{dx} \left ( \frac{dy}{dx} \right ) \right ] 	
+&=\ 72x,
+\end{array}
+\]
+and so on.
+
+%75. 
+\section{Notation}
+
+The symbols for the successive derivatives are usually abbreviated as follows:
+
+\[
+\begin{array}{rl}
+\frac{d}{dx} \left ( \frac{dy}{dx} \right ) 	&=\ \frac{d^2y}{dx^2},\\
+\frac{d}{dx} \left [ \frac{d}{dx} \left ( \frac{dy}{dx} \right ) \right ] 	
+&=\ \frac{d}{dx} \left ( \frac{d^2y}{dx^2} \right ) = \frac{d^3y}{dx^3},\\
+. . . &	. . .\\
+\frac{d}{dx} \left ( \frac{d^{n-1}y}{dx^{n-1}} \right )
+ &	= \frac{d^ny}{dx^n}.
+\end{array}
+\]
+If $y = f(x)$, the successive derivatives are also denoted by
+
+\[
+    f'(x),\ f''(x),\ f'''(x),\ f^{(4)}(x),\ ...,\ f^{(n)}(x);
+\]
+or
+\[
+    y',\ y'',\ y''',\ y^{(4)},\ ...,\ y^{(n)};
+\]
+or,
+\[
+\frac{d}{dx} f(x),\ \frac{d^2}{dx^2} f(x),
+\ \frac{d^3}{dx^3} f(x),\ \frac{d^4}{dx^4} f(x),
+\ ...,\ \frac{d^n}{dx^n} f(x). 
+\]
+
+%76. 
+
+\section{The $n$-th derivative}
+
+For certain functions a general expression involving $n$ 
+may be found for the $n$-th derivative. The usual plan 
+is to find a number of the first successive derivatives, as 
+many as may be necessary to discover their law of formation, 
+and then by induction write down the $n$-th derivative.
+
+\begin{example}
+{\rm
+Given $y = e^{ax}$, find $\frac{d^n y}{dx^n}$.
+
+Solution. $\frac{dy}{dx} = ae^{ax}$,
+$\frac{d^2 y}{dx^2} 	= a^2e^{ax}$, \dots ,
+$\frac{d^n y}{dx^n} = a^ne^{ax}$.
+
+}
+\end{example}
+
+\begin{example}
+{\rm
+Given $y = \log\, x$, find $\frac{d^n y}{dx^n}$.
+
+Solution. $\frac{dy}{dx} 	= \frac{1}{x}$,
+$\frac{d^2 y}{dx^2} 	= -\frac{1}{x^2}$,
+$\frac{d^3 y}{dx^3} 	= \frac{1 \cdot 2}{x^3}$,
+$\frac{d^4 y}{dx^4} 	= \frac{1 \cdot 2 \cdot 3}{x^4}$,
+\dots 
+$\frac{d^n y}{dx^n} 	= (-1)^{n - 1} \frac{(n - 1)!}{x^n}$.
+}
+\end{example}
+
+\begin{example}
+{\rm
+Given $y = \sin\, x$, find $\frac{d^n y}{dx^n}$.
+
+Solution.
+$\frac{dy}{dx} = \cos\, x = \sin \left ( x + \frac{\pi}{2} \right )$,
+
+\[
+\frac{d^2 y}{dx^2} 
+= \frac{d}{dx} \sin \left ( x + \frac{\pi}{2} \right ) 	
+= \cos \left ( x + \frac{\pi}{2} \right ) 
+= \sin \left ( x + \frac{2 \pi}{2} \right ),
+\]
+\[
+\frac{d^3 y}{dx^3} 
+= \frac{d}{dx} \sin \left ( x + \frac{2 \pi}{2} \right ) 	
+= \cos \left ( x + \frac{2 \pi}{2} \right ) 
+= \sin \left ( x + \frac{3 \pi}{2} \right )
+\]
+\[
+\dots
+\]
+\[
+\frac{d^n y}{dx^n} 	= \sin \left ( x + \frac{n \pi}{2} \right ).
+\]
+}
+\end{example}
+
+%77. 
+\section{Leibnitz's Formula for the $n$-th derivative of a product}
+
+This formula expresses the $n$-th derivative of the 
+product of two variables in terms of the variables 
+themselves and their successive derivatives.
+
+If u and v are functions of $x$, we have, from 
+equation (V) in \S \ref{sec:33}  above, %V [§ 33],
+
+\[
+    \frac{d}{dx} (uv) = \frac{du}{dx} v + u \frac{dv}{dx}.
+\]
+Differentiating again with respect to $x$,
+
+\[
+\frac{d^2}{dx^2}(uv) 
+= \frac{d^2u}{dx^2}v + \frac{du}{dx} \frac{dv}{dx} 
++ \frac{du}{dx} \frac{dv}{dx} + u \frac{d^2 v}{dx^2} 
+= \frac{d^2 u}{dx^2}v + 2 \frac{du}{dx} \frac{dv}{dx} 
++ u \frac{d^2 v}{dx^2}.
+\]
+Similarly,
+
+\[
+\begin{array}{ll}
+\frac{d^3}{dx^3}(uv) 	
+&= \frac{d^3 u}{dx^3} + \frac{d^2 u}{dx^2} \frac{dv}{dx} 
++ 2\frac{d^2 u}{dx^2} \frac{dv}{dx} + 2 \frac{du}{dx} \frac{d^2 v}{dx^2} 
++ \frac{du}{dx} \frac{d^2 v}{dx^2} + u \frac{d^3 v}{dx^3}\\
+&= \frac{d^3 u}{dx^3}v + 3\frac{d^2 u}{dx^2} \frac{dv}{dx} 
++ 3 \frac{du}{dx} \frac{d^2 v}{dx^2} + u \frac{d^3 v}{dx^3}.
+\end{array}
+\]
+However far this process may be continued, it will be seen 
+that the numerical coefficients follow the same law as 
+those of the Binomial Theorem, and the indices of 
+the derivatives correspond\footnote{To make this 
+correspondence complete, $u$ and $v$ are considered as 
+$\frac{d^0 u}{dx^0}$ and $\frac{d^0 v}{dx^0}$.} 
+to the exponents of the Binomial Theorem.
+Reasoning then by mathematical induction from the 
+$m$-th to the $(m + 1 )$-st derivative of the product, 
+we can prove {\it Leibnitz's Formula}
+\index{Leibnitz's Formula}
+
+\begin{equation}
+%(17) 
+\frac{d^n}{dx^n}(uv) 
+= \frac{d^n u}{dx^n} v + n \frac{d^{n - 1} u}{dx^{n - 1}} \frac{dv}{dx} 
++ \frac{n (n - 1)}{2!} \frac{d^{n - 2} u}{dx^{n - 2}} \frac{d^2 v}{dx^2} 
++ \cdots + n \frac{du}{dx} \frac{d^{n - 1} v}{dx^{n - 1}} 
++ u \frac{d^nv}{dx^n},
+\label{eqn:17-77}
+\end{equation}
+
+\begin{example}
+{\rm
+Given $y = e^x\log\, x$, find $\frac{d^3 y}{dx^3}$ by Leibnitz's Formula.
+
+Solution. Let 	$u = e^x$, and 	$v = \log\, x$;
+then 	
+$\frac{du}{dx} = e^x$, 	$\frac{dv}{dx} = \frac{1}{x}$,
+$\frac{d^2 u}{dx^2} = e^x$, $\frac{d^2 v}{dx^2} = - \frac{1}{x^2}$,
+$\frac{d^3 u}{dx^3} = e^x$, $\frac{d^3 v}{dx^3} = \frac{2}{x^3}$.
+
+Substituting in (\ref{eqn:17-77}), we get
+
+\[
+\frac{d^3 y}{dx^3} = e^x \log x + \frac{3 e^x}{x} - \frac{3 e^x}{x^2} = e^x \left ( \log x + \frac{3}{x} - \frac{3}{x^2} + \frac{2}{x^3} \right ).
+\]
+
+This can be verified using the \sage commands:
+
+
+\vskip .1in
+
+\begin{Verbatim}[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: x = var("x")
+sage: f = exp(x)*log(x)
+sage: diff(f,x,3)
+e^x*log(x) + 3*e^x/x - 3*e^x/x^2 + 2*e^x/x^3
+
+\end{Verbatim}
+\vskip .1in
+
+\noindent
+
+}
+\end{example}
+
+\begin{example}
+{\rm
+Given $y = x^2e^{ax}$, find $\frac{d^n y}{dx^n}$ by Leibnitz's Formula.
+
+Solution. Let $u = x^2$, and $v = e^{ax}$;
+then $\frac{du}{dx} = 2x$, $\frac{dv}{dx} = ae^{ax}$,
+$\frac{d^2 u}{dx^2} = 2x$, $\frac{d^2 v}{dx^2} = a^2 e^{ax}$,
+$\frac{d^3 u}{dx^3} = 0$, $\frac{d^3 v}{dx^3} = a^3 e^{ax}$,
+\dots,
+$\frac{d^n u}{dx^n} = 0$, 
+$\frac{d^n v}{dx^n} = a^n e^{ax}$.
+Substituting in (\ref{eqn:17-77}), we get
+
+\[
+\frac{d^n y}{dx^n} 
+= x^2 a^n e^{ax} + 2na^{n - 1} x e^{ax} + n(n - 1)a^{n - 2} e^{ax} 
+= a^{n - 2} e^{ax} [ x^2 a^2 + 2nax + n(n - 1) ].
+\]
+
+}
+\end{example}
+
+%78. 
+\section{Successive differentiation of implicit functions}
+
+To illustrate the process we shall find 
+$\frac{d^2 y}{dx^2}$ from the equation of the hyperbola
+
+\[
+    b^2x^2 - a^2y^2 = a^2b^2.
+\]
+Differentiating with respect to $x$, as in \S \ref{sec:63}, %§ 63, p. 69,
+
+\[
+    2b^2 x - 2a^2 y \frac{dy}{dx} = 0,
+\]
+or,
+
+\begin{equation}
+%(A) 
+\frac{dy}{dx} = \frac{b^2 x}{a^2 y}.
+\label{eqn:A-78}
+\end{equation}
+Differentiating again, remembering that $y$ is a function of $x$,
+
+\[
+    \frac{d^2 y}{dx^2} 
+= \frac{a^2 y b^2 - b^2 x a^2 \frac{dy}{dx}}{a^4 y^2}.
+\]
+Substituting for $\frac{dy}{dx}$ its value from (\ref{eqn:A-78}),
+
+\[
+    \frac{d^2 y}{dx^2} 
+= \frac{a^2 b^2 y - a^2 b^2 x \left ( \frac{b^2 y}{a^2 y} \right ) }{a^4 y^2} 
+= -\frac{b^2 (b^2 x^2 - a^2 y^2)}{a^4 y^3}.
+\]
+The given equation, $b^2x^2 - a^2y^2 = a^2b^2$,
+therefore gives, 
+
+\[
+\frac{d^2 y}{dx^2} = - \frac{b^4}{a^2 y^3}. 
+\]
+
+\sage can be made to do a lot of this work for you (though
+the notation doesn't get any prettier):
+
+
+\vskip .1in
+
+\begin{Verbatim}[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: x = var("x")
+sage: y = function("y",x)
+sage: a = var("a")
+sage: b = var("b")
+sage: F = x^2/a^2 - y^2/b^2 - 1
+sage: F.diff(x)
+2*x/a^2 - 2*y(x)*diff(y(x), x, 1)/b^2
+sage: F.diff(x,2)
+-2*y(x)*diff(y(x), x, 2)/b^2 - 2*diff(y(x), x, 1)^2/b^2 + 2/a^2
+sage: solve(F.diff(x) == 0, diff(y(x), x, 1))
+[diff(y(x), x, 1) == b^2*x/(a^2*y(x))]
+sage: solve(F.diff(x,2) == 0, diff(y(x), x, 2))
+[diff(y(x), x, 2) == (b^2 - a^2*diff(y(x), x, 1)^2)/(a^2*y(x))]
+
+\end{Verbatim}
+\vskip .1in
+
+\noindent
+This basically says
+
+\[
+y'=\frac{d y}{dx} =  \frac{b^2x}{a^2 y},
+\]
+and
+\[
+y''=\frac{d^2 y}{dx^2} = - \frac{b^2-a^2(y')^2}{a^2 y}. 
+\]
+Now simply plug the first equation into the second,
+obtaining $y''=-b^2\frac{1-a^{-2}b^2x^2/y^2}{a^2y}$.
+Next, use the given equation in the form
+$a^{-2}b^2x^2/y^2-1=b^2/y^2$ to get the result above.
+
+\section{Exercises}
+
+%Differentiate the following:
+Verify the following derivatives:
+
+\begin{enumerate}
+\item
+%1
+$y = 4x^3 - 6x^2 + 4x + 7$.  	
+
+Ans.	
+$\frac{d^2 y}{dx^2} = 12(2x - 1)$.
+
+\item
+%2
+$f(x) = \frac{x^3}{1 - x}$.  	
+
+Ans.	
+$f^{(4)}(x) = \frac{4!}{(1 - x)^5}$.
+
+\item
+%3
+$f(y) = y^6$.  	
+
+Ans.	$f^{(6)}(y) = 6!$.
+
+\item
+%4
+$y = x^3\log\, x$.  	
+
+Ans.	
+$\frac{d^4 y}{dx^4} = \frac{6}{x}$.
+
+\item
+%5
+$y = \frac{c}{x^n}$. 	
+$y'' = \frac{n(n + 1)c}{x^{n + 2}}$.
+
+\item
+%6
+$y = (x - 3)e^{2x} + 4xe^x + x$.  	
+
+Ans.	
+$y'' = 4e^x[(x - 2)e^x + x + 2]$.
+
+\item
+%7
+$y = \frac{a}{2} (e^{\frac{x}{a}} + e^{-\frac{x}{a}})$.  	
+
+Ans.	
+$y'' = \frac{1}{2a} (e^{\frac{x}{a}} + e^{-\frac{x}{a}}) = \frac{y}{a^2}$.
+
+\item
+%8
+$f(x) = ax^2 + bx + c$.  	
+
+Ans.	
+$f'''(x) = 0$.
+
+\item
+%9
+$f(x) = \log(x + 1)$. 	 	
+
+Ans.
+$f^{(4)} (x) = -\frac{6}{(x + 1)^4}$.
+
+\item
+%10
+$f(x) = log(e^x + e^{-x})$.  	
+
+Ans.
+$f'''(x) = -\frac{8(e^x - e^{-x})}{(e^x - e^{-x})^3}$.
+
+\item
+%11
+$r = \sin\, a\theta$. 	 	
+
+Ans.
+$\frac{d^4 r}{d\theta^4} = a^4 \sin a\theta = a^4 r$.
+
+\item
+%12
+$r = \tan\, \phi$.  	
+
+Ans.	
+$\frac{d^3 r}{d\phi^3} = 6 \sec^6 \phi - 4 \sec^2 \phi$.
+
+\item
+%13
+$r = \log\sin\, \phi$.  	
+
+Ans.	
+$r''' = 2\cot\,\phi \csc^2\phi$.
+
+\item
+%14
+$f(t) = e^{-t}\cos\, t$.  	
+
+Ans.
+$f^{(4)}(t) = - 4e^{- t}\cos\, t = - 4f(t)$.
+
+\item
+%15
+$f(\theta) = \sqrt{\sec 2\theta}$.  	
+
+Ans.	
+$f''(\theta) = 3[f(\theta)]5 - f(\theta)$.
+
+\item
+%16
+$p = (q^2 + a^2) \arctan \frac{q}{a}$.  	
+
+Ans.	
+$\frac{d^3 p}{dq^3} = \frac{4a^3}{(a^2 + q^2)^2}$.
+
+\item
+%17
+$y = a^x$.  	
+
+Ans.	
+$\frac{d^n y}{dx^n} = (\log a)^n a^x$.
+
+\item
+%18
+$y = \log(1 + x)$.  	
+
+Ans.	
+$\frac{d^n y}{dx^n} = (-1)^{n - 1} \frac{(n - 1)!}{(1 + x)^n}$.
+
+\item
+%19
+$y = \cos\, ax$. 	
+
+Ans.
+$\frac{d^n y}{dx^n} = a^n \cos \left ( ax + \frac{n\pi}{2} \right )$.
+
+\item
+%20
+$y = x^{n- 1}\log\, x$.  	
+
+Ans.
+$\frac{d^n y}{dx^n} = \frac{(n - 1)!}{x}$.
+
+\item
+%21
+$y = \frac{1 - x}{1 + x}$.  	
+
+Ans.	
+$\frac{d^n y}{dx^n} = 2 (-1)^n \frac{n!}{(1 + x)^{n + 1}}$.
+
+Hint: Reduce fraction to form $-1 + \frac{2}{1 + x}$ before differentiating.
+
+\item
+%22
+If $y = e^x\sin\, x$, prove that 
+$\frac{d^2 y}{dx^2} - 2 \frac{dy}{dx} + 2y = 0$.
+
+\item
+%23
+If $y = a\cos(\log\, x) + b\sin(\log\, x)$, prove that 
+$x^2 \frac{d^2 y}{dx^2} + x \frac{dy}{dx} + y = 0$.
+\end{enumerate}
+
+Use Leibnitz's Formula in the next four examples:
+
+\begin{enumerate}
+\addtocounter{enumi}{23}
+\item
+%24
+$y = x^2a^x$. 	 	
+
+Ans.
+$\frac{d^n y}{dx^n} = a^x (\log a)^{n - 2} [(x \log a + n)^2 - n]$.
+
+\item
+%25
+$y = xe^x$. 	 	
+
+Ans.
+$\frac{d^n y}{dx^n} = (x + n)e^x$.
+
+\item
+%26
+$f(x) = e^x\sin\, x$. 	 	
+
+Ans.
+$f^{(n)}(x) = (\sqrt{2})^n e^x \sin \left ( x + \frac{n\pi}{4} \right )$.
+
+\item
+%27
+$f(\theta) = \cos\,a\theta\cos\,b\theta$.  	
+
+Ans.	
+$f^{n}(\theta) 
+= \frac{(a + b)^n}{2} \cos \left [ (a + b)\theta + \frac{n\pi}{2} \right ]
++ \frac{(a - b)^n}{2} \cos \left [ (a - b)\theta + \frac{n\pi}{2} \right ]$.
+
+\item
+%28
+Show that the formulas for acceleration, 
+(\ref{eqn:14-72}), (\ref{eqn:15-73}), %p. 92 [§71], 
+may be written
+$a = \frac{d^2 s}{dt^2}$, 
+$a_x = \frac{d^2 x}{dt^2}$, 
+$a_y = \frac{d^2 y}{dt^2}$.
+
+\item
+%29
+$y^2 = 4ax$.  	
+
+Ans.
+$\frac{d^2 y}{dx^2} = -\frac{4a^2}{y^3}$.
+
+\item
+%30
+$b^2x^2 + a^2y^2 = a^2b^2$.  	
+
+Ans.	
+$\frac{d^2 y}{dx^2} = -\frac{b^4}{a^2 y^3}$; 
+$\frac{d^3 y}{dx^2} = -\frac{3b^6 x}{a^4 y^5}$.
+
+\item
+%31
+$x^2 + y^2 = r^2$. 	
+$\frac{d^2 y}{dx^2} = -\frac{r^2}{y^3}$.
+
+\item
+%32
+$y^2 + y = x^2$. 	
+
+Ans.
+$\frac{d^3 y}{dx^3} = -\frac{24x}{(1 + 2y)^5}$.
+
+\item
+%33
+$ax^2 + 2hxy + by^2 = 1$.  	
+
+Ans.	
+$\frac{d^2 y}{dx^2} = \frac{h^2 - ab}{(hx + by)^3}$.
+
+\item
+%34
+$y^2 - 2xy = a^2$.  	
+
+Ans.
+$\frac{d^2 y}{dx^2} 
+= \frac{a^2}{(y - x)^3}; \frac{d^3 y}{dx^3} = -\frac{3a^2 x}{(y - x)^5}$.
+
+\item
+%35
+$\sec\,\phi\cos\,\theta = c$. 	 	
+
+Ans.
+$\frac{d^2 \theta}{d\phi^2} = \frac{\tan^2 \theta - \tan^2 \phi}{\tan^3 \theta}$.
+
+\item
+%36
+$\theta=\tan(\phi + \theta)$. 	
+
+Ans.
+$\frac{d^3 \theta}{d\phi^3} = -\frac{2(5 + 8\theta^2 + 3\theta^4)}{\theta^8}$.
+
+\item
+%37
+Find the second derivative in the following:
+
+\[
+\begin{array}{ll}
+(a)\ \  \log(u + v) = u - v. &	(e)\ \  y^3 + x^3 - 3axy = 0.\\
+(b)\ \  e^u + u = e^v + v.  &	(f)\ \  y^2 - 2mxy + x^2 - a = 0.\\
+(c)\ \  s = 1 + te^s.  &	(g)\ \  y = \sin(x + y).\\
+(d)\ \  e^s + st - e = 0.  &	(h)\ \  e^{x + y} = xy.\\
+\end{array}
+\]
+
+\end{enumerate}
+

@@ -1,0 +1,474 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>General rule for differentiation</TITLE>
+<META NAME="description" CONTENT="General rule for differentiation">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node40.html">
+<LINK REL="previous" HREF="node38.html">
+<LINK REL="up" HREF="node32.html">
+<LINK REL="next" HREF="node40.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1105"
+  HREF="node40.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1099"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1093"
+  HREF="node38.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1101"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1103"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1106"
+  HREF="node40.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html1100"
+  HREF="node32.html">Differentiation</A>
+<B> Previous:</B> <A NAME="tex2html1094"
+  HREF="node38.html">Differentiable functions</A>
+ &nbsp; <B>  <A NAME="tex2html1102"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1104"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00670000000000000000"></A>
+<A NAME="sec:31"></A>
+<BR>
+General rule for differentiation
+</H1>
+
+<P>
+From the definition of a derivative it is seen that the process of 
+differentiating a function <SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img568.png"
+ ALT="$ y = f(x)$"></SPAN> consists in taking the following 
+distinct steps:
+
+<P>
+<B>General rule for differentiating</B><A NAME="tex2html33"
+  HREF="footnode.html#foot3868"><SUP><SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">5</SPAN></SUP></A>:
+
+<P>
+
+<UL>
+<LI>FIRST STEP. In the function replace <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> by <!-- MATH
+ $x + \Delta\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img617.png"
+ ALT="$ x + \Delta\, x$"></SPAN>, giving a new 
+value of the function, <!-- MATH
+ $y + \Delta\, y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img618.png"
+ ALT="$ y + \Delta\, y$"></SPAN>.
+
+<P>
+</LI>
+<LI>SECOND STEP. Subtract the given value of the function from the new value 
+in order to find <!-- MATH
+ $\Delta\, y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img586.png"
+ ALT="$ \Delta\, y$"></SPAN> (the increment of the function).
+
+<P>
+</LI>
+<LI>THIRD STEP. Divide the remainder <!-- MATH
+ $\Delta\, y$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img586.png"
+ ALT="$ \Delta\, y$"></SPAN> (the increment of the 
+function) by <!-- MATH
+ $\Delta\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img585.png"
+ ALT="$ \Delta\, x$"></SPAN> (the increment of the independent variable).
+
+<P>
+</LI>
+<LI>FOURTH STEP. Find the limit of this quotient, when <!-- MATH
+ $\Delta\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img585.png"
+ ALT="$ \Delta\, x$"></SPAN> 
+(the increment of the independent variable) varies and approaches the 
+limit zero. This is the derivative required.
+</LI>
+</UL>
+
+<P>
+The student should become thoroughly familiar with this rule by applying 
+the process to a large number of examples. Three such examples will now be 
+worked out in detail.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Differentiate <SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img619.png"
+ ALT="$ 3x^2 + 5$"></SPAN>.
+
+<P>
+Solution. Applying the successive steps in the General Rule, we get, 
+after placing
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y 	= 3x^2 + 5,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="90" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img620.png"
+ ALT="$\displaystyle y = 3x^2 + 5,
+$">
+</DIV><P></P>
+First step. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y + \Delta\, y 	= 3(x + \Delta\, x)2 + 5
+  	= 3x^2 + 6x \cdot \Delta x + 3(\Delta x)^2 + 5.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="404" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img621.png"
+ ALT="$\displaystyle y + \Delta\, y = 3(x + \Delta\, x)2 + 5
+= 3x^2 + 6x \cdot \Delta x + 3(\Delta x)^2 + 5.
+$">
+</DIV><P></P>
+Second step.
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+y + \Delta\, y &	= 3x^2 + 6 x \cdot \Delta x + 3(\Delta x)^2 	+ 5\\
+y &	= 3x^2 	+ 5\\
+\Delta\, y &	= 6x \cdot \Delta x + 3(\Delta x)^2.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="275" HEIGHT="73" BORDER="0"
+ SRC="img622.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+y + \Delta\, y &amp; = 3x^2 + 6 x \cdot \Delta...
+...
+\Delta\, y &amp; = 6x \cdot \Delta x + 3(\Delta x)^2.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+Third step. <!-- MATH
+ $\frac{\Delta y}{\Delta x} 	= 6x + 3 \cdot \Delta x.$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="130" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img623.png"
+ ALT="$ \frac{\Delta y}{\Delta x} = 6x + 3 \cdot \Delta x.$"></SPAN>
+
+<P>
+Fourth step. 	<!-- MATH
+ $\frac{dy}{dx} 	= 6x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img624.png"
+ ALT="$ \frac{dy}{dx} = 6x$"></SPAN>.   
+We may also write this
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d}{dx} (3x^2 + 5) = 6x.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="132" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img625.png"
+ ALT="$\displaystyle \frac{d}{dx} (3x^2 + 5) = 6x.
+$">
+</DIV><P></P>
+
+<P>
+Here's how to use <I CLASS="sans">SAGE</I> to verify this (for simplicity, we set <!-- MATH
+ $h=\Delta x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img626.png"
+ ALT="$ h=\Delta x$"></SPAN>):
+
+<P>
+<P>
+<PRE>[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: x = var("x")
+sage: h = var("h")
+sage: f(x) = 3*x^2 + 5
+sage: Deltay = f(x+h)-f(x)
+sage: (Deltay/h).expand()
+6*x + 3*h
+sage: limit((f(x+h)-f(x))/h,h=0)
+6*x
+sage: diff(f(x),x)
+6*x
+</PRE>
+
+<P>
+</DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; Differentiate <!-- MATH
+ $x^3 - 2x + 7$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img627.png"
+ ALT="$ x^3 - 2x + 7$"></SPAN>.
+
+<P>
+Solution. Place <!-- MATH
+ $y 	= x^3 - 2x + 7$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img628.png"
+ ALT="$ y = x^3 - 2x + 7$"></SPAN>.
+
+<P>
+First step. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+	y + \Delta y &	= (x + \Delta x)3 - 2(x + \Delta x) + 7\\
+   &	= x^3 	+ 3x^2 \cdot \Delta x + 3x \cdot (\Delta x)^2 + (\Delta x)^3 	- 2x 	- 2 \cdot \Delta x 	+ 7
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="452" HEIGHT="54" BORDER="0"
+ SRC="img629.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+y + \Delta y &amp; = (x + \Delta x)3 - 2(x + ...
+...lta x)^2 + (\Delta x)^3 - 2x - 2 \cdot \Delta x + 7
+\end{array}\end{displaymath}">
+</DIV><P></P>
+Second step. 
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+y + \Delta y &	= x^3 	+ 3x^2 \cdot \Delta x + 3x \cdot (\Delta x)^2 + (\Delta x)^3 - 2x - 2 \cdot \Delta x 	+ 7\\
+y &= x^3 - 2x 	  	+ 7\\
+\Delta y &	= 	3x^2 \cdot \Delta x + 3x \cdot (\Delta x)^2 + (\Delta x)^3 - 2 \cdot \Delta x
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="452" HEIGHT="73" BORDER="0"
+ SRC="img630.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+y + \Delta y &amp; = x^3 + 3x^2 \cdot \Delta x...
+...dot (\Delta x)^2 + (\Delta x)^3 - 2 \cdot \Delta x
+\end{array}\end{displaymath}">
+</DIV><P></P>
+Third step. <!-- MATH
+ $\frac{\Delta y}{\Delta x} 	= 3x^2 + 3x \cdot \Delta x + (\Delta x)^2 - 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="230" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img631.png"
+ ALT="$ \frac{\Delta y}{\Delta x} = 3x^2 + 3x \cdot \Delta x + (\Delta x)^2 - 2$"></SPAN>.
+
+<P>
+Fourth step. <!-- MATH
+ $\frac{dy}{dx} 	= 3x^2 - 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="95" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img632.png"
+ ALT="$ \frac{dy}{dx} = 3x^2 - 2$"></SPAN>.
+Or, 	
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d}{dx} (x^3 - 2x + 7) 	= 3x^2 - 2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="195" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img633.png"
+ ALT="$\displaystyle \frac{d}{dx} (x^3 - 2x + 7) = 3x^2 - 2.
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">3</SPAN></B> &nbsp; Differentiate <!-- MATH
+ $\frac{c}{x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img634.png"
+ ALT="$ \frac{c}{x^2}$"></SPAN>.
+
+<P>
+Solution. Place <!-- MATH
+ $y = \frac{c}{x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img635.png"
+ ALT="$ y = \frac{c}{x^2}$"></SPAN>.
+
+<P>
+First step. <!-- MATH
+ $y + \Delta y 	= \frac{c}{(x + \Delta x)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="130" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img636.png"
+ ALT="$ y + \Delta y = \frac{c}{(x + \Delta x)^2}$"></SPAN>.
+
+<P>
+Second step. 
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+	y + \Delta y &	= \frac{c}{(x + \Delta x)^2}\\
+  	y \qquad &	= \frac{c}{x^2}\\
+  	\Delta y &	= \frac{c}{(x + \Delta x)^2} - \frac{c}{x^2} = \frac{-c \cdot \Delta x(2x + \Delta x)}{x^2(x + \Delta x)^2}.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="290" HEIGHT="81" BORDER="0"
+ SRC="img637.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+y + \Delta y &amp; = \frac{c}{(x + \Delta x)^...
+...cdot \Delta x(2x + \Delta x)}{x^2(x + \Delta x)^2}.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+Third step. <!-- MATH
+ $\frac{\Delta y}{\Delta x} 	= -c \cdot \frac{2x + \Delta x}{x^2(x + \Delta x)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="146" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img638.png"
+ ALT="$ \frac{\Delta y}{\Delta x} = -c \cdot \frac{2x + \Delta x}{x^2(x + \Delta x)^2}$"></SPAN>.
+
+<P>
+Fourth step. <!-- MATH
+ $\frac{dy}{dx} 	= -c \cdot \frac{2x}{x^2(x)^2} 	= -\frac{2c}{x^3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="166" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img639.png"
+ ALT="$ \frac{dy}{dx} = -c \cdot \frac{2x}{x^2(x)^2} = -\frac{2c}{x^3}$"></SPAN>.
+Or, <!-- MATH
+ $\frac{d}{dx} \left ( \frac{c}{x^2} \right ) = 	\frac{-2c}{x^3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="104" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img640.png"
+ ALT="$ \frac{d}{dx} \left ( \frac{c}{x^2} \right ) = \frac{-2c}{x^3}$"></SPAN>.</DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1105"
+  HREF="node40.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1099"
+  HREF="node32.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1093"
+  HREF="node38.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1101"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1103"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1106"
+  HREF="node40.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html1100"
+  HREF="node32.html">Differentiation</A>
+<B> Previous:</B> <A NAME="tex2html1094"
+  HREF="node38.html">Differentiable functions</A>
+ &nbsp; <B>  <A NAME="tex2html1102"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1104"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

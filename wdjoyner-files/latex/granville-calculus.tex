@@ -1,0 +1,173 @@
+ 
+%last modified 2008-11-22
+
+%\documentclass[12pt,runningheads]{book}
+\documentclass[10pt,runningheads]{book}
+
+\usepackage{fancyvrb}
+\usepackage{moreverb}
+\usepackage{amsfonts}
+\usepackage{helvet}
+\usepackage{fancyheadings}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+\usepackage{amsgen}
+\usepackage{amsfonts}
+%\usepackage[german,english]{babel}
+\usepackage{array, rotating} 
+\usepackage{graphicx, amsmath}
+\usepackage{texdraw}
+\usepackage{amssymb}
+\usepackage{makeidx}  % allows for index generation
+\usepackage[all,arc,dvips]{xy}
+%\usepackage{twocolumn}
+\usepackage{color}
+
+\definecolor{DarkOlive}{rgb}{0.1047,0.2412,0.0064}
+\definecolor{FireBrick}{rgb}{0.5812,0.0074,0.0083}
+\definecolor{RoyalBlue}{rgb}{0.0236,0.0894,0.6179}
+\definecolor{RoyalGreen}{rgb}{0.0236,0.6179,0.0894}
+\definecolor{RoyalRed}{rgb}{0.6179,0.0236,0.0894}
+\definecolor{LightBlue}{rgb}{0.8544,0.9511,1.0000}
+\definecolor{Black}{rgb}{0.0,0.0,0.0}
+\definecolor{FuncColor}{rgb}{1.0,0.0,0.0}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{xspace}
+
+
+%\pagestyle{fancyplain}
+%\lhead[\fancyplain{}{\rightmark}]{\fancyplain{}}
+%\rhead[\fancyplain{}]{\fancyplain{}{\rightmark}}
+
+\setlength{\parindent}{8pt}
+
+\pagenumbering{roman}
+\pagestyle{empty}
+%\setcounter{page}{4}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{axiom}{Axiom}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{exercise}{Exercise}[section]
+\newtheorem{ponderable}{Ponderable}[section]
+
+\newcommand{\aaa}{\mathbb{A}}
+\newcommand{\nnn}{\mathbb{N}}
+\newcommand{\fff}{\mathbb{F}}
+\newcommand{\qqq}{\mathbb{Q}}
+\newcommand{\rrr}{\mathbb{R}}
+\newcommand{\ccc}{\mathbb{C}}
+\newcommand{\zzz}{\mathbb{Z}}
+\newcommand{\ppp}{\mathbb{P}}
+\newcommand{\hhh}{{\cal H}}
+\newcommand{\pf}{{\bf Proof: \ }}
+%\newcommand{\qed}{$\Box$}
+\newcommand{\stab}{{\rm stab}}
+\newcommand{\beqn}{\begin{equation}}
+\newcommand{\eeqn}{\end{equation}}
+\newcommand{\arccot}{{\rm arccot}}
+\newcommand{\arcsec}{{\rm arcsec}}
+\newcommand{\arccsc}{{\rm arccsc}}
+\newcommand{\vers}{{\rm vers}}
+\newcommand{\arcvers}{{\rm arcvers}}
+\def\fps2{{\rm ft./(sec.)}^2} % \newcommand won't work here !?
+
+\newcommand{\SAGE}{{\sf Sage}\xspace}
+\newcommand{\sage}{\SAGE}
+
+\makeindex
+
+\begin{document}
+
+\pagestyle{fancyplain}
+\lhead[\fancyplain{}{\rightmark}]{\fancyplain{}}
+\rhead[\fancyplain{}]{\fancyplain{}{\rightmark}}
+
+\author{William Anthony Granville, \\
+with extra material added by David Joyner}
+\title{Differential Calculus and \sage\\
+{\footnotesize (revised edition)}}
+
+\date{2009-1-10}
+
+\maketitle
+
+
+\vskip .1in
+
+\addtocounter{page}{3}
+
+
+\newpage
+\addtocounter{page}{1}
+\begin{center}
+\large{
+{\bf Contents}
+}
+\end{center}
+\vskip .3in
+
+\newpage
+\tableofcontents
+
+\newpage
+
+\addtocounter{chapter}{-1}
+
+\addtocounter{page}{1}
+\input granville-calculus-preface.tex
+
+
+\newpage
+
+\pagenumbering{arabic}
+\input granville-calculus-ch2.tex
+
+\input granville-calculus-ch3.tex
+
+\input granville-calculus-ch4.tex
+
+\input granville-calculus-ch5.tex
+
+\input granville-calculus-ch6.tex
+
+\input app-newtons-method-ch6.tex
+
+\input granville-calculus-ch7.tex
+
+\input granville-calculus-ch8.tex
+
+\input granville-calculus-ch9.tex
+
+\input granville-calculus-ch10.tex
+
+\input granville-calculus-ch11.tex
+
+\input granville-calculus-ch12.tex
+
+\input granville-calculus-ch13.tex
+
+\input app-taylor-ch13.tex
+
+\input granville-calculus-ch14.tex
+
+\input granville-calculus-ch1.tex
+
+\input granville-calculus-ref.tex
+
+%\newpage
+
+%\ \ 
+
+%\newpage
+
+\printindex
+\end{document}
+

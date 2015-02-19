@@ -1,0 +1,1099 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Example</TITLE>
+<META NAME="description" CONTENT="Example">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node77.html">
+<LINK REL="previous" HREF="node75.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node77.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1658"
+  HREF="node77.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1652"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1646"
+  HREF="node75.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1654"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1656"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1659"
+  HREF="node77.html">Implicit functions</A>
+<B> Up:</B> <A NAME="tex2html1653"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1647"
+  HREF="node75.html">Differentiation of</A>
+ &nbsp; <B>  <A NAME="tex2html1655"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1657"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007330000000000000000">
+Example</A>
+</H1>
+
+<P>
+Differentiate the following:
+
+<P>
+
+<OL>
+<LI><!-- MATH
+ $y = \arctan (ax^2)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="115" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1319.png"
+ ALT="$ y = \arctan (ax^2)$"></SPAN>.
+
+<P>
+Solution. By XX (<SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1320.png"
+ ALT="$ v = ax^2$"></SPAN>)
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= \frac{\frac{d}{dx} (ax^2)}{1 + (ax^2)^2}
+  	= \frac{2ax}{1 + a^2x^4}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="211" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1321.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{\frac{d}{dx} (ax^2)}{1 + (ax^2)^2}
+= \frac{2ax}{1 + a^2x^4}.
+$">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \arcsin(3x - 4x^3)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="148" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1322.png"
+ ALT="$ y = \arcsin(3x - 4x^3)$"></SPAN>.
+
+<P>
+Solution. By XVIII (<!-- MATH
+ $v = 3x - 4x^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="95" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1323.png"
+ ALT="$ v = 3x - 4x^3$"></SPAN>),
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} =	\frac{\frac{d}{dx}(3x - 4x^3)}{\sqrt{1 - (3x - 4x^3)^2}}
+=\frac{3 - 12x^2}{\sqrt{1 - 9x^2 + 24x^4 - 16x^6}} = \frac{3}{\sqrt{1 - x^2}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="454" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1324.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{\frac{d}{dx}(3x - 4x^3)}{\sqrt{1 - (3x - 4x...
+...=\frac{3 - 12x^2}{\sqrt{1 - 9x^2 + 24x^4 - 16x^6}} = \frac{3}{\sqrt{1 - x^2}}.
+$">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y={\rm arcsec}\, \frac{x^2 + 1}{x^2 - 1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="112" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1325.png"
+ ALT="$ y={\rm arcsec}\, \frac{x^2 + 1}{x^2 - 1}$"></SPAN>.
+
+<P>
+Solution. By XXII (<!-- MATH
+ $v =  \frac{x^2 + 1}{x^2 - 1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1326.png"
+ ALT="$ v = \frac{x^2 + 1}{x^2 - 1} $"></SPAN>),	
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx}
+= \frac{\frac{d}{dx} \left ( \frac{x^2 + 1}{x^2 - 1} \right )}{\frac{x^2 + 1}{x^2 - 1} \sqrt{\left ( \frac{x^2 + 1}{x^2 - 1} \right )^2 - 1}} 	
+= \frac{\frac{(x^2 - 1)2x - (x^2 + 1)2x}{(x^2 - 1)^2}}{\frac{x^2 + 1}{x^2 - 1} \cdot \frac{2x}{x^2 - 1}} 
+= -\frac{2}{x^2 + 1}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="418" HEIGHT="82" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1327.png"
+ ALT="$\displaystyle \frac{dy}{dx}
+= \frac{\frac{d}{dx} \left ( \frac{x^2 + 1}{x^2 - ...
+...)^2}}{\frac{x^2 + 1}{x^2 - 1} \cdot \frac{2x}{x^2 - 1}}
+= -\frac{2}{x^2 + 1}.
+$">
+</DIV><P></P>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} \arcsin \frac{x}{a} = \frac{1}{\sqrt{a^2 - x^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="151" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1328.png"
+ ALT="$ \frac{d}{dx} \arcsin \frac{x}{a} = \frac{1}{\sqrt{a^2 - x^2}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} {\rm arccot}(x^2 - 5) = \frac{-2x}{1 + (x^2 - 5)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="208" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1329.png"
+ ALT="$ \frac{d}{dx} {\rm arccot}(x^2 - 5) = \frac{-2x}{1 + (x^2 - 5)^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} \arctan \frac{2x}{1 - x^2} = \frac{2}{1 + x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="160" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1330.png"
+ ALT="$ \frac{d}{dx} \arctan \frac{2x}{1 - x^2} = \frac{2}{1 + x^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} {\rm arccsc}\frac{1}{2x^2 - 1} = \frac{2}{\sqrt{1 - x^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="169" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1331.png"
+ ALT="$ \frac{d}{dx} {\rm arccsc}\frac{1}{2x^2 - 1} = \frac{2}{\sqrt{1 - x^2}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} \operatorname{arcvers}\, 2x^2 = \frac{2}{\sqrt{1 - x^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="168" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1332.png"
+ ALT="$ \frac{d}{dx} \operatorname{arcvers}\, 2x^2 = \frac{2}{\sqrt{1 - x^2}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} \arctan \sqrt{1 - x} = -\frac{1}{2 \sqrt{1 - x} (2 - x)}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="233" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1333.png"
+ ALT="$ \frac{d}{dx} \arctan \sqrt{1 - x} = -\frac{1}{2 \sqrt{1 - x} (2 - x)}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} {\rm arccsc}\frac{3}{2x} = \frac{2}{9 - 4x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="142" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1334.png"
+ ALT="$ \frac{d}{dx} {\rm arccsc}\frac{3}{2x} = \frac{2}{9 - 4x^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} \operatorname{arcvers}\, \frac{2x^2}{1 + x^2} = \frac{2}{1 + x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="167" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1335.png"
+ ALT="$ \frac{d}{dx} \operatorname{arcvers}\, \frac{2x^2}{1 + x^2} = \frac{2}{1 + x^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} \arctan \frac{x}{a} = \frac{a}{a^2 + x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="144" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1336.png"
+ ALT="$ \frac{d}{dx} \arctan \frac{x}{a} = \frac{a}{a^2 + x^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} \arcsin \frac{x + 1}{\sqrt{2}} = \frac{1}{\sqrt{1 - 2x - x^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="184" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1337.png"
+ ALT="$ \frac{d}{dx} \arcsin \frac{x + 1}{\sqrt{2}} = \frac{1}{\sqrt{1 - 2x - x^2}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(x) = x\sqrt{a^2 - x^2} + a^2 \arcsin \frac{x}{a}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="222" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1338.png"
+ ALT="$ f(x) = x\sqrt{a^2 - x^2} + a^2 \arcsin \frac{x}{a}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans: 
+<!-- MATH
+ $f'(x) =\ 2\sqrt{a^2 - x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="139" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1339.png"
+ ALT="$ f'(x) =\ 2\sqrt{a^2 - x^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(x) = \sqrt{a^2 - x^2} + a \arcsin \frac{x}{a}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="206" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1340.png"
+ ALT="$ f(x) = \sqrt{a^2 - x^2} + a \arcsin \frac{x}{a}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans: 
+<!-- MATH
+ $f'(x) 	= \left ( \frac{a - x}{a + x} \right )^{\frac{1}{2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="118" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1341.png"
+ ALT="$ f'(x) = \left ( \frac{a - x}{a + x} \right )^{\frac{1}{2}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x = r {\rm arcvers}\, \frac{y}{r} - \sqrt{2ry - y^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="199" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1342.png"
+ ALT="$ x = r {\rm arcvers}\, \frac{y}{r} - \sqrt{2ry - y^2}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans: 
+<!-- MATH
+ $\frac{dx}{dy} 	= \frac{y}{\sqrt{2ry - y^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="103" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1343.png"
+ ALT="$ \frac{dx}{dy} = \frac{y}{\sqrt{2ry - y^2}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\theta = \arcsin (3r - 1)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="130" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1344.png"
+ ALT="$ \theta = \arcsin (3r - 1)$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $\frac{d\theta}{dr} 	= \frac{3}{\sqrt{6r - 9r^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="98" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1345.png"
+ ALT="$ \frac{d\theta}{dr} = \frac{3}{\sqrt{6r - 9r^2}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\phi = \arctan \frac{r + a}{1 - ar}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="115" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1346.png"
+ ALT="$ \phi = \arctan \frac{r + a}{1 - ar}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans: 
+<!-- MATH
+ $\frac{d\phi}{dr} 	= \frac{1}{1 + r^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1347.png"
+ ALT="$ \frac{d\phi}{dr} = \frac{1}{1 + r^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $s = {\rm arcsec}\frac{1}{\sqrt{1 - t^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1348.png"
+ ALT="$ s = {\rm arcsec}\frac{1}{\sqrt{1 - t^2}}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $\frac{ds}{dt} =	\frac{1}{\sqrt{1 - t^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="84" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1349.png"
+ ALT="$ \frac{ds}{dt} = \frac{1}{\sqrt{1 - t^2}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dx} ( x \arcsin\, x) = \arcsin\, x + \frac{x}{\sqrt{1 - x^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="241" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1350.png"
+ ALT="$ \frac{d}{dx} ( x \arcsin\, x) = \arcsin\, x + \frac{x}{\sqrt{1 - x^2}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{d\theta} (\tan \theta \arctan\, \theta)
+= \sec^2 \theta \arctan\, \theta \frac{\tan \theta}{1 + \theta^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="279" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1351.png"
+ ALT="$ \frac{d}{d\theta} (\tan \theta \arctan\, \theta)
+= \sec^2 \theta \arctan\, \theta \frac{\tan \theta}{1 + \theta^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\frac{d}{dt}[\log (\arccos\, t)] = -\frac{1}{\arccos t \sqrt{1 - t^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="231" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1352.png"
+ ALT="$ \frac{d}{dt}[\log (\arccos\, t)] = -\frac{1}{\arccos t \sqrt{1 - t^2}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(y) = \arccos (\log\, y)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="145" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1353.png"
+ ALT="$ f(y) = \arccos (\log\, y)$"></SPAN> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $f'(y) 	= -\frac{1}{y\sqrt{1 - (\log y)^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="155" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1354.png"
+ ALT="$ f'(y) = -\frac{1}{y\sqrt{1 - (\log y)^2}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(\theta) = \arcsin \sqrt{\sin \theta}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="142" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1355.png"
+ ALT="$ f(\theta) = \arcsin \sqrt{\sin \theta}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans: 
+<!-- MATH
+ $f'(\theta) 	= \frac{1}{2} \sqrt{1 + \csc \theta}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="142" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1356.png"
+ ALT="$ f'(\theta) = \frac{1}{2} \sqrt{1 + \csc \theta}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $f(\phi) = \arctan \sqrt{\frac{1 - \cos \phi}{1 + \cos \phi}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="167" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1357.png"
+ ALT="$ f(\phi) = \arctan \sqrt{\frac{1 - \cos \phi}{1 + \cos \phi}}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $f'(\phi) 	= \frac{1}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1358.png"
+ ALT="$ f'(\phi) = \frac{1}{2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $p = e^{\arctan\, q}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1359.png"
+ ALT="$ p = e^{\arctan\, q}$"></SPAN> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $\frac{dp}{dq} 	= \frac{e^{\arctan\, q}}{1 + q^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="93" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1360.png"
+ ALT="$ \frac{dp}{dq} = \frac{e^{\arctan\, q}}{1 + q^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $u = \arctan \frac{e^v - e^{-v}}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="130" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1361.png"
+ ALT="$ u = \arctan \frac{e^v - e^{-v}}{2}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $\frac{du}{dv} 	= \frac{2}{e^v + e^{-v}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1362.png"
+ ALT="$ \frac{du}{dv} = \frac{2}{e^v + e^{-v}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $s = \arccos \frac{e^t - e^{-t}}{e^t + e^{-t}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="123" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1363.png"
+ ALT="$ s = \arccos \frac{e^t - e^{-t}}{e^t + e^{-t}}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $\frac{ds}{dt} 	= -\frac{2}{e^v + e^{-v}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="102" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1364.png"
+ ALT="$ \frac{ds}{dt} = -\frac{2}{e^v + e^{-v}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = x^{\arcsin x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1365.png"
+ ALT="$ y = x^{\arcsin x}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $y' = x^{\arcsin x} \left ( \frac{\arcsin x}{x} + \frac{\log x}{\sqrt{1 - x^2}} \right )$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="221" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1366.png"
+ ALT="$ y' = x^{\arcsin x} \left ( \frac{\arcsin x}{x} + \frac{\log x}{\sqrt{1 - x^2}} \right )$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = e^{x^x} \arctan\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="118" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1367.png"
+ ALT="$ y = e^{x^x} \arctan\, x$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $y' 	= e^{x^x} \left [ \frac{1}{1 + x^2} + x^x \arctan x (1 + \log x) \right ]$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="279" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1368.png"
+ ALT="$ y' = e^{x^x} \left [ \frac{1}{1 + x^2} + x^x \arctan x (1 + \log x) \right ]$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \arcsin( \sin x )$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="118" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1369.png"
+ ALT="$ y = \arcsin( \sin x )$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1370.png"
+ ALT="$ y' = 1$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \arctan \frac{4 \sin x}{3 + 5 \cos x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1371.png"
+ ALT="$ y = \arctan \frac{4 \sin x}{3 + 5 \cos x}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $y' 	= \frac{4}{5 + 3 \cos x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="93" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1372.png"
+ ALT="$ y' = \frac{4}{5 + 3 \cos x}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = {\rm arccot}\frac{a}{x} + \log \sqrt{\frac{x - a}{x + a}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="174" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1373.png"
+ ALT="$ y = {\rm arccot}\frac{a}{x} + \log \sqrt{\frac{x - a}{x + a}}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $y' 	= \frac{2ax^2}{x^4 - a^4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1374.png"
+ ALT="$ y' = \frac{2ax^2}{x^4 - a^4}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \log \left ( \frac{1 + x}{1 - x} \right )^{\frac{1}{4}} - \frac{1}{2} \arctan\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="205" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1375.png"
+ ALT="$ y = \log \left ( \frac{1 + x}{1 - x} \right )^{\frac{1}{4}} - \frac{1}{2} \arctan\, x$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $y' 	= \frac{x^2}{1 - x^4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1376.png"
+ ALT="$ y' = \frac{x^2}{1 - x^4}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \sqrt{1 - x^2} \arcsin\, x - x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="177" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1377.png"
+ ALT="$ y = \sqrt{1 - x^2} \arcsin\, x - x$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $y' 	= - \frac{x \arcsin\, x}{\sqrt{1 - x^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="108" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1378.png"
+ ALT="$ y' = - \frac{x \arcsin\, x}{\sqrt{1 - x^2}}$"></SPAN>
+
+<P>
+</LI>
+<LI>Compute the following derivatives:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{lll}
+(a)\ \  \frac{d}{dx} \arcsin 2x^2  &   	(f)\ \  \frac{d}{dt} t^3 \arcsin \frac{t}{3}  &   	(k)\ \  \frac{d}{dy} \arcsin \sqrt{1 - y^2}\\
+ & & \\
+(b)\ \  \frac{d}{dx} \arctan a^2x  &   	(g)\ \  \frac{d}{dt} e^{\arctan at}  &   	(l)\ \  \frac{d}{dz} \arctan ( \log 3 az )\\
+ & & \\
+(c)\ \  \frac{d}{dx} {\rm arcsec}\frac{x}{a}  &   	(h)\ \  \frac{d}{d\phi} \tan \phi^2 \cdot \arctan \phi^{\frac{1}{2}}  &   	(m)\ \  \frac{d}{ds}(a^2 + s^2){\rm arcsec}\frac{s}{2}\\
+ & & \\
+(d)\ \  \frac{d}{dx} x \arccos x  &   	(i)\ \  \frac{d}{d\theta} \arcsin a^{\theta}  &   	(n)\ \  \frac{d}{d\alpha} {\rm arccot}\frac{2\alpha}{3}\\
+ & & \\
+(e)\ \  \frac{d}{dx} x^2 {\rm arccot}ax  &   	(j)\ \  \frac{d}{d\theta} \arctan \sqrt{1 + \theta^2}  &   	(o)\ \  \frac{d}{dt} \sqrt{1 - t^2} \arcsin t
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="494" HEIGHT="188" BORDER="0"
+ SRC="img1379.png"
+ ALT="\begin{displaymath}
+\begin{array}{lll}
+(a)\ \ \frac{d}{dx} \arcsin 2x^2 &amp; (f)\ \...
+...a^2} &amp; (o)\ \ \frac{d}{dt} \sqrt{1 - t^2} \arcsin t
+\end{array}\end{displaymath}">
+</DIV><P></P>
+
+<P>
+</LI>
+</OL>
+
+<P>
+Formulas (<A HREF="node54.html#eqn:A-42">5.1</A>) for differentiating a function of a function, and (<A HREF="node55.html#eqn:C-43">5.2</A>) for differentiating inverse junctions, have been added to the list of 
+formulas at the beginning of this chapter as XXV and XXVI respectively.
+
+<P>
+In the next eight examples, first find <!-- MATH
+ $\frac{dy}{dv}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img962.png"
+ ALT="$ \frac{dy}{dv}$"></SPAN> and <!-- MATH
+ $\frac{dv}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1380.png"
+ ALT="$ \frac{dv}{dx}$"></SPAN> by 
+differentiation and then substitute the results in
+<!-- MATH
+ $\frac{dy}{dx} 	= \frac{dy}{dv} \cdot \frac{dv}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="90" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img767.png"
+ ALT="$ \frac{dy}{dx} = \frac{dy}{dv} \cdot \frac{dv}{dx}$"></SPAN> (by XXV)
+to find <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN>. (As was pointed out in &#167;<A HREF="node54.html#sec:42">5.11</A>, it might be possible to eliminate <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> between the two given expressions so 
+as to find <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> directly as a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, but in most cases the above method is to be preferred.)
+
+<P>
+In general our results should be expressed explicitly in terms of the 
+independent variable; that is, <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN> in terms of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, 
+<!-- MATH
+ $\frac{dx}{dy}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1381.png"
+ ALT="$ \frac{dx}{dy}$"></SPAN> in terms of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>, <!-- MATH
+ $\frac{d\phi}{d\theta}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="23" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1382.png"
+ ALT="$ \frac{d\phi}{d\theta}$"></SPAN> in terms of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$ \theta$"></SPAN>, etc.
+
+<P>
+
+<OL>
+<LI><!-- MATH
+ $y = 2v^2 - 4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="85" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1383.png"
+ ALT="$ y = 2v^2 - 4$"></SPAN>, <!-- MATH
+ $v = 3x^2 + 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1384.png"
+ ALT="$ v = 3x^2 + 1$"></SPAN>.
+
+<P>
+<!-- MATH
+ $\frac{dy}{dv} = 4v$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1385.png"
+ ALT="$ \frac{dy}{dv} = 4v$"></SPAN>; <!-- MATH
+ $\frac{dv}{dx} = 6x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1386.png"
+ ALT="$ \frac{dv}{dx} = 6x$"></SPAN>; substituting in XXV,
+<!-- MATH
+ $\frac{dy}{dx} = 4v \cdot 6x = 24x(3x^2 + 1)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="198" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1387.png"
+ ALT="$ \frac{dy}{dx} = 4v \cdot 6x = 24x(3x^2 + 1)$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \tan 2v$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="76" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1388.png"
+ ALT="$ y = \tan 2v$"></SPAN>, <!-- MATH
+ $v = \arctan(2x - 1)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="135" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1389.png"
+ ALT="$ v = \arctan(2x - 1)$"></SPAN>.
+
+<P>
+<!-- MATH
+ $\frac{dy}{dv} = 2 \sec^2 2v$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="100" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1390.png"
+ ALT="$ \frac{dy}{dv} = 2 \sec^2 2v$"></SPAN>; <!-- MATH
+ $\frac{dv}{dx} = \frac{1}{2x^2 - 2x + 1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1391.png"
+ ALT="$ \frac{dv}{dx} = \frac{1}{2x^2 - 2x + 1}$"></SPAN>; substituting in XXV,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} = \frac{2 \sec^2 2v}{2x^2 - 2x + 1}
+= 2 \frac{\tan^2 2v + 1}{2x^2 - 2x + 1} 
+= \frac{2x^2 - 2x + 1}{2(x - x^2)^2}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="373" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1392.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{2 \sec^2 2v}{2x^2 - 2x + 1}
+= 2 \frac{\tan^2 2v + 1}{2x^2 - 2x + 1}
+= \frac{2x^2 - 2x + 1}{2(x - x^2)^2}
+$">
+</DIV><P></P>
+(since <!-- MATH
+ $v = \arctan (2x - 1)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="135" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1389.png"
+ ALT="$ v = \arctan(2x - 1)$"></SPAN>, <!-- MATH
+ $\tan v = 2x - 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="104" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1393.png"
+ ALT="$ \tan v = 2x - 1$"></SPAN>, <!-- MATH
+ $\tan 2v = \frac{2x - 1}{2x - 2x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="115" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1394.png"
+ ALT="$ \tan 2v = \frac{2x - 1}{2x - 2x^2}$"></SPAN>).
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = 3 v^2 - 4v + 5, v = 2x^3 - 5$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="209" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1395.png"
+ ALT="$ y = 3 v^2 - 4v + 5, v = 2x^3 - 5$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $\frac{dy}{dx} 	=\ 72x^5 - 204x^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="140" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1396.png"
+ ALT="$ \frac{dy}{dx} =\ 72x^5 - 204x^2$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \frac{2v}{3v - 2}, v = \frac{x}{2x - 1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="138" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1397.png"
+ ALT="$ y = \frac{2v}{3v - 2}, v = \frac{x}{2x - 1}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $\frac{dy}{dx} 	= \frac{4}{(x - 2)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1398.png"
+ ALT="$ \frac{dy}{dx} = \frac{4}{(x - 2)^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \log(a^2 - v^2)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1399.png"
+ ALT="$ y = \log(a^2 - v^2)$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $\frac{dy}{dx} 	=\ -2 \tan x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="106" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1400.png"
+ ALT="$ \frac{dy}{dx} =\ -2 \tan x$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $y = \arctan (a + v), v = e^x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="179" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1401.png"
+ ALT="$ y = \arctan (a + v), v = e^x$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans: 
+<!-- MATH
+ $\frac{dy}{dx} 	=\ \frac{e^x}{1 + (a + e^x)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="115" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1402.png"
+ ALT="$ \frac{dy}{dx} =\ \frac{e^x}{1 + (a + e^x)^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $r = e^{2s} + e^s, s = \log(t - t^2)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="194" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1403.png"
+ ALT="$ r = e^{2s} + e^s, s = \log(t - t^2)$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $\frac{dr}{dt} 	=\ 4t^3 - 6t^2 + 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1404.png"
+ ALT="$ \frac{dr}{dt} =\ 4t^3 - 6t^2 + 1$"></SPAN>
+</LI>
+</OL>
+
+<P>
+In the following examples first find <!-- MATH
+ $\frac{dx}{dy}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1381.png"
+ ALT="$ \frac{dx}{dy}$"></SPAN> by differentiation 
+and then substitute in
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	=\ \frac{1}{\frac{dx}{dy}}\ \ \ \ {\rm by\ XXVI}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="159" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1405.png"
+ ALT="$\displaystyle \frac{dy}{dx} =\ \frac{1}{\frac{dx}{dy}}\ \ \ \ {\rm by\ XXVI}
+$">
+</DIV><P></P>
+to find <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN>.
+
+<P>
+
+<OL>
+<LI><!-- MATH
+ $x = y\sqrt{1 + y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1406.png"
+ ALT="$ x = y\sqrt{1 + y}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $\frac{dy}{dx} 	=\ \frac{2\sqrt{1 + y}}{2 + 3y} = \frac{2x}{2y + 3y^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="160" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1407.png"
+ ALT="$ \frac{dy}{dx} =\ \frac{2\sqrt{1 + y}}{2 + 3y} = \frac{2x}{2y + 3y^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x = \sqrt{1 + \cos\, y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="110" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1408.png"
+ ALT="$ x = \sqrt{1 + \cos\, y}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $\frac{dy}{dx} 	=\ -\frac{2 \sqrt{1 + \cos\, y}}{\sin\, y} = -\frac{2}{\sqrt{2 - x^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="204" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1409.png"
+ ALT="$ \frac{dy}{dx} =\ -\frac{2 \sqrt{1 + \cos\, y}}{\sin\, y} = -\frac{2}{\sqrt{2 - x^2}}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x = \frac{y}{1 + \log\, y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1410.png"
+ ALT="$ x = \frac{y}{1 + \log\, y}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  	
+<!-- MATH
+ $\frac{dy}{dx} 	=\ \frac{(1 + \log y)^2}{\log\, y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="110" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1411.png"
+ ALT="$ \frac{dy}{dx} =\ \frac{(1 + \log y)^2}{\log\, y}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x = a \log \frac{a + \sqrt{a^2 - y^2}}{y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="139" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1412.png"
+ ALT="$ x = a \log \frac{a + \sqrt{a^2 - y^2}}{y}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $\frac{dy}{dx} 	=\ -\frac{y \sqrt{a^2 - y^2}}{a^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="121" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1413.png"
+ ALT="$ \frac{dy}{dx} =\ -\frac{y \sqrt{a^2 - y^2}}{a^2}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x = r {\rm arcvers}\, \frac{y}{r} - \sqrt{2ry - y^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="199" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1342.png"
+ ALT="$ x = r {\rm arcvers}\, \frac{y}{r} - \sqrt{2ry - y^2}$"></SPAN>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ans:  
+<!-- MATH
+ $\frac{dy}{dx} 	=\ \sqrt{\frac{2r - y}{y}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="98" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1414.png"
+ ALT="$ \frac{dy}{dx} =\ \sqrt{\frac{2r - y}{y}}$"></SPAN>
+
+<P>
+</LI>
+<LI>Show that the geometrical significance of XXVI is 
+that the tangent makes complementary angles with the two coordinate axes.
+
+<P>
+</LI>
+</OL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1658"
+  HREF="node77.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1652"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1646"
+  HREF="node75.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1654"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1656"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1659"
+  HREF="node77.html">Implicit functions</A>
+<B> Up:</B> <A NAME="tex2html1653"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1647"
+  HREF="node75.html">Differentiation of</A>
+ &nbsp; <B>  <A NAME="tex2html1655"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1657"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,725 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Angle between the radius vector and tangent</TITLE>
+<META NAME="description" CONTENT="Angle between the radius vector and tangent">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node89.html">
+<LINK REL="previous" HREF="node87.html">
+<LINK REL="up" HREF="node81.html">
+<LINK REL="next" HREF="node89.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1844"
+  HREF="node89.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1838"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1832"
+  HREF="node87.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1840"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1842"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1845"
+  HREF="node89.html">Lengths of polar subtangent</A>
+<B> Up:</B> <A NAME="tex2html1839"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1833"
+  HREF="node87.html">Exercises</A>
+ &nbsp; <B>  <A NAME="tex2html1841"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1843"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00870000000000000000"></A>
+<A NAME="sec:67"></A>
+<BR>
+Angle between the radius vector and tangent
+</H1>
+
+<P>
+Angle between the radius vector drawn to a point on a curve 
+and the tangent to the curve at that point. Let the equation of the 
+curve in polar coordinates be <!-- MATH
+ $\rho = f(\theta)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1790.png"
+ ALT="$ \rho = f(\theta)$"></SPAN>.
+
+<P>
+Let P be any fixed point <!-- MATH
+ $(\rho,\theta)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1791.png"
+ ALT="$ (\rho,\theta)$"></SPAN> on the curve. If <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$ \theta$"></SPAN>, which we assume 
+as the independent variable, takes on an increment <!-- MATH
+ $\Delta \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1792.png"
+ ALT="$ \Delta \theta$"></SPAN>, then <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1793.png"
+ ALT="$ \rho$"></SPAN> 
+will take on a corresponding increment <!-- MATH
+ $\Delta \rho$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1794.png"
+ ALT="$ \Delta \rho$"></SPAN>. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:vector-angle"></A><A NAME="13172"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.8:</STRONG>
+Angle between the radius vector drawn to a point on a curve and the tangent to the curve at that point.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="406" HEIGHT="271" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1795.png"
+ ALT="\includegraphics[height=6cm,width=9cm]{polar-tangent.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Denote by Q the point 
+<!-- MATH
+ $(\rho + \Delta \rho,\theta + \Delta \theta)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="122" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1796.png"
+ ALT="$ (\rho + \Delta \rho,\theta + \Delta \theta)$"></SPAN>. Draw PR perpendicular to OQ. Then 
+<!-- MATH
+ $OQ = \rho + \Delta \rho$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="100" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1797.png"
+ ALT="$ OQ = \rho + \Delta \rho$"></SPAN>, <!-- MATH
+ $PR = \rho \sin\Delta \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="105" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1798.png"
+ ALT="$ PR = \rho \sin\Delta \theta$"></SPAN>, and <!-- MATH
+ $OR = \rho \cos\Delta \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="106" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1799.png"
+ ALT="$ OR = \rho \cos\Delta \theta$"></SPAN>. 
+Also,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan PQR = \frac{PR}{RQ}
+= \frac{PR}{OQ - OR} 
+= \frac{\rho \sin \Delta \theta}{\rho + \Delta \rho - \rho \cos \Delta \theta}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="366" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1800.png"
+ ALT="$\displaystyle \tan PQR = \frac{PR}{RQ}
+= \frac{PR}{OQ - OR}
+= \frac{\rho \sin \Delta \theta}{\rho + \Delta \rho - \rho \cos \Delta \theta}.
+$">
+</DIV><P></P>
+Denote by <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1801.png"
+ ALT="$ \psi$"></SPAN> the angle between the radius vector OP and the 
+tangent PT. If we now let <!-- MATH
+ $\Delta \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1792.png"
+ ALT="$ \Delta \theta$"></SPAN> approach the limit zero, then
+
+<P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>the point Q will approach indefinitely near P;
+
+<P>
+</DD>
+<DT>(b)</DT>
+<DD>the secant PQ will approach the tangent PT as a limiting position; and
+
+<P>
+</DD>
+<DT>(c)</DT>
+<DD>the angle PQR will approach <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1801.png"
+ ALT="$ \psi$"></SPAN> as a limit.
+</DD>
+</DL>
+
+<P>
+Hence
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan\ \psi
+=\ \lim_{\Delta \theta \to 0} \frac{\rho \Delta \theta}{\rho + \Delta \rho - \rho \cos \Delta \theta}
+=\ \lim_{\Delta \theta \to 0} \frac{\rho \Delta \theta}{2 \rho \sin^2 \frac{\Delta \theta}{2} + \Delta \rho}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="419" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1802.png"
+ ALT="$\displaystyle \tan\ \psi
+=\ \lim_{\Delta \theta \to 0} \frac{\rho \Delta \thet...
+...\frac{\rho \Delta \theta}{2 \rho \sin^2 \frac{\Delta \theta}{2} + \Delta \rho}
+$">
+</DIV><P></P>
+(since, from 39, &#167;<A HREF="node4.html#sec:1">1.1</A>,
+<!-- MATH
+ $\rho - \rho \cos \Delta \theta
+= \rho (1 - \cos \Delta \theta)= 2 \rho \sin^2 \frac{\Delta \theta}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="293" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1803.png"
+ ALT="$ \rho - \rho \cos \Delta \theta
+= \rho (1 - \cos \Delta \theta)= 2 \rho \sin^2 \frac{\Delta \theta}{2}$"></SPAN>).
+Dividing both numerator and denominator by <!-- MATH
+ $\Delta \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1792.png"
+ ALT="$ \Delta \theta$"></SPAN>, this is
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+=\ \lim_{\Delta \theta \to 0} \frac{\frac{\rho \sin \Delta \theta}{\Delta \theta}}{\frac{2 \rho \sin^2 \frac{\Delta \theta}{2}}{\Delta \theta} + \frac{\Delta \rho}{\Delta \theta}}
+=\ \lim_{\Delta \to 0} \frac{\rho \cdot \frac{\sin \Delta \theta}{\Delta \theta}}{\rho \sin \frac{\Delta \theta}{2} \cdot \frac{\sin \frac{\Delta \theta}{2}}{\frac{\Delta \theta}{2}} + \frac{\Delta \rho}{\Delta \theta}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="383" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1804.png"
+ ALT="$\displaystyle =\ \lim_{\Delta \theta \to 0} \frac{\frac{\rho \sin \Delta \theta...
+...lta \theta}{2}}{\frac{\Delta \theta}{2}} + \frac{\Delta \rho}{\Delta \theta}}.
+$">
+</DIV><P></P>
+Since 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{\Delta \theta \to 0} \left ( \frac{\Delta \rho}{\Delta \theta} \right )
+= \frac{d\rho}{d\theta}\ {\rm and}\ \lim_{\Delta \theta \to 0} \left ( \sin \frac{\Delta \theta}{2} \right ) 
+= 0,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="315" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1805.png"
+ ALT="$\displaystyle \lim_{\Delta \theta \to 0} \left ( \frac{\Delta \rho}{\Delta \the...
+...\lim_{\Delta \theta \to 0} \left ( \sin \frac{\Delta \theta}{2} \right )
+= 0,
+$">
+</DIV><P></P>
+also 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{\Delta \theta \to 0} \left ( \frac{\sin \Delta \theta}{\Delta \theta} \right ) = 1
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="143" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1806.png"
+ ALT="$\displaystyle \lim_{\Delta \theta \to 0} \left ( \frac{\sin \Delta \theta}{\Delta \theta} \right ) = 1
+$">
+</DIV><P></P>
+and 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{\Delta \theta \to 0} \frac{\sin \frac{\Delta \theta}{2}}{\frac{\Delta \theta}{2}} = 1
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="119" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1807.png"
+ ALT="$\displaystyle \lim_{\Delta \theta \to 0} \frac{\sin \frac{\Delta \theta}{2}}{\frac{\Delta \theta}{2}} = 1
+$">
+</DIV><P></P>
+by &#167;<A HREF="node28.html#sec:22">3.10</A>, we have
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A-67"></A><!-- MATH
+ \begin{equation}
+\tan\ \psi = \frac{\rho}{\frac{d\rho}{d\theta}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1808.png"
+ ALT="$\displaystyle \tan\ \psi = \frac{\rho}{\frac{d\rho}{d\theta}}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">12</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+From the triangle OPT we get
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:B-67"></A><!-- MATH
+ \begin{equation}
+\tau = \theta + \psi.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1809.png"
+ ALT="$\displaystyle \tau = \theta + \psi.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">13</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Having found <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1535.png"
+ ALT="$ \tau$"></SPAN>, we may then find <!-- MATH
+ $\tan\,\tau$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1810.png"
+ ALT="$ \tan\,\tau$"></SPAN>, the slope of the tangent 
+to the curve at P. Or since, from (<A HREF="#eqn:B-67">6.13</A>),
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan \tau = \tan (\theta + \psi) = \frac{\tan \theta + \tan \psi}{1 - \tan \theta \tan \psi}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="259" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1811.png"
+ ALT="$\displaystyle \tan \tau = \tan (\theta + \psi) = \frac{\tan \theta + \tan \psi}{1 - \tan \theta \tan \psi}
+$">
+</DIV><P></P>
+we may calculate <!-- MATH
+ $\tan\, \psi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1812.png"
+ ALT="$ \tan\, \psi$"></SPAN> from (<A HREF="#eqn:A-67">6.12</A>) and substitute in the formula
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:C-67"></A><!-- MATH
+ \begin{equation}
+{\rm slope\ of\ tangent}\ = \tan \tau = \frac{\tan \theta + \tan \psi}{1 - \tan \theta \tan \psi}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="307" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1813.png"
+ ALT="$\displaystyle {\rm slope\ of\ tangent}\ = \tan \tau = \frac{\tan \theta + \tan \psi}{1 - \tan \theta \tan \psi}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">14</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>	
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Find <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1801.png"
+ ALT="$ \psi$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1535.png"
+ ALT="$ \tau$"></SPAN> in the cardioid 
+<!-- MATH
+ $\psi = a(1 -\cos\,\theta)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="119" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1814.png"
+ ALT="$ \psi = a(1 -\cos\,\theta)$"></SPAN>. Also find the slope at <!-- MATH
+ $\theta = \frac{\pi}{6}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1815.png"
+ ALT="$ \theta = \frac{\pi}{6}$"></SPAN>.
+
+<P>
+Solution. <!-- MATH
+ $\frac{d\psi}{d\theta} = a \sin \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1816.png"
+ ALT="$ \frac{d\psi}{d\theta} = a \sin \theta$"></SPAN>. 
+Substituting in (<A HREF="#eqn:A-67">6.12</A>) gives
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan \psi
+= \frac{\rho}{\frac{d\rho}{d\theta}} 
+= \frac{a(1 - \cos \theta)}{a \sin \theta} 
+= \frac{2 a \sin^2 \frac{\theta}{2}}{2a \sin \frac{\theta}{2} \cos \frac{\theta}{2}} 
+= \tan \frac{\theta}{2},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="365" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1817.png"
+ ALT="$\displaystyle \tan \psi
+= \frac{\rho}{\frac{d\rho}{d\theta}}
+= \frac{a(1 - \c...
+...{2}}{2a \sin \frac{\theta}{2} \cos \frac{\theta}{2}}
+= \tan \frac{\theta}{2},
+$">
+</DIV><P></P>
+by items 39 and 37, &#167;<A HREF="node4.html#sec:1">1.1</A>. Since <!-- MATH
+ $\tan \psi = \tan \frac{\theta}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="98" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1818.png"
+ ALT="$ \tan \psi = \tan \frac{\theta}{2}$"></SPAN>, we have
+<!-- MATH
+ $\psi = \frac{\theta}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1819.png"
+ ALT="$ \psi = \frac{\theta}{2}$"></SPAN>.
+
+<P>
+Substituting in (<A HREF="#eqn:B-67">6.13</A>), 
+<!-- MATH
+ $\tau = \theta + \frac{\theta}{2} = \frac{3\theta}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="110" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1820.png"
+ ALT="$ \tau = \theta + \frac{\theta}{2} = \frac{3\theta}{2}$"></SPAN>.
+so
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan\, \tau = \tan \frac{\pi}{4} = 1.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="135" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1821.png"
+ ALT="$\displaystyle \tan\, \tau = \tan \frac{\pi}{4} = 1.
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+To find the angle of intersection <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img265.png"
+ ALT="$ \phi$"></SPAN> of two curves <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img337.png"
+ ALT="$ C$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1822.png"
+ ALT="$ C'$"></SPAN> whose 
+equations are given in polar cooordinates, we may proceed as follows:
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:curves-angle"></A><A NAME="13288"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.9:</STRONG>
+The angle between two curves.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="362" HEIGHT="226" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1823.png"
+ ALT="\includegraphics[height=5cm,width=8cm]{curves-intersect2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<DIV ALIGN="CENTER">
+angle TPT<SPAN CLASS="MATH"><IMG
+ WIDTH="9" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1824.png"
+ ALT="$ '$"></SPAN> = angle OPT<SPAN CLASS="MATH"><IMG
+ WIDTH="9" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1824.png"
+ ALT="$ '$"></SPAN> - angle OPT,
+
+</DIV>
+or, <!-- MATH
+ $\phi = \psi' - \psi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1825.png"
+ ALT="$ \phi = \psi' - \psi$"></SPAN>. Hence
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:D-67"></A><!-- MATH
+ \begin{equation}
+\ \tan\, \phi 	= \frac{\tan\, \psi' - \tan\, \psi}{1 + \tan\, \psi' \tan\, \psi},
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="190" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1826.png"
+ ALT="$\displaystyle \ \tan\, \phi = \frac{\tan\, \psi' - \tan\, \psi}{1 + \tan\, \psi' \tan\, \psi},$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">15</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <!-- MATH
+ $\tan\, \psi'$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1827.png"
+ ALT="$ \tan\, \psi'$"></SPAN> and <!-- MATH
+ $\tan\, \psi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1812.png"
+ ALT="$ \tan\, \psi$"></SPAN> are calculated by (<A HREF="#eqn:A-67">6.12</A>) 
+from the two curves and evaluated for the point of intersection.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; Find the angle of of intersection of the curves 
+<!-- MATH
+ $\rho = a\sin\, 2\theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1828.png"
+ ALT="$ \rho = a\sin\, 2\theta$"></SPAN>, <!-- MATH
+ $\rho = a\cos\, 2\theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1829.png"
+ ALT="$ \rho = a\cos\, 2\theta$"></SPAN>.
+
+<P>
+Solution. Solving the two equations simultaneously, we get at the point of intersection
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan\, 2\theta = 1, \,\ \ \ \  2\theta = 45^o=\pi/4,\ \ \  \theta = \frac{45}{2}^o=\pi/8.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="346" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1830.png"
+ ALT="$\displaystyle \tan\, 2\theta = 1, \,\ \ \ \ 2\theta = 45^o=\pi/4,\ \ \ \theta = \frac{45}{2}^o=\pi/8.
+$">
+</DIV><P></P>
+From the first curve, using (<A HREF="#eqn:A-67">6.12</A>),
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan \psi' = \frac{1}{2} \tan 2 \theta = \frac{1}{2},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="160" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1831.png"
+ ALT="$\displaystyle \tan \psi' = \frac{1}{2} \tan 2 \theta = \frac{1}{2},
+$">
+</DIV><P></P>
+for <!-- MATH
+ $\theta = \frac{45}{2}^o=\pi/8$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="104" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1832.png"
+ ALT="$ \theta = \frac{45}{2}^o=\pi/8$"></SPAN>.
+From the second curve,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan \psi = -\frac{1}{2} \cot 2 \theta = -\frac{1}{2},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="179" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1833.png"
+ ALT="$\displaystyle \tan \psi = -\frac{1}{2} \cot 2 \theta = -\frac{1}{2},
+$">
+</DIV><P></P>
+for <!-- MATH
+ $\theta = \frac{45}{2}^o=\pi/8$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="104" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1832.png"
+ ALT="$ \theta = \frac{45}{2}^o=\pi/8$"></SPAN>.
+
+<P>
+Substituting in ((<A HREF="#eqn:D-67">6.15</A>),
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan \psi = \frac{ \frac{1}{2} + \frac{1}{2} }{ 1 - \frac{1}{4} }
+= \frac{4}{3}. 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="143" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1834.png"
+ ALT="$\displaystyle \tan \psi = \frac{ \frac{1}{2} + \frac{1}{2} }{ 1 - \frac{1}{4} }
+= \frac{4}{3}.
+$">
+</DIV><P></P>
+therefore <!-- MATH
+ $\psi = \arctan \frac{4}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1835.png"
+ ALT="$ \psi = \arctan \frac{4}{3}$"></SPAN>. </DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1844"
+  HREF="node89.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1838"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1832"
+  HREF="node87.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1840"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1842"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1845"
+  HREF="node89.html">Lengths of polar subtangent</A>
+<B> Up:</B> <A NAME="tex2html1839"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1833"
+  HREF="node87.html">Exercises</A>
+ &nbsp; <B>  <A NAME="tex2html1841"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1843"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

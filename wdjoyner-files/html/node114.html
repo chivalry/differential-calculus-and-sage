@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Examining a function for extremal values: first method</TITLE>
+<META NAME="description" CONTENT="Examining a function for extremal values: first method">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node115.html">
+<LINK REL="previous" HREF="node113.html">
+<LINK REL="up" HREF="node109.html">
+<LINK REL="next" HREF="node115.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2222"
+  HREF="node115.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2216"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2210"
+  HREF="node113.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2218"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2220"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2223"
+  HREF="node115.html">Examining a function for</A>
+<B> Up:</B> <A NAME="tex2html2217"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2211"
+  HREF="node113.html">Maximum and minimum values</A>
+ &nbsp; <B>  <A NAME="tex2html2219"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2221"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001050000000000000000">
+Examining a function for extremal values: first method</A>
+</H1>
+
+<P>
+Working rule:
+
+<P>
+
+<UL>
+<LI>FIRST STEP. Find the first derivative of the function.
+
+<P>
+</LI>
+<LI>SECOND STEP. Set the first derivative equal to 
+zero<A NAME="tex2html108"
+  HREF="footnode.html#foot19189"><SUP><SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">7</SPAN></SUP></A> and solve the resulting equation for real roots in order to 
+find the critical values of the variable.
+
+<P>
+</LI>
+<LI>THIRD STEP. Write the derivative in factor form; if it is algebraic, 
+write it in linear form.
+
+<P>
+</LI>
+<LI>FOURTH STEP. Considering one critical value at a time, test the first 
+derivative, first for a value a trifle less and then for a value a 
+trifle greater than the critical value. If the sign of the 
+derivative is first <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2335.png"
+ ALT="$ +$"></SPAN> and then <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2336.png"
+ ALT="$ -$"></SPAN>, the function has a maximum value 
+for that particular critical value of the variable; but if the 
+reverse is true, then it has a minimum value. If the sign does 
+not change, the function has neither.
+</LI>
+</UL>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; In the problem worked out in Example <A HREF="node110.html#ex:circle">8.1.1</A>, we showed by means of the graph of the function
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+A = x\sqrt{100 - x^2}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="122" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2337.png"
+ ALT="$\displaystyle A = x\sqrt{100 - x^2}
+$">
+</DIV><P></P>
+that the rectangle of maximum area inscribed in a circle 
+of radius <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> inches contained <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2295.png"
+ ALT="$ 50$"></SPAN> square inches. This may now 
+be proved analytically as follows by applying the above rule.
+
+<P>
+Solution. <!-- MATH
+ $f(x)=x\sqrt{100 - x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="139" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2338.png"
+ ALT="$ f(x)=x\sqrt{100 - x^2}$"></SPAN>.
+
+<P>
+First step. <!-- MATH
+ $f'(x) 	=\ \frac{100 - 2x^2}{\sqrt{100 - x^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="123" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2339.png"
+ ALT="$ f'(x) =\ \frac{100 - 2x^2}{\sqrt{100 - x^2}}$"></SPAN>.
+
+<P>
+Second step. <!-- MATH
+ $\frac{100 - 2x^2}{\sqrt{100 - x^2}} 	=\ 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="96" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2340.png"
+ ALT="$ \frac{100 - 2x^2}{\sqrt{100 - x^2}} =\ 0$"></SPAN>
+implies <!-- MATH
+ $x 	=\ 5\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2292.png"
+ ALT="$ x =\ 5\sqrt{2}$"></SPAN>, which is the critical value. Only 
+the positive sign of the radical is taken, since, from the 
+nature of the problem, the negative sign has no meaning.
+
+<P>
+Third step. <!-- MATH
+ $f'(x)
+=\ \frac{2(5\sqrt{2} - x)(5\sqrt{2} + x)}{\sqrt{(10 - x)(10 + x)}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="177" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2341.png"
+ ALT="$ f'(x)
+=\ \frac{2(5\sqrt{2} - x)(5\sqrt{2} + x)}{\sqrt{(10 - x)(10 + x)}}$"></SPAN>.
+
+<P>
+Fourth step. When <!-- MATH
+ $x < 5\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2342.png"
+ ALT="$ x &lt; 5\sqrt{2}$"></SPAN>, <!-- MATH
+ $f'(x) 	=\ \frac{2(+)(+)}{\sqrt{(+)(+)}} = +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="157" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2343.png"
+ ALT="$ f'(x) =\ \frac{2(+)(+)}{\sqrt{(+)(+)}} = +$"></SPAN>.
+When <!-- MATH
+ $x > 5\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2344.png"
+ ALT="$ x &gt; 5\sqrt{2}$"></SPAN>, <!-- MATH
+ $f'(x) 	=\ \frac{2(+)(+)}{\sqrt{(-)(+)}} = -$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="157" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2345.png"
+ ALT="$ f'(x) =\ \frac{2(+)(+)}{\sqrt{(-)(+)}} = -$"></SPAN>.
+
+<P>
+Since the sign of the first derivative changes from <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2335.png"
+ ALT="$ +$"></SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2336.png"
+ ALT="$ -$"></SPAN> 
+at <!-- MATH
+ $x = 5\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2292.png"
+ ALT="$ x =\ 5\sqrt{2}$"></SPAN>, the function has a maximum value
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f(5\sqrt{2}) = 5\sqrt{2} \cdot 5\sqrt{2} = 50.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="188" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2346.png"
+ ALT="$\displaystyle f(5\sqrt{2}) = 5\sqrt{2} \cdot 5\sqrt{2} = 50.
+$">
+</DIV><P></P>
+
+<P>
+In <I CLASS="sans">SAGE</I>:
+
+<P>
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: x = var("x")
+sage: f(x) = x*sqrt(100 - x^2)
+sage: f1(x) = diff(f(x),x); f1(x)
+sqrt(100 - x^2) - x^2/sqrt(100 - x^2)
+sage: crit_pts = solve(f1(x) == 0,x); crit_pts
+[x == -5*sqrt(2), x == 5*sqrt(2)]
+sage: x0 = crit_pts[1].rhs(); x0
+5*sqrt(2)
+sage: f(x0)
+50
+sage: RR(f1(x0-0.1))&gt;0
+True
+sage: RR(f1(x0+0.1))&lt;0
+True
+</PRE>
+
+This tells us  that <!-- MATH
+ $x_0=5\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2347.png"
+ ALT="$ x_0=5\sqrt{2}$"></SPAN> is a critical point, at
+which the area is <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2295.png"
+ ALT="$ 50$"></SPAN> square inches and at which the
+area changes from increasing to decreasing. This implies that the
+area is a maximum at this point.
+
+<P></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2222"
+  HREF="node115.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2216"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2210"
+  HREF="node113.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2218"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2220"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2223"
+  HREF="node115.html">Examining a function for</A>
+<B> Up:</B> <A NAME="tex2html2217"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2211"
+  HREF="node113.html">Maximum and minimum values</A>
+ &nbsp; <B>  <A NAME="tex2html2219"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2221"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

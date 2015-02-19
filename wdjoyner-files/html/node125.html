@@ -1,0 +1,416 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Derivative of the arc in rectangular coordinates</TITLE>
+<META NAME="description" CONTENT="Derivative of the arc in rectangular coordinates">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node126.html">
+<LINK REL="previous" HREF="node124.html">
+<LINK REL="up" HREF="node121.html">
+<LINK REL="next" HREF="node126.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2383"
+  HREF="node126.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2377"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2371"
+  HREF="node124.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2379"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2381"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2384"
+  HREF="node126.html">Derivative of the arc</A>
+<B> Up:</B> <A NAME="tex2html2378"
+  HREF="node121.html">Differentials</A>
+<B> Previous:</B> <A NAME="tex2html2372"
+  HREF="node124.html">Infinitesimals</A>
+ &nbsp; <B>  <A NAME="tex2html2380"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2382"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001140000000000000000"></A>
+<A NAME="sec:90"></A>
+<BR>
+Derivative of the arc in rectangular coordinates
+</H1>
+
+<P>
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="$ s$"></SPAN> be the length<A NAME="tex2html121"
+  HREF="footnode.html#foot22098"><SUP><SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">3</SPAN></SUP></A>  of the arc AP measured from a fixed point A on the curve.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:derivative-arc"></A><A NAME="22106"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.2:</STRONG>
+The differential of the arc length.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="180" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2768.png"
+ ALT="\includegraphics[height=4cm,width=4cm]{parabola-tangent4.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Denote the increment of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="$ s$"></SPAN> (= arc PQ) by <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1943.png"
+ ALT="$ \Delta s$"></SPAN>. 
+The definition of the length of arc depends on the 
+assumption that, as Q approaches P,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim \left ( \frac{\mbox{chord} PQ}{\mbox{arc} PQ} \right ) = 1.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="154" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2769.png"
+ ALT="$\displaystyle \lim \left ( \frac{\mbox{chord} PQ}{\mbox{arc} PQ} \right ) = 1.
+$">
+</DIV><P></P>
+If we now apply Theorem <A HREF="node124.html#thrm:89">9.3.1</A> to this, we get
+In the limit of the ratio of chord PQ and a second infinitesimal, 
+chord PQ may be replaced by arc PQ (= <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1943.png"
+ ALT="$ \Delta s$"></SPAN>).
+
+<P>
+From the above figure
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:H-90"></A><!-- MATH
+ \begin{equation}
+({\rm chord}\ PQ)^2 = (\Delta x)^2 + (\Delta y)^2,
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="221" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2770.png"
+ ALT="$\displaystyle ({\rm chord}\ PQ)^2 = (\Delta x)^2 + (\Delta y)^2,$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Dividing through by <!-- MATH
+ $(\Delta x)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2771.png"
+ ALT="$ (\Delta x)^2$"></SPAN>, we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left ( \frac{\mbox{chord} PQ}{\Delta x} \right )^2
+= 1 + \left ( \frac{\Delta y}{\Delta x} \right )^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="215" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2772.png"
+ ALT="$\displaystyle \left ( \frac{\mbox{chord} PQ}{\Delta x} \right )^2
+= 1 + \left ( \frac{\Delta y}{\Delta x} \right )^2.
+$">
+</DIV><P></P>
+Now let Q approach P as a limiting position; then 
+<!-- MATH
+ $\Delta x \to 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img694.png"
+ ALT="$ \Delta x \to 0$"></SPAN> and we have
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left ( \frac{ds}{dx} \right )^2 = 1 + \left ( \frac{dy}{dx} \right )^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="164" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2773.png"
+ ALT="$\displaystyle \left ( \frac{ds}{dx} \right )^2 = 1 + \left ( \frac{dy}{dx} \right )^2.
+$">
+</DIV><P></P>
+(Since <!-- MATH
+ $\lim_{\Delta x \to 0} \left ( \frac{chord PQ}{\Delta x} \right )
+= \lim_{\Delta x \to 0} \left ( \frac{\Delta s}{\Delta x} \right )
+= \frac{ds}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="300" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2774.png"
+ ALT="$ \lim_{\Delta x \to 0} \left ( \frac{chord PQ}{\Delta x} \right )
+= \lim_{\Delta x \to 0} \left ( \frac{\Delta s}{\Delta x} \right )
+= \frac{ds}{dx}$"></SPAN>.) Therefore, 
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:24-90"></A><!-- MATH
+ \begin{equation}
+\frac{ds}{dx} = \sqrt{1 + \left ( \frac{dy}{dx} \right )^2}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="146" HEIGHT="71" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2775.png"
+ ALT="$\displaystyle \frac{ds}{dx} = \sqrt{1 + \left ( \frac{dy}{dx} \right )^2}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">4</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Similarly, if we divide (<A HREF="#eqn:H-90">9.3</A>) by 
+<!-- MATH
+ $(\Delta y)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2776.png"
+ ALT="$ (\Delta y)^2$"></SPAN> and pass to the limit, we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{ds}{dy} = \sqrt{\left ( \frac{dx}{dy} \right )^2 + 1}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="146" HEIGHT="71" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2777.png"
+ ALT="$\displaystyle \frac{ds}{dy} = \sqrt{\left ( \frac{dx}{dy} \right )^2 + 1}.
+$">
+</DIV><P></P>
+Also, from the above figure,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\cos \theta
+= \frac{\Delta x}{\mbox{chord} PQ},\ \ \  \sin \theta 
+= \frac{\Delta y}{\mbox{chord} PQ}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="271" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2778.png"
+ ALT="$\displaystyle \cos \theta
+= \frac{\Delta x}{\mbox{chord} PQ},\ \ \ \sin \theta
+= \frac{\Delta y}{\mbox{chord} PQ}.
+$">
+</DIV><P></P>
+Now as Q approaches P as a limiting position <!-- MATH
+ $\theta \to \tau$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2779.png"
+ ALT="$ \theta \to \tau$"></SPAN>, and we get
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:90-26"></A><!-- MATH
+ \begin{equation}
+\cos\, \tau = \frac{dx}{ds}, \ \ \ \sin \tau = \frac{dy}{ds}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="182" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2780.png"
+ ALT="$\displaystyle \cos\, \tau = \frac{dx}{ds}, \ \ \ \sin \tau = \frac{dy}{ds}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">5</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+(Since <!-- MATH
+ $\lim \frac{\Delta x}{\mbox{chord} PQ}
+= \lim \frac{\Delta x}{\Delta x} 
+= \frac{dx}{ds}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="198" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2781.png"
+ ALT="$ \lim \frac{\Delta x}{\mbox{chord} PQ}
+= \lim \frac{\Delta x}{\Delta x}
+= \frac{dx}{ds}$"></SPAN>, and 
+<!-- MATH
+ $\lim \frac{\Delta y}{\mbox{chord} PQ}
+= \lim \frac{\Delta y}{\Delta s} = \frac{dy}{ds}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="197" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2782.png"
+ ALT="$ \lim \frac{\Delta y}{\mbox{chord} PQ}
+= \lim \frac{\Delta y}{\Delta s} = \frac{dy}{ds}$"></SPAN>.)
+Using the notation of differentials, these formulas may be written
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:90-27"></A><!-- MATH
+ \begin{equation}
+ds
+= \left [ 1 + \left ( \frac{dy}{dx} \right )^2 \right ]^{\frac{1}{2}} dx
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="169" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2783.png"
+ ALT="$\displaystyle ds = \left [ 1 + \left ( \frac{dy}{dx} \right )^2 \right ]^{\frac{1}{2}} dx$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">6</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+and
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:28-90"></A><!-- MATH
+ \begin{equation}
+ds = \left [ \left ( \frac{dx}{dy} \right )^2 + 1 \right ]^{\frac{1}{2}} dy,
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="173" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2784.png"
+ ALT="$\displaystyle ds = \left [ \left ( \frac{dx}{dy} \right )^2 + 1 \right ]^{\frac{1}{2}} dy,$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">7</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+respectively.
+Substituting the value of <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2785.png"
+ ALT="$ ds$"></SPAN> from (<A HREF="#eqn:90-27">9.6</A>) in (<A HREF="#eqn:90-26">9.5</A>),
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:90-29"></A><!-- MATH
+ \begin{equation}
+\cos \tau
+= \frac{1}{\left[ 1 + \left ( \frac{dy}{dx} \right )^2 \right]^{\frac{1}{2}}}, 
+\ \ \ 
+\sin \tau 
+= \frac{\frac{dy}{dx}}{\left [ 
+1 + \left ( \frac{dy}{dx} \right )^2 \right ]^{\frac{1}{2}}},
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="342" HEIGHT="92" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2786.png"
+ ALT="$\displaystyle \cos \tau = \frac{1}{\left[ 1 + \left ( \frac{dy}{dx} \right )^2 ...
+...{dy}{dx}}{\left [ 1 + \left ( \frac{dy}{dx} \right )^2 \right ]^{\frac{1}{2}}},$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">8</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+the same relations given by (<A HREF="#eqn:90-26">9.5</A>).
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2383"
+  HREF="node126.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2377"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2371"
+  HREF="node124.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2379"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2381"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2384"
+  HREF="node126.html">Derivative of the arc</A>
+<B> Up:</B> <A NAME="tex2html2378"
+  HREF="node121.html">Differentials</A>
+<B> Previous:</B> <A NAME="tex2html2372"
+  HREF="node124.html">Infinitesimals</A>
+ &nbsp; <B>  <A NAME="tex2html2380"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2382"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

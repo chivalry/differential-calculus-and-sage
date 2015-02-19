@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Curvature of a circle</TITLE>
+<META NAME="description" CONTENT="Curvature of a circle">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node143.html">
+<LINK REL="previous" HREF="node141.html">
+<LINK REL="up" HREF="node140.html">
+<LINK REL="next" HREF="node143.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2629"
+  HREF="node143.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2623"
+  HREF="node140.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2617"
+  HREF="node141.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2625"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2627"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2630"
+  HREF="node143.html">Curvature at a point</A>
+<B> Up:</B> <A NAME="tex2html2624"
+  HREF="node140.html">Curvature; radius of curvature</A>
+<B> Previous:</B> <A NAME="tex2html2618"
+  HREF="node141.html">Curvature</A>
+ &nbsp; <B>  <A NAME="tex2html2626"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2628"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001420000000000000000">
+Curvature of a circle</A>
+</H1>
+
+<P>
+Consider a circle of radius <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1975.png"
+ ALT="$ R$"></SPAN>. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:curvature-circle"></A><A NAME="25780"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 12.1:</STRONG>
+The curvature of a circle.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="271" HEIGHT="225" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3103.png"
+ ALT="\includegraphics[height=5cm,width=6cm]{curvature-circle2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Let 
+
+<P>
+<DIV ALIGN="CENTER">
+<SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1535.png"
+ ALT="$ \tau$"></SPAN> = angle that the tangent at P makes with the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis, 
+
+</DIV>
+and 
+
+<P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ $\tau + \Delta \tau$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3104.png"
+ ALT="$ \tau + \Delta \tau$"></SPAN>
+= angle made by the tangent at a neighboring point P<SPAN CLASS="MATH"><IMG
+ WIDTH="9" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1824.png"
+ ALT="$ '$"></SPAN>.
+
+</DIV>
+Then we say <!-- MATH
+ $\Delta \tau$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3105.png"
+ ALT="$ \Delta \tau$"></SPAN> = <I>total curvature</I> of arc PP<SPAN CLASS="MATH"><IMG
+ WIDTH="9" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1824.png"
+ ALT="$ '$"></SPAN>.
+<A NAME="25788"></A>
+If the point P with its tangent be supposed to move along 
+the curve to P<SPAN CLASS="MATH"><IMG
+ WIDTH="9" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1824.png"
+ ALT="$ '$"></SPAN>, the total curvature (<!-- MATH
+ $= \Delta \tau$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3106.png"
+ ALT="$ = \Delta \tau$"></SPAN>) 
+would measure the total change in direction, or rotation, 
+of the tangent; or, what is the same thing, the total 
+change in direction of the arc itself. Denoting by <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="$ s$"></SPAN> 
+the length of the arc of the curve measured from some 
+fixed point (as A) to P, and by <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1943.png"
+ ALT="$ \Delta s$"></SPAN> the length of 
+the arc P P<SPAN CLASS="MATH"><IMG
+ WIDTH="9" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1824.png"
+ ALT="$ '$"></SPAN>, then the ratio
+<!-- MATH
+ $\frac{\Delta \tau}{\Delta s}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3107.png"
+ ALT="$ \frac{\Delta \tau}{\Delta s}$"></SPAN>
+measures the average change in direction per unit 
+length of arc<A NAME="tex2html128"
+  HREF="footnode.html#foot26381"><SUP><SPAN CLASS="arabic">12</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>. 
+Since, from Figure <A HREF="#fig:curvature-circle">12.1</A>,
+<!-- MATH
+ $\Delta s = R \cdot \Delta \tau$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3111.png"
+ ALT="$ \Delta s = R \cdot \Delta \tau$"></SPAN>,
+or <!-- MATH
+ $\frac{\Delta \tau}{\Delta s} = \frac{1}{R}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3112.png"
+ ALT="$ \frac{\Delta \tau}{\Delta s} = \frac{1}{R}$"></SPAN>,
+it is evident that this ratio is constant everywhere 
+on the circle. This ratio is, by definition, the 
+curvature of the circle, and we have
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:100-38"></A><!-- MATH
+ \begin{equation}
+K = \frac{1}{R}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3113.png"
+ ALT="$\displaystyle K = \frac{1}{R}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">12</SPAN>.<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+<I>The curvature of a circle equals the reciprocal of its radius.</I>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2629"
+  HREF="node143.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2623"
+  HREF="node140.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2617"
+  HREF="node141.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2625"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2627"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2630"
+  HREF="node143.html">Curvature at a point</A>
+<B> Up:</B> <A NAME="tex2html2624"
+  HREF="node140.html">Curvature; radius of curvature</A>
+<B> Previous:</B> <A NAME="tex2html2618"
+  HREF="node141.html">Curvature</A>
+ &nbsp; <B>  <A NAME="tex2html2626"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2628"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

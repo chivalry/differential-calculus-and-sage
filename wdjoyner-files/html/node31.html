@@ -1,0 +1,468 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Exercises</TITLE>
+<META NAME="description" CONTENT="Exercises">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="previous" HREF="node30.html">
+<LINK REL="up" HREF="node18.html">
+<LINK REL="next" HREF="node32.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html983"
+  HREF="node32.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html977"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html973"
+  HREF="node30.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html979"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html981"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html984"
+  HREF="node32.html">Differentiation</A>
+<B> Up:</B> <A NAME="tex2html978"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html974"
+  HREF="node30.html">Expressions assuming the form</A>
+ &nbsp; <B>  <A NAME="tex2html980"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html982"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION005130000000000000000">
+Exercises</A>
+</H1>
+
+<P>
+Prove the following:
+
+<OL>
+<LI><!-- MATH
+ $\lim{x \to \infty} \left ( \frac{x + 1}{x} \right ) = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="153" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img534.png"
+ ALT="$ \lim{x \to \infty} \left ( \frac{x + 1}{x} \right ) = 1$"></SPAN>.
+
+<P>
+Solution:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\lim_{x \to \infty} &	= \lim_{x \to \infty} \left ( 1 + \frac{1}{x} \right )\\
+&  	= \lim_{x \to \infty} (1) + \lim{x \to \infty} \left ( \frac{1}{x} \right )   \\
+ & 	= 1 + 0 = 1,
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="284" HEIGHT="74" BORDER="0"
+ SRC="img535.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\lim_{x \to \infty} &amp; = \lim_{x \to \infty...
+...y} \left ( \frac{1}{x} \right ) \\
+&amp; = 1 + 0 = 1,
+\end{array}\end{displaymath}">
+</DIV><P></P>
+by Theorem <A HREF="node26.html#thrm:I-20">3.8.1</A>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to \infty} \left ( \frac{x^2 + 2x}{5 - 3x^2} \right ) = -\frac{1}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="166" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img536.png"
+ ALT="$ \lim_{x \to \infty} \left ( \frac{x^2 + 2x}{5 - 3x^2} \right ) = -\frac{1}{3}$"></SPAN>.
+
+<P>
+Solution:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to \infty} \left ( \frac{x^2 + 2x}{5 - 3x^2} \right )
+= \lim_{x \to \infty} \left ( \frac{1 + \frac{2}{x}}{\frac{5}{x^2} - 3} \right )
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="248" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img537.png"
+ ALT="$\displaystyle \lim_{x \to \infty} \left ( \frac{x^2 + 2x}{5 - 3x^2} \right )
+= \lim_{x \to \infty} \left ( \frac{1 + \frac{2}{x}}{\frac{5}{x^2} - 3} \right )
+$">
+</DIV><P></P>
+[ Dividing both numerator and denominator by <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img377.png"
+ ALT="$ x^2$"></SPAN>.]
+<P><!-- MATH
+ \begin{displaymath}
+= \frac{\lim_{x \to \infty} \left ( 1 + \frac{2}{x} \right )}{\lim_{x \to \infty}
+\left ( \frac{5}{x^2} - 3 \right )}  
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="143" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img538.png"
+ ALT="$\displaystyle = \frac{\lim_{x \to \infty} \left ( 1 + \frac{2}{x} \right )}{\lim_{x \to \infty}
+\left ( \frac{5}{x^2} - 3 \right )}
+$">
+</DIV><P></P>
+by Theorem <A HREF="node26.html#thrm:III-20">3.8.3</A>
+<P><!-- MATH
+ \begin{displaymath}
+= \frac{\lim_{x \to \infty} (1) + \lim_{x \to \infty} \left ( \frac{2}{x} \right ) }{ \lim_{x \to \infty} \left ( \frac{5}{x^2} \right ) - \lim_{x \to \infty} (3)}
+  	= \frac{1 + 0}{0 - 3} = -\frac{1}{3},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="320" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img539.png"
+ ALT="$\displaystyle = \frac{\lim_{x \to \infty} (1) + \lim_{x \to \infty} \left ( \fr...
+...^2} \right ) - \lim_{x \to \infty} (3)}
+= \frac{1 + 0}{0 - 3} = -\frac{1}{3},
+$">
+</DIV><P></P>
+by Theorem <A HREF="node26.html#thrm:I-20">3.8.1</A>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to 1} \frac{x^2 - 2x + 5}{x^2 + 7} = \frac{1}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="145" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img540.png"
+ ALT="$ \lim_{x \to 1} \frac{x^2 - 2x + 5}{x^2 + 7} = \frac{1}{2}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to 0} \frac{3x^3 + 6x^2}{2x^4 - 15x^2} = -\frac{2}{5}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="160" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img541.png"
+ ALT="$ \lim_{x \to 0} \frac{3x^3 + 6x^2}{2x^4 - 15x^2} = -\frac{2}{5}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to -2} \frac{x^2 + 1}{x + 3} = 5$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="129" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img542.png"
+ ALT="$ \lim_{x \to -2} \frac{x^2 + 1}{x + 3} = 5$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{h \to 0} (3ax^2 - 2hx + 5h^2) = 3ax^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="242" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img543.png"
+ ALT="$ \lim_{h \to 0} (3ax^2 - 2hx + 5h^2) = 3ax^2$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to \infty} (ax^2 + bx + c) = \infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="196" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$ \lim_{x \to \infty} (ax^2 + bx + c) = \infty$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{k \to 0} \frac{(x - k)^2 - 2kx^3}{x(x + k)} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="166" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img545.png"
+ ALT="$ \lim_{k \to 0} \frac{(x - k)^2 - 2kx^3}{x(x + k)} = 1$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to \infty} \frac{x^2 + 1}{3x^2 + 2x - 1} = \frac{1}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="157" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img546.png"
+ ALT="$ \lim_{x \to \infty} \frac{x^2 + 1}{3x^2 + 2x - 1} = \frac{1}{3}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to \infty} \frac{3 + 2x}{x^2 - 5x} = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="133" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img547.png"
+ ALT="$ \lim_{x \to \infty} \frac{3 + 2x}{x^2 - 5x} = 0$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{\alpha \to \frac{\pi}{2}} \frac{\cos(\alpha - a)}{\cos(2\alpha - a)} = -\tan \alpha$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="196" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img548.png"
+ ALT="$ \lim_{\alpha \to \frac{\pi}{2}} \frac{\cos(\alpha - a)}{\cos(2\alpha - a)} = -\tan \alpha$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to \infty} \frac{ax^2 + bx + c}{dx^2 + ex + f} = \frac{a}{d}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="159" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img549.png"
+ ALT="$ \lim_{x \to \infty} \frac{ax^2 + bx + c}{dx^2 + ex + f} = \frac{a}{d}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{z \to 0} \frac{a}{2} (e^{\frac{z}{a}} + e^{-\frac{z}{a}}) = a$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="174" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img550.png"
+ ALT="$ \lim_{z \to 0} \frac{a}{2} (e^{\frac{z}{a}} + e^{-\frac{z}{a}}) = a$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to 0} \frac{2x^3 + 3x^2}{x^3} = \infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="147" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img551.png"
+ ALT="$ \lim_{x \to 0} \frac{2x^3 + 3x^2}{x^3} = \infty$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to \infty} \frac{5x^2 - 2x}{x} = \infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="147" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img552.png"
+ ALT="$ \lim_{x \to \infty} \frac{5x^2 - 2x}{x} = \infty$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{y \to \infty} \frac{y}{y + 1} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="118" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img553.png"
+ ALT="$ \lim_{y \to \infty} \frac{y}{y + 1} = 1$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{n \to \infty} \frac{n(n + 1)}{(n + 2)(n + 3)} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="164" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img554.png"
+ ALT="$ \lim_{n \to \infty} \frac{n(n + 1)}{(n + 2)(n + 3)} = 1$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{s \to 1} \frac{s^3 - 1}{s - 1} = 3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img555.png"
+ ALT="$ \lim_{s \to 1} \frac{s^3 - 1}{s - 1} = 3$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{h \to 0} \frac{(x + h)^n - x^n}{h} = nx^{n-1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="192" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img556.png"
+ ALT="$ \lim_{h \to 0} \frac{(x + h)^n - x^n}{h} = nx^{n-1}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{h = 0} \left [ \cos(\theta + h) \frac{\sin h}{h} \right ] = \cos \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="219" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img557.png"
+ ALT="$ \lim_{h = 0} \left [ \cos(\theta + h) \frac{\sin h}{h} \right ] = \cos \theta$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to \infty} \frac{4x^2 - x}{4 - 3x^2} = -\frac{4}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="147" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img558.png"
+ ALT="$ \lim_{x \to \infty} \frac{4x^2 - x}{4 - 3x^2} = -\frac{4}{3}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{\theta \to 0} \frac{1 - \cos \theta}{\theta^2} = \frac{1}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="133" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img559.png"
+ ALT="$ \lim_{\theta \to 0} \frac{1 - \cos \theta}{\theta^2} = \frac{1}{2}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to a} \frac{1}{x - a} = -\infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="134" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img560.png"
+ ALT="$ \lim_{x \to a} \frac{1}{x - a} = -\infty$"></SPAN>, if <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> is increasing as it approaches the value <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\lim_{x \to a} \frac{1}{x - a} = +\infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="134" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img561.png"
+ ALT="$ \lim_{x \to a} \frac{1}{x - a} = +\infty$"></SPAN>, if <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> is decreasing as it approaches the value <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>.
+</LI>
+</OL>
+
+<P>
+<P>
+Here is an example of the limit in Exercise 22 using <I CLASS="sans">SAGE</I>:
+
+<P>
+<P>
+<PRE>[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: theta = var("theta")
+sage: limit((1 - cos(theta))/(theta^2),theta=0)
+1/2
+</PRE>
+
+<P>
+In other words, for small values of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$ \theta$"></SPAN>,
+<!-- MATH
+ $\cos(\theta) \cong 1+\frac{1}{2}\theta^2.$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="124" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img563.png"
+ ALT="$ \cos(\theta) \cong 1+\frac{1}{2}\theta^2.
+$"></SPAN>
+
+<P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html983"
+  HREF="node32.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html977"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html973"
+  HREF="node30.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html979"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html981"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html984"
+  HREF="node32.html">Differentiation</A>
+<B> Up:</B> <A NAME="tex2html978"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html974"
+  HREF="node30.html">Expressions assuming the form</A>
+ &nbsp; <B>  <A NAME="tex2html980"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html982"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,938 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Application: Using Taylor's Theorem to Approximate Functions.</TITLE>
+<META NAME="description" CONTENT="Application: Using Taylor's Theorem to Approximate Functions.">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node168.html">
+<LINK REL="previous" HREF="node166.html">
+<LINK REL="up" HREF="node148.html">
+<LINK REL="next" HREF="node168.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2995"
+  HREF="node168.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2989"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2983"
+  HREF="node166.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2991"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2993"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2996"
+  HREF="node168.html">Example/Application: Finite Difference Schemes</A>
+<B> Up:</B> <A NAME="tex2html2990"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2984"
+  HREF="node166.html">Exercises</A>
+ &nbsp; <B>  <A NAME="tex2html2992"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2994"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION0015150000000000000000">
+Application: Using Taylor's Theorem to Approximate Functions.</A>
+</H1>
+
+<P>
+The material for the remainder of this book was taken from Sean Mauch's 
+<B>Applied mathematics</B> text<A NAME="tex2html150"
+  HREF="footnode.html#foot30979"><SUP><SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">9</SPAN></SUP></A>.
+
+<P>
+<P>
+<DIV><B>Theorem  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
+<I><B>Taylor's Theorem of the Mean.</B>
+</I>If <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> is <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3585.png"
+ ALT="$ n+1$"></SPAN> times continuously differentiable in <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img932.png"
+ ALT="$ (a,b)$"></SPAN> then there
+exists a point <!-- MATH
+ $x = \xi \in (a,b)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="97" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3586.png"
+ ALT="$ x = \xi \in (a,b)$"></SPAN> such that
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="taylors_theorem"></A><!-- MATH
+ \begin{equation}
+f(b) = f(a) + (b-a) f'(a) + \frac{(b-a)^2}{2!} f''(a) + \cdots +
+  \frac{(b-a)^n}{n!} f^{(n)}(a) 
+  + \frac{(b-a)^{n+1}}{(n+1)!} f^{(n+1)}(\xi).
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="629" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3587.png"
+ ALT="$\displaystyle f(b) = f(a) + (b-a) f'(a) + \frac{(b-a)^2}{2!} f''(a) + \cdots + \frac{(b-a)^n}{n!} f^{(n)}(a) + \frac{(b-a)^{n+1}}{(n+1)!} f^{(n+1)}(\xi).$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">20</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+For the case <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3588.png"
+ ALT="$ n = 0$"></SPAN>, the formula is
+<P><!-- MATH
+ \begin{displaymath}
+f(b) = f(a) + (b-a) f'(\xi),
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="190" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3589.png"
+ ALT="$\displaystyle f(b) = f(a) + (b-a) f'(\xi),
+$">
+</DIV><P></P>
+which is just a rearrangement of the terms in the theorem of the mean,
+<P><!-- MATH
+ \begin{displaymath}
+f'(\xi) = \frac{f(b) - f(a)}{b-a}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="146" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3590.png"
+ ALT="$\displaystyle f'(\xi) = \frac{f(b) - f(a)}{b-a}.
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+One can use Taylor's theorem to approximate functions with polynomials.
+Consider an infinitely differentiable function <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> and a point <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>.  
+Substituting <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> for <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN> into Equation&nbsp;<A HREF="#taylors_theorem">13.20</A> we obtain,
+<P><A NAME="taylors_theorem_x"></A><!-- MATH
+ \begin{displaymath}
+f(x) = f(a) + (x-a) f'(a) + \frac{(x-a)^2}{2!} f''(a) + \cdots +
+\frac{(x-a)^n}{n!} f^{(n)}(a) 
++ \frac{(x-a)^{n+1}}{(n+1)!} f^{(n+1)}(\xi).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="taylors_theorem_x"></A>
+<IMG
+ WIDTH="640" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3591.png"
+ ALT="$\displaystyle f(x) = f(a) + (x-a) f'(a) + \frac{(x-a)^2}{2!} f''(a) + \cdots +
+\frac{(x-a)^n}{n!} f^{(n)}(a)
++ \frac{(x-a)^{n+1}}{(n+1)!} f^{(n+1)}(\xi).
+$">
+</DIV><P></P>
+If the last term in the sum is small then we can approximate our function
+with an <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3592.png"
+ ALT="$ n^{th}$"></SPAN> order polynomial.
+<P><!-- MATH
+ \begin{displaymath}
+f(x) \approx f(a) + (x-a) f'(a) + \frac{(x-a)^2}{2!} f''(a) + \cdots +
+\frac{(x-a)^n}{n!} f^{(n)}(a) 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="477" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3593.png"
+ ALT="$\displaystyle f(x) \approx f(a) + (x-a) f'(a) + \frac{(x-a)^2}{2!} f''(a) + \cdots +
+\frac{(x-a)^n}{n!} f^{(n)}(a)
+$">
+</DIV><P></P>
+The last term in Equation&nbsp;<A HREF="#taylors_theorem_x">13.15</A> is called the remainder
+or the error term,
+<P><!-- MATH
+ \begin{displaymath}
+R_n = \frac{(x-a)^{n+1}}{(n+1)!} f^{(n+1)}(\xi).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="193" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3594.png"
+ ALT="$\displaystyle R_n = \frac{(x-a)^{n+1}}{(n+1)!} f^{(n+1)}(\xi).
+$">
+</DIV><P></P>
+Since the function is infinitely differentiable, <!-- MATH
+ $f^{(n+1)}(\xi)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3595.png"
+ ALT="$ f^{(n+1)}(\xi)$"></SPAN> exists and
+is bounded.  Therefore we note that the error must vanish as <SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img528.png"
+ ALT="$ x \to 0$"></SPAN> 
+because of the <!-- MATH
+ $(x-a)^{n+1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3596.png"
+ ALT="$ (x-a)^{n+1}$"></SPAN> factor.  We therefore suspect that our 
+approximation would be a good one if <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> is close to <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>.  Also note that
+<SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3597.png"
+ ALT="$ n!$"></SPAN> eventually grows faster than <SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3598.png"
+ ALT="$ (x-a)^n$"></SPAN>,
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{n \to \infty} \frac{(x-a)^n}{n!} = 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="136" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3599.png"
+ ALT="$\displaystyle \lim_{n \to \infty} \frac{(x-a)^n}{n!} = 0.
+$">
+</DIV><P></P>
+So if the derivative term, <!-- MATH
+ $f^{(n+1)}(\xi)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3595.png"
+ ALT="$ f^{(n+1)}(\xi)$"></SPAN>, does not grow to quickly, the
+error for a certain value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> will get smaller with increasing <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN> and
+the polynomial will become a better approximation of the function.
+(It is also possible that the derivative factor grows very quickly and 
+the approximation gets worse with increasing <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN>.)
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp;   Consider the function <!-- MATH
+ $f(x) = e^x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3600.png"
+ ALT="$ f(x) = e^x$"></SPAN>.  We want a polynomial approximation of
+  this function near the point <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>.  Since the derivative of <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img81.png"
+ ALT="$ e^x$"></SPAN> is
+  <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img81.png"
+ ALT="$ e^x$"></SPAN>, the value of all the derivatives at <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN> is <!-- MATH
+ $f^{(n)}(0) = e^0 = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="118" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3601.png"
+ ALT="$ f^{(n)}(0) = e^0 = 1$"></SPAN>.
+  Taylor's theorem thus states that
+  <P><!-- MATH
+ \begin{displaymath}
+e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!}
+  + \frac{x^{n+1}}{(n+1)!} e^\xi,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="332" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3602.png"
+ ALT="$\displaystyle e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!}
++ \frac{x^{n+1}}{(n+1)!} e^\xi,
+$">
+</DIV><P></P>
+for some <!-- MATH
+ $\xi \in (0,x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3603.png"
+ ALT="$ \xi \in (0,x)$"></SPAN>.  The first few polynomial approximations of 
+  the exponent about the point <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN> are 
+  <P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3604.png"
+ ALT="$\displaystyle f_1(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3605.png"
+ ALT="$\displaystyle = 1$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3606.png"
+ ALT="$\displaystyle f_2(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3607.png"
+ ALT="$\displaystyle = 1 + x$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3608.png"
+ ALT="$\displaystyle f_3(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="97" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3609.png"
+ ALT="$\displaystyle = 1 + x + \frac{x^2}{2}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3610.png"
+ ALT="$\displaystyle f_4(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="137" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3611.png"
+ ALT="$\displaystyle = 1 + x + \frac{x^2}{2} + \frac{x^3}{6}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The four approximations are graphed in Figure&nbsp;<A HREF="#tayexp4">13.7</A>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:tayexp4"></A><A NAME="tayexp4"></A><A NAME="30984"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.7:</STRONG>
+Finite Taylor Series Approximations of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.png"
+ ALT="$ 1+x$"></SPAN>, <!-- MATH
+ $1+x+\frac{x^2}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.png"
+ ALT="$ 1+x+\frac {x^2}{2}$"></SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img81.png"
+ ALT="$ e^x$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="362" HEIGHT="271" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3612.png"
+ ALT="\includegraphics[height=6cm,width=8cm]{tayexp3.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Note that for the range of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> we are looking at, the approximations
+  become more accurate as the number of terms increases.
+
+<P>
+Here is one way to compute these approximations using <I CLASS="sans">SAGE</I>:
+
+<P>
+<P>
+<PRE>[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: x = var("x")
+sage: y = exp(x)
+sage: a = lambda n: diff(y,x,n)(0)/factorial(n)
+sage: a(0)
+1
+sage: a(1)
+1
+sage: a(2)
+1/2
+sage: a(3)
+1/6
+sage: taylor = lambda n: sum([a(i)*x^i for i in range(n)])
+sage: taylor(2)
+x + 1
+sage: taylor(3)
+x^2/2 + x + 1
+sage: taylor(4)
+x^3/6 + x^2/2 + x + 1
+</PRE>
+
+<P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp;   Consider the function <!-- MATH
+ $f(x) = \cos x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="90" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3613.png"
+ ALT="$ f(x) = \cos x$"></SPAN>.  We want a polynomial approximation of
+  this function near the point <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>. The first few derivatives of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img253.png"
+ ALT="$ f$"></SPAN> are
+  <P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3614.png"
+ ALT="$\displaystyle f(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3615.png"
+ ALT="$\displaystyle = \cos x$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3616.png"
+ ALT="$\displaystyle f'(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3617.png"
+ ALT="$\displaystyle = - \sin x$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3618.png"
+ ALT="$\displaystyle f''(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3619.png"
+ ALT="$\displaystyle = - \cos x$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3620.png"
+ ALT="$\displaystyle f'''(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="53" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3621.png"
+ ALT="$\displaystyle = \sin x$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="53" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3622.png"
+ ALT="$\displaystyle f^{(4)}(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3615.png"
+ ALT="$\displaystyle = \cos x$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+It's easy to pick out the pattern here,
+  <P><!-- MATH
+ \begin{displaymath}
+f^{(n)}(x) =
+  \begin{cases}
+    (-1)^{n/2} \cos x &\text{for even } n, \\
+    (-1)^{(n+1)/2} \sin x & \text{for odd } n.
+  \end{cases}
+  
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="295" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3623.png"
+ ALT="$\displaystyle f^{(n)}(x) =
+\begin{cases}
+(-1)^{n/2} \cos x &amp;\text{for even } n, \\
+(-1)^{(n+1)/2} \sin x &amp; \text{for odd } n.
+\end{cases}$">
+</DIV><P></P>
+Since <!-- MATH
+ $\cos(0) = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3624.png"
+ ALT="$ \cos(0) = 1$"></SPAN> and <!-- MATH
+ $\sin(0) = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3625.png"
+ ALT="$ \sin(0) = 0$"></SPAN> the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN>-term approximation of the
+  cosine is,
+  <P><!-- MATH
+ \begin{displaymath}
+\cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots
+  + (-1)^{2(n-1)} \frac{x^{2(n-1)}}{(2(n-1))!}
+  + \frac{x^{2n}}{(2n)!} \cos \xi.
+  
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="491" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3626.png"
+ ALT="$\displaystyle \cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \...
+...+ (-1)^{2(n-1)} \frac{x^{2(n-1)}}{(2(n-1))!}
++ \frac{x^{2n}}{(2n)!} \cos \xi.
+$">
+</DIV><P></P>
+Here are graphs of the one, two, three and four term approximations.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:taycos4"></A><A NAME="taycos4"></A><A NAME="30987"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.8:</STRONG>
+Taylor Series Approximations of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN>, <!-- MATH
+ $1-\frac{x^2}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="49" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.png"
+ ALT="$ 1-\frac {x^2}{2}$"></SPAN>, <!-- MATH
+ $1-\frac{x^2}{2}+\frac{x^4}{4!}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.png"
+ ALT="$ 1-\frac {x^2}{2}+\frac {x^4}{4!}$"></SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3628.png"
+ ALT="$ \cos x$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3627.png"
+ ALT="\includegraphics[height=4cm,width=7cm]{taycos3.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Note that for the range of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> we are looking at, the approximations
+  become more accurate as the number of terms increases.
+  Consider the ten term approximation of the cosine about <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>,
+  <P><!-- MATH
+ \begin{displaymath}
+\cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots - \frac{x^{18}}{18!}
+  + \frac{x^{20}}{20!} \cos \xi.
+  
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="314" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3629.png"
+ ALT="$\displaystyle \cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots - \frac{x^{18}}{18!}
++ \frac{x^{20}}{20!} \cos \xi.
+$">
+</DIV><P></P>
+Note that for any value of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3630.png"
+ ALT="$ \xi$"></SPAN>, <!-- MATH
+ $|\cos \xi| \leq 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3631.png"
+ ALT="$ \vert\cos \xi\vert \leq 1$"></SPAN>.  Therefore the absolute
+  value of the error term satisfies,
+  <P><!-- MATH
+ \begin{displaymath}
+| R | = \left| \frac{x^{20}}{20!} \cos \xi \right| \leq \frac{|x|^{20}}{20!}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="179" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3632.png"
+ ALT="$\displaystyle \vert R \vert = \left\vert \frac{x^{20}}{20!} \cos \xi \right\vert \leq \frac{\vert x\vert^{20}}{20!}.
+$">
+</DIV><P></P>
+
+<P>
+Note that the error is very small for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3633.png"
+ ALT="$ x &lt; 6$"></SPAN>, fairly small but non-negligible
+  for <!-- MATH
+ $x \approx 7$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3634.png"
+ ALT="$ x \approx 7$"></SPAN> and large for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3635.png"
+ ALT="$ x &gt; 8$"></SPAN>.  The ten term approximation of
+  the cosine, plotted below, behaves just we would predict.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:taycos10"></A><A NAME="taycos10"></A><A NAME="30992"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.9:</STRONG>
+Taylor Series Approximation of <!-- MATH
+ $1-\frac{x^2}{2}+\frac{x^4}{4!}-\frac{x^6}{6!}+\frac{x^8}{8!}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="159" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.png"
+ ALT="$ 1-\frac {x^2}{2}+\frac {x^4}{4!}-\frac {x^6}{6!}+\frac {x^8}{8!}$"></SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3628.png"
+ ALT="$ \cos x$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3636.png"
+ ALT="\includegraphics[height=4cm,width=7cm]{taycos10b.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The error is very small until it becomes non-negligible at <!-- MATH
+ $x \approx 7$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3634.png"
+ ALT="$ x \approx 7$"></SPAN>
+  and large at <!-- MATH
+ $x \approx 8$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3637.png"
+ ALT="$ x \approx 8$"></SPAN>.</DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">15</SPAN>.<SPAN CLASS="arabic">3</SPAN></B> &nbsp;   Consider the function <!-- MATH
+ $f(x) = \ln x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3638.png"
+ ALT="$ f(x) = \ln x$"></SPAN>.  We want a polynomial approximation of
+  this function near the point <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>. The first few derivatives of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img253.png"
+ ALT="$ f$"></SPAN> are
+  <P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3614.png"
+ ALT="$\displaystyle f(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3639.png"
+ ALT="$\displaystyle = \ln x$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3616.png"
+ ALT="$\displaystyle f'(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3640.png"
+ ALT="$\displaystyle = \frac{1}{x}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3618.png"
+ ALT="$\displaystyle f''(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3641.png"
+ ALT="$\displaystyle = - \frac{1}{x^2}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3620.png"
+ ALT="$\displaystyle f'''(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3642.png"
+ ALT="$\displaystyle = \frac{2}{x^3}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="53" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3622.png"
+ ALT="$\displaystyle f^{(4)}(x)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3643.png"
+ ALT="$\displaystyle = - \frac{3}{x^4}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The derivatives evaluated at <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN> are
+  <P><!-- MATH
+ \begin{displaymath}
+f(1) = 0, \qquad f^{(n)}(1) = (-1)^{n-1} (n-1)!,\ \ \ \text{ for } n \geq 1.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="304" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3644.png"
+ ALT="$\displaystyle f(1) = 0, \qquad f^{(n)}(1) = (-1)^{n-1} (n-1)!,\ \ \ $">&nbsp; &nbsp; for&nbsp;<IMG
+ WIDTH="48" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3645.png"
+ ALT="$\displaystyle n \geq 1.
+$">
+</DIV><P></P>
+By Taylor's theorem of the mean we have,
+  <P><!-- MATH
+ \begin{displaymath}
+\ln x = (x-1) - \frac{(x-1)^2}{2} + \frac{(x-1)^3}{3} - \frac{(x-1)^4}{4}
+  + \cdots + (-1)^{n-1} \frac{(x-1)^n}{n}
+  + (-1)^n \frac{(x-1)^{n+1}}{n+1} \frac{1}{\xi^{n+1}}.
+  
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="690" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3646.png"
+ ALT="$\displaystyle \ln x = (x-1) - \frac{(x-1)^2}{2} + \frac{(x-1)^3}{3} - \frac{(x-...
+...{n-1} \frac{(x-1)^n}{n}
++ (-1)^n \frac{(x-1)^{n+1}}{n+1} \frac{1}{\xi^{n+1}}.
+$">
+</DIV><P></P>
+Below are plots of the 1, 2, and 3 term approximations.  
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:taylnt4"></A><A NAME="taylnt4"></A><A NAME="30995"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13.10:</STRONG>
+Taylor series (about <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>) approximations of <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.png"
+ ALT="$ x-1$"></SPAN>, <!-- MATH
+ $x-1-\frac{(x-1)^2}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="104" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.png"
+ ALT="$ x-1-\frac {(x-1)^2}{2}$"></SPAN>,
+<!-- MATH
+ $x-1-\frac{(x-1)^2}{2}+\frac{(x-1)^3}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="167" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.png"
+ ALT="$ x-1-\frac {(x-1)^2}{2}+\frac {(x-1)^3}{3}$"></SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3648.png"
+ ALT="$ \ln x$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="452" HEIGHT="271" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3647.png"
+ ALT="\includegraphics[height=6cm,width=10cm]{taylnt3.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Note that the 
+  approximation gets better on the interval <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2694.png"
+ ALT="$ (0, 2)$"></SPAN> and worse outside this
+  interval as the number of terms increases.  The Taylor series converges to
+  <SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3648.png"
+ ALT="$ \ln x$"></SPAN> only on this interval.</DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2995"
+  HREF="node168.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2989"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2983"
+  HREF="node166.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2991"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2993"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2996"
+  HREF="node168.html">Example/Application: Finite Difference Schemes</A>
+<B> Up:</B> <A NAME="tex2html2990"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2984"
+  HREF="node166.html">Exercises</A>
+ &nbsp; <B>  <A NAME="tex2html2992"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2994"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Expressions assuming the form </TITLE>
+<META NAME="description" CONTENT="Expressions assuming the form ">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node31.html">
+<LINK REL="previous" HREF="node29.html">
+<LINK REL="up" HREF="node18.html">
+<LINK REL="next" HREF="node31.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html971"
+  HREF="node31.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html965"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html959"
+  HREF="node29.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html967"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html969"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html972"
+  HREF="node31.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html966"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html960"
+  HREF="node29.html">The number</A>
+ &nbsp; <B>  <A NAME="tex2html968"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html970"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION005120000000000000000"></A> 
+<A NAME="sec:24"></A>
+<BR>
+Expressions assuming the form <!-- MATH
+ $\frac{\infty}{\infty}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$ \frac {\infty }{\infty }$"></SPAN>
+</H1>
+
+<P>
+As <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ \infty $"></SPAN> is not a number, the expression <!-- MATH
+ $\infty\ \div\ \infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img530.png"
+ ALT="$ \infty\ \div\ \infty$"></SPAN> is indeterminate. 
+To evaluate a fraction assuming this form, the numerator and denominator 
+being algebraic functions, we shall find useful the following
+
+<P>
+
+<B>RULE.</B> 
+Divide both numerator and denominator by the highest power of the variable occurring in either. 
+Then substitute the value of the variable.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">12</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Evaluate 
+<P>
+Solution. Substituting directly, we get 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to \infty} \frac{2x^3 - 3x^2 + 4}{5x - x^2 - 7x^3} = \frac{\infty}{\infty}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="181" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img531.png"
+ ALT="$\displaystyle \lim_{x \to \infty} \frac{2x^3 - 3x^2 + 4}{5x - x^2 - 7x^3} = \frac{\infty}{\infty}
+$">
+</DIV><P></P>
+which is indeterminate. Hence, following the above rule, we divide both 
+numerator and denominator by <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img532.png"
+ ALT="$ x^3$"></SPAN>, Then
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to \infty} \frac{2x^3 - 3x^2 + 4}{5x - x^2 - 7x^3}
+= \lim_{x \to \infty} \frac{2 - \frac{3}{x} + \frac{4}{x^3}}{\frac{5}{x^2} - \frac{1}{x} - 7} 
+= -\frac{2}{7}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="325" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img533.png"
+ ALT="$\displaystyle \lim_{x \to \infty} \frac{2x^3 - 3x^2 + 4}{5x - x^2 - 7x^3}
+= \l...
+...\frac{3}{x} + \frac{4}{x^3}}{\frac{5}{x^2} - \frac{1}{x} - 7}
+= -\frac{2}{7}.
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

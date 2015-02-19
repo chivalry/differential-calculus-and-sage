@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>.</TITLE>
+<META NAME="description" CONTENT=".">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="previous" HREF="node155.html">
+<LINK REL="up" HREF="node155.html">
+<LINK REL="next" HREF="node157.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2842"
+  HREF="node157.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2836"
+  HREF="node155.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2832"
+  HREF="node155.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2838"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2840"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2843"
+  HREF="node157.html">Evaluation of a function</A>
+<B> Up:</B> <A NAME="tex2html2837"
+  HREF="node155.html">Indeterminate forms</A>
+<B> Previous:</B> <A NAME="tex2html2833"
+  HREF="node155.html">Indeterminate forms</A>
+ &nbsp; <B>  <A NAME="tex2html2839"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2841"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION001570010000000000000">.</A>
+
+</H4>
+Other singularities require more analysis to diagnose.  Consider the 
+functions <!-- MATH
+ $\frac{\sin x}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3372.png"
+ ALT="$ \frac{\sin x}{x}$"></SPAN>, <!-- MATH
+ $\frac{\sin x}{|x|}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3373.png"
+ ALT="$ \frac{\sin x}{\vert x\vert}$"></SPAN> and 
+<!-- MATH
+ $\frac{\sin x}{1 - \cos x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3374.png"
+ ALT="$ \frac{\sin x}{1 - \cos x}$"></SPAN> at the point <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN>.  All three functions
+evaluate to <!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN> at that point, but have different kinds
+of singularities.  The first has a removable discontinuity, the second has
+a finite discontinuity and the third has an infinite discontinuity.
+See Figure&nbsp;<A HREF="#disc3">13.5</A>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:disc3"></A><A NAME="disc3"></A><A NAME="28593"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+The functions <!-- MATH
+ $\frac{\sin x}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3372.png"
+ ALT="$ \frac{\sin x}{x}$"></SPAN>, <!-- MATH
+ $\frac{\sin x}{|x|}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3373.png"
+ ALT="$ \frac{\sin x}{\vert x\vert}$"></SPAN> and
+    <!-- MATH
+ $\frac{\sin x}{1 - \cos x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3374.png"
+ ALT="$ \frac{\sin x}{1 - \cos x}$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="432" HEIGHT="174" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3375.png"
+ ALT="\includegraphics[height=4cm,width=10cm]{disc3.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+An expression that evaluates 
+(for a particular value of the independent variable)
+to <!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN>, <!-- MATH
+ $\frac{\infty}{\infty}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$ \frac {\infty }{\infty }$"></SPAN>,
+<!-- MATH
+ $0 \cdot \infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img73.png"
+ ALT="$ 0 \cdot \infty $"></SPAN>, <!-- MATH
+ $\infty - \infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$ \infty -\infty $"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3376.png"
+ ALT="$ 1^\infty$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img75.png"
+ ALT="$ 0^0$"></SPAN> or <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$ \infty ^0$"></SPAN>
+is called an <SPAN  CLASS="textit">indeterminate</SPAN>.
+A function <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3377.png"
+ ALT="$ h(x)$"></SPAN> which takes an indeterminate form at <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN> 
+is not defined for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN> by the given analytical expression.
+<A NAME="27764"></A>
+For example, suppose we have
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = \frac{f(x)}{g(x)},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="73" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3378.png"
+ ALT="$\displaystyle y = \frac{f(x)}{g(x)},
+$">
+</DIV><P></P>
+where for some value of the variable, as 
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f(a) = 0,\ \ \ \ g(a) = 0.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="155" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3379.png"
+ ALT="$\displaystyle f(a) = 0,\ \ \ \ g(a) = 0.
+$">
+</DIV><P></P>
+For this value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> our function is not defined and we may therefore 
+assign to it any value we please. It is evident from what has gone before 
+(Case II, [&#167;<A HREF="node24.html#sec:18">3.6</A>]) that it is desirable to assign to the function a 
+value that will make it continuous when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN> whenever it is possible to do so.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2842"
+  HREF="node157.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2836"
+  HREF="node155.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2832"
+  HREF="node155.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2838"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2840"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2843"
+  HREF="node157.html">Evaluation of a function</A>
+<B> Up:</B> <A NAME="tex2html2837"
+  HREF="node155.html">Indeterminate forms</A>
+<B> Previous:</B> <A NAME="tex2html2833"
+  HREF="node155.html">Indeterminate forms</A>
+ &nbsp; <B>  <A NAME="tex2html2839"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2841"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

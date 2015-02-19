@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differentiation of the product of any finite number of functions</TITLE>
+<META NAME="description" CONTENT="Differentiation of the product of any finite number of functions">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node51.html">
+<LINK REL="previous" HREF="node49.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node51.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1294"
+  HREF="node51.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1288"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1282"
+  HREF="node49.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1290"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1292"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1295"
+  HREF="node51.html">Differentiation of a function</A>
+<B> Up:</B> <A NAME="tex2html1289"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1283"
+  HREF="node49.html">Differentiation of the product</A>
+ &nbsp; <B>  <A NAME="tex2html1291"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1293"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00770000000000000000">
+Differentiation of the product of any finite number of functions</A>
+</H1>
+
+<P>
+Now in dividing both sides of equation (V) by <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img799.png"
+ ALT="$ uv$"></SPAN>, 
+this formula assumes the form
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{\frac{d}{dx}(uv)}{uv} 	= \frac{\frac{du}{dx}}{u} + \frac{\frac{dv}{dx}}{v}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="144" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img800.png"
+ ALT="$\displaystyle \frac{\frac{d}{dx}(uv)}{uv} = \frac{\frac{du}{dx}}{u} + \frac{\frac{dv}{dx}}{v}.
+$">
+</DIV><P></P>
+If then we have the product of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN> functions
+<!-- MATH
+ $y 	= v_1 v_2 \cdots v_n$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="104" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img801.png"
+ ALT="$ y = v_1 v_2 \cdots v_n$"></SPAN>,
+we may write
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{\frac{d}{dx}(v_1 v_2 \cdots v_n)}{v_1 v_2 \cdots v_n}
+&= \frac{\frac{dv_1}{dx}}{v_1} + \frac{\frac{d}{dx} (v_2 v_3 \cdots v_n)}{v_2 v_3 \cdots v_n}\\
+&  	= \frac{\frac{dv_1}{dx}}{v_1} + \frac{\frac{dv_2}{dx}}{v_2} + \frac{\frac{d}{dx} (v_3 v_4 \cdots v_n)}{v_3 v_4 \cdots v_n}\\
+& 	= \frac{\frac{dv_1}{dx}}{v_1} + \frac{\frac{dv_2}{dx}}{v_2} + \frac{\frac{dv_3}{dx}}{v_3} + \cdots + \frac{\frac{dv_n}{dx}}{v_n}
+\frac{d}{dx} (v_1 v_2 \cdots v_n) \\
+&	= (v_2 v_3 \cdots v_n)\frac{dv_1}{dx} + (v_1 v_3 \cdots v_n)\frac{dv_2}{dx} + \cdots
+  	+ (v_1 v_2 \cdots v_{n - 1})\frac{dv_n}{dx}.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="526" HEIGHT="109" BORDER="0"
+ SRC="img802.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{\frac{d}{dx}(v_1 v_2 \cdots v_n)}{v_...
+...cdots
++ (v_1 v_2 \cdots v_{n - 1})\frac{dv_n}{dx}.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+<I>The derivative of the product of a finite number 
+of functions is equal to the sum of all the products that 
+can be formed by multiplying the derivative of each function 
+by all the other functions.</I>
+
+<P>
+<BR><HR>
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

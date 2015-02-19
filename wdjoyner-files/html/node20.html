@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Division by zero excluded</TITLE>
+<META NAME="description" CONTENT="Division by zero excluded">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node21.html">
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node18.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html831"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html825"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html819"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html827"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html829"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html832"
+  HREF="node21.html">Infinitesimals</A>
+<B> Up:</B> <A NAME="tex2html826"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html820"
+  HREF="node19.html">Limit of a variable</A>
+ &nbsp; <B>  <A NAME="tex2html828"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html830"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00520000000000000000"></A>
+<A NAME="sec:14"></A>
+<BR>
+Division by zero excluded
+</H1>
+
+<P>
+<!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN> is indeterminate. For the quotient of two numbers 
+is that number which multiplied by the divisor will give 
+the dividend. But any number whatever multiplied by zero 
+gives zero, and the quotient is indeterminate; that is, 
+any number whatever may be considered as the quotient, a 
+result which is of no value.
+
+<P>
+<!-- MATH
+ $\frac{a}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img340.png"
+ ALT="$ \frac{a}{0}$"></SPAN> has no meaning, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> being different from zero, 
+for there exists no number such that if it be multiplied by zero, 
+the product will equal <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>.
+
+<P>
+Therefore division by zero is not an admissible operation.
+
+<P>
+Care should be taken not to divide by zero inadvertently. The following 
+fallacy is an illustration.
+Assume that 
+<P><!-- MATH
+ \begin{displaymath}
+a 	= b.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img341.png"
+ ALT="$\displaystyle a = b.
+$">
+</DIV><P></P>
+Then evidently 	
+<P><!-- MATH
+ \begin{displaymath}
+ab = a^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="61" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img342.png"
+ ALT="$\displaystyle ab = a^2.
+$">
+</DIV><P></P>
+Subtracting <SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img343.png"
+ ALT="$ b^2$"></SPAN>,
+<P><!-- MATH
+ \begin{displaymath}
+ab-b^2 	= a^2-b^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="128" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img344.png"
+ ALT="$\displaystyle ab-b^2 = a^2-b^2.
+$">
+</DIV><P></P>
+Factoring, 	
+<P><!-- MATH
+ \begin{displaymath}
+b(a-b) 	= (a + b)(a-b).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="178" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img345.png"
+ ALT="$\displaystyle b(a-b) = (a + b)(a-b).
+$">
+</DIV><P></P>
+Dividing by <P><!-- MATH
+ \begin{displaymath}
+b = a + b.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="72" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img346.png"
+ ALT="$\displaystyle b = a + b.
+$">
+</DIV><P></P>
+But 	<SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img347.png"
+ ALT="$ a = b$"></SPAN>,
+therefore <SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img348.png"
+ ALT="$ b = 2b$"></SPAN>,
+or, 	<SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img349.png"
+ ALT="$ 1 = 2$"></SPAN>.
+The result is absurd, and is caused by the fact that we divided by 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img350.png"
+ ALT="$ a-b = 0$"></SPAN>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html831"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html825"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html819"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html827"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html829"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html832"
+  HREF="node21.html">Infinitesimals</A>
+<B> Up:</B> <A NAME="tex2html826"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html820"
+  HREF="node19.html">Limit of a variable</A>
+ &nbsp; <B>  <A NAME="tex2html828"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html830"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

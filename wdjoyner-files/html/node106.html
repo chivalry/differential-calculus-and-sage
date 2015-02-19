@@ -1,0 +1,430 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Leibnitz's Formula for the -th derivative of a product</TITLE>
+<META NAME="description" CONTENT="Leibnitz's Formula for the -th derivative of a product">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node107.html">
+<LINK REL="previous" HREF="node105.html">
+<LINK REL="up" HREF="node102.html">
+<LINK REL="next" HREF="node107.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2101"
+  HREF="node107.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2095"
+  HREF="node102.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2089"
+  HREF="node105.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2097"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2099"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2102"
+  HREF="node107.html">Successive differentiation of implicit</A>
+<B> Up:</B> <A NAME="tex2html2096"
+  HREF="node102.html">Successive differentiation</A>
+<B> Previous:</B> <A NAME="tex2html2090"
+  HREF="node105.html">The -th derivative</A>
+ &nbsp; <B>  <A NAME="tex2html2098"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2100"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00940000000000000000">
+Leibnitz's Formula for the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN>-th derivative of a product</A>
+</H1>
+
+<P>
+This formula expresses the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN>-th derivative of the 
+product of two variables in terms of the variables 
+themselves and their successive derivatives.
+
+<P>
+If u and v are functions of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, we have, from 
+equation (V) in &#167;<A HREF="node44.html#sec:33">5.1</A>  above, 
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d}{dx} (uv) = \frac{du}{dx} v + u \frac{dv}{dx}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="160" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2163.png"
+ ALT="$\displaystyle \frac{d}{dx} (uv) = \frac{du}{dx} v + u \frac{dv}{dx}.
+$">
+</DIV><P></P>
+Differentiating again with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^2}{dx^2}(uv)
+= \frac{d^2u}{dx^2}v + \frac{du}{dx} \frac{dv}{dx} 
++ \frac{du}{dx} \frac{dv}{dx} + u \frac{d^2 v}{dx^2} 
+= \frac{d^2 u}{dx^2}v + 2 \frac{du}{dx} \frac{dv}{dx} 
++ u \frac{d^2 v}{dx^2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="490" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2164.png"
+ ALT="$\displaystyle \frac{d^2}{dx^2}(uv)
+= \frac{d^2u}{dx^2}v + \frac{du}{dx} \frac{...
+...= \frac{d^2 u}{dx^2}v + 2 \frac{du}{dx} \frac{dv}{dx}
++ u \frac{d^2 v}{dx^2}.
+$">
+</DIV><P></P>
+Similarly,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{d^3}{dx^3}(uv)
+&= \frac{d^3 u}{dx^3} + \frac{d^2 u}{dx^2} \frac{dv}{dx} 
++ 2\frac{d^2 u}{dx^2} \frac{dv}{dx} + 2 \frac{du}{dx} \frac{d^2 v}{dx^2} 
++ \frac{du}{dx} \frac{d^2 v}{dx^2} + u \frac{d^3 v}{dx^3}\\
+&= \frac{d^3 u}{dx^3}v + 3\frac{d^2 u}{dx^2} \frac{dv}{dx} 
++ 3 \frac{du}{dx} \frac{d^2 v}{dx^2} + u \frac{d^3 v}{dx^3}.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="421" HEIGHT="60" BORDER="0"
+ SRC="img2165.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{d^3}{dx^3}(uv)
+&amp;= \frac{d^3 u}{dx^3...
+...{du}{dx} \frac{d^2 v}{dx^2} + u \frac{d^3 v}{dx^3}.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+However far this process may be continued, it will be seen 
+that the numerical coefficients follow the same law as 
+those of the Binomial Theorem, and the indices of 
+the derivatives correspond<A NAME="tex2html93"
+  HREF="footnode.html#foot17800"><SUP><SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A> 
+to the exponents of the Binomial Theorem.
+Reasoning then by mathematical induction from the 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1605.png"
+ ALT="$ m$"></SPAN>-th to the <SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2168.png"
+ ALT="$ (m + 1 )$"></SPAN>-st derivative of the product, 
+we can prove <I>Leibnitz's Formula</I>
+<A NAME="17493"></A>
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:17-77"></A><!-- MATH
+ \begin{equation}
+\frac{d^n}{dx^n}(uv)
+= \frac{d^n u}{dx^n} v + n \frac{d^{n - 1} u}{dx^{n - 1}} \frac{dv}{dx} 
++ \frac{n (n - 1)}{2!} \frac{d^{n - 2} u}{dx^{n - 2}} \frac{d^2 v}{dx^2} 
++ \cdots + n \frac{du}{dx} \frac{d^{n - 1} v}{dx^{n - 1}} 
++ u \frac{d^nv}{dx^n},
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="571" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2169.png"
+ ALT="$\displaystyle \frac{d^n}{dx^n}(uv) = \frac{d^n u}{dx^n} v + n \frac{d^{n - 1} u...
+... \cdots + n \frac{du}{dx} \frac{d^{n - 1} v}{dx^{n - 1}} + u \frac{d^nv}{dx^n},$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Given <!-- MATH
+ $y = e^x\log\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2170.png"
+ ALT="$ y = e^x\log\, x$"></SPAN>, find <!-- MATH
+ $\frac{d^3 y}{dx^3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2171.png"
+ ALT="$ \frac{d^3 y}{dx^3}$"></SPAN> by Leibnitz's Formula.
+
+<P>
+Solution. Let 	<SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2172.png"
+ ALT="$ u = e^x$"></SPAN>, and 	<!-- MATH
+ $v = \log\, x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2173.png"
+ ALT="$ v = \log\, x$"></SPAN>;
+then 	
+<!-- MATH
+ $\frac{du}{dx} = e^x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2174.png"
+ ALT="$ \frac{du}{dx} = e^x$"></SPAN>, 	<!-- MATH
+ $\frac{dv}{dx} = \frac{1}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2175.png"
+ ALT="$ \frac{dv}{dx} = \frac{1}{x}$"></SPAN>,
+<!-- MATH
+ $\frac{d^2 u}{dx^2} = e^x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2176.png"
+ ALT="$ \frac{d^2 u}{dx^2} = e^x$"></SPAN>, <!-- MATH
+ $\frac{d^2 v}{dx^2} = - \frac{1}{x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2177.png"
+ ALT="$ \frac{d^2 v}{dx^2} = - \frac{1}{x^2}$"></SPAN>,
+<!-- MATH
+ $\frac{d^3 u}{dx^3} = e^x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="65" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2178.png"
+ ALT="$ \frac{d^3 u}{dx^3} = e^x$"></SPAN>, <!-- MATH
+ $\frac{d^3 v}{dx^3} = \frac{2}{x^3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2179.png"
+ ALT="$ \frac{d^3 v}{dx^3} = \frac{2}{x^3}$"></SPAN>.
+
+<P>
+Substituting in (<A HREF="#eqn:17-77">7.1</A>), we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^3 y}{dx^3} = e^x \log x + \frac{3 e^x}{x} - \frac{3 e^x}{x^2} = e^x \left ( \log x + \frac{3}{x} - \frac{3}{x^2} + \frac{2}{x^3} \right ).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="411" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2180.png"
+ ALT="$\displaystyle \frac{d^3 y}{dx^3} = e^x \log x + \frac{3 e^x}{x} - \frac{3 e^x}{x^2} = e^x \left ( \log x + \frac{3}{x} - \frac{3}{x^2} + \frac{2}{x^3} \right ).
+$">
+</DIV><P></P>
+
+<P>
+This can be verified using the <I CLASS="sans">SAGE</I> commands:
+
+<P>
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: x = var("x")
+sage: f = exp(x)*log(x)
+sage: diff(f,x,3)
+e^x*log(x) + 3*e^x/x - 3*e^x/x^2 + 2*e^x/x^3
+</PRE>
+<P>
+
+<P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">4</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; Given <!-- MATH
+ $y = x^2e^{ax}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2181.png"
+ ALT="$ y = x^2e^{ax}$"></SPAN>, find <!-- MATH
+ $\frac{d^n y}{dx^n}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2148.png"
+ ALT="$ \frac{d^n y}{dx^n}$"></SPAN> by Leibnitz's Formula.
+
+<P>
+Solution. Let <SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2182.png"
+ ALT="$ u = x^2$"></SPAN>, and <!-- MATH
+ $v = e^{ax}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2183.png"
+ ALT="$ v = e^{ax}$"></SPAN>;
+then <!-- MATH
+ $\frac{du}{dx} = 2x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="61" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2184.png"
+ ALT="$ \frac{du}{dx} = 2x$"></SPAN>, <!-- MATH
+ $\frac{dv}{dx} = ae^{ax}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2185.png"
+ ALT="$ \frac{dv}{dx} = ae^{ax}$"></SPAN>,
+<!-- MATH
+ $\frac{d^2 u}{dx^2} = 2x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="67" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2186.png"
+ ALT="$ \frac{d^2 u}{dx^2} = 2x$"></SPAN>, <!-- MATH
+ $\frac{d^2 v}{dx^2} = a^2 e^{ax}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2187.png"
+ ALT="$ \frac{d^2 v}{dx^2} = a^2 e^{ax}$"></SPAN>,
+<!-- MATH
+ $\frac{d^3 u}{dx^3} = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2188.png"
+ ALT="$ \frac{d^3 u}{dx^3} = 0$"></SPAN>, <!-- MATH
+ $\frac{d^3 v}{dx^3} = a^3 e^{ax}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2189.png"
+ ALT="$ \frac{d^3 v}{dx^3} = a^3 e^{ax}$"></SPAN>,
+...,
+<!-- MATH
+ $\frac{d^n u}{dx^n} = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2190.png"
+ ALT="$ \frac{d^n u}{dx^n} = 0$"></SPAN>, 
+<!-- MATH
+ $\frac{d^n v}{dx^n} = a^n e^{ax}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="91" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2191.png"
+ ALT="$ \frac{d^n v}{dx^n} = a^n e^{ax}$"></SPAN>.
+Substituting in (<A HREF="#eqn:17-77">7.1</A>), we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{d^n y}{dx^n}
+= x^2 a^n e^{ax} + 2na^{n - 1} x e^{ax} + n(n - 1)a^{n - 2} e^{ax} 
+= a^{n - 2} e^{ax} [ x^2 a^2 + 2nax + n(n - 1) ].
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="599" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2192.png"
+ ALT="$\displaystyle \frac{d^n y}{dx^n}
+= x^2 a^n e^{ax} + 2na^{n - 1} x e^{ax} + n(n - 1)a^{n - 2} e^{ax}
+= a^{n - 2} e^{ax} [ x^2 a^2 + 2nax + n(n - 1) ].
+$">
+</DIV><P></P>
+
+<P></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2101"
+  HREF="node107.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2095"
+  HREF="node102.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2089"
+  HREF="node105.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2097"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2099"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2102"
+  HREF="node107.html">Successive differentiation of implicit</A>
+<B> Up:</B> <A NAME="tex2html2096"
+  HREF="node102.html">Successive differentiation</A>
+<B> Previous:</B> <A NAME="tex2html2090"
+  HREF="node105.html">The -th derivative</A>
+ &nbsp; <B>  <A NAME="tex2html2098"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2100"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

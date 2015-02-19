@@ -1,0 +1,299 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Evaluation of the indeterminate form </TITLE>
+<META NAME="description" CONTENT="Evaluation of the indeterminate form ">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node163.html">
+<LINK REL="previous" HREF="node161.html">
+<LINK REL="up" HREF="node148.html">
+<LINK REL="next" HREF="node163.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2926"
+  HREF="node163.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2920"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2914"
+  HREF="node161.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2922"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2924"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2927"
+  HREF="node163.html">Evaluation of the indeterminate</A>
+<B> Up:</B> <A NAME="tex2html2921"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2915"
+  HREF="node161.html">Evaluation of the indeterminate</A>
+ &nbsp; <B>  <A NAME="tex2html2923"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2925"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION0015110000000000000000"></A>
+<A NAME="sec:113"></A>
+<BR>
+Evaluation of the indeterminate form <!-- MATH
+ $0 \cdot \infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img73.png"
+ ALT="$ 0 \cdot \infty $"></SPAN>
+</H1>
+
+<P>
+If a function <!-- MATH
+ $f(x) \cdot \phi(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3478.png"
+ ALT="$ f(x) \cdot \phi(x)$"></SPAN> takes on the indeterminate form 
+<!-- MATH
+ $0 \cdot \infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img73.png"
+ ALT="$ 0 \cdot \infty $"></SPAN> for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>, we write the given function
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f(x) \cdot \phi(x) = \frac{f(x)}{ \frac{1}{\phi(x)} }
+\left( \text{or} = \frac{\phi(x)}{\frac{1}{f(x)}} \right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="232" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3479.png"
+ ALT="$\displaystyle f(x) \cdot \phi(x) = \frac{f(x)}{ \frac{1}{\phi(x)} }
+\left( \text{or} = \frac{\phi(x)}{\frac{1}{f(x)}} \right)
+$">
+</DIV><P></P>
+so as to cause it to take on one of the forms <!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN> or 
+<!-- MATH
+ $\frac{\infty}{\infty}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$ \frac {\infty }{\infty }$"></SPAN>, thus bringing it under 
+&#167;<A HREF="node158.html#sec:111">13.9</A> or &#167;<A HREF="node161.html#sec:112">13.10</A>.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">11</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
+<I>Evaluate <!-- MATH
+ $\sec(3x)\cos(5x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="108" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3480.png"
+ ALT="$ \sec(3x)\cos(5x)$"></SPAN> for <!-- MATH
+ $x = \frac{\pi}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2634.png"
+ ALT="$ x = \frac{\pi}{2}$"></SPAN>.
+</I>
+<P>
+<I>Solution. <!-- MATH
+ $\left. \sec 3x \cos 5x \right]_{x = \frac{\pi}{2}} \ \ ``= \infty \cdot 0''$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="209" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3481.png"
+ ALT="$ \left. \sec 3x \cos 5x \right]_{x = \frac{\pi}{2}} \ \ \lq\lq = \infty \cdot 0''$"></SPAN>.
+Therefore, this is an indeterminate form.
+Substituting <!-- MATH
+ $\frac{1}{\cos 3x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3482.png"
+ ALT="$ \frac{1}{\cos 3x}$"></SPAN> for <SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3483.png"
+ ALT="$ \sec 3x$"></SPAN>, the function 
+becomes <!-- MATH
+ $\frac{\cos 5x}{\cos 3x} = \frac{f(x)}{F(x)}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="93" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3484.png"
+ ALT="$ \frac{\cos 5x}{\cos 3x} = \frac{f(x)}{F(x)}$"></SPAN>.
+</I>
+<P><P><!-- MATH
+ \begin{displaymath}
+\frac{ f(\frac{\pi}{2}) }{ F(\frac{\pi}{2}) }
+= \left. \frac{\cos 5x}{\cos 3x} \right]_{x = \frac{\pi}{s}}\ \ `` = \frac{0}{0}''. 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="216" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3485.png"
+ ALT="$\displaystyle \frac{ f(\frac{\pi}{2}) }{ F(\frac{\pi}{2}) }
+= \left. \frac{\cos 5x}{\cos 3x} \right]_{x = \frac{\pi}{s}}\ \ \lq\lq  = \frac{0}{0}''.
+$">
+</DIV><P></P><I>
+Therefore, this is an indeterminate form.
+</I><P><!-- MATH
+ \begin{displaymath}
+\frac{ f'(\frac{\pi}{2}) }{ F'(\frac{\pi}{2}) }
+= \left. \frac{-\cos x}{- \sin x} \right]_{x = \frac{\pi}{s}} 
+= \frac{0}{-1} = 0.\ \ {\rm Ans.}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="282" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3486.png"
+ ALT="$\displaystyle \frac{ f'(\frac{\pi}{2}) }{ F'(\frac{\pi}{2}) }
+= \left. \frac{-\cos x}{- \sin x} \right]_{x = \frac{\pi}{s}}
+= \frac{0}{-1} = 0.\ \ {\rm Ans.}
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">13</SPAN>.<SPAN CLASS="arabic">11</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; <P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="122" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3487.png"
+ ALT="$\displaystyle \lim_{x \to 0} \left( \cot x - \frac{1}{x} \right)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="150" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3488.png"
+ ALT="$\displaystyle = \lim_{x \to 0} \frac{x \cos x - \sin x}{x \sin x}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="202" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3489.png"
+ ALT="$\displaystyle = \lim_{x \to 0} \frac{\cos x - x \sin x - \cos x} {\sin x + x \cos x}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="150" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3490.png"
+ ALT="$\displaystyle = \lim_{x \to 0} \frac{- x \sin x } {\sin x + x \cos x}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="202" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3491.png"
+ ALT="$\displaystyle = \lim_{x \to 0} \frac{- x \cos x - \sin x } {\cos x + \cos x - x \sin x }$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3492.png"
+ ALT="$\displaystyle = 0$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+<P>
+<I>Here is the <I CLASS="sans">SAGE</I> command for this example:
+</I>
+<P>
+<P><PRE>[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: limit(cot(x)-1/x,x=0)
+0
+sage: limit((- x*cos(x) - sin(x) )/(cos(x) + cos(x) - x*sin(x)),x=0)
+0
+</PRE>
+<P></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2926"
+  HREF="node163.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2920"
+  HREF="node148.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2914"
+  HREF="node161.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2922"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2924"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2927"
+  HREF="node163.html">Evaluation of the indeterminate</A>
+<B> Up:</B> <A NAME="tex2html2921"
+  HREF="node148.html">Theorem of mean value;</A>
+<B> Previous:</B> <A NAME="tex2html2915"
+  HREF="node161.html">Evaluation of the indeterminate</A>
+ &nbsp; <B>  <A NAME="tex2html2923"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2925"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

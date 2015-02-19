@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Continuous and discontinuous functions</TITLE>
+<META NAME="description" CONTENT="Continuous and discontinuous functions">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node25.html">
+<LINK REL="previous" HREF="node23.html">
+<LINK REL="up" HREF="node18.html">
+<LINK REL="next" HREF="node25.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html887"
+  HREF="node25.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html881"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html875"
+  HREF="node23.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html883"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html885"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html888"
+  HREF="node25.html">Continuity and discontinuity of</A>
+<B> Up:</B> <A NAME="tex2html882"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html876"
+  HREF="node23.html">Limiting value of a</A>
+ &nbsp; <B>  <A NAME="tex2html884"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html886"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00560000000000000000"></A>
+<A NAME="sec:18"></A>
+<BR>
+Continuous and discontinuous functions
+</H1>
+
+<P>
+A function <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> is said to be <I>continuous</I> for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN> if 
+the limiting value of the function when <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> approaches the limit <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> 
+in any manner is the value assigned to the function for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>. 
+<A NAME="1863"></A>
+In symbols, if
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to a} f(x) = f(a),
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="121" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img365.png"
+ ALT="$\displaystyle \lim_{x \to a} f(x) = f(a),
+$">
+</DIV><P></P>
+then <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> is continuous for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>.
+
+<P>
+The function is said to be <I>discontinuous</I> for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN> 
+if this condition is not satisfied. For example, if
+<A NAME="1866"></A>
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to a} f(x) = \infty,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img366.png"
+ ALT="$\displaystyle \lim_{x \to a} f(x) = \infty,
+$">
+</DIV><P></P>
+the function is discontinuous for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>.
+
+<P>
+The attention of the student is now called to the following cases 
+which occur frequently.
+
+<P>
+
+<B>CASE I</B>. 
+As an example illustrating a simple case of a function continuous 
+for a particular value of the variable, consider the function
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+f(x) = \frac{x^2 - 4}{x - 2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="109" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img367.png"
+ ALT="$\displaystyle f(x) = \frac{x^2 - 4}{x - 2}.
+$">
+</DIV><P></P>
+For <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>, <!-- MATH
+ $f(x) = f(l) = 3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="113" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img368.png"
+ ALT="$ f(x) = f(l) = 3$"></SPAN>. Moreover, if <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> approaches the limit 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN> in any manner, the function <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> approaches <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN> as a limit. 
+Hence the function is continuous for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>.
+
+<P>
+
+<B>CASE II</B>. 
+The definition of a continuous function assumes that the function 
+is already defined for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>. If this is not the case, however, 
+it is sometimes possible to assign such a value to the function 
+for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN> that the condition of continuity shall be satisfied. 
+The following theorem covers these cases.
+
+<P>
+<P>
+<DIV><B>Theorem  <SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
+<I>If <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> is not defined for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>, and if
+</I>
+<P><P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to a} f(x) = B,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="103" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img370.png"
+ ALT="$\displaystyle \lim_{x \to a} f(x) = B,
+$">
+</DIV><P></P><I>
+then <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> will be continuous for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>, if <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ B$"></SPAN> 
+is assumed as the value of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img364.png"
+ ALT="$ x = a$"></SPAN>. </I></DIV><P></P>
+
+<P>
+Thus the function
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{x^2 - 4}{x - 2}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="52" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img371.png"
+ ALT="$\displaystyle \frac{x^2 - 4}{x - 2}
+$">
+</DIV><P></P>
+is not defined for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN> (since then there would be division by 
+zero). But for every other value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{x^2 - 4}{x + 2} = x + 2;
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="114" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img373.png"
+ ALT="$\displaystyle \frac{x^2 - 4}{x + 2} = x + 2;
+$">
+</DIV><P></P>
+and 
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x \to 2} (x + 2) 	= 4
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="109" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img374.png"
+ ALT="$\displaystyle \lim_{x \to 2} (x + 2) = 4
+$">
+</DIV><P></P>
+therefore <!-- MATH
+ $\lim_{x \to 2} \frac{x^2 - 4}{x - 2} 	= 4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="119" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img375.png"
+ ALT="$ \lim_{x \to 2} \frac{x^2 - 4}{x - 2} = 4$"></SPAN>.
+Although the function is not defined for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, if we assign it the value <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> for <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, it then becomes continuous for this value.
+
+<P>
+A function <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> is said to be <I>continuous in an interval</I> when 
+it is continuous for all values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> in this interval<A NAME="tex2html12"
+  HREF="footnode.html#foot1884"><SUP><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">3</SPAN></SUP></A>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html887"
+  HREF="node25.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html881"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html875"
+  HREF="node23.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html883"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html885"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html888"
+  HREF="node25.html">Continuity and discontinuity of</A>
+<B> Up:</B> <A NAME="tex2html882"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html876"
+  HREF="node23.html">Limiting value of a</A>
+ &nbsp; <B>  <A NAME="tex2html884"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html886"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

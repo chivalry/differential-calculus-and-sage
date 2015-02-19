@@ -1,0 +1,626 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Fundamental theorems on limits</TITLE>
+<META NAME="description" CONTENT="Fundamental theorems on limits">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node27.html">
+<LINK REL="previous" HREF="node25.html">
+<LINK REL="up" HREF="node18.html">
+<LINK REL="next" HREF="node27.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html915"
+  HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html909"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html903"
+  HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html911"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html913"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html916"
+  HREF="node27.html">Special limiting values</A>
+<B> Up:</B> <A NAME="tex2html910"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html904"
+  HREF="node25.html">Continuity and discontinuity of</A>
+ &nbsp; <B>  <A NAME="tex2html912"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html914"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00580000000000000000"></A>
+<A NAME="sec:20"></A>
+<BR>
+Fundamental theorems on limits
+</H1>
+
+<P>
+In problems involving limits the use of one or more of the 
+following theorems is usually implied. It is assumed that the 
+limit of each variable exists and is finite.
+
+<P>
+<P>
+<DIV><B>Theorem  <SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; <A NAME="thrm:I-20"></A>The limit of the algebraic sum of a finite number of 
+variables is equal to the algebraic sum of the 
+limits of the several variables. 
+
+<P>
+In particular,
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x\to a} [f(x)+g(x)] = \lim_{x\to a} f(x)
++\lim_{x\to a} g(x).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="285" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img428.png"
+ ALT="$\displaystyle \lim_{x\to a} [f(x)+g(x)] = \lim_{x\to a} f(x)
++\lim_{x\to a} g(x).
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Theorem  <SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; <A NAME="thrm:II-20"></A>The limit of the product of a finite number of variables is 
+equal to the product of the limits of the several variables.
+
+<P>
+In particular,
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x\to a} [f(x)\cdot g(x)] = \lim_{x\to a} f(x)
+\cdot \lim_{x\to a} g(x).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="269" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img429.png"
+ ALT="$\displaystyle \lim_{x\to a} [f(x)\cdot g(x)] = \lim_{x\to a} f(x)
+\cdot \lim_{x\to a} g(x).
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Theorem  <SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">3</SPAN></B> &nbsp; <A NAME="thrm:III-20"></A>The limit of the quotient of two variables is equal to the 
+quotient of the limits of the separate variables, provided the 
+limit of the denominator is not zero.
+
+<P>
+In particular,
+<P><!-- MATH
+ \begin{displaymath}
+\lim_{x\to a} [f(x)/g(x)] = \frac{\lim_{x\to a} f(x)}{\lim_{x\to a} g(x)},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="222" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img430.png"
+ ALT="$\displaystyle \lim_{x\to a} [f(x)/g(x)] = \frac{\lim_{x\to a} f(x)}{\lim_{x\to a} g(x)},
+$">
+</DIV><P></P>
+provided <!-- MATH
+ $\lim_{x\to a} g(x)\not= 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img431.png"
+ ALT="$ \lim_{x\to a} g(x)\not= 0$"></SPAN>.</DIV><P></P>
+
+<P>
+Before proving these theorems it is necessary to establish 
+the following properties of infinitesimals.
+
+<P>
+
+<OL>
+<LI>The sum of a finite number of infinitesimals is an 
+infinitesimal. To prove this we must show that the 
+numerical<A NAME="tex2html24"
+  HREF="footnode.html#foot2052"><SUP><SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">4</SPAN></SUP></A>value of this sum can be made less than any small positive 
+quantity (as <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img432.png"
+ ALT="$ \epsilon$"></SPAN>) that may be assigned 
+(&#167;<A HREF="node21.html#sec:15">3.3</A>). That this is possible 
+is evident, for, the limit of each infinitesimal being zero, 
+each one can be made numerically less than <!-- MATH
+ $\frac{\epsilon}{n}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img433.png"
+ ALT="$ \frac{\epsilon}{n}$"></SPAN> 
+(<SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN> being the number of infinitesimals), and therefore their sum 
+can be made numerically less than <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img432.png"
+ ALT="$ \epsilon$"></SPAN>.
+
+<P>
+</LI>
+<LI>The product of a constant <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img434.png"
+ ALT="$ c\not= 0$"></SPAN> and an infinitesimal is an infinitesimal. 
+For the numerical value of the product can always be made less 
+than any small positive quantity (as <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img432.png"
+ ALT="$ \epsilon$"></SPAN>) by making the numerical 
+value of the infinitesimal less than <!-- MATH
+ $\frac{\epsilon}{|c|}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img435.png"
+ ALT="$ \frac{\epsilon}{\vert c\vert}$"></SPAN>.
+
+<P>
+</LI>
+<LI>If <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> is a variable which approaches a limit <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img321.png"
+ ALT="$ L$"></SPAN> different from zero, 
+then the quotient of an infinitesimal by <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> is also an 
+infinitesimal. For if <SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img436.png"
+ ALT="$ v\to L$"></SPAN>, 
+and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img437.png"
+ ALT="$ k$"></SPAN> is any number numerically 
+less than <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img321.png"
+ ALT="$ L$"></SPAN>, then, by definition of a limit, <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> will ultimately become 
+and remain numerically greater than <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img437.png"
+ ALT="$ k$"></SPAN>. Hence the quotient 
+<!-- MATH
+ $\frac{\epsilon}{v}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img438.png"
+ ALT="$ \frac{\epsilon}{v}$"></SPAN>, where <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img432.png"
+ ALT="$ \epsilon$"></SPAN> is an infinitesimal, will ultimately 
+become and remain numerically less than <!-- MATH
+ $\frac{\epsilon}{k}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img439.png"
+ ALT="$ \frac{\epsilon}{k}$"></SPAN>, and is 
+therefore by the previous item
+an infinitesimal.
+
+<P>
+</LI>
+<LI>The product of any finite number of infinitesimals is an 
+infinitesimal. For the numerical value of the product may be 
+made less than any small positive quantity that can be assigned. 
+If the given product contains <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN> factors, then since each 
+infinitesimal may be assumed less than the <SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img440.png"
+ ALT="$ n-th$"></SPAN> root of <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img432.png"
+ ALT="$ \epsilon$"></SPAN>, the 
+product can be made less than <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img432.png"
+ ALT="$ \epsilon$"></SPAN> itself.
+
+<P>
+</LI>
+</OL>
+
+<P>
+<I>Proof of Theorem <A HREF="#thrm:I-20">3.8.1</A>.</I> 
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img441.png"
+ ALT="$ v_1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img442.png"
+ ALT="$ v_2$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img443.png"
+ ALT="$ v_3$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img444.png"
+ ALT="$ \dots$"></SPAN> be the variables, and 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img445.png"
+ ALT="$ L_1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img446.png"
+ ALT="$ L_2$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img447.png"
+ ALT="$ L_3$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img444.png"
+ ALT="$ \dots$"></SPAN> their respective limits. We may then write
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v_1 - L_1 	= \epsilon_1,\ \
+v_2 - L_2 	= \epsilon_2,\ \ 
+v_3 - L_3 	= \epsilon_3,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="306" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img448.png"
+ ALT="$\displaystyle v_1 - L_1 = \epsilon_1,\ \
+v_2 - L_2 = \epsilon_2,\ \
+v_3 - L_3 = \epsilon_3,
+$">
+</DIV><P></P>
+where <!-- MATH
+ $\epsilon_1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img449.png"
+ ALT="$ \epsilon_1$"></SPAN>, <!-- MATH
+ $\epsilon_2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img450.png"
+ ALT="$ \epsilon_2$"></SPAN>, <!-- MATH
+ $\epsilon_3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img451.png"
+ ALT="$ \epsilon_3$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img444.png"
+ ALT="$ \dots$"></SPAN> are 
+infinitesimals (i.e. variables having zero for a limit). Adding
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+(v_1 + v _2 + v_3 + \dots) - (L_1 + L_2 + L_3 + . . .)
+= (\epsilon_1 + \epsilon_2 + \epsilon_3 + \dots).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="457" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img452.png"
+ ALT="$\displaystyle (v_1 + v _2 + v_3 + \dots) - (L_1 + L_2 + L_3 + . . .)
+= (\epsilon_1 + \epsilon_2 + \epsilon_3 + \dots).
+$">
+</DIV><P></P>
+Since the right-hand member is an infinitesimal by item
+(1) above (&#167;<A HREF="#sec:20">3.8</A>), 
+we have, from the converse theorem (&#167;<A HREF="node21.html#sec:15">3.3</A>),
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim (v_1 + v_2 + v_3 + \dots)
+= L_1 + L_2 + L_3 + \dots,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="322" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img453.png"
+ ALT="$\displaystyle \lim (v_1 + v_2 + v_3 + \dots)
+= L_1 + L_2 + L_3 + \dots,
+$">
+</DIV><P></P>
+or, 	
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim (v_1 + v_2 + v_3 + \dots)
+= \lim v_1 + \lim v_2 + \lim v_3 + \dots,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="387" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img454.png"
+ ALT="$\displaystyle \lim (v_1 + v_2 + v_3 + \dots)
+= \lim v_1 + \lim v_2 + \lim v_3 + \dots,
+$">
+</DIV><P></P>
+which was to be proved. <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img455.png"
+ ALT="$ \Box$"></SPAN>
+
+<P>
+<I>Proof of Theorem <A HREF="#thrm:II-20">3.8.2</A>.</I> 
+Let <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img441.png"
+ ALT="$ v_1$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img442.png"
+ ALT="$ v_2$"></SPAN> be the variables, <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img445.png"
+ ALT="$ L_1$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img446.png"
+ ALT="$ L_2$"></SPAN> their 
+respective limits, and <!-- MATH
+ $\epsilon_1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img449.png"
+ ALT="$ \epsilon_1$"></SPAN> and <!-- MATH
+ $\epsilon_2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img450.png"
+ ALT="$ \epsilon_2$"></SPAN> infinitesimals; 
+then
+<P><!-- MATH
+ \begin{displaymath}
+v_1 	= L_1 + \epsilon_1
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="92" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img456.png"
+ ALT="$\displaystyle v_1 = L_1 + \epsilon_1
+$">
+</DIV><P></P>
+and <!-- MATH
+ $v_2 = L_2 + \epsilon_2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img457.png"
+ ALT="$ v_2 = L_2 + \epsilon_2$"></SPAN>.
+Multiplying, 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}
+{ll}
+v_1v_2 	&= (L_1 + \epsilon_1)(L_2 + \epsilon_2)\\
+&	= L_1L_2 + L_1\epsilon_2 + L_2\epsilon_1 + \epsilon_1\epsilon_2
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="246" HEIGHT="54" BORDER="0"
+ SRC="img458.png"
+ ALT="\begin{displaymath}
+\begin{array}
+{ll}
+v_1v_2 &amp;= (L_1 + \epsilon_1)(L_2 + \epsil...
+..._1\epsilon_2 + L_2\epsilon_1 + \epsilon_1\epsilon_2
+\end{array}\end{displaymath}">
+</DIV><P></P>
+or, 	  	 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+v_1v_2 - L_1L_2 = L_1\epsilon_2 + L_2\epsilon_1 + \epsilon_1\epsilon_2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="244" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img459.png"
+ ALT="$\displaystyle v_1v_2 - L_1L_2 = L_1\epsilon_2 + L_2\epsilon_1 + \epsilon_1\epsilon_2.
+$">
+</DIV><P></P>
+Since the right-hand member is an infinitesimal 
+by items (1) and (2) above, (&#167;<A HREF="#sec:20">3.8</A>), we have, as before,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim (v_1v_2) = L_1L_2 = \lim v_1 \cdot \lim v_2,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="242" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img460.png"
+ ALT="$\displaystyle \lim (v_1v_2) = L_1L_2 = \lim v_1 \cdot \lim v_2,
+$">
+</DIV><P></P>
+which was to be proved. <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img455.png"
+ ALT="$ \Box$"></SPAN>
+
+<P>
+<I>Proof of Theorem <A HREF="#thrm:III-20">3.8.3</A>.</I>  
+Using the same notation as before,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{v_1}{v_2} = \frac{L_1 + \epsilon_1}{L_2 + \epsilon_2}
+= \frac{L_1}{L_2} + \left ( \frac{L_1 + \epsilon_1}{L_2 + \epsilon_2} 
+- \frac{L_1}{L_2} \right ),
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="288" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img461.png"
+ ALT="$\displaystyle \frac{v_1}{v_2} = \frac{L_1 + \epsilon_1}{L_2 + \epsilon_2}
+= \f...
+...\left ( \frac{L_1 + \epsilon_1}{L_2 + \epsilon_2}
+- \frac{L_1}{L_2} \right ),
+$">
+</DIV><P></P>
+or,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{v_1}{v_2} - \frac{L_1}{L_2}
+= \frac{L_2 \epsilon_1 - L_1 \epsilon_2}{L_2 (L_2 + \epsilon_2)}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="176" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
+ SRC="img462.png"
+ ALT="$\displaystyle \frac{v_1}{v_2} - \frac{L_1}{L_2}
+= \frac{L_2 \epsilon_1 - L_1 \epsilon_2}{L_2 (L_2 + \epsilon_2)}.
+$">
+</DIV><P></P>
+Here again the right-hand member is an infinitesimal 
+by item (3) above, (&#167;<A HREF="#sec:20">3.8</A>), if <SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img463.png"
+ ALT="$ L_2 \ne 0$"></SPAN>; hence
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim \left ( \frac{v_1}{v_2} \right ) = \frac{L_1}{L_2}
+= \frac{\lim\,v_1}{\lim\,v_2},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="186" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img464.png"
+ ALT="$\displaystyle \lim \left ( \frac{v_1}{v_2} \right ) = \frac{L_1}{L_2}
+= \frac{\lim\,v_1}{\lim\,v_2},
+$">
+</DIV><P></P>
+which was to be proved. <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img455.png"
+ ALT="$ \Box$"></SPAN>
+
+<P>
+It is evident that if any of the variables be 
+replaced by constants, our reasoning still holds, and 
+the above theorems are true.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html915"
+  HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html909"
+  HREF="node18.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html903"
+  HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html911"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html913"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html916"
+  HREF="node27.html">Special limiting values</A>
+<B> Up:</B> <A NAME="tex2html910"
+  HREF="node18.html">Theory of limits</A>
+<B> Previous:</B> <A NAME="tex2html904"
+  HREF="node25.html">Continuity and discontinuity of</A>
+ &nbsp; <B>  <A NAME="tex2html912"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html914"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

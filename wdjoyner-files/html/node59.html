@@ -1,0 +1,387 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Logarithmic differentiation</TITLE>
+<META NAME="description" CONTENT="Logarithmic differentiation">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node60.html">
+<LINK REL="previous" HREF="node58.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node60.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1420"
+  HREF="node60.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1414"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1408"
+  HREF="node58.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1416"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1418"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1421"
+  HREF="node60.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html1415"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1409"
+  HREF="node58.html">Differentiation of the general</A>
+ &nbsp; <B>  <A NAME="tex2html1417"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1419"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007160000000000000000">
+Logarithmic differentiation</A>
+</H1>
+
+<P>
+Instead of applying (VIII) and (VIIIa) at once in differentiating logarithmic 
+functions, we may sometimes simplify the work by first making use of one 
+of the formulas 7-10 in &#167;<A HREF="node4.html#sec:1">1.1</A>. Thus above Illustrative Example <A HREF="node58.html#ex:2-46">5.15.2</A> may be solved as follows:
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">16</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Differentiate <!-- MATH
+ $y = \log \sqrt{1 - x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img993.png"
+ ALT="$ y = \log \sqrt{1 - x^2}$"></SPAN>.
+
+<P>
+Solution. By using 10, in &#167;<A HREF="node4.html#sec:1">1.1</A>, we may write this in a form free from radicals as follows:
+<!-- MATH
+ $y 	= \frac{1}{2} \log (1 - x^2)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="123" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1001.png"
+ ALT="$ y = \frac{1}{2} \log (1 - x^2)$"></SPAN>.
+Then 
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+	\frac{dy}{dx}
+&= \frac{1}{2} \frac{\frac{d}{dx} (1 - x^2)}{1 - x^2}  \ \ {\rm by\ VIIIa}\\
+&  	= \frac{1}{2} \cdot \frac{-2}{1 - x^2} = \frac{x}{x^2 - 1}. 
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="190" HEIGHT="62" BORDER="0"
+ SRC="img1002.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx}
+&amp;= \frac{1}{2} \frac{\frac...
+...}{2} \cdot \frac{-2}{1 - x^2} = \frac{x}{x^2 - 1}.
+\end{array}\end{displaymath}">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">16</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; Differentiate <!-- MATH
+ $y = \log \sqrt{\frac{1 + x^2}{1 - x^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1003.png"
+ ALT="$ y = \log \sqrt{\frac{1 + x^2}{1 - x^2}}$"></SPAN>.
+
+<P>
+Solution. Simplifying by means of 10 and 8, in &#167;<A HREF="node4.html#sec:1">1.1</A>, 
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+  	y 	&= \frac{1}{2} [ \log (1 + x^2) - \log (1 - x^2) ]\\
+\frac{dy}{dx}
+&= \frac{1}{2} \left [ \frac{\frac{d}{dx} (1 + x^2)}{1 + x^2} 
+- \frac{\frac{d}{dx} (1 - x^2)}{1 - x^2} \right ]   \ \ {\rm by\ VIIIa,\ etc.}\\
+&  	= \frac{x}{1 + x^2} + \frac{x}{1 - x^2} = \frac{2x}{1 - x^4}. 
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="326" HEIGHT="84" BORDER="0"
+ SRC="img1004.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+y &amp;= \frac{1}{2} [ \log (1 + x^2) - \log ...
+...1 + x^2} + \frac{x}{1 - x^2} = \frac{2x}{1 - x^4}.
+\end{array}\end{displaymath}">
+</DIV><P></P></DIV><P></P>
+
+<P>
+In differentiating an exponential function, especially a variable 
+with a variable exponent, the best plan is first to take the logarithm of 
+the function and then differentiate. Thus Example <A HREF="node58.html#ex:5-46">5.15.5</A> is solved more elegantly as follows:
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">16</SPAN>.<SPAN CLASS="arabic">3</SPAN></B> &nbsp; Differentiate <!-- MATH
+ $y = x^{e^x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img999.png"
+ ALT="$ y = x^{e^x}$"></SPAN>.
+
+<P>
+Solution. Taking the logarithm of both sides, <!-- MATH
+ $\log y = e^x\log x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="108" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1005.png"
+ ALT="$ \log y = e^x\log x$"></SPAN>, by 9 in &#167;<A HREF="node4.html#sec:1">1.1</A>.
+Now differentiate both sides with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>:
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{\frac{dy}{dx}}{y}
+&	= e^x \frac{d}{dx} (\log x) + \log x \frac{d}{dx} (e^x)   \ \ {\rm by\ VIII\ and\ V}\\
+&  	= e^x \cdot \frac{1}{x} + \log x \cdot e^x,
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="337" HEIGHT="62" BORDER="0"
+ SRC="img1006.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{\frac{dy}{dx}}{y}
+&amp; = e^x \frac{d}{...
+...V}\\
+&amp; = e^x \cdot \frac{1}{x} + \log x \cdot e^x,
+\end{array}\end{displaymath}">
+</DIV><P></P>
+or, 	
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= e^x \cdot y \left ( \frac{1}{x} \log x \right )
+  	= e^x x^{e^x} \left ( \frac{1}{x} + \log x \right ).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="314" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1007.png"
+ ALT="$\displaystyle \frac{dy}{dx} = e^x \cdot y \left ( \frac{1}{x} \log x \right )
+= e^x x^{e^x} \left ( \frac{1}{x} + \log x \right ).
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">16</SPAN>.<SPAN CLASS="arabic">4</SPAN></B> &nbsp; Differentiate <!-- MATH
+ $y = (4x^2 - 7)^{2 + \sqrt{x^2 - 5}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="155" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1008.png"
+ ALT="$ y = (4x^2 - 7)^{2 + \sqrt{x^2 - 5}}$"></SPAN>.
+
+<P>
+Solution. Taking the logarithm of both sides,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\log y = (2 + \sqrt{x^2 - 5}) \log (4x^2 - 7).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="248" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1009.png"
+ ALT="$\displaystyle \log y = (2 + \sqrt{x^2 - 5}) \log (4x^2 - 7).
+$">
+</DIV><P></P>
+Differentiating both sides with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{1}{y} \frac{dy}{dx} 	= (2 + \sqrt{x^2 - 5}) \frac{8x}{4x^2 - 7} + \log(4x^2 - 7) \cdot \frac{x}{\sqrt{x^2 - 5}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="394" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1010.png"
+ ALT="$\displaystyle \frac{1}{y} \frac{dy}{dx} = (2 + \sqrt{x^2 - 5}) \frac{8x}{4x^2 - 7} + \log(4x^2 - 7) \cdot \frac{x}{\sqrt{x^2 - 5}}.
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= x(4x^2 - 7)^{2 + \sqrt{x^2 - 5}} \left [ \frac{8(2 + \sqrt{x^2 - 5})}{4x^2 - 7} + \frac{\log (4x^2 - 7)}{\sqrt{x^2 - 5}} \right ].
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="422" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1011.png"
+ ALT="$\displaystyle \frac{dy}{dx} = x(4x^2 - 7)^{2 + \sqrt{x^2 - 5}} \left [ \frac{8(...
+...\sqrt{x^2 - 5})}{4x^2 - 7} + \frac{\log (4x^2 - 7)}{\sqrt{x^2 - 5}} \right ].
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+In the case of a function consisting of a number of factors it is sometimes 
+convenient to take the logarithm before differentiating. Thus,
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">16</SPAN>.<SPAN CLASS="arabic">5</SPAN></B> &nbsp; Differentiate <!-- MATH
+ $y = \sqrt{\frac{(x - 1)(x - 2)}{(x - 3)(x - 4)}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="121" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1012.png"
+ ALT="$ y = \sqrt{\frac{(x - 1)(x - 2)}{(x - 3)(x - 4)}}$"></SPAN>.
+
+<P>
+Solution. Taking the logarithm of both sides,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\log y = \frac{1}{2} [\log (x -1) + \log (x - 2) - \log(x - 3) - \log(x - 4)].
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="418" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1013.png"
+ ALT="$\displaystyle \log y = \frac{1}{2} [\log (x -1) + \log (x - 2) - \log(x - 3) - \log(x - 4)].
+$">
+</DIV><P></P>
+Differentiating both sides with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{1}{y} \frac{dy}{dx} &= \frac{1}{2} \left [ \frac{1}{x - 1} + \frac{1}{x - 2} - \frac{1}{x - 3} - \frac{1}{x - 4} \right ]\\
+&	= -\frac{2x^2 - 10x + 11}{(x - 1)(x - 2)(x - 3)(x - 4)},
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="252" HEIGHT="69" BORDER="0"
+ SRC="img1014.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{1}{y} \frac{dy}{dx} &amp;= \frac{1}{2} \...
+...rac{2x^2 - 10x + 11}{(x - 1)(x - 2)(x - 3)(x - 4)},
+\end{array}\end{displaymath}">
+</DIV><P></P>
+or, 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= -\frac{2x^2 - 10x - 11}{(x - 1)^{\frac{1}{2}} (x - 2)^{\frac{1}{2}} ( x - 3)^{\frac{3}{2}} (x - 4)^{\frac{3}{2}}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="303" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1015.png"
+ ALT="$\displaystyle \frac{dy}{dx} = -\frac{2x^2 - 10x - 11}{(x - 1)^{\frac{1}{2}} (x - 2)^{\frac{1}{2}} ( x - 3)^{\frac{3}{2}} (x - 4)^{\frac{3}{2}}}.
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1420"
+  HREF="node60.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1414"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1408"
+  HREF="node58.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1416"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1418"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1421"
+  HREF="node60.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html1415"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1409"
+  HREF="node58.html">Differentiation of the general</A>
+ &nbsp; <B>  <A NAME="tex2html1417"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1419"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

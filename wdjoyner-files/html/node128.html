@@ -1,0 +1,398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Formulas for finding the differentials of functions</TITLE>
+<META NAME="description" CONTENT="Formulas for finding the differentials of functions">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node129.html">
+<LINK REL="previous" HREF="node127.html">
+<LINK REL="up" HREF="node121.html">
+<LINK REL="next" HREF="node129.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2425"
+  HREF="node129.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2419"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2413"
+  HREF="node127.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2421"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2423"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2426"
+  HREF="node129.html">Successive differentials</A>
+<B> Up:</B> <A NAME="tex2html2420"
+  HREF="node121.html">Differentials</A>
+<B> Previous:</B> <A NAME="tex2html2414"
+  HREF="node127.html">Exercises</A>
+ &nbsp; <B>  <A NAME="tex2html2422"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2424"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001170000000000000000">
+Formulas for finding the differentials of functions</A>
+</H1>
+
+<P>
+Since the differential of a function is its derivative multiplied 
+by the differential of the independent variable, it follows at 
+once that the formulas for finding differentials are the same 
+as those for finding derivatives given in &#167;<A HREF="node44.html#sec:33">5.1</A>, if we multiply each one by <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img606.png"
+ ALT="$ dx$"></SPAN>.
+
+<P>
+This gives us
+
+<P>
+<DL COMPACT>
+<DT>I</DT>
+<DD><!-- MATH
+ $d(c) 	= 0.$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2825.png"
+ ALT="$ d(c) = 0.$"></SPAN>
+
+<P>
+</DD>
+<DT>II</DT>
+<DD><!-- MATH
+ $d(x) 	= dx.$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2826.png"
+ ALT="$ d(x) = dx.$"></SPAN>
+</DD>
+<DT>III</DT>
+<DD><!-- MATH
+ $d(u + v - w) 	= du + dv - dw.$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="212" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2827.png"
+ ALT="$ d(u + v - w) = du + dv - dw.$"></SPAN>
+</DD>
+<DT>IV</DT>
+<DD><!-- MATH
+ $d(cv) 	= cdv.$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="89" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2828.png"
+ ALT="$ d(cv) = cdv.$"></SPAN>
+</DD>
+<DT>V</DT>
+<DD><!-- MATH
+ $d(uv) 	= udv + vdu$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="135" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2829.png"
+ ALT="$ d(uv) = udv + vdu$"></SPAN>.
+</DD>
+<DT>VI</DT>
+<DD><!-- MATH
+ $d(v^n) 	= nv^{n - 1}dv$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="123" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2830.png"
+ ALT="$ d(v^n) = nv^{n - 1}dv$"></SPAN>.
+</DD>
+<DT>VIa</DT>
+<DD><!-- MATH
+ $d(x^n) 	= nx^{n-1}dx$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="125" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2831.png"
+ ALT="$ d(x^n) = nx^{n-1}dx$"></SPAN>.
+</DD>
+<DT>VII</DT>
+<DD><!-- MATH
+ $d \left ( \frac{u}{v} \right ) 	= \frac{v du - u dv}{v^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="118" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2832.png"
+ ALT="$ d \left ( \frac{u}{v} \right ) = \frac{v du - u dv}{v^2}$"></SPAN>.
+</DD>
+<DT>VIIa</DT>
+<DD><!-- MATH
+ $d \left ( \frac{u}{c} \right ) 	= \frac{du}{c}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2833.png"
+ ALT="$ d \left ( \frac{u}{c} \right ) = \frac{du}{c}$"></SPAN>.
+</DD>
+<DT>VIII</DT>
+<DD><!-- MATH
+ $d(\log\, av) 	= \log_a e \frac{dv}{v}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="144" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2834.png"
+ ALT="$ d(\log\, av) = \log_a e \frac{dv}{v}$"></SPAN>.
+</DD>
+<DT>IX</DT>
+<DD><!-- MATH
+ $d(a^v) 	= a^v\log\, a dv$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="132" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2835.png"
+ ALT="$ d(a^v) = a^v\log\, a dv$"></SPAN>.
+</DD>
+<DT>IXa</DT>
+<DD><!-- MATH
+ $d(e^v) = 	e^vdv$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="93" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2836.png"
+ ALT="$ d(e^v) = e^vdv$"></SPAN>.
+</DD>
+<DT>X</DT>
+<DD><!-- MATH
+ $d(u^v) 	= vu^{v-1} du + \log u \cdot u^v \cdot dv$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="230" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2837.png"
+ ALT="$ d(u^v) = vu^{v-1} du + \log u \cdot u^v \cdot dv$"></SPAN>.
+</DD>
+<DT>XI</DT>
+<DD><!-- MATH
+ $d(\sin\, v) 	= \cos\, v dv$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="131" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2838.png"
+ ALT="$ d(\sin\, v) = \cos\, v dv$"></SPAN>.
+</DD>
+<DT>XII</DT>
+<DD><!-- MATH
+ $d(\cos\, v) 	= -\sin\, vdv$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="146" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2839.png"
+ ALT="$ d(\cos\, v) = -\sin\, vdv$"></SPAN>.
+</DD>
+<DT>XIII</DT>
+<DD><!-- MATH
+ $d(\tan\,v) 	= \sec^2vdv$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="138" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2840.png"
+ ALT="$ d(\tan\,v) = \sec^2vdv$"></SPAN>, etc.
+</DD>
+<DT>XVIII</DT>
+<DD><!-- MATH
+ $d(\arcsin\,v) 	= \frac{dv}{\sqrt{1 - v^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="144" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2841.png"
+ ALT="$ d(\arcsin\,v) = \frac{dv}{\sqrt{1 - v^2}}$"></SPAN>, etc.
+</DD>
+</DL>
+
+<P>
+The term ``differentiation'' also includes the operation of finding differentials.
+
+<P>
+In finding differentials the easiest way is to find the derivative 
+as usual, and then multiply the result by <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img606.png"
+ ALT="$ dx$"></SPAN>.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Find the differential of
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\ y 	= \frac{x + 3}{x^2 + 3}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="91" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2842.png"
+ ALT="$\displaystyle \ y = \frac{x + 3}{x^2 + 3}.
+$">
+</DIV><P></P>
+Solution. 
+<!-- MATH
+ $dy = d \left( \frac{x + 3}{x^2 + 3} \right)
+= \frac{(x^2 + 3)d(x + 3) - (x + 3)d(x^2 + 3)}{(x^2 + 3)^2}
+= \frac{(x^2 + 3)dx - (x + 3) 2x dx}{(x^2 + 3)^2} 	
+= \frac{(3 - 6x - x^2)dx}{(x^2 + 3)^2}.
+$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="555" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2843.png"
+ ALT="$ dy = d \left( \frac{x + 3}{x^2 + 3} \right)
+= \frac{(x^2 + 3)d(x + 3) - (x + ...
+... + 3)dx - (x + 3) 2x dx}{(x^2 + 3)^2}
+= \frac{(3 - 6x - x^2)dx}{(x^2 + 3)^2}.
+$"></SPAN></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; Find <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img605.png"
+ ALT="$ dy$"></SPAN> from <!-- MATH
+ $b^2x^2 - a^2y^2=a^2b^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="136" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2199.png"
+ ALT="$ b^2x^2 - a^2y^2 = a^2b^2$"></SPAN>.
+
+<P>
+Solution. <!-- MATH
+ $2b^2xdx - 2a^2ydy =	0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="150" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2844.png"
+ ALT="$ 2b^2xdx - 2a^2ydy = 0$"></SPAN>. Therefore, <!-- MATH
+ $dy= \frac{b^2 x}{a^2 y} dx$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2845.png"
+ ALT="$ dy= \frac{b^2 x}{a^2 y} dx$"></SPAN>. </DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">3</SPAN></B> &nbsp; Find <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img605.png"
+ ALT="$ dy$"></SPAN> from <!-- MATH
+ $\rho^2 	= a^2\cos2\theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="99" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1450.png"
+ ALT="$ \rho^2 = a^2 \cos 2\theta$"></SPAN>.
+
+<P>
+Solution. <!-- MATH
+ $2\rho d\rho
+= -a^2 \sin 2\theta \cdot 2d\theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="163" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2846.png"
+ ALT="$ 2\rho d\rho
+= -a^2 \sin 2\theta \cdot 2d\theta$"></SPAN>.
+Therefore, <!-- MATH
+ $d\rho= -\frac{a^2 \sin 2\theta}{\rho} d\theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="120" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2847.png"
+ ALT="$ d\rho= -\frac{a^2 \sin 2\theta}{\rho} d\theta$"></SPAN>.</DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">4</SPAN></B> &nbsp; Find <!-- MATH
+ $d[\arcsin(3t - 4t^3)]$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="129" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2848.png"
+ ALT="$ d[\arcsin(3t - 4t^3)]$"></SPAN>.
+
+<P>
+Solution. <!-- MATH
+ $d[ \arcsin (3t - 4t^3) ]
+= \frac{d(3t - 4t^3)}{\sqrt{1 - (3t - 4t^3)^2}} 
+= \frac{3 dt}{\sqrt{1 - t^2}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="301" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2849.png"
+ ALT="$ d[ \arcsin (3t - 4t^3) ]
+= \frac{d(3t - 4t^3)}{\sqrt{1 - (3t - 4t^3)^2}}
+= \frac{3 dt}{\sqrt{1 - t^2}}$"></SPAN>.</DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2425"
+  HREF="node129.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2419"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2413"
+  HREF="node127.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2421"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2423"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2426"
+  HREF="node129.html">Successive differentials</A>
+<B> Up:</B> <A NAME="tex2html2420"
+  HREF="node121.html">Differentials</A>
+<B> Previous:</B> <A NAME="tex2html2414"
+  HREF="node127.html">Exercises</A>
+ &nbsp; <B>  <A NAME="tex2html2422"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2424"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

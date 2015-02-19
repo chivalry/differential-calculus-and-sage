@@ -1,0 +1,689 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Direction of a curve</TITLE>
+<META NAME="description" CONTENT="Direction of a curve">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node83.html">
+<LINK REL="previous" HREF="node81.html">
+<LINK REL="up" HREF="node81.html">
+<LINK REL="next" HREF="node83.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1760"
+  HREF="node83.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1754"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1748"
+  HREF="node81.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1756"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1758"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1761"
+  HREF="node83.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html1755"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1749"
+  HREF="node81.html">Simple applications of the</A>
+ &nbsp; <B>  <A NAME="tex2html1757"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1759"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00810000000000000000"></A>
+<A NAME="sec:64"></A>
+<BR>
+Direction of a curve
+</H1>
+
+<P>
+It was shown in &#167;<A HREF="node41.html#sec:32">4.9</A>, that if
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = f(x)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img689.png"
+ ALT="$\displaystyle y = f(x)$">
+</DIV><P></P>
+is the equation of a curve (see Figure <A HREF="#fig:tangent-example">6.1</A>), 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:tangent-example"></A><A NAME="12479"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.1:</STRONG>
+The derivative = slope of line tangent to the curve.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="542" HEIGHT="271" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1526.png"
+ ALT="\includegraphics[height=6cm,width=12cm]{curve-tangent.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+then
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx}\ =\ \tan\ \tau\ =\ {\rm slope\ of\ line\
+tangent\ to\ the\ curve\ at\ any\ point\ } P.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="472" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1527.png"
+ ALT="$\displaystyle \frac{dy}{dx}\ =\ \tan\ \tau\ =\ {\rm slope\ of\ line\
+tangent\ to\ the\ curve\ at\ any\ point\ } P.
+$">
+</DIV><P></P>
+The direction of a curve at any point is defined to 
+be the same as the direction of the line tangent to the 
+curve at that point. From this it follows at once that
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx}\ =\ \tan\ \tau\ = \ {\rm slope\ of\ the\
+curve\ at\ any\ point\ } P. 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="365" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1528.png"
+ ALT="$\displaystyle \frac{dy}{dx}\ =\ \tan\ \tau\ = \ {\rm slope\ of\ the\
+curve\ at\ any\ point\ } P.
+$">
+</DIV><P></P>
+At a particular point whose coordinates are known we write
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left [ \frac{dy}{dx} \right ]_{x=x_1, y=y_1}\ =
+\ {\rm slope\ of\ the\ curve\ (or\ tangent)\ at\ point\ } (x_1,y_1).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="474" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1529.png"
+ ALT="$\displaystyle \left [ \frac{dy}{dx} \right ]_{x=x_1, y=y_1}\ =
+\ {\rm slope\ of\ the\ curve\ (or\ tangent)\ at\ point\ } (x_1,y_1).
+$">
+</DIV><P></P>
+At points such as D, F, H, where the curve (or tangent) 
+is parallel to the axis of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, <!-- MATH
+ $\tau = 0^o$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1530.png"
+ ALT="$ \tau = 0^o$"></SPAN>,
+therefore <!-- MATH
+ $\frac{dy}{dx} = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1087.png"
+ ALT="$ \frac{dy}{dx} = 0$"></SPAN>.
+
+<P>
+At points such as A, B, G, where the curve (or tangent) is 
+perpendicular to the axis of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, <!-- MATH
+ $\tau = 90^o$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1531.png"
+ ALT="$ \tau = 90^o$"></SPAN>,
+therefore <!-- MATH
+ $\frac{dy}{dx} = \infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1532.png"
+ ALT="$ \frac{dy}{dx} = \infty$"></SPAN>.
+
+<P>
+At points such as E, where the curve is rising<A NAME="tex2html65"
+  HREF="footnode.html#foot12496"><SUP><SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tau \ = \ {\rm an\ acute\ angle;\ therefore\ }
+\frac{dy}{dx}\ =\ {\rm a\ positive\ number}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="407" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1533.png"
+ ALT="$\displaystyle \tau \ = \ {\rm an\ acute\ angle;\ therefore\ }
+\frac{dy}{dx}\ =\ {\rm a\ positive\ number}.
+$">
+</DIV><P></P>
+The curve (or tangent) has a positive slope to the left of B, 
+between D and F, and to the right of G in 
+Figure <A HREF="#fig:tangent-example">6.1</A>. 
+At points such as C, where the curve is falling,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tau \ = \ {\rm an\ obtuse\ angle;\ therefore\ }
+\frac{dy}{dx}\ =\ {\rm a\ negative\ number}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="419" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1534.png"
+ ALT="$\displaystyle \tau \ = \ {\rm an\ obtuse\ angle;\ therefore\ }
+\frac{dy}{dx}\ =\ {\rm a\ negative\ number}.
+$">
+</DIV><P></P>
+The curve (or tangent) has a negative slope between B and D, 
+and between F and G.
+
+<P>
+<P>
+<DIV><A NAME="ex:64"><B>Example  <SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">1</SPAN></B></A> &nbsp; Given the curve <!-- MATH
+ $y = \frac{x^3}{3} - x^2 + 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ y = \frac {x^3}{3} - x^2 + 2$"></SPAN> (see 
+Figure <A HREF="#fig:tangent-example2">6.2</A>).
+
+<P>
+(a) Find <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1535.png"
+ ALT="$ \tau$"></SPAN> when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>.
+
+<P>
+(b) Find <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1535.png"
+ ALT="$ \tau$"></SPAN> when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img426.png"
+ ALT="$ x=3$"></SPAN>.
+
+<P>
+(c) Find the points where the curve is parallel to the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis. 
+<P>
+(d) Find the points where <!-- MATH
+ $\tau = 45^o$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1536.png"
+ ALT="$ \tau = 45^o$"></SPAN>.
+
+<P>
+(e) Find the points where the curve is parallel to the 
+line <!-- MATH
+ $2x - 3y = 6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1537.png"
+ ALT="$ 2x - 3y = 6$"></SPAN>. 
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:tangent-example2"></A><A NAME="13718"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.2:</STRONG>
+The graph of <!-- MATH
+ $y = \frac{x^3}{3} - x^2 + 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ y = \frac {x^3}{3} - x^2 + 2$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="226" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1538.png"
+ ALT="% latex2html id marker 48541
+\includegraphics[height=5cm,width=7cm]{tangent-examples2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Differentiating, <!-- MATH
+ $\frac{dy}{dx} = x^2 - 2x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="96" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1539.png"
+ ALT="$ \frac{dy}{dx} = x^2 - 2x$"></SPAN> = slope at any point.
+
+<P>
+(a) <!-- MATH
+ $\tan \tau = \left [ \frac{dy}{dx} \right ]_{x=1} = 1 - 2 = -1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="215" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1540.png"
+ ALT="$ \tan \tau = \left [ \frac{dy}{dx} \right ]_{x=1} = 1 - 2 = -1$"></SPAN>; 
+therefore <!-- MATH
+ $\tau = 135^o
+=3\pi/4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="120" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1541.png"
+ ALT="$ \tau = 135^o
+=3\pi/4$"></SPAN>. 
+<P>
+(b) <!-- MATH
+ $\tan \tau = \left [ \frac{dy}{dx} \right ]_{x=3} = 9 - 6 = 3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="203" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1542.png"
+ ALT="$ \tan \tau = \left [ \frac{dy}{dx} \right ]_{x=3} = 9 - 6 = 3$"></SPAN>; 
+therefore <!-- MATH
+ $\tau = \arctan\, 3 = 1.249...$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="163" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1543.png"
+ ALT="$ \tau = \arctan\, 3 = 1.249...$"></SPAN>. 
+
+<P>
+(c) <!-- MATH
+ $\tau = 0^o$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1530.png"
+ ALT="$ \tau = 0^o$"></SPAN>, <!-- MATH
+ $\tan \tau = \frac{dy}{dx} = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1544.png"
+ ALT="$ \tan \tau = \frac{dy}{dx} = 0$"></SPAN>; 
+therefore <!-- MATH
+ $x^2 - 2x = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1545.png"
+ ALT="$ x^2 - 2x = 0$"></SPAN>. Solving this equation, 
+we find that <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img386.png"
+ ALT="$ x = 0$"></SPAN> or <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN>, giving points C and D where the 
+curve (or tangent) is parallel to the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>-axis.
+
+<P>
+(d) <!-- MATH
+ $\tau = 45^o$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1536.png"
+ ALT="$ \tau = 45^o$"></SPAN>, <!-- MATH
+ $\tan \tau = \frac{dy}{dx} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1546.png"
+ ALT="$ \tan \tau = \frac{dy}{dx} = 1$"></SPAN>; 
+therefore <!-- MATH
+ $x^2 - 2x = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1547.png"
+ ALT="$ x^2 - 2x = 1$"></SPAN>. Solving, we get 
+<!-- MATH
+ $x = 1 \pm \sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1548.png"
+ ALT="$ x = 1 \pm \sqrt{2}$"></SPAN>, giving two points where the slope of 
+the curve (or tangent) is unity.
+
+<P>
+(e) Slope of line = <!-- MATH
+ $\frac{2}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img334.png"
+ ALT="$ \frac{2}{3}$"></SPAN>; therefore <!-- MATH
+ $x^2 - 2x = \frac{2}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="89" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1549.png"
+ ALT="$ x^2 - 2x = \frac{2}{3}$"></SPAN>. 
+Solving, we get <!-- MATH
+ $x = 1 \pm \sqrt{\frac{5}{3}}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="88" HEIGHT="49" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1550.png"
+ ALT="$ x = 1 \pm \sqrt{\frac{5}{3}}$"></SPAN>, giving points E 
+and F where curve (or tangent) is parallel to <!-- MATH
+ $2x - 3y = 6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1537.png"
+ ALT="$ 2x - 3y = 6$"></SPAN>.</DIV><P></P>
+
+<P>
+Since a curve at any point has the same direction as 
+its tangent at that point, the angle between two curves 
+at a common point will be the angle between their tangents at 
+that point.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">1</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; Find the angle of intersection of the circles
+
+<P>
+(A) <!-- MATH
+ $x^2 + y^2 - 4x = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="121" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ x^2 + y^2 - 4x = 1$"></SPAN>,
+
+<P>
+(B) <!-- MATH
+ $x^2 + y^2 - 2y = 9$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="121" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$ x^2 + y^2 - 2y = 9$"></SPAN>.
+
+<P>
+Solution. Solving simultaneously, we find the 
+points of intersection to be <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1551.png"
+ ALT="$ (3, 2)$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1552.png"
+ ALT="$ (1, -2)$"></SPAN>.
+This can be verified ``by hand'' or using the <I CLASS="sans">SAGE</I> <TT>solve</TT>
+command:
+
+<P>
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: x = var("x")
+sage: y = var("y")
+sage: F = x^2 + y^2 - 4*x - 1
+sage: G = x^2 + y^2 - 2*y - 9
+sage: solve([F == 0,G == 0],x,y)
+[[x == 1, y == -2], [x == 3, y == 2]]
+</PRE>
+<P>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:circles"></A><A NAME="12553"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.3:</STRONG>
+The graphs of <!-- MATH
+ $x^2 + y^2 - 4x = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="121" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$ x^2 + y^2 - 4x = 1$"></SPAN>, <!-- MATH
+ $x^2 + y^2 - 2y = 9$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="121" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$ x^2 + y^2 - 2y = 9$"></SPAN>.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="271" HEIGHT="226" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1553.png"
+ ALT="\includegraphics[height=5cm,width=6cm]{circles.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Using (A), formulas in &#167;<A HREF="node78.html#sec:63">5.35</A> give
+<!-- MATH
+ $\frac{dy}{dx} 	= \frac{2 - x}{y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1554.png"
+ ALT="$ \frac{dy}{dx} = \frac{2 - x}{y}$"></SPAN>. Using (B), formulas in 
+&#167;<A HREF="node78.html#sec:63">5.35</A> give <!-- MATH
+ $\frac{dy}{dx} 	= \frac{x}{1 - y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1555.png"
+ ALT="$ \frac{dy}{dx} = \frac{x}{1 - y}$"></SPAN>.
+Therefore,
+<P><!-- MATH
+ \begin{displaymath}
+\left [ \frac{2 - x}{y} \right ]_{x = 3, y = 2}
+= -\frac{1}{2} =\ {\rm slope\ of\ tangent\ to\ (A)\ at\ } (3, 2).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="410" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1556.png"
+ ALT="$\displaystyle \left [ \frac{2 - x}{y} \right ]_{x = 3, y = 2}
+= -\frac{1}{2} =\ {\rm slope\ of\ tangent\ to\ (A)\ at\ } (3, 2).
+$">
+</DIV><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+\left [ \frac{x}{1 - y} \right ]_{x = 3, y = 2} 	= - 3
+=\ {\rm slope\ of\ tangent\ to\ (B)\ at\ }(3, 2).
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="405" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1557.png"
+ ALT="$\displaystyle \left [ \frac{x}{1 - y} \right ]_{x = 3, y = 2} = - 3
+=\ {\rm slope\ of\ tangent\ to\ (B)\ at\ }(3, 2).
+$">
+</DIV><P></P>
+We can check this using the commands
+
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: x = var("x")
+sage: y = function("y",x)
+sage: F = x^2 + y^2 - 4*x - 1
+sage: F.diff(x)
+2*y(x)*diff(y(x), x, 1) + 2*x - 4
+sage: solve(F.diff(x) == 0, diff(y(x), x, 1))
+[diff(y(x), x, 1) == (2 - x)/y(x)]
+sage: G = x^2 + y^2 - 2*y - 9
+sage: G.diff(x)
+2*y(x)*diff(y(x), x, 1) - 2*diff(y(x), x, 1) + 2*x
+sage: solve(G.diff(x) == 0, diff(y(x), x, 1))
+[diff(y(x), x, 1) == -x/(y(x) - 1)]
+</PRE>
+<P>
+
+<P>
+The formula for finding the angle between two lines whose 
+slopes are <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img188.png"
+ ALT="$ m_1$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img189.png"
+ ALT="$ m_2$"></SPAN> is
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan\theta = \frac{m_1 - m_2}{1 + m_1 m_2},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="137" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1558.png"
+ ALT="$\displaystyle \tan\theta = \frac{m_1 - m_2}{1 + m_1 m_2},
+$">
+</DIV><P></P>
+by item 55, &#167;<A HREF="node4.html#sec:1">1.1</A>.
+Substituting, 
+<!-- MATH
+ $\tan \theta = \frac{-\frac{1}{2} + 3}{1 + \frac{3}{2}} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="127" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1559.png"
+ ALT="$ \tan \theta = \frac{-\frac{1}{2} + 3}{1 + \frac{3}{2}} = 1$"></SPAN>; 
+therefore <!-- MATH
+ $\theta = \pi/4= 45^o$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="103" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1560.png"
+ ALT="$ \theta = \pi/4= 45^o$"></SPAN>. 
+This is also the angle of intersection at the point <SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1552.png"
+ ALT="$ (1, -2)$"></SPAN>.
+
+<P></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1760"
+  HREF="node83.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1754"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1748"
+  HREF="node81.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1756"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1758"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1761"
+  HREF="node83.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html1755"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1749"
+  HREF="node81.html">Simple applications of the</A>
+ &nbsp; <B>  <A NAME="tex2html1757"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1759"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

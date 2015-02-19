@@ -1,0 +1,622 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differential Calculus and SAGE (revised edition)</TITLE>
+<META NAME="description" CONTENT="Differential Calculus and SAGE (revised edition)">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html178"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev_g.png"> 
+<A NAME="tex2html174"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html176"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html179"
+  HREF="node1.html">Contents</A>
+ &nbsp; <B>  <A NAME="tex2html175"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html177"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<P>
+
+[]
+[]
+
+<P>
+
+<P>
+
+<P>
+<H1 ALIGN=CENTER>Differential Calculus and <I CLASS="sans">SAGE</I> 
+<BR><SMALL CLASS="FOOTNOTESIZE">(revised edition)</SMALL></H1>
+<P ALIGN=CENTER><STRONG>William Anthony Granville,</STRONG>
+<BR><I>with extra material added by David Joyner</I>
+</P>
+<BR><P ALIGN=CENTER><B>Date:</B> 8-10-2008</P>
+
+<HR>
+
+<P>
+<P>
+
+<P>
+
+<DIV ALIGN="CENTER">
+<BIG CLASS="LARGE">
+<B>Contents</B>
+
+
+</BIG></DIV>
+<P>
+
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html180"
+  HREF="node1.html">Contents</A>
+<LI><A NAME="tex2html181"
+  HREF="node2.html">Preface</A>
+<LI><A NAME="tex2html182"
+  HREF="node3.html">Collection of formulas</A>
+<UL>
+<LI><A NAME="tex2html183"
+  HREF="node4.html">Formulas for reference</A>
+<LI><A NAME="tex2html184"
+  HREF="node5.html">Greek alphabet</A>
+<LI><A NAME="tex2html185"
+  HREF="node6.html">Rules for signs of the trigonometric functions</A>
+<LI><A NAME="tex2html186"
+  HREF="node7.html">Natural values of the trigonometric functions</A>
+<LI><A NAME="tex2html187"
+  HREF="node8.html">Logarithms of numbers and trigonometric functions</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html188"
+  HREF="node9.html">Variables and functions</A>
+<UL>
+<LI><A NAME="tex2html189"
+  HREF="node10.html">Variables and constants</A>
+<LI><A NAME="tex2html190"
+  HREF="node11.html">Interval of a variable.</A>
+<LI><A NAME="tex2html191"
+  HREF="node12.html">Continuous variation.</A>
+<LI><A NAME="tex2html192"
+  HREF="node13.html">Functions.</A>
+<LI><A NAME="tex2html193"
+  HREF="node14.html">Independent and dependent variables.</A>
+<LI><A NAME="tex2html194"
+  HREF="node15.html">Notation of functions</A>
+<LI><A NAME="tex2html195"
+  HREF="node16.html">Values of the independent variable for which a function is defined</A>
+<LI><A NAME="tex2html196"
+  HREF="node17.html">Exercises</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html197"
+  HREF="node18.html">Theory of limits</A>
+<UL>
+<LI><A NAME="tex2html198"
+  HREF="node19.html">Limit of a variable</A>
+<LI><A NAME="tex2html199"
+  HREF="node20.html">Division by zero excluded</A>
+<LI><A NAME="tex2html200"
+  HREF="node21.html">Infinitesimals</A>
+<LI><A NAME="tex2html201"
+  HREF="node22.html">The concept of infinity (<SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ \infty $"></SPAN>)</A>
+<LI><A NAME="tex2html202"
+  HREF="node23.html">Limiting value of a function</A>
+<LI><A NAME="tex2html203"
+  HREF="node24.html">Continuous and discontinuous functions</A>
+<LI><A NAME="tex2html204"
+  HREF="node25.html">Continuity and discontinuity of functions illustrated by their graphs</A>
+<LI><A NAME="tex2html205"
+  HREF="node26.html">Fundamental theorems on limits</A>
+<LI><A NAME="tex2html206"
+  HREF="node27.html">Special limiting values</A>
+<LI><A NAME="tex2html207"
+  HREF="node28.html">Show that <!-- MATH
+ $\lim_{x \to 0} \frac{\sin\, x}{x} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="116" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img493.png"
+ ALT="$ \lim_{x \to 0} \frac{\sin\, x}{x} = 1$"></SPAN></A>
+<LI><A NAME="tex2html208"
+  HREF="node29.html">The number <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$ e$"></SPAN></A>
+<LI><A NAME="tex2html209"
+  HREF="node30.html">Expressions assuming the form <!-- MATH
+ $\frac{\infty}{\infty}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$ \frac {\infty }{\infty }$"></SPAN></A>
+<LI><A NAME="tex2html210"
+  HREF="node31.html">Exercises</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html211"
+  HREF="node32.html">Differentiation</A>
+<UL>
+<LI><A NAME="tex2html212"
+  HREF="node33.html">Introduction</A>
+<LI><A NAME="tex2html213"
+  HREF="node34.html">Increments</A>
+<LI><A NAME="tex2html214"
+  HREF="node35.html">Comparison of increments</A>
+<LI><A NAME="tex2html215"
+  HREF="node36.html">Derivative of a function of one variable</A>
+<LI><A NAME="tex2html216"
+  HREF="node37.html">Symbols for derivatives</A>
+<LI><A NAME="tex2html217"
+  HREF="node38.html">Differentiable functions</A>
+<LI><A NAME="tex2html218"
+  HREF="node39.html">General rule for differentiation</A>
+<LI><A NAME="tex2html219"
+  HREF="node40.html">Exercises</A>
+<LI><A NAME="tex2html220"
+  HREF="node41.html">Applications of the derivative to Geometry</A>
+<LI><A NAME="tex2html221"
+  HREF="node42.html">Exercises</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html222"
+  HREF="node43.html">Rules for differentiating standard elementary forms</A>
+<UL>
+<LI><A NAME="tex2html223"
+  HREF="node44.html">Importance of General Rule</A>
+<LI><A NAME="tex2html224"
+  HREF="node45.html">Differentiation of a constant</A>
+<LI><A NAME="tex2html225"
+  HREF="node46.html">Differentiation of a variable with respect to itself</A>
+<LI><A NAME="tex2html226"
+  HREF="node47.html">Differentiation of a sum</A>
+<LI><A NAME="tex2html227"
+  HREF="node48.html">Differentiation of the product of a constant and a function</A>
+<LI><A NAME="tex2html228"
+  HREF="node49.html">Differentiation of the product of two functions</A>
+<LI><A NAME="tex2html229"
+  HREF="node50.html">Differentiation of the product of any finite number of functions</A>
+<LI><A NAME="tex2html230"
+  HREF="node51.html">Differentiation of a function with a constant exponent</A>
+<LI><A NAME="tex2html231"
+  HREF="node52.html">Differentiation of a quotient</A>
+<LI><A NAME="tex2html232"
+  HREF="node53.html">Examples</A>
+<LI><A NAME="tex2html233"
+  HREF="node54.html">Differentiation of a function of a function</A>
+<LI><A NAME="tex2html234"
+  HREF="node55.html">Differentiation of inverse functions</A>
+<LI><A NAME="tex2html235"
+  HREF="node56.html">Differentiation of a logarithm</A>
+<LI><A NAME="tex2html236"
+  HREF="node57.html">Differentiation of the simple exponential function</A>
+<LI><A NAME="tex2html237"
+  HREF="node58.html">Differentiation of the general exponential function</A>
+<LI><A NAME="tex2html238"
+  HREF="node59.html">Logarithmic differentiation</A>
+<LI><A NAME="tex2html239"
+  HREF="node60.html">Examples</A>
+<LI><A NAME="tex2html240"
+  HREF="node61.html">Differentiation of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1115.png"
+ ALT="$ \sin v$"></SPAN></A>
+<LI><A NAME="tex2html241"
+  HREF="node62.html">Differentiation of <SPAN CLASS="MATH"><IMG
+ WIDTH="37" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1137.png"
+ ALT="$ \cos v$"></SPAN></A>
+<LI><A NAME="tex2html242"
+  HREF="node63.html">Differentiation of <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1143.png"
+ ALT="$ \tan v$"></SPAN></A>
+<LI><A NAME="tex2html243"
+  HREF="node64.html">Differentiation of <SPAN CLASS="MATH"><IMG
+ WIDTH="37" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1147.png"
+ ALT="$ \cot v$"></SPAN></A>
+<LI><A NAME="tex2html244"
+  HREF="node65.html">Differentiation of <SPAN CLASS="MATH"><IMG
+ WIDTH="36" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1152.png"
+ ALT="$ \sec v$"></SPAN></A>
+<LI><A NAME="tex2html245"
+  HREF="node66.html">Differentiation of <SPAN CLASS="MATH"><IMG
+ WIDTH="38" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1157.png"
+ ALT="$ \csc\, v$"></SPAN></A>
+<LI><A NAME="tex2html246"
+  HREF="node67.html">Differentiation of <!-- MATH
+ ${\rm vers}\, v$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1162.png"
+ ALT="$ {\rm vers}\, v$"></SPAN></A>
+<LI><A NAME="tex2html247"
+  HREF="node68.html">Exercises</A>
+<LI><A NAME="tex2html248"
+  HREF="node69.html">Differentiation of <SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1250.png"
+ ALT="$ \arcsin v$"></SPAN></A>
+<LI><A NAME="tex2html249"
+  HREF="node70.html">Differentiation of <SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1263.png"
+ ALT="$ \arccos v$"></SPAN></A>
+<LI><A NAME="tex2html250"
+  HREF="node71.html">Differentiation of <!-- MATH
+ $\arctan\, v$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1276.png"
+ ALT="$ \arctan\, v$"></SPAN></A>
+<LI><A NAME="tex2html251"
+  HREF="node72.html">Differentiation of <!-- MATH
+ ${\rm arccot}u$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="$ {\rm arccot}u$"></SPAN></A>
+<LI><A NAME="tex2html252"
+  HREF="node73.html">Differentiation of <!-- MATH
+ ${\rm arcsec}u$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$ {\rm arcsec}u$"></SPAN></A>
+<LI><A NAME="tex2html253"
+  HREF="node74.html">Differentiation of <!-- MATH
+ ${\rm arccsc}\, v$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1304.png"
+ ALT="$ {\rm arccsc}\, v$"></SPAN></A>
+<LI><A NAME="tex2html254"
+  HREF="node75.html">Differentiation of <!-- MATH
+ ${\rm arcvers}\, v$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1311.png"
+ ALT="$ {\rm arcvers}\, v$"></SPAN></A>
+<LI><A NAME="tex2html255"
+  HREF="node76.html">Example</A>
+<LI><A NAME="tex2html256"
+  HREF="node77.html">Implicit functions</A>
+<LI><A NAME="tex2html257"
+  HREF="node78.html">Differentiation of implicit functions</A>
+<LI><A NAME="tex2html258"
+  HREF="node79.html">Exercises</A>
+<LI><A NAME="tex2html259"
+  HREF="node80.html">Miscellaneous Exercises</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html260"
+  HREF="node81.html">Simple applications of the derivative</A>
+<UL>
+<LI><A NAME="tex2html261"
+  HREF="node82.html">Direction of a curve</A>
+<LI><A NAME="tex2html262"
+  HREF="node83.html">Exercises</A>
+<LI><A NAME="tex2html263"
+  HREF="node84.html">Equations of tangent and normal lines</A>
+<LI><A NAME="tex2html264"
+  HREF="node85.html">Exercises</A>
+<LI><A NAME="tex2html265"
+  HREF="node86.html">Parametric equations of a curve</A>
+<LI><A NAME="tex2html266"
+  HREF="node87.html">Exercises</A>
+<LI><A NAME="tex2html267"
+  HREF="node88.html">Angle between the radius vector and tangent</A>
+<LI><A NAME="tex2html268"
+  HREF="node89.html">Lengths of polar subtangent and polar subnormal</A>
+<LI><A NAME="tex2html269"
+  HREF="node90.html">Examples</A>
+<LI><A NAME="tex2html270"
+  HREF="node91.html">Solution of equations having multiple roots</A>
+<LI><A NAME="tex2html271"
+  HREF="node92.html">Examples</A>
+<LI><A NAME="tex2html272"
+  HREF="node93.html">Applications of the derivative in mechanics</A>
+<LI><A NAME="tex2html273"
+  HREF="node94.html">Component velocities. Curvilinear motion.</A>
+<LI><A NAME="tex2html274"
+  HREF="node95.html">Acceleration. Rectilinear motion.</A>
+<LI><A NAME="tex2html275"
+  HREF="node96.html">Component accelerations. Curvilinear motion.</A>
+<LI><A NAME="tex2html276"
+  HREF="node97.html">Examples</A>
+<LI><A NAME="tex2html277"
+  HREF="node98.html">Application: Newton's method</A>
+<UL>
+<LI><A NAME="tex2html278"
+  HREF="node99.html">Description of the method</A>
+<LI><A NAME="tex2html279"
+  HREF="node100.html">Analysis</A>
+<LI><A NAME="tex2html280"
+  HREF="node101.html">Fractals</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html281"
+  HREF="node102.html">Successive differentiation</A>
+<UL>
+<LI><A NAME="tex2html282"
+  HREF="node103.html">Definition of successive derivatives</A>
+<LI><A NAME="tex2html283"
+  HREF="node104.html">Notation</A>
+<LI><A NAME="tex2html284"
+  HREF="node105.html">The <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN>-th derivative</A>
+<LI><A NAME="tex2html285"
+  HREF="node106.html">Leibnitz's Formula for the <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$ n$"></SPAN>-th derivative of a product</A>
+<LI><A NAME="tex2html286"
+  HREF="node107.html">Successive differentiation of implicit functions</A>
+<LI><A NAME="tex2html287"
+  HREF="node108.html">Exercises</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html288"
+  HREF="node109.html">Maxima, minima and inflection points.</A>
+<UL>
+<LI><A NAME="tex2html289"
+  HREF="node110.html">Introduction</A>
+<LI><A NAME="tex2html290"
+  HREF="node111.html">Increasing and decreasing functions</A>
+<LI><A NAME="tex2html291"
+  HREF="node112.html">Tests for determining when a function is increasing or decreasing</A>
+<LI><A NAME="tex2html292"
+  HREF="node113.html">Maximum and minimum values of a function</A>
+<LI><A NAME="tex2html293"
+  HREF="node114.html">Examining a function for extremal values: first method</A>
+<LI><A NAME="tex2html294"
+  HREF="node115.html">Examining a function for extremal values: second method</A>
+<LI><A NAME="tex2html295"
+  HREF="node116.html">Problems</A>
+<LI><A NAME="tex2html296"
+  HREF="node117.html">Points of inflection</A>
+<LI><A NAME="tex2html297"
+  HREF="node118.html">Examples</A>
+<LI><A NAME="tex2html298"
+  HREF="node119.html">Curve tracing</A>
+<LI><A NAME="tex2html299"
+  HREF="node120.html">Exercises</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html300"
+  HREF="node121.html">Differentials</A>
+<UL>
+<LI><A NAME="tex2html301"
+  HREF="node122.html">Introduction</A>
+<LI><A NAME="tex2html302"
+  HREF="node123.html">Definitions</A>
+<LI><A NAME="tex2html303"
+  HREF="node124.html">Infinitesimals</A>
+<LI><A NAME="tex2html304"
+  HREF="node125.html">Derivative of the arc in rectangular coordinates</A>
+<LI><A NAME="tex2html305"
+  HREF="node126.html">Derivative of the arc in polar coordinates</A>
+<LI><A NAME="tex2html306"
+  HREF="node127.html">Exercises</A>
+<LI><A NAME="tex2html307"
+  HREF="node128.html">Formulas for finding the differentials of functions</A>
+<LI><A NAME="tex2html308"
+  HREF="node129.html">Successive differentials</A>
+<LI><A NAME="tex2html309"
+  HREF="node130.html">Examples</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html310"
+  HREF="node131.html">Rates</A>
+<UL>
+<LI><A NAME="tex2html311"
+  HREF="node132.html">The derivative considered as the ratio of two rates</A>
+<LI><A NAME="tex2html312"
+  HREF="node133.html">Exercises</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html313"
+  HREF="node134.html">Change of variable</A>
+<UL>
+<LI><A NAME="tex2html314"
+  HREF="node135.html">Interchange of dependent and independent variables</A>
+<LI><A NAME="tex2html315"
+  HREF="node136.html">Change of the dependent variable</A>
+<LI><A NAME="tex2html316"
+  HREF="node137.html">Change of the independent variable</A>
+<LI><A NAME="tex2html317"
+  HREF="node138.html">Simultaneous change of both independent and dependent variables</A>
+<LI><A NAME="tex2html318"
+  HREF="node139.html">Exercises</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html319"
+  HREF="node140.html">Curvature; radius of curvature</A>
+<UL>
+<LI><A NAME="tex2html320"
+  HREF="node141.html">Curvature</A>
+<LI><A NAME="tex2html321"
+  HREF="node142.html">Curvature of a circle</A>
+<LI><A NAME="tex2html322"
+  HREF="node143.html">Curvature at a point</A>
+<LI><A NAME="tex2html323"
+  HREF="node144.html">Formulas for curvature</A>
+<LI><A NAME="tex2html324"
+  HREF="node145.html">Radius of curvature</A>
+<LI><A NAME="tex2html325"
+  HREF="node146.html">Circle of curvature</A>
+<LI><A NAME="tex2html326"
+  HREF="node147.html">Exercises</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html327"
+  HREF="node148.html">Theorem of mean value; indeterminant forms</A>
+<UL>
+<LI><A NAME="tex2html328"
+  HREF="node149.html">Rolle's Theorem</A>
+<LI><A NAME="tex2html329"
+  HREF="node150.html">The Mean-value Theorem</A>
+<LI><A NAME="tex2html330"
+  HREF="node151.html">The Extended Mean Value Theorem</A>
+<LI><A NAME="tex2html331"
+  HREF="node152.html">Exercises</A>
+<LI><A NAME="tex2html332"
+  HREF="node153.html">Maxima and minima treated analytically</A>
+<LI><A NAME="tex2html333"
+  HREF="node154.html">Exercises</A>
+<LI><A NAME="tex2html334"
+  HREF="node155.html">Indeterminate forms</A>
+<LI><A NAME="tex2html335"
+  HREF="node157.html">Evaluation of a function taking on an indeterminate form</A>
+<LI><A NAME="tex2html336"
+  HREF="node158.html">Evaluation of the indeterminate form <!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN></A>
+<UL>
+<LI><A NAME="tex2html337"
+  HREF="node159.html">Rule for evaluating the indeterminate form <!-- MATH
+ $\frac{0}{0}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$ \frac {0}{0}$"></SPAN></A>
+<LI><A NAME="tex2html338"
+  HREF="node160.html">Exercises</A>
+</UL>
+<LI><A NAME="tex2html339"
+  HREF="node161.html">Evaluation of the indeterminate form <!-- MATH
+ $\frac{\infty}{\infty}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$ \frac {\infty }{\infty }$"></SPAN></A>
+<LI><A NAME="tex2html340"
+  HREF="node162.html">Evaluation of the indeterminate form <!-- MATH
+ $0 \cdot \infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img73.png"
+ ALT="$ 0 \cdot \infty $"></SPAN></A>
+<LI><A NAME="tex2html341"
+  HREF="node163.html">Evaluation of the indeterminate form <!-- MATH
+ $\infty-\infty$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$ \infty -\infty $"></SPAN></A>
+<UL>
+<LI><A NAME="tex2html342"
+  HREF="node164.html">Exercises</A>
+</UL>
+<LI><A NAME="tex2html343"
+  HREF="node165.html">Evaluation of the indeterminate forms <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img75.png"
+ ALT="$ 0^0$"></SPAN>, <!-- MATH
+ $1^{\infty}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$ 1^{\infty }$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$ \infty ^0$"></SPAN></A>
+<LI><A NAME="tex2html344"
+  HREF="node166.html">Exercises</A>
+<LI><A NAME="tex2html345"
+  HREF="node167.html">Application: Using Taylor's Theorem to Approximate Functions.</A>
+<LI><A NAME="tex2html346"
+  HREF="node168.html">Example/Application: Finite Difference Schemes</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html347"
+  HREF="node169.html">Circle of curvature. Center of Curvature.</A>
+<UL>
+<LI><A NAME="tex2html348"
+  HREF="node170.html">Circle of curvature</A>
+<LI><A NAME="tex2html349"
+  HREF="node171.html">Second method for finding center of curvature</A>
+<LI><A NAME="tex2html350"
+  HREF="node172.html">Center of curvature</A>
+<LI><A NAME="tex2html351"
+  HREF="node173.html">Evolutes</A>
+<LI><A NAME="tex2html352"
+  HREF="node174.html">Properties of the evolute</A>
+<LI><A NAME="tex2html353"
+  HREF="node175.html">Exercises</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html354"
+  HREF="node176.html">References</A>
+<LI><A NAME="tex2html355"
+  HREF="node177.html">Bibliography</A>
+<LI><A NAME="tex2html356"
+  HREF="node178.html">Index</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

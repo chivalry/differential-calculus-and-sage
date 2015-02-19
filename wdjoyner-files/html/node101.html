@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Fractals</TITLE>
+<META NAME="description" CONTENT="Fractals">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="previous" HREF="node100.html">
+<LINK REL="up" HREF="node98.html">
+<LINK REL="next" HREF="node102.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2025"
+  HREF="node102.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2019"
+  HREF="node98.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2015"
+  HREF="node100.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2021"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2023"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2026"
+  HREF="node102.html">Successive differentiation</A>
+<B> Up:</B> <A NAME="tex2html2020"
+  HREF="node98.html">Application: Newton's method</A>
+<B> Previous:</B> <A NAME="tex2html2016"
+  HREF="node100.html">Analysis</A>
+ &nbsp; <B>  <A NAME="tex2html2022"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2024"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION008173000000000000000">
+Fractals</A>
+</H2>
+
+<P>
+For complex functions <!-- MATH
+ $f:\mathbb{C}\to\mathbb{C}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2138.png"
+ ALT="$ f:\mathbb{C}\to\mathbb{C}$"></SPAN>, however, Newton's method can be directly applied 
+to find their zeros. For many complex functions, the boundary of the 
+set (also known as the basin of attraction) of all starting values
+that cause the method to converge to a particular zero is a 
+fractal<A NAME="tex2html91"
+  HREF="footnode.html#foot17112"><SUP><SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">13</SPAN></SUP></A>
+<P>
+For example, the function <!-- MATH
+ $f(x)=x^5-1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="100" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2139.png"
+ ALT="$ f(x)=x^5-1$"></SPAN>, <!-- MATH
+ $x\in \mathbb{C}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2140.png"
+ ALT="$ x\in \mathbb{C}$"></SPAN>, has five roots,
+equally spaced around the unit circle in the complex plane.
+If <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2120.png"
+ ALT="$ x_0$"></SPAN> is a starting point which converges to the root at <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img86.png"
+ ALT="$ x=1$"></SPAN>, color <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2120.png"
+ ALT="$ x_0$"></SPAN> yellow.
+Repeat this using four other colors (blue, red, green, purple)
+for the other four roots of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img253.png"
+ ALT="$ f$"></SPAN>. 
+The resulting image is in Figure <A HREF="#fig:newtons-fractal">6.14</A>.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:newtons-fractal"></A><A NAME="17099"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.14:</STRONG>
+Basins of attraction for <!-- MATH
+ $x^5 - 1 = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$ x^5 - 1 = 0$"></SPAN>; darker means more iterations to converge.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="406" HEIGHT="406" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2141.png"
+ ALT="\includegraphics[height=9cm,width=9cm]{newtons-fractal.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+
+<P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

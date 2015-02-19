@@ -1,0 +1,899 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Parametric equations of a curve</TITLE>
+<META NAME="description" CONTENT="Parametric equations of a curve">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node87.html">
+<LINK REL="previous" HREF="node85.html">
+<LINK REL="up" HREF="node81.html">
+<LINK REL="next" HREF="node87.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1816"
+  HREF="node87.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1810"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1804"
+  HREF="node85.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1812"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1814"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1817"
+  HREF="node87.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html1811"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1805"
+  HREF="node85.html">Exercises</A>
+ &nbsp; <B>  <A NAME="tex2html1813"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1815"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00850000000000000000"></A>
+<A NAME="sec:66"></A>
+<BR>
+Parametric equations of a curve
+</H1>
+
+<P>
+Let the equation of a curve be
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A-66"></A><!-- MATH
+ \begin{equation}
+F(x,y) = 0.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1687.png"
+ ALT="$\displaystyle F(x,y) = 0.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">7</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+If <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> is given as a function of a third variable, <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> say, 
+called a <I>parameter</I>, then by virtue of (<A HREF="#eqn:A-66">6.7</A>) 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> is also a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN>, and the same functional 
+relation (<A HREF="#eqn:A-66">6.7</A>) between <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> may generally 
+be expressed by means of equations in the form
+<A NAME="12891"></A>
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:B-66"></A><!-- MATH
+ \begin{equation}
+\begin{cases}
+x = f(t), \\
+y = g(t) 
+\end{cases}
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="64" BORDER="0"
+ SRC="img1689.png"
+ ALT="\begin{displaymath}\begin{cases}x = f(t), \\ y = g(t) \end{cases}\end{displaymath}"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">8</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+each value of <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> giving a value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and a value of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>. 
+Equations (<A HREF="#eqn:B-66">6.8</A>) are called 
+<I>parametric equations of the curve</I>. 
+<A NAME="12899"></A>
+If we eliminate <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> between equations (<A HREF="#eqn:B-66">6.8</A>), 
+it is evident that the relation (<A HREF="#eqn:A-66">6.7</A>) must result. 
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; For example, take equation of circle
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x^2 + y^2= r^2\ {\rm or}\  y = \sqrt{r^2 - x^2}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="217" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1690.png"
+ ALT="$\displaystyle x^2 + y^2= r^2\ {\rm or}\ y = \sqrt{r^2 - x^2}.
+$">
+</DIV><P></P>
+We have
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:C-66"></A><!-- MATH
+ \begin{equation}
+\begin{cases}
+x= r\cos\, t \\
+y  = r\sin\, t
+\end{cases} 
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="84" HEIGHT="64" BORDER="0"
+ SRC="img1691.png"
+ ALT="\begin{displaymath}\begin{cases}x= r\cos\, t \\ y = r\sin\, t \end{cases}\end{displaymath}"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">9</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+as parametric equations of the circle, <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> being the parameter<A NAME="tex2html76"
+  HREF="footnode.html#foot13794"><SUP><SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">6</SPAN></SUP></A>.
+
+<P>
+If we eliminate <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> between equations (<A HREF="#eqn:C-66">6.9</A>) 
+by squaring and adding the results, we have
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x^2 + y^2 = r^2(\cos^2t + \sin^2t) = r^2,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="236" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1694.png"
+ ALT="$\displaystyle x^2 + y^2 = r^2(\cos^2t + \sin^2t) = r^2,
+$">
+</DIV><P></P>
+the rectangular equation of the circle. 
+It is evident that if <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> varies from <SPAN CLASS="MATH">0</SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img233.png"
+ ALT="$ 2\pi$"></SPAN>, 
+the point <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1695.png"
+ ALT="$ P(x,y)$"></SPAN> will describe a complete circumference.</DIV><P></P>
+
+<P>
+In &#167;<A HREF="node94.html#sec:71">6.13</A> we shall discuss the motion of a point <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img251.png"
+ ALT="$ P$"></SPAN>, which motion is 
+defined by equations such as
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{cases}
+x = f(t), \\
+y=g(t)
+\end{cases}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="73" HEIGHT="64" BORDER="0"
+ SRC="img1689.png"
+ ALT="\begin{displaymath}\begin{cases}x = f(t), \\ y = g(t) \end{cases}\end{displaymath}">
+</DIV><P></P>
+We call these the <I>parametric equations of the path</I>, 
+the time <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> being the parameter. 
+<A NAME="12920"></A>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; Newtonian physics tells us that 
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{cases}
+x = v_0 \cos \alpha \cdot t, \\
+y = -\frac{1}{2} gt^2 + v_0 \sin \alpha \cdot t 
+\end{cases}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="170" HEIGHT="64" BORDER="0"
+ SRC="img1696.png"
+ ALT="\begin{displaymath}
+\begin{cases}
+x = v_0 \cos \alpha \cdot t, \\
+y = -\frac{1}{2} gt^2 + v_0 \sin \alpha \cdot t
+\end{cases}\end{displaymath}">
+</DIV><P></P>
+are really the parametric equations of the trajectory 
+of a projectile<A NAME="tex2html77"
+  HREF="footnode.html#foot12926"><SUP><SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">7</SPAN></SUP></A>, 
+the time <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> being the parameter. The elimination of <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> 
+gives the rectangular equation of the trajectory
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y = x \tan \alpha - \frac{gx^2}{2v_0^2 \cos^2 \alpha}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="177" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1697.png"
+ ALT="$\displaystyle y = x \tan \alpha - \frac{gx^2}{2v_0^2 \cos^2 \alpha}.
+$">
+</DIV><P></P>
+
+<P></DIV><P></P>
+
+<P>
+Since from (<A HREF="#eqn:B-66">6.8</A>) <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> is given as a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN>, 
+and <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> as a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, we have
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx}
+&	= \frac{dy}{dt} \cdot \frac{dt}{dx}
+\ \ \ {\rm by\ XXV}\\
+& 
+= \frac{dy}{dt} \cdot \frac{1}{\frac{dx}{dt}}\ \ \ {\rm by\ XXVI}
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="177" HEIGHT="62" BORDER="0"
+ SRC="img1698.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{dy}{dx}
+&amp; = \frac{dy}{dt} \cdot \fr...
+...} \cdot \frac{1}{\frac{dx}{dt}}\ \ \ {\rm by\ XXVI}
+\end{array}\end{displaymath}">
+</DIV><P></P>
+that is,
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:D-66"></A><!-- MATH
+ \begin{equation}
+\frac{dy}{dx} 	= \frac{\frac{dy}{dt}}{\frac{dx}{dt}}
+= \frac{g'(t)}{f'(t)}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="130" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1699.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{g'(t)}{f'(t)}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">10</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Hence, if the parametric equations of a curve are given, 
+we can find equations of tangent and normal, lengths of 
+subtangent and subnormal at a given point on the curve, by 
+first finding the value of <!-- MATH
+ $\frac{dy}{dx}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$ \frac{dy}{dx}$"></SPAN> at that point 
+from (<A HREF="#eqn:D-66">6.10</A>) 
+and then substituting in formulas (<A HREF="node84.html#eqn:1-65">6.1</A>), (<A HREF="node84.html#eqn:65-2">6.2</A>), 
+(<A HREF="node84.html#eqn:3-65">6.3</A>), (<A HREF="node84.html#eqn:4-65">6.4</A>) of the last section.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">3</SPAN></B> &nbsp; Find equations of tangent and normal, lengths of subtangent 
+and subnormal to the ellipse
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:E-66"></A><!-- MATH
+ \begin{equation}
+\begin{cases}
+x = a \cos \phi, \\
+y = b \sin \phi, 
+\end{cases}
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="89" HEIGHT="64" BORDER="0"
+ SRC="img1700.png"
+ ALT="\begin{displaymath}\begin{cases}x = a \cos \phi, \\ y = b \sin \phi, \end{cases}\end{displaymath}"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">11</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+at the point where <!-- MATH
+ $\phi = \frac{\pi}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1701.png"
+ ALT="$ \phi = \frac{\pi}{4}$"></SPAN>.
+
+<P>
+As in Figure <A HREF="#fig:ellipse">6.6</A> draw the major and minor auxiliary circles 
+of the ellipse. Through two points B and C on the same 
+radius draw lines parallel to the axes of coordinates. 
+These lines will intersect in a point <SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1695.png"
+ ALT="$ P(x,y)$"></SPAN> on the ellipse, because
+<!-- MATH
+ $x = OA = OB\cos\phi = a\cos\phi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="208" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1702.png"
+ ALT="$ x = OA = OB\cos\phi = a\cos\phi$"></SPAN>
+and <!-- MATH
+ $y = AP = OD = OC\sin\phi = b\sin\phi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="249" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1703.png"
+ ALT="$ y = AP = OD = OC\sin\phi = b\sin\phi$"></SPAN>,
+or, <!-- MATH
+ $\frac{x}{a} = \cos \phi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1704.png"
+ ALT="$ \frac{x}{a} = \cos \phi$"></SPAN> and 
+<!-- MATH
+ $\frac{y}{b} = \sin \phi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1705.png"
+ ALT="$ \frac{y}{b} = \sin \phi$"></SPAN>.
+Now squaring and adding, we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = \cos^2 \phi + \sin^2 \phi = 1,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="217" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1706.png"
+ ALT="$\displaystyle \frac{x^2}{a^2} + \frac{y^2}{b^2} = \cos^2 \phi + \sin^2 \phi = 1,
+$">
+</DIV><P></P>
+the rectangular equation of the ellipse. 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img265.png"
+ ALT="$ \phi$"></SPAN> is sometimes called 
+the <I>eccentric angle</I> of the ellipse at the point P.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:ellipse"></A><A NAME="12990"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.6:</STRONG>
+Auxiliary circles of an ellipse.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="270" HEIGHT="271" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1707.png"
+ ALT="\includegraphics[height=6cm,width=6cm]{ellipse2.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Solution. 
+The parameter being <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img265.png"
+ ALT="$ \phi$"></SPAN>, <!-- MATH
+ $\frac{dx}{d\phi} = - a \sin \phi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="99" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1708.png"
+ ALT="$ \frac{dx}{d\phi} = - a \sin \phi$"></SPAN>,
+<!-- MATH
+ $\frac{dy}{d\phi} = b \cos \phi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1709.png"
+ ALT="$ \frac{dy}{d\phi} = b \cos \phi$"></SPAN>.
+
+<P>
+Substituting <!-- MATH
+ $\phi = \frac{\pi}{4}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1701.png"
+ ALT="$ \phi = \frac{\pi}{4}$"></SPAN> in the given equations 
+(<A HREF="#eqn:E-66">6.11</A>), we get 
+<!-- MATH
+ $\left ( \frac{a}{\sqrt{2}}, \frac{b}{\sqrt{2}} \right )$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1710.png"
+ ALT="$ \left ( \frac{a}{\sqrt{2}}, \frac{b}{\sqrt{2}} \right )$"></SPAN> 
+as the point of contact. Hence
+<!-- MATH
+ $\frac{dy}{dx}|_{x=x_1,y=y_1} = - \frac{b}{a}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="135" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1711.png"
+ ALT="$ \frac{dy}{dx}\vert _{x=x_1,y=y_1} = - \frac{b}{a}$"></SPAN>.
+Substituting in (<A HREF="node84.html#eqn:1-65">6.1</A>), 
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y - \frac{b}{\sqrt{2}} = -\frac{b}{a} \left ( x - \frac{a}{\sqrt{2}} \right ),
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="190" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1712.png"
+ ALT="$\displaystyle y - \frac{b}{\sqrt{2}} = -\frac{b}{a} \left ( x - \frac{a}{\sqrt{2}} \right ),
+$">
+</DIV><P></P>
+or, <!-- MATH
+ $bx + ay = \sqrt{2} ab$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1713.png"
+ ALT="$ bx + ay = \sqrt{2} ab$"></SPAN>, the equation of tangent.
+Substituting in (<A HREF="node84.html#eqn:65-2">6.2</A>), 
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+y - \frac{b}{\sqrt{2}} 	= \frac{a}{b} \left ( x - \frac{a}{\sqrt{2}} \right ),
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="178" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1714.png"
+ ALT="$\displaystyle y - \frac{b}{\sqrt{2}} = \frac{a}{b} \left ( x - \frac{a}{\sqrt{2}} \right ),
+$">
+</DIV><P></P>
+or, <!-- MATH
+ $\sqrt{2}(ax - by)=	a^2 - b^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="160" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1715.png"
+ ALT="$ \sqrt{2}(ax - by)= a^2 - b^2$"></SPAN>, the equation of normal.
+Substituting in (<A HREF="node84.html#eqn:3-65">6.3</A>) and (<A HREF="node84.html#eqn:4-65">6.4</A>), we find
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{b}{\sqrt{2}} \left ( -\frac{b}{a} \right )
+= -\frac{b^2}{a\sqrt{2}}
+,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="152" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1716.png"
+ ALT="$\displaystyle \frac{b}{\sqrt{2}} \left ( -\frac{b}{a} \right )
+= -\frac{b^2}{a\sqrt{2}}
+,$">
+</DIV><P></P>
+the length of subnormal, and
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{b}{\sqrt{2}} \left ( -\frac{a}{b} \right )
+= -\frac{a}{\sqrt{2}},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="139" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1717.png"
+ ALT="$\displaystyle \frac{b}{\sqrt{2}} \left ( -\frac{a}{b} \right )
+= -\frac{a}{\sqrt{2}},
+$">
+</DIV><P></P>
+the length of subtangent.
+
+<P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">4</SPAN></B> &nbsp; Given equation of the cycloid in parametric form
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{cases}
+x = a(\theta - \sin \theta), \\
+y = a(1 - \cos \theta), 
+\end{cases}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="125" HEIGHT="64" BORDER="0"
+ SRC="img1718.png"
+ ALT="\begin{displaymath}
+\begin{cases}
+x = a(\theta - \sin \theta), \\
+y = a(1 - \cos \theta),
+\end{cases}\end{displaymath}">
+</DIV><P></P>
+<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$ \theta$"></SPAN> being the variable parameter; 
+find lengths of subtangent, subnormal, tangent, and 
+normal at the point where <!-- MATH
+ $\theta = \frac{\pi}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1719.png"
+ ALT="$ \theta = \frac{\pi}{2}$"></SPAN>.
+
+<P>
+The path described by a point on the circumference of a circle 
+which rolls without sliding on a fixed straight line is called 
+the <I>cycloid</I>. 
+<A NAME="13046"></A>
+Let the radius of the rolling circle be <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>, P the generating point, 
+and M the point of contact with the fixed line OX, which is 
+called <I>the base</I>. If arc PM equals OM in length, then 
+P will touch at O if the circle is rolled to the left. 
+We have, denoting angle POM by <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$ \theta$"></SPAN>,
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+  x &= OM - NM = a\theta - a\sin\theta = a(\theta- \sin\theta),\\
+    y &= PN = MC - AC = a - a\cos\theta = a(1 - \cos\theta),
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="361" HEIGHT="54" BORDER="0"
+ SRC="img1720.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+x &amp;= OM - NM = a\theta - a\sin\theta = a(...
+...PN = MC - AC = a - a\cos\theta = a(1 - \cos\theta),
+\end{array}\end{displaymath}">
+</DIV><P></P>
+the parametric equations of the cycloid, the angle 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$ \theta$"></SPAN> through which the rolling circle turns being 
+the parameter. <!-- MATH
+ $OD = 2\pi a$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1721.png"
+ ALT="$ OD = 2\pi a$"></SPAN> is called the <I>base of one arch</I> 
+of the cycloid, and the point V is called the <I>vertex</I>. 
+Eliminating <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$ \theta$"></SPAN>, we get the rectangular equation
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+x = a \arccos \left ( \frac{a - y}{a} \right ) - \sqrt{ 2ay - y^2 }.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="254" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1722.png"
+ ALT="$\displaystyle x = a \arccos \left ( \frac{a - y}{a} \right ) - \sqrt{ 2ay - y^2 }.
+$">
+</DIV><P></P>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:cycloid"></A><A NAME="13063"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.7:</STRONG>
+Tangent line of a cycloid.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="362" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1723.png"
+ ALT="\includegraphics[height=4cm,width=8cm]{cycloid-tangent.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The <I CLASS="sans">SAGE</I> commands for creating this plot are as follows:
+
+<P>
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: t = var("t")
+sage: f1 = lambda t: [t-sin(t),1-cos(t)]
+sage: p1 = parametric_plot(f1(t), 0.0, 2*pi, rgbcolor=(1,0,0))
+sage: f2 = lambda t: [t+RR(pi)/2-1,t+1]
+sage: p2 = parametric_plot(f2(t), -1, 1, rgbcolor=(1,0,0))
+sage: f3 = lambda t: [-t+RR(pi)/2,t]
+sage: p3 = parametric_plot(f3(t), -1, 1, rgbcolor=(1,0,0))
+sage: t1 = text("P", (RR(pi)/2-1+0.1,1-0.1))
+sage: t2 = text("T", (-0.4,0.1))
+sage: t3 = text("N", (RR(pi)/2,0))
+sage: show(p1+p2+p3+t1+t2+t3)
+</PRE>
+<P>
+Solution:
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dx}{d\theta}
+= a(1 - \cos \theta),\ \ \  \frac{dy}{d\theta} = a \sin \theta.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="237" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1724.png"
+ ALT="$\displaystyle \frac{dx}{d\theta}
+= a(1 - \cos \theta),\ \ \ \frac{dy}{d\theta} = a \sin \theta.
+$">
+</DIV><P></P>
+Substituting in (<A HREF="#eqn:D-66">6.10</A>), 
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= \frac{\sin \theta}{1 - \cos \theta},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="114" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1725.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{\sin \theta}{1 - \cos \theta},
+$">
+</DIV><P></P>
+the slope at any point.
+Since <!-- MATH
+ $\theta = \frac{\pi}{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1719.png"
+ ALT="$ \theta = \frac{\pi}{2}$"></SPAN>, the point of contact is 
+<!-- MATH
+ $\left ( \frac{\pi a}{2} - a, a \right )$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1726.png"
+ ALT="$ \left ( \frac{\pi a}{2} - a, a \right )$"></SPAN>, and 
+<!-- MATH
+ $\frac{dy}{dx}|_{x=x_1,y=y_1} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="120" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1727.png"
+ ALT="$ \frac{dy}{dx}\vert _{x=x_1,y=y_1} = 1$"></SPAN>.
+
+<P>
+Substituting in (<A HREF="node84.html#eqn:3-65">6.3</A>), (<A HREF="node84.html#eqn:4-65">6.4</A>), 
+(<A HREF="node84.html#eqn:5-65">6.5</A>), (<A HREF="node84.html#eqn:6-65">6.6</A>) of the last section, 
+we get
+
+<P>
+length of subtangent 	= <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>, 	
+
+<P>
+length of subnormal 	= <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN>,
+
+<P>
+length of tangent 	= <!-- MATH
+ $a \sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1728.png"
+ ALT="$ a \sqrt{2}$"></SPAN>, 
+
+<P>
+length of normal 	= <!-- MATH
+ $a \sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="34" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1728.png"
+ ALT="$ a \sqrt{2}$"></SPAN>. 
+
+<P></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1816"
+  HREF="node87.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1810"
+  HREF="node81.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1804"
+  HREF="node85.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1812"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1814"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1817"
+  HREF="node87.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html1811"
+  HREF="node81.html">Simple applications of the</A>
+<B> Previous:</B> <A NAME="tex2html1805"
+  HREF="node85.html">Exercises</A>
+ &nbsp; <B>  <A NAME="tex2html1813"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1815"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

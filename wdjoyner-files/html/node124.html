@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Infinitesimals</TITLE>
+<META NAME="description" CONTENT="Infinitesimals">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node125.html">
+<LINK REL="previous" HREF="node123.html">
+<LINK REL="up" HREF="node121.html">
+<LINK REL="next" HREF="node125.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2369"
+  HREF="node125.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2363"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2357"
+  HREF="node123.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2365"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2367"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2370"
+  HREF="node125.html">Derivative of the arc</A>
+<B> Up:</B> <A NAME="tex2html2364"
+  HREF="node121.html">Differentials</A>
+<B> Previous:</B> <A NAME="tex2html2358"
+  HREF="node123.html">Definitions</A>
+ &nbsp; <B>  <A NAME="tex2html2366"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2368"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001130000000000000000">
+Infinitesimals</A>
+</H1>
+
+<P>
+In the Differential Calculus we are usually concerned 
+with the derivative, that is, with the ratio of the 
+differentials <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img605.png"
+ ALT="$ dy$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img606.png"
+ ALT="$ dx$"></SPAN>. In some applications it is also 
+useful to consider <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img606.png"
+ ALT="$ dx$"></SPAN> as an infinitesimal 
+(see &#167;<A HREF="node21.html#sec:15">3.3</A>), that is, as a variable whose values remain numerically 
+small, and which, at some stage of the investigation, approaches 
+the limit zero. Then by (<A HREF="node123.html#eqn:B-88">9.2</A>), and item 2 in &#167;<A HREF="node26.html#sec:20">3.8</A>, <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img605.png"
+ ALT="$ dy$"></SPAN> is also an infinitesimal.
+
+<P>
+In problems where several infinitesimals enter we often 
+make use of the following
+
+<P>
+<P>
+<DIV><A NAME="thrm:89"><B>Theorem  <SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">1</SPAN></B></A> &nbsp; In problems involving the limit of the ratio of two 
+infinitesimals, either infinitesimal may be replaced 
+by an infinitesimal so related to it that the limit of 
+their ratio is unity.</DIV><P></P>
+
+<P>
+<B>Proof:  </B>
+ Let <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2748.png"
+ ALT="$ \alpha$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1909.png"
+ ALT="$ \beta$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2749.png"
+ ALT="$ \alpha'$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2750.png"
+ ALT="$ \beta'$"></SPAN> be 
+infinitesimals so related that
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim \frac{\alpha'}{\alpha} = 1,\ \ \ \lim \frac{\beta'}{\beta} = 1.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="176" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2751.png"
+ ALT="$\displaystyle \lim \frac{\alpha'}{\alpha} = 1,\ \ \ \lim \frac{\beta'}{\beta} = 1.
+$">
+</DIV><P></P>
+We have 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{\alpha}{\beta}
+= \frac{\alpha'}{\beta'} \cdot \frac{\alpha}{\alpha'} 
+\cdot \frac{\beta'}{\beta}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="118" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2752.png"
+ ALT="$\displaystyle \frac{\alpha}{\beta}
+= \frac{\alpha'}{\beta'} \cdot \frac{\alpha}{\alpha'}
+\cdot \frac{\beta'}{\beta}
+$">
+</DIV><P></P>
+identically, and 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim \frac{\alpha}{\beta}
+= \lim \frac{\alpha '}{\beta '} \cdot \lim \frac{\alpha}{\alpha '} 
+\cdot \lim \frac{\beta '}{\beta}
+=\lim \frac{\alpha'}{\beta'} \cdot 1 \cdot 1 ,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="325" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2753.png"
+ ALT="$\displaystyle \lim \frac{\alpha}{\beta}
+= \lim \frac{\alpha '}{\beta '} \cdot ...
+...cdot \lim \frac{\beta '}{\beta}
+=\lim \frac{\alpha'}{\beta'} \cdot 1 \cdot 1 ,
+$">
+</DIV><P></P>
+by Theorem <A HREF="node26.html#thrm:II-20">3.8.2</A>. Therefore, 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\lim \frac{\alpha}{\beta} 	= \lim \frac{\alpha'}{\beta'}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="112" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2754.png"
+ ALT="$\displaystyle \lim \frac{\alpha}{\beta} = \lim \frac{\alpha'}{\beta'}.
+$">
+</DIV><P></P>
+<SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img455.png"
+ ALT="$ \Box$"></SPAN>
+
+<P>
+Now let us apply this theorem to the two following important limits.
+
+<P>
+For the independent variable <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, we know from the previous 
+section that <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img606.png"
+ ALT="$ dx$"></SPAN> are identical.
+Hence their ratio is unity, and also limit 
+<!-- MATH
+ $\frac{\Delta x}{dx} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2755.png"
+ ALT="$ \frac{\Delta x}{dx} = 1$"></SPAN>. That is, by the above theorem,
+In the limit of the ratio of <SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN> and a second infinitesimal, 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="27" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img564.png"
+ ALT="$ \Delta x$"></SPAN> may be replaced by <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img606.png"
+ ALT="$ dx$"></SPAN>.
+
+<P>
+On the contrary it was shown that, for the dependent variable <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>, 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.png"
+ ALT="$ \Delta y$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img605.png"
+ ALT="$ dy$"></SPAN> are in general unequal. But we shall now show, however, 
+that in this case also
+<!-- MATH
+ $\lim \frac{\Delta y}{dy} 	= 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2756.png"
+ ALT="$ \lim \frac{\Delta y}{dy} = 1$"></SPAN>.
+Since <!-- MATH
+ $\lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = f'(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="145" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2757.png"
+ ALT="$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = f'(x)$"></SPAN> 
+we may write <!-- MATH
+ $\frac{\Delta y}{\Delta x} 	= f'(x) + \epsilon$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="109" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2758.png"
+ ALT="$ \frac{\Delta y}{\Delta x} = f'(x) + \epsilon$"></SPAN>,
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img432.png"
+ ALT="$ \epsilon$"></SPAN> is an infinitesimal which approaches 
+zero when <!-- MATH
+ $\Delta x \to 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img694.png"
+ ALT="$ \Delta x \to 0$"></SPAN>.
+
+<P>
+Clearing of fractions, remembering that <!-- MATH
+ $\Delta x \to dx$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2759.png"
+ ALT="$ \Delta x \to dx$"></SPAN>,
+<!-- MATH
+ $\Delta y= f'(x)dx + \epsilon \cdot \Delta x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="160" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2760.png"
+ ALT="$ \Delta y= f'(x)dx + \epsilon \cdot \Delta x$"></SPAN>,
+or <!-- MATH
+ $\Delta y= dy + \epsilon \cdot \Delta x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="124" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2761.png"
+ ALT="$ \Delta y= dy + \epsilon \cdot \Delta x$"></SPAN>, 
+by (<A HREF="node123.html#eqn:B-88">9.2</A>). Dividing both sides by <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.png"
+ ALT="$ \Delta y$"></SPAN>,
+<!-- MATH
+ $1 	= \frac{dy}{\Delta y} + \epsilon \cdot \frac{\Delta x}{\Delta y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2762.png"
+ ALT="$ 1 = \frac{dy}{\Delta y} + \epsilon \cdot \frac{\Delta x}{\Delta y}$"></SPAN>,
+or <!-- MATH
+ $\frac{dy}{\Delta y}	= 1 - \epsilon \cdot \frac{\Delta x}{\Delta y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2763.png"
+ ALT="$ \frac{dy}{\Delta y} = 1 - \epsilon \cdot \frac{\Delta x}{\Delta y}$"></SPAN>.
+Therefore, <!-- MATH
+ $\lim_{\Delta x \to 0} \frac{dy}{\Delta y} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2764.png"
+ ALT="$ \lim_{\Delta x \to 0} \frac{dy}{\Delta y} = 1$"></SPAN>,
+and hence <!-- MATH
+ $\lim_{\Delta x \to 0} \frac{\Delta y}{dy} = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="117" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2765.png"
+ ALT="$ \lim_{\Delta x \to 0} \frac{\Delta y}{dy} = 1$"></SPAN>. 
+That is, by the above theorem,
+In the limit of the ratio of <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.png"
+ ALT="$ \Delta y$"></SPAN> and a second infinitesimal, 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img565.png"
+ ALT="$ \Delta y$"></SPAN> may be replaced by <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img605.png"
+ ALT="$ dy$"></SPAN>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2369"
+  HREF="node125.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2363"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2357"
+  HREF="node123.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2365"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2367"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2370"
+  HREF="node125.html">Derivative of the arc</A>
+<B> Up:</B> <A NAME="tex2html2364"
+  HREF="node121.html">Differentials</A>
+<B> Previous:</B> <A NAME="tex2html2358"
+  HREF="node123.html">Definitions</A>
+ &nbsp; <B>  <A NAME="tex2html2366"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2368"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

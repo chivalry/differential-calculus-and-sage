@@ -1,0 +1,1521 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Exercises</TITLE>
+<META NAME="description" CONTENT="Exercises">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="previous" HREF="node132.html">
+<LINK REL="up" HREF="node131.html">
+<LINK REL="next" HREF="node134.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2493"
+  HREF="node134.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2487"
+  HREF="node131.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2483"
+  HREF="node132.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2489"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2491"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2494"
+  HREF="node134.html">Change of variable</A>
+<B> Up:</B> <A NAME="tex2html2488"
+  HREF="node131.html">Rates</A>
+<B> Previous:</B> <A NAME="tex2html2484"
+  HREF="node132.html">The derivative considered as</A>
+ &nbsp; <B>  <A NAME="tex2html2490"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2492"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001220000000000000000">
+Exercises</A>
+</H1>
+
+<P>
+
+<OL>
+<LI>A man is walking at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> miles per hour towards the foot 
+of a tower <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2901.png"
+ ALT="$ 60$"></SPAN> ft. high. At what rate is he approaching the 
+top when he is <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2902.png"
+ ALT="$ 80$"></SPAN> ft. from the foot of the tower?
+
+<P>
+Solution. Apply the above rule.
+
+<P>
+First step. Draw the figure. Let <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> = distance of the man from 
+the foot and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> = his distance from the top of the tower at any instant.
+
+<P>
+Second step. Since we have a right triangle,
+<!-- MATH
+ $\ y^2 	= x^2 + 3600$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="114" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2903.png"
+ ALT="$ \ y^2 = x^2 + 3600$"></SPAN>.
+
+<P>
+Third step. Differentiating, we get
+<!-- MATH
+ $2 y \frac{dy}{dt} 	= 2 x \frac{dx}{dt}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="94" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2904.png"
+ ALT="$ 2 y \frac{dy}{dt} = 2 x \frac{dx}{dt}$"></SPAN>, or,
+<!-- MATH
+ $\frac{dy}{dt} 	= \frac{x}{y} \frac{dx}{dt}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2905.png"
+ ALT="$ \frac{dy}{dt} = \frac{x}{y} \frac{dx}{dt}$"></SPAN>, 
+meaning that at any instant whatever
+(Rate of change of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN>) = <!-- MATH
+ $\left ( \frac{x}{y} \right )$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2906.png"
+ ALT="$ \left ( \frac{x}{y} \right )$"></SPAN> 
+(rate of change of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>).
+
+<P>
+Fourth step. 
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+ x &	= 80,\ 	\frac{dx}{dt} 	= 5\ {\rm miles/hour},\\
+  &= 5 \times 5280 ft/hour,\\
+y &	= \sqrt{x^2 + 3600}\\
+  &	= 100.\\
+ \frac{dy}{dt}& 	= ?
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="209" HEIGHT="115" BORDER="0"
+ SRC="img2907.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+x &amp; = 80,\ \frac{dx}{dt} = 5\ {\rm miles/...
+...qrt{x^2 + 3600}\\
+&amp; = 100.\\
+\frac{dy}{dt}&amp; = ?
+\end{array}\end{displaymath}">
+</DIV><P></P>
+Fifth step. 	Substituting back in the above <!-- MATH
+ $\frac{dy}{dt} 	= \frac{80}{100} \times 5 \times 5280$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="145" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2908.png"
+ ALT="$ \frac{dy}{dt} = \frac{80}{100} \times 5 \times 5280$"></SPAN>
+ft/hour = <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> miles/hour. 
+
+<P>
+</LI>
+<LI>A point moves on the parabola <SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2909.png"
+ ALT="$ 6y = x^2$"></SPAN> in such a way that when 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2307.png"
+ ALT="$ x = 6$"></SPAN>, the abscissa is increasing at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN> ft. per second. 
+At what rates are the ordinate and length of arc increasing at the 
+same instant?
+
+<P>
+Solution. First step. Plot the parabola.
+
+<P>
+Second step. <!-- MATH
+ $6 y 	= x^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2909.png"
+ ALT="$ 6y = x^2$"></SPAN>.
+
+<P>
+Third step. <!-- MATH
+ $6 \frac{dy}{dt} 	= 2 x\frac{dx}{dt}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2910.png"
+ ALT="$ 6 \frac{dy}{dt} = 2 x\frac{dx}{dt}$"></SPAN>, or,
+<!-- MATH
+ $\frac{dy}{dt} 	= \frac{x}{3} \cdot \frac{dx}{dt}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2911.png"
+ ALT="$ \frac{dy}{dt} = \frac{x}{3} \cdot \frac{dx}{dt}$"></SPAN>.
+This means that at any point on the parabola
+(Rate of change of ordinate) 	
+= <!-- MATH
+ $\left( \frac{x}{3} \right)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2912.png"
+ ALT="$ \left( \frac{x}{3} \right)$"></SPAN> (rate of change of abcissa).
+
+<P>
+Fourth step. <!-- MATH
+ $\frac{dx}{dt} 	= 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2913.png"
+ ALT="$ \frac{dx}{dt} = 2$"></SPAN> ft. per second,
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2307.png"
+ ALT="$ x = 6$"></SPAN>, <!-- MATH
+ $\frac{dy}{dt} = ?$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2914.png"
+ ALT="$ \frac{dy}{dt} = ?$"></SPAN>, 
+<!-- MATH
+ $y = \frac{x^2}{6} = 6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2915.png"
+ ALT="$ y = \frac{x^2}{6} = 6$"></SPAN>, <!-- MATH
+ $\frac{ds}{dt} = ?$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2916.png"
+ ALT="$ \frac{ds}{dt} = ?$"></SPAN>
+
+<P>
+Fifth step. Substituting back in the above, <!-- MATH
+ $\frac{dy}{dt} = \frac{6}{3} \times 2 = 4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="110" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2917.png"
+ ALT="$ \frac{dy}{dt} = \frac{6}{3} \times 2 = 4$"></SPAN> ft. per second. 
+
+<P>
+From the first result we note that at the point 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2918.png"
+ ALT="$ (6, 6)$"></SPAN> the ordinate changes twice as rapidly as the abscissa.
+
+<P>
+If we consider the point <SPAN CLASS="MATH"><IMG
+ WIDTH="52" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2919.png"
+ ALT="$ (-6, 6)$"></SPAN> instead, the result is 
+<!-- MATH
+ $\frac{dy}{dt} = -4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2920.png"
+ ALT="$ \frac{dy}{dt} = -4$"></SPAN> ft. per second, the minus sign indicating 
+that the ordinate is decreasing as the abscissa increases.
+
+<P>
+We shall now solve this using <I CLASS="sans">SAGE</I>.
+
+<P>
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: t = var("t")
+sage: x = function("x",t)
+sage: y = function("y",t)
+sage: eqn = 6*y - x^2
+sage: solve(diff(eqn,t) == 0, diff(y(t), t, 1))
+[diff(y(t), t, 1) == x(t)*diff(x(t), t, 1)/3]
+sage: s = sqrt(x^2+y^2)
+sage: diff(s,t)
+(2*y(t)*diff(y(t), t, 1) 
+  + 2*x(t)*diff(x(t), t, 1))/(2*sqrt(y(t)^2 + x(t)^2))
+</PRE>
+<P>
+This tells us that 
+<!-- MATH
+ $\frac{dy}{dt} =\frac{x}{3} \cdot \frac{dx}{dt}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2911.png"
+ ALT="$ \frac{dy}{dt} = \frac{x}{3} \cdot \frac{dx}{dt}$"></SPAN> and
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\frac{ds}{dt} =\frac{ y(t)y'(t) +  x(t)x'(t)}{\sqrt{ x(t)^2  + y(t)^2}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="189" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2921.png"
+ ALT="$\displaystyle \frac{ds}{dt} =\frac{ y(t)y'(t) + x(t)x'(t)}{\sqrt{ x(t)^2 + y(t)^2}}.
+$">
+</DIV><P></P>
+Substituting <!-- MATH
+ $\frac{dx}{dt} = 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2913.png"
+ ALT="$ \frac{dx}{dt} = 2$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2307.png"
+ ALT="$ x = 6$"></SPAN>, gives
+<!-- MATH
+ $\frac{dy}{dt} = 4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2922.png"
+ ALT="$ \frac{dy}{dt} = 4$"></SPAN>. In addition, if <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2923.png"
+ ALT="$ y=6$"></SPAN> then this gives
+<!-- MATH
+ $\frac{ds}{dt} = 36/\sqrt{72}=3\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="146" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2924.png"
+ ALT="$ \frac{ds}{dt} = 36/\sqrt{72}=3\sqrt{2}$"></SPAN>.
+
+<P>
+</LI>
+<LI>A circular plate of metal expands by heat so that its radius 
+increases uniformly at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2925.png"
+ ALT="$ 0.01$"></SPAN> inch per second.
+At what rate is the surface increasing when the radius is two inches?
+
+<P>
+Solution. Let <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> = radius and y = area of plate. Then
+<!-- MATH
+ $y 	= \pi x^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2926.png"
+ ALT="$ y = \pi x^2$"></SPAN>,
+<!-- MATH
+ $\frac{dy}{dt} 	= 2 \pi x \frac{dx}{dt}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="87" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2927.png"
+ ALT="$ \frac{dy}{dt} = 2 \pi x \frac{dx}{dt}$"></SPAN>,
+That is; at any instant the area of the plate is increasing 
+in square inches <SPAN CLASS="MATH"><IMG
+ WIDTH="31" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2928.png"
+ ALT="$ 2\pi x$"></SPAN> times as fast as the radius is 
+increasing in linear inches.
+<SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>, <!-- MATH
+ $\frac{dx}{dt} = 0.01$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2929.png"
+ ALT="$ \frac{dx}{dt} = 0.01$"></SPAN>, 
+<!-- MATH
+ $\frac{dy}{dt} = ?$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2914.png"
+ ALT="$ \frac{dy}{dt} = ?$"></SPAN>.
+Substituting in the above, <!-- MATH
+ $\frac{dy}{dt} 	= 2 \pi \times 2 \times 0.01 = 0.04 \pi$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="195" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2930.png"
+ ALT="$ \frac{dy}{dt} = 2 \pi \times 2 \times 0.01 = 0.04 \pi$"></SPAN> 
+sq. in. per sec. 
+
+<P>
+</LI>
+<LI>An arc light is hung <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2428.png"
+ ALT="$ 12$"></SPAN> ft. directly above a straight 
+horizontal walk on which a boy <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> ft. in height is walking. 
+How fast is the boy's shadow lengthening when he is walking 
+away from the light at the rate of 168 ft. per minute?
+
+<P>
+Solution. Let <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> = distance of boy from a point directly 
+under light <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img321.png"
+ ALT="$ L$"></SPAN>, and <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> = length of boy's shadow. 
+By similar triangle, <!-- MATH
+ $y/( y + x) = 5/12$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="123" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2931.png"
+ ALT="$ y/( y + x) = 5/12$"></SPAN>,
+or <!-- MATH
+ $y 	= \frac{5}{7} x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="53" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2932.png"
+ ALT="$ y = \frac{5}{7} x$"></SPAN>.
+Differentiating, <!-- MATH
+ $\frac{dy}{dt} = \frac{5}{7} \frac{dx}{dt}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="71" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2933.png"
+ ALT="$ \frac{dy}{dt} = \frac{5}{7} \frac{dx}{dt}$"></SPAN>;
+i.e. the shadow is lengthening <!-- MATH
+ $\frac{5}{7}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2934.png"
+ ALT="$ \frac{5}{7}$"></SPAN> as fast as 
+the boy is walking, or <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2935.png"
+ ALT="$ 120$"></SPAN> ft. per minute.
+
+<P>
+</LI>
+<LI>In a parabola <SPAN CLASS="MATH"><IMG
+ WIDTH="66" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2936.png"
+ ALT="$ y^2 = 12x$"></SPAN>, if <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> increases uniformly at 
+the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN> in. per second, at what rate is <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> increasing 
+when <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img426.png"
+ ALT="$ x=3$"></SPAN> in. ? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN> in. per sec.
+
+<P>
+</LI>
+<LI>At what point on the parabola of the last example do the 
+abscissa and ordinate increase at the same rate? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2937.png"
+ ALT="$ (3,6)$"></SPAN>.
+
+<P>
+</LI>
+<LI>In the function <!-- MATH
+ $y = 2x^3 + 6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2938.png"
+ ALT="$ y = 2x^3 + 6$"></SPAN>, what is the value of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> at the 
+point where <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> increases <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2939.png"
+ ALT="$ 24$"></SPAN> times as fast as <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2940.png"
+ ALT="$ x = \pm 2$"></SPAN>.
+
+<P>
+</LI>
+<LI>The ordinate of a point describing the curve 
+<!-- MATH
+ $x^2 + y^2 = 25$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="93" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2941.png"
+ ALT="$ x^2 + y^2 = 25$"></SPAN> is decreasing at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2942.png"
+ ALT="$ 3/2$"></SPAN> in. per second. 
+How rapidly is the abscissa changing when the ordinate is <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> inches? 
+
+<P>
+Ans. <!-- MATH
+ $\frac{dx}{dt} = 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2913.png"
+ ALT="$ \frac{dx}{dt} = 2$"></SPAN> in. per sec.
+
+<P>
+</LI>
+<LI>Find the values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> at the points where the rate of change of
+<!-- MATH
+ $x^3 - 12x^2 + 45x - 13$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="152" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2943.png"
+ ALT="$ x^3 - 12x^2 + 45x - 13$"></SPAN>
+is zero. 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img426.png"
+ ALT="$ x=3$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN>.
+
+<P>
+</LI>
+<LI>At what point on the ellipse <!-- MATH
+ $16x^2 + 9y^2 = 400$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="125" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2944.png"
+ ALT="$ 16x^2 + 9y^2 = 400$"></SPAN> does <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> decrease 
+at the same rate that <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> increases? 
+
+<P>
+Ans. <!-- MATH
+ $(3, \frac{16}{3})$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="48" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2945.png"
+ ALT="$ (3, \frac{16}{3})$"></SPAN>.
+
+<P>
+</LI>
+<LI>Where in the first quadrant does the arc increase twice as 
+fast as the ordinate? 
+
+<P>
+Ans. At <!-- MATH
+ $60^o = \pi/3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2946.png"
+ ALT="$ 60^o = \pi/3$"></SPAN>.
+
+<P>
+</LI>
+</OL>
+
+<P>
+A point generates each of the following curves (problems 12-16). 
+Find the rate at which the arc is increasing in each case:
+
+<P>
+
+<OL>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2947.png"
+ ALT="$ y^2 = 2x$"></SPAN>; <!-- MATH
+ $\frac{dx}{dt} = 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2913.png"
+ ALT="$ \frac{dx}{dt} = 2$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img372.png"
+ ALT="$ x = 2$"></SPAN>. 	
+
+<P>
+Ans. 	
+<!-- MATH
+ $\frac{ds}{dt} = \sqrt{5}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2948.png"
+ ALT="$ \frac{ds}{dt} = \sqrt{5}$"></SPAN>.
+
+<P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2949.png"
+ ALT="$ xy = 6$"></SPAN>; <!-- MATH
+ $\frac{dy}{dt} = 2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2950.png"
+ ALT="$ \frac{dy}{dt} = 2$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2951.png"
+ ALT="$ y = 3$"></SPAN>. 
+
+<P>
+Ans. <!-- MATH
+ $\frac{ds}{dt} = \frac{2}{3} \sqrt{13}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="82" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2952.png"
+ ALT="$ \frac{ds}{dt} = \frac{2}{3} \sqrt{13}$"></SPAN>.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $x^2 + 4 y^2 = 20$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="101" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2953.png"
+ ALT="$ x^2 + 4 y^2 = 20$"></SPAN>; <!-- MATH
+ $\frac{dx}{dt} = - 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="64" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2954.png"
+ ALT="$ \frac{dx}{dt} = - 1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2955.png"
+ ALT="$ y = 1$"></SPAN>.
+
+<P>
+Ans. <!-- MATH
+ $\frac{ds}{dt} = \sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2956.png"
+ ALT="$ \frac{ds}{dt} = \sqrt{2}$"></SPAN>.
+
+<P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img652.png"
+ ALT="$ y = x^3$"></SPAN>; <!-- MATH
+ $\frac{dx}{dt} = 3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2957.png"
+ ALT="$ \frac{dx}{dt} = 3$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img719.png"
+ ALT="$ x = -3$"></SPAN>.
+
+<P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="57" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2958.png"
+ ALT="$ y^2 = x^3$"></SPAN>; <!-- MATH
+ $\frac{dy}{dt} = 4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="51" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2922.png"
+ ALT="$ \frac{dy}{dt} = 4$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2959.png"
+ ALT="$ y = 8$"></SPAN>.
+
+<P>
+</LI>
+<LI>The side of an equilateral triangle is <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2939.png"
+ ALT="$ 24$"></SPAN> inches long, and is 
+increasing at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN> inches per hour. 
+How fast is the area increasing? 
+
+<P>
+Ans. <!-- MATH
+ $36\sqrt{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2960.png"
+ ALT="$ 36\sqrt{3}$"></SPAN> sq. in. per hour.
+
+<P>
+</LI>
+<LI>Find the rate of change of the area of a square when the side 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$ b$"></SPAN> is increasing at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$ a$"></SPAN> units per second. 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2451.png"
+ ALT="$ 2ab$"></SPAN> sq. units per sec.
+
+<P>
+</LI>
+<LI>(a) The,volume of a spherical soap bubble increases how 
+many times as fast as the radius? 
+(b) When its radius is <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> in. and increasing at the rate of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1463.png"
+ ALT="$ 1/2$"></SPAN> in. per second, how fast is the volume increasing? 
+
+<P>
+Ans. (a) <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img127.png"
+ ALT="$ 4\pi\ r^2$"></SPAN> times as fast; (b) <SPAN CLASS="MATH"><IMG
+ WIDTH="30" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2961.png"
+ ALT="$ 32\pi$"></SPAN> cu. in. per sec.
+
+<P>
+How fast is the surface increasing in the last case?
+
+<P>
+</LI>
+<LI>One end of a ladder <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2295.png"
+ ALT="$ 50$"></SPAN> ft. long is leaning against a 
+perpendicular wall standing on a horizontal plane. Supposing 
+the foot of the ladder to be pulled away from the wall at 
+the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN> ft. per minute; 
+(a) how fast is the top of the ladder descending when 
+the foot is <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2420.png"
+ ALT="$ 14$"></SPAN> ft. from the wall? 
+(b) when will the top and bottom of the ladder move at the same rate? 
+(c) when is the top of the ladder descending at the 
+rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> ft. per minute? 
+
+<P>
+Ans. (a) <!-- MATH
+ $\frac{7}{78}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2962.png"
+ ALT="$ \frac{7}{78}$"></SPAN> ft. per min.; 
+(b) when <!-- MATH
+ $25 \sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1461.png"
+ ALT="$ 25\sqrt{2}$"></SPAN> ft. from wall; 
+(c) when <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2963.png"
+ ALT="$ 40$"></SPAN> ft. from wall.
+
+<P>
+</LI>
+<LI>A barge whose deck is <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2428.png"
+ ALT="$ 12$"></SPAN> ft. below the level of a dock is drawn 
+up to it by means of a cable attached to a ring in the 
+floor of the dock, the cable being hauled in by a windlass 
+on deck at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img595.png"
+ ALT="$ 8$"></SPAN> ft. per minute. 
+How fast is the barge moving towards the dock when <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2407.png"
+ ALT="$ 16$"></SPAN> ft. away? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> ft. per minute.
+
+<P>
+</LI>
+<LI>An elevated car is <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2963.png"
+ ALT="$ 40$"></SPAN> ft. immediately above a surface car, their 
+tracks intersecting at right angles. If the speed of the elevated 
+car is <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2407.png"
+ ALT="$ 16$"></SPAN> miles per hour and of the surface car <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img595.png"
+ ALT="$ 8$"></SPAN> miles per hour, 
+at what rate are the cars separating <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> minutes after they meet? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2964.png"
+ ALT="$ 17.9$"></SPAN> miles per hour.
+
+<P>
+</LI>
+<LI>One ship was sailing south at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img720.png"
+ ALT="$ 6$"></SPAN> miles per hour; another 
+east at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img595.png"
+ ALT="$ 8$"></SPAN> miles per hour. At <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> P.M. the second 
+crossed the track of the first where the first was two hours 
+before; (a) how was the distance between the ships changing 
+at <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN> P.M.? (b) how at <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> P.M.? (c) when was the distance between 
+them not changing? 
+
+<P>
+Ans. (a) Diminishing <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2965.png"
+ ALT="$ 2.8$"></SPAN> miles per hour; 
+(b) increasing <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2966.png"
+ ALT="$ 8.73$"></SPAN> miles per hour; (c) <SPAN CLASS="MATH"><IMG
+ WIDTH="42" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2967.png"
+ ALT="$ 3: 17$"></SPAN> P.M.
+
+<P>
+</LI>
+<LI>Assuming the volume of the wood in a tree to be proportional 
+to the cube of its diameter, and that the latter increases 
+uniformly year by year when growing, show that the rate of growth 
+when the diameter is <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN> ft. is <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2454.png"
+ ALT="$ 36$"></SPAN> times as great as when the 
+diameter is <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img720.png"
+ ALT="$ 6$"></SPAN> inches.
+
+<P>
+</LI>
+<LI>A railroad train is running 15 miles an hour past a station 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2968.png"
+ ALT="$ 800$"></SPAN> ft. long, the track having the form of the parabola
+<!-- MATH
+ $y^2 = 600x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2969.png"
+ ALT="$ y^2 = 600x$"></SPAN>,
+and situated as shown in Figure <A HREF="#fig:train">10.2</A>. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:train"></A><A NAME="23633"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 10.2:</STRONG>
+Train station and the train's trajectory.</CAPTION>
+<TR><TD><TABLE  WIDTH="100%">
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="316" HEIGHT="225" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2970.png"
+ ALT="\includegraphics[height=5cm,width=7cm]{train-station.eps}">
+
+</DIV></TD></TR>
+</TABLE></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+If the sun is just rising in the east, find how fast the shadow 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2971.png"
+ ALT="$ S$"></SPAN> of the locomotive <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img321.png"
+ ALT="$ L$"></SPAN> is moving along the wall of the station 
+at the instant it reaches the end of the wall.
+
+<P>
+Solution. <!-- MATH
+ $y^2 	= 600x$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2969.png"
+ ALT="$ y^2 = 600x$"></SPAN>,
+<!-- MATH
+ $2 y \frac{dy}{dt} 	= 600 \frac{dx}{dt}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="101" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2972.png"
+ ALT="$ 2 y \frac{dy}{dt} = 600 \frac{dx}{dt}$"></SPAN>,
+or <!-- MATH
+ $\frac{dx}{dt} 	= \frac{y}{300} \frac{dy}{dt}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="83" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2973.png"
+ ALT="$ \frac{dx}{dt} = \frac{y}{300} \frac{dy}{dt}$"></SPAN>.
+Substituting this value of <!-- MATH
+ $\frac{dx}{dt}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2974.png"
+ ALT="$ \frac{dx}{dt}$"></SPAN> in
+<!-- MATH
+ $\frac{ds}{dt}
+= \sqrt{\left( \frac{dx}{dt} \right)^2 
++ \left( \frac{dy}{dt} \right)^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="160" HEIGHT="60" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2975.png"
+ ALT="$ \frac{ds}{dt}
+= \sqrt{\left( \frac{dx}{dt} \right)^2
++ \left( \frac{dy}{dt} \right)^2}$"></SPAN>, we get
+<!-- MATH
+ $\left( \frac{ds}{dt} \right)^2
+= \left( \frac{y}{300} \frac{dy}{dt} \right)^2 
++ \left( \frac{dy}{dt} \right)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="193" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2976.png"
+ ALT="$ \left( \frac{ds}{dt} \right)^2
+= \left( \frac{y}{300} \frac{dy}{dt} \right)^2
++ \left( \frac{dy}{dt} \right)^2$"></SPAN>.
+Now <!-- MATH
+ $\frac{ds}{dt} 	= 15$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2977.png"
+ ALT="$ \frac{ds}{dt} = 15$"></SPAN> miles per hour = <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2978.png"
+ ALT="$ 22$"></SPAN> ft. per sec.,
+<SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2979.png"
+ ALT="$ y= 400$"></SPAN> and <!-- MATH
+ $\frac{dy}{dt} = ?$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="46" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2914.png"
+ ALT="$ \frac{dy}{dt} = ?$"></SPAN>.
+Substituting back in the above, we get
+<!-- MATH
+ $( 22 )^2
+= \left( \frac{16}{9} + 1 \right) \left( \frac{dy}{dt} \right)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="166" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2980.png"
+ ALT="$ ( 22 )^2
+= \left( \frac{16}{9} + 1 \right) \left( \frac{dy}{dt} \right)^2$"></SPAN>,
+or, 
+<!-- MATH
+ $\frac{dy}{dt}
+= 13 \frac{1}{5}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2981.png"
+ ALT="$ \frac{dy}{dt}
+= 13 \frac{1}{5}$"></SPAN> ft. per second. 
+
+<P>
+</LI>
+<LI>An express train and a balloon start from the same point at 
+the same instant. The former travels <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2295.png"
+ ALT="$ 50$"></SPAN> miles an hour and the 
+latter rises at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> miles an hour. How fast are 
+they separating? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2982.png"
+ ALT="$ 51$"></SPAN> miles an hour.
+
+<P>
+</LI>
+<LI>A man <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img720.png"
+ ALT="$ 6$"></SPAN> ft. tall walks away from a lamp-post <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> ft. high at 
+the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> miles an hour. How fast does the shadow of his 
+head move? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> miles an hour.
+
+<P>
+</LI>
+<LI>The rays of the sun make an angle of <!-- MATH
+ $30^o = \pi/6$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2983.png"
+ ALT="$ 30^o = \pi/6$"></SPAN> with the 
+horizon. A ball is thrown vertically upward to a height 
+of <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2409.png"
+ ALT="$ 64$"></SPAN> ft. How fast is the shadow of the ball moving along 
+the ground just before it strikes the ground? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2984.png"
+ ALT="$ 110.8$"></SPAN> ft. per sec.
+
+<P>
+</LI>
+<LI>A ship is anchored in <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2418.png"
+ ALT="$ 18$"></SPAN> ft. of water. The cable passes over 
+a sheave on the bow <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img720.png"
+ ALT="$ 6$"></SPAN> ft. above the surface of the water. If 
+the cable is taken in at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN> ft. a second, how fast 
+is the ship moving when there are <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2419.png"
+ ALT="$ 30$"></SPAN> ft. of cable out? 
+
+<P>
+Ans. <!-- MATH
+ $\frac{5}{3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2985.png"
+ ALT="$ \frac{5}{3}$"></SPAN> ft. per sec.
+
+<P>
+</LI>
+<LI>A man is hoisting a chest to a window <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2295.png"
+ ALT="$ 50$"></SPAN> ft. up by means of 
+a block and tackle. If he pulls in the rope at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> ft. 
+a minute while walking away from the building at the rate of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> ft. a minute, how fast is the chest rising at the end of the 
+second minute? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2986.png"
+ ALT="$ 10.98$"></SPAN> ft. per min.
+
+<P>
+</LI>
+<LI>Water flows from a faucet into a hemispherical basin of 
+diameter <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2420.png"
+ ALT="$ 14$"></SPAN> inches at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN> cu. in. per second. 
+How fast is the water rising (a) when the water is halfway to 
+the top? (b) just as it runs over? (The volume of a 
+spherical segment = <!-- MATH
+ $\frac{1}{2} \pi r^2 h + \frac{1}{6} \pi h^3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="104" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2987.png"
+ ALT="$ \frac{1}{2} \pi r^2 h + \frac{1}{6} \pi h^3$"></SPAN>, 
+where <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2435.png"
+ ALT="$ h$"></SPAN> = altitude of segment.)
+
+<P>
+</LI>
+<LI>Sand is being poured on the ground from the orifice of an 
+elevated pipe, and forms a pile which has always the shape of a 
+right circular cone whose height is equal to the radius of the 
+base. If sand is falling at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img720.png"
+ ALT="$ 6$"></SPAN> cu. ft. per sec., 
+how fast is the height of the pile increasing when the height is <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> ft.?
+
+<P>
+</LI>
+<LI>An aeroplane is <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2988.png"
+ ALT="$ 528$"></SPAN> ft. directly above an automobile and starts 
+east at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2064.png"
+ ALT="$ 20$"></SPAN> miles an hour at the same instant the 
+automobile starts east at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2963.png"
+ ALT="$ 40$"></SPAN> miles an hour. 
+How fast are they separating?
+
+<P>
+</LI>
+<LI>A revolving light sending out a bundle of parallel rays is at 
+a distance of <SPAN CLASS="MATH"><IMG
+ WIDTH="10" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1688.png"
+ ALT="$ t$"></SPAN> a mile from the shore and makes <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN> revolution a 
+minute. Find how fast the light is traveling along the straight 
+beach when at a distance of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN> mile from the nearest point of 
+the shore. 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2989.png"
+ ALT="$ 15.7$"></SPAN> miles per min.
+
+<P>
+</LI>
+<LI>A kite is <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2990.png"
+ ALT="$ 150$"></SPAN> ft. high and <SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2046.png"
+ ALT="$ 200$"></SPAN> ft. of string are out. If the 
+kite starts drifting away horizontally at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> 
+miles an hour, how fast is the string being paid out at 
+the start? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2991.png"
+ ALT="$ 2.64$"></SPAN> miles an hour.
+
+<P>
+</LI>
+<LI>A solution is poured into a conical filter of base radius <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img720.png"
+ ALT="$ 6$"></SPAN> cm. 
+and height <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2939.png"
+ ALT="$ 24$"></SPAN> cm. at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img224.png"
+ ALT="$ 2$"></SPAN> cu. cm. a second, and 
+filters out at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN> cu. cm. a second. 
+How fast is the level of the solution rising when 
+(a) one third of the way up? (b) at the top? 
+
+<P>
+Ans. (a) <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2992.png"
+ ALT="$ 0.079$"></SPAN> cm. per sec.; (b) <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2993.png"
+ ALT="$ 0.009$"></SPAN> cm. per sec.
+
+<P>
+</LI>
+<LI>A horse runs <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> miles per hour on a circular track in the 
+center of which is an arc light. How fast will his shadow move 
+along a straight board fence (tangent to the track at the 
+starting point) when he has completed one eighth of the 
+circuit? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2064.png"
+ ALT="$ 20$"></SPAN> miles per hour.
+
+<P>
+</LI>
+<LI>The edges of a cube are <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2939.png"
+ ALT="$ 24$"></SPAN> inches and are increasing at the 
+rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2994.png"
+ ALT="$ 0.02$"></SPAN> in. per minute. At what rate is 
+(a) the volume increasing? 
+(b) the area increasing?
+
+<P>
+</LI>
+<LI>The edges of a regular tetrahedron are <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> inches and are 
+increasing at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2995.png"
+ ALT="$ 0.3$"></SPAN> in. per hour. At what rate 
+is (a) the volume increasing? (b) the area increasing?
+
+<P>
+</LI>
+<LI>An electric light hangs <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2963.png"
+ ALT="$ 40$"></SPAN> ft. from a stone wall. A man is 
+walking <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2428.png"
+ ALT="$ 12$"></SPAN> ft. per second on a straight path <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img971.png"
+ ALT="$ 10$"></SPAN> ft. from 
+the light and perpendicular to the wall. How fast is the man's 
+shadow moving when he is <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2419.png"
+ ALT="$ 30$"></SPAN> ft. from the wall? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2996.png"
+ ALT="$ 48$"></SPAN> ft. per sec.
+
+<P>
+</LI>
+<LI>The approach to a drawbridge has a gate whose two arms 
+rotate about the same axis as shown in the figure. The arm 
+over the driveway is <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img376.png"
+ ALT="$ 4$"></SPAN> yards long and the arm over the footwalk 
+is <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN> yards long. Both arms rotate at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img244.png"
+ ALT="$ 5$"></SPAN> radians 
+per minute. At what rate is the distance between the 
+extremities of the arms changing when they make an angle 
+of <!-- MATH
+ $45^o=\pi/4$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1579.png"
+ ALT="$ 45^o=\pi/4$"></SPAN> with the horizontal? 
+
+<P>
+Ans. <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2939.png"
+ ALT="$ 24$"></SPAN> yd. per min.
+
+<P>
+</LI>
+<LI>A conical funnel of radius <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img369.png"
+ ALT="$ 3$"></SPAN> inches and of the same depth 
+is filled with a solution which filters at the rate of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN> cu. in. 
+per minute. How fast is the surface falling when it is <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$ 1$"></SPAN> 
+inch from the top of the funnel? 
+
+<P>
+Ans. <!-- MATH
+ $\frac{1}{4 \pi}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2997.png"
+ ALT="$ \frac{1}{4 \pi}$"></SPAN> in. per mm.
+
+<P>
+</LI>
+<LI>An angle is increasing at a constant rate. Show that the 
+tangent and sine are increasing at the same rate when the 
+angle is zero, and that the tangent increases eight times 
+as fast as the sine when the angle is <!-- MATH
+ $60^o=\pi/3$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="74" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2946.png"
+ ALT="$ 60^o = \pi/3$"></SPAN>.
+
+<P>
+</LI>
+</OL>
+
+<P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2493"
+  HREF="node134.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2487"
+  HREF="node131.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2483"
+  HREF="node132.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2489"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2491"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2494"
+  HREF="node134.html">Change of variable</A>
+<B> Up:</B> <A NAME="tex2html2488"
+  HREF="node131.html">Rates</A>
+<B> Previous:</B> <A NAME="tex2html2484"
+  HREF="node132.html">The derivative considered as</A>
+ &nbsp; <B>  <A NAME="tex2html2490"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2492"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

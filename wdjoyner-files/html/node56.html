@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Differentiation of a logarithm</TITLE>
+<META NAME="description" CONTENT="Differentiation of a logarithm">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node57.html">
+<LINK REL="previous" HREF="node55.html">
+<LINK REL="up" HREF="node43.html">
+<LINK REL="next" HREF="node57.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1378"
+  HREF="node57.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1372"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1366"
+  HREF="node55.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1374"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1376"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1379"
+  HREF="node57.html">Differentiation of the simple</A>
+<B> Up:</B> <A NAME="tex2html1373"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1367"
+  HREF="node55.html">Differentiation of inverse functions</A>
+ &nbsp; <B>  <A NAME="tex2html1375"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1377"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION007130000000000000000"></A>
+<A NAME="sec:44"></A>
+<BR>
+Differentiation of a logarithm
+</H1>
+
+<P>
+Let<A NAME="tex2html42"
+  HREF="footnode.html#foot6212"><SUP><SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">3</SPAN></SUP></A><!-- MATH
+ $y = log_av$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img948.png"
+ ALT="$ y = log_av$"></SPAN>.
+
+<P>
+Differentiating by the General Rule (&#167;<A HREF="node39.html#sec:31">4.7</A>), considering <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> as the independent variable, we have
+
+<P>
+
+<UL>
+<LI>FIRST STEP. <!-- MATH
+ $\ y + \Delta y 	= \log_a(v + \Delta v)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="170" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img949.png"
+ ALT="$ \ y + \Delta y = \log_a(v + \Delta v)$"></SPAN> .
+</LI>
+<LI>SECOND STEP<A NAME="tex2html43"
+  HREF="footnode.html#foot8487"><SUP><SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">4</SPAN></SUP></A>.
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+ \Delta y &= \log_a(v + \Delta v) - \log_a v\\
+ & = \log_a \left ( \frac{v + \Delta v}{v} \right )\\
+& = \log_a \left ( 1 + \frac{\Delta v}{v} \right ).
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="202" HEIGHT="74" BORDER="0"
+ SRC="img952.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\Delta y &amp;= \log_a(v + \Delta v) - \log_a...
+...&amp; = \log_a \left ( 1 + \frac{\Delta v}{v} \right ).
+\end{array}\end{displaymath}">
+</DIV><P></P>
+by item (8), &#167;<A HREF="node4.html#sec:1">1.1</A>.
+
+<P>
+</LI>
+<LI>THIRD STEP. 
+<P><!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+\frac{\Delta y}{\Delta x} &= \frac{1}{\Delta v} \log_a \left ( 1 + \frac{\Delta v}{v} \right ) \\
+&= \log_a \left ( 1 + \frac{\Delta v}{v} \right )^{\frac{1}{\Delta v}}\\
+ & 	= \frac{1}{v} \log_a \left ( 1 + \frac{\Delta v}{v} \right )^{\frac{v}{\Delta v}}.
+\end{array}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="185" HEIGHT="85" BORDER="0"
+ SRC="img953.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\frac{\Delta y}{\Delta x} &amp;= \frac{1}{\Del...
+...+ \frac{\Delta v}{v} \right )^{\frac{v}{\Delta v}}.
+\end{array}\end{displaymath}">
+</DIV><P></P>
+[Dividing the logarithm by <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> and at the same time multiplying the exponent of the 
+parenthesis by <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> changes the form of the expression but not its value (see 
+item (9), &#167;<A HREF="node4.html#sec:1">1.1</A>.]
+
+<P>
+</LI>
+<LI>FOURTH STEP. <!-- MATH
+ $\frac{dy}{dv} 	= \frac{1}{v} \log_a e$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="95" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img954.png"
+ ALT="$ \frac{dy}{dv} = \frac{1}{v} \log_a e$"></SPAN>.
+[When <!-- MATH
+ $\Delta v \to 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="59" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img955.png"
+ ALT="$ \Delta v \to 0$"></SPAN> <!-- MATH
+ $\frac{\Delta v}{v} \to 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="58" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img956.png"
+ ALT="$ \frac{\Delta v}{v} \to 0$"></SPAN>. Therefore 
+<!-- MATH
+ $\lim_{\Delta v \to 0} \left ( 1 + \frac{\Delta v}{v} \right )^{\frac{v}{\Delta v}} = e$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="177" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img957.png"
+ ALT="$ \lim_{\Delta v \to 0} \left ( 1 + \frac{\Delta v}{v} \right )^{\frac{v}{\Delta v}} = e$"></SPAN>, 
+from &#167;<A HREF="node29.html#sec:23">3.11</A>, placing <!-- MATH
+ $x = \frac{\Delta v}{v}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="56" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img958.png"
+ ALT="$ x = \frac{\Delta v}{v}$"></SPAN>.]
+</LI>
+</UL>
+
+<P>
+Hence
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:A-44"></A><!-- MATH
+ \begin{equation}
+\frac{dy}{dv} 	= \frac{d}{dv} \left ( \log_a v \right ) = \log_a e \cdot \frac{1}{v}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="208" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img959.png"
+ ALT="$\displaystyle \frac{dy}{dv} = \frac{d}{dv} \left ( \log_a v \right ) = \log_a e \cdot \frac{1}{v}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Since <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img320.png"
+ ALT="$ v$"></SPAN> is a function of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and it is required to differentiate <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img960.png"
+ ALT="$ \log_a v$"></SPAN> 
+with respect to <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, we must use formula (<A HREF="node54.html#eqn:A-42">5.1</A>),
+for differentiating a function of a function, namely,
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= \frac{dy}{dv} \cdot \frac{dv}{dx}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="104" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img961.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \frac{dy}{dv} \cdot \frac{dv}{dx}.
+$">
+</DIV><P></P>
+Substituting 
+the value of <!-- MATH
+ $\frac{dy}{dv}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img962.png"
+ ALT="$ \frac{dy}{dv}$"></SPAN> from (<A HREF="#eqn:A-44">5.3</A>), we get
+<P><!-- MATH
+ \begin{displaymath}
+\frac{dy}{dx} 	= \log_a e \cdot \frac{1}{v} \cdot \frac{dv}{dx}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="146" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img963.png"
+ ALT="$\displaystyle \frac{dy}{dx} = \log_a e \cdot \frac{1}{v} \cdot \frac{dv}{dx}.
+$">
+</DIV><P></P>
+Therefore, <!-- MATH
+ $\frac{d}{dx} (\log_a x) 	= \log_s e \cdot \frac{\frac{dv}{dx}}{v}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="165" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img964.png"
+ ALT="$ \frac{d}{dx} (\log_a x) = \log_s e \cdot \frac{\frac{dv}{dx}}{v}$"></SPAN>
+(equation (VIII) above).
+When <SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img965.png"
+ ALT="$ a = e$"></SPAN>, <!-- MATH
+ $\log_a e = log_e e = 1$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="128" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img966.png"
+ ALT="$ \log_a e = log_e e = 1$"></SPAN>, and (VIII) becomes
+<!-- MATH
+ $\frac{d}{dx} (\log v) 	= \frac{\frac{dv}{dx}}{v}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img967.png"
+ ALT="$ \frac{d}{dx} (\log v) = \frac{\frac{dv}{dx}}{v}$"></SPAN> (equation (VIIIa) above).
+
+<P>
+The derivative of the logarithm of a function is equal to the product of 
+the modulus<A NAME="tex2html44"
+  HREF="footnode.html#foot8493"><SUP><SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">5</SPAN></SUP></A>of the system of logarithms and the derivative of the function, divided by the function.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1378"
+  HREF="node57.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html1372"
+  HREF="node43.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html1366"
+  HREF="node55.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html1374"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html1376"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html1379"
+  HREF="node57.html">Differentiation of the simple</A>
+<B> Up:</B> <A NAME="tex2html1373"
+  HREF="node43.html">Rules for differentiating standard</A>
+<B> Previous:</B> <A NAME="tex2html1367"
+  HREF="node55.html">Differentiation of inverse functions</A>
+ &nbsp; <B>  <A NAME="tex2html1375"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html1377"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

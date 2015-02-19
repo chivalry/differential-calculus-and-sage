@@ -1,0 +1,416 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Derivative of the arc in polar coordinates</TITLE>
+<META NAME="description" CONTENT="Derivative of the arc in polar coordinates">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node127.html">
+<LINK REL="previous" HREF="node125.html">
+<LINK REL="up" HREF="node121.html">
+<LINK REL="next" HREF="node127.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2397"
+  HREF="node127.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2391"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2385"
+  HREF="node125.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2393"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2395"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2398"
+  HREF="node127.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html2392"
+  HREF="node121.html">Differentials</A>
+<B> Previous:</B> <A NAME="tex2html2386"
+  HREF="node125.html">Derivative of the arc</A>
+ &nbsp; <B>  <A NAME="tex2html2394"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2396"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001150000000000000000">
+Derivative of the arc in polar coordinates</A>
+</H1>
+
+<P>
+In the derivation which follows
+we shall employ the same figure and the same notation 
+used in &#167;<A HREF="node88.html#sec:67">6.7</A>. 
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+({\rm chord}\ PQY)^2 	= (PR)^2 + (RQ)^2
+  	= (\rho\sin \Delta \theta)^2 +
+(\rho +  \Delta \rho - \rho\cos \Delta \theta)^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="498" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2787.png"
+ ALT="$\displaystyle ({\rm chord}\ PQY)^2 = (PR)^2 + (RQ)^2
+= (\rho\sin \Delta \theta)^2 +
+(\rho + \Delta \rho - \rho\cos \Delta \theta)^2.
+$">
+</DIV><P></P>
+Dividing throughout by <!-- MATH
+ $(\Delta \theta)^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="45" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2788.png"
+ ALT="$ (\Delta \theta)^2$"></SPAN>, we get
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \frac{\mbox{chord} PQ}{\Delta \theta} \right)^2
+= \rho^2 \left( \frac{\sin \Delta \theta}{\Delta \theta} \right)^2 
++ \left( \frac{\Delta \rho}{\Delta \theta} + \rho \cdot 
+\frac{1 - \cos \Delta \theta}{\Delta \theta} \right)^2.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="417" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2789.png"
+ ALT="$\displaystyle \left( \frac{\mbox{chord} PQ}{\Delta \theta} \right)^2
+= \rho^2 ...
+... \theta} + \rho \cdot
+\frac{1 - \cos \Delta \theta}{\Delta \theta} \right)^2.
+$">
+</DIV><P></P>
+Passing to the limit as <!-- MATH
+ $\Delta \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1792.png"
+ ALT="$ \Delta \theta$"></SPAN> diminishes towards zero, 
+we get<A NAME="tex2html123"
+  HREF="footnode.html#foot22547"><SUP><SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">4</SPAN></SUP></A>
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\left( \frac{ds}{d\theta} \right)^2
+= \rho^2 + \left ( \frac{d\rho}{d\theta} \right )^2,
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="169" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2793.png"
+ ALT="$\displaystyle \left( \frac{ds}{d\theta} \right)^2
+= \rho^2 + \left ( \frac{d\rho}{d\theta} \right )^2,
+$">
+</DIV><P></P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:30-91"></A><!-- MATH
+ \begin{equation}
+\frac{ds}{d\theta}= \sqrt{\rho^2 +
+\left ( \frac{d\rho}{d\theta} \right )^2}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="152" HEIGHT="71" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2794.png"
+ ALT="$\displaystyle \frac{ds}{d\theta}= \sqrt{\rho^2 + \left ( \frac{d\rho}{d\theta} \right )^2}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">9</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+In the notation of differentials this becomes
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:31-91"></A><!-- MATH
+ \begin{equation}
+\ ds =
+\left[ \rho^2 + 
+\left( \frac{d\rho}{d\theta} \right)^2 \right]^{\frac{1}{2}} d\theta.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="184" HEIGHT="75" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2795.png"
+ ALT="$\displaystyle \ ds = \left[ \rho^2 + \left( \frac{d\rho}{d\theta} \right)^2 \right]^{\frac{1}{2}} d\theta.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">10</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+These relations between <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1793.png"
+ ALT="$ \rho$"></SPAN> and the differentials 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2785.png"
+ ALT="$ ds$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2796.png"
+ ALT="$ d\rho$"></SPAN>, and <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2797.png"
+ ALT="$ d\theta$"></SPAN> are correctly represented by 
+a right triangle whose hypotenuse is <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2785.png"
+ ALT="$ ds$"></SPAN> and whose sides are 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2796.png"
+ ALT="$ d\rho$"></SPAN> and <!-- MATH
+ $\rho d\theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2798.png"
+ ALT="$ \rho d\theta$"></SPAN>. Then
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+ds = \sqrt{(\rho d\theta)^2 + (d\rho)^2},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="161" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2799.png"
+ ALT="$\displaystyle ds = \sqrt{(\rho d\theta)^2 + (d\rho)^2},
+$">
+</DIV><P></P>
+and dividing by <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2797.png"
+ ALT="$ d\theta$"></SPAN> gives (<A HREF="#eqn:30-91">9.9</A>).
+Denoting by <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1801.png"
+ ALT="$ \psi$"></SPAN> the angle between <SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2796.png"
+ ALT="$ d\rho$"></SPAN> and 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2785.png"
+ ALT="$ ds$"></SPAN>, we get at once
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+\tan \psi = \rho \frac{d\theta}{d\rho},
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="95" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2800.png"
+ ALT="$\displaystyle \tan \psi = \rho \frac{d\theta}{d\rho},
+$">
+</DIV><P></P>
+which is the same as ((<A HREF="node88.html#eqn:A-67">6.12</A>). 
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Find the differential of the arc of the circle <!-- MATH
+ $x^2 + y^2 = r^2$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="92" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1432.png"
+ ALT="$ x^2 + y^2 = r^2$"></SPAN>.
+
+<P>
+Solution. Differentiating, <!-- MATH
+ $\frac{dy}{dx} = -\frac{x}{y}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="72" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1433.png"
+ ALT="$ \frac{dy}{dx} =\ -\frac{x}{y}$"></SPAN>.
+
+<P>
+To find <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2785.png"
+ ALT="$ ds$"></SPAN> in terms of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> we substitute in (<A HREF="node125.html#eqn:90-27">9.6</A>), giving
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+ds
+= \left[ 1 + \frac{x^2}{y^2} \right]^{\frac{1}{2}} dx 
+= \left[ \frac{y^2 + x^2}{y^2} \right]^{\frac{1}{2}} dx 
+= \left[ \frac{r^2}{y^2} \right]^{\frac{1}{2}} dx 
+= \frac{r dy}{\sqrt{r^2 - x^2}}.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="439" HEIGHT="68" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2801.png"
+ ALT="$\displaystyle ds
+= \left[ 1 + \frac{x^2}{y^2} \right]^{\frac{1}{2}} dx
+= \lef...
+...ft[ \frac{r^2}{y^2} \right]^{\frac{1}{2}} dx
+= \frac{r dy}{\sqrt{r^2 - x^2}}.
+$">
+</DIV><P></P>
+To find <SPAN CLASS="MATH"><IMG
+ WIDTH="20" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2785.png"
+ ALT="$ ds$"></SPAN> in terms of <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$ y$"></SPAN> we substitute in (<A HREF="node125.html#eqn:28-90">9.7</A>), giving
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+ds
+= \left[ 1 + \frac{y^2}{x^2} \right]^{\frac{1}{2}} dy 
+= \left[ \frac{x^2 + y^2}{x^2} \right]^{\frac{1}{2}} dy 
+= \left[ \frac{r^2}{x^2} \right]^{\frac{1}{2}} 
+= \frac{r dy}{\sqrt{r^2 - y^2}}. 
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="421" HEIGHT="68" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2802.png"
+ ALT="$\displaystyle ds
+= \left[ 1 + \frac{y^2}{x^2} \right]^{\frac{1}{2}} dy
+= \lef...
+...left[ \frac{r^2}{x^2} \right]^{\frac{1}{2}}
+= \frac{r dy}{\sqrt{r^2 - y^2}}.
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">9</SPAN>.<SPAN CLASS="arabic">5</SPAN>.<SPAN CLASS="arabic">2</SPAN></B> &nbsp; Find the differential of the arc of the cardioid 
+<!-- MATH
+ $\rho = a(l -\cos\theta)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="111" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2803.png"
+ ALT="$ \rho = a(l -\cos\theta)$"></SPAN> in terms of <SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img562.png"
+ ALT="$ \theta$"></SPAN>.
+
+<P>
+Solution. Differentiating, <!-- MATH
+ $\frac{d\rho}{d\theta} = a \sin \theta$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="84" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2804.png"
+ ALT="$ \frac{d\rho}{d\theta} = a \sin \theta$"></SPAN>.
+
+<P>
+Substituting in (<A HREF="#eqn:31-91">9.10</A>), gives
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+ds
+= [ a^2(1 - \cos \theta)^2+ a^2 \sin^2 \theta ]^{\frac{1}{2}} d\theta 
+= a [2 - 2\cos \theta]^{\frac{1}{2}} d\theta 
+= a \left [ 4 \sin^2 \frac{\theta}{2} \right ]^{\frac{1}{2}} d\theta 
+= 2a \sin \frac{\theta}{2} d\theta.
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="602" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2805.png"
+ ALT="$\displaystyle ds
+= [ a^2(1 - \cos \theta)^2+ a^2 \sin^2 \theta ]^{\frac{1}{2}}...
+...\theta}{2} \right ]^{\frac{1}{2}} d\theta
+= 2a \sin \frac{\theta}{2} d\theta.
+$">
+</DIV><P></P></DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2397"
+  HREF="node127.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2391"
+  HREF="node121.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2385"
+  HREF="node125.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2393"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2395"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2398"
+  HREF="node127.html">Exercises</A>
+<B> Up:</B> <A NAME="tex2html2392"
+  HREF="node121.html">Differentials</A>
+<B> Previous:</B> <A NAME="tex2html2386"
+  HREF="node125.html">Derivative of the arc</A>
+ &nbsp; <B>  <A NAME="tex2html2394"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2396"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>

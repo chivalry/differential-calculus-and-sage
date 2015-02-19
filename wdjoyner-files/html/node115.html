@@ -1,0 +1,515 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Examining a function for extremal values: second method</TITLE>
+<META NAME="description" CONTENT="Examining a function for extremal values: second method">
+<META NAME="keywords" CONTENT="calculus1-with-sage">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="calculus1-with-sage.css">
+
+<LINK REL="next" HREF="node116.html">
+<LINK REL="previous" HREF="node114.html">
+<LINK REL="up" HREF="node109.html">
+<LINK REL="next" HREF="node116.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html2236"
+  HREF="node116.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2230"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2224"
+  HREF="node114.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2232"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2234"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2237"
+  HREF="node116.html">Problems</A>
+<B> Up:</B> <A NAME="tex2html2231"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2225"
+  HREF="node114.html">Examining a function for</A>
+ &nbsp; <B>  <A NAME="tex2html2233"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2235"
+  HREF="node178.html">Index</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001060000000000000000"></A> 
+<A NAME="sec:84"></A>
+<BR>
+Examining a function for extremal values: second method
+</H1>
+
+<P>
+From (<A HREF="node113.html#eqn:19-82">8.1</A>), it is clear that in the vicinity of a maximum value of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN>, in 
+passing along the graph from left to right,
+<SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$ f'(x)$"></SPAN> changes from <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2335.png"
+ ALT="$ +$"></SPAN> to <SPAN CLASS="MATH">0</SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2336.png"
+ ALT="$ -$"></SPAN>.
+Hence <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$ f'(x)$"></SPAN> is a decreasing function, and by &#167;<A HREF="node112.html#sec:81">8.3</A> we know that its derivative, i.e. the second derivative (<SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2348.png"
+ ALT="$ = f''(x)$"></SPAN>)
+of the function itself, is negative or zero.
+
+<P>
+Similarly, we have, from (<A HREF="node113.html#eqn:20-82">8.2</A>), that in the vicinity of a minimum value of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN>
+<SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$ f'(x)$"></SPAN> changes from <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2336.png"
+ ALT="$ -$"></SPAN> to <SPAN CLASS="MATH">0</SPAN> to <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2335.png"
+ ALT="$ +$"></SPAN>.
+Hence <SPAN CLASS="MATH"><IMG
+ WIDTH="40" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$ f'(x)$"></SPAN> is an increasing function and by &#167;<A HREF="node112.html#sec:81">8.3</A> it follows that <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2349.png"
+ ALT="$ f''(x)$"></SPAN> is positive or zero.
+
+<P>
+The student should observe that <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2349.png"
+ ALT="$ f''(x)$"></SPAN> is positive not only 
+at minimum values but also at ``nearby'' points, <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img251.png"
+ ALT="$ P$"></SPAN> say, to
+the right of such a critical point. For, as a point 
+passes through P in moving from left to right,
+slope <!-- MATH
+ $= \tan \tau = \frac{dy}{dx} = f'(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="151" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2350.png"
+ ALT="$ = \tan \tau = \frac{dy}{dx} = f'(x)$"></SPAN> is an increasing function.
+At such a point the curve is said to be <I>concave upwards</I>.
+<A NAME="18681"></A>
+Similarly, <SPAN CLASS="MATH"><IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2349.png"
+ ALT="$ f''(x)$"></SPAN> is negative not only at maximum points 
+but also at ``nearby ''points, <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img695.png"
+ ALT="$ Q$"></SPAN> say, to the left of such
+a critical point. For, as a point passes through <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img695.png"
+ ALT="$ Q$"></SPAN>,
+slope <!-- MATH
+ $= \tan \tau = \frac{dy}{dx} = f'(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="151" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2350.png"
+ ALT="$ = \tan \tau = \frac{dy}{dx} = f'(x)$"></SPAN> is a decreasing function.
+At such a point the curve is said to be <I>concave downwards</I>.
+
+<P>
+At a point where the curve is concave upwards we sometimes say that 
+the curve has a ``positive bending,]] and where it is concave 
+downwards a ``negative bending.''
+
+<P>
+We may then state the sufficient conditions for maximum and minimum 
+values of <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> for certain values of the variable as follows:
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:84-21"></A><!-- MATH
+ \begin{equation}
+f(x)\ {\rm is\ a\ maximum\ if\ }f'(x) = 0\ {\rm and}\ f''(x)
+=\ {\rm a\ negative\ number}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="460" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2351.png"
+ ALT="$\displaystyle f(x)\ {\rm is\ a\ maximum\ if\ }f'(x) = 0\ {\rm and}\ f''(x) =\ {\rm a\ negative\ number}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><A NAME="eqn:84-22"></A><!-- MATH
+ \begin{equation}
+f(x)\ {\rm is\ a\ minimum\ if}\ f'(x) = 0\ {\rm and}\ f''(x)
+=\ {\rm a\ positive\ number}.
+\end{equation}
+ -->
+<TABLE CLASS="equation" CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="453" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2352.png"
+ ALT="$\displaystyle f(x)\ {\rm is\ a\ minimum\ if}\ f'(x) = 0\ {\rm and}\ f''(x) =\ {\rm a\ positive\ number}.$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">4</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Following is the corresponding working rule.
+
+<P>
+
+<UL>
+<LI>FIRST STEP. Find the first derivative of the function.
+
+<P>
+</LI>
+<LI>SECOND STEP. Set the first derivative equal to zero and 
+solve the resulting equation for real roots in order to find 
+the critical values of the variable.
+
+<P>
+</LI>
+<LI>THIRD STEP. Find the second derivative.
+
+<P>
+</LI>
+<LI>FOURTH STEP. Substitute each critical value for the variable in 
+the second derivative. If the result is negative, then the 
+function is a maximum for that critical value; if the result 
+is positive, the function is a minimum.
+
+<P>
+</LI>
+</UL>
+
+<P>
+When <!-- MATH
+ $f''(x) = 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="73" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2353.png"
+ ALT="$ f''(x) = 0$"></SPAN>, or does not exist, the above process fails, 
+although there may even then be a maximum or a minimum; in 
+that case the first method given in the last section still 
+holds, being fundamental. Usually this second method does 
+apply, and when the process of finding the second derivative 
+is not too long or tedious, it is generally the shortest method.
+
+<P>
+<P>
+<DIV><B>Example  <SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">6</SPAN>.<SPAN CLASS="arabic">1</SPAN></B> &nbsp; Let us now apply the above rule to test analytically the function
+
+<P>
+<P><!-- MATH
+ \begin{displaymath}
+M = x^2 + \frac{432}{x}
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="106" HEIGHT="50" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2354.png"
+ ALT="$\displaystyle M = x^2 + \frac{432}{x}
+$">
+</DIV><P></P>
+found in Example <A HREF="node110.html#ex:box">8.1.2</A>. 
+<P>
+Solution. <!-- MATH
+ $f(x) =\ x^2 + \frac{432}{x}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="120" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2355.png"
+ ALT="$ f(x) =\ x^2 + \frac{432}{x}$"></SPAN>.
+
+<P>
+First step. <!-- MATH
+ $f'(x) 	=\ 2x - \frac{432}{x^2}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="126" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2356.png"
+ ALT="$ f'(x) =\ 2x - \frac{432}{x^2}$"></SPAN>.
+
+<P>
+Second step. <!-- MATH
+ $2x - \frac{432}{x^2} 	=\ 0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="98" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2357.png"
+ ALT="$ 2x - \frac{432}{x^2} =\ 0$"></SPAN>.
+
+<P>
+Third step. <!-- MATH
+ $f''(x) 	=\ 2 + \frac{864}{x^3}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="120" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2358.png"
+ ALT="$ f''(x) =\ 2 + \frac{864}{x^3}$"></SPAN>.
+
+<P>
+Fourth step. <!-- MATH
+ $f''(6) 	=\ +$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2359.png"
+ ALT="$ f''(6) =\ +$"></SPAN>. Hence <!-- MATH
+ $f(6) = 108$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="79" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2360.png"
+ ALT="$ f(6) = 108$"></SPAN>, 
+minimum value.
+
+<P>
+In <I CLASS="sans">SAGE</I>:
+
+<P>
+<P>
+<PRE>[fontsize=\small,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+
+sage: x = var("x")
+sage: f(x) = x^2 + 432/x
+sage: f1(x) = diff(f(x),x); f1(x)
+2*x - 432/x^2
+sage: f2(x) = diff(f(x),x,2); f2(x)
+864/x^3 + 2
+sage: crit_pts = solve(f1(x) == 0,x); crit_pts
+[x == 3*sqrt(3)*I - 3, x == -3*sqrt(3)*I - 3, x == 6]
+sage: x0 = crit_pts[2].rhs(); x0
+6
+sage: f2(x0)
+6
+sage: f(x0)
+108
+</PRE>
+
+This tells us that <SPAN CLASS="MATH"><IMG
+ WIDTH="50" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2361.png"
+ ALT="$ x_0=6$"></SPAN> is a critical point and that <!-- MATH
+ $f''(x_0)>0$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="80" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2362.png"
+ ALT="$ f''(x_0)&gt;0$"></SPAN>,
+so it is a minimum.
+
+<P></DIV><P></P>
+
+<P>
+The work of finding maximum and minimum values may 
+frequently be simplified by the aid of the following 
+principles, which follow at once from our discussion of the subject.
+
+<P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>The maximum and minimum values of a continuous function must occur alternately,
+
+<P>
+</DD>
+<DT>(b)</DT>
+<DD>When <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2363.png"
+ ALT="$ c$"></SPAN> is a positive constant, <!-- MATH
+ $c \cdot f(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2364.png"
+ ALT="$ c \cdot f(x)$"></SPAN> is a maximum 
+or a minimum for such values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>, and such only, as make <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> 
+a maximum or a minimum.
+
+<P>
+Hence, in determining the critical values of x and testing for maxima and 
+minima, any constant factor may be omitted.
+
+<P>
+When <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2363.png"
+ ALT="$ c$"></SPAN> is negative, <!-- MATH
+ $c \cdot f(x)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2364.png"
+ ALT="$ c \cdot f(x)$"></SPAN> is a maximum when <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> is 
+a minimum, and conversely.
+
+<P>
+</DD>
+<DT>(c)</DT>
+<DD>If <SPAN CLASS="MATH"><IMG
+ WIDTH="11" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2363.png"
+ ALT="$ c$"></SPAN> is a constant, <SPAN CLASS="MATH"><IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$ f(x)$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="62" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2365.png"
+ ALT="$ c + f(x)$"></SPAN>
+have maximum and minimum values for the same values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN>.
+
+<P>
+Hence a constant term may be omitted when finding critical values of 
+<SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x$"></SPAN> and testing.
+</DD>
+</DL>
+
+<P>
+In general we must first construct, from the conditions given in 
+the problem, the function whose maximum and minimum values are 
+required, as was done in the two examples worked out 
+in &#167;<A HREF="node110.html#sec:79">8.1</A>. This is sometimes a problem of considerable difficulty. No rule 
+applicable in all cases can be given for constructing the 
+function, but in a large number of problems we may be guided by the following
+
+<P>
+General directions.
+
+<P>
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>Express the function whose maximum or minimum is involved in the problem.
+
+<P>
+</DD>
+<DT>(b)</DT>
+<DD>If the resulting expression contains more than only variable, 
+the conditions of the problem will furnish enough relations 
+between the variables so that all may be expressed in terms of a single one.
+
+<P>
+</DD>
+<DT>(c)</DT>
+<DD>To the resulting function of a single variable apply one of 
+our two rules for finding maximum and minimum values.
+
+<P>
+</DD>
+<DT>(d)</DT>
+<DD>In practical problems it is usually easy to tell which 
+critical value will give a maximum and which a minimum value, 
+so it is not always necessary to apply the fourth step of our rules.
+
+<P>
+</DD>
+<DT>(e)</DT>
+<DD>Draw the graph of the function in order to check the work.
+
+<P>
+</DD>
+</DL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2236"
+  HREF="node116.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html2230"
+  HREF="node109.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html2224"
+  HREF="node114.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A> 
+<A NAME="tex2html2232"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents" SRC="contents.png"></A> 
+<A NAME="tex2html2234"
+  HREF="node178.html">
+<IMG WIDTH="43" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="index" SRC="index.png"></A> 
+<BR>
+<B> Next:</B> <A NAME="tex2html2237"
+  HREF="node116.html">Problems</A>
+<B> Up:</B> <A NAME="tex2html2231"
+  HREF="node109.html">Maxima, minima and inflection</A>
+<B> Previous:</B> <A NAME="tex2html2225"
+  HREF="node114.html">Examining a function for</A>
+ &nbsp; <B>  <A NAME="tex2html2233"
+  HREF="node1.html">Contents</A></B> 
+ &nbsp; <B>  <A NAME="tex2html2235"
+  HREF="node178.html">Index</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+david joyner
+2008-08-11
+</ADDRESS>
+</BODY>
+</HTML>
