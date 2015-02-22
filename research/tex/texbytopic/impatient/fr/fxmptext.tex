@@ -1,0 +1,452 @@
+~% This is part of the book TeX for the Impatient.
+~% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+~% Copyright (C) 2004 Marc Chaudemanche pour la traduction française.
+~% See file fdl.tex for copying conditions.
+% TeX ignores anything on a line after a %
+% The next two lines define fonts for the title
+\font\xmplbx = cmbx10 scaled \magstephalf
+\font\xmplbxti = cmbxti10 scaled \magstephalf
+% Now here's the title.
+\leftline{\xmplbx Exemple !xmpnum:\quad\xmplbxti Saisir du texte simple}
+\vglue .5\baselineskip % skip an extra half line
+~\count255 = \pageno
+~\xdef\examplepage{\number\count255}
+~\markinfo{Exemple 1~: Saisir du texte simple}
+~\ifrewritetocfile
+~\write\tocfile{\string\tocsectionentry{Saisir du texte simple}{}{\examplepage}}%
+~\fi
+~^^{notes de pied de page} ^^{commentaires} ^^{ponctuation} ^^{marques de citation}
+~^^{caract\`eres espace} ^^{tirets} ^^{paragraphes//terminer un}
+~\edef\examplepageno{\number\count255}%
+Il est simple de pr\'eparer un texte ordinaire pour \TeX\ puisque
+\TeX\ n'a pas besoin de savoir comment couper les lignes dans
+votre source. Il traite la fin d'une ligne comme un espace%
+\footnote \dag{\TeX\ traite aussi une tabulation	comme un espace, comme
+vous le voyez dans ce {\it pied de page}.}.   Si vous ne voulez pas
+d'espace ici, mettez un signe de pour%
+centage (le caract\`ere de commentaire) \`a la fin de la ligne.
+   \TeX\ ignore les espaces en d\'ebut de ligne, et traite
+plusieurs          espaces     comme un seul,
+m\^eme apr\`es un point.      Vous indiquez un nouveau paragraphe en
+sautant une ligne (ou plus d'une ligne).
+
+Quand \TeX\ voit un point suivi d'un espace (ou de la fin de la
+ligne, ce qui est \'equivalent), il pense normalement que vous avez
+fini une phrase et ins\`ere un petit espace suppl\'ementaire apr\`es le
+point.  Il traite les points d'interrogation et d'exclamation de la
+m\^eme mani\`ere.   
+
+  Mais les r\`egles de \TeX\ pour rep\'erer un point ont parfois besoin
+de r\'eglage. \TeX\ pense qu'une lettre capitale avant un point
+ne termine pas une phrase, donc vous devez faire quelque chose de
+l\'eg\`erement diff\'erent si, disons, vous \'ecrivez en parlant d'ADN\null.  
+% Le \null emp\`eche TeX de percevoir la capitale `N'
+% comme \'etant suivie du point.
+C'est une bonne id\'ee de relier des mots ensemble dans des r\'ef\'erences
+comme ``voir fig.~8'' et dans des noms comme V.~I\null. L\'enine et dans
+$\ldots$ pour que \TeX\ ne puise jamais les couper \`a un mauvais endroit
+entre deux lignes.  (Les trois points indiquent une ellipse.)
+
+Vous pouvez mettre des citations entre des paires de simples
+``quotes'' gauches et droites pour avoir les bonnes marques de
+citation doubles gauches et droites.  ``pour des marques de citation
+simple et double adjacentes, ins\'erez un `espace fin'\thinspace''. Vous
+pouvez avoir des tirets demi-cadratins--comme ceci, et des tirets 
+cadratins---comme cela.
+
+\bye % end the document
+:::
+\xmpheader !xmpnum/{Indentation}% !xmpheaddef
+~^^{indentation} ^^{marges} ^^{paragraphes//\'etroit}
+\noindent Maintenant, regardons comment contr\^oler l'indentation. 
+Si un traitement de texte sait le faire, \TeX\ le sait s\^urement. 
+Notez que ce paragraphe n'est pas indent\'e.
+
+Habituellement, on veut soit indenter les paragraphes, soit
+laisser de l'espace suppl\'ementaire entre eux. Comme nous n'avons
+rien chang\'e maintenant, ce paragraphe est indent\'e.
+
+{\parindent = 0pt \parskip = 6pt
+% l'accolade gauche d\'ebute un groupe contenant le texte non indent\'e
+Faisons ces deux paragraphes d'une mani\`ere diff\'erente,
+sans indentation et avec six points suppl\'ementaires
+entre eux.
+
+Voici un autre paragraphe, compos\'e sans indentation. Si nous 
+ne mettons pas d'espace entre ces paragraphes, Nous aurons du mal
+\`a savoir o\`u finit l'un et o\`u commence l'autre.
+\par % Le paragraphe *doit* \^etre termin\'e dans le groupe.
+}% L'accolade droite termine le groupe contenant du texte nin indent\'e.
+
+Il est aussi possible d'indenter les deux cot\'es de paragraphes entiers
+Les trois paragraphes suivants illustrent cela~:
+\smallskip % Procure un peu d'espace suppl\'ementaire ici.
+% Skips like this and \vskip below end a paragraph.
+{\narrower
+``Nous avons indent\'e ce paragraphe des deux cot\'es d'une indentation de
+paragraphe. C'est souvent un bon moyen de pr\'esenter de longues citations
+
+``Vous  pouvez faire plusieurs paragraphes de cette fa\c con si vous 
+le voulez. C'est le second paragraphe indent\'e simplement.''\par}
+
+{\narrower \narrower Vous pouvez m\^eme faire des paragraphes 
+doublement indent\'es si vous en avez besoin. Ceci en est un 
+exemple.\par}
+\vskip 1pc % Saut vers le bas d'un pica pour s\'eparation visuelle.
+Dans ce paragraphe, nous revenons aux marges normales, comme vous
+pouvez le voir. Rallongeons la sauce pour que les marges soient 
+clairement visibles.
+
+{\leftskip .5in Maintenant, nous indentons la marge de gauche d'un 
+demi pouce et laissons la marge droite \`a sa position usuelle\par}
+{\rightskip .5in Finalement, nous indentons la marge droite d'un 
+demi pouce et laissons la marge gauche \`a sa position usuelle.\par}
+\bye % end the document
+:::
+\xmpheader !xmpnum/{Polices et caract\`eres sp\'eciaux}% !xmpheaddef
+\chardef \\ = `\\ % Let \\ denote a backslash.
+~^^{polices} ^^{caract\`eres//sp\'eciaux} ^^{accents}
+~^^{symboles musicaux} ^^{couleurs de carte \`a jouer}
+~^^|$| ^^|&| ^^|#| ^^|_| ^^|%| ^^|^| ^^|~| ^^|{| ^^|}| \indexchar \
+{\it Voici quelques mots en police italique}, {\bf quelques 
+autres en police grasse}, {\it et un\/ {\bf m\'elange} 
+des deux, avec trois\/ {\rm mots en romain} ins\'er\'es}.
+Quand une police italique est suivie par une non italique, on 
+ins\`ere une ``correction d'italique'' ({\tt \\/}) pour que 
+l'espacement rende bien.
+Voici un mot plus {\sevenrm petit}---mais les polices standard
+de \TeX\ ne vous en donneront pas de plus petit que {\fiverm celui-l\`a}.
+
+Si vous voulez un de ces dix caract\`eres~:
+\medskip
+\centerline{\$ \quad \& \quad \# \quad \_ \quad \% \quad
+   \char `\^ \quad \char `\~ \quad $\{$ \quad
+   $\}$ \quad $\backslash$}
+% Le \quad ins\`ere un espace cadratin entre les caract\`eres.
+\medskip
+\noindent  vous devez les \'ecrire d'une mani\`ere sp\'eciale. Regardez 
+la page d'en face pour savoir comment.
+\TeX\ a les accents et les lettres dont vous avez besoin
+pour des mots fran\c cais comme {\it r\^ ole\/} et  {\it \'
+el\` eve\/}, pour des mots allemands comme {\it Schu\ss\/}
+aussi bien que pour des mots de plein d'autres langues.
+Vous trouverez une liste compl\`ete des accents de \TeX\ et des lettres 
+de langues Europ\'eennes \`a la !xrefdelim[fornlets] et \`a la !xrefdelim[accents].
+
+Vous trouverez aussi des lettres Grecques comme ``$\alpha$'' et
+``$\Omega$'' pour les utiliser en math\'ematique, des couleurs de carte 
+comme ``$\spadesuit$'' et ``$\diamondsuit$'', des symboles de musique
+comme ``$\sharp$'' et ``$\flat$'', et plein d'autres symboles
+sp\'eciaux dont vous trouverez la liste \`a la !xrefdelim[specsyms].
+\TeX\ n'acceptera ces sortes de symboles sp\'eciaux que dans son
+``mode math\'ematique'', donc vous devez les entourer
+entre caract\`eres `{\tt \$}'.
+\bye % end the document
+:::
+\xmpheader !xmpnum/{Espacement interligne}% !xmpheaddef
+~^^{espacement//inter-ligne} ^^{lignes de base}
+\baselineskip = 2\baselineskip % double spacing
+\parskip = \baselineskip % Skip a line between paragraphs.
+\parindent = 3em % Increase indentation of paragraphs.
+
+% The following macro definition gives us nice inline
+% fractions.  You'll find it in our eplain macros.
+\def\frac#1/#2{\leavevmode
+   \kern.1em \raise .5ex \hbox{\the\scriptfont0 #1}%
+   \kern-.1em $/$%
+   \kern-.15em \lower .25ex \hbox{\the\scriptfont0 #2}%
+}%
+
+Un jour, vous voudrez imprimer un document avec de l'espace
+suppl\'ementaire entre les lignes. Par exemple, les actes du congr\`es
+sont imprim\'es ainsi pour que les l\'egislateurs puissent les annoter.
+Pour la m\^eme raison, les \'editeurs insistent habituellement pour que 
+les manuscrits aient un espacement double. L'espacement double est n\'eammoins
+rarement appropri\'e pour les documents finis.
+
+Une ligne de base est une ligne imaginaire qui agit comme les
+lignes horizontales d'un papier quadrill\'e. Vous pouvez contr\^oler
+l'espacement interligne---ce que les imprimeurs appellent 
+``interlignage''---en fixant la taille de l'espace entre les lignes de
+base. Regardez la source pour voir comment faire. Vous pouvez
+utiliser la m\^eme m\'ethode pour un espacement de $1\;1/2$, en mettant
+{\tt 1.5} au lieu de {\tt 2}. (Vous pouvez aussi \'ecrire $1\frac 1/2$
+d'une meilleure fa\c con.)
+% Here we've used the macro definition given above.
+
+Pour cet exemple, nous avons aussi augment\'e l'indentation de 
+paragraphe et saut\'e une ligne de plus entre les paragraphes.
+\bye % end the document
+:::
+\xmpheader !xmpnum/{Espacement, traits et bo\^\i tes}% !xmpheaddef
+~^^{listes de description} ^^{\boites//dessiner des} ^^{barre de r\'evision}
+Voici un exemple de ``liste descriptive''. En pratique vous
+feriez mieux de creer une macro pour avoir des constructions r\'ep\'etitives
+et \^etre s\^ur que la largeur des sous-titres soit suffisament grande~:
+\bigskip
+% Call the indentation for descriptions \descindent
+% and set it to 8 picas.
+\newdimen\descindent \descindent = 9pc
+% Indent paragraphs by \descindent.
+% Skip an additional half line between paragraphs.
+{\noindent \leftskip = \descindent  \parskip = .5\baselineskip
+% Move the description to the left of the paragraph.
+\llap{\hbox to \descindent{\bf La reine de C\oe ur\hfil}}%
+Une femme \`a moiti\'e folle, prompte a d\'eclarer ``coupez-lui
+la t\^ete~!!''\ \`a la moindre provocation.\par
+\noindent\llap{\hbox to \descindent{\bf Le chat de Cheshire\hfil}}%
+Un chat avec un \'enorme sourire qu'Alice trouve
+dans un arbre.\par
+\noindent\llap{\hbox to \descindent{\bf La tortue Mock\hfil}}%
+une cr\'eature larmoyante, un peu menteuse, qui \'etait un
+compagnon du Gryphon.  R\'eput\'e \^etre l'ingr\'edient principal
+de la soupe de tortue Mock.
+\par}
+\bigskip\hrule\bigskip % A line with vertical space around it.
+Voici un exemple de mots dans une bo\^\i te trac\'ee, comme
+Lewis Carroll l'a \'ecrite~:
+\bigskip
+% Put 8pt of space between the text and the surrounding rules.
+\hbox{\vrule\vbox{\hrule
+   \hbox spread 8pt{\hfil\vbox spread 8pt{\vfil
+      \hbox{Who would not give all else for twop}%
+      \hbox{ennyworth only of Beautiful Soup?}%
+   \vfil}\hfil}
+\hrule}\vrule}%
+
+\bigskip\line{\hfil\hbox to 3in{\leaders\hbox{ * }\hfil}\hfil}
+\bigskip
+
+\line{\hskip -4pt\vrule\hfil\vbox{
+Ici, nous obtenons l'effet d'une barre de r\'evision sur le texte
+de ce paragraphe. La barre de r\'evision indique un changement.}}
+\bye % end the document
+:::
+\xmpheader !xmpnum/{Odds and ends}% !xmpheaddef
+~^^{c\'esure} ^^{th\'eor\`emes} ^^{lemmes} ^^{listes d'\'el\'ements}
+~^^{justification \`a gauche} ^^{justification \`a droite} ^^{centrage}
+\chardef \\ = `\\ % Let \\ denote a backslash.
+\footline{\hfil{\tenit - \folio -}\hfil}
+~\global\footline{\hfil{\tenit - \folio\ -}\hfil}
+% \footline provides a footer line.
+% Here it's a centered, italicized page number.
+\TeX\ sait couper les mots, mais n'est pas infaillible.
+Si vous discutez de l'ingr\'edient chimique
+${\it 5}$-[p-(Flouro\-sul\-fonyl)ben\-zoyl]-l,%
+$N^6$-ethe\-no\-adeno\-sine
+et que \TeX\ se plaint aupr\`es de vous d'un ``overfull hbox'', essayez
+d'ins\'erer des ``c\'esures discr\'etionnaires''. La notation
+`{\tt \\-}' indique \`a \TeX\ les c\'esures  dis\-cr\'e\-tionnaire,
+qui sont celles qui n'auraient pas \'et\'e ins\'er\'es autrement.
+\medskip
+{\raggedright   Vous pouvez composer un texte non justifi\'e, c'est-\`a-dire, 
+avec une marge droite non align\'ee. Comme utrefois, avant que les traitements 
+de texte soient communs, les document tap\'es \`a la machine parce qu'il n'y 
+avait pas de solution pratique.
+Certaines personnes pr\'ef\`erent que le texte ne soit pas justifi\'e
+parce que l'espacement entre les mots est uniforme. La plupart des
+livres sont fait avec des marges justifi\'ees, mais pas tous. \par}
+
+\proclaim Assertion 27. Il y a un moyen simple de composer
+les en-t\^etes d'asser\-tions, lemmes, th\'eor\`emes, etc.
+
+Voici un exemple de comment composer une liste d'items \`a deux 
+niveaux de profondeur.  Si vous avez besoin de niveaux suppl\'ementaires,
+vous devrez les programmer vous-m\^eme, h\'elas.
+\smallskip
+\item {1.} Voici le premier item.
+\item {2.} Voici le second item.  Il est constitu\'e de deux
+paragraphes.  Nous avons indent\'e le second paragraphe pour que
+vous puissiez voir facilement o\`u il commence.
+
+\item{} \indent Le second paragraphe a trois sous-items
+sous lui.
+\itemitem {(a)} Voici le premier sous-item.
+\itemitem {(b)} Voici le second sous-item.
+\itemitem {(c)} Voici le troisi\`eme sous-item.
+\item {$\bullet$} Ceci est un \'etrange item parce qu'il est
+compl\`etement diff\'erent des autres.
+\smallskip
+\leftline{Voici une ligne justifi\'ee \`a gauche.$\Leftarrow$}
+\rightline{$\Rightarrow$Voici une ligne justifi\'ee \`a droite.}
+\centerline{$\Rightarrow$Voici une ligne centr\'ee.$\Leftarrow$}
+% Don't try to use these commands within a paragraph.
+\bye % end the document
+:::
+\xmpheader !xmpnum/{Utiliser des polices venant d'ailleurs}% !xmpheaddef
+~\xrdef{palatino}
+~\idxref{police Palatino}
+~\idxref{Zapf, Hermann}
+~\idxref{police Computer Modern} ^^{\Metafont}
+\font\tenrm = pplr % Palatino
+%\font\tenrm = pnss10 % lucida
+% Define a macro for invoking Palatino.
+\def\pal{\let\rm = \tenrm \baselineskip=12.5pt \rm}
+\pal % Use Palatino from now on.
+
+Vous n'\^etes pas restreint \`a la police Computer Modern qui est 
+fournie avec \TeX. D'autres polices sont possibles provenant d'autres 
+sources et vous pouvez les pr\'ef\'erer. Par exemple, nous avons 
+compos\'e cette page en Palatino Romain 10 points. Palatino a \'et\'e 
+dessin\'ee par Hermann Zapf, consid\'er\'e comme un des plus grand 
+typographe du vingti\`eme si\`ecle. Cette page vous donnera une id\'ee 
+de ce \`a quoi elle ressemble.
+
+Les polices peuvent provenir soit sous forme vectorielles soit de 
+bitmaps. Une police vectorielle d\'ecrit le dessin des caract\`eres, 
+tandis qu'une bitmap sp\'ecifie chaque pixel (point) qui forme chaque 
+caract\`ere. Une police vectorielle peut \^etre utilis\'ee pour 
+g\'en\'erer diff\'e\-rentes tailles de la m\^eme police. Le programme 
+Metafont qui est associ\'e \`a \TeX\ procure un moyen 
+particuli\`erement puissant de g\'en\'erer des polices bitmap, mais ce 
+n'est pas le seul moyen.
+
+Le fait qu'une seule routine puisse g\'en\'erer un grand \'eventail de 
+tailles de point pour une police tente beaucoup de vendeurs de polices 
+digitales de ne produire qu'une taille de vectorielles pour une police 
+comme Palatino Romain. Cela semble une d\'ecision \'economiquement 
+sensible, mais c'est un sacrifice esth\'etique. Une police ne peut pas 
+\^etre agrandie et r\'etr\'ecie lin\'eairement sans perdre en 
+qualit\'e. Les grandes lettres ne doivent pas, en g\'en\'eral, avoir 
+les m\^emes proportions que les plus petites. Cela ne rend simplement 
+pas beau. Par exemple, une police qui est diminu\'ee lin\'eairement 
+aura trop peu d'espace entre ses lettres et la hauteur des minuscules 
+sera trop petite.
+%For example, a font that's linearly scaled down will
+%tend to have too little space between strokes, and its
+%x-height will be too~small. % tie added to avoid widow word
+
+Un typographe peut compenser ces changements en procurant 
+diff\'e\-rentes vectorielles pour diff\'erentes tailles de point, mais 
+il est n\'ecessaire de d\'epenser du temps \`a dessiner ces 
+diff\'erentes vectorielles. Un des grands avantages de Metafont est 
+qu'il est possible de param\'etrer les descriptions des caract\`eres 
+dans une police. Metafont peut alors maintenir la qualit\'e 
+typographique des caract\`eres \`a travers une \'echelle de taille de 
+point en ajustant le dessin des caract\`eres en cons\'equence.
+\bye % end the document
+:::
+~\idxref{champignons}
+\xmpheader !xmpnum/{Un tableau trac\'e}% !xmpheaddef
+\bigskip
+\offinterlineskip % So the vertical rules are connected.
+% \tablerule constructs a thin rule across the table.
+\def\tablerule{\noalign{\hrule}}
+% \tableskip creates 9pt of space between entries.
+\def\tableskip{\omit&height 9pt&&&\omit\cr}
+% & separates templates for each column. TeX substitutes
+% the text of the entries for #. We must have a strut
+% present in every row of the table; otherwise, the boxes
+% won't butt together properly, and the rules won't join.
+\halign{\tabskip = .7em plus 1em  % glue between columns
+% Use \vtop for short multiline entries in the first column.
+% Typeset the lines ragged right, without hyphenation.
+   \vtop{\hsize=6pc\pretolerance = 10000\hbadness = 10000
+      \normalbaselines\noindent\it#\strut}%
+  &\vrule #&#\hfil &\vrule #% the rules and middle column
+% Use \vtop to get whole paragraphs in the last column.
+  &\vtop{\hsize=11pc \parindent=0pt \normalbaselineskip=12pt
+    \normalbaselines \rightskip=3pt plus2em #}\cr
+% The table rows begin here.
+\noalign{\hrule height2pt depth2pt \vskip3pt}
+  % The header row spans all the columns.
+  \multispan5\bf Quelques Champignons Remarquables\hfil\strut\cr
+\noalign{\vskip3pt} \tablerule
+  \omit&height 3pt&\omit&&\omit\cr
+  \bf Nom&&\bf Nom &&\omit \bf Caract\`eristiques \hfil\cr
+\noalign{\vskip -2pt}% close up lines of heading
+  \bf Botanique&&\bf Commun&&\omit \bf d'Identification \hfil\cr
+\tableskip Pleurotus ostreatus&&Pleurote en forme d'huitre&&
+  Poussent \'etag\'es les uns sur les autres sur le bois mort ou affaibli,
+  % without the kern, the `f' and `l' would be too close
+  chapeau en forme de coquille d'huitre gris-rose, pied court ou absent.\cr
+\tableskip Lactarius hygrophoroides&&Lactaire hygrophore&&
+  Chapeau et pied de couleur orange rouille, abondance de lait,
+  souvent sur la terre des bois pr\`es des ruisseaux.\cr
+\tableskip Morchella esculenta&&Morille commune&&Chapeau conique
+  avec des trous noirs et les ar\^etes blanches; sans lamelles. Souvent
+  pr\`es de vieux pommiers et des ormes morts au printemps.\cr
+\tableskip Boletus edulus&&C\`epe de Bordeaux&&Chapeau rouge-brun \`a
+  caf\'e au lait avec des pores jaunes (blanc quand il est jeune),
+  pied bulbeux, souvent pr\`es des conif\`eres, bouleaux ou~trembles.\cr
+\tableskip \tablerule \noalign{\vskip 2pt} \tablerule
+}\bye
+:::
+\xmpheader !xmpnum/{Composer des math\'ematiques}% !xmpheaddef
+~^^{math\'ematiques}
+Pour un triangle sph\'erique de cot\'es $a$, $b$ et $c$ et 
+d'angles oppos\'es $\alpha$, $\beta$ et $\gamma$, nous avons~:
+$$\cos \alpha = -\cos \beta \cos \gamma +
+  \sin \beta \sin \gamma \cos \alpha \quad
+  \hbox{(Loi de Cosinus)}$$
+et~:
+$$\tan {\alpha \over 2} = \sqrt{
+  {- \cos \sigma \cdot \cos(\sigma - \alpha)} \over
+  {\cos (\sigma - \beta) \cdot \cos (\sigma - \gamma)}},\quad
+  \hbox{o\`u $\sigma = {1 \over 2}(a+b+c)$}$$
+Nous avons aussi~:$$\sin x = {{e^{ix}-e^{-ix}}\over 2i}$$
+et~:
+$$\int _0 ^\infty {{\sin ax \sin bx}\over{x^2}}\,dx
+% The \, above produces a thin space
+  = {\pi a\over 2}, \quad \hbox{si $a < b$}$$
+
+\noindent Le nombre de combinaisons ${}_nC_r$ de $n$
+choses prises parmi $r$ est~:
+$$C(n,r) = {}_nC_r = {n \choose r} =
+  {{n(n-1) \cdots (n-r+1)} \over {r(r-1) \cdots (1)}} =
+  {{n!!}\over {r!!(n-r)!!}}$$
+
+\noindent
+La valeur du d\'eterminant $D$ d'ordre $n$~:
+$$D = \left|\matrix{a_{11}&a_{12}&\ldots&a_{1n}\cr
+  a_{21}&a_{22}&\ldots&a_{2n}\cr
+  \vdots&\vdots&\ddots&\vdots\cr
+  a_{n1}&a_{n2}&\ldots&a_{nn}\cr}\right| $$
+est d\'efinie comme la somme de $n!!$ termes~:
+$$\sum\>(\pm)\>a_{1i}a_{2j} \ldots a_{nk}$$
+% The \> above produces a medium space.
+o\`u $i$, $j$, \dots,~$k$\/ prennent toutes les valeurs possibles
+entre $1$ et $n$ et pour  lequel, le signe du produit est 
+$+$ si la s\'equence $i$, $j$, \dots,~$k$\/ est une
+permutation paire et $-$ autrement.  De plus~:
+$$Q(\xi) = \lambda_1 y_1^2 \sum_{i=2}^n \sum_{j=2}^n y_i
+b_{ij} y_j,\qquad B = \Vert b_{ij} \Vert = B'$$
+\bye
+:::
+\xmpheader !xmpnum/{Plus de math\'ematiques}% !xmpheaddef
+~^^{math\'ematiques}
+La valeur absolue de $X$, $|x|$, est d\'efinie par~:
+$$|x| = \cases{x, &si $x\ge 0$;\cr
+-x,&autrement.\cr}$$
+Maintenant quelques \'equations num\'erot\'ees.
+Il arrive que pour $k \ge 0$~:
+$$x^{k^2}=\overbrace{x\>x\>\cdots\> x}^{2k\ \rm fois}
+   \eqno (1)$$
+
+Voici un exemple qui montre certains contr\^oles d'espacement, avec 
+un num\'ero  \`a gauche~:
+$$[u]!negthin[v][w]\,[x]\>[y]\;[z]\leqno(2a)$$
+Le montant d'espace pour les items entre crochets
+augmente graduellement de gauche \`a droite.  Nous avons fait
+l'espace entre les deux premiers items plus {\it petit\/}
+que l'espace naturel.
+Il arrive parfois que $$\leqalignno{
+u'_1 + tu''_2 &= u'_2 + tu''_1&(2b)\cr
+\hat\imath &\ne \hat \jmath&(2c)\cr
+\vec {\vphantom{b}a}&\approx \vec b\cr}$$
+% The \vphantom is an invisible rule as tall as a `b'.
+Le r\'esultat est d'ordre $O(n \log\log n)$.  D'o\`u
+$$\sum_{i=1}^n x_i = x_1+x_2+\cdots+x_n
+= {\rm Sum}(x_1,x_2,\ldots,x_n). \eqno(3)$$
+et
+$$dx\,dy = r\,dr\,d\theta!negthin.\eqno(4)$$
+Le jeu de tous les $q$ tels que $q\le0$ s'\'ecrit~:
+$$\{\,q\mid q\le0\, \}$$
+Donc
+$$\forall x\exists y\;P(x,y)\Rightarrow
+\exists x\exists y\;P(x,y)$$
+o\`u
+$$P(x,y) \buildrel \rm def \over \equiv 
+\hbox{\rm tout pr\'edicat en $x$ et $y$} . $$
+\bye
+:::

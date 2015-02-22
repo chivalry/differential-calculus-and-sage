@@ -1,0 +1,56 @@
+% This is part of the book TeX for the Impatient.
+% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2004 Marc Chaudemanche pour la traduction française.
+% See file fdl.tex for copying conditions.
+
+\input fmacros
+\chapter{Exemples}
+
+\chapterdef{examples}
+
+Cette section du livre contient un ensemble d'exemples pour vous aider \`a 
+commencer et pour vous montrer comment faire diverses choses avec \TeX. 
+Chaque exemple a le r\'esultat de \TeX\ sur la page de gauche et la source 
+\TeX\ ayant men\'e \`a ce r\'esultat sur la page de droite. Vous pouvez utiliser 
+ces exemples comme mod\`ele pour les imiter et comme une mani\`ere de trouver 
+les commandes \TeX\ dont vous avez besoin afin de r\'ealiser un effet 
+particulier. Cependant, ces exemples ne peuvent illustrer que quelques-unes 
+des $900$ commandes environ de \TeX.
+
+Certains de ces exemples sont auto-descriptifs---ainsi, ils d\'ecrivent eux-%
+m\^emes les dispositifs de \TeX\ qu'ils illustrent. Ces discussions sont 
+n\'eces\-sairement peu pr\'ecises parce qu'il n'y a pas la place dans les 
+exemples pour toute l'information dont vous auriez besoin. Le sommaire des 
+commandes (\chapterref{capsule}) et l'index vous aideront \`a localiser 
+l'explication compl\`ete de chaque dispositif \TeX\ montr\'e dans les 
+exemples.
+
+Puisque nous avons con\c cu les exemples pour illustrer beaucoup de choses \`a 
+la fois, quelques exemples contiennent une grande vari\'et\'e d'effets 
+typographiques. Ces exemples ne sont g\'en\'eralement pas de bons mod\`eles de 
+pratique typographique. Par exemple, l'exemple~8 a certains de ses num\'eros 
+d'\'equation du c\^ot\'e gauche et d'autres du c\^ot\'e droit. Vous ne ferez  jamais 
+cela dans une v\'eritable publication.
+
+\xrdef{xmphead}
+
+Chaque exemple, sauf le premier, commence par une macro (voir la 
+\xref{macro}) appel\'e |\xmpheader|. Nous avons utilis\'e |\xmpheader| 
+afin de garder de la place dans le source. Sans cela, chaque exemple 
+ferait plusieurs lignes de plus que vous auriez d\'ej\`a vu. 
+|\xmpheader| produit le titre de l'exemple et l'espace 
+suppl\'ementaire qui va avec. Vous pouvez voir dans le premier exemple 
+ce que fait |\xmpheader|, ainsi vous pouvez l'imiter si vous le 
+souhaitez. A part le |\xmpheader|, chaque commande que nous utilisons 
+dans ces exemples est d\'efinie dans \plainTeX.
+
+% The first example does the necessary eject here.
+{%
+   \let\bye = \relax % We don't want to obey \bye in the example input.
+   % These switches can't be done by a macro since \bye is outer.
+   \doexamples {fxmptext}% Typeset the actual examples.
+}%
+
+
+\endchapter
+\byebye

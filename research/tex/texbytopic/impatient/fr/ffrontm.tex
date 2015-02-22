@@ -1,0 +1,82 @@
+% This is part of the book TeX for the Impatient.
+% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2004 Marc Chaudemanche pour la traduction française.
+% See file fdl.tex for copying conditions.
+%
+% Front matter.
+
+\input fmacros
+
+
+% Frontmatter is numbered i, ii, ...
+\pageno = -1
+
+% Bastard title.
+% 
+% \sinkage
+\leftline{\chapterfonts \TeX\ pour l'Impatient}
+
+\noheadlinetrue\pagebreak
+
+
+% Title spread.
+% 
+%(title page, lhs)
+%\noheadlinetrue\pagebreak
+\blankpage
+
+%(title page, rhs)
+%\noheadlinetrue\pagebreak
+\blankpage
+
+
+\input fcopyrgh
+\noheadlinetrue
+
+
+% Dedication.
+% 
+\sinkage
+{\it \flushright
+   Pour Jodi.
+   ---{\sc p.w.a.}
+   
+   \`a la m\'emoire de mon p\`ere, 
+   qui a eu foi en moi.
+   ---{\sc k.a.h.}
+   
+   Pour Dan.
+   ---{\sc k.b.}
+}
+\pagebreak
+
+% From here on, the convention is that every frontchapter does its own
+% ending pagebreak and encloses its fonts in a group if necessary.
+
+% The preface should start on a right-hand page.
+
+\blankpage
+\input fpreface
+
+% Contents.
+% 
+% We never want to empty the file after doing the brief contents.
+% 
+\rewritetocfilefalse
+%
+\blankpage
+\frontchapter{Table des mati\`eres\linebreak abr\'eg\'ee}
+
+\shortcontents
+
+
+\ifcompletebook \global\rewritetocfiletrue \fi
+
+\frontchapter{Table des mati\`eres}
+
+\contents
+
+\blankpage
+\input fread1st
+
+\byebye

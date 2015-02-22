@@ -1,0 +1,158 @@
+% This is part of the book TeX for the Impatient.
+% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2004 Marc Chaudemanche pour la traduction française.
+% See file fdl.tex for copying conditions.
+
+\input fmacros
+\frontchapter{Pr\'eface}
+
+\TeX\ de Donald Knuth, un syst\`eme de composition automatis\'e, 
+fournit presque tout ce qui est requis pour la composition de haute qualit\'e, 
+aussi bien des math\'ematiques que du texte ordinaire. Il est particu\-li\`erement 
+reconnu pour sa flexibilit\'e, ses c\'esures superbes et sa capacit\'e de choisir 
+des coupures de ligne esth\'etiquement satisfaisantes. En raison de ses 
+possibilit\'es extraordinaires, \TeX\ est devenu le syst\`eme de composition 
+principal pour les math\'ematiques, les sciences et techniques et a \'et\'e 
+adopt\'e comme norme par la soci\'et\'e math\'ematique am\'ericaine. Un 
+programme compagnon, ^{\Metafont}, peut construire les lettres arbitraires 
+comprenant, en particulier, tous les symboles qui pourraient \^etre 
+n\'ecessaires dans les math\'ematiques. \TeX\ et \Metafont\ sont largement 
+disponibles au sein de la communaut\'e scientifique et technologique et ont 
+\'et\'e mis en application sur une vari\'et\'e d'ordinateurs. \TeX\ n'est pas 
+parfait---il lui manque un support int\'egr\'e des graphiques et certains effets 
+tels que les barres de ^{r\'evision} sont tr\`es difficiles \`a produire---% 
+mais ces inconv\'enients sont loin d'\^etre sup\'erieurs \`a ses avantages. 
+
+\thisbook\/ est pr\'evu pour servir aux scientifiques, math\'e\-ma\-ticiens, 
+et typographes pour lesquels \TeX\ est un outil utile plut\^ot que d'un 
+int\'er\^et primaire, aussi bien que pour les informaticiens qui ont un vif 
+int\'er\^et pour \TeX\ dans son propre int\'er\^et. Nous avons l'intention 
+\'egalement de servir aussi bien les nouveaux venus que ceux qui sont d\'ej\`a 
+familiaris\'eavec \TeX. Nous supposons que nos lecteurs sont habitu\'es au 
+fonctionnement des ordinateurs et qu'ils veulent obtenir l'information dont ils 
+ont besoin aussi rapidement que possible. Notre but est de fournir ces 
+informations clairement, avec concision, et de mani\`ere accessible.
+
+Ce livre fournit donc un \'eclairage lumineux, un guide vaillant et 
+donne des cartes d\'etaill\'ees pour explorer et utiliser \TeX. Il vous 
+permettra de ma\^\i triser \TeX\ rapidement par l'enqu\^ete et l'exp\'erience, 
+mais il ne vous m\`enera pas par la main dans le syst\`eme \TeX\ en entier. 
+Notre approche est de vous fournir un manuel de \TeX\ qui vous facilite la 
+recherche des quelques informations dont vous avez besoin. Nous expliquons tout 
+le r\'epertoire des commandes de \TeX\ et des concepts dont elles d\'ependent. 
+Vous ne perdrez pas de temps \`a explorer des sujets que vous ne voulez pas voir 
+ni avoir besoin.
+
+Dans les premi\`eres sections, nous vous fournissons \'egalement assez 
+d'in\-dications pour que vous puissiez commencer si vous n'avez jamais utilis\'e 
+\TeX\ avant. Nous supposons que vous avez acc\`es \`a un ex\'ecutable \TeX\ et 
+que vous savez utiliser un \'editeur de texte, mais nous ne supposons pas 
+beaucoup plus au sujet de vos connaissances. Puisque ce livre est organis\'e 
+pour la r\'ef\'erence, vous continuerez toujours \`a le trouver utile quand vous 
+vous familiariserez avec \TeX. Si vous pr\'ef\'erez commencer par une excursion 
+soigneusement guid\'ee, nous vous recommandons d'avoir lu une premi\`ere fois 
+^{\texbook} de Knuth (voir la \xrefpg{ressources} pour une citation), en 
+passant au-dessus des ``sections dangereuses'', puis de revenir \`a ce livre 
+pour de l'information additionnelle et des r\'ef\'erences pendant que vous 
+commencez \`a utiliser \TeX (les sections dangereuses recouvrent des sujets 
+avanc\'es de \texbook).
+
+La structure de \TeX\ est vraiment tr\`es simple~: un document \TeX\ se compose 
+du texte ordinaire entrem\^el\'e avec des commandes qui donnent \`a \TeX\ des 
+instructions compl\'ementaires sur la fa\c con de composer votre document. Les 
+choses comme des formules de math\'ematique contiennent beaucoup de commandes, alors que 
+le texte d'explication en contient rela\-tivement peu.
+
+La partie fastidieuse de l'\'etude de \TeX\ est d'apprendre les commandes et les 
+concepts sous-entendus dans leurs descriptions. Ainsi nous avons consacr\'e la 
+majeure partie du livre \`a d\'efinir et \`a expliquer les commandes et les 
+concepts. Nous avons \'egalement fourni des exemples en montrant le r\'esultat 
+compos\'e avec \TeX\ et la source correspondante, des conseils pour r\'esoudre 
+des probl\`emes communs, des informations sur les messages d'erreur et ainsi de 
+suite. Nous avons fourni des r\'ef\'erences crois\'ees par num\'ero de page et 
+un index complet.
+
+Nous avons class\'e les descriptions de commandes pour que vous puissiez les 
+rechercher par fonction ou alphab\'etiquement. Le classement fonctionnel est ce 
+dont vous avez besoin quand vous savez ce que vous voulez faire mais que vous ne 
+savez pas quelle commande peut le faire pour vous. Le classement alphab\'etique 
+est ce dont vous avez besoin quand vous connaissez le nom d'une commande mais 
+pas exactement ce qu'elle fait.
+
+Nous devons vous avertir que nous n'avons pas essay\'e de fournir une 
+d\'efinition compl\`ete de \TeX. Pour cela vous aurez besoin de ^{\texbook}, qui 
+est la source originale d'information sur \TeX. \texbook\ contient \'egalement 
+beaucoup d'informations sur les d\'etails d'utilisation de \TeX, en particulier 
+sur la composition des formules math\'ematiques. Nous vous le recommandons 
+fortement.
+
+En 1989, Knuth a fait une r\'evision importante de \TeX\ afin de l'adapter aux 
+jeux de caract\`eres $8$ bits requis pour effectuer des compositions dans des 
+langues autres que l'anglais. La description de \TeX\ dans ce livre tient compte 
+de cette r\'evision (voir \xref{newtex}).
+
+{\tighten Vous pouvez utiliser une forme sp\'ecialis\'ee de \TeX\ comme 
+^{\LaTeX} ou ^{\AMSTeX} (voir \xref{ressources}). Bien que ces formes 
+sp\'ecialis\'ees soient d'un seul bloc, vous pouvez vouloir juste utiliser 
+certaines des facilit\'es de \TeX\ lui-m\^eme, afin d'employer la commande la 
+plus fine que seul \TeX\ peut fournir. Ce livre peut vous aider \`a apprendre ce 
+que vous devez conna\^\i tre \`a propos de ces facilit\'es sans devoir vous 
+renseigner sur beaucoup d'autres choses qui ne vous int\'eressent pas. \par}
+
+Deux d'entre nous (K.A.H. et K.B.) ont \'et\'e g\'en\'ereusement soutenus par 
+l'universit\'e du Massachusetts \`a Boston pendant la pr\'eparation de ce livre. 
+En particulier, Rick Martin a permis aux machines de fonctionner et Robert~A. 
+Morris et Betty O'Neil les ont rendus disponibles. Paul English d'Interleaf nous 
+a aid\'es \`a produire les \'epreuves d'un dessin de couverture.
+
+Nous souhaitons remercier les relecteurs de notre livre~: Richard Furuta de 
+l'universit\'e du Maryland, John Gourlay d'Arbortext, Inc., Jill Carter Knuth et 
+Richard Rubinstein de la Digital Equipment Corporation. Nous avons pris \`a 
+c\oe ur leurs critiques constructives et sans compter du manuscrit original, et le 
+livre a consid\'erablement b\'en\'efici\'e de leurs perspicacit\'es.
+
+Nous sommes particuli\`erement reconnaissant \`a notre r\'edacteur, Peter 
+Gordon d'Addison-Wesley. Ce livre \'etait vraiment son id\'ee et dans tout son 
+d\'eveloppement il a \'et\'e une source d'encouragement et de conseil valable. Nous 
+remercions son aide chez Addison-Wesley, Helen Goldstein, qui nous a aid\'es de 
+tant de mani\`eres, et de Loren Stevens d'Addison-Wesley de sa comp\'etence et 
+de son \'energie dans le cheminement de ce livre dans le processus de 
+production. Sans oublier notre r\'edactrice de copie, Janice Byer, sans qui un 
+certain nombre de petites mais irritantes erreurs seraient demeur\'ees dans ce 
+livre. Nous appr\'ecions sa sensibilit\'e et go\^utions en corrigeant ce qui 
+nous \'etait n\'ecessaire de corriger tout en lui laissant ce que nous n'avions 
+pas eu besoin de corriger. En conclusion, nous souhaitons remercier Jim Byrnes 
+de Prometheus Inc. d'avoir rendu cette collaboration possible en nous 
+pr\'esentant.
+\vskip1.5\baselineskip
+
+\line{\it Deerfield, Massachusetts\hfil\rm P.\thinspace W.\thinspace A.}
+\line{\it Manomet, Massachusetts\hfil\rm K.\thinspace A.\thinspace H.,
+       K.\thinspace B.}
+
+\vskip2\baselineskip
+
+\noindent {\bf Pr\'eface \`a l'\'edition libre~:} Ce livre a \'et\'e \`a 
+l'origine \'edit\'e en 1990 par Addison-Wesley. En 2003, il a d\'eclar\'e 
+\'epuis\'e et Addison-Wesley a g\'en\'ereusement rendu tous les droits \`a nous, 
+les auteurs. Nous avons d\'ecid\'e de rendre le livre disponible sous forme de 
+source, sous la licence de documentation libre de GNU, ceci \'etant notre 
+mani\`ere de soutenir la communaut\'e qui a soutenu le livre en premier lieu. 
+Voyez la page de copyright pour plus d'information sur l'autorisation. 
+
+Les illustrations qui faisaient partie du livre original ne sont pas incluses 
+ici. Certaines des polices ont \'egalement \'et\'e chang\'ees~; maintenant, seules 
+des polices librement disponibles sont utilis\'ees. Nous avons laiss\'e les 
+hirondelles et l'information de gal\'ee sur les pages, pour identification. Une 
+vieille version d'Eplain a \'et\'e employ\'ee pour la produire~; voyez le dossier 
+{\tt eplain.tex} pour des d\'etails. 
+
+Nous ne projetons pas de faire de changements ou additions au livre 
+nous-m\^emes, except\'e la correction d'erreurs qui nous seront rappor\-t\'ees et 
+peut-\^etre, l'inclusion des illustrations. 
+
+Notre distribution du livre est \`a {\tt ftp://tug.org/tex/impatient}. Vous 
+pouvez nous atteindre par courriel \`a {\tt impatient@tug.org}.
+
+\pagebreak
+\byebye

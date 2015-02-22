@@ -1,0 +1,2176 @@
+% This is part of the book TeX for the Impatient.
+% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2004 Marc Chaudemanche pour la traduction française.
+% See file fdl.tex for copying conditions.
+
+\input fmacros
+\chapter {Commandes pour \linebreak composer des \linebreak formules math\'ematiques}
+
+\bix^^{math\'ematiques}
+\chapterdef{math}
+
+Cette section couvre les commandes pour construire des formules math\'e\-matiques.
+Pour une explication des conventions utilis\'ees dans cette section,
+voir \headcit{Description des commandes}{cmddesc}.
+
+\begindescriptions
+%==========================================================================
+\section {Parties simples de formules}
+
+%==========================================================================
+\subsection {Lettres grecques}
+
+\begindesc
+\bix^^{lettres grecques}
+\dothreecolumns 40
+\easy\ctsdisplay alpha {}
+\ctsdisplay beta {}
+\ctsdisplay chi {}
+\ctsdisplay delta {}
+\ctsdisplay Delta {}
+\ctsdisplay epsilon {}
+\ctsdisplay varepsilon {}
+\ctsdisplay eta {}
+\ctsdisplay gamma {}
+\ctsdisplay Gamma {}
+\ctsdisplay iota {}
+\ctsdisplay kappa {}
+\ctsdisplay lambda {}
+\ctsdisplay Lambda {}
+\ctsdisplay mu {}
+\ctsdisplay nu {}
+\ctsdisplay omega {}
+\ctsdisplay Omega {}
+\ctsdisplay phi {}
+\ctsdisplay varphi {}
+\ctsdisplay Phi {}
+\ctsdisplay pi {}
+\ctsdisplay varpi {}
+\ctsdisplay Pi {}
+\ctsdisplay psi {}
+\ctsdisplay Psi {}
+\ctsdisplay rho {}
+\ctsdisplay varrho {}
+\ctsdisplay sigma {}
+\ctsdisplay varsigma {}
+\ctsdisplay Sigma {}
+\ctsdisplay tau {}
+\ctsdisplay theta {}
+\ctsdisplay vartheta {}
+\ctsdisplay Theta {}
+\ctsdisplay upsilon {}
+\ctsdisplay Upsilon {}
+\ctsdisplay xi {}
+\ctsdisplay Xi {}
+\ctsdisplay zeta {}
+\egroup
+\explain
+Ces commandes produisent les lettres grecques appropri\'ees aux math\'e\-matiques. 
+Vous ne pouvez les utiliser que dans une formule math\'ema\-tique, ainsi si vous 
+avez besoin d'une lettre grecque dans du texte ordinaire, vous devez l'englober 
+entre des signes dollar (|$|). \TeX\ n'a pas de commandes pour des lettres 
+grecques qui ressemblent \`a leurs contre-parties romaines, puisque vous pouvez 
+les obtenir en employant ces contre-parties romaines. Par exemple, vous pouvez 
+obtenir un ^{omicron} minuscule dans une formule en \'ecrivant la lettre `o', 
+c'est-\`a-dire, `|{\rm o}|' ou un ^{beta} majuscule (`B') en \'ecrivant `|{\rm B}|'.
+
+Ne confondez pas les lettres suivantes~:
+\ulist \compact
+\li |\upsilon| (`$\upsilon$'), |{\rm v}| (`v'), et |\nu| (`$\nu$').
+\li |\varsigma| (`$\varsigma$') and |\zeta| (`$\zeta$').
+\endulist
+
+Vous pouvez obtenir des lettres grecques capitales inclin\'ees en utilisant 
+la \minref{police} math\'ematique italique (|\mit|).
+
+\TeX \ traite les lettres grecques comme des symboles ordinaires quand 
+il calcule combien d'espace mettre autour d'eux.
+
+\example
+If $\rho$ and $\theta$ are both positive, then $f(\theta)
+-{\mit \Gamma}_{\theta} < f(\rho)-{\mit \Gamma}_{\rho}$.
+|
+\produces
+If $\rho$ and $\theta$ are both positive, then
+$f(\theta)-{\mit \Gamma}_{\theta} < f(\rho)-{\mit \Gamma}_{\rho}$.
+\endexample
+\eix^^{lettres grecques}
+\enddesc
+
+%==========================================================================
+\subsection {Divers Symboles math\'ematiques ordinaires}
+
+\begindesc
+\xrdef{specsyms}
+\dothreecolumns 34
+\easy\ctsdisplay infty {}
+\ctsdisplay Re {}
+\ctsdisplay Im {}
+\ctsdisplay angle {}
+\ctsdisplay triangle {}
+\ctsdisplay backslash {}
+\ctsdisplay vert {}
+\ctsydisplay | @bar {}
+\ctsdisplay Vert {}
+\ctsdisplay emptyset {}
+\ctsdisplay bot {}
+\ctsdisplay top {}
+\ctsdisplay exists {}
+\ctsdisplay forall {}
+\ctsdisplay hbar {}
+\ctsdisplay ell {}
+\ctsdisplay aleph {}
+\ctsdisplay imath {}
+\ctsdisplay jmath {}
+\ctsdisplay nabla {}
+\ctsdisplay neg {}
+\ctsdisplay lnot {}
+\actdisplay ' @prime \ (apostrophe)
+\ctsdisplay prime {}
+\ctsdisplay partial {}
+\ctsdisplay surd {}
+\ctsdisplay wp {}
+\ctsdisplay flat {}
+\ctsdisplay sharp {}
+\ctsdisplay natural {}
+\ctsdisplay clubsuit {}
+\ctsdisplay diamondsuit {}
+\ctsdisplay heartsuit {}
+\ctsdisplay spadesuit {}
+\egroup
+\explain
+^^{symboles musicaux} ^^{couleurs de carte \`a jouer}
+Ces commandes produisent des symboles vari\'es.  On les appelle
+``^{symboles ordinaires}'' pour les distinguer des autres classes de
+symboles comme les relations. Vous ne pouvez utiliser un 
+symbole ordinaire que dans une formule math\'ematique,
+donc si vous avez besoin d'un symbole ordinaire dans du texte ordinaire
+vous devez l'englober entre des signes dollar (|$|).
+
+Les commandes |\imath| et |\jmath| sont utiles quand vous devez mettre un
+accent sur un `$i$' ou un `$j$'.
+
+Une apostrophe (|'|) est un raccourci pour \'ecrire un |\prime| en exposant.  (La
+commande |\prime| de son c\^ot\'e, g\'en\`ere un gros prime laid.)
+
+Les commandes |\!|| et ^|\Vert| sont synonymes, comme
+le sont les commandes ^|\neg| et ^|\lnot|.
+\margin{explanation of {\tt\\vert} added}
+La commande |\vert| produit le m\^eme r\'esultat que `|!||'.
+\indexchar |
+
+Les symboles produits par |\backslash|, |\vert| et |\Vert|
+sont des \minref{d\'eli\-mi\-teur}s.  ces symboles peuvent \^etre produit en grandes taille
+en utilisant ^|\bigm| etc.\ (\xref \bigm).  
+
+\example
+The Knave of $\heartsuit$s, he stole some tarts.
+|
+\produces
+The Knave of $\heartsuit$s, he stole some tarts.
+\nextexample
+If $\hat\imath < \hat\jmath$ then $i' \leq j^\prime$.
+|
+\produces
+If $\hat\imath < \hat\jmath$ then $i' \leq j^\prime$.
+\nextexample
+$${{x-a}\over{x+a}}\biggm\backslash{{y-b}\over{y+b}}$$
+|
+\dproduces
+$${{x-a}\over{x+a}}\biggm\backslash{{y-b}\over{y+b}}$$
+\endexample
+\enddesc
+
+%==========================================================================
+\subsection {Op\'erations binaires}
+
+\begindesc
+\bix^^{op\'erations}
+\xrdef{binops}
+\dothreecolumns 34
+\easy\ctsdisplay vee {}
+\ctsdisplay wedge {}
+\ctsdisplay amalg {}
+\ctsdisplay cap {}
+\ctsdisplay cup {}
+\ctsdisplay uplus {}
+\ctsdisplay sqcap {}
+\ctsdisplay sqcup {}
+\ctsdisplay dagger {}
+\ctsdisplay ddagger {}
+\ctsdisplay land {}
+\ctsdisplay lor {}
+\ctsdisplay cdot {}
+\ctsdisplay diamond {}
+\ctsdisplay bullet {}
+\ctsdisplay circ {}
+\ctsdisplay bigcirc {}
+\ctsdisplay odot {}
+\ctsdisplay ominus {}
+\ctsdisplay oplus {}
+\ctsdisplay oslash {}
+\ctsdisplay otimes {}
+\ctsdisplay pm {}
+\ctsdisplay mp {}
+\ctsdisplay triangleleft {}
+\ctsdisplay triangleright {}
+\ctsdisplay bigtriangledown {}
+\ctsdisplay bigtriangleup {}
+\ctsdisplay ast {}
+\ctsdisplay star {}
+\ctsdisplay times {}
+\ctsdisplay div {}
+\ctsdisplay setminus {}
+\ctsdisplay wr {}
+\egroup
+\explain
+Ces commandes produisent les symboles pour diff\'erentes op\'erations binaires.
+Les op\'erations binaires sont une des \minref{classe}s des symboles math\'e\-matiques de \TeX.
+\TeX\ met diff\'erents montants d'espace autour de dif\-f\'e\-rentes classes de symboles
+math\'ematiques.  Quand \TeX\ a besoin de couper une ligne de texte dans une formule math\'ematique, 
+\minrefs{line break} il devra placer la coupure apr\`es une op\'eration binaire---mais seulement si 
+l'op\'eration est \`a un niveau sup\'erieur \`a la formule, c'est-\`a-dire, non incluse dans un groupe.
+
+En plus de ces commandes, \TeX\ traite \'egalement `|+|' et `|-|' 
+en tant qu'op\'erations binaires. Il consid\`ere `|/|' comme un symbole ordinaire, 
+en d\'epit du fait que, math\'ematiquement, ce soit une op\'eration binaire, 
+parce qu'il semble mieux avec moins d'espace autour de lui.
+
+\example
+$$z = x \div y \quad \hbox{if and only if} \quad
+z \times y = x \;\hbox{and}\; y \neq 0$$
+|
+\dproduces
+$$z = x \div y \quad \hbox{if and only if} \quad
+z \times y = x \;\hbox{and}\; y \neq 0$$
+\endexample
+\enddesc
+
+\begindesc
+\ctspecial * \ctsxrdef{@star}
+\explain
+La commande |\*| indique un symbole de multiplication optionnel
+($\times$), qui est une op\'eration binaire.  Ce symbole de multiplication
+agit comme une c\'esure optionnelle quand il appara\^\i t dans une formule dans un
+texte\minrefs{texte math\'ematique}.  Cela \'etant, \TeX\ ne composera le symbole |\times|
+\emph{que} si la formule doit \^etre coup\'ee en ce point.
+Il n'y a aucun point en utilisant |\*| dans des formules affich\'ees \minrefs{math\'ematique 
+affich\'ee} car \TeX\ ne coupe jamais de formules affich\'ees de lui-m\^eme.
+
+\example
+Let $c = a\*b$. In the case that $c=0$ or $c=1$, let
+$\Delta$ be $(\hbox{the smallest $q$})\*(\hbox{the
+largest $q$})$ in the set of approximate $\tau$-values.
+|
+\produces
+Let $c = a\*b$. In the case that $c=0$ or $c=1$, let
+$\Delta$ be $(\hbox{the smallest $q$})\*(\hbox{the
+largest $q$})$ in the set of approximate $\tau$-values.
+
+\eix^^{op\'erations}
+\endexample
+\enddesc
+
+%==========================================================================
+\subsection {Relations}
+
+\begindesc
+\xrdef {relations}
+\bix^^{relations}
+\dothreecolumns 39
+\easy\ctsdisplay asymp {}
+\ctsdisplay cong {}
+\ctsdisplay dashv {}
+\ctsdisplay vdash {}
+\ctsdisplay perp {}
+\ctsdisplay mid {}
+\ctsdisplay parallel {}
+\ctsdisplay doteq {}
+\ctsdisplay equiv {}
+\ctsdisplay ge {}
+\ctsdisplay geq {}
+\ctsdisplay le {}
+\ctsdisplay leq {}
+\ctsdisplay gg {}
+\ctsdisplay ll {}
+\ctsdisplay models {}
+\ctsdisplay ne {}
+\ctsdisplay neq {}
+\ctsdisplay notin {}
+\ctsdisplay in {}
+\ctsdisplay ni {}
+\ctsdisplay owns {}
+\ctsdisplay prec {}
+\ctsdisplay preceq {}
+\ctsdisplay succ {}
+\ctsdisplay succeq {}
+\ctsdisplay bowtie {}
+\ctsdisplay propto {}
+\ctsdisplay approx {}
+\ctsdisplay sim {}
+\ctsdisplay simeq {}
+\ctsdisplay frown {}
+\ctsdisplay smile {}
+\ctsdisplay subset {}
+\ctsdisplay subseteq {}
+\ctsdisplay supset {}
+\ctsdisplay supseteq {}
+\ctsdisplay sqsubseteq {}
+\ctsdisplay sqsupseteq {}
+\egroup
+\explain
+Ces commandes produisent des symboles pour diff\'erentes relations.
+Les relations sont une des \minref{classe}s des symboles math\'ematiques.
+\TeX\ met diff\'erents montants d'espace autour de diff\'erentes classes de symboles
+math\'ematiques.
+Quand \TeX\ a besoin de couper une ligne de texte dans une formule math\'ematique, 
+\minrefs{line break} il devra placer la coupure apr\`es une relation---mais seulement si 
+l'op\'eration est \`a un niveau sup\'erieur \`a la formule, c'est-\`a-dire, non incluse dans un groupe.
+
+En plus des commandes list\'ees ici, \TeX\ traite  `^|=|' et les 
+commandes ``fl\`eche'' (\xref{arrows}) comme des relations.
+
+Certaines relations ont plus d'une commande que vous pouvez utiliser
+pour les produire~:
+\ulist \compact
+\li `$\ge$' (|\ge| et |\geq|).
+\li `$\le$' (|\le| et |\leq|).
+\li `$\ne$' (|\ne|, |\neq| et |\not=|).
+\li `$\ni$' (|\ni| et |\owns|).
+\endulist
+
+\xrdef{\not}
+Vous pouvez produire des relations n\'egatives en les pr\'efixant avec |\not|, comme cela~:
+
+\nobreak
+\threecolumns 21
+\basicdisplay {$\not\asymp$}{\\not\\asymp}\ctsidxref{asymp}
+\basicdisplay {$\not\cong$}{\\not\\cong}\ctsidxref{cong}
+\basicdisplay {$\not\equiv$}{\\not\\equiv}\ctsidxref{equiv}
+\basicdisplay {$\not=$}{\\not=}\ttidxref{=}
+\basicdisplay {$\not\ge$}{\\not\\ge}\ctsidxref{ge}
+\basicdisplay {$\not\geq$}{\\not\\geq}\ctsidxref{geq}
+\basicdisplay {$\not\le$}{\\not\\le}\ctsidxref{le}
+\basicdisplay {$\not\leq$}{\\not\\leq}\ctsidxref{leq}
+\basicdisplay {$\not\prec$}{\\not\\prec}\ctsidxref{prec}
+\basicdisplay {$\not\preceq$}{\\not\\preceq}\ctsidxref{preceq}
+\basicdisplay {$\not\succ$}{\\not\\succ}\ctsidxref{succ}
+\basicdisplay {$\not\succeq$}{\\not\\succeq}\ctsidxref{succeq}
+\basicdisplay {$\not\approx$}{\\not\\approx}\ctsidxref{approx}
+\basicdisplay {$\not\sim$}{\\not\\sim}\ctsidxref{sim}
+\basicdisplay {$\not\simeq$}{\\not\\simeq}\ctsidxref{simeq}
+\basicdisplay {$\not\subset$}{\\not\\subset}\ctsidxref{subset}
+\basicdisplay {$\not\subseteq$}{\\not\\subseteq}\ctsidxref{subseteq}
+\basicdisplay {$\not\supset$}{\\not\\supset}\ctsidxref{supset}
+\basicdisplay {$\not\supseteq$}{\\not\\supseteq}\ctsidxref{supseteq}
+\basicdisplay {$\not\sqsubseteq$}{\\not\\sqsubseteq}%
+   \ctsidxref{sqsubseteq}
+\basicdisplay {$\not\sqsupseteq$}{\\not\\sqsupseteq}%
+   \ctsidxref{sqsupseteq}
+\egroup
+
+\example
+We can show that $AB \perp AC$, and that
+$\triangle ABF \not\sim \triangle ACF$.
+|
+\produces
+We can show that $AB \perp AC$, and that
+$\triangle ABF \not\sim \triangle ACF$.
+
+\eix^^{relations}
+\endexample
+\enddesc
+
+%==========================================================================
+\subsection {D\'elimiteurs gauches et droits}
+
+\begindesc
+\bix^^{d\'elimiteurs}
+%
+\dothreecolumns 12
+\easy\ctsdisplay lbrace {}
+\ctsydisplay { @lbrace {}
+\ctsdisplay rbrace {}
+\ctsydisplay } @rbrace {}
+\ctsdisplay lbrack {}
+\ctsdisplay rbrack {}
+\ctsdisplay langle {}
+\ctsdisplay rangle {}
+\ctsdisplay lceil {}
+\ctsdisplay rceil {}
+\ctsdisplay lfloor {}
+\ctsdisplay rfloor {}
+\egroup
+\explain
+Ces commandes produisent des \minref{d\'elimiteur}s gauches et droits.
+Les math\'e\-maticiens utilisent les d\'elimiteurs pour indiquer les fronti\`eres entre les parties
+d'une formule.  Les d\'elimiteurs gauches sont aussi appel\'es ``^{ouvrant}s'' et
+les d\'elimiteurs droits sont aussi appel\'es ``^{fermant}s''.  Ouvrants et Fermants
+sont deux des \minref{classe}s de symboles math\'ematiques de \TeX.  \TeX\ met
+diff\'erents montants d'espace autour des diff\'erentes \minref{classe}s de symboles math\'ematiques.
+Vous devriez vous attendre \`a ce que l'espacement que \TeX\ met autour des ouvrants et
+des fermants soit sym\'etrique, mais en fait, il ne l'est pas.
+
+Certains d\'elimiteurs gauches et droits ont plus d'une commande utilisable pour les produire~:
+
+\ulist\compact
+\li `$\{$' (|\lbrace| and |\{|)
+\li `$\}$' (|\rbrace| and |\}|)
+\li `$[$' (|\lbrack| and `|[|')
+\li `$]$' (|\rbrack| and `|]|')
+\endulist
+\noindent vous pouvez aussi utiliser les caract\`eres crochets gauches et droits
+(sous toutes ses formes) en dehors du mode math\'ematique.
+
+En plus de ces commandes, \TeX\ traite `|(|' comme un d\'elimiteur gauche
+et `|)|' comme un d\'elimiteur droit.
+
+Vous pouvez laisser \TeX\
+choisir la taille d'un d\'elimiteur en utilisant |\left| et |\right| (\xref\left).
+Alternativement,
+vous pouvez obtenir un d\'eli\-miteur d'une taille sp\'ecifique en utilisant une des commandes |\big|$x$
+(voir |\big| et al., \xref{\big}).
+
+\example
+The set $\{\,x \mid x>0\,\}$ is empty.
+|
+\produces
+The set $\{\,x \mid x>0\,\}$ is empty.
+
+\eix^^{d\'elimiteurs}
+\endexample
+\enddesc
+
+%==========================================================================
+\subsection {Fl\`eches}
+
+\begindesc
+\bix^^{fl\`eches}
+\xrdef{arrows}
+%
+{\symbolspace=24pt \makecolumns 34/2:
+\easy%
+\ctsdisplay leftarrow {}
+\ctsdisplay gets {}
+\ctsdisplay Leftarrow {}
+\ctsdisplay rightarrow {}
+\ctsdisplay to {}
+\ctsdisplay Rightarrow {}
+\ctsdisplay leftrightarrow {}
+\ctsdisplay Leftrightarrow {}
+\ctsdisplay longleftarrow {}
+\ctsdisplay Longleftarrow {}
+\ctsdisplay longrightarrow {}
+\ctsdisplay Longrightarrow {}
+\ctsdisplay longleftrightarrow {}
+\ctsdisplay Longleftrightarrow {}
+\basicdisplay {$\Longleftrightarrow$}{\\iff}\pix\ctsidxref{iff}\xrdef{\iff}
+\ctsdisplay hookleftarrow {}
+\ctsdisplay hookrightarrow {}
+\ctsdisplay leftharpoondown {}
+\ctsdisplay rightharpoondown {}
+\ctsdisplay leftharpoonup {}
+\ctsdisplay rightharpoonup {}
+\ctsdisplay rightleftharpoons {}
+\ctsdisplay mapsto {}
+\ctsdisplay longmapsto {}
+\ctsdisplay downarrow {}
+\ctsdisplay Downarrow {}
+\ctsdisplay uparrow {}
+\ctsdisplay Uparrow {}
+\ctsdisplay updownarrow {}
+\ctsdisplay Updownarrow {}
+\ctsdisplay nearrow {}
+\ctsdisplay searrow {}
+\ctsdisplay nwarrow {}
+\ctsdisplay swarrow {}
+}
+\explain
+Ces commandes procurent des fl\`eches de diff\'erentes sortes.  Elles
+sont class\'ees parmi les relations (\xref{relations}).
+Les fl\`eches verticales de la liste sont aussi des  \minref{d\'elimiteur}s, donc vous pouvez les rendre
+plus grandes en utilisant |\big| et al.\ (\xref \big).
+
+La commande |\iff| diff\`ere de |\Longleftrightarrow| parce qu'elle
+produit un espace suppl\'ementaire \`a gauche et \`a droite de la fl\`eche.
+
+Vous pouvez placer des symboles ou d'autres l\'egendes au dessus des fl\`eche gauches et droite
+avec |\buildrel| (\xref \buildrel).
+
+\example
+$$f(x)\mapsto f(y) \iff x \mapsto y$$
+|
+\dproduces
+$$f(x)\mapsto f(y) \iff x \mapsto y$$
+
+\eix^^{fl\`eches}
+\endexample
+\enddesc
+
+%==========================================================================
+\subsection {Fonctions math\'ematiques nomm\'ees}
+
+\begindesc
+\xrdef{namedfns}
+\bix^^{fonctions, noms de}
+{\symbolspace = 36pt
+\threecolumns 32
+\easy\ctsdisplay cos {}
+\ctsdisplay sin {}
+\ctsdisplay tan {}
+\ctsdisplay cot {}
+\ctsdisplay csc {}
+\ctsdisplay sec {}
+\ctsdisplay arccos {}
+\ctsdisplay arcsin {}
+\ctsdisplay arctan {}
+\ctsdisplay cosh {}
+\ctsdisplay coth {}
+\ctsdisplay sinh {}
+\ctsdisplay tanh {}
+\ctsdisplay det {}
+\ctsdisplay dim {}
+\ctsdisplay exp {}
+\ctsdisplay ln {}
+\ctsdisplay log {}
+\ctsdisplay lg {}
+\ctsdisplay arg {}
+\ctsdisplay deg {}
+\ctsdisplay gcd {}
+\ctsdisplay hom {}
+\ctsdisplay ker {}
+\ctsdisplay inf {}
+\ctsdisplay sup {}
+\ctsdisplay lim {}
+\ctsdisplay liminf {}
+\ctsdisplay limsup {}
+\ctsdisplay max {}
+\ctsdisplay min {}
+\ctsdisplay Pr {}
+\egroup}
+\explain
+Ces commandes mettent les noms de diff\'erentes fonctions math\'ematiques
+en type romain, comme \`a l'accoutum\'ee.
+Si vous appliquez un exposant ou un indice sur une de ces commandes,
+\TeX\ le composera dans la plupart des cas \`a l'endroit usuel.
+En style d'affichage, \TeX\ compose les exposants et les indices
+de |\det|, |\gcd|, |\inf|, |\lim|, |\liminf|,
+|\limsup|, |\max|, |\min|, |\Pr| et |\sup|
+comme s'ils \'etaient des limites,
+c'est-\`a-dire, directement au-dessus ou directement au-dessous du nom de la fonction.
+
+\example
+$\cos^2 x + \sin^2 x = 1\qquad\max_{a \in A} g(a) = 1$
+|
+\produces
+$\cos^2 x + \sin^2 x = 1\qquad\max_{a \in A} g(a) = 1$
+\endexample
+\enddesc
+
+\begindesc
+\cts bmod {}
+\explain
+Cette commande produit une op\'eration binaire pour indiquer un ^{modulo}
+dans une formule.
+\example
+$$x = (y+1) \bmod 2$$
+|
+\dproduces
+$$x = (y+1) \bmod 2$$
+\endexample
+\enddesc
+
+\begindesc
+\cts pmod {}
+\explain
+Cette commande procure une notation pour indiquer un ^{modulo} entre parenth\`eses
+\`a la fin d'une formule.
+\example
+$$x \equiv y+1 \pmod 2$$
+|
+\dproduces
+$$x \equiv y+1 \pmod 2$$
+
+\eix^^{fonctions, noms de}
+\endexample
+\enddesc
+
+%==========================================================================
+\subsection {Grands op\'erateurs}
+
+\begindesc 
+\bix^^{op\'erateurs//grands}
+\threecolumns 15
+\easy\ctsdoubledisplay bigcap {}
+\ctsdoubledisplay bigcup {}
+\ctsdoubledisplay bigodot {}
+\ctsdoubledisplay bigoplus {}
+\ctsdoubledisplay bigotimes {}
+\ctsdoubledisplay bigsqcup {}
+\ctsdoubledisplay biguplus {}
+\ctsdoubledisplay bigvee {}
+\ctsdoubledisplay bigwedge {}
+\ctsdoubledisplay coprod {}
+{\symbolspace = 42pt\basicdisplay {\hskip 26pt$\smallint$}%
+   {\\smallint}\ddstrut}%
+   \xrdef{\smallint} \pix\ctsidxref{smallint}
+\ctsdoubledisplay int {}
+\ctsdoubledisplay oint {}
+\ctsdoubledisplay prod {}
+\ctsdoubledisplay sum {}
+}
+\explain
+Ces commandes produisent diff\'erents grands symboles d'op\'erateur.  
+\TeX\ produit la plus petite taille quand il est en \minrefs{mode math\'ematique} 
+^{style texte} et les plus grandes tailles quand il est en ^{style d'affichage}.
+Les Op\'erateurs sont une des \minref{classe}s de symboles math\'ematiques de \TeX.
+\TeX\ met diff\'erents montants d'espace
+autour des diff\'erentes classes de symboles math\'ematiques.
+
+Les grands symboles d'op\'erateur avec `|big|' dans leurs noms sont diff\'e\-rents
+des op\'erations binaires correspondantes (voir \xref{binops}) comme 
+|\cap| ($\cap$) puisqu'ils apparaissent habituellement au d\'ebut
+d'une formule.  \TeX\ utilise des espacements diff\'erents pour un grand op\'erateur
+et pour une op\'eration binaire.
+
+Ne confondez pas `$\sum$' (|\sum|) avec `$\Sigma$'^^|\Sigma| (|\Sigma|)
+ou `$\prod$' (|\prod|) avec `$\Pi$' ^^|\Pi| (|\Pi|).
+|\Sigma| et |\Pi| produisent les lettres grecques capitales, qui sont plus petites et
+ont une apparence diff\'erente.
+
+Un grand op\'erateur peut avoir des ^{limites}.  La limite la plus basse est sp\'ecifi\'ee comme un indice
+et la plus haute comme un exposant.
+
+\example
+$$\bigcap_{k=1}^r (a_k \cup b_k)$$
+|
+\dproduces
+$$\bigcap_{k=1}^r (a_k \cup b_k)$$
+\endexample
+\interexampleskip
+\example
+$${\int_0^\pi \sin^2 ax\,dx} = {\pi \over 2}$$
+|
+\dproduces
+$${\int_0^\pi \sin^2 ax\,dx} = {\pi \over 2}$$
+\endexample
+\enddesc
+
+\begindesc
+\cts limits {}
+\explain
+Quand il est en style texte, \TeX\ place normalement les limites apr\`es un grand op\'erateur.
+Cette commande demande \`a \TeX\ de placer
+les limites sur et sous un grand op\'erateur plut\^ot qu'apr\`es lui.
+
+Si vous sp\'ecifiez plusieurs commandes |\limits|, |\nolimits|, 
+et |\dis!-play!-limits|, seule la derni\`ere sera prise en compte.
+
+\example
+Suppose that $\bigcap\limits_{i=1}^Nq_i$ contains at least 
+two elements.
+|
+\produces
+Suppose that $\bigcap\limits_{i=1}^Nq_i$ contains at least 
+two elements.
+\endexample
+\enddesc
+
+\begindesc
+\cts nolimits {}
+\explain
+Quand il est en style d'affichage, \TeX\ place normalement les limites sur et sous un grand op\'erateur.
+(L'op\'erateur |\int| est une exception---\TeX\
+place les limites pour |\int| apr\`es l'op\'erateur dans tous les cas.)
+^^|\int//limites apr\`es|
+Cette commande demande \`a \TeX\ de placer
+les limites apr\`es un grand op\'erateur plut\^ot que sur et sous lui.
+
+Si vous sp\'ecifiez plusieurs commandes |\limits|, |\nolimits|, 
+et |\dis!-play!-limits|, seule la derni\`ere sera prise en compte.
+
+\example
+$$\bigcap\nolimits_{i=1}^Nq_i$$
+|
+\dproduces
+$$\bigcap\nolimits_{i=1}^Nq_i$$
+\endexample
+\enddesc
+
+\begindesc
+\cts displaylimits {}
+\explain
+Cette commande demande \`a \TeX\ de
+suivre ses r\`egles normales pour le placement des limites~:
+\olist\compact
+\li Les limites de ^|\int| sont plac\'ees apr\`es l'op\'erateur.
+\li Les limites des autres grands op\'erateurs sont plac\'ees apr\`es 
+l'op\'era\-teur en style texte.
+\li Les limites des autres grands op\'erateurs sont plac\'ees sur et sous 
+l'op\'erateur en style d'affichage.
+\endolist
+Il est habituellement plus simple d'utiliser |\limits| ou |\nolimits|
+pour produire un effet sp\'ecifique, mais |\display!-limits| est parfois
+utile dans les d\'efinitions de \minref{macro}.
+
+Notez que \plainTeX\ d\'efinit ^|\int| comme une macro qui comprend |\no!-limits|,
+donc |\int\displaylimits| en style de texte restaure la convention de |\limits|.
+
+Si vous sp\'ecifiez plusieurs commandes |\limits|, |\nolimits|, 
+et |\dis!-play!-limits|, seule la derni\`ere sera prise en compte.
+
+\example
+$$a(\lambda) = {1 \over {2\pi}} \int\displaylimits
+_{-\infty}^{+\infty} f(x)e^{-i\lambda x}\,dx$$
+|
+\dproduces
+$$a(\lambda) = {1 \over {2\pi}} \int\displaylimits
+_{-\infty}^{+\infty} f(x)e^{-i\lambda x}\,dx$$
+
+\eix^^{op\'erateurs//grands}
+\endexample
+\enddesc
+
+
+%==========================================================================
+\subsection {Ponctuation}
+
+\begindesc
+\bix^^{ponctuation et formules de math.}
+\cts cdotp {}
+\cts ldotp {}
+\explain
+Ces deux commandes produisent respectivement un point centr\'e et un point
+positionn\'e sur la \minref{ligne de base}.  Elles ne sont valides qu'en
+\minref{mode} math\'ematique.  \TeX\ les traite comme de la ponctuation, ne mettant aucun espace suppl\'ementaire devant
+elles mais en ajoutant un petit en plus apr\`es elles.
+En contrepartie, \TeX\ met un montant d'espace \'egal des deux cot\'es
+d'un point centr\'e g\'en\'er\'e par la commande ^|\cdot| (\xref \cdot).
+\example
+$x \cdotp y \quad x \ldotp y \quad x \cdot y$
+|
+\produces
+$x \cdotp y \quad x \ldotp y \quad x \cdot y$
+\endexample
+\enddesc
+
+\begindesc
+\cts colon {}
+\explain
+Cette commande produit une symbole de ponctuation deux-points.
+Elle n'est valide qu'en mode math\'ematique.
+La diff\'erence entre |\colon| et le caract\`ere deux-points (|:|) est que
+`|:|' est un op\'erateur, donc \TeX\ met une espace suppl\'ementaire \`a sa gauche tandis qu'il
+ne met pas d'espace suppl\'ementaire \`a la gauche de |\colon|.
+\example
+$f \colon t \quad f : t$
+|
+\produces
+$f \colon t \quad f : t$
+
+\eix^^{ponctuation et formules de math.}
+\endexample
+\enddesc
+
+
+%==========================================================================
+%\secondprinting{\vfill\eject\null\vglue-30pt\vskip0pt}
+\section {Puissances et indices}
+
+\begindesc
+\margin{Two groups of commands have been combined here.}
+\bix^^{exposants}
+\bix^^{indices}
+%\secondprinting{\vglue-12pt}
+\makecolumns 4/2:
+\easy\ctsact _ \xrdef{@underscore} {\<argument>}
+\cts sb {\<argument>}
+\ctsact ^ \xrdef{@hat} {\<argument>}
+\cts sp {\<argument>}
+%\secondprinting{\vglue-4pt}
+\explain
+Les commandes de chaque colonne sont \'equivalentes.  Les commandes de la premi\`ere
+colonne composent \<argument> comme un indice et celle de la seconde
+colonne composent \<argument> comme une puissance.  Les commandes |\sb| et |\sp|
+sont principalement utiles si vous travaillez sur un terminal sur lequel manque un
+signe soulign\'e ou de puissance ou si vous avez red\'efini `|_|' or `|^|' et avez besoin
+d'acc\'eder \`a sa d\'efinition originale.  Ces commandes sont aussi utilis\'ees pour 
+mettre des limites inf\'erieures ou sup\'erieures sur des sommes ou des int\'egrales.  ^^{limites
+inf\'erieures} ^^{limites sup\'erieures}
+
+Si une puissance ou un indice n'est pas un \minref{token} seul, vous devez
+l'englober dans un \minref{groupe}.  \TeX\ ne met pas de priorit\'e aux puissances
+ou aux indices, donc il rejettera des formules telles que |a_i_j|, |a^i^j| ou
+|a^i_j|.
+
+Les puissances et les indices sont normalement compos\'es en ^{style script} ou
+en ^{style scriptscript} s'il sont de second ordre, c'est-\`a-dire, un indice d'un
+indice ou une puissance d'une puissance.  Vous pouvez mettre \emph{tout}
+texte d'une formule math\'ematique en  \minref{style}script ou scriptscript avec
+les commandes ^|\scriptstyle| et ^|\scriptscriptstyle| (\xref
+\scriptscriptstyle).
+
+Vous pouvez appliquer une puissance ou un indice \`a toutes les commandes qui
+produisent des fonctions math\'ematiques nomm\'ees en caract\`ere romain (voir
+\xref{namedfns}).  Dans certain cas (voyez encore \xref{namedfns}) la
+puissance ou l'indice appara\^\i t directement sur ou sous la fonction
+nomm\'ee comme montr\'e dans les exemples de ^|\lim| et de ^|\det| ci-dessous.
+
+\example
+$x_3 \quad t_{\max} \quad a_{i_k} \quad \sum_{i=1}^n{q_i}
+   \quad x^3\quad e^{t \cos\theta}\quad r^{x^2}\quad 
+   \int_0^\infty{f(x)\,dx}$ 
+$$\lim_{x\leftarrow0}f(x)\qquad\det^{z\in A}\qquad\sin^2t$$
+|
+\produces
+%\secondprinting{\divide\abovedisplayskip by 2}
+$x_3 \quad t_{\max} \quad a_{i_k} \quad \sum_{i=1}^n{q_i}
+   \quad x^3\quad e^{t \cos\theta}\quad r^{x^2}\quad 
+   \int_0^\infty{f(x)\,dx}$ 
+$$\lim_{x \leftarrow 0} f(x)\qquad
+   \det^{z \in A}\qquad \sin^2 t$$
+
+\eix^^{exposants}
+\eix^^{indices}
+\endexample
+\enddesc
+
+%\secondprinting{\vfill\eject}
+
+%==========================================================================
+\subsection {Choisir et utiliser des mod\`eles}
+
+\begindesc
+\bix^^{styles}
+\cts textstyle {}
+\cts scriptstyle {}
+\cts scriptscriptstyle {}
+\cts displaystyle {}
+\explain
+^^{style texte} ^^{style script} ^^{style scriptscript} ^^{style d'affichage}
+Ces commandes forcent le \minref{style} normal et par cons\'equent la
+police que \TeX\ utilise pour composer une formule.  Comme les
+commandes de choix de police telles que |\it|, elles sont effectives
+jusqu'\`a la fin du groupe les contenant.
+Elles sont utiles quand le choix de style de \TeX\  est inappropri\'e pour la formule
+que vous essayez de composer.
+\example
+$t+{\scriptstyle t + {\scriptscriptstyle t}}$
+|
+\produces
+$t+{\scriptstyle t + {\scriptscriptstyle t}}$
+\endexample
+\enddesc
+
+
+\begindesc
+\cts mathchoice {%
+   \rqbraces{\<math$_1$>}
+   \rqbraces{\<math$_2$>}
+   \rqbraces{\<math$_3$>}
+   \rqbraces{\<math$_4$>}}
+\explain
+Cette commande demande \`a \TeX\ de composer une des sous-formules
+\<math$_1$>, \<math$_2$>, \<math$_3$> ou \<math$_4$>, en faisant son choix
+selon le \minref{style} courant.
+Ainsi, si \TeX\ est en 
+style d'affichage il compose |\math!-choice| comme \<math$_1$>~; en style texte il la compose
+comme \<math$_2$>~; en style script il la compose comme \<math$_3$>~;
+et en style scriptscript il la compose comme \<math$_4$>.
+\example
+\def\mc{{\mathchoice{D}{T}{S}{SS}}}
+The strange formula $\mc_{\mc_\mc}$ illustrates a 
+mathchoice.
+|
+\produces
+\def\mc{{\mathchoice{D}{T}{S}{SS}}}
+The strange formula $\mc_{\mc_\mc}$ illustrates a 
+mathchoice.
+\endexample
+\enddesc
+
+\begindesc
+\cts mathpalette {\<argument$_1$> \<argument$_2$>}
+\explain
+^^{symboles math\'ematiques}
+Cette commande procure un moyen simple de 
+produire une construction math\'ematique qui marche dans les quatre \minref{style}s.
+Pour l'utiliser, vous devrez normalement d\'efinir une macro suppl\'ementaire,
+que nous appellerons |\build|.
+L'appel de |\math!-palette| pourra alors avoir la forme
+|\mathpalette|\allowbreak|\build|\<argument>.
+
+|\build| teste dans quel style est \TeX\ et compose \<argu\-ment> en cons\'e\-quence.
+Il peut \^etre d\'efini pour avoir deux param\`etres.
+Quand vous appelez |\math!-palette|, il appellera \`a son tout |\build|,
+avec |#1| une
+commande qui s\'electionne le style courant et |#2| un \<argument>.
+Ainsi, dans la d\'efinition de |\build| vous pouvez composer quelque chose
+dans le style courant en le faisant pr\'ec\'eder de `|#1|'.
+Voir la \knuth{page~360}{417--418} pour des exemples d'utilisation de |\mathpalette|
+et la \knuth{page~151}{177} pour plus d'explication sur son fonctionnement. 
+
+\eix^^{styles}
+\enddesc
+
+%==========================================================================
+\section {Symboles compos\'es}
+
+%==========================================================================
+\subsection {Accents math\'ematiques}
+
+\begindesc
+\xrdef{mathaccent}
+^^{accents}
+^^{math\'ematiques//accents}
+%
+\easy\ctsx acute {^{accent aigu} comme dans $\acute x$}
+\ctsx b {^{accent barre dessous} comme dans $\b x$}
+\ctsx bar {^{accent barre} comme dans $\bar x$}
+\ctsx breve {^{accent bref} comme dans $\breve x$}
+\ctsx check {^{accent tch\`eque} comme dans $\check x$}
+\ctsx ddot {^{accent double point} comme dans $\ddot x$}
+\ctsx dot {^{accent point} comme dans $\dot x$}
+\ctsx grave {^{accent grave} comme dans $\grave x$}
+\ctsx hat {^{accent circonflexe} comme dans $\hat x$}
+\ctsx widehat {^{accent circonflexe large} comme dans $\widehat {x+y}$}
+\ctsx tilde {^{accent tilde} comme dans $\tilde x$}
+\ctsx widetilde {^{accent tilde large} comme dans $\widetilde {z+a}$}
+\ctsx vec {^{accent vecteur} comme dans $\vec x$}
+\explain
+Ces commandes produisent des accents dans les formules math\'e\-matiques.  
+Vous devrez normalement laisser un espace apr\`es chacune d'entre elles.
+Un accent large peut s'appliquer \`a une sous-formule comportant plusieurs caract\`eres~;
+\TeX\ centrera l'accent sur la sous-formule.
+Les autres accents ne sont applicables qu'a des caract\`eres simples.
+
+\example
+$\dot t^n \qquad \widetilde{v_1 + v_2}$
+|
+\produces
+$\dot t^n \qquad \widetilde{v_1 + v_2}$
+\endexample
+
+\begindesc
+\cts mathaccent {\<mathcode>}
+\explain
+Cette commande demande \`a \TeX\ de composer un accent math\'ematique
+dont la famille et le code de caract\`ere sont donn\'es par \<mathcode>.  (\TeX\ ignore
+la classe du \minref{mathcode}.)
+Voir l'\knuth{annexe~G}{} pour les d\'etails sur la mani\`ere dont \TeX\ positionne de tels accents.
+La fa\c con usuelle d'utiliser |\mathaccent| est de le mettre dans une d\'efinition de macro
+que donne un nom \`a l'accent math\'ematique.
+\example
+\def\acute{\mathaccent "7013}
+|
+\endexample
+\enddesc
+
+\see ``Accents'' (\xref {accents}).
+\enddesc
+
+%==========================================================================
+\subsection {Fractions et autres op\'erations empil\'ees}
+
+\begindesc
+\bix^^{fractions}
+\bix^^{sous-formules empil\'ees}
+\easy\cts over {}
+\cts atop {}
+\cts above {\<dimension>}
+\cts choose {}
+\cts brace {}
+\cts brack {}
+\explain
+{\def\fri{\<formula$_1$>}%
+\def\frii{\<formula$_2$>}%
+Ces commandes empilent une sous-formule sur une autre.  Nous expliquerons comment
+marche |\over| et lui relierons ensuite les autres commandes.
+
+|\over| est la commande que vous utilisez normalement pour produire une fraction.
+^^{fractions//produites par \b\tt\\over\e} 
+Si vous \'ecrivez quelque chose sous une des formes suivantes~:
+\csdisplay
+$$!fri\over!frii$$
+$!fri\over!frii$
+\left!<delim>!fri\over!frii\right!<delim>
+{!fri\over!frii}
+|
+vous obtiendrez une fraction avec un num\'erateur \fri\  et un d\'eno\-minateur \<for\-mu\-la$_2$>,
+c'est-\`a-dire, \fri\ sur \frii.
+Dans la premi\`ere de ces trois
+formes, le |\over| n'est pas implicitement contenu dans un groupe~;
+il absorbe
+tout ce qui est \`a sa gauche et \`a sa droite jusqu'a ce qu'il trouve une fronti\`ere,
+\`a savoir, le d\'ebut ou la fin d'un groupe.
+
+Vous ne pouvez pas utiliser |\over| ou une autre de ces commandes de ce groupe
+plus d'une fois dans une formule.
+Ainsi une formule telle que~:
+\csdisplay
+$$a \over n \choose k$$
+|
+n'est pas l\'egale.
+Ce n'est pas une s\'ev\`ere restriction parce que
+vous pouvez toujours englober une de ces commandes entre accolades.
+La raison de cette restriction est que si vous avez deux de ces commandes
+dans une seule formule, \TeX\ ne saura pas comment les grouper.
+
+Les autres commandes sont similaires \`a |\over|, avec les exceptions suivantes~:
+\ulist\compact
+\li |\atop| omet la barre de fraction. 
+\li |\above| procure une barre de fraction d'\'epaisseur \<dimension>.
+\li |\choose|
+omet la barre de fraction et englobe la construction entre parenth\`eses.
+(Elle est appel\'ee ``choose'' parce que $n \choose k$ est la notation pour le
+nombre de fa\c cons de choisir $k$ choses parmi $n$.)
+\li |\brace| omet la barre de fraction et englobe la construction entre accolades.
+\li |\brack|
+omet la barre de fraction et englobe la construction entre crochets.
+\endulist
+}%
+\example
+$${n+1 \over n-1}      \qquad {n+1 \atop n-1}   \qquad
+  {n+1 \above 2pt n-1} \qquad {n+1 \choose n-1} \qquad
+  {n+1 \brace n-1}     \qquad {n+1 \brack n-1}$$
+|
+\dproduces
+$${n+1 \over n-1}      \qquad {n+1 \atop n-1}   \qquad
+  {n+1 \above 2pt n-1} \qquad {n+1 \choose n-1} \qquad
+  {n+1 \brace n-1}     \qquad {n+1 \brack n-1}$$
+\endexample
+\enddesc
+
+\begindesc
+\cts overwithdelims {\<delim$_1$> \<delim$_2$>}
+\cts atopwithdelims {\<delim$_1$> \<delim$_2$>}
+\cts abovewithdelims {\<delim$_1$> \<delim$_2$> \<dimension>}
+\explain
+Chacune de ces commandes superpose une sous-formule sur une autre et
+entoure le r\'esultat avec \<delim$_1$> \`a gauche et
+\<delim$_2$> \`a droite.  Ces commandes suivent les m\^eme r\`egles que
+|\over|, |\atop| et |\above|. Le \<dimension> dans |\abovewithdelims|
+sp\'ecifie l'\'epaisseur de la barre de fraction.
+\example
+$${m \overwithdelims () n}\qquad
+  {m \atopwithdelims !|!| n}\qquad
+  {m \abovewithdelims \{\} 2pt n}$$
+|
+\dproduces
+$${m \overwithdelims () n}\qquad
+  {m \atopwithdelims || n}\qquad
+  {m \abovewithdelims \{\} 2pt n}$$
+\endexample
+\enddesc
+
+\begindesc
+\cts cases {}
+\explain
+^^{combinaisons, notation pour des}
+Cette commande produit la forme math\'ematique qui d\'ecrit un choix entre
+plusieurs cas.
+Chaque cas a deux parties, s\'epar\'ees par `|&|'.
+\TeX\ traite la premi\`ere partie comme une formule math\'ematique
+et la seconde partie comme du texte ordinaire.  Chaque
+cas doit \^etre suivi par |\cr|.
+
+\example
+$$g(x,y) = \cases{f(x,y),&if $x<y$\cr
+                  f(y,x),&if $x>y$\cr
+                  0,&otherwise.\cr}$$
+|
+\dproduces
+$$g(x,y) = \cases{f(x,y),&if $x<y$\cr
+                  f(y,x),&if $x>y$\cr
+                  0,&otherwise.\cr}$$
+\endexample
+\enddesc
+
+\begindesc
+\cts underbrace {\<argument>}
+\cts overbrace {\<argument>}
+\cts underline {\<argument>}
+\cts overline {\<argument>}
+\cts overleftarrow {\<argument>}
+\cts overrightarrow {\<argument>}
+\explain
+Ces commandes placent des ^{accolades}, des lignes ou des ^{fl\`eches} extensibles 
+sur ou sous la sous-formule donn\'ee par \<argument>.
+\TeX\ fera cette construction aussi large que n\'ecessaire pour
+le contexte.
+Quand \TeX\ produit les accolades, lignes ou fl\`eches \'etendues, il ne consid\`ere
+que les dimensions de la \minref{bo\^\i te} contenant \<argument>.
+Si vous utilisez plus d'une de ces commandes dans une seule formule, les
+accolades, lignes ou fl\`eches qu'elle produira
+pourront ne pas s'aligner proprement les unes avec les autres.
+Vous pouvez utiliser la commande |\mathstrut| (\xref \mathstrut)
+pour contourner cette difficult\'e.
+\example
+$$\displaylines{
+\underbrace{x \circ y}\qquad \overbrace{x \circ y}\qquad
+\underline{x \circ y}\qquad \overline{x \circ y}\qquad
+\overleftarrow{x \circ y}\qquad
+\overrightarrow{x \circ y}\cr
+{\overline r + \overline t}\qquad
+{\overline {r \mathstrut} + \overline {t \mathstrut}}\cr
+}$$
+|
+\dproduces
+$$\displaylines{
+\underbrace{x \circ y}\qquad \overbrace{x \circ y}\qquad
+\underline{x \circ y}\qquad \overline{x \circ y}\qquad
+\overleftarrow{x \circ y}\qquad
+\overrightarrow{x \circ y}\cr
+{\overline r + \overline t}\qquad
+{\overline {r \mathstrut} + \overline {t \mathstrut}}\cr
+}$$
+\endexample
+\enddesc
+
+\begindesc%\secondprinting{\vglue-.5\baselineskip\vskip0pt}
+\cts buildrel {\<formule> {\bt \\over} \<relation>}
+\explain
+^^{relations//mettre des formules sur des}
+Cette commande produit une \minref{bo\^\i te} dans laquelle \<formula>
+est plac\'e sur \<relation>. \TeX\ traite le r\'esultat comme une relation
+en ce qui concerne l'espacement \seeconcept{classe}.
+\example
+$\buildrel \rm def \over \equiv$
+|
+\produces
+$\buildrel \rm def \over \equiv$
+
+\eix^^{fractions}
+\eix^^{sous-formules empil\'ees}
+\endexample
+\enddesc
+
+%\secondprinting{\vfill\eject}
+
+
+%==========================================================================
+\subsection {Points}
+
+\begindesc
+\bix^^{points}
+\easy\cts ldots {}
+\cts cdots {}
+\explain
+Ces commandes produisent trois ^{points} align\'es.  Pour |\ldots|, les points
+sont sur la ligne de base~; pour |\cdots|, les points sont centr\'es en respectant 
+les axes (voir l'explication de |\vcenter|, \xref\vcenter).
+
+\example
+$t_1 + t_2 + \cdots + t_n \qquad x_1,x_2, \ldots\,, x_r$
+|
+\produces
+$t_1 + t_2 + \cdots + t_n \qquad x_1,x_2, \ldots\,, x_r$
+\endexample
+\enddesc
+
+\begindesc
+\easy\cts vdots {}
+\explain
+Cette commande produit trois points verticaux.
+\example
+$$\eqalign{f(\alpha_1)& = f(\beta_1)\cr
+   \noalign{\kern -4pt}%
+   &\phantom{a}\vdots\cr % moves the dots right a bit
+   f(\alpha_k)& = f(\beta_k)\cr}$$
+|
+\dproduces
+$$\eqalign{f(\alpha_1)& = f(\beta_1)\cr
+   \noalign{\kern -4pt}%
+   &\phantom{a}\vdots\cr
+   f(\alpha_k)& = f(\beta_k)\cr}$$
+\endexample
+\enddesc
+
+\begindesc
+\cts ddots {}
+\explain
+Cette commande produit trois points sur une diagonale.
+Son usage le plus commun est d'indiquer une r\'ep\'etition le long de la diagonale d'une matrice.
+\example
+$$\pmatrix{0&\ldots&0\cr
+           \vdots&\ddots&\vdots\cr
+           0&\ldots&0\cr}$$
+|
+\dproduces
+$$\pmatrix{0&\ldots&0\cr
+           \vdots&\ddots&\vdots\cr
+           0&\ldots&0\cr}$$
+
+\eix^^{points}
+\endexample
+\enddesc
+
+\see |\dots| \ctsref\dots.
+
+%==========================================================================
+\subsection {D\'elimiteurs}
+
+\begindesc
+\bix^^{d\'elimiteurs}
+%
+\cts lgroup {}
+\cts rgroup {}
+\explain
+Ces commandes produisent de grandes ^{parenth\`eses} gauches et droites
+qui sont d\'efinies comme des \minref{d\'elimiteur}s ouvrants et fermants.
+La plus grande taille disponible pour ces d\'elimiteurs est |\Big|.
+Si vous utilisez des tailles plus petites, vous obtiendrez des caract\`eres \'etranges.
+\example
+$$\lgroup\dots\rgroup\qquad\bigg\lgroup\dots\bigg\rgroup$$
+|
+\dproduces
+$$\lgroup\dots\rgroup\qquad\bigg\lgroup\dots\bigg\rgroup$$
+\endexample
+\enddesc
+
+\begindesc
+\margin{{\tt\\vert} and {\tt\\Vert} were explained elsewhere.}
+\easy\cts left {}
+\cts right {}
+\explain
+Ces commandes doivent \^etre employ\'ees ensemble selon le mod\`ele~:
+\display
+{{\bt \\left} \<delim$_1$> \<subformula> {\bt \\right} \<delim$_2$>}
+Cette construction demande \`a \TeX\ de produire \<subformula>, 
+entour\'ee des \minref{d\'elimiteur}s \<delim$_1$> et \<delim$_2$>.
+La taille verticale des d\'elimiteurs est ajust\'ee pour correspondre \`a la 
+taille verticale (hauteur plus profondeur) de \<subformula>.  \<delim$_1$> et
+\<delim$_2$> n'ont pas besoin de correspondre.
+Par exemple, vous pouvez utiliser `|]|' comme d\'elimiteur gauche
+et `|(|' comme d\'elimiteur droite dans une utilisation simple de |\left|
+et |\right|.
+
+|\left| et |\right| ont la propri\'et\'e importante de d\'efinir un
+groupe, c'est-\`a-dire, qu'ils agissent comme des accolades gauches et droite.  cette propri\'et\'e de
+groupement est particuli\`erement utile quand vous mettez ^|\over| (\xref{\over}) ou
+une commande similaire entre |\left| et |\right|, car vous n'avez pas besoin
+de mettre d'accolades autour de la fraction construite par |\over|.
+
+Si vous voulez un d\'elimiteur gauche mais pas le droit, vous pouvez utiliser `|.|' \`a
+la place du d\'elimiteur que vous ne voulez pas et il se transformera en espace blanc
+(de largeur ^|\nulldelimiterspace|).
+\example
+$$\left\Vert\matrix{a&b\cr c&d\cr}\right\Vert
+  \qquad \left\uparrow q_1\atop q_2\right.$$
+|
+\dproduces
+$$\left\Vert\matrix{a&b\cr c&d\cr}\right\Vert
+  \qquad \left\uparrow q_1\atop q_2\right.$$
+\endexample
+\enddesc
+
+\begindesc
+\cts delimiter {\<nombre>}
+\explain
+Cette commande produit un d\'elimiteur dont les caract\'eristiques sont donn\'ees par
+\<number>.  \<number> est normalement \'ecrit en notation hexa\-d\'ecimale.
+Vous pouvez utiliser la commande |\delimiter| \`a la place d'un caract\`ere dans tout contexte
+o\`u \TeX\ attend un d\'elimiteur (bien que la commande soit rarement 
+employ\'ee en dehors d'une d\'efinition de macro).
+Supposez que \<number> soit le nombre hexad\'ecimal $cs_1s_2s_3
+l_1l_2l_3$.  Alors \TeX\ prendra le d\'elimiteur ayant 
+la \minref{classs} $c$, la petite variante
+$s_1s_2s_3$ et la grande variante $l_1l_2l_3$.  Ici $s_1s_2s_3$ indique
+le caract\`ere math\'ematique trouv\'e en position $s_2s_3$ de la famille $s_1$ et
+de m\^eme pour $l_1l_2l_3$.  C'est la m\^eme convention que celle
+utilis\'ee pour ^|\mathcode| (\xref\mathcode).
+\example
+\def\vert{\delimiter "026A30C} % As in plain TeX.
+|
+\endexample
+\enddesc
+
+
+\begindesc 
+\margin{{\tt\\delcode} was explained in two places.  The
+combined explanation is now in `General operations'.}
+\cts delimiterfactor {\param{nombre}}
+\cts delimitershortfall {\param{nombre}}
+\explain
+^^{d\'elimiteurs//hauteur des}
+Ces deux param\`etres signalent \`a \TeX\ comment la hauteur d'un \minref{d\'elimiteur}
+doit \^etre reli\'ee \`a la taille verticale de la sous-formule
+\`a laquelle le d\'elimi\-teur est associ\'e.
+|\delimiterfactor| donne le ratio minimum
+de la taille du d\'elimiteur par rapport \`a la taille verticale de la sous-formule et
+|\deli!-mitershortfall| donne le maximum par lequel la hauteur du
+d\'elimiteur sera r\'eduite pour correspondre \`a la taille verticale de la sous-formule.
+
+Supposez que la \minref{bo\^\i te} contenant la sous-formule
+ait une hauteur $h$ et une profondeur $d$ et $y=2\,\max(h,d)$.
+soit la valeur de |\delimiterfactor| $f$ et la valeur de
+|\delimitershortfall| $\delta$.
+Alors \TeX\ prend la taille de d\'elimiteur minimum \'etant au moins $y \cdot
+f/1000$ et au moins $y-\delta$.  En particulier, si |\delimiterfactor|
+est exactement \`a $1000$ alors \TeX\ essayera de faire un d\'elimiteur au moins aussi grand
+que la formule \`a laquelle il est attach\'e.
+Voir les \knuth{pages~152 et~446 (R\`egle 19)}{pages~178 et~511 (R\`egle 19)}
+pour les d\'etail exacts sur la fa\c con dont \TeX\ utilise ces param\`etres.
+\PlainTeX\ met |\delimiter!-factor| \`a $901$ et 
+|\delimiter!-shortfall| \`a |5pt|.
+\enddesc
+
+\see |\delcode| (\xref\delcode), |\vert|, |\Vert|
+et |\backslash| (\xref\vert).
+\eix^^{d\'elimiteurs}
+
+%==========================================================================
+\subsection {Matrices}
+
+\begindesc
+\cts matrix
+   {{\bt \rqbraces{\<ligne> \\cr $\ldots$ \<ligne> \\cr}}}
+\cts pmatrix
+   {{\bt \rqbraces{\<ligne> \\cr $\ldots$ \<ligne> \\cr}}}
+\cts bordermatrix
+   {{\bt \rqbraces{\<ligne> \\cr $\ldots$ \<ligne> \\cr}}}
+\explain
+Chacune de ces trois commandes produit une ^{matrice}.  
+Les \'el\'ements de chaque rang\'e de la matrice entr\'ee
+sont s\'epar\'es par `|&|' et chaque rang\'e est \`a son tour termin\'ee
+par |\cr|.
+(C'est la m\^eme forme que celle utilis\'ee pour un
+\minref{alignement}.)
+Les commandes diff\`erent de la mani\`ere suivante~:
+\ulist\compact
+\li |\matrix| produit une matrice sans aucun entourage ou \minref{d\'elimiteur}s ins\'er\'es.
+\li |\pmatrix| produit une matrice entour\'ee par des parenth\`eses.
+\li |\bordermatrix| produit une matrice dans laquelle la premi\`ere rang\'ee et la premi\`ere
+colonne sont trait\'ees comme des labels.  (Le premier \'el\'ement de la premi\`ere rang\'ee est
+habituellement laiss\'e \`a blanc.)  Le reste de la matrice est englob\'ee dans
+des parenth\`eses.
+\endulist
+\TeX\ peut rendre les parenth\`eses de |\pmatrix| et de |\bordermatrix| aussi larges que
+n\'ecessaire en ins\'erant des extensions verticales.  Si vous voulez une matrice
+entour\'ee par des d\'elimiteurs autres que des paren\-th\`eses, vous devez utiliser
+|\matrix| en conjugaison avec |\left| et |\right| (\xref \left).
+
+\example
+$$\displaylines{
+   \matrix{t_{11}&t_{12}&t_{13}\cr
+           t_{21}&t_{22}&t_{23}\cr
+           t_{31}&t_{32}&t_{33}\cr}\qquad
+\left\{\matrix{t_{11}&t_{12}&t_{13}\cr
+           t_{21}&t_{22}&t_{23}\cr
+           t_{31}&t_{32}&t_{33}\cr}\right\}\cr
+\pmatrix{t_{11}&t_{12}&t_{13}\cr
+           t_{21}&t_{22}&t_{23}\cr
+           t_{31}&t_{32}&t_{33}\cr}\qquad
+\bordermatrix{&c_1&c_2&c_3\cr
+           r_1&t_{11}&t_{12}&t_{13}\cr
+           r_2&t_{21}&t_{22}&t_{23}\cr
+           r_3&t_{31}&t_{32}&t_{33}\cr}\cr}$$
+|
+\dproduces
+$$\displaylines{
+   \matrix{t_{11}&t_{12}&t_{13}\cr
+   t_{21}&t_{22}&t_{23}\cr
+   t_{31}&t_{32}&t_{33}\cr}\qquad
+\left\{\matrix{t_{11}&t_{12}&t_{13}\cr
+   t_{21}&t_{22}&t_{23}\cr
+   t_{31}&t_{32}&t_{33}\cr}\right\}\cr
+\pmatrix{t_{11}&t_{12}&t_{13}\cr
+   t_{21}&t_{22}&t_{23}\cr
+   t_{31}&t_{32}&t_{33}\cr}\qquad
+\bordermatrix{&c_1&c_2&c_3\cr
+   r_1&t_{11}&t_{12}&t_{13}\cr
+   r_2&t_{21}&t_{22}&t_{23}\cr
+   r_3&t_{31}&t_{32}&t_{33}\cr}\cr}$$
+\endexample
+\enddesc
+
+%==========================================================================
+\subsection {Racines et radicaux}
+
+\begindesc
+\easy\cts sqrt {\<argument>}
+\explain
+Cette commande produit la notation pour la racine carr\'ee de \<argument>.
+\example
+$$x = {-b\pm\sqrt{b^2-4ac} \over 2a}$$
+|
+\dproduces
+$$x = {-b\pm\sqrt{b^2-4ac} \over 2a}$$
+\endexample
+\enddesc
+
+\begindesc
+\easy\cts root {\<argument$_1$> {\bt \\of} \<argument$_2$>}
+\explain
+Cette commande produit la notation pour une racine de \<argument$_2$> o\`u l'ordre
+est donn\'e par \<argument$_1$>.
+\example
+$\root \alpha \of {r \cos \theta}$
+|
+\produces
+$\root \alpha \of {r \cos \theta}$
+\endexample
+\enddesc
+
+\begindesc
+\cts radical {\<nombre>}
+\explain
+Cette commande produit un signe radical 
+dont les caract\'eristiques sont donn\'ees par
+\<nombre>.  Elle utilise la m\^eme repr\'esentation que le code d\'elimiteur
+^^{codes d\'elimiteurs}
+dans la commande ^|\delcode| (\xref \delcode).
+
+\example
+\def\sqrt{\radical "270370} % as in plain TeX
+|
+\endexample
+\enddesc
+
+%==========================================================================
+\section {Num\'eros d'\'equation}
+
+\begindesc
+\easy\cts eqno {}
+\cts leqno {}
+\explain
+Ces commandes attachent un num\'ero d'\'equation \`a une formule affich\'ee.
+|\eqno| met le num\'ero d'\'equation \`a droite et |\leqno| le met \`a gauche.
+Les commandes doivent \^etre mises \`a la fin de la formule.
+Si vous avez un affichage multi-ligne et voulez num\'eroter plus d'une ligne,
+utilisez les commandes |\eq!-alignno| ou |\leq!-alignno|
+(\xref \eqalignno).
+
+Ces commandes ne sont valides qu'en mode math\'ematique affich\'e.
+
+\example
+$$e^{i\theta} = \cos \theta + i \sin \theta\eqno{(11)}$$
+|
+\produces
+$$e^{i\theta} = \cos \theta + i \sin \theta\eqno{(11)}$$
+\endexample
+\example
+$$\cos^2 \theta + \sin^2 \theta = 1\leqno{(12)}$$
+|
+\produces
+\abovedisplayskip = -\baselineskip
+$$\cos^2 \theta + \sin^2 \theta = 1\leqno{(12)}$$
+\endexample
+\enddesc
+
+
+%==========================================================================
+\section {Affichages multi-ligne}
+
+\begindesc
+\bix^^{affichages//multi-ligne}
+\cts displaylines
+   {{\bt \rqbraces{\<ligne>\ths\\cr$\ldots$\<ligne>\ths\\cr}}}
+\explain
+Cette commande produit un affichage math\'ematique multi-ligne dans lequel chaque ligne est
+centr\'ee ind\'ependamment des autres lignes.
+Vous pouvez utiliser la commande |\noalign| (\xref \noalign) pour changer le montant
+d'espace entre deux lignes d'un affichage multi-ligne.
+
+Si vous voulez attacher des num\'eros d'\'equation \`a certaines ou toutes les \'equations
+dans un affichage math\'ematique multi-ligne, vous devez utiliser |\eqalignno| ou
+|\leqalignno|.
+\example
+$$\displaylines{(x+a)^2 = x^2+2ax+a^2\cr
+                (x+a)(x-a) = x^2-a^2\cr}$$
+|
+\dproduces\centereddisplays
+$$\displaylines{
+(x+a)^2 = x^2+2ax+a^2\cr
+(x+a)(x-a) = x^2-a^2\cr
+}$$
+\endexample
+\enddesc
+
+\begindesc
+\cts eqalign {}
+   {{\bt \rqbraces{\<ligne> \\cr $\ldots$ \<ligne> \\cr}}}
+\cts eqalignno {}
+   {{\bt \rqbraces{\<ligne> \\cr $\ldots$ \<ligne> \\cr}}}
+\cts leqalignno {}
+   {{\bt \rqbraces{\<ligne> \\cr $\ldots$ \<ligne> \\cr}}}
+\explain
+^^{num\'eros d'\'equation}
+Ces commandes produisent un affichage math\'ematique multi-ligne
+dans lequel certaines parties correspondantes des lignes sont align\'ees verticalement.
+Les commandes |\eqalignno| et |\leqalignno| vous laissent aussi
+apporter des num\'eros d'\'equation pour certaines ou toutes les lignes.
+|\eqalignno| met les num\'eros d'\'equation \`a droite et
+|\leqalignno| les met \`a gauche.
+
+Chaque ligne dans l'affichage est termin\'ee par |\cr|.  Chacune des parties devant \^etre align\'ee
+(le plus souvent un signe \'egal) est pr\'ec\'ed\'ee par
+`|&|'.  Un `|&|' pr\'ec\`ede aussi chaque num\'ero d'\'equation, qui est donn\'e \`a la fin d'une ligne.
+Vous pouvez mettre plus d'une de ces commandes dans un seul affichage pour
+produire plusieurs groupes d'\'equation.  Dans ce cas, seuls les groupes les plus \`a droite
+ou les plus \`a gauche peuvent \^etre produits avec |\eqalignno| ou |\leqalignno|.
+
+Vous pouvez utiliser la commande |\noalign| (\xref \noalign) pour changer le montant
+d'espace entre deux lignes d'un affichage multi-ligne.
+\example
+$$\left\{\eqalign{f_1(t) &= 2t\cr f_2(t) &= t^3\cr
+         f_3(t) &= t^2-1\cr}\right\}
+  \left\{\eqalign{g_1(t) &= t\cr g_2(t) &= 1}\right\}$$
+|
+\dproduces
+$$\left\{\eqalign{f_1(t) &= 2t\cr f_2(t) &= t^3\cr
+   f_3(t) &= t^2-1\cr}\right\}
+\left\{\eqalign{g_1(t) &= t\cr g_2(t) &= 1}\right\}$$
+\nextexample
+$$\eqalignno{
+\sigma^2&=E(x-\mu)^2&(12)\cr
+   &={1 \over n}\sum_{i=0}^n (x_i - \mu)^2&\cr
+   &=E(x^2)-\mu^2\cr}$$
+|
+\produces
+\abovedisplayskip = -\baselineskip
+$$\eqalignno{
+\sigma^2&=E(x-\mu)^2&(12)\cr
+   &={1 \over n}\sum_{i=0}^n (x_i - \mu)^2&\cr
+   &=E(x^2)-\mu^2\cr}$$
+\nextexample
+$$\leqalignno{
+\sigma^2&=E(x-\mu)^2&(6)\cr
+   &=E(x^2)-\mu^2&(7)\cr}$$
+|
+\produces
+\abovedisplayskip = -\baselineskip
+$$\leqalignno{
+\sigma^2&=E(x-\mu)^2&(6)\cr
+   &=E(x^2)-\mu^2&(7)\cr}$$
+\nextexample
+$$\eqalignno{
+  &(x+a)^2 = x^2+2ax+a^2&(19)\cr
+  &(x+a)(x-a) = x^2-a^2\cr}$$
+% same effect as \displaylines but with an equation number
+|
+\dproduces
+$$\eqalignno{
+&(x+a)^2 = x^2+2ax+a^2&(19)\cr
+&(x+a)(x-a) = x^2-a^2\cr
+}$$
+% same effect as \displaylines but with an equation number
+
+\eix^^{affichages//multi-ligne}
+\endexample
+\enddesc
+
+%==========================================================================
+\section {Polices dans des formules math\'ematiques}
+
+\begindesc
+^^{polices}
+\xrdef{mathfonts}
+%
+\easy\ctsx cal {utilise une police calligraphique majuscule}
+\ctsx mit {utilise une police math\'ematique italique}
+\ctsx oldstyle {utilise une police de chiffres elz\'eviriens}
+\explain
+Ces commandes demandent \`a \TeX\ de composer le texte suivant dans la police
+sp\'ecifi\'ee.  Vous ne pouvez les utiliser qu'en \minref{mode math\'ematique}.
+La commande |\mit| est utile pour produire des ^{lettres grecques} capitales pench\'ees.
+Vous pouvez aussi utiliser les commandes donn\'ees dans
+\headcit{S\'electionner des polices}{selfont} pour changer des polices en mode math\'ematique.
+\example
+${\cal XYZ} \quad
+{\mit AaBb\Gamma \Delta \Sigma} \quad 
+{\oldstyle 0123456789}$
+|
+\produces
+${\cal XYZ} \quad
+{\mit AaBb\Gamma \Delta \Sigma} \quad 
+{\oldstyle 0123456789}$
+\endexample
+\enddesc
+
+^^{styles de caract\`ere}
+\begindesc
+\ctsx itfam {famille de type italique}
+\ctsx bffam {famille de type grasse}
+\ctsx slfam {famille de type pench\'ee}
+\ctsx ttfam {famille de type machine \`a \'ecrire}
+\explain
+Ces commandes d\'efinissent des familles de type \minrefs{family} devant \^etre utilis\'ees en
+\minref{mode math\'ematique}.  Leur principale utilisation est dans la d\'efinition des commandes
+|\it|, |\bf|, |\sl| et |\tt| pour qu'elles puissent fonctionner en mode math\'ematique.
+\enddesc
+
+\begindesc
+\cts fam {\param{nombre}}
+\explain
+Quand \TeX\ est en \minref{mode math\'ematique}, il compose normalement un caract\`ere
+en utilisant la ^^{classe} de famille de police donn\'ee dans son \minref{mathcode}.
+^^{famille//donn\'ee par \b\tt\\fam\e}
+Cependant, quand \TeX\ est en mode math\'ematique et rencontre un caract\`ere dont
+la \minref{classe} est $7$ (Variable), il compose ce caract\`ere en utilisant
+la \minref{famille} de police donn\'ee par la valeur de |\fam|, \`a condition que la 
+valeur de |\fam| soit entre $0$ et $15$.
+Si la valeur de |\fam| n'est pas dans cette intervalle, \TeX\ utilise la famille du
+mathcode du caract\`ere comme dans le cas ordinaire.
+\TeX\ met |\fam| \`a $-1$ \`a chaque fois qu'il entre en mode math\'ematique.
+En dehors du mode math\'ematique, |\fam| n'a pas d'effet.
+
+En assignant une valeur \`a
+|\fam| vous pouvez changer la fa\c con dont \TeX\ compose des caract\`eres ordinaires
+tels que des variables.    
+Par exemple, en mettant |\fam| \`a |\ttfam|, vous demandez \`a \TeX\ de composer
+des variables en utilisant une police de machine \`a \'ecrire.
+\PlainTeX\ d\'efinit |\tt| comme une \minref{macro} qui, entre autres choses,
+met |\fam| \`a |\ttfam|.
+\example
+\def\bf{\fam\bffam\tenbf} % As in plain TeX.
+|
+\endexample
+\enddesc
+
+\begindesc
+\cts textfont {\<family>\param{fontname}}
+\cts scriptfont {\<family>\param{fontname}}
+\cts scriptscriptfont {\<family>\param{fontname}}
+\explain
+^^{style texte}
+^^{style script}
+^^{style scriptscript}
+Chacun de ces param\`etres sp\'ecifie la police que \TeX\ utilise pour
+composer le \minref{style} indiqu\'e dans la \minref{famille} indiqu\'ee.
+Ces choix n'ont aucun effet en dehors du \minref{mode math\'ematique}.
+\example
+\scriptfont2 = \sevensy % As in plain TeX.
+|
+\endexample
+\enddesc
+
+\see ``Type styles'' (\xref{seltype}).
+%==========================================================================
+\section {Construire des symboles math\'ematiques}
+
+%==========================================================================
+\subsection {Rendre des d\'elimiteurs plus grands}
+
+\begindesc
+\makecolumns 16/4:
+\easy\cts big {}
+\cts bigl {}
+\cts bigm {}
+\cts bigr {}
+\cts Big {}
+\cts Bigl {}
+\cts Bigm {}
+\cts Bigr {}
+\cts bigg {}
+\cts biggl {}
+\cts biggm {}
+\cts biggr {}
+\cts Bigg {}
+\cts Biggl {}
+\cts Biggm {}
+\cts Biggr {}
+\explain
+^^{d\'elimiteurs//\'elargis}
+Ces commandes rendent des \minref{d\'elimiteur}s plus grands que leur taille normale.
+Les commandes dans les quatre colonnes
+produisent successivement de plus grandes tailles.  La diff\'erence entre |\big|,
+|\bigl|, |\bigr| et |\bigm| est en relation avec la \minref{classe} du
+d\'elimiteur agrandi~:
+\ulist\compact
+\li |\big| produit un symbole ordinaire.
+\li |\bigl| produit un symbole ouvrant.
+\li |\bigr| produit un symbole fermant.
+\li |\bigm| produit un symbole de relation.
+\endulist
+\noindent
+\TeX\ utilise la classe d'un symbole pour d\'ecider combien d'espace mettre
+autour de ce symbole.
+
+Ces commandes, contrairement \`a |\left| et |\right|,
+ne d\'efinissent \emph{pas} un groupe.
+
+\example
+$$(x) \quad \bigl(x\bigr) \quad \Bigl(x\Bigr) \quad
+   \biggl(x\biggr) \quad \Biggl(x\Biggr)\qquad
+[x] \quad \bigl[x\bigr] \quad \Bigl[x\Bigr] \quad
+   \biggl[x\biggr] \quad \Biggl[x\Biggr]$$
+|
+\dproduces
+$$(x) \quad \bigl(x\bigr) \quad \Bigl(x\Bigr) \quad
+\biggl(x\biggr) \quad \Biggl(x\Biggr)\qquad
+[x] \quad \bigl[x\bigr] \quad \Bigl[x\Bigr] \quad
+\biggl[x\biggr] \quad \Biggl[x\Biggr]$$
+\endexample
+\enddesc
+
+%==========================================================================
+\subsection {Parties de grands symboles}
+
+\begindesc
+\cts downbracefill {}
+\cts upbracefill {}
+\explain
+Ces commandes produisent respectivement des ^{accolades horizontales} 
+et extensibles dirig\'ees vers le haut et vers le bas. ^^{accolades} 
+\TeX \ rendra les accolades aussi larges que n\'ecessaire. 
+Ces commandes 
+sont utilis\'ees dans les d\'efinitions de ^|\overbrace| et de ^|\underbrace|
+(\xref \overbrace).
+\example
+$$\hbox to 1in{\downbracefill} \quad
+   \hbox to 1in{\upbracefill}$$
+|
+\dproduces
+$$\hbox to 1in{\downbracefill} \quad
+   \hbox to 1in{\upbracefill}$$
+\endexample
+\enddesc
+
+\begindesc
+\cts arrowvert {}
+\cts Arrowvert {}
+\cts lmoustache {}
+\cts rmoustache {}
+\cts bracevert {}
+\explain
+Ces commandes produisent des portions de certains grands
+d\'elimiteurs
+^^{d\'elimiteurs//parties de}
+qui peuvent eux-m\^eme \^etre utilis\'es comme d\'elimiteurs.
+Elles font r\'ef\'e\-rence aux caract\`eres de la police math\'ematique ^|cmex10|.
+\example
+$$\cdots \Big\arrowvert \cdots \Big\Arrowvert \cdots
+  \Big\lmoustache \cdots \Big\rmoustache \cdots
+  \Big\bracevert \cdots$$
+|
+\dproduces
+$$\cdots \Big\arrowvert \cdots \Big\Arrowvert \cdots
+  \Big\lmoustache \cdots \Big\rmoustache \cdots
+  \Big\bracevert \cdots$$
+\endexample
+\enddesc
+
+
+%==========================================================================
+\section {Aligner des parties d'une formule}
+
+%==========================================================================
+\subsection {Aligner des accents}
+
+\begindesc
+\bix^^{accents//aligner des}
+\cts skew {\<nombre> \<argument$_1$> \<argument$_2$>}
+\explain
+Cette commande d\'eplace l'accent \<argument$_1$> de
+\<number> \minref{unit\'es math\'e\-matiques} vers la droite de sa position normale
+en respectant \<argu\-ment$_2$>.
+L'utilisation la plus commune de cette commande est pour 
+modifier la position d'un accent qui se trouve plac\'e sur
+un autre accent.
+\example
+$$\skew 2\bar{\bar z}\quad\skew 3\tilde{\tilde y}\quad
+  \skew 4\tilde{\hat x}$$   
+|
+\dproduces
+$$\skew 2\bar{\bar z}\quad\skew 3\tilde{\tilde y}\quad
+  \skew 4\tilde{\hat x}$$   
+\endexample
+\enddesc
+
+\begindesc
+\cts skewchar {\<font>\param{number}}
+\explain
+Le |\skewchar| d'une police
+est le caract\`ere dans la police dont les cr\'enages,
+d\'efinis dans le fichier de m\'etrique de la police, d\'eterminent les positions
+des accents math\'ematiques. Cela dit, supposez que \TeX\ applique un accent math\'ematique
+au caract\`ere `|x|'.  \TeX\ regarde si la paire de caract\`eres
+`|x\skewchar|' a un cr\'enage~; si oui, il d\'eplace l'accent d'un montant de
+ce cr\'enage. L'algorithme complet que \TeX\ utilise pour positionner les accents
+math\'ematiques (qui d\'eterminent beaucoup d'autres choses) se trouve dans l'\knuth{annexe~G}{}.
+
+Si la valeur de |\skewchar| n'est pas dans l'intervalle $0$--$255$,
+\TeX\ prend une valeur de cr\'enage \`a z\'ero.
+
+Notez que \<font> est une s\'equence de contr\^ole
+qui nomme une police, pas un \<nom de police> qui nomme des fichiers de police.
+Attention~: 
+un assignement de |\skewchar| n'est \emph{pas} enlev\'e \`a la fin d'un groupe.
+Si vous voulez changer |\skewchar| localement, vous devrez sauvegarder et
+restaurer sa valeur originale explicitement.
+\enddesc
+
+\begindesc
+\cts defaultskewchar {\param{number}}
+\explain
+Quand \TeX\ lit le fichier de m\'etriques
+^^{fichier de m\'etriques//caract\`ere oblique par d\'efaut dans le}
+pour une police en r\'eponse \`a une
+commande ^|\font|, il met le ^|\skewchar| de la police
+dans |\default!-skewchar|.
+Si la valeur de |\default!-skewchar| n'est 
+pas dans l'intervalle $0$--$255$, \TeX\ n'assigne aucun caract\`ere oblique
+par d\'efaut.
+\PlainTeX\ met |\defaultskewchar| \`a $-1$, et il est normalement pr\'ef\'erable
+de le laisser ainsi.
+\margin{Misleading example deleted.}
+\eix^^{accents//aligner des}
+\enddesc
+
+%==========================================================================
+\subsection {Aligner du mat\'eriel verticalement}
+
+\begindesc
+\cts vcenter {\rqbraces{\<mat\'eriel en mode vertical>}}
+\ctsbasic {\\vcenter to \<dimension> \rqbraces{\<mat\'eriel en mode vertical>}}{}
+\ctsbasic {\\vcenter spread \<dimension> \rqbraces{\<mat\'eriel en mode vertical>}}{}
+\explain
+Toutes les formules math\'ematiques ont un
+``^{axe}'' invisible que \TeX\ traite comme une sorte de
+ligne de centrage horizontale pour cette formule.
+Par exemple, l'axe d'une formule constitu\'ee d'une
+fraction est au centre de la barre de fraction.
+La commande |\vcenter| demande \`a \TeX\ de placer le \<mat\'eriel en mode vertical>
+dans une \minref{vbox} et de centrer la vbox
+en respectant l'axe de la formule qu'il est en train de construire.
+
+La premi\`ere forme de la commande
+centre le mat\'eriel comme donn\'e.  Les deuxi\`emes et troisi\`emes
+formes \'elargissent ou r\'etr\'ecissent le mat\'eriel verticalement comme dans la 
+commande |\vbox| (\xref \vbox).
+
+\example
+$${n \choose k} \buildrel \rm def \over \equiv \>
+\vcenter{\hsize 1.5 in \noindent the number of 
+combinations of $n$ things taken $k$ at a time}$$
+|
+\dproduces
+$${n \choose k} \buildrel \rm def \over \equiv \>
+\vcenter{\hsize 1.5 in \noindent the number of 
+combinations of $n$ things taken $k$ at a time}$$
+\endexample
+\enddesc
+
+%==========================================================================
+\section {Produire des espaces}
+
+%==========================================================================
+\subsection {Espaces math\'ematiques de largeur fixe}
+
+\begindesc
+\bix^^{espace//dans des formules math\'ematiques}
+\ctspecial ! \ctsxrdef{@shriek}
+\ctspecial , \ctsxrdef{@comma}
+\ctspecial > \ctsxrdef{@greater}
+\ctspecial ; \ctsxrdef{@semi}
+\explain
+Ces commandes produisent des montants vari\'es d'^{espace suppl\'ementaire} dans des formules.  Elles
+sont d\'efinies en termes d'\minref{unit\'es math\'ematiques}, donc \TeX\ ajuste
+le montant d'espace en accord avec le \minref{style} courant.
+\ulist
+\li |\!!| produit un espace fin n\'egatif, c'est-\`a-dire, qu'il r\'eduit l'espace
+entre ses sous-formules voisines du montant d'un espace fin.
+\li |\,| produit un espace fin.
+\li |\>| produit un espace moyen.
+\li |\;| produit un espace large.
+\endulist
+\example
+$$00\quad0\!!0\quad0\,0\quad0\>0\quad0\;0\quad
+{\scriptstyle 00\quad0\!!0\quad0\,0\quad0\>0\quad0\;0}$$
+|
+\dproduces
+$$00\quad0\!0\quad0\,0\quad0\>0\quad0\;0\quad
+{\scriptstyle 00\quad0\!0\quad0\,0\quad0\>0\quad0\;0}$$
+\endexample
+\enddesc
+
+\begindesc
+\cts thinmuskip {\param{muglue}}
+\cts medmuskip {\param{muglue}}
+\cts thickmuskip {\param{muglue}}
+\explain
+Ces param\`etres d\'efinissent des espaces fins, moyens et larges en
+mode math\'ematique.
+\example
+$00\quad0\mskip\thinmuskip0\quad0\mskip\medmuskip0
+   \quad0\mskip\thickmuskip0$
+|
+\produces
+$00\quad0\mskip\thinmuskip0\quad0\mskip\medmuskip0
+   \quad0\mskip\thickmuskip0$
+\endexample
+\enddesc
+
+\begindesc
+\cts jot {\param{dimension}}
+\explain
+Ce param\`etre d\'efinit une distance \'egale \`a trois points (\`a moins que
+vous le changiez).
+Le |\jot| est une unit\'e de mesure pratique pour ouvrir des affichages math\'ematiques.
+\enddesc
+
+%==========================================================================
+\subsection {Espaces math\'ematiques de largeur variable}
+
+\begindesc
+\cts mkern {\<mudimen>}
+\explain
+^^{cr\'enages//dans des formules math\'ematiques}
+Cette commande
+produit un \minref{cr\'enage}, c'est-\`a-dire, un espace blanc, de largeur \<mudimen>.
+Le cr\'enage est mesur\'e
+en \minref{unit\'es math\'ematiques}, qui varie en fonction du style.
+Hormis son unit\'e de la mesure, cette commande se comporte comme 
+|\kern| (\xref \kern) le fait en mode horizontal.
+
+\example
+$0\mkern13mu 0 \qquad {\scriptscriptstyle 0 \mkern13mu 0}$
+|
+\produces
+$0\mkern13mu 0 \qquad {\scriptscriptstyle 0 \mkern13mu 0}$
+\endexample
+\enddesc
+
+\begindesc
+\cts mskip {\<mudimen$_1$> {\bt plus} \<mudimen$_2$> {\bt minus}
+   \<mudimen$_3$>}
+\explain
+^^{ressort}
+Cette commande produit un \minref{ressort} horizontal
+qui a une largeur naturelle \<mu\-dimen$_1$>, s'\'etire de \<mudimen$_2$>
+et se r\'etr\'ecit de \<mudimen$_3$>.
+Le ressort est mesur\'e en \minref{unit\'es math\'ematiques}, qui varie en fonction
+du style.  Hormis son unit\'e de mesure, cette commande se comporte 
+comme |\hskip| (\xref \hskip).
+
+\example
+$0\mskip 13mu 0 \quad {\scriptscriptstyle 0 \mskip 13mu 0}$
+|
+\produces
+$0\mskip 13mu 0 \quad {\scriptscriptstyle 0 \mskip 13mu 0}$
+\endexample
+\enddesc
+
+\begindesc
+\cts nonscript {}
+\explain
+Quand \TeX\ est en train de composer en \minref{style} script ou 
+scriptscript et rencontre cette commande
+imm\'ediatement devant d'un ressort ou d'un cr\'enage,
+il supprime le ressort ou le cr\'enage.
+|\nonscript| n'a pas d'effet dans les autres styles.
+
+Cette commande fournit une mani\`ere de ``resserrer'' l'espacement dans 
+les styles script et scriptscript, qui sont g\'en\'eralement faits dans une
+police plus petite. Elle est peu utile en dehors des d\'efinitions de macro.
+\example
+\def\ab{a\nonscript\; b}
+$\ab^{\ab}$
+|
+\produces
+\def\ab{a\nonscript\; b}
+$\ab^{\ab}$
+\endexample
+\enddesc
+
+\see |\kern| (\xref\kern), |\hskip| (\xref\hskip).
+\eix^^{espace//dans des formules math\'ematiques}
+
+
+%==========================================================================
+\subsection {param\`etres d'espacement pour les affichages}
+
+\begindesc
+\bix^^{affichages//param\`etres d'espacement pour}
+\cts displaywidth {\param{dimension}}
+\explain
+Ce param\`etre sp\'ecifie la largeur maximum que
+\TeX\ alloue pour un affichage math\'ematique.  Si \TeX\ ne peut pas mettre l'affichage
+dans un espace de cette largeur, il fait un ``overfull \minref{hbox}''
+et se plaint.
+\TeX\ met la valeur de |\displaywidth| quand il rencontre le `|$$|'
+qui d\'ebute l'affichage.  Cette valeur initiale est
+|\hsize| (\xref \hsize) \`a moins qu'elle soit modifi\'ee par des 
+changements de la forme du paragraphe.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etaill\'ee de ce param\`etre.
+\enddesc
+
+\begindesc
+\cts displayindent {\param{dimension}}
+\explain
+Ce param\`etre sp\'ecifie l'espace par lequel \TeX\ indente un
+affichage math\'e\-matique.
+\TeX\ met la valeur de |\displayindent| quand il rencontre le `|$$|'
+qui d\'ebute l'affichage.  Normalement la valeur initiale est z\'ero,
+mais si la forme du paragraphe indique que l'affichage doit \^etre
+d\'ecal\'e d'un montant $s$,
+\TeX\ mettra |\displayindent| \`a $s$.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etaill\'ee de ce param\`etre.
+\enddesc
+
+\begindesc
+\cts predisplaysize {\param{dimension}}
+\explain
+\TeX\ met ce param\`etre \`a la largeur de la ligne pr\'ec\'edant
+un affichage math\'ematique.
+\TeX\ utilise |\predisplaysize| pour d\'eterminer si l'affi\-chage
+d\'ebute ou non \`a
+gauche d'o\`u la ligne pr\'ec\'edente se termine, c'est-\`a-dire, s'il 
+recouvre visuellement ou non la ligne pr\'ec\'edente.  
+S'il la recouvre, il utilise les ressorts |\abovedisplayskip| et
+|\belowdisplayskip| en mettant l'affichage~;
+autrement il utilise les ressorts |\abovedisplay!-shortskip| et
+|\belowdisplay!-shortskip|.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etaill\'ee de ce param\`etre.
+\enddesc
+
+\begindesc
+\cts abovedisplayskip {\param{ressort}}
+\explain
+Ce param\`etre sp\'ecifie le montant de ressort vertical que
+\TeX\ ins\`ere avant un affichage quand l'affichage d\'ebute
+\`a gauche d'o\`u la ligne pr\'ec\'edente se termine, c'est-\`a-dire, quand il recouvre 
+visuellement la ligne pr\'ec\'edente.
+\PlainTeX\ met |\abovedisplayskip| \`a |12pt plus3pt minus9pt|.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etaill\'ee de ce param\`etre.
+\enddesc
+
+\begindesc
+\cts belowdisplayskip {\param{ressort}}
+\explain
+Ce param\`etre sp\'ecifie le montant de ressort vertical que
+\TeX\ ins\`ere apr\`es un affichage quand l'affichage d\'ebute
+\`a gauche d'o\`u la ligne pr\'ec\'edente se termine, c'est-\`a-dire, quand il recouvre 
+visuellement la ligne pr\'ec\'edente.
+\PlainTeX\ met |\belowdisplay!-skip| \`a |12pt plus3pt minus9pt|.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etaill\'ee de ce param\`etre.
+\enddesc
+
+\begindesc
+\cts abovedisplayshortskip {\param{ressort}}
+\explain
+Ce param\`etre sp\'ecifie le montant de ressort vertical que
+\TeX\ ins\`ere avant un affichage quand l'affichage d\'ebute
+\`a droite d'o\`u la ligne pr\'ec\'edente se termine, c'est-\`a-dire, quand il ne recouvre 
+pas visuellement la ligne pr\'ec\'edente.
+\PlainTeX\ met |\abovedisplay!-shortskip| \`a |0pt plus3pt|.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etail\-l\'ee de ce param\`etre.
+\enddesc
+
+\begindesc
+\cts belowdisplayshortskip {\param{ressort}}
+\explain
+Ce param\`etre sp\'ecifie le montant de ressort vertical que
+\TeX\ ins\`ere apr\`es un affichage quand l'affichage d\'ebute
+\`a droite d'o\`u la ligne pr\'ec\'edente se termine, c'est-\`a-dire, quand il ne recouvre 
+pas visuellement la ligne pr\'ec\'edente.
+\PlainTeX\ met |\belowdisplay!-shortskip| \`a |7pt plus3pt minus4pt|.
+Voir les \knuth{pages~188--189}{220--222} pour une explication plus d\'etaill\'ee de ce param\`etre.
+\eix^^{affichages//param\`etres d'espacement pour}
+\enddesc
+
+
+%==========================================================================
+\subsection {autres param\`etres d'espacement pour les math\'ematiques}
+
+\begindesc
+\cts mathsurround {\param{dimension}}
+\explain
+Ce param\`etre sp\'ecifie le montant d'espace que \TeX\
+ins\`ere avant et apr\`es une formule math\'ematique en mode texte (c'est-\`a-dire, une formule
+entour\'ee de |$| simples).  Voir la \knuth{page~162}{190} pour plus de d\'etails sur
+son comportement.
+\PlainTeX\ laisse |\mathsurround| \`a |0pt|.
+\enddesc
+
+\begindesc
+\cts nulldelimiterspace {\param{dimension}}
+\explain
+^^{d\'elimiteurs//nuls, espace pour}
+Ce param\`etre sp\'ecifie la largeur de
+l'espace produit par un \minref{d\'elimiteur} nul.
+\PlainTeX\ met |\nulldelimiterspace| \`a |1.2pt|.
+\enddesc
+
+\begindesc
+\cts scriptspace {\param{dimension}}
+\explain
+Ce param\`etre sp\'ecifie le montant d'espace que \TeX\
+ins\`ere avant et apr\`es un exposant ou un indice.
+La commande |\nonscript| (\xref\nonscript) ^^|\nonscript|
+apr\`es un exposant ou un indice annule cet espace.
+\PlainTeX\ met |\script!-space| \`a |0.5pt|.
+\enddesc
+
+%==========================================================================
+\section {Cat\'egoriser des constructions math\'ematiques}
+
+\begindesc
+\makecolumns 7/2:
+\cts mathord {}
+\cts mathop {}
+\cts mathbin {}
+\cts mathrel {}
+\cts mathopen {}
+\cts mathclose {}
+\cts mathpunct {}
+\explain
+Ces commandes demandent \`a \TeX\ de traiter la construction qui suit comme appartenant
+\`a une ^{classe} particuli\`ere (voir la \knuth{page~154}{179--180} pour la d\'efinition
+des classes).  Elles sont list\'ees ici dans l'ordre des num\'eros de classe,
+de $0$ \`a $6$.  
+Leur effet primaire est d'ajuster l'espace\-ment autour de la construction 
+comme \'etant celui de la classe indiqu\'ee.
+
+\example
+$\mathop{\rm minmax}\limits_{t \in A \cup B}\,t$
+% By treating minmax as a math operator, we can get TeX to
+% put something underneath it.
+|
+\produces
+$\mathop{\rm minmax}\limits_{t \in A \cup B}\,t$
+\endexample
+\enddesc
+
+\begindesc
+\cts mathinner {}
+\explain
+Cette command demande \`a \TeX\ de traiter la construction qui suit
+comme un ``formule interne'', c'est-\`a-dire, une fraction, pour l'espacement.
+Elle ressemble aux commandes de classe donn\'ees ci-dessus.
+\enddesc
+
+%==========================================================================
+\section {Actions sp\'eciales pour des formules math\'ematiques}
+
+\begindesc
+\cts everymath {\param{liste de token}}
+\cts everydisplay {\param{liste de token}}
+\explain
+^^{affichages//actions pour chaque affichage}
+Ces param\`etres sp\'ecifient des listes de \minref{token} que \TeX\ ins\`ere
+au d\'ebut de toute formule math\'ematique d'affichage ou de texte, respectivement.
+Vous pouvez prendre des mesures sp\'eciales au d\'ebut de chaque formule math\'ematique 
+en assignant ces actions \`a |\everymath| ou \`a |\everydis!-play|. N'oubliez pas que 
+si vous voulez que les deux genres de formules soient affect\'es, vous devez mettre 
+les \emph{deux} param\`etres.
+\example
+\everydisplay={\heartsuit\quad}
+\everymath = {\clubsuit}
+$3$ is greater than $2$ for large values of $3$.
+$$4>3$$
+|
+\produces
+\everydisplay={\heartsuit\quad}
+\everymath = {\clubsuit}
+$3$ is greater than $2$ for large values of $3$.
+$$4>3$$
+\endexample
+\enddesc
+
+\enddescriptions
+\eix^^{math\'ematiques}
+\endchapter
+\byebye
+

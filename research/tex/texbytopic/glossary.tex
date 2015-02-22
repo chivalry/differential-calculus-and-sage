@@ -1,0 +1,1575 @@
+% This file is part of TeX by Topic
+% Copyright 2007 Victor
+% see file TeXbyTopic.tex for copying conditions
+
+This chapter gives the list of all primitives of
+\TeX. After each control sequence
+the grammatical category of the command or parameter
+is given, plus a short description. For some  commands
+the syntax of their use is given.
+
+For parameters the class to which they belong is given.
+Commands that have no grammatical category
+in \TeXbook\ are denoted either
+`\gr{expandable command}' or
+`\gr{primitive command}' in this list.
+
+Grammatical terms such as \gr{equals} and \gr{optional space}
+are explained in Chapter~\ref{gramm}.
+
+\begin{glossinventory}
+
+\item []\par
+
+\item [\cs{-}]
+      \gr{horizontal command} 
+      Discretionary hyphen; this is
+      equivalent to \cs{discretionary}""\verb|{-}{}{}|.
+      Can be used to indicate hyphenatable points in a word. 
+
+\item [\cs{char32}]
+      \gr{horizontal command} 
+      Control space.
+      Insert the same amount of space as a space token would
+ \alt
+      if \cs{spacefactor}${}=1000$.
+
+\item [\cs{char47}]
+      \gr{primitive command} 
+      Italic correction: insert a kern specified by the
+      preceding character.
+      Each character has an italic correction, possibly zero,
+      specified in the \n{tfm} file.
+      For slanted fonts this compensates for overhang.
+
+\item [\cs{above\gr{dimen}}]
+      \gr{generalized fraction command} 
+      Fraction with specified bar width. 
+
+\item [\cs{abovedisplayshortskip}]
+      \gr{glue parameter}
+      Glue above a display if the line preceding the display was short.
+
+\item [\cs{abovedisplayskip}]
+      \gr{glue parameter}
+      Glue above a display.
+
+\item [\cs{abovewithdelims\gr{delim$_1$}\gr{delim$_2$}\gr{dimen}}]
+      \gr{generalized fraction command}
+      Generalized fraction with delimiters.
+
+\item [\cs{accent\gr{8-bit number}\gr{optional assignments}\gr{character}}]
+      \gr{horizontal command}
+      Command to place accents on characters.\alt
+
+\item [\cs{adjdemerits}]
+      \gr{integer parameter}
+      Penalty for adjacent not visually compatible lines. 
+      Default~\n{10$\,$000} in plain \TeX.
+
+\item [\cs{advance\gr{numeric variable}\gr{optional \n{by}}\gr{number}}]
+      \gr{arithmetic assignment}
+      Arithmetic command to increase or decrease a 
+      \gr{numeric variable}, that is,
+ \alt
+      a \gr{count variable}, \gr{dimen variable}, \gr{glue variable}, 
+      or \gr{muglue variable}.
+
+\item [\cs{afterassignment\gr{token}}]
+      \gr{primitive command}
+      Save the next token for execution after the next assignment.
+      Only one token can be saved this way.
+
+\item [\cs{aftergroup\gr{token}}]
+      \gr{primitive command}
+      Save the next token for insertion after the current group.
+      Several tokens can be saved this way.
+
+\item [\cs{atop\gr{dimen}}]
+      \gr{generalized fraction command}
+      Place objects over one another.
+
+\item [\cs{atopwithdelims\gr{delim$_1$}\gr{delim$_2$}}]
+      \gr{generalized fraction command}
+      Place objects over one another with delimiters.
+
+\item [\cs{badness}]
+      \gr{internal integer} 
+      (\TeX3 only) 
+      Badness of the most recently constructed box.
+
+\item [\cs{baselineskip}]
+      \gr{glue parameter} 
+      The `ideal' baseline distance between neighbouring 
+      boxes on a vertical list;  \n{12pt} in plain \TeX.
+
+\item [\cs{batchmode}]
+      \gr{interaction mode assignment}
+      \TeX\ patches errors itself 
+ \alt
+      and performs an emergency stop on serious errors 
+      such as missing input files,
+      but no terminal output is generated.
+
+\item [\cs{begingroup}]
+      \gr{primitive command}
+      Open a group that must be closed with \verb-\endgroup-.
+
+\item [\cs{belowdisplayshortskip}]
+      \gr{glue parameter}
+      Glue below a display if the line preceding the display was short.
+
+\item [\cs{belowdisplayskip}]
+      \gr{glue parameter}
+      Glue below a display.
+
+\item [\cs{binoppenalty}]
+      \gr{integer parameter}
+      Penalty for breaking after a binary operator not enclosed in
+      a subformula.
+      Plain \TeX\ default:~\n{700}.
+
+\item [\cs{botmark}]
+      \gr{expandable command}
+      The last mark on the current page.
+
+\item [\cs{box\gr{8-bit number}}]
+      \gr{box}
+      Use a box register, emptying it. 
+
+\item [\cs{boxmaxdepth}]
+      \gr{dimen parameter}
+      Maximum allowed depth of boxes.
+      Default~\cs{maxdimen} in plain \TeX.
+
+\item [\cs{brokenpenalty}]
+      \gr{integer parameter}
+      Additional penalty for breaking a page after a hyphenated line. 
+      Default~\n{100} in plain \TeX.
+
+\item [\cs{catcode\gr{8-bit number}}]
+      \gr{internal integer}; the control sequence itself
+      is a~\gr{codename}.
+      Access category codes.
+
+\item [\cs{char\gr{number}}]
+      \gr{character}
+      Explicit denotation of a character to be typeset. 
+
+\item [\cs{chardef\gr{control sequence}\gr{equals}\gr{number}}]
+      \gr{shorthand definition}
+      Define a control sequence to be a synonym for
+      a~character code.
+
+\item [\cs{cleaders}]
+      \gr{leaders}
+      As \verb=\leaders=, but with box leaders 
+      any excess space is split into equal glue items
+ \alt
+      before and after the leaders.
+
+\item [\cs{closein\gr{4-bit number}}]
+      \gr{primitive command}
+      Close an input stream.
+
+\item [\cs{closeout\gr{4-bit number}}]
+      \gr{primitive command}
+      Close an output stream.
+
+\item [\cs{clubpenalty}]
+      \gr{integer parameter}
+      Additional penalty for breaking a page after the first line of a paragraph. 
+      Default~\n{150} in plain \TeX.
+
+\item [\cs{copy\gr{8-bit number}}]
+      \gr{box}
+      Use a box register and retain the contents. 
+
+\item [\cs{count\gr{8-bit number}}]
+      \gr{internal integer}; the control sequence itself
+      is a~\gr{register prefix}.
+      Access count registers. 
+
+\item [\cs{countdef\gr{control sequence}\gr{equals}\gr{8-bit number}}]
+      \gr{shorthand definition}; the control sequence
+      itself is a~\gr{registerdef}.
+      Define a control sequence to be a synonym for
+      a~\cs{count} register.
+
+\item [\cs{cr}]
+      \gr{primitive command}
+      Terminate an alignment line.
+
+\item [\cs{crcr}]
+      \gr{primitive command}
+      Terminate an alignment line if it has 
+      not already been terminated by~\cs{cr}.
+
+\item [\cs{csname}]
+      \gr{expandable command}
+      Start forming the name of a control sequence.
+      Has to be balanced with \cs{endcsname}.
+
+\item [\cs{day}]
+      \gr{integer parameter}
+      The day of the current job.
+
+\item [\cs{deadcycles}]
+      \gr{special integer}
+      Counter that keeps track of how many times 
+      the output routine has been called without a \cs{shipout} 
+      taking place. 
+      If this number reaches \cs{maxdeadcycles} \TeX\
+      gives an error message. Plain \TeX\ default:~\n{25}.
+
+\item [\cs{def}]
+      \gr{def} Start a macro definition.
+
+\item [\cs{defaulthyphenchar}]
+      \gr{integer parameter}
+      Value of \cs{hyphenchar} when a font is loaded.
+      Default value in plain \TeX\ is~\verb>`\->.
+
+\item [\cs{defaultskewchar}]
+      \gr{integer parameter}
+      Value of \cs{skewchar} when a font is loaded.
+      Default value in plain \TeX\ is~\n{-1}.
+
+\item [\cs{delcode\gr{8-bit number}}]
+      \gr{internal integer}; the control sequence itself
+      is a~\gr{codename}.
+      Access the
+      code specifying how a character should be used as delimiter 
+      after \cs{left} or \cs{right}.
+
+\item [\cs{delimiter\gr{27-bit number}}]
+      \gr{math character}
+      Explicit denotation of a delimiter.
+
+\item [\cs{delimiterfactor}]
+      \gr{integer parameter}
+      1000 times the part of a delimited formula that should be
+      covered by a delimiter.
+      Plain \TeX\ default:~\n{901}.
+
+\item [\cs{delimitershortfall}]
+      \gr{integer parameter}
+      Size of the part of a delimited formula that is allowed 
+      to go uncovered by a delimiter.
+      Plain \TeX\ default:~\n{5pt}.
+
+\item [\cs{dimen\gr{8-bit number}}]
+      \gr{internal dimen}; the control sequence itself
+      is a~\gr{register prefix}.
+      Access dimen registers.
+
+\item [\cs{dimendef\gr{control sequence}\gr{equals}\gr{8-bit number}}]
+      \gr{shorthand definition}; the control sequence
+      itself is a~\gr{registerdef}.
+      Define a control sequence to be a synonym for
+      a~\cs{dimen} register.
+
+\item [\cs{discretionary\SerifFont\italic\lb pre-break\rb\lb post-break\rb\lb no-break\rb{}}]
+      \gr{horizontal command}
+      Specify the way a character sequence is split up at a line break.
+
+\item [\cs{displayindent}]
+      \gr{dimen parameter}
+      Distance by which the box, in which the display 
+      is centred, is indented owing to hanging indentation.
+      This value is set automatically for each display.
+
+\item [\cs{displaylimits}]
+      \gr{primitive command}
+      Restore default placement for limits.
+
+\item [\cs{displaystyle}]
+      \gr{primitive command}
+      Select the display style of math typesetting.
+
+\item [\cs{displaywidowpenalty}]
+      \gr{integer parameter}
+      Additional penalty for breaking a page before the last line 
+      above a display formula. 
+      Default~\n{50} in plain \TeX.
+
+\item [\cs{displaywidth}]
+      \gr{dimen parameter}
+      Width of the box in which the display is centred.
+      This value is set automatically for each display.
+
+\item [\cs{divide\gr{numeric variable}\gr{optional \n{by}}\gr{number}}]
+      \gr{arithmetic assignment}
+      Arithmetic command to divide a \gr{numeric variable}
+      (see \cs{advance}).
+
+\item [\cs{doublehyphendemerits}]
+      \gr{integer parameter}
+      Penalty for consecutive lines ending with a hyphen. 
+      Default~\n{10$\,$000} in plain \TeX.
+
+\item [\cs{dp\gr{8-bit number}}]
+      \gr{internal dimen}; the control sequence itself
+      is a~\gr{box dimension}.
+      Depth of the box in a box register. 
+
+\item [\cs{dump}]
+      \gr{vertical command}
+      Dump a format file; possible only in \IniTeX, 
+      not allowed inside a group.
+
+
+\item [\cs{edef}]
+      \gr{def}
+      Start a macro definition; 
+      the replacement text is expanded at definition time.
+
+\item [\cs{else}]
+      \gr{expandable command}
+      Select
+      \gr{false text} of a conditional 
+      or default case of \cs{ifcase}.
+
+\item [\cs{emergencystretch}]
+      \gr{dimen parameter} 
+      (\TeX3 only) 
+      Assumed extra stretchability in lines of a paragraph
+      in third pass of the line-breaking algorithm.
+
+\item [\cs{end}]
+      \gr{vertical command}
+      End this run.
+
+\item [\cs{endcsname}]
+      \gr{expandable command}
+      Delimit the name of a control sequence that was begun
+      with \cs{csname}.
+
+\item [\cs{endgroup}]
+      \gr{primitive command}
+      End a group that was opened with \verb-\begingroup-.
+
+\item [\cs{endinput}]
+      \gr{expandable command}
+      Terminate inputting the current file after the current line.
+
+\item [\cs{endlinechar}] 
+      \gr{integer parameter}
+      The character code of the end-of-line character 
+      appended to input lines.
+      \IniTeX\ default:~\n{13}.
+
+\item [\cs{eqno\gr{math mode material}\n{\char36\char36}}]
+      \gr{eqno}
+      Place a right equation number in a display formula.
+
+\item [\cs{errhelp}]
+      \gr{token parameter}
+      Tokens that will be displayed if the user 
+      asks for help after an \cs{err\-message}.
+
+\item [\cs{errmessage\gr{general text}}]
+      \gr{primitive command}
+      Report an error and give the user opportunity to act.
+
+\item [\cs{errorcontextlines}]
+      \gr{integer parameter} 
+      (\TeX3 only)
+      Number of additional context lines shown in error messages.
+
+\item [\cs{errorstopmode}]
+      \gr{interaction mode assignment}  
+      Ask for user input on the occurrence of an error.
+
+\item [\cs{escapechar}] 
+      \gr{integer parameter}
+      Number of the character that is  used 
+      when control sequences are being converted
+      into character tokens.
+      \IniTeX\ default:~\n{92}.
+
+\item [\cs{everycr}]
+      \gr{token parameter}
+      Token list inserted after every \cs{cr} or non-redundant \cs{crcr}.
+
+\item [\cs{everydisplay}]
+      \gr{token parameter}
+      Token list inserted at the start of a display.
+
+\item [\cs{everyhbox}]
+      \gr{token parameter}
+      Token list inserted at the start of a horizontal box.
+
+\item [\cs{everyjob}]
+      \gr{token parameter}
+      Token list inserted at the start of each job.
+
+\item [\cs{everymath}]
+      \gr{token parameter}
+      Token list inserted at the start of non-display math.
+
+\item [\cs{everypar}]
+      \gr{token parameter}
+      Token list inserted in front of paragraph text.
+
+\item [\cs{everyvbox}]
+      \gr{token parameter}
+      Token list inserted at the start of a vertical box.
+
+\item [\cs{exhyphenpenalty}]
+      \gr{integer parameter}
+      Penalty for breaking a horizontal line at a discretionary
+      in the special case where the prebreak text is empty. 
+      Default~\n{50} in plain \TeX.
+
+\item [\cs{expandafter}] 
+      \gr{expandable command}
+      Take the next two tokens and place the 
+      expansion  of the second after the first.
+
+\item [\cs{fam}]
+      \gr{integer parameter}
+      The number of the current font family.
+
+\item [\cs{fi}]
+      \gr{expandable command}
+      Closing delimiter for all conditionals.
+
+\item [\cs{finalhyphendemerits}]
+      \gr{integer parameter}
+      Penalty added when the penultimate line of a 
+      paragraph ends with a hyphen. 
+      Plain \TeX\ default~\n{5000}.
+
+\item [\cs{firstmark}]
+      \gr{expandable command}
+      The first mark on the current page.
+
+\item [\cs{floatingpenalty}]
+      \gr{integer parameter}
+      Penalty amount added to \cs{insertpenalties}
+ \alt
+      when an insertion is split.
+
+\item [\cs{font\gr{control sequence}\gr{equals}\gr{file name}\gr{at clause}}]
+      \gr{simple assignment}
+      Associate a control sequence with a \n{tfm} file.
+      When used on its own, this control sequence is a \gr{font},
+      denoting the current font.
+
+\item [\cs{fontdimen\gr{number}\gr{font}}]
+      \gr{internal dimen}
+      Access various parameters of fonts.
+
+\item [\cs{fontname\gr{font}}]
+      \gr{primitive command}
+      The external name of a font.
+
+\item [\cs{futurelet\gr{control sequence}\gr{token$_1$}\gr{token$_2$}}]
+      \gr{let assignment}
+      Assign the meaning of \gr{token$_2$} to the
+      \gr{control sequence}.
+
+\item [\cs{gdef}]
+      \gr{def}
+      Synonym for \verb-\global\def-.
+
+\item [\cs{global}]
+      \gr{prefix}
+      Make the next definition, arithmetic statement,
+      or assignment global.
+
+\item [\cs{globaldefs}]
+      \gr{integer parameter}
+      Override \cs{global} specifications: a positive value of this
+      parameter makes all assignments global, a negative value
+      makes them local.
+
+\item [\cs{halign\gr{box specification}\lb\gr{alignment material}\rb{}}]
+      \gr{vertical command}
+      Horizontal alignment.
+      Display alignment:
+      \begin{disp}\n{\$\$}\cs{halign}\gr{box specification}\lb\n{...}\rb
+      \gr{optional assignments}\n{\$\$}\end{disp}
+
+\item [\cs{hangafter}]
+      \gr{integer parameter}
+      If positive, this denotes the number of lines 
+      before indenting starts; 
+      if negative, its absolute value is the number 
+      of indented lines starting with the first line of the paragraph. 
+      The default value of~1 is restored after every paragraph.
+
+\item [\cs{hangindent}]
+      \gr{dimen parameter}
+      If positive, this indicates indentation from the left margin; 
+      if negative, this is the negative of the indentation 
+      from the right margin. 
+      The default value of~\n{0pt} is restored after every paragraph.
+
+\item [\cs{hbadness}]
+      \gr{integer parameter}
+      Threshold below which \TeX\ does not report an underfull 
+      or overfull  horizontal box.
+      Plain \TeX\ default:~\n{1000}.
+
+\item [\cs{hbox\gr{box specification}\lb\gr{horizontal material}\rb}]
+      \gr{box}
+      Construct a horizontal box. 
+
+\item [\cs{hfil}]
+      \gr{horizontal command}
+      Horizontal skip equivalent to \verb-\hskip 0cm plus 1fil-.
+
+\item [\cs{hfill}]
+      \gr{horizontal command}
+      Horizontal skip equivalent to \verb-\hskip 0cm plus 1fill-.
+
+\item [\cs{hfilneg}]
+      \gr{horizontal command}
+      Horizontal skip equivalent to \verb-\hskip 0cm minus 1fil-.
+
+\item [\cs{hfuzz}]
+      \gr{dimen parameter}
+      Excess size that \TeX\ tolerates before it considers  
+      a horizontal box overfull.
+      Plain \TeX\ default:~\n{0.1pt}.
+
+\item [\cs{hoffset}]
+      \gr{dimen parameter}
+      Distance by which the page is shifted to the right 
+      of the reference point which is at one inch from
+      the left margin.
+
+\item [\cs{holdinginserts}]
+      \gr{integer parameter} 
+      (only \TeX3) 
+      If this is positive, insertions are not placed in their boxes 
+      when the \cs{output} tokens are inserted.
+
+\item [\cs{hrule}]
+      \gr{vertical command}
+      Rule that spreads in horizontal direction.
+
+\item [\cs{hsize}]
+      \gr{dimen parameter}
+      Line width used for text typesetting inside a vertical box.
+
+\item [\cs{hskip\gr{glue}}] 
+      \gr{horizontal command}
+      Insert in horizontal mode a glue item.
+
+\item [\cs{hss}]
+      \gr{horizontal command}
+      Horizontal skip equivalent to \verb-\hskip 0cm plus 1fil minus 1fil-.
+
+\item [\cs{ht\gr{8-bit number}}]
+      \gr{internal dimen}; the control sequence itself
+      is a~\gr{box dimension}.
+      Height of the box in a box register. 
+
+\item [\cs{hyphenation\gr{general text}}]
+      \gr{hyphenation assignment}
+      Define hyphenation exceptions for the current value of \cs{language}.
+
+\item [\cs{hyphenchar\gr{font}}]
+      \gr{internal integer}
+      Number of the character  behind which a 
+      \verb-\discretionary{}{}{}- is inserted.
+
+\item [\cs{hyphenpenalty}]
+      \gr{integer parameter}
+      Penalty associated with break at a discretionary in the general case. 
+      Default~\n{50} in plain \TeX.
+
+\item [\cs{if\gr{token$_1$}\gr{token$_2$}}]
+      \gr{expandable command}
+      Test equality of character codes. 
+
+\item [\cs{ifcase\gr{number}\gr{case$_0$}\cs{or}\n{...}\cs{or}\gr{case$_n$}\cs{else}\gr{other cases}\cs{fi}}]
+      \gr{expandable command}
+      Enumerated case statement.
+
+\item [\cs{ifcat\gr{token$_1$}\gr{token$_2$}}]
+      \gr{expandable command}
+      Test whether two characters have the same category code.
+
+\item [\cs{ifdim\gr{dimen$_1$}\gr{relation}\gr{dimen$_2$}}]
+      \gr{expandable command}
+      Compare two dimensions. 
+
+\item [\cs{ifeof\gr{4-bit number}}]
+      \gr{expandable command}
+      Test whether a file has been fully read, or does not exist.
+
+\item [\cs{iffalse}]
+      \gr{expandable command}
+      This test is always false.
+
+\item [\cs{ifhbox\gr{8-bit number}}]
+      \gr{expandable command}
+      Test whether a box register contains a horizontal box.
+
+\item [\cs{ifhmode}]
+      \gr{expandable command}
+      Test whether the current mode is (possibly restricted) horizontal mode.
+
+\item [\cs{ifinner}]
+      \gr{expandable command}
+      Test whether the current mode is an internal mode.
+
+\item [\cs{ifmmode}]
+      \gr{expandable command}
+      Test whether the current mode is (possibly display) math mode.
+
+\item [\cs{ifnum\gr{number$_1$}\gr{relation}\gr{number$_2$}}]
+      \gr{expandable command}
+      Test relations between numbers.
+
+\item [\cs{ifodd\gr{number}}]
+      \gr{expandable command}
+      Test whether a number is odd.
+
+\item [\cs{iftrue}]
+      \gr{expandable command}
+      This test is always true.
+
+\item [\cs{ifvbox\gr{8-bit number}}]
+      \gr{expandable command}
+      Test whether a box register contains a vertical box. 
+
+\item [\cs{ifvmode}]
+      \gr{expandable command}
+      Test whether the current mode is (possibly internal) vertical mode.
+
+\item [\cs{ifvoid\gr{8-bit number}}]
+      \gr{expandable command}
+      Test whether a box register is empty.
+
+\item [\cs{ifx\gr{token$_1$}\gr{token$_2$}}]
+      \gr{expandable command}
+      Test equality of macro expansion, or equality of character code and
+      category code.
+
+\item [\cs{ignorespaces}]  
+      \gr{primitive command}
+      Expands following tokens until something other
+      than a~\gr{space token} is found.
+
+\item [\cs{immediate}] 
+      \gr{primitive command}
+      Prefix to have output operations executed right away.
+
+\item [\cs{indent}]
+      \gr{primitive command}
+      Switch to horizontal mode and insert box with width \cs{parindent}.
+      This command is automatically inserted before a
+      \gr{horizontal 
+      command} in vertical mode.
+
+\item [\cs{input\gr{file name}}]
+      \gr{expandable command}
+      Read a specified file as \TeX\ input. 
+
+\item [\cs{inputlineno}]
+      \gr{internal integer}
+      (\TeX3 only) 
+      Number of the current input line.
+
+\item [\cs{insert\gr{8-bit number}\lb\gr{vertical mode material}\rb}]
+      \gr{primitive command}
+      Start an insertion item.
+
+\item [\cs{insertpenalties}]
+      \gr{special integer}
+      Total of penalties for split insertions.
+      Inside the output routine the number of held-over insertions.
+
+\item [\cs{interlinepenalty}]
+      \gr{integer parameter}
+      Penalty for breaking a page between lines of a paragraph. 
+      Default~\n{0} in plain \TeX.
+
+\item [\cs{jobname}]
+      \gr{expandable command}
+      Name of the main \TeX\ file being processed.
+
+\item [\cs{kern\gr{dimen}}]
+      \gr{kern}
+      Add a kern item of the specified
+      \gr{dimen} to the list;
+      this can be used both in horizontal and vertical mode.
+
+\item [\cs{language}]
+      \gr{integer parameter} 
+      (\TeX3 only)
+      Choose a set of hyphenation patterns and exceptions.
+
+\item [\cs{lastbox}]
+      \gr{box}
+      Register containing the last element  added to the current list, 
+      if this was a box.
+
+\item [\cs{lastkern}]
+      \gr{internal dimen}
+      If the last item on the list was a kern, the size of this.
+
+\item [\cs{lastpenalty}]
+      \gr{internal integer}
+      If the last item on the list was a penalty, the value of this.
+
+\item [\cs{lastskip}]
+      \gr{internal glue} or \gr{internal muglue}.
+      If the last item on the list was a skip, the size of this.
+
+\item [\cs{lccode\gr{8-bit number}}]
+      \gr{internal integer}; the control sequence itself
+      is a~\gr{codename}.
+      Access the
+      character code that is the lowercase variant of a given code.
+
+\item [\cs{leaders\gr{box or rule}\gr{vertical/horizontal/mathematical skip}}]
+      \gr{leaders}
+      Fill a specified amount of space with a rule or copies of box.
+
+\item [\cs{left}]
+      \gr{primitive command}
+      Use the following character as an open delimiter.
+
+\item [\cs{lefthyphenmin}]
+      \gr{integer parameter} 
+      (\TeX3 only)
+      Minimum number of characters before a hyphenation.
+
+\item [\cs{leftskip}]
+      \gr{glue parameter}
+      Glue that is placed to the left of all lines.
+
+\item [\cs{leqno\gr{math mode material}\n{\char36\char36}}]
+      \gr{eqno}
+      Place a left equation number in a display formula.
+
+\item [\cs{let\gr{control sequence}\gr{equals}\gr{token}}]
+      \gr{let assignment}
+      Define a control sequence to a token, assign its meaning
+      if the token is a command or macro. 
+
+\item [\cs{limits}]
+      \gr{primitive command}
+      Place limits over and under a large operator.
+      This is the default position in display style.
+
+\item [\cs{linepenalty}]
+      \gr{integer parameter}
+      Penalty value associated with each line break. 
+      Default~\n{10} in plain \TeX.
+
+\item [\cs{lineskip}] 
+      \gr{glue parameter}
+      Glue added if distance between bottom and top of neighbouring boxes 
+      is less than \cs{lineskiplimit}.
+      Default~\n{1pt} in plain \TeX.
+
+\item [\cs{lineskiplimit}]
+      \gr{dimen parameter}
+      Distance to be maintained between the bottom and top of 
+      neighbouring boxes on a vertical list.
+      Default~\n{0pt} in plain \TeX.
+
+\item [\cs{long}]
+      \gr{prefix}
+      Indicate that the arguments of the macro to be defined  
+      are allowed to contain \cs{par} tokens.
+
+\item [\cs{looseness}] 
+      \gr{integer parameter}
+      Number of lines by which this paragraph has to be made longer 
+      (or, if negative, shorter) than it would be ideally.
+
+\item [\cs{lower\gr{dimen}\gr{box}}]
+      \gr{primitive command}
+      Adjust vertical positioning of a box in horizontal mode. 
+
+\item [\cs{lowercase\gr{general text}}]
+      \gr{primitive command}
+      Convert the argument to its lowercase form.
+
+\item [\cs{mag}]
+      \gr{integer parameter}
+      1000 times the magnification of the document.
+      Default \n{1000} in \IniTeX.
+
+\item [\cs{mark\gr{general text}}]
+      \gr{primitive command}
+      Specify a mark text.
+
+\item [\cs{mathaccent\gr{15-bit number}\gr{math field}}]
+      \gr{primitive command}
+      Place an accent in math mode.
+
+\item [\cs{mathbin\gr{math field}}]
+      \gr{math atom}
+      Let the following \gr{math field} function 
+      as a binary operation.
+
+\item [\cs{mathchar\gr{15-bit number}}]
+      \gr{primitive command}
+      Explicit denotation of a mathematical character.
+
+\item [\cs{mathchardef\gr{control sequence}\gr{equals}\gr{15-bit number}}]
+      \gr{shorthand definition}
+      Define a control sequence to be a synonym for
+      a~math character code.
+
+\item [\cs{mathchoice\lb\SerifFont {\it D\/\rb\lb T\/\rb\lb S\/\rb\lb SS\/}\rb}]
+      \gr{primitive command}
+      Give four variants of a formula for the four styles
+      of math typesetting.
+      
+\item [\cs{mathclose\gr{math field}}]
+      \gr{math atom}
+      Let the following \gr{math field} function
+      as a closing symbol.
+
+\item [\cs{mathcode\gr{8-bit number}}]
+      \gr{internal integer}; the control sequence itself
+      is a~\gr{codename}.
+      Code of a character determining its treatment in math mode.
+
+\item [\cs{mathinner\gr{math field}}]
+      \gr{math atom}
+      Let the following \gr{math field} function 
+      as an inner formula.
+
+\item [\cs{mathop\gr{math field}}]
+      \gr{math atom}
+      Let the following \gr{math field} function 
+      as a large operator.
+
+\item [\cs{mathopen\gr{math field}}]
+      \gr{math atom}
+      Let the following \gr{math field} function 
+      as an opening symbol.
+
+\item [\cs{mathord\gr{math field}}]
+      \gr{math atom}
+      Let the following \gr{math field} function 
+      as an ordinary object.
+
+\item [\cs{mathpunct\gr{math field}}]
+      \gr{math atom}
+      Let the following \gr{math field} function 
+      as a punctuation symbol.
+
+\item [\cs{mathrel\gr{math field}}]
+      \gr{math atom}
+      Let the following \gr{math field} function as a relation.
+
+\item [\cs{mathsurround}]
+      \gr{dimen parameter}
+      Kern amount placed before and after in-line formulas.
+
+\item [\cs{maxdeadcycles}]
+      \gr{integer parameter}
+      The maximum number of times that the output routine is allowed to
+      be called without a \cs{shipout} occurring.
+      \IniTeX\ default:~\n{25}.
+
+\item [\cs{maxdepth}]
+      \gr{dimen parameter}
+      Maximum depth of the page box.
+      Default~\n{4pt} in plain \TeX.
+
+\item [\cs{meaning}]
+      \gr{expandable command}
+      Give the meaning of a control sequence as a string of characters.
+
+\item [\cs{medmuskip}]
+      \gr{muglue parameter}
+      Medium amount of mu glue.
+      Default value in plain \TeX: \n{4mu plus 2mu minus 4mu}
+
+\item [\cs{message\gr{general text}}]
+      \gr{primitive command}
+      Write a message to the terminal.
+      
+\item [\cs{mkern}]
+      \gr{primitive command}
+      Insert a kern measured in mu units.
+
+\item [\cs{month}]
+      \gr{integer parameter}
+      The month of the current job.
+
+\item [\cs{moveleft\gr{dimen}\gr{box}}]
+      \gr{primitive command}
+      Adjust horizontal positioning of a box in vertical mode. 
+
+\item [\cs{moveright\gr{dimen}\gr{box}}]
+      \gr{primitive command}
+      Adjust horizontal positioning of a box in vertical mode. 
+
+\item [\cs{mskip}]
+      \gr{mathematical skip}
+      Insert glue measured in mu units.
+
+\item [\cs{multiply\gr{numeric variable}\gr{optional \n{by}}\gr{number}}]
+      \gr{arithmetic assignment}
+      Arithmetic command to multiply a
+      \gr{numeric variable} (see \cs{advance}).
+
+\item [\cs{muskip\gr{8-bit number}}]
+      \gr{internal muglue}; the control sequence itself
+      is a~\gr{register prefix}.
+      Access skips measured in mu units. 
+
+\item [\cs{muskipdef\gr{control sequence}\gr{equals}\gr{8-bit number}}]
+      \gr{shorthand definition}; the control sequence
+      itself is a~\gr{registerdef}.
+      Define a control sequence to be a synonym for
+      a~\cs{muskip} register.
+
+\item [\cs{newlinechar}]
+      \gr{integer parameter}
+      Number of the character that triggers a new line in
+      \cs{write} statements.
+      Plain \TeX\ default~$-1$.
+      
+\item [\cs{noalign\gr{filler}\lb\gr{vertical (horizontal) mode material}\rb}]
+    \gr{primitive command}
+      Specify  vertical (horizontal)
+      material   to be placed in between rows (columns) of
+      an \cs{halign} (\cs{valign}).
+
+\item [\cs{noboundary}]
+      \gr{horizontal command}
+      (\TeX3 only)
+      Omit implicit boundary character.
+
+\item [\cs{noexpand\gr{token}}]
+      \gr{expandable command}
+      Do not expand the next token.
+
+\item [\cs{noindent}] 
+      \gr{primitive command}
+      Switch to horizontal mode with an empty horizontal list.
+
+\item [\cs{nolimits}]
+      \gr{primitive command}
+      Place limits of a large operator as subscript and 
+      superscript expressions.
+      This is the default position in text style.
+
+\item [\cs{nonscript}]
+      \gr{primitive command}
+      Cancel the next glue item if it occurs in 
+      scriptstyle or scriptscriptstyle.
+
+\item [\cs{nonstopmode}]
+      \gr{interaction mode assignment}
+      \TeX\ fixes errors as best it can,
+      and performs an emergency stop
+      when user interaction is needed.
+
+\item [\cs{nulldelimiterspace}]
+      \gr{dimen parameter}
+      Width taken for empty delimiters. 
+      Default~\n{1.2pt} in plain \TeX.
+
+\item [\cs{nullfont}]
+      \gr{fontdef token}
+      Name of an empty font that \TeX\ uses in emergencies.
+
+\item [\cs{number\gr{number}}]
+      \gr{expandable command}
+      Convert a
+      \gr{number} to decimal representation. 
+
+\item [\cs{omit}]
+      \gr{primitive command}
+      Omit the template for one alignment entry.
+
+\item [\cs{openin\gr{4-bit number}\gr{equals}\gr{filename}}]
+      \gr{primitive command}
+      Open a stream for input.
+
+\item [\cs{openout\gr{4-bit number}\gr{equals}\gr{filename}}]
+      \gr{primitive command}
+      Open a stream for output.
+
+\item [\cs{or}]
+      \gr{primitive command}
+      Separator for entries of an \cs{ifcase}.
+
+\item [\cs{outer}]
+      \gr{prefix}
+      Indicate that the macro being defined 
+      should occur on the outer level only.
+
+\item [\cs{output}]
+      \gr{token parameter}
+      Token list with instructions for shipping out pages.
+
+\item [\cs{outputpenalty}]  
+      \gr{integer parameter}
+      Value of the penalty at the current page break,
+      or $10\,000$ if the break was not at a penalty.
+
+\item [\cs{over}]
+      \gr{generalized fraction command}
+      Fraction.
+
+\item [\cs{overfullrule}]
+      \gr{dimen parameter}
+      Width of the rule that is printed to indicate 
+      overfull horizontal boxes.
+      Plain \TeX\ default:~\n{5pt}.
+
+\item [\cs{overline\gr{math field}}]
+      \gr{math atom}
+      Overline the following \gr{math field}.
+
+\item [\cs{overwithdelims\gr{delim$_1$}\gr{delim$_2$}}]
+      \gr{generalized fraction command}
+      Fraction with delimiters.
+
+\item [\cs{pagedepth}]
+      \gr{special dimen}
+      Depth of the current page.
+
+\item [\cs{pagefilllstretch}]
+      \gr{special dimen}
+      Accumulated third-order stretch of the current page.
+
+\item [\cs{pagefillstretch}]
+      \gr{special dimen}
+      Accumulated second-order stretch of the current page.
+
+\item [\cs{pagefilstretch}]
+      \gr{special dimen}
+      Accumulated first-order stretch of the current page.
+
+\item [\cs{pagegoal}]
+      \gr{special dimen}
+      Goal height of the page box. This starts at \cs{vsize},
+      and is diminished by heights of insertion items.
+
+\item [\cs{pageshrink}]
+      \gr{special dimen}
+      Accumulated shrink of the current page.
+
+\item [\cs{pagestretch}]
+      \gr{special dimen}
+      Accumulated zeroth-order stretch of the current page.
+
+\item [\cs{pagetotal}]
+      \gr{special dimen}
+      Accumulated natural height of the current page.
+
+\item [\cs{par}]
+      \gr{primitive command}
+      Close off a paragraph and go into vertical mode.
+
+\item [\cs{parfillskip}]
+      \gr{glue parameter}
+      Glue that is placed between the last          
+      element of the paragraph and the line end.
+      Plain \TeX\ default:~\n{0pt plus 1fil}.
+
+\item [\cs{parindent}]
+      \gr{dimen parameter}
+      Size of the indentation box added in front of a paragraph.
+
+\item [\cs{parshape}]
+      \gr{internal integer}
+      Command for general paragraph shapes: 
+      \begin{disp}\cs{parshape}\gr{equals}$n$ $i_1$ $\ell_1$ $\ldots$
+                $i_n$ $\ell_n$\end{disp}
+      specifies a~number
+      of lines~$n$, and $n$~pairs of an indentation and
+      line length.
+
+\item [\cs{parskip}]
+      \gr{glue parameter}
+      Amount of glue added to vertical list when a paragraph starts; 
+      default value \verb.0pt plus 1pt. in plain \TeX.
+
+\item [\cs{patterns\gr{general text}}]
+      \gr{hyphenation assignment}
+      Define a list of hyphenation patterns for the current
+      value of \cs{language};  allowed only in \IniTeX.
+
+\item [\cs{pausing}]
+      \gr{integer parameter}
+      Specify that \TeX\ should pause after each line that is 
+      read from a file.
+
+\item [\cs{penalty}]
+      \gr{primitive command}
+      Specify desirability of not breaking at this point.
+
+\item [\cs{postdisplaypenalty}]
+      \gr{integer parameter}
+      Penalty placed in the vertical list below a display.
+
+\item [\cs{predisplaypenalty}]
+      \gr{integer parameter}
+      Penalty placed in the vertical list above a display.
+      Plain \TeX\ default:~\n{10$\,$000}.
+
+\item [\cs{predisplaysize}]
+      \gr{dimen parameter}
+      Effective width of the line preceding the display.
+
+\item [\cs{pretolerance}]
+      \gr{integer parameter}
+      Tolerance value for a paragraph that uses no hyphenation. 
+      Default~\n{100} in plain \TeX.
+
+\item [\cs{prevdepth}] 
+      \gr{special dimen}
+      Depth of the last box added to a vertical list as it is 
+      perceived by \TeX.
+
+\item [\cs{prevgraf}] 
+      \gr{special integer}
+      The number of lines in the paragraph last
+      added to the vertical list.
+
+\item [\cs{radical\gr{24-bit number}}]
+      \gr{primitive command}
+      Command for setting things such as root signs.
+
+\item [\cs{raise\gr{dimen}\gr{box}}]
+      \gr{primitive command}
+      Adjust vertical positioning of a box in horizontal mode. 
+
+\item [\cs{read\gr{number}\n{to}\gr{control sequence}}]
+      \gr{simple assignment}
+      Read a line from a stream into a control sequence.
+
+\item [\cs{relax}]
+      \gr{primitive command}
+      Do nothing.
+
+\item [\cs{relpenalty}]
+      \gr{integer parameter}
+      Penalty for breaking after a binary relation, not enclosed
+      in a subformula.
+      Plain \TeX\ default:~\n{500}.
+
+\item [\cs{right}]
+      \gr{primitive command}
+      Use the following character as a closing delimiter.
+
+\item [\cs{righthyphenmin}]
+      \gr{integer parameter} 
+      (\TeX3 only) 
+      Minimum number of characters after a hyphenation.
+
+\item [\cs{rightskip}]
+      \gr{glue parameter}
+      Glue that is placed to the right of all lines.
+
+\item [\cs{romannumeral\gr{number}}]
+      \gr{expandable command}
+      Convert a positive
+      \gr{number} to lowercase roman representation.
+
+\item [\cs{scriptfont\gr{4-bit number}}]
+      \gr{family member}; the control sequence itself
+      is a~\gr{font range}.
+      Access the scriptfont of a family.
+
+\item [\cs{scriptscriptfont\gr{4-bit number}}]
+      \gr{family member}; the control sequence itself
+      is a~\gr{font range}.
+      Access the scriptscriptfont of a family.
+
+\item [\cs{scriptscriptstyle}]
+      \gr{primitive command}
+      Select the scriptscript style of math typesetting.
+
+\item [\cs{scriptspace}]
+      \gr{dimen parameter}
+      Extra space after subscripts and superscripts.
+      Default~\n{.5pt}      in plain \TeX.
+
+\item [\cs{scriptstyle}]
+      \gr{primitive command}
+      Select the script style of math typesetting.
+
+\item [\cs{scrollmode}]
+      \gr{interaction mode assignment}  
+      \TeX\ patches errors itself, but will ask the user for missing files.
+
+\item [\cs{setbox\gr{8-bit number}\gr{equals}\gr{box}}]
+      \gr{simple assignment}
+      Assign a box to a box register.
+
+\item [\cs{setlanguage\gr{number}}]
+      \gr{primitive command} 
+      (\TeX3 only) 
+      Insert a whatsit resetting the current language
+      to the \gr{number} specified.
+
+\item [\cs{sfcode\gr{8-bit number}}]
+      \gr{internal integer}; the control sequence itself
+      is a~\gr{codename}.
+      Access the value of the \cs{spacefactor}
+      associated with a character.
+
+\item [\cs{shipout\gr{box}}]
+      \gr{primitive command}
+      Ship a box to the \n{dvi} file.
+
+\item [\cs{show\gr{token}}]
+      \gr{primitive command}
+      Display the meaning of a token on the screen.
+
+\item [\cs{showbox\gr{8-bit number}}]
+      \gr{primitive command}
+      Write the contents of a box to the log file.
+
+\item [\cs{showboxbreadth}]
+      \gr{integer parameter}
+      Number of successive elements that are shown when 
+      \verb-\tracingoutput- is positive, each time a level is visited.
+      Plain \TeX\ default:~\n{5}.
+
+\item [\cs{showboxdepth}] 
+      \gr{integer parameter}
+      The number of levels that are shown when 
+      \verb-\tracingoutput- is positive.
+      Plain \TeX\ default:~\n{3}.
+
+\item [\cs{showlists}]
+      \gr{primitive command}
+      Write to the log file the contents of the partial lists 
+      currently built in all modes.
+
+\item [\cs{showthe\gr{internal quantity}}]
+      \gr{primitive command}
+      Display on the terminal the result 
+      of prefixing a token with \cs{the}.
+
+\item [\cs{skewchar\gr{font}}]
+      \gr{internal integer}
+      Font position of an after-placed accent.
+      
+\item [\cs{skip\gr{8-bit number}}]
+      \gr{internal glue}; the control sequence itself
+      is a~\gr{register prefix}.
+      Access skip registers
+
+\item [\cs{skipdef\gr{control sequence}\gr{equals}\gr{8-bit number}}]
+      \gr{shorthand definition}; the control sequence
+      itself is a~\gr{registerdef}.
+      Define a control sequence to be a synonym for
+      a~\cs{skip} register.
+
+\item [\cs{spacefactor}]
+      \gr{special integer}
+      1000 times the ratio by which the stretch component of the
+      interword glue should be multiplied.
+
+\item [\cs{spaceskip}]
+      \gr{glue parameter}
+      Interword glue if non-zero.
+
+\item [\cs{span}]
+      \gr{primitive command}
+      Join two adjacent alignment entries, or (in preamble)
+      expand the next token.
+
+\item [\cs{special\gr{general text}}]
+      \gr{primitive command}
+      Write a token list  to the \n{dvi} file.
+
+\item [\cs{splitbotmark}]
+      \gr{expandable command}
+      The last mark on a split-off page.
+
+\item [\cs{splitfirstmark}]
+      \gr{expandable command}
+      The first mark on a split-off page.
+
+\item [\cs{splitmaxdepth}]
+      \gr{dimen parameter}
+      Maximum depth of a box split off by a \cs{vsplit} operation. 
+      Default~\n{4pt} in plain \TeX.
+
+\item [\cs{splittopskip}]
+      \gr{glue parameter}
+      Minimum distance between the top of what remains after a
+      \cs{vsplit} operation, and the first item in that box.
+      Default~\n{10pt} in plain \TeX.
+
+\item [\cs{string\gr{token}}]
+      \gr{expandable command}
+      Convert a token to a string of one or more characters. 
+
+\item [\cs{tabskip}]
+      \gr{glue parameter}
+      Amount of glue in between columns (rows) of an \cs{halign}
+ \alt
+      (\cs{valign}).
+
+\item [\cs{textfont\gr{4-bit number}}]
+      \gr{family member}; the control sequence itself
+      is a~\gr{font range}.
+      Access the textfont of a family.
+
+\item [\cs{textstyle}]
+      \gr{primitive command}
+      Select the text style of math typesetting.
+
+\item [\cs{the\gr{internal quantity}}]
+      \gr{primitive command}
+      Expand the value of various quantities in \TeX\ into a string
+      of (character) tokens.
+
+\item [\cs{thickmuskip}]
+      \gr{muglue parameter}
+      Large amount of mu glue. 
+      Default value in plain \TeX: \n{5mu plus 5mu}.
+
+\item [\cs{thinmuskip}]
+      \gr{muglue parameter}
+      Small amount of mu glue.
+      Default value in plain \TeX: \n{3mu}.
+
+\item [\cs{time}]
+      \gr{integer parameter}
+      Number of minutes after midnight that the current job started.
+
+\item [\cs{toks\gr{8-bit number}}]
+      \gr{register prefix}
+      Access a token list register.
+
+\item [\cs{toksdef\gr{control sequence}\gr{equals}\gr{8-bit number}}]
+      \gr{shorthand definition}; the control sequence
+      itself is a~\gr{registerdef}.
+      Assign a control sequence to
+      a~\cs{toks} register.
+
+\item [\cs{tolerance}]
+      \gr{integer parameter}  
+      Tolerance value for lines in a paragraph that does use hyphenation. 
+      Default~\n{200} in plain \TeX, \n{10$\,$000} in \IniTeX.
+
+\item [\cs{topmark}]
+      \gr{expandable command}
+      The last mark of the previous page.
+
+\item [\cs{topskip}]
+      \gr{glue parameter}
+      Minimum distance between the top of the page box
+      and the baseline of the first box on the page. 
+      Default~\n{10pt} in plain \TeX.
+
+\item [\cs{tracingcommands}]
+      \gr{integer parameter}
+      When this is~1, \TeX\ displays primitive commands executed; 
+      when this is 2~or more the outcome of conditionals is also recorded.
+
+\item [\cs{tracinglostchars}]
+      \gr{integer parameter}      
+      If this parameter is positive, \TeX\ gives      
+      diagnostic messages whenever a character is accessed that      
+      is not present in a font. Plain \TeX\ default:~1.
+
+\item [\cs{tracingmacros}]
+      \gr{integer parameter}
+      If this is~1, the log file shows expansion of macros 
+      that are performed and the actual values of the arguments; 
+      if this is 2~or more
+      \gr{token parameter}s such as 
+      \cs{output} and \cs{everypar} are also traced.
+
+\item [\cs{tracingonline}]
+      \gr{integer parameter}      
+      If this parameter is positive, \TeX\ will write trace      
+      information also to the terminal.
+
+\item [\cs{tracingoutput}]
+      \gr{integer parameter}
+      If this parameter is positive, the log file shows a dump of boxes 
+      that are shipped to the \n{dvi} file.
+
+\item [\cs{tracingpages}]
+      \gr{integer parameter}      
+      If this parameter is positive, \TeX\ generates      
+      a trace of the page-breaking algorithm.
+
+\item [\cs{tracingparagraphs}]
+      \gr{integer parameter}      
+      If this parameter is positive, \TeX\ generates      
+      a trace of the line-breaking algorithm.
+
+\item [\cs{tracingrestores}]
+      \gr{integer parameter}      
+      If this parameter is positive, \TeX\ will report      
+      all values that are restored when a group level ends.
+
+\item [\cs{tracingstats}]
+      \gr{integer parameter}      
+      If this parameter is positive, \TeX\ reports at the      
+      end of the job the usage of various internal arrays.
+
+\item [\cs{uccode\gr{8-bit number}}]
+      \gr{internal integer}; the control sequence itself
+      is a~\gr{codename}.
+      Access
+      the character code that is the uppercase variant of a given code.
+
+\item [\cs{uchyph}]
+      \gr{integer parameter}
+      Positive if hyphenating words starting with a capital 
+      letter is allowed. 
+      Plain \TeX\ default~1.
+
+\item [\cs{underline\gr{math field}}]
+      \gr{math atom}
+      Underline the following \gr{math field}.
+
+\item [\cs{unhbox\gr{8-bit number}}]
+      \gr{horizontal command}
+ \alt
+      Unpack a box register containing a horizontal box,  
+      appending the contents to the list, and emptying the register. 
+
+\item [\cs{unhcopy\gr{8-bit number}}]
+      \gr{horizontal command}
+ \alt
+      The same as \cs{unhbox}, but do not empty the register. 
+
+\item [\cs{unkern}]
+      \gr{primitive command}
+      Remove the last item of the list if this was a kern.
+
+\item [\cs{unpenalty}]
+      \gr{primitive command}
+      Remove the last item of the list if this was a penalty.
+
+\item [\cs{unskip}]
+      \gr{primitive command}
+      Remove the last item of the list if this was a skip.
+
+\item [\cs{unvbox\gr{8-bit number}}]
+      \gr{vertical command}
+ \alt
+      Unpack a box register containing a vertical box, 
+      appending the contents to the list, and emptying the register. 
+
+\item [\cs{unvcopy\gr{8-bit number}}]
+      \gr{vertical command}
+ \alt
+      The same as \cs{unvbox}, but do not empty the register. 
+
+\item [\cs{uppercase\gr{general text}}]
+      \gr{primitive command}
+      Convert the argument to its uppercase form.
+
+\item [\cs{vadjust\gr{filler}\lb\gr{vertical mode material}\rb}]
+      \gr{primitive command}
+      Specify in horizontal mode material for the enclosing vertical list.
+
+\item [\cs{valign\gr{box specification}\lb\gr{alignment material}\rb}]
+      \gr{horizontal command}   
+      Vertical alignment.   
+
+\item [\cs{vbadness}]
+      \gr{integer parameter}
+      Threshold below which overfull and underfull vertical boxes 
+      are not shown.
+      Plain \TeX\ default:~\n{1000}.
+
+\item [\cs{vbox\gr{box specification}\lb\gr{vertical material}\rb}]
+      \gr{primitive command}
+      Construct a vertical box with reference point on the last item. 
+
+\item [\cs{vcenter\gr{box specification}\lb\gr{vertical material}\rb}]
+      \gr{primitive command}
+      Construct a  vertical box vertically centred on the math axis.
+
+\item [\cs{vfil}]
+      \gr{vertical command}
+      Vertical skip equivalent to \verb-\vskip 0cm plus 1fil-.
+
+\item [\cs{vfill}]
+      \gr{vertical command}
+      Vertical skip equivalent to \verb-\vskip 0cm plus 1fill-.
+
+\item [\cs{vfilneg}]
+      \gr{vertical command}
+      Vertical skip equivalent to \verb-\vskip 0cm minus 1fil-.
+
+\item [\cs{vfuzz}]
+      \gr{dimen parameter} 
+      Excess size that \TeX\ tolerates before it considers  
+      a vertical box overfull.
+      Plain \TeX\ default:~\n{0.1pt}.
+
+\item [\cs{voffset}]
+      \gr{dimen parameter}
+      Distance by which the page is shifted down from the reference point,
+      which is one inch from the top of the page.
+
+\item [\cs{vrule}]
+      \gr{horizontal command}
+      Rule that spreads in vertical direction.
+
+\item [\cs{vsize}]
+      \gr{dimen parameter}
+      Height of the page box.
+
+\item [\cs{vskip\gr{glue}}]
+      \gr{vertical command}
+      Insert in vertical mode a glue item.
+
+\item [\cs{vsplit\gr{8-bit number}\n{to}\gr{dimen}}]
+      \gr{primitive command}
+      Split off the top part of a vertical box. 
+
+\item [\cs{vss}]
+      \gr{vertical command}
+      Vertical skip equivalent to \verb-\vskip 0cm plus 1fil minus 1fil-.
+
+\item [\cs{vtop\gr{box specification}\lb\gr{vertical material}\rb}]
+      \gr{primitive command}
+      Construct a vertical box with reference point on the first item. 
+
+\item [\cs{wd\gr{8-bit number}}]
+      \gr{internal dimen}; the control sequence itself
+      is a~\gr{box dimension}.
+      Width of the box in a box register.
+
+\item [\cs{widowpenalty}]
+      \gr{integer parameter}
+      Additional penalty for breaking a page before 
+      the last line of a paragraph. 
+      Default~\n{150} in plain \TeX.
+
+\item [\cs{write\gr{number}\gr{general text}}]
+      \gr{primitive command}
+      Generate a whatsit item containing
+      a~token list to be written to the terminal or to a file. 
+
+\item [\cs{xdef}]
+      \gr{def}
+      Synonym for \verb-\global\edef-.
+
+\item [\cs{xleaders}]
+      \gr{leaders}
+      As \cs{leaders}, but with box leaders any excess space is 
+      spread equally between the boxes.
+
+\item [\cs{xspaceskip}]
+      \gr{glue parameter}
+      Interword glue if non-zero and \cs{spacefactor}${}\geq2000$.
+
+\item [\cs{year}]
+      \gr{integer parameter}
+      The year of the current job.
+\end{glossinventory}

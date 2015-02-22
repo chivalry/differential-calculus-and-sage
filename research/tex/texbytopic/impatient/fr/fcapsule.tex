@@ -1,0 +1,1123 @@
+% This is part of the book TeX for the Impatient.
+% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2004 Marc Chaudemanche pour la traduction française.
+% See file fdl.tex for copying conditions.
+
+\input fmacros
+\chapter{Sommaire \linebreak des commandes}
+
+\chapterdef{capsule}
+
+Cette section contient des descriptions sur une ligne des commandes primitives de\TeX\
+et des commandes \TeX\ d\'efinies dans \plainTeX. Cela inclut les s\'equences de
+contr\^ole et les caract\`eres  
+sp\'eciaux.
+Nous avons omis les commandes qui ne sont  qu'\`a l'usage interne de la d\'efinition 
+\plainTeX\ (\knuth{annexe~B}{}).
+Notez que les caract\`eres ordinaires
+comme `|a|' ou `|6|' sont aussi des commandes, et m\^eme les plus communes
+\seeconcept{caract\`ere}.
+
+Pour rendre la desciption la plus br\`eve possible, nous avons adopt\'e
+certaines conventions~:
+
+\ulist
+
+\li Un ast\'erisque devant une commande indique que la commande est une primitive,
+^^{primitive//commande} c'est-\`a-dire, construite dans le programme \TeX\
+\seeconcept{primitive}. 
+
+\li Les mots ``musique'', ``ponctuation'', ``fonction'',
+``symbole'', ``relation'', ``d\'elimiteur'' ou ``op\'erateur'' dans une description de 
+commande impliquent que la commande n'est l\'egale qu'en mode math\'ema\-tique.
+ 
+\li Le verbe ``afficher'' s'applique \`a l'information que \TeX\ envoit au ^{\logfile}, 
+sauf indication contraire. Si |\tracingonline| est positif, \TeX\ envoit \'egalement 
+cette information sur le terminal. Nous utilisons le mot ``affichage'' pour nous 
+r\'ef\'erer aux affichages math\'ema\-tiques (voir \xref{math\'ematique affich\'ee}), 
+c'est-\`a-dire, \`a ce qui se trouve entre des |$$|. 
+
+\li La phrase ``produit $x$'' indique que la commande composera
+$x$ et mettra le r\'esultat dans une bo\^\i te.
+Nous omettons parfois ``produit'' quand l'omission ne peut pas porter \`a
+confusion. Par exemple, nous d\'ecrivons |\alpha| comme ``lettre Grecque
+math\'ematique $\alpha$'' et non ``produit la lettre grecque math\'ematique $\alpha$''.
+\margin{Remove explanations of ``space'' and ``glue''}
+
+\endulist
+
+\begincapsum
+
+{\catcode `@ = \letter
+\caplineout {\\\visiblespace} {espace inter mot}*{\@space}}%
+   {\catcode `\ =\other\ctsidxref{ }}
+\capcs ! {espace fin n\'egatif en math\'ematique}{}{\@shriek}
+\capcs " {accent tr\'ema en texte, comme dans \"o}{}{\@quote}
+\capactwo # {introduit un param\`etre de macro ou indique o\`u le texte    
+source va dans un pr\'eambule d'alignement}{}{@msharp:@asharp}
+\capcs # {produit le caract\`ere \# de la police courante}{}{\@pound}
+\capac $ {commence ou finit une formule math\'ematique}{}{mathform}
+\capcs $ {produit le caract\`ere \$ de la police courante}{}{\@bucks}
+\capac % {commence un commentaire}*{commentaires}
+\capcs % {produit le caract\`ere \% de la police courante}{}{\@percent}
+\capac & {s\'epare les mod\`eles et les entr\'ees dans un alignement}{}{@and}
+\capcs & {produit le caract\`ere \& de la police courante}{}{\@and}
+\capac ' {symbole prime en math\'ematique, comme dans $p'$}{}{@prime}
+\capcs ' {accent aigu en texte, comme dans \'e}{}{\@prime}
+\capcs * {symbole multiplication qui autorise une coupure de ligne}{}{\@star}
+\capcs + {d\'ebut d'une ligne tabul\'ee}{}{\@plus}
+\capcs , {espace fin en math\'ematique}{}{\@comma}
+\capcs - {sp\'ecifie un point de c\'esure l\'egal}*{\@minus}
+\capcs . {accent point en texte, comme dans \.n}{}{\@dot}
+\capcs / {correction italique pour le caract\`ere pr\'ec\'edent}*{\@slash}
+\capcs ; {espace \'epaissi en math\'ematique}{}{\@semi}
+\capcs = {accent macron en texte, comme dans \=r}{}{\@equal}
+\capac \ {d\'ebute une s\'equence de contr\^ole}*{@backslash}
+\capcs > {espace moyen en math\'ematique}{}{\@greater}
+\capac ^ {produit une sous-formule sp\'ecifi\'ee en exposant}{}{@hat}
+\capcs ^ {accent circonflexe en texte, comme dans \^o}{}{\@hat}
+{\catcode `@ = \letter
+\caplineout {\twocarets L}{\'equivalent \`a la primitive |\\par|}
+            {}{\@par}\ttidxref{^^L}
+\caplineout {\twocarets M}{une fin de ligne}*{@newline}\ttidxref{^^M}
+}%
+\capac _ {produit une sous-formule sp\'ecifi\'ee en indice}{}{@underscore}
+\capcs _ {soulignement~: \_}{}{\@underscore}
+%x \capac ` {in a \<number> context, \ascii\ code for character that follows}*{@lquote}
+\capcs ` {accent grave en texte, comme dans \`e}{}{\@lquote}
+\capac { {d\'ebute un groupe}{}{@lbrace}
+\capcs { {d\'elimiteur accolade ouvrante en math\'ematique~ $\{$}{}{\@lbrace}
+\capcs | {lignes parall\`eles en math\'ematique~: $\Vert$}{}{\@bar}
+\capac } {fin d'un groupe}{}{@rbrace}
+\capcs } {d\'elimiteur accolade fermante en math\'ematique~: $\}$}{}{\@rbrace}
+\capac ~ {espace inter-mot sur lequel une ligne ne sera pas coup\'ee}{}{@not}
+\capcs ~ {accent tilde en texte, comme dans \~a}{}{\@not}
+\capcs aa {lettre scandinave~: \aa}{}{}
+\capcs AA {lettre scandinave~: \AA}{}{}
+\capcs above {produit une fraction avec une barre d'\'epaisseur sp\'ecifi\'ee}*{}
+\capcs abovedisplayshortskip {ressort que \TeX\ ins\'ere avant un affichage quand la 
+   ligne pr\'ec\'edente d\'epasse l'indentation d'affichage, par 
+   d\'efaut 0\pt\ plus 3\pt}*{}
+\capcs abovedisplayskip {ressort que \TeX\ ins\'ere avant un affichage quand la 
+   ligne pr\'ec\'edente ne d\'epasse pas l'indentation d'affichage, par default 12\pt\
+   plus 3\pt\ minus 9\pt}*{}
+\capcs abovewithdelims {produit une fraction avec une barre d'\'epaisseur sp\'ecifi\'ee
+   et entour\'ee des d\'elimiteurs sp\'ecifi\'es}*{}
+\capcs accent {met l'accent sp\'ecifi\'e sur le caract\`ere suivant}*{}
+\capcs active {code de cat\'egorie pour des caract\`eres actifs, c'est-\`a-dire, le nombre $13$}{}{}
+\capcs acute {accent aigu en math\'ematique, comme dans $\acute x$}{}{}
+\capcs adjdemerits {d\'em\'erites additionnels pour une coupure de ligne qui seront mises dans
+   des lignes adjacentes avec un espacement de mot incompatible, par d\'efaut~10000}*{}
+\capcs advance {ajoute un nombre \`a un registre |\\count|}*{}
+\capcs advancepageno {si |\\pageno| est positif, ajoute un~;
+   s'il est n\'egatif, soustrait un}{}{}
+\capcs ae {ligature \ae}{}{}
+\capcs AE {ligature \AE}{}{}
+\capcs afterassignment {attend, pour d\'evelopper le token suivant, que 
+   l'assignement d'apr\`es soit effectu\'e}*{}
+\capcs aftergroup {attend, pour d\'evelopper le token suivant, la fin
+   du groupe courant}*{}
+\capcs aleph {lettre h\'ebra\^\i que seule en math\'ematique~: $\aleph$}{}{}
+\capcstwo allowbreak {fait |\\penalty0|, c'est-\`a-dire, autorise une coupure de ligne ou
+   de page l\`a o\`u elle ne devrait pas \^etre}{}{hallowbreak:vallowbreak}
+\capcs alpha {lettre math\'ematique grecque $\alpha$}{}{}
+\capcs amalg {op\'erateur d'amalgamation~: $\amalg$}{}{}
+\capcs angle {symbole d'angle~: $\angle$}{}{}
+\capcs approx {relation d'approximation~: $\approx$}{}{}
+\capcs arccos {fonction arc cosinus~: $\arccos$}{}{}
+\capcs arcsin {fonction arc sinus~: $\arcsin$}{}{}
+\capcs arctan {fonction arc tangente~: $\arctan$}{}{}
+\capcs arg {fonction argument (phase)~: $\arg$}{}{}
+\capcs arrowvert {partie verticale d'une double fl\`eche extensible}{}{}
+\capcs Arrowvert {partie verticale d'une fl\`eche simple extensible}{}{}
+\capcs ast {op\'erateur ast\'erisque~: $\ast$}{}{}
+\capcs asymp {relation asymptote~: $\asymp$}{}{}
+\capcs atop {produit une fraction sans barre de fraction}*{}
+\capcs atopwithdelims {produit une fraction sans barre de fraction et 
+   entour\'ee des d\'elimiteurs sp\'ecifi\'es}*{}
+\capcs b {accent barre du dessous en math\'ematique, comme dans $\b x$}{}{}
+\capcs backslash {symbole antislash~: $\backslash$}{}{}
+\capcs badness {la m\'ediocrit\'e du ressort mis dans la derni\`ere bo\^\i te
+   fabriqu\'ee}*{}
+\capcs bar {accent barre en math\'ematique, comme dans $\bar x$}{}{}
+\capcs baselineskip {ressort pour la distance verticale normale entre une ligne de base 
+   et la suivante, par d\'efaut 12\pt}*{}
+\capcs batchmode {ne s'arr\^ete pas sur les erreurs et n'\'ecrit rien sur le terminal}*{}
+\capcs begingroup {d\'ebute un groupe termin\'e par |\\endgroup|}*{}
+\capcs beginsection {d\'ebute une subdivision majeure d'un document}{}%
+   {\@beginsection}
+\capcs belowdisplayshortskip {ressort que \TeX\ ins\`ere apr\`es un affichage quand la
+   ligne pr\'ec\'edente d\'epasse l'indentation de l'affichage, 
+      par d\'efaut 7\pt\ plus 0.3\pt\ minus 4\pt}*{}
+\capcs belowdisplayskip {ressort que \TeX\ ins\`ere apr\`es un affichage quand la
+   ligne pr\'ec\'edente ne d\'epasse pas l'indentation de l'affichage, 
+      par d\'efaut 12\pt\ plus 3\pt\ minus 9\pt}*{}
+\capcs beta {lettre grecque math\'ematique $\beta$}{}{}
+\capcs bf {utilise le gras, c'est-\`a-dire, fait |\\tenbf\\fam=\\bffam|}{}{}
+\capcs bffam {famille grasse en math\'ematique}{}{}
+\capcs bgroup {caract\`ere de d\'ebut de groupe implicite}{}{}
+\capcs big {rend le d\'elimiteur sp\'ecifi\'e plus grand qu'\`a l'ordinaire, mais
+   encore assez petit pour du texte}{}{}
+\capcs Big {rend le d\'elimiteur sp\'ecifi\'e haut de 11.5\pt}{}{}
+\capcs bigbreak {indique une coupure de page d\'esirable avec |\\penalty-200|
+   et produit un ressort |\\bigskipamount|}{}{}
+\capcs bigcap {grand op\'erateur cap (non, cela ne produit pas une grande
+   lettre capitale~!)~: $\bigcap$}{}{}
+\capcs bigcirc {grand op\'erateur cercle~: $\bigcirc$}{}{}
+\capcs bigcup {grand op\'erateur coupe~: $\bigcup$}{}{}
+\capcs bigg {rend le d\'elimiteur sp\'ecifi\'e haut de 14.5\pt}{}{}
+\capcs Bigg {rend le d\'elimiteur sp\'ecifi\'e haut de 17.5\pt}{}{}
+\capcs biggl {taille comme |\\bigg|, mais espac\'e comme une ouverture}{}{}
+\capcs Biggl {taille comme |\\Bigg|, mais espac\'e comme une ouverture}{}{}
+\capcs biggm {taille comme |\\bigg|, mais espac\'e comme une relation}{}{}
+\capcs Biggm {taille comme |\\Bigg|, mais espac\'e comme une relation}{}{}
+\capcs biggr {taille comme |\\bigg|, mais espac\'e comme une fermeture}{}{}
+\capcs Biggr {taille comme |\\Bigg|, mais espac\'e comme une fermeture}{}{}
+\capcs bigl {taille comme |\\big|, mais espac\'e comme une ouverture}{}{}
+\capcs Bigl {taille comme |\\Big|, mais espac\'e comme une ouverture}{}{}
+\capcs bigm {taille comme |\\big|, mais espac\'e comme une relation}{}{}
+\capcs Bigm {taille comme |\\Big|, mais espac\'e comme une relation}{}{}
+\capcs bigodot {grand op\'erateur cercle point\'e~: $\bigodot$}{}{}
+\capcs bigoplus {grand op\'erateur cercle plus~: $\bigoplus$}{}{}
+\capcs bigotimes {grand op\'erateur cercle multipli\'e~: $\bigotimes$}{}{}
+\capcs bigr {taille comme |\\big|, mais espac\'e comme une fermeture}{}{}
+\capcs Bigr {taille comme |\\Big|, mais espac\'e comme une fermeture}{}{}
+\capcs bigskip {produit un ressort |\\bigskipamount|}{}{}
+\capcs bigskipamount {ressort pour une grand saut vertical, par d\'efaut 12\pt\
+   plus 4\pt\ minus 4\pt}{}{}
+\capcs bigsqcup {grand op\'erateur en coupe carr\'e~: $\bigsqcup$}{}{}
+\capcs bigtriangledown {op\'erateur en triangle pointant vers le bas~:
+   $\bigtriangledown$}{}{}
+\capcs bigtriangleup {op\'erateur en triangle pointant vers le haut~: $\bigtriangleup$}{}{}
+\capcs biguplus {grand op\'erateur en coupe avec plus~: $\biguplus$}{}{}
+\capcs bigvee {grand op\'erateur logique ``ou''~: $\bigvee$}{}{}
+\capcs bigwedge {grand op\'erateur logique ``et''~: $\bigwedge$}{}{}
+\capcs binoppenalty {p\'enalit\'e suppl\'ementaire pour une coupure apr\`es un op\'erateur
+   math\'ematique binaire, par d\'efaut~700}*{}
+\capcs bmod {op\'erateur modulus, comme dans $n \bmod 2$}{}{}
+\capcs bordermatrix {produit une matrice avec des labels de rang\'ees et de colonnes}{}{}
+\capcs bot {symbole du bas d'un treillis ~: $\bot$}{}{}
+\capcs botmark {le dernier \'el\'ement marqu\'e de la page qui vient d'\^etre mis en bo\^\i te}*{}
+\capcs bowtie {relation en n\oe ud papillon~: $\bowtie$}{}{}
+\capcs box {affiche la bo\^\i te d'un registre de bo\^\i te sp\'ecifi\'e
+   dans la liste courante, et vide le registre}*{}
+\capcs boxmaxdepth {profondeur maximale des vbox, par d\'efaut |\\maxdimen|}*{}
+\capcs brace {|\char36 n\\brace k\char36| produit 
+   une notation entre accolade~: $n \brace k$}{}{}
+\capcs bracevert {morceau vertival d'une grande accolade extensible }{}{}
+\capcs brack {|\char36 n\\brack k\char36| produit une notation entre crochets~: $n \brack k$}{}{}
+\capcstwo break {fait |\\penalty-10000|, c'est-\`a-dire., force une coupure de ligne 
+   ou de page}{}{hbreak:vbreak}
+\capcs breve {accent bref en math\'ematique, comme dans $\breve x$}{}{}
+\capcs brokenpenalty {p\'enalit\'e pour une coupure de ligne sur un \'el\'ement discr\'etionnaire, par
+   d\'efaut~100}*{}
+\capcs buildrel {produit une formule sp\'ecifi\'ee sur la relation sp\'ecifi\'e}{}{}
+\capcs bullet {operateur bullet ~: $\bullet$}{}{}
+\capcs bye {|\\vfill| la derni\`ere page avec de l'espace blanc, la |\\supereject|,
+   et |\\end| l'ex\'ecution}{}{\@bye}
+\capcs c {accent c\'edille en texte, comme dans \c c}{}{}
+\capcs cal {utilise une police calligraphique pour des lettres capitales en math\'ematique,
+   comme dans $\cal XYZ$}{}{}
+\capcs cap {op\'erateur cap~: $\cap$}{}{}
+\capcs cases {produit des cas en math\'ematique, comme dans $\bigl\{{\cdots\atop\cdots}$}{}{}
+\capcs catcode {le code de cat\'egorie d'un caract\`ere sp\'ecifi\'e}*{}
+\capcs cdot {op\'erateur point centr\'e~: $\cdot$}{}{}
+\capcs cdotp {ponctuation point centr\'e~: $\cdotp$}{}{}
+\capcs cdots {points centr\'es en math\'ematique~: $\cdots$}{}{}
+\capcs centerline {produit une ligne avec son texte centr\'e}{}{}
+\capcs char {produit le caract\`ere de la police courante avec le code 
+   sp\'ecifi\'e}*{}
+\capcs chardef {d\'efinit une s\'equence de contr\^ole sp\'ecifi\'ee comme \'etant un code de
+   caract\`ere, un nombre entre 0 et $255$}*{}
+\capcs check {accent tch\`eque en math\'ematique, comme dans $\check x$}{}{}
+\capcs chi {lettre grecque math\'ematique $\chi$}{}{}
+\capcs choose {|\char36 n\\choose k\char36| produit une notation combinatoire~:
+   $n \choose k$}{}{}
+\capcs circ {op\'eration cercle~: $\circ$}{}{}
+\capcs cleaders {produit une r\`eglure avec la moiti\'e de l'espace restant avant
+   la premi\`ere bo\^\i te et l'autre moiti\'e apr\`es la derni\`ere}*{}
+\capcs cleartabs {efface toutes les tabulations pour des alignements tabul\'es}{}{}
+\capcs closein {ferme un flot d'entr\'ee sp\'ecifi\'e}*{}
+\capcs closeout {ferme un flot de sortie sp\'ecifi\'e}*{}
+\capcs clubpenalty {p\'enalit\'e additionnelle pour une ligne seule restante avant
+   une coupure de page, par d\'efaut~150}*{}
+\capcs clubsuit {symbole tr\`efle~: $\clubsuit$}{}{}
+\capcs colon {symbole :  en math\'ematique~: $:$}{}{}
+\capcs cong {relation congruence~: $\cong$}{}{}
+\capcs coprod {op\'erateur co-produit~: $\coprod$}{}{}
+\capcs copy {comme |\\box|, mais n'efface pas le registre}*{}
+\capcs copyright {marque de copyright~: \copyright}{}{}
+\capcs cos {fonction cosinus~: $\cos$}{}{}
+\capcs cosh {fonction cosinus hyperbolique~: $\cosh$}{}{}
+\capcs cot {fonction cotangente~: $\cot$}{}{}
+\capcs coth {fonction cotangente hyperbolique~: $\coth$}{}{}
+\capcs count {le registre entier sp\'ecifi\'e}*{}
+\capcs countdef {d\'efinit une s\'equence de contr\^ole sp\'ecifi\'ee comme \'etant un nombre
+   correspondant \`a un registre |\\count|}*{}
+\capcs cr {termine une rang\'ee (ou une colonne) dans un alignement}*{}
+\capcs crcr {ne fait rien si la derni\`ere commande \'etait |\\cr| ou |\\noalign|~;
+   autrement, \'equivalent \`a |\\cr|}*{}
+\capcs csc {fonction co-s\'ecante~: $\csc$}{}{}
+\capcs csname {d\'ebute un nom de s\'equence de contr\^ole devant \^etre termin\'e par |\\endcsname|}*{}
+\capcs cup {op\'erateur cup~: $\cup$}{}{}
+\capcs d {accent point en dessous en texte, comme dans \d r}{}{}
+\capcs dag {symbole dague en texte~: \dag}{}{}
+\capcs dagger {op\'erateur dague en math\'ematique~: $\dagger$}{}{}
+\capcs dashv {relation touren \`a droite~: $\dashv$}{}{}
+\capcs day {jour courant du mois, comme un nombre}*{}
+\capcs ddag {symbole double dague en texte~: \ddag}{}{}
+\capcs ddagger {op\'erateur double dague en math\'ematique~: $\ddagger$}{}{}
+\capcs ddot  {accent deux points en math\'ematique~: $\ddot x$}{}{}
+\capcs ddots {points en diagonale en math\'ematique~: \smash{$\ddots$}}{}{}
+\capcs deadcycles {nombre d'initialisations d'|\\output| depuis le dernier
+   |\\shipout|}*{}
+\capcs def {d\'efini une s\'equence de contr\^ole comme \'etant une macro}*{}
+\capcs defaulthyphenchar {code du caract\`ere de c\'esure par d\'efaut}*{}
+\capcs defaultskewchar {code caract\`ere accent par d\'efaut }*{}
+\capcs deg {fonction degr\'e~: $\deg$}{}{}
+\capcs delcode {le code d\'elimiteur d'un caract\`ere sp\'ecifi\'e}*{}
+\capcs delimiter {produit un d\'elimiteur sp\'ecifi\'e}*{}
+\capcs delimiterfactor {1000 fois le ratio de la taille minimum d'un
+   d\'elimiteur par rapport \`a la taille qui recouvrirait compl\`etement la formule, par
+   d\'efaut~901}*{}
+\capcs delimitershortfall {diff\'erence minimum entre une hauteur de formule et
+   une hauteur de d\'elimiteur, par d\'efaut 5\pt}*{}
+\capcs delta {lettre grecque math\'ematique $\delta$}{}{}
+\capcs Delta {lettre grecque math\'ematique $\Delta$}{}{}
+\capcs det {fonction d\'eterminant~: $\det$}{}{}
+\capcs diamond {op\'erateur diamant~: $\diamond$}{}{}
+\capcs diamondsuit {symbole carr\'e~: $\diamondsuit$}{}{}
+\capcs dim {fonction dimension~: $\dim$}{}{}
+\capcs dimen {le registre de dimension sp\'ecifi\'e}*{}
+\capcs dimendef {d\'efinit une s\'equence de contr\^ole sp\'ecifi\'ee comme \'etant un nombre
+   correspondant \`a un registre |\\dimen|}*{}
+\capcs discretionary {sp\'ecifie trois textes, les deux premiers pour avant et
+   apr\`es une coupure de ligne, le troisi\`eme quand il n'y a pas de coupure de ligne}*{}
+\capcs displayindent {\TeX\ met ceci pour l'indentation d'un affichage}*{}
+\capcs displaylimits {place des limites sur et sous des op\'erateurs seulement en style
+   d'affichage}*{}
+\capcs displaylines {produit un affichage multi-lignes sp\'ecifi\'e avec chaque 
+   ligne centr\'ee}{}{}
+\capcs displaystyle {utilise la taille displaystyle dans une formule}*{}
+\capcs displaywidowpenalty {p\'enalit\'e pour une ligne seule d\'ebutant une page 
+   juste avant un affichage, par d\'efaut~50}*{}
+\capcs displaywidth {\TeX\ met ceci pour la largeur d'un affichage}*{}
+\capcs div {op\'erateur division~: $\div$}{}{}
+\capcs divide {divise un registre |\\count| sp\'ecifi\'e par un entier sp\'ecifi\'e}*{}
+\capcs dot {accent point en math\'ematique, comme dans $\dot x$}{}{}
+\capcs doteq {relation d'\'egalit\'e point\'ee~: $\doteq$}{}{}
+\capcs dotfill {remplit un espace horizontal d\'elimit\'e avec des points}{}{}
+\capcs dots {ellipse pour des suites~: $x_1$, \dots, $x_n$}{}{}
+\capcs doublehyphendemerits {d\'em\'erites pour deux lignes cons\'ecutives se terminant
+   par de c\'esures, par d\'efaut~10000}*{}
+\capcs downarrow {relation~: $\downarrow$}{}{}
+\capcs Downarrow {relation~: $\Downarrow$}{}{}
+\capcs downbracefill {remplit la hbox inclue avec une accolade vers le bas ~:
+   \hbox to 3.5em{\downbracefill}}{}{}
+\capcs dp {profondeur de la bo\^\i te d'un registre de bo\^\i te sp\'ecifi\'e}*{}
+\capcs dump {termine l'ex\'ecution et produit un fichier de format}*{}
+\capcs edef {d\'efinit une s\'equence de contr\^ole comme \'etant une macro, 
+   d\'eveloppant imm\'ediatement le texte de remplacement}*{}
+\capcs egroup {caract\`ere de fin de groupe implicite}{}{}
+\capcs eject {termine le paragraphe courant et force une coupure de page,
+   en \'etirant la page courante}{}{}
+\capcs ell {lettre ``l'' manuscrite en math\'ematique~: $\ell$}{}{}
+\capcs else {cas faux ou par d\'efaut pour une condition}*{\@else}
+\capcs emergencystretch {\'etirement suppl\'ementaire ajout\'e \`a toute ligne si
+   |\\tol\-er\-ance| n'est pas satisfait}*{}
+\capcs empty {macro dont le d\'eveloppement ne fait rien}{}{}
+\capcs emptyset {symbole d'ensemble vide~: $\emptyset$}{}{}
+\capcs end {|\\output| la derni\`ere page et termine l'ex\'ecution}*{}
+\capcs endcsname {termine un nom de s\'equence de contr\^ole commenc\'e par
+   |\\csname|}*{}
+\capcs endgraf {\'equivalent \`a la primitive |\\par|}{}{}
+\capcs endgroup {termine un groupe d\'ebut\'e par |\\begingroup|}*{}
+\capcs endinput {termine l'entr\'ee du fichier courant}*{}
+\capcs endinsert {fin d'insertion}{}{}
+\capcs endline {\'equivalent \`a la primitive |\\cr|}{}{}
+\capcs endlinechar {caract\`ere que \TeX\ ins\`ere \`a la fin de chaque ligne
+   entr\'ee, par d\'efaut |\twocarets M|}*{}
+\capcs enskip {ressort horizontal de largeur \frac1/2\em}{}{}
+\capcs enspace {cr\'enage de \frac1/2\em}{}{}
+\capcs epsilon {lettre grecque math\'ematique $\epsilon$}{}{}
+\capcs eqalign {produit un affichage multi-lignes sp\'ecifi\'e dont les parties indiqu\'ees
+   sont align\'ees verticalement}{}{}
+\capcs eqalignno {produit un affichage multi-lignes sp\'ecifi\'e 
+   avec des num\'eros d'\'equation dont les parties indiqu\'ees sont align\'ees verticalement}{}{}
+\capcs eqno {met un num\'ero d'\'equation sp\'ecifi\'e \`a droite d'un affichage}*{}
+\capcs equiv {relation d'\'equivalence~: $\equiv$}{}{}
+\capcs errhelp {liste de token dont le d\'eveloppement \TeX\ s'affiche quand l'utilisateur
+   demande de l'aide en r\'eponse \`a un |\\errmessage|}*{}
+\capcs errmessage {donne un message d'erreur sp\'ecifi\'e}*{}
+\capcs errorcontextlines {le nombre de lignes de contexte que \TeX\
+   affiche pour une erreur, par d\'efaut~5}*{}
+\capcs errorstopmode {stoppe pour une interaction sur des messages d'erreur}*{}
+\capcs escapechar {caract\`ere avec lequel \TeX\ pr\'ec\`ede les noms de s\'equence de contr\^ole
+   qui sont affich\'es}*{}
+\capcs eta {lettre grecque math\'ematique $\eta$}{}{}
+\capcs everycr {liste de token que \TeX\ d\'eveloppe apr\`es un |\\cr| ou un |\\crcr|
+   non suivi de |\\cr| ou de |\\noalign|}*{}
+\capcs everydisplay {liste de token que \TeX\ d\'eveloppe quand un affichage math\'ematique d\'ebute}*{}
+\capcs everyhbox {liste de token que \TeX\ d\'eveloppe quand une hbox d\'ebute}*{}
+\capcs everyjob {liste de token que \TeX\ d\'eveloppe quand une ex\'ecution d\'ebute}*{}
+\capcs everymath {liste de token que \TeX\ d\'eveloppe quand un texte en mode math\'ematique
+    d\'ebute}*{}
+\capcs everypar {liste de token que \TeX\ d\'eveloppe quand un paragraphe d\'ebute}*{}
+\capcs everyvbox {liste de token que \TeX\ d\'eveloppe quand une vbox d\'ebute}*{}
+\capcs exhyphenpenalty {p\'enalit\'e suppl\'ementaire pour une coupure de ligne apr\`es 
+   une c\'esure explicite, par d\'efaut~50}*{}
+\capcs exists {symbole ``il existe''~: $\exists$}{}{}
+\capcs exp {fonction exponentielle~: $\exp$}{}{}
+\capcs expandafter {ne d\'eveloppe le token suivant qu'apr\`es d\'eveloppement du token
+   le suivant}*{}
+\capcs fam {famille de police que \TeX\ utilise pour des caract\`eres de classe 7
+   (c'est-\`a-dire, des variables) en mathi\'ematiques}*{}
+\capcs fi {termine une condition}*{\@fi}
+\capcs filbreak {force une coupure de page \`a moins que le texte contenant un autre |\\filbreak|
+   convienne aussi sur la page}{}{}
+\capcs finalhyphendemerits {p\'enalit\'e pour l'avant-derni\`ere ligne coup\'ee sur une
+   c\'esure, par d\'efaut~5000}*{}
+\capcs firstmark {premier \'el\'ement marqu\'e sur la page qui vient d'\^etre mise en bo\^\i te}*{}
+\capcs fivebf {utilise une police grasse en $5$ points, |cmbx5|}{}{}
+\capcs fivei {utilise une police math\'ematique italique en $5$ points, |cmmi5|}{}{}
+\capcs fiverm {utilise une police romaine en $5$ points, |cmr5|}{}{}
+\capcs fivesy {utilise une police de symbole en $5$ points, |cmsy5|}{}{}
+\capcs flat {symbole b\'emol en musique~: $\flat$}{}{}
+\capcs floatingpenalty {p\'enalit\'e pour des insertions qui sont s\'epar\'ees sur des
+   pages, par d\'efaut~0}*{}
+\capcs fmtname {nom du format courant}{}{}
+\capcs fmtversion {num\'ero de version du format courant}{}{}
+\capcs folio {produit |\\pageno| comme des caract\`eres~; 
+   en chiffres romains s'il est n\'egatif}{}{}
+\capcs font {d\'efinit une s\'equence de contr\^ole sp\'ecifique pour s\'electionner une police}*{}
+\capcs fontdimen {un param\`etre sp\'ecifi\'e d'une police sp\'ecifi\'ee}*{}
+\capcs fontname {produit le nom de fichier d'une police sp\'ecifi\'ee en caract\`eres}*{}
+\capcs footline {liste de token qui produit une ligne en bas de chaque page}{}{}
+\capcs footnote {produit une note de pied de page sp\'ecifi\'ee 
+   avec une marque de r\'ef\'erence sp\'ecifi\'ee}{}{}
+\capcs forall {symbole ``pour tout''~: $\forall$}{}{}
+\capcs frenchspacing {rend l'espacement inter-mot ind\'ependant de la ponctuation}{}{}
+\capcs frown {relation frown~: $\frown$}{}{}
+\capcs futurelet {assigne le troisi\`eme token suivant \`a une s\'equence de contr\^ole 
+   sp\'ecifi\'ee, puis d\'eveloppe le deuxi\`eme token}*{}
+\capcs gamma {lettre grecque math\'ematique $\gamma$}{}{}
+\capcs Gamma {lettre grecque math\'ematique $\Gamma$}{}{}
+\capcs gcd {fonction plus grand d\'enominateur commun~: $\gcd$}{}{}
+\capcs gdef {\'equivalent \`a |\\global\\def|, c'est-\`a-dire, d\'efinit une macro globale}*{}
+\capcs ge {relation plus grand ou \'egal~: $\ge$}{}{}
+\capcs geq {\'equivalent \`a |\\ge|}{}{}
+\capcs gets {relation ''donne''~: $\gets$}{}{}
+\capcs gg {relation beaucoup plus grand que~: $\gg$}{}{}
+\capcs global {rend la d\'efinition suivante globale}*{}
+\capcs globaldefs {remplace le pr\'efixe|\\global| dans les assignements}*{}
+\capcs goodbreak {indique une coupure de page souhaitable avec |\\penalty-500|}{}{}
+\capcs grave {accent grave en math\'ematique, comme dans $\grave x$}{}{}
+\capcs H {accent tr\'ema hongrois en texte, comme dans \H o}{}{}
+\capcs halign {aligne du texte en colonnes}*{}
+\capcs hang {indente le paragraphe courant de |\\parindent|}{}{}
+\capcs hangafter {num\'ero de ligne d\'ebutant une indentation hanging}*{}
+\capcs hangindent {espace pour indentation hanging}*{}
+\capcs hat {accent circonflexe en math\'ematique, comme dans $\hat x$}{}{}
+\capcs hbadness {seuil de badness pour reporter une erreur "underfull or overfull
+   hboxes", par d\'efaut 1000}*{}
+\capcs hbar {symbole math\'ematique~: $\hbar$}{}{}
+\capcs hbox {produit une hbox sp\'ecifi\'ee}*{}
+\capcs headline {liste de token qui produit la ligne en haut
+   de chaque page}{}{}
+\capcs heartsuit {symbole c\oe ur~: $\heartsuit$}{}{}
+\capcs hfil {produit un ressort horizontal infiniment \'etirable}*{}
+\capcs hfill {produit un ressort horizontal encore plus infiniment \'etirable
+   que celui produit par |\\hfil|}*{}
+\capcs hfilneg {produit un ressort horizontal n\'egatif infiniment \'etirable}*{}
+\capcs hfuzz {seuil pour reporter overfull hboxes, par d\'efaut 
+   0.1\pt}*{}
+\capcs hglue {produit un ressort horizontal qui ne disparait pas sur des
+   coupure de ligne}{}{}
+\capcs hidewidth {ignore la largeur d'une entr\'ee d'un alignement, pour qu'il 
+   l'\'etende au dehors de sa boite dans la direction de |\\hidewidth|}{}{}
+\capcs hoffset {offset horizontal relatif d'un pouce par rapport au bord gauche du papier}*{}
+\capcs holdinginserts {si positif, n'enl\`eve pas d'insertion de la
+   page courante}*{}
+\capcs hom {fontion homologie~: $\hom$}{}{}
+\capcs hookleftarrow {relation~: $\hookleftarrow$}{}{}
+\capcs hookrightarrow {relation~: $\hookrightarrow$}{}{}
+\capcs hphantom {produit une formule invisible de hauteur et largeur z\'ero mais
+   de largeur naturelle}{}{}
+\capcs hrule {produit un filet horizontal~; l\'egale seulement en mode vertical}*{}
+\capcs hrulefill {rempli un espace d\'elimit\'e d'un filet horizontal}{}{}
+\capcs hsize {longueur de ligne, par d\'efaut 6.5\thinspace in}*{}
+\capcs hskip {produit un ressort horizontal sp\'ecifi\'e}*{}
+\capcs hss {produit un ressort horizontal qui est infiniment \'etirable et 
+   infiniment r\'etr\'ecissable}*{}
+\capcs ht {la hauteur de la bo\^\i te d'un registre de bo\^\i te sp\'ecifi\'e}*{}
+\capcs hyphenation {ajoute des mots sp\'ecifi\'es au dictionnaire
+   d'exception de c\'esure}*{}
+\capcs hyphenchar {le caract\`ere de c\'esure d'une police sp\'ecifi\'ee}*{}
+\capcs hyphenpenalty {p\'enalit\'e suppl\'ementaire pour une coupure de ligne sur une c\'esure, par
+   d\'efaut~50}*{}
+\capcs i {lettre `\i' sans point \`a utiliser avec des accents}{}{}
+\capcs ialign {d\'ebute un |\\halign| avec le ressort |\\tabskip| \`a z\'ero et
+   |\\everycr| vide}{}{}
+\capcs if {teste si deux tokens sp\'ecifi\'es ont le m\^eme code de caract\`ere}*{\@if}
+\capcs ifcase {d\'eveloppe un cas $n$ pour un valeur $n$ sp\'ecifi\'ee}*{\@ifcase}
+\capcs ifcat {teste si deux tokens sp\'ecifi\'es ont le m\^eme code de
+   cat\'egorie}*{\@ifcat}
+\capcs ifdim {teste une relation sp\'ecifi\'ee entre deux dimensions }*{\@ifdim}
+\capcs ifeof {teste la fin d'un fichier sp\'ecifi\'e}*{\@ifeof}
+\capcs iff {relation si et seulement si~: $\iff$}{}{}
+\capcs iffalse {test qui est toujours faux}*{\@iffalse}
+\capcs ifhbox {teste si un registre de bo\^\i te sp\'ecifi\'e contient une hbox}*{\@ifhbox}
+\capcs ifhmode {teste si \TeX\ est dans un mode horizontal}*{\@ifhmode}
+\capcs ifinner {teste si \TeX\ est dans un mode interne}*{\@ifinner}
+\capcs ifmmode {teste si \TeX\ est dans un mode math\'ematique}*{\@ifmmode}
+\capcs ifnum {teste une relation sp\'ecifi\'ee entre deux nombres}*{\@ifnum}
+\capcs ifodd {teste si un nombre sp\'ecifi\'e est impair}*{\@ifodd}
+\capcs iftrue {test qui est toujours vrai}*{\@iftrue}
+\capcs ifvbox {teste si un registre de bo\^\i te sp\'ecifi\'e contient une vbox}*{\@ifvbox}
+\capcs ifvmode {teste si \TeX\ est dans un mode vertical}*{\@ifvmode}
+\capcs ifvoid {teste si un registre de bo\^\i te sp\'ecifi\'e est vide}*{\@ifvoid}
+\capcs ifx {teste si deux tokens sont les m\^emes, ou si
+   deux macros ont les m\^emes d\'efinitions finales}*{\@ifx}
+\capcs ignorespaces {ignore tous les tokens espaces suivants}*{}
+\capcs Im {symbole d'une partie imaginaire d'un complexe~: $\Im$}{}{}
+\capcs imath {lettre `$\imath$' sans point \`a utiliser avec des accents math\'ematiques}{}{}
+\capcs immediate {effectue l'op\'eration de fichier sp\'ecifi\'ee sans d\'elai}*{}
+\capcs in {relation ``appartient \`a''~: $\in$}{}{}
+\capcs indent {produit une bo\^\i te vide de largeur |\\parindent| et entre
+   en mode horizontal}*{}
+\capcs inf {fonction inf\'erieur~: $\inf$}{}{}
+\capcs infty {symbole infini~: $\infty$}{}{}
+\capcs input {commence \`a lire \`a partir d'un fichier sp\'ecifi\'e}*{}
+\capcs inputlineno {le num\'ero de ligne courante du fichier d'entr\'ee courant}*{}
+\capcs insert {produit une insertion d'une classe sp\'ecifi\'ee}*{}
+\capcs insertpenalties {somme des p\'enalit\'es des insertions}*{}
+\capcs int {symbole int\'egrale~: $\int$}{}{}
+\capcs interlinepenalty {p\'enalit\'e suppl\'ementaire pour une coupure de page
+   entre des lignes d'un paragraphe, par d\'efaut~0}*{}
+\capcs iota {lettre grecque math\'ematique $\iota$}{}{}
+\capcs it {utilise des italiques, c'est-\`a-dire, fait |\\tenit\\fam=\\itfam|}{}{}
+\capcs item {d\'ebute un paragraphe avec une indentation accroch\'ee de |\\parindent| 
+   et pr\'ec\'ed\'ee d'un label sp\'ecifi\'e}{}{}
+\capcs itemitem {comme |\\item|, mais avec une indentation de |2\\parindent|}{}{}
+\capcs itfam {famille italique en math\'ematique}{}{}
+\capcs j {lettre `\j' sans point, pour utiliser avec des accents}{}{}
+\capcs jmath {lettre `$\jmath$' sans point, pour utiliser avec des accents math\'ematiques}{}{}
+\capcs jobname {nom de base du fichier par lequel \TeX\ a \'et\'e appel\'e}*{}
+\capcs jot {unit\'e de mesure for opening up displays}{}{}
+\capcs kappa {lettre grecque math\'ematique $\kappa$}{}{}
+\capcs ker {fonction kern~: $\ker$}{}{}
+\capcs kern {produit un montant d'espace sp\'ecifi\'e sur lequel
+   une coupure n'est pas autoris\'ee}*{}
+\capcs l {lettre polonaise~: \l}{}{}
+\capcs L {lettre polonaise~: \L}{}{}
+\capcs lambda {lettre grecque math\'ematique $\lambda$}{}{}
+\capcs Lambda {lettre grecque math\'ematique $\Lambda$}{}{}
+\capcs land {op\'erateur logique ``et''~: $\land$}{}{}
+\capcs langle {left angle delimiter~: $\langle$}{}{}
+\capcs language {le jeu de patrons de c\'esure courant}*{}
+\capcs lastbox {retrouve et enl\`eve le dernier \'el\'ement de la liste courante, si c'est une
+   bo\^\i te}*{}
+\capcs lastkern {retrouve le dernier \'el\'ement de la liste courante, si c'est un
+   cr\'enage}*{}
+\capcs lastpenalty {enl`eve le dernier item de la liste courante, si c'est une p/'enalit\'e }*{}
+\capcs lastskip {enl\`eve le dernier item de la liste courante, si c'est une glue}*{}
+\capcs lbrace {d\'elimiteur accolade gauche~: $\lbrace$}{}{}
+\capcs lbrack {d\'elimiteur crochet gauche~: $\lbrack$}{}{}
+\capcs lccode {le code de caract\`ere pour la forme minuscule d'une lettre}*{}
+\capcs lceil {d\'elimiteur plafond gauche~: $\lceil$}{}{}
+\capcs ldotp {point sur la ligne de base comme ponctuation~: $\ldotp$}{}{}
+\capcs ldots {points sur la ligne de base en math\'ematique~: $\ldots$}{}{}
+\capcs le {relation inf\'erieur ou \'egal~: $\le$}{}{}
+\capcs leaders {remplit un espace horizontal ou vertical sp\'ecifi\'e en r\'ep\'etant un
+   filet ou une bo\^\i te sp\'ecifi\'ee}*{}
+\capcs left {produit le d\'elimiteur sp\'ecifi\'e, en l'agrandissant pour couvrir la
+   sous-formule suivante se finissant par |\\right|}*{}
+\capcs leftarrow {relation~: $\leftarrow$}{}{}
+\capcs Leftarrow {relation~: $\Leftarrow$}{}{}
+\capcs leftarrowfill {rempli la hbox contenante avec un |\\leftarrow|~:
+   \hbox to 3.5em{\leftarrowfill}}{}{}
+\capcs leftharpoondown {relation~: $\leftharpoondown$}{}{}
+\capcs leftharpoonup {relation~: $\leftharpoonup$}{}{}
+\capcs lefthyphenmin {taille du plus petit fragment de mot que \TeX\ autorise
+   avant une c\'esure en d\'ebut d'un mot, par d\'efaut~2}*{}
+\capcs leftline {produit une ligne avec son texte pouss\'e vers la marge de gauche}{}{}
+\capcs leftrightarrow {relation~: $\leftrightarrow$}{}{}
+\capcs Leftrightarrow {relation~: $\Leftrightarrow$}{}{}
+\capcs leftskip {ressort que \TeX\ ins\`ere \`a gauche de chaque ligne}*{}
+\capcs leq {\'equivalent \`a |\\le|}{}{}
+\capcs leqalignno {produit un affichage multi-ligne sp\'ecifi\'e avec des num\'eros d'\'equation
+   \`a gauche dont les parties indiqu\'ees sont align\'ees verticalement}{}{}
+\capcs leqno {d\'epose un num\'ero d'\'equation sp\'ecifi\'e \`a gauche d'un affichage}*{}
+\capcs let {d\'efinit une s\'equence de contr\^ole comme \'etant le token suivant}*{}
+\capcs lfloor {d\'elimiteur plancher gauche~: $\lfloor$}{}{}
+\capcs lg {fonction logarithme~: $\lg$}{}{}
+\capcs lgroup {d\'elimiteur groupe gauche (la plus petite taille est montr\'ee ici)~:
+   $\Big\lgroup$}{}{}
+\capcs lim {fonction limite~: $\lim$}{}{}
+\capcs liminf {fonction limite inf\'erieur~: $\liminf$}{}{}
+\capcs limits {place un exposant sur et un indice sous un
+   grand op\'erateur}*{}
+\capcs limsup {fonction limite sup\'erieure~: $\limsup$}{}{}
+\capcs line {produit une ligne de caract\`eres justifi\'ee}{}{}
+\capcs linepenalty {p\'enalit\'e pour coupure de ligne ajout\'ee \`a chaque ligne, 
+   par d\'efaut~10}*{}
+\capcs lineskip {ressort vertical d'une ligne de base \`a la suivante si les
+   lignes sont plus proche l'une de l'autre que |\\lineskiplimit|, par d\'efaut 1\pt}*{}
+\capcs lineskiplimit {seuil pour utiliser |\\lineskip| au lieu de |\\base\-line\-skip|, par d\'efaut 0\pt}*{}
+\capcs ll {relation beaucoup moins que~: $\ll$}{}{}
+\capcs llap {produit du texte (sans largeur) \`a partir de la gauche
+   de la position courante}{}{}
+\capcs lmoustache {moiti\'e haute d'une grande accolade~: $\big\lmoustache$}{}{}
+\capcs ln {fonction logarithme naturel~: $\ln$}{}{}
+\capcs lnot {symbole logique ``non''~: $\lnot$}{}{}
+\capcs log {fonction logarithme~: $\log$}{}{}
+\capcs long {autorise des tokens |\\par| dans le(s) argument(s) de
+   la d\'efinition suivante}*{}
+\capcs longleftarrow {relation~: $\longleftarrow$}{}{}
+\capcs Longleftarrow {relation~: $\Longleftarrow$}{}{}
+\capcs longleftrightarrow {relation~: $\longleftrightarrow$}{}{}
+\capcs Longleftrightarrow {relation~: $\Longleftrightarrow$}{}{}
+\capcs longmapsto {relation~: $\longmapsto$}{}{}
+\capcs longrightarrow {relation~: $\longrightarrow$}{}{}
+\capcs Longrightarrow {relation~: $\Longrightarrow$}{}{}
+\capcs loop {d\'ebute une boucle devant se finir par |\\repeat|}{}{}
+\capcs looseness {diff\'erence entre le nombre de lignes d'un paragraphe que vous 
+   voulez par rapport au nombre optimal}*{}
+\capcs lor {op\'erateur logique ``ou''~: $\lor$}{}{}
+\capcs lower {abaisse une bo\^\i te sp\'ecifi\'e d'un montant sp\'ecifi\'e}*{}
+\capcs lowercase {convertit les lettres capitales du texte sp\'ecifi\'e
+   en minuscules}*{}
+\capcs lq {caract\`ere quote gauche pour du texte~: \lq}{}{}
+\capcs mag {$1000$ fois le ratio pour agrandir toutes les dimensions}*{}
+\capcs magnification {comme |\\mag|, mais n'agrandit pas la taille de la page}{}{}
+\capcs magstep {$1000 \cdot 1.2^n$ pour un $n$ sp\'ecifi\'e}{}{}
+\capcs magstephalf {$1000\cdot\sqrt{1.2}$}{}{}
+\capcs mapsto {relation~: $\mapsto$}{}{}
+\capcs mark {produit un \'el\'ement marqu\'e avec un texte sp\'ecifi\'e}*{}
+\capcs mathaccent {met un accent math\'ematique sp\'ecifi\'e sur le caract\`ere suivant}*{}
+\capcs mathbin {espace une sous-formule sp\'ecifi\'ee comme une op\'eration binaire}*{}
+\capcs mathchar {produit le caract\`ere math\'ematique de mathcode sp\'ecifi\'e}*{}
+\capcs mathchardef {d\'efinit une s\'equence de contr\^ole sp\'ecifi\'ee comme \'etant un mathcode,
+   un nombre entre 0 et $2^{15}-1$}*{}
+\capcs mathchoice {s\'electionne une des quatre sous-formules math\'ematiques sp\'ecifi\'ees
+   selon le style courant}*{}
+\capcs mathclose {espace une sous-formule sp\'ecifi\'ee comme un d\'elimiteur fermant}*{}
+\capcs mathcode {le mathcode d'un caract\`ere sp\'ecifi\'e}*{}
+\capcs mathinner {espace une sous-formule sp\'ecifi\'ee comme une formule interne, c'est-\`a-dire, 
+   une fraction}*{}
+\capcs mathop {espace une sous-formule sp\'ecifi\'ee comme un grand op\'erateur math\'ematique}*{}
+\capcs mathopen {espace une sous-formule sp\'ecifi\'ee comme un d\'elimiteur ouvrant}*{}
+\capcs mathord {espace une sous-formule sp\'ecifi\'ee comme un caract\`ere ordinaire}*{}
+\capcs mathpalette {produit un |\\mathchoice| qui d\'eveloppe une s\'equence de contr\^ole sp\'ecifi\'ee d\'ependant du style courant}{}{}
+\capcs mathpunct {espace une sous-formule sp\'ecifi\'ee comme une ponctuation}*{}
+\capcs mathrel {espace une sous-formule sp\'ecifi\'ee comme une relation}*{}
+\capcs mathstrut {produit une bo\^\i te invisible avec la hauteur et la largeur d'une
+   parenth\`ese gauche et sans largeur}{}{}
+\capcs mathsurround {espace que \TeX\ ins\`ere avant et apr\`es les maths dans le texte}*{}
+\capcs matrix {produit une matrice sp\'ecifi\'ee}{}{}
+\capcs max {fonction maximum~: $\max$}{}{}
+\capcs maxdeadcycles {valeur de |\\deadcycles| sur laquelle \TeX\ se plaint,
+   et utilise alors sa propre routine de sortie, par d\'efaut~25}*{}
+\capcs maxdepth {profondeur maximum de la bo\^\i te en bas d'une page,
+   par d\'efaut 4\pt}*{}
+\capcs maxdimen {plus grande dimension acceptable par \TeX}{}{}
+\capcs meaning {produit la signification compr\'ehensible humainement d'un token
+   sp\'ecifi\'e comme des caract\`eres}*{}
+\capcs medbreak {indique une coupure de page
+   souhaitable avec |\\penalty-100| et produit un ressort |\\medskipamount|}{}{}
+\capcs medmuskip {ressort pour un espace math\'ematique moyen, par d\'efaut 4\mud\ plus 2\mud\
+   minus 4\mud}*{}
+\capcs medskip {produit un ressort |\\medskipamount|}{}{}
+\capcs medskipamount {ressort pour un saut vertical moyen, par d\'efaut 6\pt
+   plus 2\pt\ minus 2\pt}{}{}
+\capcs message {affiche le d\'eveloppement du texte sp\'ecifi\'e sur le terminal}*{}
+\capcs mid {middle relation~: $\mid$}{}{}
+\capcs midinsert {produit le texte sp\'ecifi\'e \`a la position courante si
+   possible, sinon en haut de la page suivante}{}{}
+\capcs min {fonction minimum~: $\min$}{}{}
+\capcs mit {utilise des italiques math\'ematiques, c'est-\`a-dire, fait |\\fam=1|}{}{}
+\capcs mkern {produit un cr\'enage sp\'ecifi\'e en unit\'es |mu| en math\'ematique}*{}
+\capcs models {relation mod\`ele ~: $\models$}{}{}
+\capcs month {mois courant, comme un nombre}*{}
+\capcs moveleft {d\'eplace une bo\^\i te sp\'ecifi\'e \`a gauche d'un espace sp\'ecifi\'e~; l\'egal
+   uniquement en mode vertical}*{}
+\capcs moveright {d\'eplace une bo\^\i te sp\'ecifi\'e \`a droite d'un espace sp\'ecifi\'e~; l\'egal
+   uniquement en mode vertical}*{}
+\capcs mp {op\'erateur plus et moins~: $\mp$}{}{}
+\capcs mskip {produit un ressort sp\'ecifi\'e en unit\'es |mu| en math\'ematique}*{}
+\capcs mu {lettre grecque math\'ematique $\mu$}{}{}
+\capcs multiply {multiplie un registre |\\count| sp\'ecifi\'e par un entier
+   sp\'ecifi\'e}*{}
+\capcs multispan {fait traverser l'entr\'ee d'alignement suivante un nombre sp\'ecifi\'e
+   de colonnes (ou de rang\'ees)}{}{}
+\capcs muskip {le registre muglue sp\'ecifi\'e}*{}
+\capcs muskipdef {d\'efinit une s\'equence de contr\^ole sp\'ecifi\'e comme un nombre
+   correspondant \`a un registre |\\muskip|}*{}
+\capcs nabla {symbole diff\'erence \`a l'envers~: $\nabla$}{}{}
+\capcs narrower {diminue les marges droite et gauche d'un |\\parindent|}{}{}
+\capcs natural {symbole naturel en musique~: $\natural$}{}{}
+\capcs nearrow {relation fl\`eche montante vers la droite~: $\nearrow$}{}{}
+\capcs ne {relation non \'egal~: $\ne$}{}{}
+\capcs neg {symbole logique ``non''~: $\neg$}{}{}
+\capcs negthinspace {kern $-\frac1/6$\em}{}{}
+\capcs neq {relation non \'egal~: $\neq$}{}{}
+\capcs newbox {r\'eserve et nomme un registre |\\box|}{}{\@newbox}
+\capcs newcount {r\'eserve et nomme un registre |\\count|}{}{\@newcount}
+\capcs newdimen {r\'eserve et nomme un registre |\\dimen|}{}{\@newdimen}
+\capcs newfam {r\'eserve et nomme une famille math\'ematique}{}{\@newfam}
+\capcs newhelp {nomme un message d'erreur sp\'ecifi\'e}{}{\@newhelp}
+\capcs newif {d\'efinit un nouveau test conditionel avec le nom sp\'ecifi\'e}{}{\@newif}
+\capcs newinsert {nomme une classe d'insertion et r\'eserve des registres
+   |\\box|, |\\count|, |\\dimen| et |\\skip| correspondants}
+   {}{\@newinsert}
+\capcs newlanguage {r\'eserve et nomme un |\\language|}{}{\@newlanguage}
+\capcs newlinechar {caract\`ere fin de ligne pour |\\write|, etc.}*{}
+\capcs newmuskip {r\'eserve et nomme un registre |\\muskip|}{}{\@newmuskip}
+\capcs newread {r\'eserve et nomme un flot d'entr\'ee}{}{\@newread}
+\capcs newskip {r\'eserve et nomme un registre |\\skip|}{}{\@newskip}
+\capcs newtoks {r\'eserve et nomme un registre |\\toks|}{}{\@newtoks}
+\capcs newwrite {r\'eserve et nomme un flot de sortie}{}{\@newwrite}
+\capcs ni {relation ``dans invers\'e''~: $\ni$}{}{}
+\capcs noalign {ins\`ere du mat\'eriel entre des rang\'ees (ou des colonnes) d'un
+   alignement}*{}
+\capcs noboundary {inhibe des ligatures ou cr\'enages dues au |boundarychar| de la police
+   courante}*{}
+\capcstwo nobreak {fait |\\penalty10000|, c'est-\`a-dire,
+   inhibe une coupure de ligne ou de page}{}{hnobreak:vnobreak}
+\capcs noexpand {supprime le d\'eveloppement du token suivant}*{}
+\capcs noindent {entre en mode horizontal sans indenter le paragraphe}*{}
+\capcs nointerlineskip {inhibe le ressort inter-ligne avant la ligne suivante}{}{}
+\capcs nolimits {place un exposant et un indice apr\`es de grands op\'erateurs}*{}
+\capcs nonfrenchspacing {rend l'espacement inter-mot d\'ependant de la ponctuation}{}{}
+\capcs nonscript {inhibe tout ressort ou cr\'enage suivant 
+   en styles script et scriptscript}*{}
+\capcs nonstopmode {ne stoppe pas sur des erreurs, m\^eme celles relatives aux fichiers manquants}*{}
+\capcs nopagenumbers {inhibe l'impression des num\'eros de page, c'est-\`a-dire, fait
+   |\\footline = {\\hfil}|}{}{}
+\capcs normalbaselines {met |\\baselineskip|, |\\line\-skip| et
+   |\\line\-skip\-limit| aux valeurs normales pour la taille de la police courante}{}{}
+\capcs normalbaselineskip {valeur de |\\baselineskip| pour la
+   taille de la police courante}{}{}
+\capcs normalbottom {rend la marge du bas identique de page en page}{}{}
+\capcs normallineskip {valeur de |\\lineskip| pour la taille de caract\`ere
+   courante}{}{}
+\capcs normallineskiplimit {valeur de |\\lineskiplimit| pour la taille de caract\`ere
+   courante}{}{}
+\capcs not {un |\\/| sans largeur pour construire des n\'egations de relation
+   mat\'ematiques, comme dans $\not=$}{}{}
+\capcs notin {relation n'appartient pas~: $\notin$}{}{}
+\capcs nu {lettre grecque math\'ematique $\nu$}{}{}
+\capcs null {se d\'eveloppe en une bo\^\i te vide}{}{}
+\capcs nulldelimiterspace {espace produit par un d\'elimiteur nul, par 
+   d\'efaut 1.2\pt}*{}
+\capcs nullfont {police primitive sans characters}*{}
+\capcs number {produit un chiffre sp\'ecifi\'e en caract\`eres}*{}
+\capcs nwarrow {relation fl\`eche en haut vers la gauche~: $\nwarrow$}{}{}
+\capcs o {lettre danoise~: \o}{}{}
+\capcs O {lettre danoise~: \O}{}{}
+\capcs obeylines {rend chaque fin de ligne du fichier entr\'ee
+   \'equivalente \`a |\\par|}{}{}
+\capcs obeyspaces {produit un espace dans la sortie pour chaque caract\`ere espace dans
+   l'entr\'ee}{}{}
+\capcs odot {op\'eration point centr\'e~: $\odot$}{}{}
+\capcs oe {ligature \oe}{}{}
+\capcs OE {ligature \OE}{}{}
+\capcs offinterlineskip {inhibe le ressort inter-ligne \`a partir de maintenant}{}{}
+\capcs oint {op\'erateur contour int\'egral~: $\oint$}{}{}
+\capcs oldstyle {utilise des chiffres elz\'eviriens~: {\oldstyle1234567890}}{}{}
+\capcs omega {lettre grecque math\'ematique $\omega$}{}{}
+\capcs Omega {lettre grecque math\'ematique $\Omega$}{}{}
+\capcs ominus {op\'erateur moins dans un cercle~: $\ominus$}{}{}
+\capcs omit {saute un patron de colonne (ou de rang\'ee) dans un alignement}*{}
+\capcs openin {pr\'epare un flot d'entr\'ee sp\'ecifi\'e pour lire un fichier}*{}
+\capcs openout {pr\'epare un flot de sortie sp\'ecifi\'e pour \'ecrire dans un fichier}*{}
+\capcs openup {augmente |\\baselineskip|, |\\lineskip| et
+   |\\lineskiplimit| d'un montant sp\'ecifi\'e}{}{}
+\capcs oplus {op\'erateur plus dans un cercle~: $\oplus$}{}{}
+\capcs or {s\'epare les cas d'un |\\ifcase|}*{\@or}
+\capcs oslash {op\'erateur divise dans un cercle~: $\oslash$}{}{}
+\capcs otimes {op\'erateur multiplie dans un cercle~: $\otimes$}{}{}
+\capcs outer {rend la d\'efinition de macro suivante ill\'egale dans des contextes dans
+   lesquels des tokens sont absorb\'e \`a haute vitesse}*{}
+\capcs output {liste de token que \TeX\ d\'eveloppe quand il trouve une coupure de page}*{}
+\capcs outputpenalty {si la coupure de page arrive sur une p\'enalit\'e, la valeur
+   de cette p\'enalit\'e~; sinon z\'ero}*{}
+\capcs over {produit une fraction avec une barre d'\'epaisseur par d\'efaut}*{}
+\capcs overbrace {produit une accolade recouvrant le haut d'une formule,
+   comme dans $\overbrace{h+w}{}$}{}{}
+\capcs overfullrule {largeur de la r\'eglure d'un ``overfull box''}*{}
+\capcs overleftarrow {produit une fl\`eche vers la gauche recouvrant le haut d'une
+   formule, comme dans $\overleftarrow{r+a}$}{}{}
+\capcs overline {produit une ligne recouvrant le haut d'une formule,
+   comme dans~$\overline{2b}$}*{}
+\capcs overrightarrow {produit une fl\`eche vers la droite recouvrant le haut d'une 
+   formule, comme dans $\overrightarrow{i+t}$}{}{}
+\capcs overwithdelims {produit une fraction avec une barre d'\'epaisseur par d\'efaut  
+   et surmont\'ee des d\'elimiteurs sp\'ecifi\'es}*{}
+\capcs owns {relation appartient~: $\owns$}{}{}
+\capcs P {caract\`ere paragraphe en texte~: \P}{}{}
+\capcs pagedepth {\TeX\ met ceci \`a la profondeur courante de la page 
+   courante}*{}
+\capcs pagefilllstretch {\TeX\ met ceci au montant d'\'etirement |filll| sur
+   la page courante}*{}
+\capcs pagefillstretch {\TeX\ met ceci au montant d'\'etirement |fill| sur
+   la page courante}*{}
+\capcs pagefilstretch {\TeX\ met ceci au montant d'\'etirement |fil| sur
+   la page courante}*{}
+\capcs pagegoal {\TeX\ met ceci \`a la hauteur d\'esir\'ee pour la page courante
+   (c'est-\`a-dire, |\\vsize| quand la premi\`ere bo\^\i te est mise sur la page)}*{}
+\capcs pageinsert {produit le texte sp\'ecifi\'e sur la page suivante et utilise 
+    jusqu'a la page enti\`ere}{}{}
+\capcs pageno {le registre |\\count0|, qui contient le num\'ero de page
+   (\'eventuellement n\'egatif)}{}{}
+\capcs pageshrink {\TeX\ met ceci au montant total de r\'etr\'ecissement
+   sur la page courante}*{}
+\capcs pagestretch {\TeX\ met ceci au montant total d'\'etirement
+   sur la page courante}*{}
+\capcs pagetotal {\TeX\ met ceci \`a la hauteur naturelle de la page
+   courante}*{}
+\capcs par {finit un paragraphe et termine le mode horizontal}*{\@par}
+\capcs parallel {relation parall\`ele~: $\parallel$}{}{}
+\capcs parfillskip {ressort horizontal que \TeX\ ins\`ere \`a la fin d'un
+   paragraphe}*{}
+\capcs parindent {espace horizontal que \TeX\ ins\`ere au d\'ebut d'un
+   paragraphe}*{}
+\capcs parshape {sp\'ecifie la largeur et la longueur de chaque ligne 
+   dans le prochain paragraphe}*{}
+\capcs parskip {ressort vertical que \TeX\ ins\`ere avant un paragraphe}*{}
+\capcs partial {symbole d\'eriv\'ee partielle~: $\partial$}{}{}
+\capcs pausing {si positif, stoppe apr\`es avoir lu chaque ligne d'entr\'ee pour un
+   remplacement possible}*{}
+\capcstwo penalty {produit une p\'enalit\'e (ou un bonus, si n\'egatif) pour couper
+   une ligne ou une page ici}*{hpenalty:vpenalty}
+\capcs perp {relation perpendiculaire~: $\perp$}{}{}
+\capcs phantom {produit une formule invisible avec les 
+   dimensions d'une sous formule sp\'ecifi\'e}{}{}
+\capcs phi {lettre grecque math\'ematique $\phi$}{}{}
+\capcs Phi {lettre grecque math\'ematique $\Phi$}{}{}
+\capcs pi {lettre grecque math\'ematique $\pi$}{}{}
+\capcs Pi {lettre grecque math\'ematique $\Pi$}{}{}
+\capcs plainoutput {routine |\\output| de \plainTeX}{}{}
+\capcs pm {op\'erateur plus et moins~: $\pm$}{}{}
+\capcs pmatrix {produit une matrice entre parenth\`eses}{}{}
+\capcs pmod {notation modulo entre parenth\`eses \'a la fin d'une formule comme dans $x \equiv y+1 \pmod 2$}{}{}
+\capcs postdisplaypenalty {p\'enalit\'e suppl\'ementaire pour une coupure de ligne
+   juste apr\`es un affichage, par d\'efaut~0}*{}
+\capcs Pr {fonction probabilit\'e~: $\Pr$}{}{}
+\capcs prec {relation pr\'ec\`ede~: $\prec$}{}{}
+\capcs preceq {relation pr\'ec\`ede ou \'egale~: $\preceq$}{}{}
+\capcs predisplaypenalty {p\'enalit\'e suppl\'ementaire pour une coupure de ligne juste 
+   avant un affichage, par d\'efaut~0}*{}
+\capcs predisplaysize {\TeX\ met ceci \`a la largeur de la
+   ligne pr\'ecedant un affichage}*{}
+\capcs pretolerance {tol\'erance de m\'ediocrit\'e pour une coupure de ligne sans
+   c\'esure, par d\'efaut~100}*{}
+\capcs prevdepth {profondeur de la derni\`ere bo\^\i te dans la liste verticale courante
+   (sauf filet)}*{}
+\capcs prevgraf {\TeX\ met ceci au nombre de lignes dans le paragraphe en plus
+   (en mode horizontal) ou dans le paragraphe pr\'ec\'edent (en mode vertical)}*{}
+\capcs prime {symbole prime math\'ematique, comme dans $r^\prime$}{}{}
+\capcs proclaim {d\'ebute un th\'eor\`eme, un lemme, une hypoth\`ese, $\ldots$}{}{\@proclaim}
+\capcs prod {grand op\'erateur produit~: $\prod$}{}{}
+\capcs propto {relation proportionnel \`a~: $\propto$}{}{}
+\capcs psi {lettre grecque math\'ematique $\psi$}{}{}
+\capcs Psi {lettre grecque math\'ematique $\Psi$}{}{}
+\capcs qquad {produit un ressort horizontal de largeur 2\em}{}{}
+\capcs quad {produit un ressort horizontal de largeur 1\em}{}{}
+\capcs radical {produit un symbole radical sp\'ecifi\'e}*{}
+\capcs raggedbottom {autorise la marge du bas \`a varier d'une page \`a l'autre}{}{}
+\capcs raggedright {autorise la marge droite \`a varier d'une ligne \`a l'autre}{}{}
+\capcs raise {abaisse une bo\^\i te sp\'ecifi\'ee d'un montant sp\'ecifi\'e}*{}
+\capcs rangle {d\'elimiteur angle fermant~: $\rangle$}{}{}
+\capcs rbrace {d\'elimiteur accolade fermante~: $\rbrace$}{}{}
+\capcs rbrack {d\'elimiteur crochet fermant~: $\rbrack$}{}{}
+\capcs rceil {d\'elimiteur plancher fermant~: $\rceil$}{}{}
+\capcs Re {symbole partie r\'eelle de complexe~: $\Re$}{}{}
+\capcs read {lit une ligne d'un flot d'entr\'ee sp\'ecifi\'e}*{}
+\capcs relax {ne fait rien}*{}
+\capcs relpenalty {p\'enalit\'e suppl\'ementaire pour une coupure apr\`es une relation,
+   par d\'efaut~500}*{}
+\capcs repeat {termine une boucle d\'ebut\'ee avec |\\loop|}{}{\@repeat}
+\capcs rfloor {d\'elimiteur plafond fermant~: $\rfloor$}{}{}
+\capcs rgroup {d\'elimiteur de groupe fermant (la plus petite taille est montr\'ee ici)~:
+   $\Big\rgroup$}{}{}
+\capcs rho {lettre grecque math\'ematique $\rho$}{}{}
+\capcs right {produit le d\'elimiteur sp\'ecifi\'e \`a l'extr\'emit\'e d'une
+   sous-formule d\'ebut\'ee par |\\left|}*{}
+\capcs rightarrow {relation~: $\rightarrow$}{}{}
+\capcs Rightarrow {relation~: $\Rightarrow$}{}{}
+\capcs rightarrowfill {remplit une hbox avec un |\\rightarrow|~:
+   \hbox to 3.5em{\rightarrowfill}}{}{}
+\capcs rightharpoondown {relation~: $\rightharpoondown$}{}{}
+\capcs rightharpoonup {relation~: $\rightharpoonup$}{}{}
+\capcs rightleftharpoons {relation~: $\rightleftharpoons$}{}{}
+\capcs rightline {produit une ligne avec son texte pouss\'e vers la marge droite}{}{}
+\capcs rightskip {ressort que \TeX\ ins\`ere \`a droite de chaque ligne}*{}
+\capcs righthyphenmin {taille du plus petit fragment de mot que \TeX\ autorise
+   apr\`es une c\'esure \`a la fin d'un mot, par d\'efaut~3}*{}
+\capcs rlap {produit du texte (sans largeur) \`a partir de la droite
+   de la position courante}{}{}
+\capcs rm {utilise des caract\`eres romains, c'est-\`a-dire, fait |\\tenrm\\fam=0|}{}{}
+\capcs rmoustache {moiti\'e basse d'une grande accolade~: $\big\rmoustache$}{}{}
+\capcs romannumeral {produit la repr\'esentation en chiffre romain minuscule d'un
+   nombre sp\'ecifi\'e, en caract\`eres}{}{}
+\capcs root {produit une racine sp\'ecifi\'ee d'une sous-formule sp\'ecifi\'ee, comme dans
+   $\root 3 \of 2$}{}{}
+\capcs rq {caract\`ere quote fermante en texte~: \rq}{}{}
+\capcs S {caract\`ere section en texte~: \S}{}{}
+\capcs sb {caract\`ere indice implicite}{}{}
+\capcs scriptfont {la police de style script dans une famille math\'ematique sp\'ecifi\'ee}*{}
+\capcs scriptscriptfont {la police de style scriptscript dans une famille math\'ematique 
+   sp\'ecifi\'ee}*{}
+\capcs scriptscriptstyle {utilise la taille de style scriptscript dans une formule}*{}
+\capcs scriptspace {espace suppl\'ementaire que \TeX\ cr\`ee apr\`es un exposant ou un
+   indice, par d\'efaut 0.5\pt}*{}
+\capcs scriptstyle {utilise la taille de style script dans une formule}*{}
+\capcs scrollmode {ne stoppe pas sur les erreurs, mais stoppe sur les erreurs
+   de fichiers manquants}*{}
+\capcs searrow {relation fl\`eche en bas \`a gauche~: $\searrow$}{}{}
+\capcs sec {fonction s\'ecante~: $\sec$}{}{}
+\capcs setbox {d\'efinit un registre de bo\^\i te sp\'ecifi\'e comme \'etant une bo\^\i te}*{}
+\capcs setlanguage {change un jeu de r\`egles de c\'esure sp\'ecifi\'e, mais
+   ne change pas |\\language|}{*}{}
+\capcs setminus {operateur difference ~: $\setminus$}{}{}
+\capcs settabs {d\'efinit les tabulations pour un alignement tabul\'e}{}{}
+\capcs sevenbf {utilise une police grasse de $7$ points, |cmbx7|}{}{}
+\capcs seveni {utilise une police math\'ematique italique de $7$ points, |cmmi5|}{}{}
+\capcs sevenrm {utilise une police romaine de $7$ points, |cmr7|}{}{}
+\capcs sevensy {utilise une police  symbole de $7$ points, |cmsy7|}{}{}
+\capcs sfcode {le code du facteur d'espace  d'un caract\`ere sp\'ecifi\'e}*{}
+\capcs sharp {symbole di\`ese en musique~: $\sharp$}{}{}
+\capcs shipout {envoit une bo\^\i te vers le fichier |.dvi|}*{}
+\capcs show {montre, dans la log et 
+   sur le terminal, la signification d'un token sp\'ecifi\'e}*{}
+\capcs showbox {affiche le contenu d'un registre de bo\^\i te sp\'ecifi\'e}*{}
+\capcs showboxbreadth {nombre maximum d'\'el\'ements montr\'e sur chaque niveau imbriqu\'e,
+   par d\'efaut~5}*{}
+\capcs showboxdepth {maximum de niveaux imbriqu\'es montr\'es, par d\'efaut~3}*{}
+\capcs showhyphens {montre, dans la log
+   et sur le terminal, les c\'esures dans un texte sp\'ecifi\'e}{}{}
+\capcs showlists {affiche toutes les listes sur lequel il travaille}*{}
+\capcs showthe {montre, dans la log 
+   et sur le terminal, ce que |\\the| produira}*{}
+\capcs sigma {lettre grecque math\'ematique $\sigma$}{}{}
+\capcs Sigma {lettre grecque math\'ematique $\Sigma$}{}{}
+\capcs sim {relation similarit\'e~: $\sim$}{}{}
+\capcs simeq {relation similaire ou \'egal~: $\simeq$}{}{}
+\capcs sin {fonction sinus~: $\sin$}{}{}
+\capcs sinh {fonction sinus hyperbolique~: $\sinh$}{}{}
+\capcs skew {d\'eplace un accent sp\'ecifi\'e d'un montant sp\'ecifi\'e
+   sur un caract\`ere accentu\'e sp\'ecifi\'e}{}{}
+\capcs skewchar {caract\`ere d'une police sp\'ecifi\'ee utilis\'e pour positionner des accents}*{}
+\capcs skip {le registre de ressort sp\'ecifi\'e}*{}
+\capcs skipdef {d\'efinit une s\'equence de contr\^ole sp\'ecifi\'ee  comme \'etant un nombre
+   correspondant \`a un registre |\\skip|}*{}
+\capcs sl {utilise des caract\`eres pench\'es, c'est-\`a-dire, fait |\\tensl\\fam=\\slfam|}{}{}
+\capcs slash {caract\`ere \slash\ autorisant une coupure de ligne}{}{}
+\capcs slfam {famille pench\'ee en math\'ematique}{}{}
+\capcs smallbreak {indique une coupure de page assez d\'esirable 
+   avec |\\penalty-50| et produit un ressort |\\smallskipamount|}{}{}
+\capcs smallint {petit symbole d'int\'egrale~: $\smallint$}{}{}
+\capcs smallskip {produit un ressort |\\smallskipamount|}{}{}
+\capcs smallskipamount {ressort pour un petit saut vertical, par d\'efaut 3\pt\
+   plus 1\pt\ minus 1\pt}{}{}
+\capcs smash {produit une formule sans hauteur, ni profondeur}{}{}
+\capcs smile {relation smile~: $\smile$}{}{}
+\capcs sp {caract\`ere d'exposant implicite}{}{}
+\capcs space {produit un ressort inter-mot normal}{}{}
+\capcs spacefactor {modifie l'\'etirement et le r\'etr\'ecissement des ressorts inter-mot 
+   s'il diff\'erent de 1000}*{}
+\capcs spaceskip {si diff\'erent de z\'ero et |\\spacefactor|${}<2000$, surcharge
+    le ressort inter-mot normal}*{}
+\capcs spadesuit {symbole pique~: $\spadesuit$}{}{}
+\capcs span {soit combine des entr\'ees dans un corps d'alignement body soit 
+   d\'eveloppe des tokens dans un pr\'eambule}*{}
+\capcs special {\'ecrit des tokens dans le fichier |.dvi| devant \^etre interpr\'et\'es par un
+   programme de lecture de DVI}*{}
+\capcs splitbotmark {dernier \'el\'ement de marque dans une bo\^\i te r\'esultant de |\\vsplit|}*{}
+\capcs splitfirstmark {premier \'el\'ement de marque dans une bo\^\i te r\'esultant de 
+   |\\vsplit|}*{}
+\capcs splitmaxdepth {profondeur maximum d'une bo\^\i te r\'esultant de |\\vsplit|}*{}
+\capcs splittopskip {ressort que \TeX\ ins\`ere en haut d'une bo\^\i te r\'esultant de
+   |\\vsplit|}*{}
+\capcs sqcap {op\'erateur square cap~: $\sqcap$}{}{}
+\capcs sqcup {op\'erateur square cup~: $\sqcup$}{}{}
+\capcs sqrt {produit une racine carr\'ee d'une sous-formule, comme dans $\sqrt 2$}{}{}
+\capcs sqsubseteq {relation square subset ou \'egal~: $\sqsubseteq$}{}{}
+\capcs sqsupseteq {relation square superset ou \'egal~: $\sqsupseteq$}{}{}
+\capcs ss {lettre allemande~: \ss}{}{}
+\capcs star {op\'erateur \'etoile~: $\star$}{}{}
+\capcs string {produit un token sp\'ecifi\'e, le plus souvent une s\'equence de 
+   contr\^ole, comme des caract\`eres}*{}
+\capcs strut {bo\^\i te sans largeur, mais de hauteur et profondeur d'une ligne standard,
+   de ligne de base \`a ligne de base, dans la police courante}{}{}
+\capcs subset {relation subset~: $\subset$}{}{}
+\capcs subseteq {relation subset ou \'egal~: $\subseteq$}{}{}
+\capcs succ {relation successeur~: $\succ$}{}{}
+\capcs succeq {relation successeur ou \'egal~: $\succeq$}{}{}
+\capcs sum {grand op\'erateur de somme~: $\sum$}{}{}
+\capcs sup {fonction sup\'erieur~: $\sup$}{}{}
+\capcs supereject {force une coupure de page, et d\'echarge toutes les insertions}{}{}
+\capcs supset {relation superset~: $\supset$}{}{}
+\capcs supseteq {relation superset ou \'egal~: $\supseteq$}{}{}
+\capcs surd {symbole surd~: $\surd$}{}{}
+\capcs swarrow {relation fl\`eche en bas \`a gauche~: $\swarrow$}{}{}
+\capcs t {accent tie-after en texte, comme dans \t uu}{}{}
+\capcs tabalign {\'equivalent \`a |\\+|, sauf s'il n'est pas |\\outer|}{}{}
+\capcs tabskip {ressort entre colonnes (ou rang\'ees) d'un alignement}*{}
+\capcs tan {fonction tangente~: $\tan$}{}{}
+\capcs tanh {fonction tangente hyperbolique~: $\tanh$}{}{}
+\capcs tau {lettre grecque math\'ematique $\tau$}{}{}
+\capcs tenbf {utilise une police grasse de $10$ points, |cmbx10|}{}{}
+\capcs tenex {utilise une police d'extension math\'ematique de $10$ points, |cmex10|}{}{}
+\capcs teni {utilise une police italique math\'ematique de $10$ points, |cmmi10|}{}{}
+\capcs tenit {utilise une police italique de texte de $10$ points, |cmti10|}{}{}
+\capcs tenrm {utilise une police romaine de texte de $10$ points, |cmr10|}{}{}
+\capcs tensl {utilise une police romaine pench\'ee de $10$ points, |cmsl10|}{}{}
+\capcs tensy {utilise une police de symbole math\'ematique de $10$ points, |cmsy10|}{}{}
+\capcs tentt {utilise une police de machine \`a \'ecrire de $10$ points, |cmtt10|}{}{}
+\capcs TeX {produit le logo \TeX}{}{}
+\capcs textfont {la police de style dans une famille math\'ematique sp\'ecifi\'ee}*{}
+\capcs textindent {comme |\\item|, mais ne fait pas d'indentation associ\'ee}{}{}
+\capcs textstyle {utilise une taille textstyle dans une formule}*{}
+\capcs the {donne la valeur d'un token sp\'ecifi\'e}*{}
+\capcs theta {lettre grecque math\'ematique $\theta$}{}{}
+\capcs Theta {lettre grecque math\'ematique $\Theta$}{}{}
+\capcs thickmuskip {ressort pour une espace math\'ematique gras, par d\'efaut 5\mud\ plus 5\mud}*{}
+\capcs thinmuskip {ressort pour un espace math\'ematique fine, par d\'efaut 3\mud}*{}
+\capcs thinspace {cr\'enage de \frac1/6\em}{}{}
+\capcs tilde {accent tilde en math\'ematique, comme dans $\tilde x$}{}{}
+\capcs time {l'heure d'aujourd'hui, en minutes depuis minuit}*{}
+\capcs times {op\'erateur multipli\'e~: $\times$}{}{}
+\capcs toks {le registre de token sp\'ecifi\'e}*{}
+\capcs toksdef {d\'efinit une s\'equence de contr\^ole sp\'ecifi\'e comme \'etant un nombre
+   correspondant \`a un registre |\\toks|}*{}
+\capcs tolerance {tol\'erance de m\'ediocrit\'e pour des coupures de ligne avec c\'esure}*{}
+\margin{{\tt\\topglue} command added~; recent addition to \TeX}
+\capcs to {relation mapping~: $\to$}{}{}
+\capcs top {symbole lattice top~: $\top$}{}{}
+\capcs topglue {produit un ressort vertical sp\'ecifi\'e en haut 
+   d'une page}{}{}
+\capcs topinsert {produit le texte sp\'ecifi\'e en haut d'une page}{}{}
+\capcs topmark {|\\botmark| avant que la page courante soit en bo\^\i te}*{}
+\capcs topskip {ressort entre la ligne de t\^ete et la premi\`ere ligne de texte
+   sur une page, par d\'efaut 10\pt}*{}
+\capcs tracingall {d\'eclanche des traces maximal}{}{}
+\capcs tracingcommands {affiche l'ex\'ecution des commandes}*{}
+\capcs tracinglostchars {affiche les caract\`eres demand\'es, mais non
+   d\'efinis}*{}
+\capcs tracingmacros {affiche les d\'eveloppements de macros}*{}
+\capcs tracingonline {montre les sorties de diagnostic sur le terminal aussi bien que
+   dans le fichier log}*{}
+\capcs tracingoutput {affiche les contenus des bo\^\i tes sorties}*{}
+\capcs tracingpages {affiche les calculs de coupure de page}*{}
+\capcs tracingparagraphs {affiche les calculs de coupure de ligne}*{}
+\capcs tracingrestores {affiche les valeurs restaur\'ees \`a la fin
+   d'un groupe}*{}
+\capcs tracingstats {affiche les statistiques d'utilisation de la m\'emoire}*{}
+\capcs triangle {symbole triangle~: $\triangle$}{}{}
+\capcs triangleleft {op\'erateur triangle gauche~: $\triangleleft$}{}{}
+\capcs triangleright {op\'erateur triangle droite~: $\triangleright$}{}{}
+\capcs tt {utilise des caract\`eres de machine \`a \'ecrire, c'est-\`a-dire, fait |\\tentt\\fam=\\ttfam|}{}{}
+\capcs ttfam {famille machine \`a \'ecrire en math\'ematique}{}{}
+\capcs ttraggedright {utilise des caract\`eres de machine \`a \'ecrire et autorise la marge
+   droite des paragraphes \`a varier d'une ligne \`a l'autre}{}{}
+\capcs u {accent bref en texte, comme dans \u r}{}{}
+\capcs uccode {le code de caract\`ere de la forme capitale d'une lettre}*{}
+\capcs uchyph {si positif, laisse c\'esurer des mots qui commencent avec une
+   lettre capitale}*{}
+\capcs underbar {souligne le texte sp\'ecifi\'e sans toucher les descendantes , comme dans \underbar{fog}}{}{}
+\capcs underbrace {produit une accolade couvrant le bas d'une formule, comme dans
+   $\underbrace{x+x}{}$}{}{}
+\capcs underline {souligne une formule math\'ematique sous les descendantes, comme dans
+   $\underline{x+y}$}*{}
+\capcs unhbox {d\'echarge le contenu de la bo\^\i te
+   d'un registre de bo\^\i te sp\'ecifi\'e
+   de la liste courante et vide le registre~; l\'egal en
+   mode horizontal seulement}*{}
+\capcs unhcopy {comme |\\unhbox|, mais ne vide pas le registre}*{}
+\capcs unkern {si le dernier \'el\'ement de la liste courante est un cr\'enage, l'enl\`eve}*{}
+\capcs unpenalty {si le dernier \'el\'ement de la liste courante est une p\'enalit\'e, l'enl\`eve}*{}
+\capcs unskip {si le dernier \'el\'ement de la liste courante est un ressort, l'enl\`eve}*{}
+\capcs unvbox {d\'echarge le contenu de la bo\^\i te
+   d'un registre de bo\^\i te sp\'ecifi\'e
+   de la liste courante et vide le registre~; l\'egal en
+   modes verticaux seulement}*{}
+\capcs unvcopy {comme |\\unvbox|, mais ne vide pas le registre}*{}
+\capcs uparrow {relation~: $\uparrow$}{}{}
+\capcs Uparrow {relation~: $\Uparrow$}{}{}
+\capcs upbracefill {fill enclosing hbox with an upwards facing brace~:
+   \hbox to 3.5em{\upbracefill}}{}{}
+\capcs updownarrow {relation~: $\updownarrow$}{}{}
+\capcs Updownarrow {relation~: $\Updownarrow$}{}{}
+\capcs uplus {op\'erateur plus cupped~: $\uplus$}{}{}
+\capcs uppercase {convertit les lettres minuscules d'un texte sp\'ecifi\'e
+   en capitales}*{}
+\capcs upsilon {lettre grecque math\'ematique $\upsilon$}{}{}
+\capcs Upsilon {lettre grecque math\'ematique $\Upsilon$}{}{}
+\capcs v {accent tch\`eque en texte, comme dans \v o}{}{}
+\capcs vadjust {produit du mat\'eriel en mode vertical apr\`es la ligne courante}*{}
+\capcs valign {aligne du texte dans des rang\'ees}*{}
+\capcs varepsilon {variante de la lettre grecque math\'ematique $\varepsilon$}{}{}
+\capcs varphi {variante de la lettre grecque math\'ematique $\varphi$}{}{}
+\capcs varpi {variante de la lettre grecque math\'ematique $\varpi$}{}{}
+\capcs varrho {variante de la lettre grecque math\'ematique $\varrho$}{}{}
+\capcs varsigma {variante de la lettre grecque $\varsigma$}{}{}
+\capcs vartheta {variante de la lettre grecque math\'ematique $\vartheta$}{}{}
+\capcs vbadness {badness threshold for reporting underfull or overfull
+   vboxes, par d\'efaut~1000}*{}
+\capcs vbox {produit une vbox dont la ligne de base est celle de la bo\^\i te du haut
+   incluse}*{}
+\capcs vcenter {centre le texte sp\'ecifi\'e sur l'axe math\'ematique}*{}
+\capcs vdash {symbole left turnstile~: $\vdash$}{}{}
+\capcs vdots {points verticaux en math\'ematique~: \smash{$\vdots$}}{}{}
+\capcs vec {accent vecteur en math\'ematique, comme dans $\vec x$}{}{}
+\capcs vee {op\'erateur ``ou'' logique~: $\vee$}{}{}
+\capcs vert {relation barre~: $\vert$}{}{}
+\capcs Vert {relation double barre~: $\Vert$}{}{}
+\capcs vfil {produit un ressort vertical infiniment \'etirable}*{}
+\capcs vfill {produit un ressort vertical encore plus infiniment \'etirable
+   que celui produit par |\\vfil|}*{}
+\capcs vfilneg {produit un ressort vertical n\'egatif infiniment \'etirable}*{}
+\capcs vfootnote {produit une note de bas de page sp\'ecifi\'ee avec une marque 
+   de r\'ef\'erence sp\'ecifi\'ee, mais ne produit la marque de r\'ef\'erence dans le texte}{}{}
+\capcs vfuzz {seuil de d\'epassement pour dire overfull vboxes, par d\'efaut 
+   0.1\pt}*{}
+\capcs vglue {produit un ressort vertical sp\'ecifi\'e
+   qui ne disparait pas sur des coupures de page}{}{}
+\capcs voffset {offset vertical relatif d'un pouce par rapport au coin
+   haut du papier}*{}
+\capcs vphantom {produit un formule invisible sans largeur mais de hauteur 
+   et profondeur naturelle}{}{}
+\capcs vrule {produit un filet vertical~; l\'egal seulement en modes horizontaux}*{}
+\capcs vsize {hauteur de page, par d\'efaut 8.9\thinspace in}*{}
+\capcs vskip {produit un ressort vertical sp\'ecifi\'e}*{}
+\capcs vsplit {coupe le contenu d'un registre de  bo\^\i te sp\'ecifi\'ee
+   de la hauteur sp\'ecifi\'e}*{}
+\capcs vss {produit un ressort vertical qui est infiniment \'etirable et
+   infiniment r\'etr\'ecissable}*{}
+\capcs vtop {produit une vbox dont la ligne de base est celle de la bo\^\i te du haut englob\'ee}*{}
+\capcs wd {la largeur d'une bo\^\i te dans un registre de bo\^\i te sp\'ecifi\'e}*{}
+\capcs wedge {op\'erateur logique ``et''~: $\wedge$}{}{}
+\capcs widehat {accent math\'ematique, comme dans $\widehat {y+z+a}$}{}{}
+\capcs widetilde {accent math\'ematique $\widetilde {b+c+d}$}{}{}
+\capcs widowpenalty {p\'enalit\'e pour une ligne seule d\'ebutant une page, 
+   par d\'efaut~150}*{}
+\capcs wlog {|\\write| la liste de token sp\'ecifi\'ee dans le fichier log}{}{}
+\capcs wp {symbole Weierstra\ss\ `p'~: $\wp$}{}{}
+\capcs wr {op\'erateur produisant un ruban~: $\wr$}{}{}
+\capcs write {\'ecrit une ligne vers un flot de sortie sp\'ecifi\'e}*{}
+\capcs xdef {\'equivalent \`a |\\global\\edef|, c'est-\`a-dire, d\'efini globalement une
+   macro, d\'eveloppant imm\'ediatement le texte de remplacement}*{}
+\capcs xi {lettre grecque math\'ematique $\xi$}{}{}
+\capcs Xi {lettre grecque math\'ematique $\Xi$}{}{}
+\capcs xleaders {produit des r\'eglures avec l'espace en trop \`a gauche redistribu\'e egalement}*{}
+\capcs xspaceskip {si diff\'erent de z\'ero et |\\spacefactor|${}\ge2000$, 
+   surcharge le ressort inter-mot normal}*{}
+\capcs year {l'ann\'ee courante, comme un nombre}*{}
+\capcs zeta {lettre grecque math\'ematique $\zeta$}{}{}
+
+\endcapsum
+\endchapter
+\byebye
+

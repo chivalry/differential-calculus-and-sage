@@ -1,0 +1,1004 @@
+% This is part of the book TeX for the Impatient.
+% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2004 Marc Chaudemanche pour la traduction française.
+% See file fdl.tex for copying conditions.
+
+\input fmacros
+\chapter{Trucs et astuces}
+
+\chapterdef{tips}
+
+\TeX\ est un programme complexe qui travaille parfois de fa\c con 
+myst\'e\-rieuse.  Dans cette section nous vous offrons quelques trucs 
+pour r\'esoudre les probl\`emes que vous pourrez rencontrer et expliquer 
+quelques techniques pratiques.
+
+
+\section  Corriger de mauvaises coupures de page
+
+\bix^^{coupures de page//mauvaises}
+Parfois \TeX\ coupe une page juste au milieu du mat\'eriel que vous voulez
+garder ensemble.---par exemple, une ent\^ete de section et le texte qui la 
+suit ou une courte suite d'items li\'es. Il y a deux moyens de corriger la
+situation~:
+\ulist\compact
+\li Vous pouvez forcer le mat\'eriel \`a rester ensemble.
+\li Vous pouvez forcer une coupure de page \`a un endroit diff\'erent.
+\endulist
+
+La plus simple fa\c con de forcer \TeX\ a garder le mat\'eriel ensemble sur une 
+page est de l'englober dans un vbox en utilisant la commande |\vbox| 
+\ctsref{\vbox}.
+^^|\vbox//emp\^echer des coupures de page avec|
+Une vbox est normalement meilleure qu'une hbox pour faire cela parce que le 
+plus souvent, le mat\'eriel \`a garder ensemble, par exemple, une suite de 
+paragraphes, sera du mat\'eriel en mode vertical. Vous pouvez faire pr\'ec\'eder et 
+suivre la vbox par une commande de paragraphe implicite ou explicite (soit 
+une ligne blanche, soit un |\par|)~; autrement \TeX\ pourrait essayer de 
+faire la partie vbox sur un paragraphe adjacent. La m\'ethode vbox a une 
+limitation importante~: vous ne pouvez pas l'appliquer \`a une portion de 
+texte inf\'erieure a un paragraphe.
+
+Vous pouvez parfois garder les lignes d'un paragraphe ensemble en
+l'englobant dans un groupe et en donnant \`a |\interlinepenalty|
+\ctsref{\interlinepenalty} 
+la valeur $10000$ au d\'ebut du groupe (ou n'importe o\`u avant la fin du
+paragraphe).
+Cette m\'ethode demandera \`a \TeX\ de consid\'erer les coupures de page dans ce 
+paragraphe comme \'etant infiniment ind\'esirables.
+N\'eanmoins~; si toutes les coupures de page que \TeX\ peut trouver sont
+infiniment ind\'esirables, il coupera la page dans le paragraphe quand m\^eme.
+
+Une commande ^|\nobreak| (\xref{vnobreak})
+apr\`es la fin d'un paragraphe emp\`eche \TeX\
+de couper la page sur l'item suivant
+(a moins que cet item provoque un penalty inf\'erieur \`a $10000$).
+C' est aussi la meilleure fa\c con d'emp\^echer une coupure de page apr\`es une ent\^ete,
+puisque une ent\^ete r\'eagit normalement comme un paragraphe.
+Le |\nobreak| doit suivre la ligne blanche ou le |\par| qui termine
+la paragraphe pour que \TeX\ ne traite pas le |\nobreak| comme faisant partie
+du paragraphe.
+Pour que le |\nobreak| soit effectif, il doit aussi \^etre plac\'e avant
+tout point de coupure l\'egal \`a la fin du paragraphe.
+Le ressort que \TeX\ ins\`ere avant le paragraphe suivant est comme un point
+de coupure,
+et ainsi pour tout ressort vertical que vous ins\'erez explicitement apr\`es un
+paragraphe.
+Ainsi, le |\nobreak| doit normalement \^etre la toute premi\`ere chose apr\`es
+la fin du paragraphe ou de l'ent\^ete.
+
+Vous pouvez utiliser la commande ^|\eject| \ctsref{\eject}
+pour forcer \TeX\ \`a couper une page \`a un endroit
+particulier.  Dans un paragraphe, vous pouvez utiliser la combinaison 
+`|\vadjust{\vfill\eject}|' 
+\ctsref{\vadjust}
+^^|\vadjust|
+pour forcer une coupure apr\`es la prochaine ligne de sortie compl\`ete.
+La raison de faire pr\'ec\'eder |\eject| par ^|\vfill| 
+\ctsref{\vfill} est d'obliger
+\TeX\ \`a remplir la page avec un espace blanc.  
+De toute fa\c con, utiliser |\eject| pour r\'esoudre des probl\`emes de coupure de page
+a un d\'esavantage majeur~:
+si les fronti\`eres de page de votre document changent,
+les coupures de page que vous avez ins\'er\'ees peuvent ne plus \^etre l\`a o\`u vous 
+les voulez.
+
+Si vous ne procurez pas \`a \TeX\ une commande |\vfill| pour remplir la page
+apr\`es un |\eject|,
+\TeX\ redistribue l'espace blanc exc\'edentaire le mieux qu'il peut et alors 
+se plaint g\'en\'eralement d'un 
+``underfull |\vbox| (badness $10000$) has occurred while |\output| is active.''
+Vous pouvez rencontrer un probl\`eme similaire avec
+toutes les m\'ethodes mentionn\'ees ci-dessus pour englober du
+mat\'eriel que vous voulez garder li\'e.
+
+La commande ^|\filbreak| \ctsref\filbreak{}
+\xrdef{filbreak}
+procure un moyen de garder les lignes d'un ou plusieurs paragraphes
+(ou autre mat\'eriel de mode vertical) li\'e sur une page.
+Si vous englobez un paragraphe entre |\filbreak|, \TeX\ ignorera effectivement
+les |\filbreak| si le paragraphe d\'ebute sur la page courante et
+coupe la page avant le premier |\filbreak| si le paragraphe ne d\'ebute pas.
+Si vous mettez des |\filbreak| autour de chaque paragraphe dans une s\'equence de paragraphes,
+comme ceci~:
+{\obeylines\display{
+{\tt \\filbreak}
+\<paragraph>
+{\tt \\filbreak}
+\<paragraph>
+{\tt \\filbreak}
+\leavevmode\indent\vdots
+\<paragraph>
+{\tt \\filbreak}
+}}
+%\vfil\eject
+\noindent
+\TeX\ gardera les lignes de chaque paragraphe li\'es sur une page.
+Si \TeX{} coupe une page sur un |\filbreak|, il remplira le bas de la
+page avec un espace blanc.
+
+Parfois vous pourrez demander \`a \TeX\ de modifier la longueur d'une page 
+en changeant le param\`etre ^|\looseness| \ctsref\looseness{} pour un ou plusieurs paragraphes.
+Rendre un |\looseness| n\'egatif dans un paragraphe fait que \TeX\ essaye de 
+s\'eparer le paragraphe en moins de lignes~; le rendre positif fait que \TeX\ essaye 
+d'\'etendre le paragraphe en plus de lignes.  Le d\'esavantage de changer |\looseness|
+est que l'espacement inter-mot de la r\'egion affect\'e ne sera pas optimal.
+Vous pouvez obtenir plus d'information sur le fa\c con dont \TeX\ appr\'ehende 
+les coupures de ligne en mettant |\tracingpages| (\xref\tracingpages) \`a $1$.
+
+
+\section Pr\'eserver la fin d'une page
+
+Parfois vous avez besoin de modifier quelque chose sur une seule page et vous 
+voulez \'eviter de r\'eimprimer tout le document. Si vos modifications ne changent
+pas trop la page, il y a de l'espoir. Vous devez modifier la fin de la page
+pour qu'elle tienne au m\^eme endroit~;
+les m\'ethodes sont similaires \`a celles pour modifier une mauvaise coupure de page.
+
+Si la fin de la page originale se trouve entre des paragraphes, vous pouvez
+forcer une coupure de page au m\^eme endroit en utilisant toutes les m\'ethodes
+que nous avons d\'ecrites plus haut. Autrement, vous devez forcer une coupure de
+ligne \emph{et} une coupure de page \`a un endroit particulier. Si la nouvelle 
+page est plus courte que l'ancienne, la s\'equence~:
+\csdisplay
+\vadjust{\vfill\eject}\break
+|
+^^|\vadjust|
+devrait faire l'affaire.
+Mais si la nouvelle page est plus longue,
+le probl\`eme est plus difficile parce que \TeX\ a probablement d\'ej\`a compress\'e 
+la page aussi fermement qu'il le peut. Vos seuls espoirs dans ce cas sont
+de mettre ^|\looseness| \ctsref\looseness{} \`a une valeur n\'egative, pour 
+raccourcir certains sauts verticaux sur la page, pour ajouter un peu de
+r\'etr\'ecissement ^|\parskip| (\xref\parskip) s'il \'etait diff\'erent de z\'ero, ou, 
+en dernier recours, diminuer |\baselineskip| \ctsref{\baselineskip} 
+encore plus fermement.
+^^|\baselineskip//et pr\'eservation de fin de page|
+
+\section Garder de l'espace en haut d'une page
+
+\null
+^^{espace vertical//r\'eserver en haut d'une page}
+Vous pouvez utiliser habituellement la commande |\vskip| \ctsref\vskip{}
+pour garder de l'espace vertical sur une page.
+Cela ne marche pas en haut d'une page, toutefois, car
+\TeX\ abandonne le ressort, les cr\'enages et les p\'enalit\'es qui arrivent juste
+apr\`es une coupure de page.
+^^{coupures de page//ressort sur}
+Utilisez la commande ^|\topglue| \ctsref\topglue\ \`a la place~; il produit 
+un ressort qui ne dispara\^\i t jamais.
+\eix^^{coupures de page//mauvaises}
+
+
+
+\section Corriger de mauvaise coupure de ligne
+
+\null
+\bix^^{coupures de ligne//mauvaises}
+Si \TeX\ coupe une ligne au milieu du mat\'eriel que vous voulez garder
+sur une seule ligne, il y a plusieurs  moyens de corriger la situation~:
+\ulist\compact
+\li Vous pouvez forcer une coupure \`a un endroit proche avec la commande
+|\break| (\xref{hbreak}).
+^^|\break//corriger des coupures de ligne avec|
+\li Vous pouvez ins\'erer un tilde (|~|) entre deux mots
+(see \xref{@not}) pour emp\^echer une coupure entre eux \ttidxref{~}
+\li Vous pouvez signaler \`a \TeX\ des c\'esures qu'il ne consid\`ererait pas
+autrement en ins\'erant une ou plusieurs c\'esures optionnelles dans plusieurs 
+mots (voir |\-|, \xref{\@minus}).
+\ctsidxref{-//sur une coupure de ligne}
+^^{c\'esures optionnelles//mauvaises coupures de ligne, corriger avec}
+\li Vous pouvez englober plusieurs mots dans une hbox en utilisant la
+commande ^|\hbox| \ctsref{\hbox}.
+\endulist
+
+Le d\'esavantage de toutes ces m\'ethodes, \`a part l'insertion de c\'esures 
+optionnelles, est qu'elles rendent impossible pour \TeX\ de trouver un jeu
+de coupures de ligne satisfaisant. Si cela arrive n\'eanmoins, \TeX\ trouvera
+une ou plusieurs bo\^\i tes trop ou pas assez pleines et s'en plaindra.
+^^{underfull boxes} ^^{overfull boxes}
+La m\'ethode hbox a un d\'esavantage de plus~: parce que \TeX\ voit une hbox
+comme une entit\'e simple sans consid\'erer son contexte, l'espace entre les mots 
+dans la hbox peut ne pas \^etre coh\'erent avec celui du reste de la ligne.
+\eix^^{coupures de ligne//mauvaises}
+
+
+\section Corriger des bo\^\i tes trop ou pas assez pleines
+
+\null
+\bix^^{overfull boxes}
+\bix^^{underfull boxes}
+\bix^^{\boites//overfull}
+\bix^^{\boites//underfull}
+Si \TeX\ se plaint d'une bo\^\i te trop pleine, cela signifie que vous avez mis
+plus de mat\'eriel dans une bo\^\i te qu'elle ne peut en contenir.  
+Similairement, si \TeX\ se plaint d'une bo\^\i te pas assez pleine, cela signifie 
+que vous n'avez pas mis assez de mat\'eriel dans la bo\^\i te.  Vous pouvez rencontrer
+ces plaintes dans de nombreuses circonstances diff\'erentes, donc, regardons
+les plus communes~:
+
+\ulist
+\li Une bo\^\i te trop pleine d'une ligne d'un paragraphe indique que la ligne
+\'etait trop longue et que \TeX\ ne peut pas r\'earranger le paragraphe pour 
+rendre la ligne plus courte. Si vous mettez ^|\emergencystretch|
+\ctsref{\emergencystretch} \`a une valeur diff\'erente de z\'ero, cela peut
+r\'esoudre  le probl\`eme en autorisant \TeX\ \`a mettre plus d'espace entre les
+mots. Une autre solution est de mettre |\tolerance| \ctsref{\tolerance}
+\`a $10000$, mais c'est un peu comme \'emettre des lignes avec beaucoup trop 
+d'espace. Sinon, une autre solution est d'ins\'erer une c\'esure optionnelle
+^^{c\'esures optionnelles//overfull boxes, corriger avec}
+dans un mot critique que \TeX\ ne sait pas couper.
+Si tout cela ne suffit pas, vous pourriez essayer de r\'e\'ecrire le paragraphe.
+Une solution qui est rarement satisfaisante est d'augmenter ^|\hfuzz| \ctsref\hfuzz,
+autorisant ainsi \TeX\ de construire des lignes qui d\'epassent dans la marge droite.
+
+\li Une bo\^\i te pas assez pleine d'une ligne d'un paragraphe indique que la ligne
+\'etait trop courte et que \TeX\ ne peut pas r\'earranger le paragraphe pour 
+rendre la ligne plus longue.
+\TeX\ formera de telles lignes en \'etirant ses espaces inter-mots au del\`a de leurs
+limites normales. Deux des solutions pour des lignes trop pleines mentionn\'ees ci-dessus
+s'appliquent aussi aux lignes pas assez pleines~:
+ins\'erer des c\'esures optionnelles et r\'e\'ecrire le paragraphe.
+Des lignes pas assez pleines ne vous g\^eneront pas si vous utilisez un
+format justifi\'e \`a gauche, que vous pourrez obtenir avec la commande
+^|\raggedright| \ctsref\raggedright.
+
+\li La plainte~:
+\csdisplay
+Underfull \vbox (badness 10000) has occurred
+   while \output is active
+|
+indique que \TeX\ n'a pas assez de mat\'eriel pour remplir une page.  La cause
+probable est que vous avez utilis\'e des vbox pour garder du mat\'eriel ensemble
+et \TeX\ a rencontr\'e une vbox pr\`es du bas d'une page qui ne peut pas rentrer
+sur cette page.
+Il a mis la vbox sur la page suivante, mais en ce faisant a laiss\'e trop
+d'espace vide dans la page courante.
+Dans ce cas vous pouvez soit ins\'erer plus d'espace quelque part sur la page
+courante, soit couper la vbox en plus petites parties.
+
+Une autre cause possible de cette plainte est d'avoir un long paragraphe
+qui occupe une page enti\`ere sans coupure.
+Puisque \TeX\ ne fait pas varier l'espacement entre les lignes,
+il peut \^etre incapable de remplir un trou au bas de la page
+d'un montant d'une fraction de l'espacement de la ligne.
+Cela peut arriver si |\vsize| \ctsref{\vsize}, la longueur de la page,
+n'est pas un multiple de |\baselineskip| \ctsref{\baselineskip}, l'espace
+entre des lignes de bases cons\'ecutive.
+
+Sinon, une autre cause de cette plainte,
+similaire \`a la pr\'ec\'edente, est d'avoir mis ^|\parskip| \ctsref{\parskip},
+le ressort inter-paragraphes \`a une valeur qui n'a pas assez d'\'etirement ou de
+r\'etr\'ecissement. Vous pouvez r\'esoudre ces deux derniers probl\`emes en augmentant
+^|\vfuzz| \ctsref\vfuzz.
+
+\li La plainte
+\csdisplay
+Overfull \vbox (296.30745pt too high) has occurred
+   while \output is active
+|
+indique que vous avez construit une vbox qui est plus longue que la page.  
+vous devriez juste la faire plus courte.
+
+\li 
+\bix^^|\hbox//overfull box provenant de|
+\bix^^|\vbox//overfull box provenant de|
+Les seules solutions pour une hbox ou une vbox trop pleine que vous avez 
+construit avec les commandes |\hbox| or |\vbox| 
+(\pp\xrefn\hbox, \xrefn\vbox)
+sont de sortir quelque chose de la bo\^\i te, ins\'erer un ressort n\'egatif avec
+^|\hss| ou ^|\vss| (\xref\hss) ou d'augmenter la taille de la bo\^\i te.
+
+\li Si vous rencontrez une hbox ou une vbox pas assez pleine que vous avez 
+construit avec |\hbox| ou |\vbox|, vous feriez mieux normalement de remplir 
+la bo\^\i te avec ^|\hfil| ou ^|\vfil| (\xref\hfil).
+\eix^^|\hbox//overfull box provenant de|
+\eix^^|\vbox//overfull box provenant de|
+
+\endulist
+\eix^^{\boites//overfull}
+\eix^^{\boites//underfull}
+\eix^^{overfull boxes}
+\eix^^{underfull boxes}
+
+
+\section Retrouver des espaces entre-mots perdus
+
+\null
+^^{espace//perdu}
+^^{mots trop rapproch\'es}
+Si vous trouvez que \TeX\ a trop rapproch\'e deux mots, la cause courante
+est une s\'equence de contr\^ole qui a absorb\'e l'espace qui la suit.  Mettre 
+un ^{espace contr\^ol\'e} (|\!visiblespace|) apr\`es la s\'equence de contr\^ole.
+
+
+\section \'Eviter des espaces entre-mots non d\'esir\'es
+
+\null
+\bix^^{espace//non d\'esir\'e}\xrdef{unwantedspace}
+Si vous obtenez un espace dans votre document o\`u vous ne vouliez et ne
+pensiez pas en avoir, la cause la plus courante, d'apr\`es notre exp\'erience,
+est une fin de ligne ou un espace apr\`es une accolade.
+^^{accolades//espace apr\`es}
+(Si vous faites de jolies choses avec les codes de cat\'egories,
+^^{codes de cat\'egorie//cause d'espaces non d\'esir\'es}
+vous avez introduit beaucoup d'autres causes toutes aussi sympathiques.)
+Normalement, \TeX\ traduit une fin de ligne par un espace, et consid\`ere
+un espace apr\`es une accolade ouvrante ou fermante comme significatif.
+
+Si l'espace non d\'esir\'e est caus\'e par un espace apr\`es une accolade dans
+une ligne d'entr\'ee, retirez-le.
+Si l'espace non d\'esir\'e est caus\'e par une accolade \`a la fin d'une ligne
+d'entr\'ee, mettez une `|%|' imm\'ediatement apr\`es l'accolade.
+{\recat!ttidxref[%//pour \'eliminer des espaces non d\'esi\-r\'es]]
+Le `|%|' d\'ebute un commentaire, mais ce commentaire ne n\'ecessite aucun
+texte.
+
+Une d\'efinition de macro peut aussi
+introduire des espaces non d\'esir\'es si vous ne les avez pas \'ecrites
+soigneusement.  Si vous obtenez des espaces non d\'esir\'es quand vous appelez
+une macro, v\'erifiez sa d\'efinition pour \^etre s\^ur que vous n'avez pas un
+espace non d\'esir\'e apr\`es une accolade ou que vous n'avez pas termin\'e une ligne
+de la d\'efinition imm\'ediatement apr\`es une accolade.
+On termine souvent une ligne de d\'efinition de macro apr\`es une accolade pour
+rendre la d\'efinition plus lisible.
+Par s\'ecurit\'e, mettez un `|%|' apr\`es toute accolade qui termine une ligne de
+d\'efinition de macro.
+Il n'est peut-\^etre pas n\'ecessaire, mais il ne fera pas de mal.\footnote{
+Il faut reconna\^\i tre qu'il n'y a que de rares cas o\`u vous avez r\'eellement
+besoin d'une fin de ligne apr\`es une accolade.}
+
+Si vous avez du mal \`a localiser la source d'un espace non d\'esir\'e, essayez
+de mettre |\tracingcommands| \ctsref{\tracingcommands} \`a $2$.
+Vous obtiendrez une commande |{blank space}| dans le fichier log pour chaque 
+espace que voit \TeX.
+
+Cela aide de conna\^\i tre les r\`egles d'espace de \TeX~:
+
+\olist
+\li Des espaces sont ignor\'es au d\'ebut des lignes d'entr\'ee.
+\li Des espaces en fin de ligne d'entr\'ee sont ignor\'es en \emph{toute}
+circonstance, bien que la fin de ligne elle-m\^eme soit trait\'ee comme un espace.
+(une ligne compl\`etement blanche, n\'eanmoins, g\'en\`ere un token |\par|.)
+\li De multiples espaces sont trait\'es comme un espace simple, mais
+seulement si ils apparaissent ensemble dans votre entr\'ee.
+Ainsi un espace suivant les arguments d'un appel de macro n'est pas combin\'e
+avec l'espace final produit par l'appel de macro.  \`A la place, vous 
+obtenez deux espaces.
+\li Des espaces sont ignor\'es apr\`es des mots de contr\^ole.
+\li Des espaces sont de fait ignor\'es apr\`es des nombres, des dimensions
+et le `|plus|' et le `|minus|' des sp\'ecifications de ressort.%
+\footnote{En r\'ealit\'e, \TeX\ n'ignore qu'un seul espace \`a cet endroit. 
+Puisque des espaces multiples sont habituellement r\'eduits \`a un seul espace, 
+pourtant, l'effet est d'ignorer tout nombre d'espaces.}
+\endolist
+\noindent Si vous avez chang\'e le code de cat\'egorie de l'espace ou du caract\`ere
+fin de ligne, oubliez tout cela.
+\eix^^{espace//non d\'esir\'e}
+
+
+\section \'Eviter un exc\`es d'espace autour d'un affichage
+
+\null
+^^{math\'ematiques affich\'ees}
+Si vous obtenez trop d'espace au dessus d'un affichage math\'ematique, c'est peut \^etre
+parce que vous avez laiss\'e une ligne blanche dans votre entr\'ee avant l'affichage.
+La ligne blanche d\'ebute un nouveau paragraphe et met \TeX\ en mode 
+vertical.  Quand \TeX\ voit un `|$|' en mode vertical, il rebascule vers 
+le mode horizontal et ins\`ere le ressort inter-paragraphes (|\parskip|) suivie par
+le ressort inter-lignes (|\baselineskip|).
+Ensuite, quand il d\'ebute l'affichage lui-m\^eme,
+il ins\`ere \emph{plus} de ressort (soit ^|\abovedisplayskip|,
+soit ^|\abovedisplayshortskip|, selon la longueur de la ligne pr\'ec\'edente).  
+Ce dernier ressort est le seul que vous d\'esirez.
+Pour \'eviter d'obtenir un ressort inter-paragraphe ainsi, ne laissez pas de
+ligne blanche au dessus des affichages math\'ematiques ou autrement
+terminez un paragraphe (avec |\par|, disons) juste avant un affichage math\'ematique.
+
+Similairement,
+si vous obtenez trop d'espace apr\`es un affichage math\'ematique, c'est peut-\^etre
+parce que vous avez laiss\'e une ligne blanche dans votre entr\'ee apr\`es l'affichage,
+retirez le simplement.
+
+
+\section \'Eviter un exc\`es d'espace apr\`es un paragraphe
+
+Si vous obtenez trop d'espace vertical apr\`es un paragraphe qui a \'et\'e produit
+par une macro, vous devez avoir eu un ressort inter-paragraphe produit par la
+macro, un paragraphe vide, et ensuite encore un ressort inter-paragraphe.
+Vous pouvez d\'ebarrasser du saut du second paragraphe en ins\'erant~:
+\csdisplay
+\vskip -\parskip
+\vskip -\baselineskip
+|
+juste apr\`es l'appel de la macro.
+Si vous avez toujours ce probl\`eme avec une certaine macro, vous pouvez mettre
+ces lignes \`a la fin de la d\'efinition de macro \`a la place.
+Vous pourriez aussi r\'esoudre le probl\`eme en ne laissant jamais de ligne
+blanche apr\`es l'appel de macro---si vous voulez une ligne blanche simplement
+pour rendre votre saisie plus lisible, commencez la par un `|%|'.
+
+
+\section Changer la forme du paragraphe
+
+\null
+\bix^^{paragraphes//forme}
+Plusieurs param\`etres de \TeX---^|\hangindent|, ^|\leftskip|, etc.---%
+affectent la fa\c con dont \TeX\ forme des paragraphes et les coupe en lignes.
+^^{coupures de ligne}
+Ces param\`etres sont utilis\'es indirectement dans des commandes \plainTeX{}
+telles que ^|\narrower| et ^|\hang|~; vous pouvez aussi les assigner directement.
+Si vous avez utilis\'e une de ces commandes (ou chang\'e un de ses param\`etres),
+mais que le changement de commande ou de param\`etre ne semble pas avoir le
+moindre effet sur un paragraphe, le probl\`eme peut \^etre que vous avez termin\'e
+un groupe avant d'avoir termin\'e le paragraphe. Par exemple~:
+\csdisplay
+{\narrower She very soon came to an open field, with
+a wood on the other side of it: it looked much darker
+than the last wood, and Alice felt a little timid
+about going into it.}
+|
+Ce paragraphe ne sera par compos\'e en resserr\'e parce que l'accolade fermante
+termine le groupe |\narrower| avant que \TeX\ ait eu une chance de
+couper le paragraphe en lignes.  \`a la place, mettez un |\par| avant 
+l'accolade fermante~; ensuite vous  obtiendrez l'effet que vous voulez.
+^^|\par//en changeant la forme du paragraphe|
+\eix^^{paragraphes//forme}
+
+
+\section Mettre des paragraphes dans une bo\^\i te
+
+Supposez que vous ayez quelques paragraphes de texte que vous voulez mettre 
+\`a un endroit particulier sur la page.  La mani\`ere \'evidente de faire cela est
+d'englober les paragraphes dans une hbox d'une taille appropri\'ee et ensuite de
+placer la hbox o\`u vous voulez qu'elle soit. H\'elas, la mani\`ere \'evidente
+ne marche pas parce que \TeX\ ne fait pas de coupure de ligne dans 
+le mode horizontal restreint.
+^^{mode restreint//horizontal}
+Si vous l'essayez,
+vous obtiendrez un message d'erreur trompeur vous sugg\'erant que vous
+avez oubli\'e la fin d'un groupe.
+Le moyen de contourner cette restriction est d'\'ecrire~:
+\csdisplay
+\vbox{\hsize = !<dimen> !dots !<paragraphs> !dots}
+|
+o\`u \<dimen> est la longueur de ligne que vous voulez pour les paragraphes.
+C'est ce dont vous avez besoin, en particulier, quand vous voulez englober 
+des paragraphes dans une bo\^\i te (une bo\^\i te entour\'ee de traits droits, pas une 
+bo\^\i te \TeX).
+
+\section Dessiner des lignes
+
+\null
+\bix^^{filets}
+Vous pouvez utiliser les commandes ^|\hrule| et ^|\vrule| (\xref\hrule)
+pour tracer des lignes, c'est-\`a-dire, des filets.  Vous devez
+savoir (a)~o\`u vous pouvez utiliser chaque commandes et
+(b)~comment \TeX\ d\'etermine les longueurs des filets quand
+vous n'avez pas donn\'e les longueurs explicitement.
+\ulist
+\li Vous pouvez utiliser |\hrule| quand \TeX\ est dans un mode vertical et |\vrule|
+quand \TeX\ est dans un mode horizontal.
+Ces r\`egles signifient que 
+vous ne pouvez mettre un filet horizontal dans une hbox ou un filet vertical
+dans une vbox.
+Vous pouvez, n\'eanmoins, construire un filet horizontal qui semble vertical en
+sp\'ecifiant les trois dimensions et en le rendant grand et fin.
+De m\^eme, vous pouvez construire un filet vertical qui semble horizontal
+en le rendant court, plat et allong\'e.
+
+\li Un filet horizontal \`a l'int\'erieur d'une vbox
+a la m\^eme largeur que la vbox si vous n'avez pas
+donn\'e la largeur du filet explicitement.
+Des filets verticaux
+\`a l'int\'erieur de hbox r\'eagissent de mani\`ere analogue.
+Si vos filets ressortent trop longs ou trop courts,
+r\'eglez les dimensions de la bo\^\i te englobante.
+\endulist
+
+Comme exemple, supposon que vous voulez produire~:
+\display{%
+\hbox{\vrule
+   \vbox{\hrule\vskip 3pt
+      \hbox{\hskip 3pt
+          \vbox{\hsize .7in\raggedright
+             \noindent Help! Let me out of here!}%
+      \hskip 3pt}
+   \vskip 3pt\hrule}%
+\vrule}}
+L'entr\'ee suivante le fera~:
+\csdisplay
+\hbox{\vrule
+   \vbox{\hrule \vskip 3pt
+      \hbox{\hskip 3pt
+          \vbox{\hsize = .7in \raggedright
+             \noindent Help!! Let me out of here!!}%
+      \hskip 3pt}%
+   \vskip 3pt \hrule}%
+\vrule}
+|
+Nous devons mettre le texte dans un vbox de fa\c con \`a ce que \TeX\ 
+l'ex\'ecute comme un paragraphe.
+Les quatre niveaux d'embo\^\i tement sont r\'eellement
+n\'ecessaires---si vous en doutez, essayez d'ex\'ecuter cet exemple avec moins de
+niveaux.
+\eix^^{filets}
+
+
+\section Cr\'eer des ent\^etes ou des pieds de page multi-lignes
+
+\null
+\xrdef{bighead}
+\bix^^{ent\^etes//multi-lignes}
+\bix^^{pieds de page//multi-lignes}
+Vous pouvez utiliser les commandes ^|\headline| et ^|\footline| 
+(\xref\footline) pour produire des ent\^etes et des pieds de page, mais 
+elles ne marchent pas proprement pour des ent\^etes et des pieds de page 
+de plus d'une ligne. N\'eanmoins, vous pouvez obtenir des ent\^etes et des pieds
+de page multi-lignes en red\'efinissant certaines des macros subsidiaires dans
+la routine de sortie de \TeX.
+
+Pour un ent\^ete multi-lignes, vous devez faire trois choses~:
+\olist\compact
+\li Red\'efinir la macro ^|\makeheadline| qui est appel\'ee de la routine de
+sortie de \TeX.
+\li Augmenter ^|\voffset| du montant d'espace vertical consomm\'e par les
+lignes en plus.
+\li Diminuer ^|\vsize| du m\^eme montant.
+\endolist
+\noindent L'exemple suivant montre comment vous pourriez faire cela~:
+\csdisplay
+\advance\voffset by 2\baselineskip
+\advance\vsize by -2\baselineskip
+\def\makeheadline{\vbox to 0pt{\vss\noindent
+   Header line 1\hfil Page \folio\break
+   Header line 2\hfil\break
+   Header line 3\hfil}%
+   \vskip\baselineskip}
+|
+Vous pouvez normalement suivre le mod\`ele de cette d\'efinition, substituez 
+simplement vos propres lignes d'ent\^ete et choisissez un multiple de
+|\baselineskip| appropri\'e (un de moins que le nombre de lignes dans l'ent\^ete).
+
+Pour un pied de page multi-lignes, la m\'ethode est similaire~:
+\olist
+\li Red\'efinissez la macro ^|\makefootline| qui est appel\'ee 
+de la routine de sortie de \TeX.
+\li Diminuez ^|\vsize| du montant d'espace vertical consomm\'e par les
+lignes en plus.
+\endolist
+\noindent L'exemple suivant montre comment vous pouvez faire cela~:
+\csdisplay
+\advance\vsize by -2\baselineskip
+\def\makefootline{%
+   \lineskip = 24pt
+   \vbox{\raggedright\noindent
+   Footer line 1\hfil\break
+   Footer line 2\hfil\break
+   Footer line 3\hfil}}
+|
+Encore une fois, vous pouvez normalement suivre le mod\`ele de cette d\'efinition.
+La valeur de |\lineskip| d\'etermine le montant d'espace entre la ligne de
+base de la derni\`ere ligne du texte principal sur la page et la ligne de 
+base de la premi\`ere ligne du pied de page.
+\eix^^{ent\^etes//multi-lignes}
+\eix^^{pieds de page//multi-lignes}
+
+
+\section Trouver des accolades orphelines
+
+\bix^^{accolades//orphelines}
+\xrdef{mismatched}
+La plupart de temps, quand votre entr\'ee \TeX\ souffre d'accolades non concordantes, 
+vous obtenez un diagnostic de \TeX\ assez proche de l'endroit o\`u vous avez 
+r\'eellement fait l'erreur.
+Mais une des erreurs les plus frustrantes que vous puissiez subir d'une 
+ex\'ecution de \TeX,
+juste avant que \TeX\ s'arr\^ete, est
+la suivante~:
+\csdisplay
+(\end occurred inside a group at level 1)
+|
+Cela indique qu'il y a une accolade ouvrante en trop
+ou une accolade fermante manquante quelque part
+dans votre document, mais il ne vous donne aucune indication du tout
+sur l'endroit o\`u le probl\`eme arrive.  Donc comment pouvez vous trouver~?
+
+Un truc de d\'ebuggage que nous trouvons pratique est
+d'ins\'erer la ligne suivante ou son \'equivalente
+\`a cinq ou six endroits \'egalement espac\'es dans le document (et pas dans
+un groupe connu)~:
+\csdisplay
+}% une fausse fermante
+|
+supposons que le probl\`eme soit une accolade ouvrante en trop.
+Si elle est, disons entre la troisi\`eme et la quatri\`eme fausse fermante,
+vous obtiendrez des messages d'erreur des trois premi\`eres fausses fermantes 
+mais pas de la quatri\`eme. La raison est que \TeX\ ignorera les trois premi\`ere
+fausses fermantes apr\`es s'en \^etre plaint, mais la quatri\`eme fausse fermante 
+appariera l'accolade ouvrante en trop. Ainsi vous savez que l'accolade ouvrante
+en trop est quelque part entre la troisi\`eme et la quatri\`eme fausse fermante.
+Si la r\'egion de l'erreur est encore trop large pour que vous la trouviez,
+enlevez simplement le jeu original de fausse fermantes et r\'ep\'etez le
+processus dans cette r\'egion.
+Si le probl\`eme est une accolade fermante manquante plut\^ot qu'une ouvrante en trop,
+vous serez capable de la d\'ecouvrir quand vous aurez trouv\'e sa compagne.
+
+Cette m\'ethode ne marche pas dans toutes les circonstances.  En particulier, 
+elle ne marche pas si votre document consiste en plusieurs groupes r\'eellement grands.
+Mais souvent vous pourrez trouver des variations de cette m\'ethode  qui vous
+m\`eneront vers cette accolade insaisissable.
+
+Si tout le reste \'echoue, essayez de raccourcir votre entr\'ee en retirant 
+la derni\`ere moiti\'e du fichier
+(apr\`es sauvegarde de la version originale d'abord~!) ou en ins\'erant une
+commande |\bye| au milieu.
+Si l'erreur persiste, vous saurez qu'elle est dans la premi\`ere moiti\'e~; 
+Si \c ca tourne, vous saurez qu'elle est dans la seconde.
+En r\'ep\'etant ce processus vous trouverez \'eventuellement l'erreur.
+\eix^^{accolades//orphelines}
+
+
+\section Fixer des dimensions
+
+\null
+\bix^^{\<dimension>}
+La mani\`ere la plus simple de d\'efinir une dimension est de la sp\'ecifier directement, c'est-\`a-dire~:
+\csdisplay
+\hsize = 6in
+|
+Vous pouvez aussi sp\'ecifier une dimension en terme d'autres dimensions ou comme un m\'elange
+de diff\'erentes unit\'es, mais c'est du boulot.  Il y a deux fa\c cons
+de construire une dimension comme une combinaison~:
+\olist\compact
+\li Vous pouvez ajouter une dimension \`a un param\`etre de dimension ou \`a un registre de
+dimension.
+Par exemple~:
+\csdisplay
+\hsize = 6in \advance\hsize by 3pc % 6in + 3pc
+|
+\li Vous pouvez indiquer une dimension comme un multiple d'un param\`etre 
+ou un registre de dimension ou de ressort.
+Dans ce cas, \TeX\ convertit le ressort en une dimension en sacrifiant
+l'\'etirement et le r\'etr\'ecissement. Par exemple~:
+\csdisplay
+\parindent = .15\hsize
+\advance\vsize by -2\parskip
+|
+\endolist
+\eix^^{\<dimension>}
+
+
+\section Cr\'eer des polices composites
+
+\null
+\bix^^{polices//composites}
+Il est parfois utile de cr\'eer une ``police composite'',
+nomm\'ee par une s\'equence de contr\^ole $\cal F$, dans laquelle tous les caract\`eres
+sont pris d'une police $f_1$ sauf pour certains qui sont emprunt\'es d'une autre
+police $f_2$.
+Vous pourrez alors mettre du texte dans la police composite en utilisant $\cal F$ juste 
+comme vous utilisez toute autre identifiant de police.
+
+Vous pouvez cr\'eer une telle police composite en d\'efinissant $\cal F$ comme une macro.
+Dans la d\'efinition de $\cal F$, vous s\'electionnez d'abord la police $f_1$ et ensuite
+d\'efinissez des s\'equences de contr\^ole qui produisent les caract\`eres emprunt\'es,
+mis dans $f_2$.
+Par exemple, supposons que vous voulez cr\'eer une police composite |\britrm| 
+qui a tous les caract\`eres de |cmr10|
+sauf pour le signe dollar, pour lequel vous voulez emprunter
+le symbole de la livre sterling de la police |cmti10|.
+Le symbole de la livre sterling de |cmti10| 
+apparait \`a la m\^eme position de police que le signe dollar dans |cmr10|.
+Voici comment faire~:
+\csdisplay
+\def\britrm{%
+   \tenrm % \tenrm names the cmr10 font
+   \def\${{\tenit\char `\$}}% \tenit names the cmti10 font.
+}
+|
+Maintenant \`a chaque fois que vous lancerez la police appel\'ee |\britrm|,
+|\$| produira un symbole de livre sterling.
+
+Vous pouvez aussi avoir le m\^eme effet en changeant les codes de cat\'egorie
+des caract\`eres en question pour rendre ces caract\`eres actifs et ensuite
+procurer une d\'efinition pour le caract\`ere.  Par exemple~:
+\csdisplay
+\catcode `* = \active
+\def*{{\tentt \char `\*}}
+|
+Dans ce cas l'ast\'erisque sera pris de la police |\tentt|.
+Si cous saisissez alors la ligne d'entr\'ee~:
+\csdisplay
+Debbie was the * of the show.
+|
+elle sera compos\'ee ainsi~:
+{\font\tentt=cmtt10%
+\catcode `* = \active
+\def*{{\tentt \char `\*}}%
+\display{Debbie was the * of the show.}}
+\noindent
+
+\eix^^{polices//composites}
+
+
+\section Reproduire du texte verbatim
+
+\null
+^^{texte verbatim}\xrdef{verbatim}
+Du texte verbatim est du texte qui est reproduit dans un document
+compos\'e exactement comme il appara\^\i t dans son entr\'ee.
+L'usage le plus commun du texte verbatim est dans la composition
+d'entr\'ee informatique,
+incluant les programmes pour ordinateurs et les entr\'ees de \TeX\ lui-m\^eme.
+^^{programmes informatiques, composer des}
+l'entr\'ee informatique n'est pas simple \`a reproduire pour deux raisons~:
+\olist\compact
+\li Certains caract\`eres (symboles de contr\^ole, caract\`eres d'\'echappement, accolades,
+etc.) ont
+une signification sp\'eciale en \TeX.
+\li Les fins de ligne et les espaces multiples sont traduits en espaces simples.
+\endolist
+\noindent
+Dans le but de produire du texte verbatim, vous devez effacer les significations sp\'eciales
+et d\'ebrancher la traduction.  C'est beaucoup mieux fait par des macros.
+
+Pour effacer les signification sp\'eciales, vous devez changer les codes de cat\'egorie
+des caract\`eres qui ont des significations sp\'eciales.
+^^{codes de cat\'egorie//pour texte verbatim}
+La macro suivante illustre comment vous devez le faire~:
+\csdisplay
+\chardef \other = 12
+\def\deactivate{%
+   \catcode`\\ = \other   \catcode`\{ = \other
+   \catcode`\} = \other   \catcode`\$ = \other
+   \catcode`\& = \other   \catcode`\# = \other
+   \catcode`\% = \other   \catcode`\~ = \other
+   \catcode`\^ = \other   \catcode`\_ = \other
+}
+|
+Mais attention~! Une fois que vous avez chang\'e les codes de cat\'egorie de ce fa\c con, vous perdez
+la facult\'e d'utiliser des s\'equences de contr\^ole puisqu'il n'y a plus de caract\`ere
+d'\'echappement. Vous avez besoin d'un moyen de revenir dans le mode normal 
+d'op\'eration. Nous expliquerons comment faire cela dans un moment, apr\`es avoir consid\'er\'e
+l'autre probl\`eme~: d\'ebrancher la traduction des espaces et des fins de ligne.
+
+\PlainTeX\ a deux commandes qui ensemble r\'esolvent en partie le probl\`eme~:
+^|\obeyspaces| \ctsref{\obeyspaces} et ^|\obeylines| \ctsref{\obeylines}.
+Les deux choses qu'elles ne font pas sont de pr\'eserver les espaces au d\'ebut 
+d'une ligne
+et de pr\'eserver les lignes blanches.
+Pour cela vous avez besoin de mesures plus fortes---qui sont apport\'ees par
+la macro ^|\obeywhitespace| que nous sommes sur le point de d\'efinir.
+
+\TeX\ normalement insiste pour collecter des lignes par paragraphes. 
+Un moyen de le convaincre de prendre litt\'eralement les bords des lignes
+est de transformer les lignes individuelles en paragraphes.\footnote{%
+Un autre moyen est de transformer le caract\`ere de fin de ligne en une commande 
+|\break| et d'ajouter un ressort infini \`a la fin de chaque ligne.
+^^|\break//fin de ligne sur|
+}
+Vous pouvez faire cela en red\'efinissant le caract\`ere de fin de ligne pour produire
+la s\'equence de contr\^ole |\par|. Les trois d\'efinitions de macro suivantes
+montrent comment~:
+
+^^{espace blanc, pr\'eserver de l'}
+\xrdef{\obeywhitespace}
+\csdisplay
+\def\makeactive#1{\catcode`#1 = \active \ignorespaces}
+{% The group delimits the text over which ^^M is active.
+   \makeactive\^^M %
+   \gdef\obeywhitespace{%
+   % Use \gdef so the definition survives the group.
+      \makeactive\^^M %
+      \let^^M = \newline %
+      \aftergroup\removebox % Kill extra paragraph at end.
+      \obeyspaces %
+   }%
+}
+\def\newline{\par\indent}
+\def\removebox{\setbox0=\lastbox}
+
+|
+Un point subtil de la d\'efinition de |\obeywhitespace| est que
+|^^M| doit \^etre rendu actif \`a la fois 
+quand |\obeywhitespace| est \emph{d\'efinie} et quand
+elle est \emph{utilis\'ee}.
+
+Pour \^etre capable de revenir \`a des op\'erations normales apr\`es du texte verbatim,
+vous devez choisir un caract\`ere qui
+appara\^\i t rarement voire pas du tout dans le texte verbatim.  Ce caract\`ere 
+sert comme caract\`ere d'\'echappement temporaire.
+La barre verticale (|!||) est parfois un bon choix.
+Avec ce choix, les macros~:
+\csdisplay
+\def\verbatim{\par\begingroup\deactivate\obeywhitespace
+   \catcode `\!| = 0 % Make !| the new escape character.
+}
+
+\def\endverbatim{\endgroup\endpar}
+
+\def\!|{!|}
+|
+fera l'affaire. Dans le texte verbatim, vous pouvez utiliser une double
+barre verticale (|!|!||) pour en faire une, et vous terminez le texte verbatim
+avec |!|endverbatim|.
+
+Il y a plusieurs variations de cette technique~:
+\ulist
+\li Si un langage informatique a des mots-cl\'es, vous pouvez convertir 
+chaque mot-cl\'e en une commande qui compose
+ce mot-cl\'e en caract\`ere gras.  Chaque mot-cl\'e de l'entr\'ee doit \^etre alors
+pr\'ec\'ed\'e par le caract\`ere d'\'echappement.
+\li Si vous avez un caract\`ere (encore, supposons qu'il s'agisse de la barre verticale)
+qui n'appara\^\i t
+\emph{jamais} dans le texte verbatim, vous pouvez le rendre actif et
+lui faire finir le texte verbatim. Les d\'efinitions de macro ressemblent alors 
+\`a cela~:
+\csdisplay
+{\catcode `\!| = \active
+\gdef\verbatim{%
+   \par\begingroup\deactivate\obeywhitespace
+   \catcode `!| = \active
+   \def !|{\endgroup\par}%
+}}
+|
+\endulist
+
+Les id\'ees pr\'esent\'ees ici ne procurent qu'une simple approche de la composition
+de programmes informatiques.
+Le reproduction verbatim n'est souvent pas aussi r\'ev\'elatrice ou lisible 
+qu'une version qui utilise des conventions typographiques qui refl\`etent la 
+syntaxe et m\^eme les s\'emantiques du programme.
+Si vous d\'esirez poursuivre ce sujet plus loin, nous vous recommandons le livre suivant~:
+
+\smallskip{\narrower\noindent
+Baecker, Ronald M., and Marcus, Aaron, {\sl Human Factors
+and Typography for More Readable Programs}. Reading, Mass.:
+Addison-Wesley, 1990.\par}
+
+
+\section Utiliser des macros externes
+
+\null
+^^{s\'equence de contr\^ole interdite}^^{condition incompl\`ete}
+Si \TeX\ se plaint d'une ``s\'equence de contr\^ole interdite [forbidden control 
+sequence]'', vous avez probablement utilis\'e une macro externe dans un contexte
+non-externe \seeconcept{outer}.
+^^{macros//outer}
+Une macro externe est une macro dont la d\'efinition est
+pr\'ec\'ed\'ee par ^|\outer|.
+Une macro externe ne peut pas \^etre utilis\'ee dans un argument de macro, dans une
+d\'efinition de macro,
+dans le pr\'eambule d'un alignement ou dans un texte conditionnel,
+c'est-\`a-dire, un texte qui ne sera d\'evelopp\'e que quand un test conditionnel
+aura un r\'esultat particulier.
+^^{alignements//s\'equence de contr\^ole outer dans des}
+Certaines macros ont \'et\'e d\'efinies comme externes parce qu'elles n'ont pas de
+raison d'\^etre utilis\'ees dans ces contextes et qu'un tel usage est probablement une erreur.
+Le seul moyen de contourner ce probl\`eme est de red\'efinir la
+macro ou de d\'eplacer son utilisation dans un contexte acceptable.
+
+Utiliser une macro externe dans un contexte impropre peut aussi provoquer
+que \TeX\ se plaigne d'un ``runaway situation'' ou d'un ``incomplete conditional''.
+Le probl\`eme peut \^etre difficile \`a diagnostiquer parce que le message d'erreur
+ne donne aucun indice ni ce qui se passe. Si vous obtenez un tel message 
+d'erreur, recherchez autour un appel \`a une macro externe.
+Vous ne pouvez pas toujours savoir si une macro particuli\`ere est externe, mais 
+la commande `^|\show||\a|' \ctsref{\show}
+vous montrera la d\'efinition de |\a| et vous dira aussi
+si |\a| est externe.
+
+
+\section Changer des codes de cat\'egorie
+
+\null
+\bix^^{codes de cat\'egorie//changement}
+Il est parfois pratique de faire des changements locaux au code de cat\'egorie
+d'un caract\`ere \`a une certaine partie de votre document. Par exemple, vous devez
+composer un programme informatique 
+^^{programmes informatiques, composer des}
+ou quelque chose d'autre qui utilise normalement des caract\`eres actifs
+pour un usage sp\'ecial. Vous voudrez alors d\'esactiver ces caract\`eres pour que
+\TeX\ les traite comme tout autre caract\`ere.
+
+Si vous faites un tel changement local au code de cat\'egorie d'un caract\`ere,
+vous serez parfois constern\'e de trouver que \TeX\ semble ne pr\^eter aucune 
+attention quelconque a votre changement.
+Deux aspects du comportement de \TeX\ sont vraisemblablement en cause~:
+\olist
+\li \TeX\ d\'etermine le code de cat\'egorie d'un caract\`ere entr\'ee
+^^{caract\`eres entr\'ees}
+et l'attache au caract\`ere quand il le lit.
+Supposons que vous lisiez un tilde (|~|) et qu'ensuite vous
+changiez le code de cat\'egorie des tildes,
+mais fassiez le changement
+avant que l'estomac de \TeX\ ait r\'eellement ex\'ecut\'e de tilde \emph{particulier\/} 
+\seeconcept{\anatomy}.
+\TeX\ r\'epondra encore que ce 
+tilde utilise le code de cat\'egorie comme il \'etait avant le changement.  
+Cette difficult\'e survient typiquement 
+quand le tilde fait partie d'un argument d'une macro
+et que la macro elle-m\^eme change le code de cat\'egorie du tilde.
+
+\li Quand \TeX\ assortit un appel d'une macro \`a la d\'efinition de cette macro,
+il n'assortit pas seulement les caract\`eres du mod\`ele de param\`etre mais aussi 
+leurs codes de cat\'egorie.
+^^{macros//arguments de}
+^^{macros//param\`etres de}
+Si le code de cat\'egorie d'un mod\`ele caract\`ere n'est pas \'egal au
+code de cat\'egorie du m\^eme caract\`ere dans l'appel, \TeX\ ne consid\`erera pas
+les caract\`eres comme concordants.
+Cet effet peut produire de myst\'erieux r\'esultats parce que il 
+\emph{fait} comme si le mod\`ele concorde.
+Par exemple, si vous avez d\'efini une macro~:
+\csdisplay
+\def\eurodate#1/#2/#3{#2.#1.#3}
+|
+alors le caract\`ere slash devra avoir le m\^eme code de cat\'egorie quand vous
+appelez |\eurodate| que quand vous avez d\'efini |\eurodate|.
+\endolist
+Si le probl\`eme surgit parce que le caract\`ere g\^enant est un argument d'une 
+macro, alors
+le rem\`ede usuel est de red\'efinir la macro comme une paire
+de macros |\mstart| et |\mfinish|, o\`u
+|\mstart| doit \^etre appel\'ee avant le texte d'argument
+et |\mfinish| doit \^etre appel\'e apr\`es.
+|\mstart| alors initialise les codes de cat\'egorie et |\mfinish| 
+d\'efait le changement, peut-\^etre simplement en finissant un groupe.
+\eix^^{codes de cat\'egorie//changement}
+
+
+\section Faire des fichiers de macro plus lisibles
+
+\null
+\bix^^{macros//rendre lisible des}
+Vous pouvez faire un fichier de macros plus lisible en
+mettant les codes de cat\'egories de l'espace \`a $9$ (caract\`ere ignor\'e)
+et ^|\endlinechar| \ctsref{\endlinechar} \`a $-1$ au d\'ebut du fichier.
+Vous pourrez alors utiliser des espaces et des fins de lignes librement dans les
+d\'efinitions de macro sans obtenir d'espaces ind\'esirables quand vous appelez
+les macros.
+Les caract\`eres ignor\'es ne g\'en\`ereront pas d'espaces, mais agiront encore
+comme terminateurs pour des s\'equences de contr\^ole.
+Si vous voulez r\'eellement un espace, vous pouvez encore l'obtenir avec la 
+commande ^|\space| \ctsref\space.
+
+Bien s\^ur vous devrez restaurer les codes de cat\'egories de l'espace et de la fin de ligne
+\`a leur valeur normale ($10$ et $5$, respectivement) \`a la fin du fichier.
+Vous pouvez faire cela soit en englobant tout le fichier dans un groupe soit 
+en restaurant les valeurs explicitement.  Si vous choisissez d'englober le 
+fichier dans un groupe, vous devrez alors aussi mettre ^|\globaldefs| \`a $1$ 
+pour que toutes les d\'efinitions de macro soient globales et donc visibles 
+en dehors du groupe.
+
+Un exemple miniature d'un fichier de macro de cette forme est~:
+
+\csdisplay
+\catcode `\  = 9  \endlinechar = -1
+
+\def \makeblankbox #1 #2 {
+   \hbox{\lower \dp0 \vbox{\hidehrule {#1} {#2}
+   \kern -#1 % overlap rules
+   \hbox to \wd0{\hidevrule {#1} {#2}%
+      \raise \ht0  \vbox to #1{} % vrule height
+      \lower \dp0 \vtop to #1{}  % vrule depth
+      \hfil \hidevrule {#2} {#1} }
+   \kern -#1 \hidehrule {#2} {#1} } }
+
+\def\hidehrule #1 #2 {
+   \kern -#1 \hrule height#1 depth#2 \kern -#2 }
+\def\hidevrule #1 #2 {
+   \kern -#1 {\dimen0 = #1 \advance \dimen0 by #2
+   \vrule width \dimen0 } \kern -#2 }
+
+\catcode `\  = 10  \endlinechar = `\^^M
+|
+\noindent
+Sans les changement de code de cat\'egorie,
+ces macros auraient \'et\'e \'ecrites de mani\`ere beaucoup plus compacte, utilisant moins
+d'espaces et plus de `|%|' \`a la fin des lignes.
+\eix^^{macros//rendre lisible des}
+
+\endchapter\byebye
+

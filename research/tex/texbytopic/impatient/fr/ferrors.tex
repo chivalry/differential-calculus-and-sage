@@ -1,0 +1,309 @@
+% This is part of the book TeX for the Impatient.
+% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2004 Marc Chaudemanche pour la traduction française.
+% See file fdl.tex for copying conditions.
+
+\input fmacros
+\chapter{Comprendre les \linebreak messages d'erreur}
+
+\chapterdef{errors}
+
+%\codefuzz = 4pc % for this chapter only (in scope of \chapter)
+\bix^^{messages d'erreur}
+L'interpr\'etation des messages d'erreur de \TeX\ peut parfois \^etre 
+compar\'ee \`a aller chez votre m\'edecin avec la sensation d'\^etre 
+fatigu\'e et obtenir, en r\'eponse, une analyse de votre chimie sanguine. 
+C'est probablement l'explication de votre d\'etresse, mais il n'est pas 
+facile de la d\'ecrire. Quelques r\`egles simples vous feront aller plus 
+loin en vous aidant \`a comprendre les messages d'erreur de \TeX\ et \`a en 
+obtenir d'avantage.
+
+Votre premier objectif sera de comprendre ce que vous avez fait pour que 
+\TeX\ se plaigne. Le second (si vous travaillez interactivement) sera de 
+d\'eceler le plus d'erreurs que vous pouvez en une seule fois. 
+
+Regardons un exemple. Supposez que votre source contienne la ligne~: 
+\csdisplay 
+We skip \quid a little bit. 
+| 
+Vous pensiez saisir `|\quad|', mais vous avez tap\'e `|\quid|' \`a la 
+place. Voici la r\'eponse que vous obtiendrez de \TeX\~: 
+\csdisplay !! 
+Undefined control sequence. 
+l.291 We skip \quid 
+                    a little bit. 
+? 
+| 
+Ce message appara\^\i tra sur votre terminal et dans votre \logfile. 
+^^{fichier log//message d'erreur} La premi\`ere ligne, qui commence 
+toujours par un point d'exclamation (|!!|), vous indique ce qu'est le 
+probl\`eme. Les deux derni\`eres lignes avant le prompt `|?|'(qui sont, 
+dans ce cas-ci, \'egalement, les deux lignes suivantes) vous indiquent o\`u 
+\'etait \TeX\ quand il a trouv\'e l'erreur. Il a trouv\'e l'erreur sur la 
+ligne $291$ du fichier source courant, et la coupure entre les deux lignes 
+de message indiquent la position pr\'ecise de \TeX\ dans la ligne $291$, \`a 
+savoir, juste apr\`es |\quid|. Le fichier source courant est celui juste 
+apr\`es la parenth\`ese gauche la plus r\'ecemment ouverte dans le r\'esultat 
+de votre ex\'ecution sur votre terminal (voir les \xref{infiles}).
+
+Cette erreur particuli\`ere, un ``undefined control sequence'', est l'une 
+des plus communes que vous puissiez obtenir. Si vous r\'epondez au prompt 
+par un autre~`|?| ', \TeX\ affichera le message suivant~:
+
+{\hfuzz = 2in
+\csdisplay
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+|
+}%
+Voici ce que signifient ces propositions~:
+\ulist
+\li Si vous saisissez \asciichar{return}, \TeX\ continuera \`a traiter 
+votre document. Dans ce cas, il ignorera juste le |\quid|.
+\li Si vous saisissez `|S|' (ou `|s|'---majuscule et minuscule sont 
+\'equivalentes ici), \TeX\ traitera votre document sans s'arr\^eter, 
+\emph{sauf} s'il rencontre un fichier absent. Les messages d'erreur 
+continueront \`a appara\^\i tre sur votre terminal et dans le \logfile.
+\li Si vous saisissez `|R|' ou `|r|', vous obtiendrez le m\^eme effet que 
+pour `|S|', sauf que \TeX\ ne s'arr\^etera pas pour les fichiers manquants.
+\li Si vous saisissez `|Q|' ou `|q|', \TeX\ continuera \`a traiter votre 
+document mais ne s'arr\^etera pas pour des erreurs ni ne les montrera sur 
+votre terminal. Les erreurs appara\^\i tront toujours dans le \logfile.
+\li Si vous saisissez `|X|' ou `|x|', \TeX\ nettoiera ce qu'il peut au 
+mieux, jettera la page sur laquelle il travaillait et stoppera. Vous pourrez 
+imprimer ou regarder les pages que \TeX\ a d\'ej\`a trait\'ees. 
+\li Si vous saisissez `|E|' ou `|e|', \TeX\ nettoiera et se terminera comme 
+il le fait pour `|X|' ou  `|x|' et entrera alors dans votre \'editeur de 
+texte, vous pla\c cant sur la ligne incorrecte. (tous les syst\`emes ne 
+supportent pas cette option.)
+\li Si vous saisissez `|H|' ou `|h|', vous obtiendrez une autre explication 
+de l'erreur montr\'ee sur votre terminal et probablement du conseil sur 
+quoi faire \`a son sujet. Cette explication appara\^\i tra \'egalement dans 
+votre \logfile. Pour le ``undefined control sequence'' ci-dessus, vous 
+obtiendrez~:
+
+{\hfuzz = 2in
+\csdisplay
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+|
+}
+\li Si vous saisissez `|?|', vous recevrez encore ce m\^eme message.
+\endulist
+\noindent
+Les deux autres solutions de rechange, saisir `|I|' ou un petit nombre 
+entier, fournissent des moyen de demander \`a \TeX de revenir en \ arri\`ere 
+pour que votre erreur ne cause pas d'autres erreurs plus tard dans 
+votre document~:
+
+\ulist
+\li Si vous saisissez `|I|' ou `|i|' suivi de texte, alors \TeX\ ins\'erera 
+ce texte comme s'il s'\'etait produit juste apr\`es le point d'erreur, au 
+niveau les plus secrets o\`u \TeX \ travaille. Dans le cas de l'exemple 
+ci-dessus, cela signifie \`a la position de \TeX\ dans votre source 
+original, c'est-\`a-dire, juste apr\`es `|\quid|'. Plus tard vous verrez un 
+exemple qui montre la diff\'erence entre ins\'erer quelque chose au niveau 
+les plus secrets et l'ins\'erer dans votre source original. Dans l'exemple 
+ci-dessus d'``undefined control sequence'', si vous saisissez~:
+\csdisplay
+I\quad
+|
+\TeX\ effectuera la commande |\quad| et produira un espace cadratin 
+l\`a o\`u vous avez eu l'intention d'avoir un.
+\li Si vous saisissez un nombre entier positif inf\'erieur \`a $100$ (pas 
+inf\'erieur \`a $10$ comme le message le sugg\`ere maladroitement), \TeX\ 
+supprimera ce nombre de tokens du niveau les plus secrets o\`u il 
+travaille. (si vous saisissez un nombre entier sup\'erieur ou \'egal \`a 
+$100$, \TeX\ supprimera $10$ tokens~!)
+\endulist
+
+Voici un autre exemple d'erreur commune~: 
+\csdisplay
+Skip across \hskip 3cn by 3 centimeters.
+|
+Le message d'erreur pour ceci est~:
+\csdisplay
+!! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   c
+<to be read again> 
+                   n
+l.340 Skip across \hskip 3cn
+                             by 3 centimeters.
+|
+^^|<to be read again>|
+Dans ce cas, \TeX\ a vu que `|3|' est suivi par quelque chose qui n'est pas 
+une unit\'e de mesure reconnue, et ainsi suppose que l'unit\'e de mesure est 
+le point. \TeX\ relira le token `|cn|' et l'ins\'erera dans votre saisie, 
+ce qui n'est pas ce que vous voulez. Dans ce cas, vous pouvez obtenir un 
+meilleur r\'esultat en saisissant d'abord `|2|' pour reculer avant `|cn|'. 
+Vous recevrez le message~:
+\csdisplay
+<recently read> n
+                 
+l.340 Skip across \hskip 3cn
+                           by 3 centimeters.
+|
+
+Maintenant vous pouvez saisir `|I\hskip 3cm|' pour obtenir le saut que vous 
+vouliez (en plus du saut de |3pt| que vous avez d\'ej\`a obtenu).\footnote{en 
+saisissant `|I\unskip\hskip 3cm|' vous pouvez vous d\'ebarrasser du saut de 
+|3pt|.}
+
+Si vous saisissez quelque chose qui n'est valide qu'en mode math\'ema\-tique, 
+\TeX\ s'orientera vers le mode math\'ematique pour vous que ce soit ce que 
+vous avez vraiment voulu ou non. Par exemple~:
+\csdisplay
+So \spadesuit s are trumps.
+|
+Voici le message d'erreur de \TeX\~:
+\csdisplay
+!! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \spadesuit 
+l.330 So \spadesuit
+                  s are trumps.
+|
+Puisque le symbole |\spadesuit| n'est permis qu'en mode math\'ematique, 
+\TeX\ a ins\'er\'e un `|$|' devant lui. Apr\`es que \TeX\ ait ins\'er\'e un 
+token, il se place \emph{devant} ce token, dans ce cas, le `|$|', pr\^et 
+\`a le lire. saisir `|2|' fera que \TeX\ sautera le `|$|' et le token 
+`|\spadesuit|', le laissant pr\^et \`a traiter le `|s|' de 
+`|s are trumps|'. Si vous laissez juste \TeX\ continuer, il 
+composera `|s are trumps|' en mode math\'ematique.
+
+Voici un exemple o\`u le diagnostic d'erreur de \TeX\ est compl\`etement 
+erron\'e~:
+\csdisplay
+\hbox{One \vskip 1in two.}
+|
+Le  message d'erreur est~:
+\csdisplay
+!! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \vskip 
+l.29 \hbox{One \vskip
+                     1in two.}
+|
+^^|<inserted text>|
+Le probl\`eme est que vous ne pouvez pas utiliser |\vskip| quand \TeX\ est 
+en mode horizontal restreint, c'est-\`a-dire, en construisant un hbox. Mais 
+au lieu de rejeter le |\vskip|, \TeX\ a ins\'er\'e une accolade droite devant 
+lui afin d'essayer de fermer le hbox. Si vous acceptez la correction de \TeX, 
+\TeX\ se plaindra encore quand il arrivera plus tard \`a l'accolade droite 
+correcte. Il se plaindra \'egalement \`a propos de tout ce qui pr\'ec\`ede cette
+accolade droite et qui n'est pas permis en mode vertical. Ces plaintes 
+r\'ep\'etitives seront particuli\`erement embrouillantes parce que les 
+erreurs qu'elles indiquent sont fausses, elles sont le r\'esultat des effets 
+propag\'es de l'insertion inad\'equate de l'accolade droite. Votre meilleur 
+pari est de saisir `|5|', et de sauter apr\`es tous les tokens de `|}\vskip 1in|'.
+
+Voici un exemple similaire dans lequel le message d'erreur est plus long 
+que ce que nous avons vus jusqu'ici~:
+\csdisplay
+\leftline{Skip \smallskip a little further.} But no more.
+|
+L'erreur ici est que |\smallskip| ne fonctionne qu'en mode vertical. 
+Le message d'erreur est quelque chose comme~:
+\csdisplay
+!! Missing } inserted.
+<inserted text> 
+                }
+<to be read again> 
+                   \vskip 
+\smallskip ->\vskip 
+                    \smallskipamount 
+<argument> Skip \smallskip 
+                           a little further.
+\leftline #1->\line {#1
+                       \hss }
+l.93 ...Skip \smallskip a little further.}
+                                           But no more.
+|
+Les messages d'erreur ici vous donnent un tour d'horizon des macros qui sont 
+utilis\'ees dans l'impl\'ementation de |\leftline| dans \plainTeX---des 
+macros sur lesquelles vous ne vous inqui\'etez probablement pas. La premi\`ere 
+ligne vous indique que \TeX\ pr\'evoit de traiter le probl\`eme en 
+ins\'erant une accolade droite. \TeX\ n'a pas encore r\'eellement lu 
+l'accolade droite, ainsi vous pouvez la supprimer si vous le choisissez. 
+Chaque composant du message apr\`es la premi\`ere ligne (celle avec le `!') 
+occupe une paire de lignes. Voici ce que signifient les paires de lignes 
+successives~:
+\olist
+\li La premi\`ere paire indique que \TeX\ a ins\'er\'e, mais pas encore lu, une 
+accolade droite~:
+\li La paire suivante indique qu'apr\`es avoir lu l'accolade droite, \TeX\ 
+relira un `|\vskip|' (obtenue de la macro d\'efinition du |\smallskip|).
+\li La troisi\`eme paire indique que \TeX\ d\'eveloppait la macro 
+|\smallskip| quand il a trouv\'e l'erreur. Ces deux lignes  montrent 
+\'egalement la d\'efinition de |\smallskip| et indiquent o\`u \TeX\ est 
+parvenu en d\'evelop\-pant et en ex\'ecutant cette d\'efinition. 
+Sp\'ecifiquement, il a juste essay\'e sans succ\`es d'ex\'ecuter la 
+commande |\vskip|. En g\'en\'eral, une ligne diagnostic qui commence par 
+une commande suivie de `|->|' indique que \TeX\ a d\'evelopp\'e et 
+ex\'ecut\'e une macro de ce nom.
+\li La quatri\`eme paire indique que \TeX\ traitait un argument de macro 
+quand il a trouv\'e le |\smallskip| et indique \'egalement la position de 
+\TeX\ du fait de l'argument, c'est-\`a-dire, qu'il a juste trait\'e le 
+|\smallskip| (sans succ\`es). En regardant vers la prochaine paire de 
+lignes nous pouvons voir que l'argument a \'et\'e pass\'e \`a |\leftline|.
+\li La cinqui\`eme paire indique que \TeX\ d\'eveloppait la macro  
+|\leftline| quand il a trouv\'e l'erreur. Dans cet exemple l'erreur s'est 
+produite pendant que \TeX\ \'etait en train d'interpr\'eter plusieurs 
+d\'efinitions de macro \`a diff\'erents degr\'es de d\'eveloppement. Sa 
+position apr\`es |#1| indique que la derni\`ere chose qu'il ait vu \'etait le 
+premier (et dans ce cas-ci le seul) argument de |\leftline|.
+\li La derni\`ere paire indique o\`u \TeX\ est plac\'e dans votre fichier 
+source. Notez que cette position est bien au del\`a de la position o\`u il 
+a ins\`er\'e l'accolade droite et relu le `|\vskip|'. C'est parce que \TeX\ 
+a d\'ej\`a lu tout l'argument du |\leftline| de votre fichier source, 
+m\^eme s'il n'a trait\'e qu'une partie de cet argument. Les points au 
+d\'ebut de la paire indiquent qu'une partie pr\'ec\'edente de la ligne 
+source n'est pas montr\'ee. Cette partie pr\'ec\'edente, en fait, inclut la 
+commande |\leftline| qui a rendu le |\vskip| ill\'egal.
+\endolist
+\noindent
+Dans un long message comme ceci, vous ne trouverez g\'en\'eralement utiles 
+que la premi\`ere ligne et la derni\`ere paire de lignes~; mais cela aide 
+parfois de savoir ce que sont les autres lignes. N'importe quel texte que 
+vous ins\'ererez ou effacerez sera ins\'er\'e ou supprim\'e au niveau les 
+plus secrets. Dans cet exemple l'insertion ou la suppression se produira 
+juste avant l'accolade droite ins\'er\'ee. Notez en particulier que dans ce 
+cas-ci, \TeX \ met tout texte que vous pourriez ins\'erer, \emph{non} dans 
+votre texte source mais dans une d\'efinition de macro plusieurs niveaux 
+plus bas. (naturellement, la d\'efinition de macro originale n'est pas 
+modifi\'ee.)
+
+Vous pouvez employer la commande ^|\errorcontextlines| 
+\ctsref{\errorcontextlines} pour limiter le nombre de paires de lignes de 
+contexte d'erreur que \TeX\ produit. Si vous n'\^etes pas int\'eress\'e par 
+toute l'information que \TeX\ vous fournit, vous pouvez placer |\error!-
+contextlines| \`a $0$. Cela vous ne donnera que les premi\`eres et 
+derni\`eres paires de lignes.
+
+En conclusion, nous mentionnerons deux autres indicateurs qui peuvent 
+appara\^\i tre au d\'ebut d'une paire de lignes de message d'erreur~:
+\ulist
+\li ^|<output>| indique que \TeX\ \'etait au milieu de sa routine de sortie 
+quand cette erreur s'est produite.
+\li ^|<write>| indique que \TeX\ \'etait en train d'ex\'ecuter une commande 
+|\write| quand cette erreur s'est produite. \TeX\ d\'etectera une telle 
+erreur quand il fera r\'eellement le |\write| (pendant un |\shipout|), et 
+non quand il rencontre le |\write|.
+\endulist
+
+
+\eix^^{messages d'erreur}
+\endchapter
+\byebye
+

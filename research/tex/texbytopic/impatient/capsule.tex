@@ -1,0 +1,1134 @@
+% This is part of the book TeX for the Impatient.
+% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% See file fdl.tex for copying conditions.
+
+\input macros
+\chapter{Capsule summary \linebreak of commands}
+
+\chapterdef{capsule}
+
+This section contains one-line descriptions of the primitive \TeX\
+commands and the \TeX\ commands defined in \plainTeX. These include both
+control sequences and 
+special characters.
+We've omitted those commands that are only intended for internal use
+in the
+\plainTeX\ definition (\knuth{Appendix~B}).
+Note that ordinary characters
+such as `|a|' or `|6|' are also commands, and indeed the most common
+ones \seeconcept{character}.
+
+To keep the descriptions brief, we've adopted
+certain conventions:
+
+\ulist
+
+\li An asterisk in front of a command indicates that the command is primitive,
+^^{primitive//command} i.e., built into the \TeX\ computer program
+\seeconcept{primitive}. 
+
+\li The words ``music'', ``punctuation'', ``function'',
+``symbol'', ``relation'', ``delimiter'', or ``operator'' in a command
+description imply that the command is only legal in math modes.
+ 
+\li The verb ``display'' applies to information
+that \TeX\ sends to the ^{log file}, unless otherwise indicated.  If
+|\tracingonline| is positive, \TeX\ also sends that output to the
+terminal. We use the noun ``display'' to refer to math displays (see
+\xref{display math}), i.e., material between |$$|'s.
+
+\li The phrase ``produce $x$'' indicates that the command will typeset
+$x$ and put the result in a box.
+We sometimes omit ``produce'' when the omission is unlikely to
+cause confusion. For example, we describe |\alpha| as ``math Greek
+letter $\alpha$'', not ``produce the math Greek letter $\alpha$''.
+\margin{Remove explanations of ``space'' and ``glue''}
+
+\endulist
+
+\begincapsum
+
+{\catcode `@ = \letter
+\caplineout {\\\visiblespace} {interword space}*{\@space}}%
+   {\catcode `\ =\other\ctsidxref{ }}
+\capcs ! {negative thin space for math}{}{\@shriek}
+\capcs " {umlaut accent for text, as in \"o}{}{\@quote}
+\capactwo # {introduce a macro parameter, or indicate where the text of
+   an entry goes in an alignment preamble}{}{@msharp:@asharp}
+\capcs # {produce \# character from current font}{}{\@pound}
+\capac $ {begin or end a math formula}{}{mathform}
+\capcs $ {produce \$ character from current font}{}{\@bucks}
+\capac % {begin a comment}*{comments}
+\capcs % {produce \% character from current font}{}{\@percent}
+\capac & {separate templates and entries in an alignment}{}{@and}
+\capcs & {produce \& character from current font}{}{\@and}
+\capac ' {prime symbol for math, as in $p'$}{}{@prime}
+\capcs ' {acute accent for text, as in \'e}{}{\@prime}
+\capcs * {multiplication symbol that allows a line break}{}{\@star}
+\capcs + {begin tabbed line}{}{\@plus}
+\capcs , {thin space for math}{}{\@comma}
+\capcs - {specify a legal hyphenation point}*{\@minus}
+\capcs . {dot accent for text, as in \.n}{}{\@dot}
+\capcs / {italic correction for the previous character}*{\@slash}
+\capcs ; {thick space for math}{}{\@semi}
+\capcs = {macron accent for text, as in \=r}{}{\@equal}
+\capac \ {begin a control sequence}*{@backslash}
+\capcs > {medium space for math}{}{\@greater}
+\capac ^ {produce a specified subformula as a superscript}{}{@hat}
+\capcs ^ {circumflex accent for text, as in \^o}{}{\@hat}
+{\catcode `@ = \letter
+\caplineout {\twocarets L}{equivalent to the |\\par| primitive}
+            {}{\@par}\ttidxref{^^L}
+\caplineout {\twocarets M}{an end-of-line}*{@newline}\ttidxref{^^M}
+}%
+\capac _ {produce a specified subformula as a subscript}{}{@underscore}
+\capcs _ {underscore: \_}{}{\@underscore}
+%x \capac ` {in a \<number> context, \ascii\ code for character that follows}*{@lquote}
+\capcs ` {grave accent for text, as in \`e}{}{\@lquote}
+\capac { {start a group}{}{@lbrace}
+\capcs { {left brace delimiter for math: $\{$}{}{\@lbrace}
+\capcs | {parallel lines for math: $\Vert$}{}{\@bar}
+\capac } {end a group}{}{@rbrace}
+\capcs } {right brace delimiter for math: $\}$}{}{\@rbrace}
+\capac ~ {interword space at which a line will not break}{}{@not}
+\capcs ~ {tilde accent for text, as in \~a}{}{\@not}
+\capcs aa {Scandinavian letter: \aa}{}{}
+\capcs AA {Scandinavian letter: \AA}{}{}
+\capcs above {produce a fraction with a bar of specified thickness}*{}
+\capcs abovedisplayshortskip {glue \TeX\ inserts before a display when the 
+   previous line fits in the display's indentation, by 
+   default 0\pt\ plus 3\pt}*{}
+\capcs abovedisplayskip {glue \TeX\ inserts before a display when the previous
+   line doesn't fit in the display's indentation, by default 12\pt\
+   plus 3\pt\ minus 9\pt}*{}
+\capcs abovewithdelims {produce a fraction with a bar of specified thickness
+   and surrounded by specified delimiters}*{}
+\capcs accent {put specified accent over the next character}*{}
+\capcs active {category code for active characters, viz., the number $13$}{}{}
+\capcs acute {acute accent for math, as in $\acute x$}{}{}
+\capcs adjdemerits {additional demerits for a line break which would result in
+   adjacent lines with incompatible word spacing, by default~10000}*{}
+\capcs advance {add a number to a |\\count| register}*{}
+\capcs advancepageno {if |\\pageno| is positive, add one;
+   if it's negative, subtract one}{}{}
+\capcs ae {\ae\ ligature}{}{}
+\capcs AE {\AE\ ligature}{}{}
+\capcs afterassignment {wait to expand the following token until
+   the next assignment is done}*{}
+\capcs aftergroup {wait to expand the following token until the end
+   of the current group}*{}
+\capcs aleph {only Hebrew letter for math: $\aleph$}{}{}
+\capcstwo allowbreak {do |\\penalty0|, i.e., allow a line or page break
+   where one could not ordinarily occur}{}{hallowbreak:vallowbreak}
+\capcs alpha {math Greek letter $\alpha$}{}{}
+\capcs amalg {amalgamation operator: $\amalg$}{}{}
+\capcs angle {angle symbol: $\angle$}{}{}
+\capcs approx {approximation relation: $\approx$}{}{}
+\capcs arccos {arc cosine function: $\arccos$}{}{}
+\capcs arcsin {arc sine function: $\arcsin$}{}{}
+\capcs arctan {arc tangent function: $\arctan$}{}{}
+\capcs arg {argument (phase) function: $\arg$}{}{}
+\capcs arrowvert {vertical portion of an extensible double arrow}{}{}
+\capcs Arrowvert {vertical portion of an extensible single arrow}{}{}
+\capcs ast {asterisk operator: $\ast$}{}{}
+\capcs asymp {asymptote relation: $\asymp$}{}{}
+\capcs atop {produce a fraction without a fraction bar}*{}
+\capcs atopwithdelims {produce a fraction without a fraction bar and 
+   surrounded by specified delimiters}*{}
+\capcs b {bar-under accent for math, as in $\b x$}{}{}
+\capcs backslash {backslash symbol: $\backslash$}{}{}
+\capcs badness {the badness of the glue setting in the last box
+   made}*{}
+\capcs bar {bar accent for math, as in $\bar x$}{}{}
+\capcs baselineskip {glue for the normal vertical distance from one baseline 
+   to the next, by default 12\pt}*{}
+\capcs batchmode {don't stop at errors and don't output to terminal}*{}
+\capcs begingroup {start a group to be ended by |\\endgroup|}*{}
+\capcs beginsection {begin a major subdivision of a document}{}%
+   {\@beginsection}
+\capcs belowdisplayshortskip {glue \TeX\ inserts after a display when the
+   previous line fits in the display's indentation, 
+      by default 7\pt\ plus 0.3\pt\ minus 4\pt}*{}
+\capcs belowdisplayskip {glue \TeX\ inserts after a display when the previous
+   line doesn't fit in the display's indentation,
+   by default 12\pt\ plus 3\pt\ minus 9\pt}*{}
+\capcs beta {math Greek letter $\beta$}{}{}
+\capcs bf {use boldface, i.e., do |\\tenbf\\fam=\\bffam|}{}{}
+\capcs bffam {boldface family for math}{}{}
+\capcs bgroup {implicit beginning-of-group character}{}{}
+\capcs big {make the specified delimiter larger than an ordinary one, but
+   still small enough for text}{}{}
+\capcs Big {make the specified delimiter about 11.5\pt\ tall}{}{}
+\capcs bigbreak {indicate desirable page break with |\\penalty-200|
+   and produce |\\bigskipamount| glue}{}{}
+\capcs bigcap {large cap operator (no, it doesn't produce a large
+   capital letter!): $\bigcap$}{}{}
+\capcs bigcirc {large circle operator: $\bigcirc$}{}{}
+\capcs bigcup {large cup operator: $\bigcup$}{}{}
+\capcs bigg {make the specified delimiter about 14.5\pt\ tall}{}{}
+\capcs Bigg {make specified delimiter about 17.5\pt\ tall}{}{}
+\capcs biggl {sized like |\\bigg|, but spaced as an opening}{}{}
+\capcs Biggl {sized like |\\Bigg|, but spaced as an opening}{}{}
+\capcs biggm {sized like |\\bigg|, but spaced as a relation}{}{}
+\capcs Biggm {sized like |\\Bigg|, but spaced as a relation}{}{}
+\capcs biggr {sized like |\\bigg|, but spaced as a closing}{}{}
+\capcs Biggr {sized like |\\Bigg|, but spaced as a closing}{}{}
+\capcs bigl {sized like |\\big|, but spaced as an opening}{}{}
+\capcs Bigl {sized like |\\Big|, but spaced as an opening}{}{}
+\capcs bigm {sized like |\\big|, but spaced as a relation}{}{}
+\capcs Bigm {sized like |\\Big|, but spaced as a relation}{}{}
+\capcs bigodot {large circled dot operator: $\bigodot$}{}{}
+\capcs bigoplus {large circled plus operator: $\bigoplus$}{}{}
+\capcs bigotimes {large circled times operator: $\bigotimes$}{}{}
+\capcs bigr {sized like |\\big|, but spaced as a closing}{}{}
+\capcs Bigr {sized like |\\Big|, but spaced as a closing}{}{}
+\capcs bigskip {produce |\\bigskipamount| glue}{}{}
+\capcs bigskipamount {glue for a big vertical skip, by default 12\pt\
+   plus 4\pt\ minus 4\pt}{}{}
+\capcs bigsqcup {large square cup operator: $\bigsqcup$}{}{}
+\capcs bigtriangledown {triangle operator pointing downward:
+   $\bigtriangledown$}{}{}
+\capcs bigtriangleup {triangle operator pointing upward: $\bigtriangleup$}{}{}
+\capcs biguplus {large cupped plus operator: $\biguplus$}{}{}
+\capcs bigvee {large logical ``or'' operator: $\bigvee$}{}{}
+\capcs bigwedge {large logical ``and'' operator: $\bigwedge$}{}{}
+\capcs binoppenalty {additional penalty for breaking after a binary math 
+   operator, by default~700}*{}
+\capcs bmod {modulus operator, as in $n \bmod 2$}{}{}
+\capcs bordermatrix {produce matrix with labelled rows and columns}{}{}
+\capcs bot {lattice bottom symbol: $\bot$}{}{}
+\capcs botmark {the last mark item on the page just boxed}*{}
+\capcs bowtie {bowtie relation: $\bowtie$}{}{}
+\capcs box {append the box in a specified box register
+   to the current list, and void the register}*{}
+\capcs boxmaxdepth {maximum depth of vboxes, by default |\\maxdimen|}*{}
+\capcs brace {|\char36 n\\brace k\char36| produces 
+   braced notation: $n \brace k$}{}{}
+\capcs bracevert {vertical portion of extensible large brace}{}{}
+\capcs brack {|\char36 n\\brack k\char36| produces bracketed notation: $n \brack k$}{}{}
+\capcstwo break {do |\\penalty-10000|, i.e., force a line or page
+   break}{}{hbreak:vbreak}
+\capcs breve {breve accent for math, as in $\breve x$}{}{}
+\capcs brokenpenalty {penalty for line break at a discretionary item, by
+   default~100}*{}
+\capcs buildrel {produce specified formula over the specified relation}{}{}
+\capcs bullet {bullet operation: $\bullet$}{}{}
+\capcs bye {|\\vfill| the last page with blank space, |\\supereject| it,
+   and |\\end| the job}{}{\@bye}
+\capcs c {cedilla accent for text, as in \c c}{}{}
+\capcs cal {use calligraphic font for uppercase letters in math,
+   as in $\cal XYZ$}{}{}
+\capcs cap {cap operator: $\cap$}{}{}
+\capcs cases {produce cases for math, as in $\bigl\{{\cdots\atop\cdots}$}{}{}
+\capcs catcode {the category code of a specified character}*{}
+\capcs cdot {centered dot operator: $\cdot$}{}{}
+\capcs cdotp {centered dot punctuation: $\cdotp$}{}{}
+\capcs cdots {centered dots for math: $\cdots$}{}{}
+\capcs centerline {produce line with its text centered}{}{}
+\capcs char {produce the character from the current font with the specified
+   code}*{}
+\capcs chardef {define a specified control sequence to be a character's
+   code, a number between 0 and $255$}*{}
+\capcs check {check accent for math, as in $\check x$}{}{}
+\capcs chi {math Greek letter $\chi$}{}{}
+\capcs choose {|\char36 n\\choose k\char36| produces combinatorial notation:
+   $n \choose k$}{}{}
+\capcs circ {circle operation: $\circ$}{}{}
+\capcs cleaders {produce leaders with half of leftover space before
+   the first box, and half after the last}*{}
+\capcs cleartabs {clear all the tabs for tabbing alignments}{}{}
+\capcs closein {close a specified input stream}*{}
+\capcs closeout {close a specified output stream}*{}
+\capcs clubpenalty {additional penalty for a single line remaining before
+   a page break, by default~150}*{}
+\capcs clubsuit {club suit symbol: $\clubsuit$}{}{}
+\capcs colon {colon punctation symbol for math: $:$}{}{}
+\capcs cong {congruence relation: $\cong$}{}{}
+\capcs coprod {coproduct operator: $\coprod$}{}{}
+\capcs copy {like |\\box|, but don't void the register}*{}
+\capcs copyright {copyright mark: \copyright}{}{}
+\capcs cos {cosine function: $\cos$}{}{}
+\capcs cosh {hyperbolic cosine function: $\cosh$}{}{}
+\capcs cot {cotangent function : $\cot$}{}{}
+\capcs coth {hyperbolic cotangent function: $\coth$}{}{}
+\capcs count {the specified integer register}*{}
+\capcs countdef {define a specified control sequence to be a number
+   corresponding to a |\\count| register}*{}
+\capcs cr {end a row (or column) within an alignment}*{}
+\capcs crcr {does nothing if the last command was |\\cr| or |\\noalign|;
+   otherwise, equivalent to |\\cr|}*{}
+\capcs csc {cosecant function: $\csc$}{}{}
+\capcs csname {start a control sequence name to be ended by |\\endcsname|}*{}
+\capcs cup {cup operator: $\cup$}{}{}
+\capcs d {underdot accent for text, as in \d r}{}{}
+\capcs dag {dagger symbol for text: \dag}{}{}
+\capcs dagger {dagger operator for math: $\dagger$}{}{}
+\capcs dashv {right turnstile relation: $\dashv$}{}{}
+\capcs day {current day of the month, as a number}*{}
+\capcs ddag {double dagger symbol for text: \ddag}{}{}
+\capcs ddagger {double dagger operator for math: $\ddagger$}{}{}
+\capcs ddot  {double dot accent for math: $\ddot x$}{}{}
+\capcs ddots {diagonal dots for math: \smash{$\ddots$}}{}{}
+\capcs deadcycles {number of |\\output| initiations since the last
+   |\\shipout|}*{}
+\capcs def {define a control sequence to be a macro}*{}
+\capcs defaulthyphenchar {default hyphenation character code}*{}
+\capcs defaultskewchar {default accent skewing character code}*{}
+\capcs deg {degree function: $\deg$}{}{}
+\capcs delcode {the delimiter code of a specified character}*{}
+\capcs delimiter {produce a specified delimiter}*{}
+\capcs delimiterfactor {1000 times the ratio of the minimum size of a
+   delimiter to the size that would completely cover the formula, by
+   default~901}*{}
+\capcs delimitershortfall {minimum difference between formula height and
+   delimiter height, by default 5\pt}*{}
+\capcs delta {math Greek letter $\delta$}{}{}
+\capcs Delta {math Greek letter $\Delta$}{}{}
+\capcs det {determinant function: $\det$}{}{}
+\capcs diamond {diamond operator: $\diamond$}{}{}
+\capcs diamondsuit {diamond suit symbol: $\diamondsuit$}{}{}
+\capcs dim {dimension function: $\dim$}{}{}
+\capcs dimen {the specified dimension register}*{}
+\capcs dimendef {define a specified control sequence to be a number
+   corresponding to a |\\dimen| register}*{}
+\capcs discretionary {specify three texts, the first two for before and
+   after a line break, the third for no line break}*{}
+\capcs displayindent {\TeX\ sets this to the indentation of a display}*{}
+\capcs displaylimits {place limits above and below operators only in display
+   styles}*{}
+\capcs displaylines {produce specified multiline display with each 
+   line centered}{}{}
+\capcs displaystyle {use displaystyle size in a formula}*{}
+\capcs displaywidowpenalty {penalty for a single line beginning a page 
+   just before a display, by default~50}*{}
+\capcs displaywidth {\TeX\ sets this to the width of a display}*{}
+\capcs div {division operator: $\div$}{}{}
+\capcs divide {divide a specified |\\count| register by a specified integer}*{}
+\capcs dot {dot accent for math, as in $\dot x$}{}{}
+\capcs doteq {dotted equality relation: $\doteq$}{}{}
+\capcs dotfill {fill enclosing horizontal space with dots}{}{}
+\capcs dots {ellipsis for sequences: $x_1$, \dots, $x_n$}{}{}
+\capcs doublehyphendemerits {demerits for two consecutive lines ending
+   with hyphens, by default~10000}*{}
+\capcs downarrow {relation: $\downarrow$}{}{}
+\capcs Downarrow {relation: $\Downarrow$}{}{}
+\capcs downbracefill {fill enclosing hbox with a downwards facing brace:
+   \hbox to 3.5em{\downbracefill}}{}{}
+\capcs dp {the depth of the box in a specified box register}*{}
+\capcs dump {end the job and produce a format file}*{}
+\capcs edef {define a control sequence to be a macro, immediately expanding the
+   replacement text}*{}
+\capcs egroup {implicit end-of-group character}{}{}
+\capcs eject {end current paragraph and force a page break,
+   stretching out current page}{}{}
+\capcs ell {script letter for math: $\ell$}{}{}
+\capcs else {false or default case alternative for a conditional}*{\@else}
+\capcs emergencystretch {additional stretch added to every line if
+   |\\tol\-er\-ance| is not satisfied}*{}
+\capcs empty {macro that expands to nothing}{}{}
+\capcs emptyset {empty set symbol: $\emptyset$}{}{}
+\capcs end {|\\output| the last page and end the job}*{}
+\capcs endcsname {end a control sequence name started by
+   |\\csname|}*{}
+\capcs endgraf {equivalent to the |\\par| primitive}{}{}
+\capcs endgroup {end a group started by |\\begingroup|}*{}
+\capcs endinput {terminate input from the current file}*{}
+\capcs endinsert {end insertion}{}{}
+\capcs endline {equivalent to the |\\cr| primitive}{}{}
+\capcs endlinechar {character \TeX\ inserts at the end of each input
+   line, by default |\twocarets M|}*{}
+\capcs enskip {horizontal glue with width \frac1/2\em}{}{}
+\capcs enspace {kern \frac1/2\em}{}{}
+\capcs epsilon {math Greek letter $\epsilon$}{}{}
+\capcs eqalign {produce specified multiline display whose indicated parts
+   are vertically aligned}{}{}
+\capcs eqalignno {produce specified multiline display
+   with equation numbers whose indicated parts are vertically aligned}{}{}
+\capcs eqno {put a specified equation number on the right of a display}*{}
+\capcs equiv {equivalence relation: $\equiv$}{}{}
+\capcs errhelp {token list whose expansion \TeX\ displays when the user asks 
+   for help in response to an |\\errmessage|}*{}
+\capcs errmessage {give specified error message}*{}
+\capcs errorcontextlines {the number of lines of context \TeX\
+   displays at an error, by default~5}*{}
+\capcs errorstopmode {stop for interaction at error messages}*{}
+\capcs escapechar {character with which \TeX\ precedes control sequence
+   names that are displayed}*{}
+\capcs eta {math Greek letter $\eta$}{}{}
+\capcs everycr {token list \TeX\ expands after a |\\cr|, or a |\\crcr|
+   not following |\\cr| or |\\noalign|}*{}
+\capcs everydisplay {token list \TeX\ expands when a math display begins}*{}
+\capcs everyhbox {token list \TeX\ expands when an hbox begins}*{}
+\capcs everyjob {token list \TeX\ expands when a job begins}*{}
+\capcs everymath {token list \TeX\ expands when text math mode
+   begins}*{}
+\capcs everypar {token list \TeX\ expands when a paragraph begins}*{}
+\capcs everyvbox {token list \TeX\ expands when a vbox begins }*{}
+\capcs exhyphenpenalty {additional penalty for a line break after 
+   an explicit hyphen, by default~50}*{}
+\capcs exists {``there exists'' symbol: $\exists$}{}{}
+\capcs exp {exponential function: $\exp$}{}{}
+\capcs expandafter {expand the next token only after expanding the token
+   following it}*{}
+\capcs fam {font family \TeX\ uses for characters with class seven
+   (i.e., variables) in math}*{}
+\capcs fi {end a conditional}*{\@fi}
+\capcs filbreak {force a page break unless the text up to another |\\filbreak|
+   also  fits on the page}{}{}
+\capcs finalhyphendemerits {penalty for the second to last line breaking at a
+   hyphen, by default~5000}*{}
+\capcs firstmark {first mark item on the page just boxed}*{}
+\capcs fivebf {use $5$-point bold font, |cmbx5|}{}{}
+\capcs fivei {use $5$-point math italic font, |cmmi5|}{}{}
+\capcs fiverm {use $5$-point roman font, |cmr5|}{}{}
+\capcs fivesy {use $5$-point symbol font, |cmsy5|}{}{}
+\capcs flat {flat symbol for music: $\flat$}{}{}
+\capcs floatingpenalty {penalty for insertions that are split across
+   pages, by default~0}*{}
+\capcs fmtname {name of the current format}{}{}
+\capcs fmtversion {version number of the current format}{}{}
+\capcs folio {produce |\\pageno| as characters; 
+   in roman numerals if it's negative}{}{}
+\capcs font {define a specified control sequence to select a font}*{}
+\capcs fontdimen {a specified parameter of a specified font}*{}
+\capcs fontname {produce the filename of a specified font as characters}*{}
+\capcs footline {token list that produces line at the bottom of each page}{}{}
+\capcs footnote {produce a specified footnote 
+   with a specified reference mark}{}{}
+\capcs forall {``for all'' symbol: $\forall$}{}{}
+\capcs frenchspacing {make interword spacing independent of punctuation}{}{}
+\capcs frown {frown relation: $\frown$}{}{}
+\capcs futurelet {assign the third following token to a specified control
+   sequence, then expand the second following token}*{}
+\capcs gamma {math Greek letter $\gamma$}{}{}
+\capcs Gamma {math Greek letter $\Gamma$}{}{}
+\capcs gcd {greatest common denominator function: $\gcd$}{}{}
+\capcs gdef {equivalent to |\\global\\def|, i.e., globally define a macro}*{}
+\capcs ge {greater than or equal relation: $\ge$}{}{}
+\capcs geq {equivalent to |\\ge|}{}{}
+\capcs gets {gets relation: $\gets$}{}{}
+\capcs gg {much greater than relation: $\gg$}{}{}
+\capcs global {make the following definition global}*{}
+\capcs globaldefs {overrides |\\global| prefixes on assignments}*{}
+\capcs goodbreak {indicate desirable page break with |\\penalty-500|}{}{}
+\capcs grave {grave accent for math, as in $\grave x$}{}{}
+\capcs H {Hungarian umlaut accent for text, as in \H o}{}{}
+\capcs halign {align text in columns}*{}
+\capcs hang {indent the current paragraph by |\\parindent|}{}{}
+\capcs hangafter {starting line number for hanging indentation}*{}
+\capcs hangindent {space for hanging indentation}*{}
+\capcs hat {hat accent for math, as in $\hat x$}{}{}
+\capcs hbadness {badness threshold for reporting underfull or overfull
+   hboxes, by default 1000}*{}
+\capcs hbar {math symbol: $\hbar$}{}{}
+\capcs hbox {produce a specified hbox}*{}
+\capcs headline {token list that produces the line at the
+   top of every page}{}{}
+\capcs heartsuit {heart suit symbol: $\heartsuit$}{}{}
+\capcs hfil {produce infinitely stretchable horizontal glue}*{}
+\capcs hfill {produce horizontal glue even more infinitely stretchable
+   than that produced by |\\hfil|}*{}
+\capcs hfilneg {produce infinitely negative stretchable horizontal glue}*{}
+\capcs hfuzz {space threshold for reporting overfull hboxes, by default 
+   0.1\pt}*{}
+\capcs hglue {produce horizontal glue that doesn't disappear at line 
+   breaks}{}{}
+\capcs hidewidth {ignore width of an entry in an alignment, so that it
+   extends out from its box in the direction of the |\\hidewidth|}{}{}
+\capcs hoffset {page offset relative to one inch from the paper's left edge}*{}
+\capcs holdinginserts {if positive, do not remove insertions from the
+   current page}*{}
+\capcs hom {homology function: $\hom$}{}{}
+\capcs hookleftarrow {relation: $\hookleftarrow$}{}{}
+\capcs hookrightarrow {relation: $\hookrightarrow$}{}{}
+\capcs hphantom {produce an invisible formula with zero height and depth but
+   natural width}{}{}
+\capcs hrule {produce a horizontal rule; legal only in vertical modes}*{}
+\capcs hrulefill {fill enclosing space with a horizontal rule}{}{}
+\capcs hsize {line length, by default 6.5\thinspace in}*{}
+\capcs hskip {produce specified horizontal glue}*{}
+\capcs hss {produce horizontal glue that is infinitely stretchable and 
+   infinitely shrinkable}*{}
+\capcs ht {the height of the box in a specified box register}*{}
+\capcs hyphenation {add specified words to the
+   hyphenation exception dictionary}*{}
+\capcs hyphenchar {the hyphenation character in a specified font}*{}
+\capcs hyphenpenalty {additional penalty for a line break at a hyphen, by
+  default~50}*{}
+\capcs i {dotless letter `\i' for use with accents}{}{}
+\capcs ialign {start an |\\halign| with the |\\tabskip| glue zero and
+   |\\everycr| empty}{}{}
+\capcs if {test if two specified tokens have the same character code}*{\@if}
+\capcs ifcase {expand case $n$ for specified value $n$}*{\@ifcase}
+\capcs ifcat {test if two specified tokens have the same category 
+   code}*{\@ifcat}
+\capcs ifdim {test for a specified relationship between two specified
+   dimensions}*{\@ifdim}
+\capcs ifeof {test for being at the end of a specified file}*{\@ifeof}
+\capcs iff {if and only if relation: $\iff$}{}{}
+\capcs iffalse {test that is always false}*{\@iffalse}
+\capcs ifhbox {test if a specified box register contains an hbox}*{\@ifhbox}
+\capcs ifhmode {test if \TeX\ is in a horizontal mode}*{\@ifhmode}
+\capcs ifinner {test if \TeX\ is in an internal mode}*{\@ifinner}
+\capcs ifmmode {test if \TeX\ is in a math mode}*{\@ifmmode}
+\capcs ifnum {test for a specified relationship
+   between two specified numbers}*{\@ifnum}
+\capcs ifodd {test if a specified number is odd}*{\@ifodd}
+\capcs iftrue {test that is always true}*{\@iftrue}
+\capcs ifvbox {test if a specified box register contains a vbox}*{\@ifvbox}
+\capcs ifvmode {test if \TeX\ is in a vertical mode}*{\@ifvmode}
+\capcs ifvoid {test if a specified box register is void}*{\@ifvoid}
+\capcs ifx {test if two tokens are the same, or if
+   two macros have the same top-level definition}*{\@ifx}
+\capcs ignorespaces {ignore any following space tokens}*{}
+\capcs Im {complex imaginary part symbol: $\Im$}{}{}
+\capcs imath {dotless letter `$\imath$' for use with math accents}{}{}
+\capcs immediate {perform the specified file operation without delay}*{}
+\capcs in {containment relation: $\in$}{}{}
+\capcs indent {produce an empty box of width |\\parindent| and enter
+   horizontal mode}*{}
+\capcs inf {inferior function: $\inf$}{}{}
+\capcs infty {infinity symbol: $\infty$}{}{}
+\capcs input {begin to read from a specified file}*{}
+\capcs inputlineno {the current line number of the current input file}*{}
+\capcs insert {produce an insertion of a specified class}*{}
+\capcs insertpenalties {sum of penalties due to insertions}*{}
+\capcs int {integral symbol: $\int$}{}{}
+\capcs interlinepenalty {additional penalty for a page break
+   between lines of a paragraph, by default~0}*{}
+\capcs iota {math Greek letter $\iota$}{}{}
+\capcs it {use italics, i.e., do |\\tenit\\fam=\\itfam|}{}{}
+\capcs item {begin a paragraph with hanging indentation of |\\parindent| 
+   and preceded by a specified label}{}{}
+\capcs itemitem {like |\\item|, but with indentation of |2\\parindent|}{}{}
+\capcs itfam {italic family for math}{}{}
+\capcs j {dotless letter `\j', for use with accents}{}{}
+\capcs jmath {dotless letter `$\jmath$' for use with math accents}{}{}
+\capcs jobname {base name of the file with which \TeX\ was invoked}*{}
+\capcs jot {unit of measure for opening up displays}{}{}
+\capcs kappa {math Greek letter $\kappa$}{}{}
+\capcs ker {kernel function: $\ker$}{}{}
+\capcs kern {produce a specified amount of space at which
+   a break is not allowed}*{}
+\capcs l {Polish letter: \l}{}{}
+\capcs L {Polish letter: \L}{}{}
+\capcs lambda {math Greek letter $\lambda$}{}{}
+\capcs Lambda {math Greek letter $\Lambda$}{}{}
+\capcs land {logical ``and'' operator: $\land$}{}{}
+\capcs langle {left angle delimiter: $\langle$}{}{}
+\capcs language {the current set of hyphenation patterns}*{}
+\capcs lastbox {retrieve and remove the last item from the current list, if
+   it's a box}*{}
+\capcs lastkern {retrieve the last item from the current list, if it's a
+   kern}*{}
+\capcs lastpenalty {retrieve the last item from the current list, if it's a
+   penalty}*{}
+\capcs lastskip {retrieve the last item from the current list, if it's
+   glue}*{}
+\capcs lbrace {left brace delimiter: $\lbrace$}{}{}
+\capcs lbrack {left bracket delimiter: $\lbrack$}{}{}
+\capcs lccode {the character code for the lowercase form of a letter}*{}
+\capcs lceil {left ceiling delimiter: $\lceil$}{}{}
+\capcs ldotp {dot on baseline as punctuation: $\ldotp$}{}{}
+\capcs ldots {dots on baseline for math: $\ldots$}{}{}
+\capcs le {less than or equal relation: $\le$}{}{}
+\capcs leaders {fill a specified horizontal or vertical space by repeating a
+   specified box or rule}*{}
+\capcs left {produce the specified delimiter, sizing it to cover the
+   following subformula ended by |\\right|}*{}
+\capcs leftarrow {relation: $\leftarrow$}{}{}
+\capcs Leftarrow {relation: $\Leftarrow$}{}{}
+\capcs leftarrowfill {fill enclosing hbox with a |\\leftarrow|:
+   \hbox to 3.5em{\leftarrowfill}}{}{}
+\capcs leftharpoondown {relation: $\leftharpoondown$}{}{}
+\capcs leftharpoonup {relation: $\leftharpoonup$}{}{}
+\capcs lefthyphenmin {size of the smallest word fragment \TeX\ allows
+   before a hyphen at the beginning of a word, by default~2}*{}
+\capcs leftline {produce line with its text pushed to left margin}{}{}
+\capcs leftrightarrow {relation: $\leftrightarrow$}{}{}
+\capcs Leftrightarrow {relation: $\Leftrightarrow$}{}{}
+\capcs leftskip {glue \TeX\ inserts at the left of each line}*{}
+\capcs leq {equivalent to |\\le|}{}{}
+\capcs leqalignno {produce specified multiline display with equation numbers
+   on the left whose indicated parts are vertically aligned}{}{}
+\capcs leqno {put a specified equation number on the left of a display}*{}
+\capcs let {define a control sequence to be the next token}*{}
+\capcs lfloor {left floor delimiter: $\lfloor$}{}{}
+\capcs lg {logarithm function: $\lg$}{}{}
+\capcs lgroup {left group delimiter (the smallest size is shown here):
+   $\Big\lgroup$}{}{}
+\capcs lim {limit function: $\lim$}{}{}
+\capcs liminf {inferior limit function: $\liminf$}{}{}
+\capcs limits {place superscript above and subscript below a
+   large operator}*{}
+\capcs limsup {superior limit function: $\limsup$}{}{}
+\capcs line {produce a justified line of type}{}{}
+\capcs linepenalty {penalty for line breaking added to each line, 
+   by default~10}*{}
+\capcs lineskip {vertical glue from one baseline to the next if the
+   lines are closer together than |\\lineskiplimit|, by default 1\pt}*{}
+\capcs lineskiplimit {threshold for using |\\lineskip| instead of
+   |\\base\-line\-skip|, by default 0\pt}*{}
+\capcs ll {much less than relation: $\ll$}{}{}
+\capcs llap {produce text (with no width) extending to the left
+   of the current position}{}{}
+\capcs lmoustache {top half of a large brace: $\big\lmoustache$}{}{}
+\capcs ln {natural logarithm function: $\ln$}{}{}
+\capcs lnot {logical ``not'' symbol: $\lnot$}{}{}
+\capcs log {logarithm function: $\log$}{}{}
+\capcs long {allow |\\par| tokens in the argument(s) of
+   the following definition}*{}
+\capcs longleftarrow {relation: $\longleftarrow$}{}{}
+\capcs Longleftarrow {relation: $\Longleftarrow$}{}{}
+\capcs longleftrightarrow {relation: $\longleftrightarrow$}{}{}
+\capcs Longleftrightarrow {relation: $\Longleftrightarrow$}{}{}
+\capcs longmapsto {relation: $\longmapsto$}{}{}
+\capcs longrightarrow {relation: $\longrightarrow$}{}{}
+\capcs Longrightarrow {relation: $\Longrightarrow$}{}{}
+\capcs loop {start a loop to be ended by |\\repeat|}{}{}
+\capcs looseness {difference between the number of lines you want a
+   paragraph to be relative to the optimal number}*{}
+\capcs lor {logical ``or'' operator: $\lor$}{}{}
+\capcs lower {lower a specified box by a specified amount}*{}
+\capcs lowercase {convert uppercase letters in the specified text
+   to lowercase}*{}
+\capcs lq {left quote character for text: \lq}{}{}
+\capcs mag {$1000$ times the ratio for enlarging all dimensions}*{}
+\capcs magnification {like |\\mag|, but don't enlarge the page size}{}{}
+\capcs magstep {$1000 \cdot 1.2^n$ for a specified $n$}{}{}
+\capcs magstephalf {$1000\cdot\sqrt{1.2}$}{}{}
+\capcs mapsto {relation: $\mapsto$}{}{}
+\capcs mark {produce a mark item with a specified text}*{}
+\capcs mathaccent {put specified math accent over the next character}*{}
+\capcs mathbin {space a specified subformula as a binary operator}*{}
+\capcs mathchar {produce the math character with the specified mathcode}*{}
+\capcs mathchardef {define a specified control sequence to be a mathcode,
+   a number between 0 and $2^{15}-1$}*{}
+\capcs mathchoice {select one of four specified math subformulas
+   depending on the current style}*{}
+\capcs mathclose {space a specified subformula as a closing delimiter}*{}
+\capcs mathcode {the mathcode of a specified character}*{}
+\capcs mathinner {space a specified subformula as an inner formula, e.g., a
+   fraction}*{}
+\capcs mathop {space a specified subformula as a large math operator}*{}
+\capcs mathopen {space a specified subformula as an opening delimiter}*{}
+\capcs mathord {space a specified subformula as an ordinary character}*{}
+\capcs mathpalette {produce a |\\mathchoice| which expands a specified 
+   control sequence depending on the current style}{}{}
+\capcs mathpunct {space a specified subformula as punctuation}*{}
+\capcs mathrel {space a specified subformula as a relation}*{}
+\capcs mathstrut {produce an invisible box with the height and depth of a
+   left parenthesis and no width}{}{}
+\capcs mathsurround {space \TeX\ kerns before and after math in text}*{}
+\capcs matrix {produce a specified matrix}{}{}
+\capcs max {maximum function: $\max$}{}{}
+\capcs maxdeadcycles {value of |\\deadcycles| at which \TeX\ complains,
+   and then uses its own output routine, by default~25}*{}
+\capcs maxdepth {maximum depth of the bottom box on a page,
+   by default 4\pt}*{}
+\capcs maxdimen {largest dimension acceptable to \TeX}{}{}
+\capcs meaning {produce the human-understandable meaning of a specified
+   token as characters}*{}
+\capcs medbreak {indicate desirable page
+   break with |\\penalty-100| and produce |\\medskipamount| glue}{}{}
+\capcs medmuskip {glue for a medium math space, by default 4\mud\ plus 2\mud\
+   minus 4\mud}*{}
+\capcs medskip {produce |\\medskipamount| glue}{}{}
+\capcs medskipamount {glue for a medium vertical skip, by default 6\pt
+   plus 2\pt\ minus 2\pt}{}{}
+\capcs message {show expansion of the specified text on the terminal}*{}
+\capcs mid {middle relation: $\mid$}{}{}
+\capcs midinsert {produce the specified text at the current position if
+   possible, otherwise at the top of the next page}{}{}
+\capcs min {minimum function: $\min$}{}{}
+\capcs mit {use math italics, i.e., do |\\fam=1|}{}{}
+\capcs mkern {produce a specified kern in units of |mu| for math}*{}
+\capcs models {models relation: $\models$}{}{}
+\capcs month {current month, as a number}*{}
+\capcs moveleft {move a specified box left by a specified space; legal
+   only in vertical modes}*{}
+\capcs moveright {move a specified box right by a specified space; legal
+   only in vertical modes}*{}
+\capcs mp {minus and plus operator: $\mp$}{}{}
+\capcs mskip {produce specified glue in units of |mu| for math}*{}
+\capcs mu {math Greek letter $\mu$}{}{}
+\capcs multiply {multiply a specified |\\count| register by a specified
+   integer}*{}
+\capcs multispan {make next alignment entry span a specified number of
+   columns (or rows)}{}{}
+\capcs muskip {the specified muglue register}*{}
+\capcs muskipdef {define a specified control sequence to be a number
+   corresponding to a |\\muskip| register}*{}
+\capcs nabla {backwards difference symbol: $\nabla$}{}{}
+\capcs narrower {make both left and right margins narrower by
+   |\\parindent|}{}{}
+\capcs natural {natural symbol for music: $\natural$}{}{}
+\capcs nearrow {northeast arrow relation: $\nearrow$}{}{}
+\capcs ne {not equal relation: $\ne$}{}{}
+\capcs neg {logical ``not'' symbol: $\neg$}{}{}
+\capcs negthinspace {kern $-\frac1/6$\em}{}{}
+\capcs neq {not equal relation: $\neq$}{}{}
+\capcs newbox {reserve and name a |\\box| register}{}{\@newbox}
+\capcs newcount {reserve and name a |\\count| register}{}{\@newcount}
+\capcs newdimen {reserve and name a |\\dimen| register}{}{\@newdimen}
+\capcs newfam {reserve and name a math family}{}{\@newfam}
+\capcs newhelp {name a specified help message}{}{\@newhelp}
+\capcs newif {define a new conditional with the specified name}{}{\@newif}
+\capcs newinsert {name an insertion class, and reserve a
+   corresponding |\\box|, |\\count|, |\\dimen|, and |\\skip| registers}
+   {}{\@newinsert}
+\capcs newlanguage {reserve and name a |\\language|}{}{\@newlanguage}
+\capcs newlinechar {end-of-line character for |\\write|, etc.}*{}
+\capcs newmuskip {reserve and name a |\\muskip| register}{}{\@newmuskip}
+\capcs newread {reserve and name an input stream}{}{\@newread}
+\capcs newskip {reserve and name a |\\skip| register}{}{\@newskip}
+\capcs newtoks {reserve and name a |\\toks| register}{}{\@newtoks}
+\capcs newwrite {reserve and name an output stream}{}{\@newwrite}
+\capcs ni {``reverse in'' relation: $\ni$}{}{}
+\capcs noalign {insert material between rows (or columns) of an
+   alignment}*{}
+\capcs noboundary {inhibit ligatures or kerns involving the current font's
+   |boundarychar|}*{}
+\capcstwo nobreak {do |\\penalty10000|, i.e.,
+   inhibit a line or page break}{}{hnobreak:vnobreak}
+\capcs noexpand {suppress expansion of the next token}*{}
+\capcs noindent {enter horizontal mode without indenting the paragraph}*{}
+\capcs nointerlineskip {inhibit interline glue before the next line}{}{}
+\capcs nolimits {place superscript and subscript after large operators}*{}
+\capcs nonfrenchspacing {make interword spacing depend on punctuation}{}{}
+\capcs nonscript {inhibit any following glue or kern when
+   in script and scriptscript styles}*{}
+\capcs nonstopmode {don't stop at errors, even those about missing files}*{}
+\capcs nopagenumbers {inhibit printing of page numbers, i.e., do
+   |\\footline = {\\hfil}|}{}{}
+\capcs normalbaselines {set |\\baselineskip|, |\\line\-skip|, and
+   |\\line\-skip\-limit| to the normal values for the current type size}{}{}
+\capcs normalbaselineskip {value of |\\baselineskip| for the
+   current type size}{}{}
+\capcs normalbottom {make the bottom margin be the same from page to page}{}{}
+\capcs normallineskip {value of |\\lineskip| for the current type
+   size}{}{}
+\capcs normallineskiplimit {value of |\\lineskiplimit| for the
+   current type size}{}{}
+\capcs not {a slash with zero width for constructing negations of math
+   relations, as in $\not=$}{}{}
+\capcs notin {noninclusion relation: $\notin$}{}{}
+\capcs nu {math Greek letter $\nu$}{}{}
+\capcs null {expands to an empty hbox}{}{}
+\capcs nulldelimiterspace {space produced by a null delimiter, by 
+   default 1.2\pt}*{}
+\capcs nullfont {primitive font with no characters in it}*{}
+\capcs number {produce a specified number as characters}*{}
+\capcs nwarrow {northwest arrow relation: $\nwarrow$}{}{}
+\capcs o {Danish letter: \o}{}{}
+\capcs O {Danish letter: \O}{}{}
+\capcs obeylines {make each end-of-line in the input file 
+   equivalent to |\\par|}{}{}
+\capcs obeyspaces {produce space in the output for each space character in the
+   input}{}{}
+\capcs odot {centered dot operation: $\odot$}{}{}
+\capcs oe {\oe\ ligature}{}{}
+\capcs OE {\OE\ ligature}{}{}
+\capcs offinterlineskip {inhibit interline glue from now on}{}{}
+\capcs oint {contour integral operator: $\oint$}{}{}
+\capcs oldstyle {use old style digits: {\oldstyle1234567890}}{}{}
+\capcs omega {math Greek letter $\omega$}{}{}
+\capcs Omega {math Greek letter $\Omega$}{}{}
+\capcs ominus {circled minus operator: $\ominus$}{}{}
+\capcs omit {skip a column's (or row's) template in an alignment}*{}
+\capcs openin {prepare a specified input stream to read from a file}*{}
+\capcs openout {prepare a specified output stream to write to a file}*{}
+\capcs openup {increase |\\baselineskip|, |\\lineskip|, and
+   |\\lineskiplimit| by a specified amount}{}{}
+\capcs oplus {circled plus operator: $\oplus$}{}{}
+\capcs or {separate the cases of an |\\ifcase|}*{\@or}
+\capcs oslash {circled slash operator: $\oslash$}{}{}
+\capcs otimes {circled times operator: $\otimes$}{}{}
+\capcs outer {make the following macro definition illegal in contexts in
+   which tokens are absorbed at high speed}*{}
+\capcs output {token list \TeX\ expands when it finds a page break}*{}
+\capcs outputpenalty {if the page break occurred at a penalty, the value
+   of that penalty; otherwise zero}*{}
+\capcs over {produce a fraction with a bar of default thickness}*{}
+\capcs overbrace {produce a brace covering the top of a formula,
+   as in $\overbrace{h+w}{}$}{}{}
+\capcs overfullrule {width of the rule appended to an overfull box}*{}
+\capcs overleftarrow {produce a left arrow covering the top of
+   a formula, as in $\overleftarrow{r+a}$}{}{}
+\capcs overline {produce a line covering the top of a formula,
+   as in $\overline{2b}$}*{}
+\capcs overrightarrow {produce a right arrow covering the top of a 
+   formula, as in $\overrightarrow{i+t}$}{}{}
+\capcs overwithdelims {produce a fraction with a bar of the default thickness 
+   and surrounded by specified delimiters}*{}
+\capcs owns {owns relation: $\owns$}{}{}
+\capcs P {paragraph character for text: \P}{}{}
+\capcs pagedepth {\TeX\ sets this to the current depth of the current
+   page}*{}
+\capcs pagefilllstretch {\TeX\ sets this to the amount of |filll| stretch on
+   the current page}*{}
+\capcs pagefillstretch {\TeX\ sets this to the amount of |fill| stretch on 
+   the current page}*{}
+\capcs pagefilstretch {\TeX\ sets this to the amount of |fil| stretch on the
+   current page}*{}
+\capcs pagegoal {\TeX\ sets this to the desired height for the current page
+   (i.e., |\\vsize| when the first box is put on the page)}*{}
+\capcs pageinsert {produce the specified text on the following page, and use up
+    the full page}{}{}
+\capcs pageno {the register |\\count0|, which contains the
+   (possibly negative) page number}{}{}
+\capcs pageshrink {\TeX\ sets this to the total amount of shrinkability
+   on the current page}*{}
+\capcs pagestretch {\TeX\ sets this to the total amount of stretchability
+   on the current page}*{}
+\capcs pagetotal {\TeX\ sets this to the natural height of the current
+   page}*{}
+\capcs par {finish paragraph and terminate horizontal mode}*{\@par}
+\capcs parallel {parallel relation: $\parallel$}{}{}
+\capcs parfillskip {horizontal glue \TeX\ inserts at the end of a
+   paragraph}*{}
+\capcs parindent {horizontal space \TeX\ inserts at the start of a
+   paragraph}*{}
+\capcs parshape {specify the width and length of each line 
+   in the next paragraph}*{}
+\capcs parskip {vertical glue \TeX\ inserts before a paragraph}*{}
+\capcs partial {partial derivative symbol: $\partial$}{}{}
+\capcs pausing {if positive, stop after reading each line of input for a
+   possible replacement}*{}
+\capcstwo penalty {produce penalty (or bonus, if negative) for breaking
+   line or page here}*{hpenalty:vpenalty}
+\capcs perp {perpendicular relation: $\perp$}{}{}
+\capcs phantom {produce an invisible formula with the 
+   dimensions of a specified subformula}{}{}
+\capcs phi {math Greek letter $\phi$}{}{}
+\capcs Phi {math Greek letter $\Phi$}{}{}
+\capcs pi {math Greek letter $\pi$}{}{}
+\capcs Pi {math Greek letter $\Pi$}{}{}
+\capcs plainoutput {\plainTeX's |\\output| routine}{}{}
+\capcs pm {plus and minus operator: $\pm$}{}{}
+\capcs pmatrix {produce a parenthesized matrix}{}{}
+\capcs pmod {parenthesized modulus notation to put at the end of a formula, as
+   in $x \equiv y+1 \pmod 2$}{}{}
+\capcs postdisplaypenalty {additional penalty for a line break
+   just after a display, by default~0}*{}
+\capcs Pr {probability function: $\Pr$}{}{}
+\capcs prec {precedes relation: $\prec$}{}{}
+\capcs preceq {precedes or equals relation: $\preceq$}{}{}
+\capcs predisplaypenalty {additional penalty for a line break just 
+   before a display, by default~0}*{}
+\capcs predisplaysize {\TeX\ sets this to the width of the
+   line preceding a display}*{}
+\capcs pretolerance {badness tolerance for line breaks without
+   hyphenation, by default~100}*{}
+\capcs prevdepth {depth of the last nonrule box on the
+   current vertical list}*{}
+\capcs prevgraf {\TeX\ sets this to the number
+   of lines in the paragraph so far (in horizontal mode)
+   or in the previous paragraph (in vertical mode)}*{}
+\capcs prime {prime math symbol, as in $r^\prime$}{}{}
+\capcs proclaim {begin a theorem, lemma, hypothesis, $\ldots$}{}{\@proclaim}
+\capcs prod {large product operator: $\prod$}{}{}
+\capcs propto {proportional to relation: $\propto$}{}{}
+\capcs psi {math Greek letter $\psi$}{}{}
+\capcs Psi {math Greek letter $\Psi$}{}{}
+\capcs qquad {produce horizontal glue with width 2\em}{}{}
+\capcs quad {produce horizontal glue with width 1\em}{}{}
+\capcs radical {produce a specified radical symbol}*{}
+\capcs raggedbottom {allow the bottom margin to vary from page to page}{}{}
+\capcs raggedright {allow the right margin to vary from line to line}{}{}
+\capcs raise {raise a specified box by a specified amount}*{}
+\capcs rangle {right angle delimiter: $\rangle$}{}{}
+\capcs rbrace {right brace delimiter: $\rbrace$}{}{}
+\capcs rbrack {right bracket delimiter: $\rbrack$}{}{}
+\capcs rceil {right ceiling delimiter: $\rceil$}{}{}
+\capcs Re {complex real part symbol: $\Re$}{}{}
+\capcs read {read a line from a specified input stream}*{}
+\capcs relax {do nothing}*{}
+\capcs relpenalty {additional penalty for breaking after a relation,
+   by default~500}*{}
+\capcs repeat {end a loop started with |\\loop|}{}{\@repeat}
+\capcs rfloor {right floor delimiter: $\rfloor$}{}{}
+\capcs rgroup {right group delimiter (the smallest size is shown here):
+   $\Big\rgroup$}{}{}
+\capcs rho {math Greek letter $\rho$}{}{}
+\capcs right {produce the specified delimiter at the right end of a
+   subformula started with |\\left|}*{}
+\capcs rightarrow {relation: $\rightarrow$}{}{}
+\capcs Rightarrow {relation: $\Rightarrow$}{}{}
+\capcs rightarrowfill {fill enclosing hbox with a |\\rightarrow|:
+   \hbox to 3.5em{\rightarrowfill}}{}{}
+\capcs rightharpoondown {relation: $\rightharpoondown$}{}{}
+\capcs rightharpoonup {relation: $\rightharpoonup$}{}{}
+\capcs rightleftharpoons {relation: $\rightleftharpoons$}{}{}
+\capcs rightline {produce line with its text pushed to right margin}{}{}
+\capcs rightskip {glue \TeX\ inserts at the right of each line}*{}
+\capcs righthyphenmin {size of the smallest word fragment \TeX\ allows
+   after a hyphen at the end of a word, by default~3}*{}
+\capcs rlap {produce text (with no width) extending to the right
+   of the current position}{}{}
+\capcs rm {use roman type, i.e., do |\\tenrm\\fam=0|}{}{}
+\capcs rmoustache {bottom half of a large brace: $\big\rmoustache$}{}{}
+\capcs romannumeral {produce the lowercase roman numeral representation of a
+   specified number as characters}{}{}
+\capcs root {produce a specified root of a specified subformula, as in
+   $\root 3 \of 2$}{}{}
+\capcs rq {right quote character for text: \rq}{}{}
+\capcs S {section character for text: \S}{}{}
+\capcs sb {implicit subscript character}{}{}
+\capcs scriptfont {the script style font in a specified math family}*{}
+\capcs scriptscriptfont {the scriptscript style font in a specified 
+   math family}*{}
+\capcs scriptscriptstyle {use scriptscriptstyle size in a formula}*{}
+\capcs scriptspace {additional space \TeX\ kerns after a subscript or
+   superscript, by default 0.5\pt}*{}
+\capcs scriptstyle {use scriptstyle size in a formula}*{}
+\capcs scrollmode {don't stop at most errors, but do stop at errors
+   about missing files}*{}
+\capcs searrow {southeast arrow relation: $\searrow$}{}{}
+\capcs sec {secant function: $\sec$}{}{}
+\capcs setbox {define a specified box register to be a box}*{}
+\capcs setlanguage {change to a specified set of hyphenation rules, but
+   don't change |\\language|}{*}{}
+\capcs setminus {set difference operator: $\setminus$}{}{}
+\capcs settabs {define the tabs for a tabbing alignment}{}{}
+\capcs sevenbf {use $7$-point bold font, |cmbx7|}{}{}
+\capcs seveni {use $7$-point math italic font, |cmmi5|}{}{}
+\capcs sevenrm {use $7$-point roman font, |cmr7|}{}{}
+\capcs sevensy {use $7$-point symbol font, |cmsy7|}{}{}
+\capcs sfcode {the space factor code of a specified character}*{}
+\capcs sharp {sharp symbol for music: $\sharp$}{}{}
+\capcs shipout {output a box to the |.dvi| file}*{}
+\capcs show {show, in the log and 
+   on the terminal, the meaning of a specified token}*{}
+\capcs showbox {display the contents of a specified box register}*{}
+\capcs showboxbreadth {maximum number of items shown on each nesting
+   level, by default~5}*{}
+\capcs showboxdepth {maximum nesting level shown, by default~3}*{}
+\capcs showhyphens {show, in the log
+   and on the terminal, hyphenations in the specified text}{}{}
+\capcs showlists {display all lists being worked on}*{}
+\capcs showthe {show, in the log 
+   and on the terminal, what |\\the| would produce}*{}
+\capcs sigma {math Greek letter $\sigma$}{}{}
+\capcs Sigma {math Greek letter $\Sigma$}{}{}
+\capcs sim {similarity relation: $\sim$}{}{}
+\capcs simeq {similar or equal relation: $\simeq$}{}{}
+\capcs sin {sine function: $\sin$}{}{}
+\capcs sinh {hyperbolic sine function: $\sinh$}{}{}
+\capcs skew {shift a specified accent by a specified amount
+   on a specified accented character}{}{}
+\capcs skewchar {character in a specified font used for positioning accents}*{}
+\capcs skip {the specified glue register}*{}
+\capcs skipdef {define a specified control sequence to be a number
+   corresponding to a |\\skip| register}*{}
+\capcs sl {use slanted type, i.e., do |\\tensl\\fam=\\slfam|}{}{}
+\capcs slash {\slash\ character that allows a line break}{}{}
+\capcs slfam {slanted family for math}{}{}
+\capcs smallbreak {indicate somewhat desirable page break
+   with |\\penalty-50| and produce |\\smallskipamount| glue}{}{}
+\capcs smallint {small integral symbol: $\smallint$}{}{}
+\capcs smallskip {produce |\\smallskipamount| glue}{}{}
+\capcs smallskipamount {glue for a small vertical skip, by default 3\pt\
+   plus 1\pt\ minus 1\pt}{}{}
+\capcs smash {produce formula with zero height and depth}{}{}
+\capcs smile {smile relation: $\smile$}{}{}
+\capcs sp {implicit superscript character}{}{}
+\capcs space {produce normal interword glue}{}{}
+\capcs spacefactor {modifies stretch and shrink of interword glue 
+   if not 1000}*{}
+\capcs spaceskip {if nonzero and |\\spacefactor|${}<2000$, overrides
+    the normal interword glue}*{}
+\capcs spadesuit {spade suit symbol: $\spadesuit$}{}{}
+\capcs span {either combine entries in an alignment body or expand tokens in a
+   preamble}*{}
+\capcs special {write tokens to the |.dvi| file to be interpreted by a
+   DVI-reading program}*{}
+\capcs splitbotmark {last mark item in a box resulting from |\\vsplit|}*{}
+\capcs splitfirstmark {first mark item in a box resulting from
+   |\\vsplit|}*{}
+\capcs splitmaxdepth {maximum depth of a box resulting from |\\vsplit|}*{}
+\capcs splittopskip {glue \TeX\ inserts at the top of a box resulting from 
+   |\\vsplit|}*{}
+\capcs sqcap {square cap operator: $\sqcap$}{}{}
+\capcs sqcup {square cup operator: $\sqcup$}{}{}
+\capcs sqrt {produce square root of a subformula, as in $\sqrt 2$}{}{}
+\capcs sqsubseteq {square subset or equal relation: $\sqsubseteq$}{}{}
+\capcs sqsupseteq {square superset or equal relation: $\sqsupseteq$}{}{}
+\capcs ss {German letter: \ss}{}{}
+\capcs star {star operator: $\star$}{}{}
+\capcs string {produce a specified token, most commonly a control
+   sequence, as characters}*{}
+\capcs strut {box with zero width, but height and depth of a standard
+   line, from baseline to baseline, in the current font}{}{}
+\capcs subset {subset relation: $\subset$}{}{}
+\capcs subseteq {subset or equal relation: $\subseteq$}{}{}
+\capcs succ {successor relation: $\succ$}{}{}
+\capcs succeq {successor or equal relation: $\succeq$}{}{}
+\capcs sum {large summation operator: $\sum$}{}{}
+\capcs sup {superior function: $\sup$}{}{}
+\capcs supereject {force a page break, and output all insertions}{}{}
+\capcs supset {superset relation: $\supset$}{}{}
+\capcs supseteq {superset or equal relation: $\supseteq$}{}{}
+\capcs surd {surd symbol: $\surd$}{}{}
+\capcs swarrow {southwest arrow relation: $\swarrow$}{}{}
+\capcs t {tie-after accent for text, as in \t uu}{}{}
+\capcs tabalign {equivalent to |\\+|, except it's not |\\outer|}{}{}
+\capcs tabskip {glue between columns (or rows) of an alignment}*{}
+\capcs tan {tangent function: $\tan$}{}{}
+\capcs tanh {hyperbolic tangent function: $\tanh$}{}{}
+\capcs tau {math Greek letter $\tau$}{}{}
+\capcs tenbf {use $10$-point bold font, |cmbx10|}{}{}
+\capcs tenex {use $10$-point math extension font, |cmex10|}{}{}
+\capcs teni {use $10$-point math italic font, |cmmi10|}{}{}
+\capcs tenit {use $10$-point text italic font, |cmti10|}{}{}
+\capcs tenrm {use $10$-point roman text font, |cmr10|}{}{}
+\capcs tensl {use $10$-point slanted roman font, |cmsl10|}{}{}
+\capcs tensy {use $10$-point math symbol font, |cmsy10|}{}{}
+\capcs tentt {use $10$-point typewriter font, |cmtt10|}{}{}
+\capcs TeX {produce the \TeX\ logo}{}{}
+\capcs textfont {the text style font in a specified math family}*{}
+\capcs textindent {like |\\item|, but doesn't do hanging indentation}{}{}
+\capcs textstyle {use textstyle size in a formula}*{}
+\capcs the {give the value of a specified token}*{}
+\capcs theta {math Greek letter $\theta$}{}{}
+\capcs Theta {math Greek letter $\Theta$}{}{}
+\capcs thickmuskip {glue for a thick math space, by default 5\mud\ plus 5\mud}*{}
+\capcs thinmuskip {glue for a thin math space, by default 3\mud}*{}
+\capcs thinspace {kern \frac1/6\em}{}{}
+\capcs tilde {tilde accent for math, as in $\tilde x$}{}{}
+\capcs time {the time of day, in minutes since midnight}*{}
+\capcs times {times operator: $\times$}{}{}
+\capcs toks {the specified token register}*{}
+\capcs toksdef {define a specified control sequence to be a number
+   corresponding to a |\\toks| register}*{}
+\capcs tolerance {badness tolerance for line breaks with hyphenation}*{}
+\margin{{\tt\\topglue} command added; recent addition to \TeX}
+\capcs to {mapping relation: $\to$}{}{}
+\capcs top {lattice top symbol: $\top$}{}{}
+\capcs topglue {produce specified vertical glue at the
+   top of a page}{}{}
+\capcs topinsert {produce the specified text at top of a page}{}{}
+\capcs topmark {|\\botmark| before the current page was boxed}*{}
+\capcs topskip {glue between the headline and the first line of text
+   on a page, by default 10\pt}*{}
+\capcs tracingall {turn on maximal tracing}{}{}
+\capcs tracingcommands {display execution of commands}*{}
+\capcs tracinglostchars {display characters that are asked for, but not
+   defined}*{}
+\capcs tracingmacros {display macro expansions}*{}
+\capcs tracingonline {show diagnostic output on the terminal as well as in
+   the log file}*{}
+\capcs tracingoutput {display contents of shipped-out boxes}*{}
+\capcs tracingpages {display page break calculations}*{}
+\capcs tracingparagraphs {display line break calculations}*{}
+\capcs tracingrestores {display values restored at the end
+   of a group}*{}
+\capcs tracingstats {display memory usage statistics}*{}
+\capcs triangle {triangle symbol: $\triangle$}{}{}
+\capcs triangleleft {left triangle operator: $\triangleleft$}{}{}
+\capcs triangleright {right triangle operator: $\triangleright$}{}{}
+\capcs tt {use typewriter type, i.e., do |\\tentt\\fam=\\ttfam|}{}{}
+\capcs ttfam {typewriter family for math}{}{}
+\capcs ttraggedright {use typewriter type and allow right margins of
+   paragraphs to vary from line to line}{}{}
+\capcs u {breve accent for text, as in \u r}{}{}
+\capcs uccode {the character code for the uppercase form of a letter}*{}
+\capcs uchyph {if positive, consider hyphenating words that start with a
+   capital letter}*{}
+\capcs underbar {underline the specified text without avoiding
+   any descenders, as in \underbar{fog}}{}{}
+\capcs underbrace {produce a brace covering the bottom of a formula, as in
+   $\underbrace{x+x}{}$}{}{}
+\capcs underline {underline a math formula below the descenders, as in
+   $\underline{x+y}$}*{}
+\capcs unhbox {append the contents of the box
+   in a specified box
+   register to the current list, and void the register; legal only in
+   horizontal modes}*{}
+\capcs unhcopy {like |\\unhbox|, but doesn't void the register}*{}
+\capcs unkern {if the last item on the current list is a kern, remove it}*{}
+\capcs unpenalty {if the last item on the current list is a penalty, remove
+   it}*{}
+\capcs unskip {if the last item on the current list is glue, remove it}*{}
+\capcs unvbox {append the contents of the box
+   in a specified box
+   register to the current list, and void the register; legal only in
+   vertical modes}*{}
+\capcs unvcopy {like |\\unvbox|, but doesn't void the register}*{}
+\capcs uparrow {relation: $\uparrow$}{}{}
+\capcs Uparrow {relation: $\Uparrow$}{}{}
+\capcs upbracefill {fill enclosing hbox with an upwards facing brace:
+   \hbox to 3.5em{\upbracefill}}{}{}
+\capcs updownarrow {relation: $\updownarrow$}{}{}
+\capcs Updownarrow {relation: $\Updownarrow$}{}{}
+\capcs uplus {cupped plus operator: $\uplus$}{}{}
+\capcs uppercase {convert lowercase letters in the specified text
+   to uppercase}*{}
+\capcs upsilon {math Greek letter $\upsilon$}{}{}
+\capcs Upsilon {math Greek letter $\Upsilon$}{}{}
+\capcs v {check accent for text, as in \v o}{}{}
+\capcs vadjust {produce vertical mode material after the current line}*{}
+\capcs valign {align text in rows}*{}
+\capcs varepsilon {variant math Greek letter $\varepsilon$}{}{}
+\capcs varphi {variant math Greek letter $\varphi$}{}{}
+\capcs varpi {variant math Greek letter $\varpi$}{}{}
+\capcs varrho {variant math Greek letter $\varrho$}{}{}
+\capcs varsigma {variant Greek letter $\varsigma$}{}{}
+\capcs vartheta {variant math Greek letter $\vartheta$}{}{}
+\capcs vbadness {badness threshold for reporting underfull or overfull
+   vboxes, by default~1000}*{}
+\capcs vbox {produce a vbox whose baseline is that of the bottom box
+   enclosed}*{}
+\capcs vcenter {center the specified text on the math axis}*{}
+\capcs vdash {left turnstile symbol: $\vdash$}{}{}
+\capcs vdots {vertical dots for math: \smash{$\vdots$}}{}{}
+\capcs vec {vector accent for math, as in $\vec x$}{}{}
+\capcs vee {logical ``or'' operator: $\vee$}{}{}
+\capcs vert {bar relation: $\vert$}{}{}
+\capcs Vert {double bar relation: $\Vert$}{}{}
+\capcs vfil {produce infinitely stretchable vertical glue}*{}
+\capcs vfill {produce even more infinitely stretchable vertical glue
+than that produced by |\\vfil|}*{}
+\capcs vfilneg {produce infinitely negative stretchable vertical glue}*{}
+\capcs vfootnote {produce a specified footnote with a specified
+   reference mark, but don't produce the reference mark in the text}{}{}
+\capcs vfuzz {space threshold for reporting overfull vboxes, by default 
+   0.1\pt}*{}
+\capcs vglue {produce specified vertical glue
+   that doesn't disappear at page breaks}{}{}
+\capcs voffset {vertical offset relative to one inch from the 
+   paper's top edge}*{}
+\capcs vphantom {produce an invisible formula with zero width but natural
+   height and depth}{}{}
+\capcs vrule {produce a vertical rule; legal only in horizontal modes}*{}
+\capcs vsize {page height, by default 8.9\thinspace in}*{}
+\capcs vskip {produce specified vertical glue}*{}
+\capcs vsplit {break the contents of a specified box
+   register to the specified height}*{}
+\capcs vss {produce vertical glue that is infinitely stretchable and 
+   infinitely shrinkable}*{}
+\capcs vtop {produce a vbox whose baseline is that of the top box enclosed}*{}
+\capcs wd {the width of the box in a specified box register}*{}
+\capcs wedge {logical ``and'' operator: $\wedge$}{}{}
+\capcs widehat {math accent, as in $\widehat {y+z+a}$}{}{}
+\capcs widetilde {math accent $\widetilde {b+c+d}$}{}{}
+\capcs widowpenalty {penalty for a single line beginning a page, 
+   by default~150}*{}
+\capcs wlog {|\\write| the specified token list in the log file}{}{}
+\capcs wp {Weierstra\ss\ `p' symbol: $\wp$}{}{}
+\capcs wr {wreath product operator: $\wr$}{}{}
+\capcs write {write a line to a specified output stream}*{}
+\capcs xdef {equivalent to |\\global\\edef|, i.e., globally define a
+   macro, immediately expanding the replacement text}*{}
+\capcs xi {math Greek letter $\xi$}{}{}
+\capcs Xi {math Greek letter $\Xi$}{}{}
+\capcs xleaders {produce leaders with leftover space distributed equally
+   between the leader boxes}*{}
+\capcs xspaceskip {if nonzero and |\\spacefactor|${}\ge2000$, 
+   overrides the normal interword glue}*{}
+\capcs year {the current year, as a number}*{}
+\capcs zeta {math Greek letter $\zeta$}{}{}
+
+\endcapsum
+\endchapter
+\byebye

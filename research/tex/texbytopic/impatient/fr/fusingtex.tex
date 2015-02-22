@@ -1,0 +1,860 @@
+% This is part of the book TeX for the Impatient.
+% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2004 Marc Chaudemanche pour la traduction française.
+% See file fdl.tex for copying conditions.
+
+\input fmacros
+\chapter{Utiliser \TeX}
+
+\chapterdef{usingtex}
+
+% Avoid underfull box complaint about the empty paragraph
+% that precedes the first section heading.
+% 
+\def\par{{\parfillskip = 0pt plus 1fil\endgraf}\let\par=\endgraf}
+\vglue-\abovesectionskip % we've skipped enough already
+\vskip0pt % Make \combineskips work.
+
+\section Transformer la source en encre
+
+\subsection les programmes et fichiers dont vous avez besoin
+
+Afin de produire un document \TeX, vous devrez ex\'ecuter le programme \TeX\ 
+et ainsi que plusieurs programmes li\'es. Vous aurez \'egalement besoin de 
+fichiers d'aide pour \TeX\ et probablement pour ces autres programmes. Dans 
+ce livre nous ne pouvons vous renseigner qu'au sujet de \TeX, mais nous ne 
+pouvons pas vous guider \`a propos des autres programmes et des fichiers 
+d'aide except\'e en des termes tr\`es g\'en\'eraux parce qu'ils d\'ependent de votre 
+environnement \TeX\ local. Les personnes qui vous fournissent \TeX\ 
+devraient pouvoir vous fournir ce que nous appelons de l'\emph{information 
+locale}. \pix^^{information locale} L'information locale vous indique 
+comment d\'ebuter avec \TeX, comment employer les programmes li\'es et comment 
+acc\'eder aux fichiers d'aide.
+
+Le fichier source \TeX\ se compose d'un fichier texte ordinaire que 
+vous pouvez pr\'eparer avec un ^{\editeur}. Un fichier source \TeX, 
+\`a la diff\'erence d'un dossier source d'un traitement de texte 
+ordinaire, ne contient normalement aucun caract\`ere de contr\^ole 
+^^{caract\`eres de contr\^ole} invisible. Vous voyez tout ce que \TeX\ 
+voit si vous regardez le listing du fichier. 
+
+Votre fichier source peut s'av\'erer \^etre un peu plus qu'un squelette qui 
+appelle d'autres fichiers source. Les utilisateurs de \TeX\ organisent 
+souvent de grands documents tels que des livres de cette fa\c con. Vous pouvez 
+utiliser la commande ^|\input| (voir \xref\input) pour inclure un fichier source 
+dans des autres. En particulier, vous pouvez utiliser |\input| pour inclure 
+des fichiers contenant 
+des \emph{d\'efinitions de macro}---% 
+^^{macros//dans des fichiers auxiliaires } 
+d\'efinitions auxiliaires qui augmentent les possibilit\'es de \TeX. Si des 
+fichiers de macro sont disponibles sur votre installation \TeX, les 
+informations locales sur \TeX\ devraient vous indiquer comment atteindre 
+les fichiers de macro et ce qu'elles peuvent faire pour vous. Le format 
+standard de \TeX, celui d\'ecrit dans ce livre, inclut une collection de 
+macros et d'autres d\'efinitions connus sous le nom de ^{\plainTeX} 
+(voir \xref{\plainTeX}). 
+
+Quand \TeX\ ex\'ecute votre document, il produit un fichier appel\'e 
+^{\dvifile}. L'abr\'evia\-tion ``|dvi|'' repr\'esente ``device independent''. 
+L'abr\'e\-viation a \'et\'e choisie parce que l'information dans le \dvifile\ est 
+ind\'ependante du dispositif que vous utilisez pour imprimer ou afficher 
+votre document. 
+
+Pour imprimer votre document ou le regarder avec un \emph{pr\'eviewer}, 
+^^{pr\'eviewer} vous devrez traiter le ^{\dvifile} avec un programme de 
+\emph{driver de p\'eriph\'erique}. ^^{drivers de p\'eriph\'erique} (Un pr\'eviewer 
+est un programme qui vous permet de voir sur un \'ecran une approximation de 
+ce \`a quoi le r\'esultat compos\'e ressemblera.) Les diff\'erents appareils de 
+sortie exigent normalement diff\'erents drivers de p\'eriph\'erique. Apr\`es avoir 
+ex\'ecut\'e le driver de p\'eriph\'erique, vous devrez \'egalement transf\'erer le 
+r\'esultat du driver de p\'eriph\'erique vers l'impri\-mante ou tout autre 
+appareil de sortie. ^^{dispositifs de sortie} ^^{imprimantes} Les 
+informations locales sur \TeX\ devraient vous indiquer comment obtenir le 
+driver de p\'eriph\'erique correct et l'utiliser.
+
+Puisque \TeX\ n'a aucune connaissance interne des polices particuli\`eres, il 
+emploie des \emph{fichiers de polices} ^^{fichiers de polices} pour obtenir 
+les informations sur les polices utilis\'ees dans votre document. Les 
+fichiers de polices doivent \'egalement faire partie de votre  environnement 
+\TeX\ local. Chaque police exige normalement deux fichiers~: un premier 
+contenant les dimensions des caract\`eres dans la police (le \emph{fichier 
+de m\'etriques}) ^^{fichiers de m\'etriques} et un contenant les formes des 
+caract\`eres (le \emph{fichier de formes}). ^^{fichier de formes} Les 
+versions magni\-fi\'ees d'une police partagent les m\'etriques mais ont 
+diff\'erents dossiers de forme. ^^{magnification} Les fichiers de m\'etriques
+sont d\'esign\'es parfois sous le nom de \tfmfiles ^^{\tfmfile}, et les diff\'erentes 
+vari\'et\'es de fichiers de forme sous le nom de \pkfiles ^^{\pkfile}, \pxlfiles\ ^^{\pxlfile} et 
+\gffiles ^^{\gffile}. Ces noms correspondent aux noms des dossiers que \TeX\ et ses 
+programmes compagnons utilisent. Par exemple, |cmr10.tfm| est le dossier de 
+m\'etrique pour la police |cmr10| (Computer Modern Romain 10 point).
+
+\TeX\ lui-m\^eme n'utilise que le fichier des m\'etriques, puisqu'il ne g\`ere 
+pas le dessin des caract\`eres mais seulement l'espace qu'ils occupent. Le 
+driver de p\'eriph\'erique utilise d'habitude le fichier de forme, puisqu'il 
+est responsable de la cr\'eation de l'image imprim\'ee de chaque caract\`ere 
+compo\-s\'e. Quelques drivers de p\'eriph\'erique doivent aussi utiliser le fichier 
+de m\'etrique. Quelques drivers de p\'eriph\'erique peuvent utiliser les polices 
+r\'esidentes d'une imprimante et n'ont pas besoin des fichiers de forme pour 
+ces polices. 
+%\secondprinting{\vfill\eject}
+
+
+\subsection ex\'ecuter {\TeX}
+
+\bix^^{ex\'ecuter \TeX}
+Vous pouvez lancer \TeX\ sur un fichier source |screed.tex| en saisissant 
+^^{fichier source} quelque chose comme `|run tex|' ou juste 
+`|tex|'(v\'erifiez votre information locale). \TeX \ r\'epondra par quelque 
+chose comme~:
+% 4/23/90 is Shakespeare's 426th birthday, and Karl's 26th.
+\csdisplay
+This is TeX, Version 3.0 (preloaded format=plain 90.4.23)
+**
+|
+Le ``format pr\'echarg\'e'' ici correspond \`a une forme pr\'edig\'er\'ee de macros 
+^{\plainTeX} livr\'ee avec \TeX. Vous pouvez maintenant saisir `|screed|' pour 
+que \TeX\ traite votre dossier. Quand cela est fait, vous verrez quelque 
+chose comme~:
+\csdisplay
+(screed.tex [1] [2] [3] )
+Output written on screed.dvi (3 pages, 400 bytes).
+Transcript written on screed.log.
+|
+affich\'e sur votre terminal, ou imprim\'e dans votre \logfile\  si vous ne 
+travaillez pas sur un terminal. La majeure partie de ce r\'esultat est 
+explicite. Les nombres entre crochets sont des num\'eros de page que \TeX 
+\ affiche quand il charge chaque page de votre document dans le \dvifile. 
+\TeX\ mettra normalement une extention `|.tex|' \`a un nom de fichier source 
+si celui que vous avez donn\'e n'en a pas. Pour quelques formes de \TeX\ vous 
+devez pouvoir appeler \TeX\ directement pour un fichier source en 
+saisissant~: 
+\csdisplay
+tex screed
+|
+ou quelque chose comme \c ca.
+
+Au lieu de fournir votre source \TeX\ \`a partir d'un fichier, vous pouvez le 
+saisir directement sur votre terminal. Pour faire ainsi, saisissez 
+`^|\relax|' au lieu de `|screed|' au prompt `|**|'. \TeX\ vous incitera 
+dor\'enavant avec un `|*|' pour chaque ligne saisie et interpr\'etera chaque 
+ligne saisie comme il la verra. Pour terminer la saisie, tapez une commande 
+telle que `|\bye|' qui indique \`a \TeX\ que vous avez fini. La saisie 
+directe est parfois une mani\`ere pratique d'exp\'erimenter avec \TeX. 
+
+Quand votre fichier de saisie contient d'autres fichiers de saisie 
+imbri\-qu\'es, les informations affich\'ees indiquent quand \TeX\ commence et finit 
+de traiter chaque fichier imbriqu\'e. 
+^^{fichiers d'entr\'ee//imbriqu\'e}
+\xrdef{infiles}
+\TeX\ affiche une parenth\`ese gauche et le nom du fichier quand il commence 
+\`a travailler sur un fichier et affiche la parenth\`ese droite correspondante 
+quand il en a fini avec le fichier. Si vous recevez n'importe quel 
+^{message d'erreur} dans la sortie affich\'ee, vous pouvez les associer avec 
+un fichier en recherchant la parenth\`ese gauche la plus r\'ecemment ouverte. 
+
+Pour une explication plus compl\`ete de la fa\c con de faire marcher \TeX, voir 
+le \knuth{chapitre~6}{} et votre ^{assistance informatique locale}. 
+\eix^^{ex\'ecuter \TeX}
+
+
+\section Pr\'eparer un fichier source
+
+Dans cette section nous expliquons certaines des conventions que vous devez 
+suivre en pr\'eparant le source pour \TeX\null. Une partie de l'information 
+fournie ici appara\^\i t \'egalement dans les exemples dans la 
+\chapterref{examples} de ce livre. 
+^^{source, pr\'eparer}
+
+\subsection Commandes et s\'equences de contr\^ole
+
+\bix^^{commandes}
+\bix^^{s\'equences de contr\^ole}
+Une source \TeX\ se compose d'une s\'equence de commandes qui indique \`a 
+\TeX\ comment composer votre document. La plupart des caract\`eres agissent 
+en tant que commandes d'un genre particuli\`erement simple~: \break``compose-moi''. 
+La lettre `|a|', par exemple, est une commande pour composer un `a'. Mais 
+il y a un autre genre de commande---une \emph{s\'equence de contr\^ole}---
+qui donne \`a \TeX\ des instructions plus raffin\'ees. Une s\'equence de 
+contr\^ole commence d'habitude par un antislash (|\|), bien que vous 
+puissiez changer cette convention si vous en avez besoin. 
+\xrdef{@backslash}
+Par exemple, le source~:
+\csdisplay
+She plunged a dagger (\dag) into the villain's heart.
+|
+contient la s\'equence de contr\^ole |\dag|; elle produit la composition~: 
+\display{%
+She plunged a dagger (\dag) into the villain's heart.
+}
+\noindent Tout dans cet exemple except\'e le |\dag| et les  espaces agissent 
+comme une commande ``compose-moi''. Nous en expliquerons plus au sujet des 
+espaces \xrefpg{espaces}. 
+
+Il y a deux sortes de s\'equences de contr\^ole~: les \emph{mots de contr\^ole}
+^^{mots de contr\^ole}
+et les \emph{symboles de contr\^ole}
+^^{symboles de contr\^ole}
+\ulist\compact
+\li Un mot de contr\^ole se compose d'un antislash suivi d'une ou plusieurs 
+lettres, par exemple, `|\dag|'. Le premier caract\`ere qui n'est pas une 
+lettre marque la fin du mot de contr\^ole. 
+\li Un symbole de contr\^ole se compose d'un antislash suivi d'un caract\`ere 
+simple qui n'est pas une lettre, par exemple, `|\$|'. le caract\`ere peut 
+\^etre un espace ou m\^eme l'extr\'emit\'e d'une ligne (qui est un caract\`ere 
+parfaitement l\'egitime). 
+\endulist
+\noindent
+Un mot de contr\^ole (mais pas un symbole de contr\^ole) absorbe tous les 
+espaces ou fins de ligne qui le suivent. 
+^^{s\'equences de contr\^ole//absorbent les espaces} 
+Si vous ne voulez pas perdre d'espace 
+apr\`es un mot de contr\^ole, faites suivre la commande par un ^{espace 
+contr\^ol\'e} (|\!visiblespace|) ou par `|{}|'. ainsi~: 
+\csdisplay
+The wonders of \TeX\!visiblespace!.shall never cease!!
+|
+ou~:\hfil\ 
+\csdisplay
+The wonders of \TeX{} shall never cease!!
+|
+produisent~:
+\display{%
+The wonders of \TeX{} shall never cease!
+}
+\noindent plut\^ot que~:
+\display{%
+The wonders of \TeX shall never cease!
+}
+\noindent
+qui est ce que vous obtenez si vous enlevez `|\|\visiblespace' ou `|{}|'.
+
+Ne faites pas suivre un mot de contr\^ole par le texte qui le suit---\TeX\ ne 
+saura pas o\`u le mot de commande finit. Par exemple, la s\'equence de 
+contr\^ole |\c| place une c\'edille sur le caract\`ere qui le suit. Le mot 
+fran\c cais {\it gar\c con\/} doit \^etre saisi ainsi 
+`|gar\c!visiblespace!.con|', et non `|gar\ccon| '; si vous \'ecrivez cela, 
+\TeX\ se plaindra au sujet d'une s\'equence de contr\^ole |\ccon| non d\'efinie.
+
+Un symbole de contr\^ole, par contre, n'absorbe rien de ce qui le suit. Ainsi 
+vous devez saisir `\$13.56' ainsi `|\$13.56|', et non `|\$!vs13.56|'; la 
+derni\`ere forme produirait `\hbox{\$ 13.56}'. Cependant, ces commandes 
+d'accent appel\'ees par des symboles de contr\^ole sont d\'efinies de telle 
+fa\c con qu'elles absorbent l'espace suivant. Ainsi, par exemple, vous 
+pouvez saisir le mot {\it d\'eshabiller\/} comme `|d\'eshabiller|' ou comme 
+`|d\'!visiblespace!.eshabiller|'.
+
+Chaque s\'equence de contr\^ole est \'egalement une commande, mais la proposition inverse 
+n'est pas vraie.
+^^{commandes//versus s\'equences de contr\^ole}
+^^{s\'equences de contr\^ole//versus commandes}
+Par exemple, la lettre `|N|' est une commande, mais pas une s\'equence de 
+contr\^ole. Dans ce livre nous utilisons normalement ``commande'' plut\^ot que 
+``s\'equence de contr\^ole'' quand l'un ou l'autre convient. Nous employons 
+``s\'equence de contr\^ole'' quand nous voulons souligner les aspects de la 
+syntaxe de \TeX\ qui ne s'appliquent pas aux commandes en g\'en\'eral. 
+\eix^^{s\'equences de contr\^ole} 
+\eix^^{commandes}
+
+
+\subsection Arguments
+
+\xrdef{arg1}
+Quelques commandes doivent \^etre suivies d'un ou plusieurs 
+\emph{arguments} ^^{arguments}
+qui aident \`a d\'eterminer ce que fait la commande. Par exemple, la commande 
+|\vskip|, qui indique \`a \TeX\ de sauter vers le bas (ou le haut) de la 
+page, s'attend \`a un argument indiquant de combien d'espace sauter. Pour 
+sauter en bas de deux pouces, vous saisirez `|\vskip 2in|', o\`u |2in| est 
+l'argument de |\vskip|. 
+
+Diff\'erentes commandes s'attendent \`a des genres d'arguments diff\'erents. 
+Beaucoup de commandes attendent des dimensions, telles que le |2in| dans 
+l'exemple ci-dessus. Quelques commandes, en particulier celles d\'efinies par des 
+macros, s'attendent \`a des arguments qui sont soit un caract\`ere simple ou un 
+texte inclus entre accolades. Pourtant d'autres exigent que leurs arguments 
+soient enferm\'es entre accolades, c'est-\`a-dire, qu'elles n'acceptent pas d'arguments 
+sous forme de caract\`ere simple. La description de chaque commande de ce livre vous indique 
+quels genres d'ar\-guments, le cas \'ech\'eant, la commande attend. Dans certains 
+cas, les accolades exig\'ees d\'efinissent un groupe (voir \xref{bracegroup}).
+
+%\secondprinting{\vfill\eject}
+
+
+\subsection Param\`etres
+
+\xrdef{introparms}
+Certaines commandes sont des param\`etres (voir \xref{param\`etre}).
+^^{param\`etres//comme commandes}
+Vous pouvez utiliser un param\`etre de deux fa\c cons~:
+\olist
+\li Vous pouvez utiliser la valeur d'un param\`etre 
+comme argument d'une autre commande.  Par exemple, la commande
+\hbox{|\vskip\parskip|}
+pro\-voque un saut vertical de la valeur du param\`etre de ressort |\parskip|. (saut de paragraphe)
+\li Vous pouvez changer la valeur du param\`etre en lui assignant
+quelque chose.  Par exemple, l'assignation \hbox{|\hbadness=200|}
+met la valeur du nombre du param\`etre |\hbadness| \`a $200$.
+\endolist
+\noindent
+Nous utilisons aussi le terme ``param\`etre'' pour faire r\'ef\'erence aux entit\'es telle que |\pageno|
+qui sont normalement des registres mais se comportent comme des param\`etres.
+^^{registres//param\`etres comme}
+
+Certaines commandes sont des noms des tables. Ces commandes sont employ\'ees comme 
+des param\`etres, sauf qu'elles exigent un argument additionnel qui indique une 
+entr\'ee particuli\`ere dans la table. Par exemple, |\catcode| appelle une table 
+de codes de cat\'egorie (voir \xref{codes de cat\'egorie}). Ainsi la commande 
+\hbox{|\catcode`~=13|} place le code de cat\'egorie du caract\`ere `|~|' \`a $13$.
+
+
+\subsection Espaces
+
+\xrdef{espaces}
+\bix^^{espace}
+Vous pouvez librement employer les espaces suppl\'ementaires dans votre 
+source. Dans presque toutes les circonstances \TeX\ traite plusieurs 
+espaces d'une rang\'ee comme \'etant \'equivalents \`a un espace simple. 
+Par exemple, il n'importe pas que vous mettiez un ou deux espaces apr\`es 
+un ^{point} dans votre saisie. Quoique vous fassiez, \TeX\ ex\'ecute ses 
+man\oe uvres de fin de phrase et laisse (dans la plupart des cas) la place 
+appropri\'ee apr\`es le point. \TeX\ traite \'egalement la fin d'une ligne 
+de source comme \'equivalente \`a un espace. Ainsi vous pouvez finir vos 
+lignes de source partout o\`u cela vous arrange --- % 
+\TeX\ transforme des lignes de source en paragraphes de la m\^eme fa\c con 
+quelles que soient les coupures de ligne dans votre source.
+
+Une ligne blanche dans votre source marque la fin d'un paragraphe.
+^^{paragraphes//terminer un}
+Plusieurs lignes blanches sont \'equivalentes \`a une seule ligne.
+
+\TeX\ ignore les espaces du source dans les formules math\'ematiques (voir 
+ci-dessous). Ainsi vous pouvez inclure ou omettre des espaces n'importe 
+o\`u dans une formule math\'ematique --- \TeX\ ne s'en inqui\`ete pas. M\^eme 
+dans une formule math\'ematique, cependant, vous ne devez pas relier un mot 
+de contr\^ole avec la lettre qui le suit.
+
+Si vous d\'efinissez vos propres macros, vous devez faire 
+particuli\`erement attention o\`u vous mettez les fins de ligne dans les 
+d\'efinitions. Il est tr\`es facile de d\'efinir une macro qui produit un 
+^{espace non d\'esir\'e} en plus de ce qu'elle est cens\'ee produire. Nous 
+discuterons de ce probl\`eme ailleurs parce qu'il est quelque peu technique 
+(voir \xrefpg{unwantedspace}.
+
+Un espace ou son \'equivalent entre deux mots dans votre source ne se 
+transforme pas simplement en caract\`ere d'espace dans votre r\'esultat. 
+Quelques-uns de ces espaces du source se transforment en fins des lignes 
+dans le r\'esultat, puisque, g\'en\'eralement, les lignes du source ne 
+correspondent pas aux lignes du r\'esultat. Les autres se transforment en 
+espaces de largeur variable appel\'es ``ressort'' (\xref{ressort}), qui ont une 
+taille normale (la taille qu'il ``veut avoir'') mais qui peut s'\'etendre 
+ou se r\'etr\'ecir. Quand \TeX\ compose un paragraphe qui est cens\'e avoir 
+une marge \`a droite (le cas habituel), il ajuste les largeurs des ressorts de 
+chaque ligne pour obtenir que les lignes de terminent sur la marge. (la 
+derni\`ere ligne d'un paragraphe est une exception, puisqu'on n'exige pas 
+d'habitude qu'elle finisse sur la marge droite.)
+
+Vous pouvez emp\^echer un espace du source de se transformer en fin de 
+ligne en employant un ^{tilde} (^|~|). par exemple, vous ne voulez pas que 
+\TeX\ mette une coupure de ligne entre le `Fig.' et le `8' du `Fig.~8'. En 
+saisissant `|Fig.~8|' vous pouvez emp\^echer une telle coupure de ligne.
+\eix^^{espace}
+\needspace{2in}
+
+\subsection Commentaires
+
+\xrdef{commentaires}
+\pix\bix^^{commentaires}
+Vous pouvez ins\'erer des commentaires dans votre source \TeX. Quand \TeX\ 
+voit un commentaire il passe simplement au-dessus de lui, ainsi ce qui est dans un 
+commentaire n'affecte pas votre document final de quelque fa\c con. Les 
+commentaires sont utiles pour fournir des informations suppl\'emen\-taires 
+sur le contenu de votre fichier source. Par exemple~:
+\csdisplay
+% ========= Start of Section `Hedgehog' =========
+|
+
+{\indexchar % }%
+Un commentaire commence par un signe de pourcentage (|%|) et se prolonge 
+jusqu'\`a la fin de la ligne du source. \TeX\ n'ignore pas simplement le 
+commentaire mais aussi la fin de la ligne, ainsi des commentaires ont une 
+autre utilisation tr\`es importante~: relier deux lignes de sorte que la 
+fin de ligne 
+^^{coupures de ligne//effacer une} 
+entre elles soit invisible \`a \TeX\ et ne produise pas d'espace dans le 
+rendu ou de fin de ligne. Par exemple, si vous saisissez~: 
+\csdisplay
+A fool with a spread%
+sheet is still a fool.
+|
+vous obtiendrez~:
+\display{
+A fool with a spread%
+sheet is still a fool.
+}
+\eix^^{commentaires}
+
+
+\subsection Ponctuation
+
+\null
+\xrdef{periodspacing}
+\TeX\ ajoute normalement un espace suppl\'ementaire apr\`es ce qu'il pense 
+\^etre une marque de ^{ponctuation} \`a la fin d'une phrase, \`a savoir, 
+`^|.|', `^|?|' ou `|!!|' \indexchar ! 
+^^{point} ^^{point d'interrogation} ^^{point d'exclamation} 
+suivi d'un espace saisi. \TeX\ n'ajoute pas d'espace suppl\'ementaire si le 
+signe de ponctuation suit une lettre majuscule, parce qu'il pense que la 
+majuscule est l'initiale d'un nom quelconque. Vous pouvez forcer un espace 
+suppl\'ementaire l\`a o\`u il ne se produirait pas autrement en saisissant 
+quelque chose comme~:
+\csdisplay
+A computer from IBM\null?
+|
+|\null| ne produit aucun r\'esultat, mais il emp\^eche \TeX\ d'associer la 
+capitale `M' avec le point d'interrogation. D'autre part, vous pouvez effacer
+l'espace suppl\'ementaire l\`a o\`u il ne doit pas appara\^\i tre en saisissant 
+un espace command\'e apr\`es le signe de ponctuation, par exemple~:
+\csdisplay
+Proc.\!visiblespace!.Royal Acad.\!visiblespace!.of Twits
+|
+permet d'obtenir~:
+\display{Proc.\ Royal Acad.\ of Twits}
+\noindent plut\^ot que~:
+\display{Proc. Royal Acad. of Twits}
+
+Certains pr\'ef\`erent ne pas laisser plus d'espace apr\`es une ponctuation 
+\`a la fin d'une phrase. Vous pouvez obtenir cet effet avec la commande 
+^|\frenchspacing| (voir \xref\frenchspacing). |\frenchspacing| est souvent 
+recomman\-d\'ee pour les ^{bibliographies}.
+
+Pour les ^{marques de citation} simples, vous devez employer les quotes 
+simples gauches et droites (|`| et |'|) sur votre clavier. Pour les 
+guillemets doubles gauches et droits, utilisez deux quotes simples gauches 
+ou droites (|``| ou |''|) plut\^ot que la double quote (|"|) 
+sur votre clavier. La double quote du clavier vous donnera en fait une 
+double marque de citation droite dans beaucoup de polices, mais les deux 
+simples quotes droites sont le style pr\'ef\'er\'e de \TeX. Par exemple~:
+
+\vbox{%
+\csdisplay
+There is no `q' in this sentence.
+``Talk, child,'' said the Unicorn.
+She said, ``\thinspace`Enough!!', he said.''
+|
+}%
+Ces trois lignes donnent~:
+\display{\par\restoreplainTeX
+There is no `q' in this sentence.
+\par ``Talk, child,'' said the Unicorn.
+\par She said, ``\thinspace`Enough!', he said.''
+}
+\noindent
+|\thinspace| dans la troisi\`eme ligne du source emp\^eche la quote 
+simple de venir trop pr\`es du guillemet double. Sans lui, vous verriez juste 
+trois guillemets presque \'equidistants \`a suivre.
+
+\TeX\ a trois sortes de ^{tirets}~:
+\ulist\compact
+\li un court (trait d'union) comme ceci ( - ). vous l'obtenez en saisissant~`^|-|'.
+\li un moyen (demi-cadratin) comme ceci ( -- ). vous l'obtenez en saisissant~`^|--|'.
+\li un long (cadratin) comme ceci ( --- ). vous l'obtenez en saisissant~`^|---|'.
+\endulist
+\noindent Typiquement, vous utiliserez les traits d'union pour indiquer les 
+mots compos\'es comme ``will-o'-the-wisp'', les demi-cadratins d\'esigneront 
+les suites de page telles que ``pages~81--87'', et les cadratins 
+d\'esigneront une coupure dans la continuit\'e---comme ceci.
+
+
+\subsection Caract\`eres sp\'eciaux
+
+Certains caract\`eres ont une signification sp\'eciale en 
+\TeX, donc vous ne devez pas les utiliser dans du texte ordinaire. Ce sont~:
+
+\csdisplay
+    $  #  &  %  _  ^  ~  {  }  \
+|
+^^|$//en texte ordinaire|
+^^|#//en texte ordinaire|
+^^|&//en texte ordinaire|
+^^|_//en texte ordinaire|
+^^|^//en texte ordinaire|
+^^|~//en texte ordinaire|
+^^|%//en texte ordinaire|
+^^|{//en texte ordinaire|
+^^|}//en texte ordinaire|
+{\recat!ttidxref[\//en texte ordinaire]]
+\noindent Afin de les produire dans votre document de sortie, vous devez 
+utiliser des circumlocutions. Pour les cinq premiers, vous devez saisir \`a 
+la place~:
+^^|\$|
+^^|\#|
+^^|\&|
+^^|\%|
+^^|\_|
+\csdisplay
+    \$  \#  \&  \%  \_
+|
+
+\noindent
+Pour les autres, vous avez besoin de quelque chose de plus raffin\'e~:
+
+\csdisplay
+   \^{!visiblespace}   \~{!visiblespace}   $\{$   $\}$   $\backslash$
+|
+
+
+\subsection Groupes
+
+\bix^^{groupes}
+Un \emph{groupe} se compose de code source inclus entre des accolades
+gauches et droites (|{| et |}|).
+^^|{//d\'ebuter un groupe|
+^^|}//terminer un groupe|
+En pla\c cant une commande dans un groupe, vous pouvez limiter ses effets au 
+code source compris dans ce groupe. Par exemple, la commande |\bf| indique \`a \TeX\ 
+de placer quelque chose en {\bf caract\`eres gras}. Si vous deviez 
+mettre |\bf| dans votre source et ne rien faire autrement pour le contrecarrer, 
+tout dans votre document suivant le |\bf| serait plac\'e en caract\`eres gras. En 
+enfermant le |\bf| dans un groupe, vous limitez son effet au groupe. Par 
+exemple, si vous saisissez~: 
+\csdisplay
+We have {\bf a few boldface words} in this sentence.
+|
+\noindent vous obtiendrez~:
+\display{We have {\bf a few boldface words} in this sentence.}
+
+\noindent Vous pouvez \'egalement utiliser un groupe pour limiter l'effet 
+d'une t\^ache \`a un des param\`etres de \TeX. Ces param\`etres contiennent des 
+valeurs qui affectent la fa\c con dont \TeX\ compose votre document. Par 
+exemple, la valeur du param\`etre |\parindent| indique l'indentation au d\'ebut 
+d'un paragraphe. L'assignation |\parindent = 15pt| place l'indentation \`a 
+$15$ points d'imprimeur. En pla\c cant cette assignation au d\'ebut d'un groupe 
+contenant plusieurs paragraphes, vous pouvez changer l'impression de ces 
+seuls paragraphes. Si vous n'enfermez pas l'assignation dans un groupe, le 
+changement d'indentation s'appliquera au reste du document (ou jusqu'\`a la 
+prochaine assignation de |\parindent|, s'il y en a une apr\`es).
+
+\xrdef{bracegroup}
+Toutes les paires d'accolades n'indiquent pas un groupe. En particulier, 
+les accolades associ\'ees \`a un argument pour lequel elles ne sont 
+\emph{pas} exig\'ees n'indiquent pas un groupe---elles ne servent qu'\`a 
+d\'elimiter l'argument. De ces commandes qui exigent des accolades pour leurs 
+arguments, certaines traitent les accolades pour d\'efinir un groupe et 
+d'autres interpr\`etent l'argument d'une mani\`ere sp\'eciale qui d\'epend de la 
+commande\footnote{plus pr\'ecis\'ement, pour les commandes primitives, soit 
+les accolades d\'efinissent un groupe, soit elles enferment les tokens qui ne 
+sont pas trait\'ees dans l'estomac de \TeX. Pour |\halign| et |\valign| le 
+groupe a un effet trivial parce que rien de ce qui est entre accolades 
+n'atteint l'estomac (parce que c'est dans le mod\`ele) ou est inclus dans un 
+nouveau groupe plus profond.
+^^|\halign//grouper pour|
+^^|\valign//grouper pour|
+}.
+\eix^^{groupes}
+
+
+\subsection formules math\'ematiques
+
+\bix^^{math\'ematiques}
+\xrdef{mathform}
+Une formule math\'ematique peut appara\^\i tre dans du \emph{texte math\'ematique}
+^^{texte math\'ematique}
+ou se placer sur une ligne s\'epar\'ee par de l'espace 
+vertical suppl\'e\-mentaire autour d'elle (\emph{math\'ematiques affich\'ees}). 
+^^{math\'ematiques affich\'ees} 
+Vous enfermez le texte d\' une formule entre des signes dollar simples 
+(|$|) et une formule affich\'ee entre des signes dollars doubles (|$$|). 
+\ttidxref{$}\ttidxref{$$} 
+Par exemple~:
+
+\csdisplay
+If $a<b$, then the relation $$e^a < e^b$$ holds.
+|
+\noindent Ce source produit~:
+\display{\centereddisplays
+If $a<b$, then the relation $$e^a < e^b$$ holds.}
+\smallskip
+\noindent la \chapterref{math} d\'ecrit les commandes utiles dans les 
+formules math\'ematiques.
+\eix^^{math\'ematiques}
+
+
+\section Comment marche {\TeX}
+
+Afin d'utiliser \TeX\ efficacement, il est utile d'avoir une id\'ee de la 
+fa\c con dont \TeX\ organise son activit\'e de transmutation d'entr\'ee en 
+r\'esultat. Vous pouvez imaginer \TeX\ comme une sorte d'organisation avec 
+des ``yeux'', une ``bouche'', un ``\oe sophage'', un ``estomac'' et un 
+``intestin''. Chaque partie de l'organisation transforme son entr\'ee d'une 
+certaine fa\c con et passe l'entr\'ee transform\'ee \`a la prochaine \'etape.
+
+Les ^{yeux} transforment un fichier d'entr\'ee en s\'equence de caract\`eres. La 
+^{bouche} transforme la s\'equence de caract\`eres en s\'equence de \emph{tokens}, 
+^^{tokens} 
+o\`u chaque token est un caract\`ere simple ou une s\'equence de contr\^ole.
+^^{s\'equences de contr\^ole//comme tokens} 
+L'\oe sophage d\'eveloppe les tokens
+s\'equence de \emph{commandes primitives}, qui sont \'egalement des tokens. 
+^^{d\'evelopper des tokens} 
+L'^{estomac} effectue les op\'erations indiqu\'ees par les 
+commandes primitives, produisant une s\'equence de pages. 
+Finalement, l'^{intestin} transforme chaque page dans la forme requise 
+pour le \dvifile\ et l'y envoit. 
+^^{\dvifile//cr\'e\'e par l'intestin de \TeX} 
+Ces actions sont d\'ecrites en plus d\'etail dans la \chapterref{concepts} sous 
+\conceptcit{\anatomy}. 
+^^{\anatomy}
+
+La vraie composition est r\'ealis\'ee dans l'estomac. Les commandes 
+demandent \`a \TeX\ de composer tel caract\`ere dans telle 
+police, d'ins\'erer de l'espace entre les mots, de finir un paragraphe et 
+ainsi de suite. En commen\c cant par des caract\`eres compos\'es individuellement 
+et d'autres \'el\'ements typographiques simples, \TeX\ construit une page 
+^^{pages} comme un ensemble de ^{\boites} de bo\^\i tes de bo\^\i tes. 
+\seeconcept{\boites}. Chaque caract\`ere compos\'e occupe une bo\^\i te, et l'ensemble 
+fait une page enti\`ere. Une bo\^\i te peut contenir des bo\^\i tes plus petites 
+mais aussi des ^^{ressort} \emph{ressorts} (\xref{ressort}) et autres 
+diverses choses. Les ressorts produisent de l'espace entre les cases les plus 
+petites. Une propri\'et\'e importante des ressorts est qu'ils peuvent s'\'etendre et 
+se r\'etr\'ecir~; ainsi \TeX\ peut rendre une bo\^\i te plus grande ou plus petite 
+en \'etirant ou en r\'etr\'ecissant les ressorts.
+
+En g\'en\'eral, une ligne est une bo\^\i te contenant une suite de bo\^\i 
+tes de caract\`eres, et une page est une bo\^\i te contenant une suite de 
+bo\^\i tes de lignes. Il y a des ressorts entre les mots d'une ligne et 
+entre les lignes d'une page. \TeX\ \'etire ou r\'etr\'ecit les ressorts sur 
+chaque ligne afin de justifier une marge droite sur la page et les ressorts de 
+chaque page afin de faire des marges inf\'erieures des diff\'erentes pages 
+\'egales. D'autres genres d'\'el\'ements typographiques peuvent \'egalement 
+appara\^\i tre dans une ligne ou sur une page, mais nous ne les traiterons 
+pas ici.
+
+En tant que processus d'assemblage de pages, \TeX\ \`a besoin de couper des 
+paragraphes en lignes et des lignes en pages. En effet, l'estomac voit 
+d'abord un paragraphe comme une longue ligne. Il ins\`ere des 
+\emph{coupures de ligne} 
+^^{coupures de ligne} 
+afin de transformer le paragraphe en s\'equence de lignes de la bonne 
+longueur, ex\'ecutant une analyse plut\^ot raffin\'ee afin de choisir 
+l'ensemble de coupures qui semble la meilleure pour le paragraphe 
+\seeconcept{coupure de ligne}. L'estomac suit un processus semblable mais plus simple 
+afin de transformer une s\'equence de lignes en page. Essentiellement 
+l'estomac accumule des lignes jusqu'\`a ce que plus aucune ligne ne 
+puisse rentrer dans la page. Il choisit alors un endroit simple pour 
+couper la page, en mettant les lignes avant la coupure sur la page courante 
+et en sauvant les lignes apr\`es la coupure pour la page suivante 
+\seeconcept{coupure de page}. 
+^^{coupures de page//ins\'er\'ees par l'estomac de \TeX}
+
+Quand \TeX\ assemble un \'el\'ement d'une liste d'articles (bo\^\i tes, ressorts, 
+etc.), il est dans un des six \emph{modes} ^^{modes} (\xref{mode}). Le genre 
+d'entit\'e qu'il assemble d\'efinit le mode dans lequel il est. Il y a deux modes 
+ordinaires~: le mode horizontal ordinaire pour l'assemblage des paragraphes
+(avant qu'ils ne soient coup\'es en lignes) et le mode vertical ordinaire pour 
+l'assemblage des pages. Il y a deux modes internes~: le mode horizontal interne 
+pour assembler des articles horizontalement pour former une bo\^\i te horizontale et 
+un mode vertical interne pour assembler des articles verticalement pour former une 
+bo\^\i te verticale (autre qu'une page). Finalement, il y a deux modes math\'ematiques~: 
+le mode math\'ematique de texte pour des formules de maths s'assemblant dans un 
+paragraphe et le mode math\'ematique d'affichage pour les formules math\'ematiques qui 
+sont affich\'ees sur des lignes seules (voir ``formules math\'ematiques'', 
+\xref{mathform}).
+
+
+\section Nouveau \TeX\ contre ancien {\TeX}
+
+\xrdef{newtex}
+
+En 1989, Knuth a fait une r\'evision importante de \TeX\ afin de 
+l'adapter aux jeux de caract\`eres n\'ecessaires \`a la composition des 
+langues autres que l'anglais.\space ^^{langues \'etrang\`eres}
+
+Cette r\'evision inclut quelques fonctions suppl\'ementaires mineures 
+qui peuvent \^etre ajout\'ees sans d\'eranger autre chose. Ce livre 
+d\'ecrit le ``^{\newTeX}''. Si vous utilisez toujours une version plus 
+ancienne de \TeX\ (version $2.991$ ou ant\'erieure), vous devez savoir 
+quels dispositifs du {\newTeX} vous ne pouvez utiliser. Les fonctions 
+suivantes ne sont pas disponibles dans les versions ant\'erieures~:
+
+\ulist\compact
+\li ^|\badness| (\xref\badness)
+\li ^|\emergencystretch| (\xref\emergencystretch)
+\li ^|\errorcontextlines| (\xref\errorcontextlines)
+\li ^|\holdinginserts| (\xref\holdinginserts)
+\li ^|\language|, ^|\setlanguage| et |\new!-lan!-guage|
+(\pp\xrefn\language, \xrefn{\@newlanguage}) ^^|\newlanguage|
+\li ^|\lefthyphenmin| et ^|\righthyphenmin| (\xref\lefthyphenmin)
+\li ^|\noboundary| (\xref\noboundary)
+\li ^|\topglue| (\xref\topglue)
+\li la notation |^^|$xy$ pour les chiffres hexad\'ecimaux (\xref{hexchars})
+\endulist
+\noindent
+Nous vous recommandons de vous procurer le nouveau \TeX\ si vous le pouvez. 
+
+\section Ressources
+
+\xrdef{ressources}
+Un certain nombre de ressources sont disponibles pour vous aider \`a utiliser \TeX. 
+\texbook\ est la source d\'efinitive d'information sur \TeX~: 
+
+\smallskip
+{\narrower\noindent
+^{Knuth, Donald E.}, \texbook.  Reading, Mass.: Addison-Wesley, 1984.\par}
+\smallskip
+\noindent
+Assurez-vous de bien obtenir la dix-septi\`eme \'edition (janvier 1990) ou plus; 
+les \'editions pr\'ec\'edentes ne couvrent pas les dispositifs du nouveau \TeX. 
+
+^{\LaTeX} est une collection de commandes tr\`es populaire con\c cues pour 
+simplifier l'utilisation de \TeX. Il est d\'ecrit dans~: 
+\smallskip
+{\narrower\noindent\frenchspacing\spaceskip = 3.33pt plus 2pt minus 1.2pt
+^{Lamport, Leslie}, {\sl The \LaTeX\ Document Preparation System}.
+Reading, Mass.: Addison-Wesley, 1986.\par}
+\smallskip
+\noindent
+^{\AMSTeX} est la collection de commandes adopt\'ees par l'American Mathematical
+Society comme norme pour soumettre de mani\`ere \'electronique des manuscrits math\'ematiques. 
+Il est d\'ecrit dans~: 
+\smallskip
+{\narrower\noindent
+^{Spivak, Michael~D.}, {\sl The Joy of \TeX}. Providence, R.I.:
+American Mathematical Society, 1986.
+\par}
+\smallskip
+\noindent
+Vous pouvez joindre le ^{\TUG} (TUG), qui \'edite un bulletin appel\'e 
+{\it ^{TUGBoat}}. Le TUG est une excellente source d'informations non 
+seulement sur \TeX\ mais \'egalement pour des collections de macros, 
+y compris \AMSTeX. Son adresse est~: 
+\smallskip
+{\obeylines
+^{\TUG}
+c/o American Mathematical Society
+P.O. Box 9506
+Providence,  RI  02940
+U.S.A.
+}
+\smallskip
+\noindent
+En conclusion, vous pouvez obtenir des copies des macros ^|eplain.tex| 
+d\'ecrites dans la \chapterref{eplain} aussi bien que les macros utilis\'ees en 
+composant ce livre. Elles sont disponibles par le r\'eseau Internet par 
+\ftp\ anonyme \`a partir des centres serveurs suivants~: 
+{\obeylines\display{\tt
+labrea.stanford.edu [36.8.0.47]
+ics.uci.edu [128.195.1.1]
+june.cs.washington.edu [128.95.1.4]}}
+
+La version \'electronique inclut des macros additionnelles qui composent 
+le source pour le programme machine ^{\BibTeX}, \'ecrit par Oren 
+Patashnik \`a  l'universit\'e de Stanford, ^^{Patashnik, Oren} et 
+impriment la sortie de ce programme. Si vous trouvez des bogues dans les 
+macros ou pensez \`a des am\'eliorations, vous pouvez envoyer un courriel 
+\`a Karl \`a {\tt karl@cs.umb.edu}. 
+
+Les macros sont \'egalement disponibles pour \$10.00 US sur des disquettes 
+$5\frac1/4$\inches\ ou $3\frac1/2$\inches\ format\'ee PC~: 
+\smallskip
+{\obeylines
+Paul Abrahams
+214 River Road
+Deerfield,  MA  01342
+\vskip\tinyskipamount
+Email: {\tt Abrahams\%Wayne-MTS@um.cc.umich.edu}
+}
+\smallskip
+	\noindent
+Ces adresses sont correctes pour juin 1990; veuillez prendre en compte 
+qu'elles peuvent changer apr\`es cela, en particulier les adresses 
+\'electro\-niques. 
+
+\section Ressources en fran\c cais
+
+[partie sp\'ecifique \`a la version fran\c caise rajout\'ee par le traducteur]
+
+\smallskip
+Toute la documentation de \TeX\ et consort n'a pas \'et\'e traduite en fran\c cais. 
+N\'eanmoins, de nombreux ouvrages existent dans la langue de Moli\`ere. Aussi bien sur \TeX\ et
+\LaTeX\ que sur \MF.
+
+\subsection {\TeX}
+
+\smallskip
+{\narrower\noindent
+^{Knuth, Donald E.}, {\sl Le \TeX book}\itcorr.  Paris, France : Vuibert, 12/2003.\par}
+\smallskip
+\noindent
+Un grand merci \`a ^{Jean-C\^ome Charpentier} pour cette traduction tant attendue par la 
+communau\TeX\ francophone. 
+
+\smallskip
+{\narrower\noindent
+^{Seroul, Raymond}, {\sl Le petit livre de \TeX}.  Paris, France : Masson, 1996.\par}
+\smallskip
+\noindent
+Pour comprendre \TeX\ et comment le franciser.
+
+\subsection {\LaTeX}
+
+\smallskip
+{\narrower\noindent%\frenchspacing\spaceskip = 3.33pt plus 2pt minus 1.2pt
+^{Bayart, Benjamin}, {\sl Le Joli Manuel Pour \LaTeX}.  En t\'el\'echargement libre sur le CTAN.\par}
+\smallskip
+\noindent
+Mon premier livre de chevet sur \LaTeX. Une nouvelle version est en cours d'\'ecriture.
+
+\smallskip
+{\narrower\noindent%\frenchspacing\spaceskip = 3.33pt plus 2pt minus 1.2pt
+^{Desgraupes, Bernard}, {\sl\LaTeX, apprentissage, guide et r\'ef\'erence}.  Paris, France : Vuibert, 2000.\par}
+\smallskip
+\noindent
+tr\`es bien fait, un must pour comprendre la gestion des polices sous \LaTeX.
+
+\smallskip
+{\narrower\noindent
+^{Goossens, Michel}, {\sl\LaTeX\ Companion}.  Paris, France : CampusPress, 2000.\par}
+\smallskip
+\noindent
+``La'' Bible de \LaTeX, que dire d'autre~? traduction de l'original en anglais, pas tr\`es \`a jour en fran\c cais
+mais une nouvelle version anglaise est sortie. 
+
+\smallskip
+{\narrower\noindent
+^{Kluth, Marie-Paule}, {\sl FAQ \LaTeX\ Fran\c caise}.  Paris, France : Vui\-bert, 2000.\par}
+\smallskip
+\noindent
+Tr\`es bien fait. 
+
+\smallskip
+{\narrower\noindent
+^{Rolland, Christian}, {\sl\LaTeX. Guide pratique}.  Paris, France : O'Reilly, 1999.\par}
+\smallskip
+\noindent
+tr\`es bien aussi, avec le CD-ROM \TeX live en prime (peut-\^etre pas la derni\`ere version mais pratique quand m\^eme)
+
+\subsection {\MF}
+
+Pour en apprendre un peu plus sur l'univers de \TeX.
+\smallskip
+{\narrower\noindent
+^{Desgraupes, Bernard}, {\sl\MF\~: guide pratique}.  Paris, France : Vuibert, 1999.\par}
+\smallskip
+\noindent
+pas d'\'equivalent, \`a part le \MF book de Knuth (en anglais) .
+
+\subsection {Association}
+
+Vous pouvez joindre l'association ^{GUTenberg} (GUTenberg), qui \'edite un bulletin appel\'e 
+{\it ^{La lettre de GUTenberg}}. GUTenberg est une excellente source d'informations sur 
+\TeX\ en fran\c cais. Son adresse est~: 
+\smallskip
+{\obeylines
+GUTenberg
+c/o Irisa, Campus universitaire de Beaulieu
+F-35042 Rennes cedex
+France
+}
+\smallskip
+
+\endchapter\byebye

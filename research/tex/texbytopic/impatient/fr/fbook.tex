@@ -1,0 +1,50 @@
+% This is part of the book TeX for the Impatient.
+% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2004 Marc Chaudemanche pour la traduction française.
+% See file fdl.tex for copying conditions.
+% Top-level control.
+%
+% commentez la ligne suivante (\language=1) pour une compilation avec tex ou pdftex 
+% elle n'est utilisée qu'avec bplain (ou pdfbplain) 
+\language=1
+\input fmacros
+% Here we override part of the configuration 
+% since we're doing a full run.
+\rewritetocfiletrue % always do a table of contents
+\xrefwarningtrue
+\completebooktrue
+\edgetabsfalse
+\input ffrontm
+% (not for web) \edgetabstrue
+\settabdepth{\bigtab}
+\input fusebook
+\input fusingtex
+\input fexamples
+\nextedgetab
+\input fconcept
+\nextedgetab
+\settabdepth{\smalltab}
+\input fparas 
+\nextedgetab
+\input fpages
+\nextedgetab
+\input fmodes 
+\nextedgetab
+\input fmath 
+\nextedgetab
+\input fgenops 
+\nextedgetab
+\settabdepth{\bigtab}
+\input ftips 
+\input ferrors
+\input fusermacs
+\nextedgetab
+\input fcapsule 
+\nextedgetab
+\backmatter
+\input fdl
+\input findex
+\edgetabsfalse
+\input fbackm
+
+\bye

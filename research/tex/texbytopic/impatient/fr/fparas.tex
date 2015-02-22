@@ -1,0 +1,2152 @@
+% This is part of the book TeX for the Impatient.
+% Copyright (C) 2003 Paul W. Abrahams, Kathryn A. Hargreaves, Karl Berry.
+% Copyright (C) 2004 Marc Chaudemanche pour la traduction française.
+% See file fdl.tex for copying conditions.
+
+\input fmacros
+\chapter {Commandes \linebreak pour composer \linebreak des paragraphes}
+
+\chapterdef{paras}
+
+Cette section couvre les commandes qui traitent des caract\`eres, des mots, des 
+lignes et des paragraphes entiers. Pour une explication des conventions 
+utilis\'ees dans cette section, voir les \headcit{Descriptions de 
+commandes}{cmddesc}.
+
+\begindescriptions
+
+\section {Caract\`eres et accents}
+
+%==========================================================================
+\subsection {Lettres et ligatures pour alphabets Europ\'eens}
+
+\begindesc
+\xrdef{fornlets}
+\bix^^{ligatures}
+^^{symboles sp\'eciaux}
+^^{alphabets europ\'eens}
+%
+\ctsx AA {Lettre scandinave \AA}
+\ctsx aa {Lettre scandinave \aa}
+\ctsx AE {Ligature \AE}
+\ctsx ae {Ligature \ae}
+\ctsx L  {Lettre Polonaise \L}
+\ctsx l  {Lettre Polonaise \l}
+\ctsx O  {Lettre Danoise/Norv\'egienne \O}
+\ctsx o  {Lettre Danoise/Norv\'egienne \o}
+\ctsx OE {Ligature \OE}
+\ctsx oe {Ligature \oe}
+\ctsx ss {Lettre Allemande \ss}
+\explain
+Ces commandes produisent diverses lettres et ligatures des alphabets 
+europ\'eens. Elles sont utiles pour des mots et expressions occasionnels 
+dans ces langues---mais si vous devez composer une grande quantit\'e de 
+texte dans une langue europ\'eenne, vous feriez probablement mieux 
+d'utiliser une version de \TeX\ adapt\'ee \`a cette langue.\footnote{Le \TeX\ 
+Users Group (\xref{ressources}) peut vous fournir des informations sur les 
+versions europ\'eennes de \TeX.}
+
+Vous aurez besoin d'un espace apr\`es ces commandes quand vous les 
+utiliserez dans un mot pour que \TeX\ traite les lettres suivantes comme 
+\'el\'ement du mot et non en tant qu'\'el\'ement de la commande. Vous 
+n'avez pas besoin d'\^etre en \minref{mode math\'ematique} pour utiliser 
+ces commandes.
+
+\example
+{\it les \oe uvres de Moli\`ere}
+|
+\produces
+{\it les \oe uvres de Moli\`ere}
+\endexample
+\eix^^{ligatures}
+\enddesc
+
+%==========================================================================
+\subsection {Symboles sp\'eciaux}
+
+\begindesc
+^^{caract\`eres sp\'eciaux}
+%
+\easy\ctspecialx # \ctsxrdef{@pound} {signe di\`ese \#}
+\ctspecialx $ \ctsxrdef{@bucks} {signe dollar \$}
+\ctspecialx % \ctsxrdef{@percent} {signe pourcentage \%}
+\ctspecialx & \ctsxrdef{@and} {esperluette \&}
+\ctspecialx _ \ctsxrdef{@underscore} {soulign\'e \_}
+\ctsx lq {quote gauche \lq}
+\ctsx rq {quote droite \rq}
+\aux\ctsx lbrack crochet gauche [
+\aux\ctsx rbrack crochet droit ]
+\ctsx dag {symbole dague \dag}
+\ctsx ddag {symbole double dague \ddag}
+\ctsx copyright {symbole copyright \copyright}
+\ctsx P {symbole paragraphe \P}
+\ctsx S {symbole section \S}
+\explain
+
+Ces commandes produisent diverses marques et caract\`eres sp\'eciaux. Les 
+cinq premi\`eres commandes sont n\'ecessaires parce que \TeX\ attache par 
+d\'efaut des significations sp\'eciales aux caract\`eres (|#|, |$|, |%|, 
+|&|, |_|). vous n'avez pas besoin d'\^etre en \minref{mode math\'ematique} 
+pour employer ces commandes.
+
+Vous pouvez utiliser le signe dollar de la police Computer Modern italique 
+pour obtenir le symbole ^{livre sterling}, comme montr\'e dans l'exem\-ple 
+ci-dessous.
+
+\example
+\dag It'll only cost you \$9.98 over here, but in England
+it's {\it \$}24.98.
+|
+\produces
+\dag It'll only cost you \$9.98 over here, but in England
+it's {\it \$}24.98.
+\endexample
+\enddesc
+
+\begindesc
+\cts TeX {}
+\explain
+Cette commande produit le logo \TeX. souvenez vous de la faire suivre par 
+|\!vs| ou de l'inclure dans un \minref{groupe} quand vous voulez un espace 
+apr\`es lui.
+
+\example
+A book about \TeX\ is in your hands.
+|
+\produces
+A book about \TeX\ is in your hands.
+\endexample
+\enddesc
+
+\begindesc
+\cts dots {}
+\explain
+^^{points}
+Cette commande produit des ^{points de suspension}, c'est-\`a-dire, trois 
+points, dans du texte ordinaire. Elle est pr\'evue pour \^etre utilis\'ee 
+en \'ecriture math\'ematique, pour des points de suspension entre des mots 
+ordinaires, vous devez utiliser |$\ldot$| \ctsref{\ldots} \`a la place. 
+Puisque |\dots| inclut son propre espace, vous ne devez pas le faire suivre 
+de |\!vs|. 
+\example
+The sequence $x_1$, $x_2$, \dots, $x_\infty$
+does not terminate.
+|
+\produces
+The sequence $x_1$, $x_2$, \dots, $x_\infty$
+does not terminate.
+\endexample
+\enddesc
+
+\see ``Divers symboles math\'ematiques ordinaires'' (\xref{specsyms}).
+%==========================================================================
+\subsection {Caract\`eres Arbitraires}
+
+\begindesc
+\bix^^{caract\`eres}
+\cts char {\<charcode>}
+\explain
+Cette commande produit le caract\`ere situ\'e \`a la position \<charcode> 
+de la police courante. 
+\example
+{\char65} {\char `A} {\char `\A}
+|
+\produces
+{\char65} {\char `A} {\char `\A}
+\endexample
+\enddesc
+
+\begindesc
+\cts mathchar {\<mathcode>}
+\explain
+Cette commande produit le caract\`ere math\'ematique dont la classe, la 
+famille et la position dans la police sont donn\'ees par \<mathcode>. Elle 
+n'est l\'egale qu'en mode math\'ematique. 
+\example
+\def\digger{\mathchar "027F} % Like \spadesuit in plain TeX.
+% Class 0, family 2, font position "7F.
+$\digger$
+|
+\produces
+\def\digger{\mathchar "027F}
+% class 0, family 2, font position "7F
+$\digger$
+\endexample
+\enddesc
+
+\see |\delimiter| (\xref\delimiter).
+\eix^^{caract\`eres}
+
+%==========================================================================
+\subsection {Accents}
+
+\begindesc
+^^{accents}
+\xrdef{accents}
+%
+\ctspecialx ' \ctsxrdef{@prime} {^{accent aigu} comme dans \'e}
+\ctspecialx . \ctsxrdef{@dot} {^{accent point} comme dans \.n}
+\ctspecialx = \ctsxrdef{@equal} {^{accent macron} comme dans \=r}
+\ctspecialx ^ \ctsxrdef{@hat} {^{accent circonflexe} comme dans  \^a}
+\ctspecialx ` \ctsxrdef{@lquote} {^{accent grave} comme dans \`e}
+\ctspecialx " \ctsxrdef{@quote} {^{accent tr\'ema} comme dans \"o}
+\ctspecialx ~ \ctsxrdef{@not} {^{accent tilde} comme dans \~a}
+\ctsx c {^{accent c\'edille} comme dans \c c}
+\ctsx d {^{accent point en dessous} comme dans \d r}
+\ctsx H {^{accent tr\'ema Hongrois} comme dans \H o}
+\ctsx t {^{accent tie-after} comme dans \t uu}
+\ctsx u {^{accent bref} comme dans \u r}
+\ctsx v {^{accent  circonflexe invers\'e} comme dans \v o}
+\explain
+Ces commandes produisent des accents en texte ordinaire. Vous devez 
+normalement laisser un espace apr\`es ceux not\'es par une simple lettre. 
+(see ``Espaces'', \xref{espaces}).
+
+\example
+Add a soup\c con of \'elan to my pin\~a colada.
+|
+\produces
+Add a soup\c con of \'elan to my pin\~a colada.
+\endexample
+
+\margin{`See also' moved to end of group, replacing the one there.}
+\enddesc
+
+\begindesc
+\cts i {}
+\cts j {}
+\explain
+Ces commandes produisent des versions sans point des lettres `i' et `j'. 
+Vous devez les utiliser au lieu des `i' et `j' ordinaires quand vous mettez 
+un accent sur ces lettres dans du texte ordinaire. 
+^^{lettres sans points}
+Utilisez les commandes ^|\imath| et ^|\jmath| (\xref\imath) pour des `i' et 
+`j' sans point dans des formules math\'ematiques.
+\example
+long `i' as in l\=\i fe  \quad \v\j
+|
+\produces
+long `i' as in l\=\i fe  \quad \v\j
+\endexample
+\enddesc
+
+\begindesc
+\cts accent {\<charcode>}
+\explain
+^^{accents}
+Cette commande met un accent au-dessus du caract\`ere suivant cette 
+commande. L'accent est le caract\`ere de position \<charcode> dans la 
+police courante. \TeX\ suppose que l'accent a \'et\'e con\c cu pour 
+s'adapter sur un caract\`ere d'une hauteur de $1$\thinspace ex dans la 
+m\^eme police que l'accent. Si le caract\`ere \`a accentuer est plus haut 
+ou plus petit, \TeX\ ajuste la position en cons\'equence. Vous pouvez 
+changer de \minref{police} entre l'accent et le caract\`ere suivant, cela 
+dessine le caract\`ere accent et le caract\`ere \`a accentuer venant de 
+diff\'erentes polices. Si le caract\`ere accent n'est pas vraiment pr\'evu 
+pour \^etre un accent, \TeX\ ne se plaindra pas~; il composera juste quelque 
+chose de ridicule. 
+\example
+l'H\accent94 otel des Invalides
+% Position 94 of font cmr10 has a circumflex accent.
+|
+\produces
+l'H\accent94 otel des Invalides
+% Position 94 of font cmr10 has a circumflex accent.
+\endexample
+\see Accents math\'ematiques (\xref{mathaccent}).
+\enddesc
+%==========================================================================
+\subsection {Ligatures aux limites}
+
+\begindesc
+\bix^^{ligatures}
+\cts noboundary {}
+\explain
+Vous pouvez d\'efaire une ligature ou un cr\'enage que \TeX\ applique au 
+premier ou au dernier caract\`ere d'un mot en mettant |\noboundary| juste 
+avant ou apr\`es ce mot. Certaines polices pr\'evues pour des langues 
+autres que l'anglais contiennent un caract\`ere sp\'ecial de fronti\`ere 
+que \TeX\ met au commencement et \`a la fin de chaque mot. Le caract\`ere 
+de fronti\`ere n'occupe aucun espace et est invisible une fois imprim\'e. 
+Il permet \`a \TeX\ de fournir un traitement typographique diff\'erent aux 
+caract\`eres de d\'ebut ou de fin de mot, puisque le caract\`ere de 
+fronti\`ere peut faire partie d'une s\'equence de caract\`eres devant 
+\^etre cr\'enel\'ee ou remplac\'ee par une ligature (aucune police 
+standard de \TeX\ ne contient ce caract\`ere de fronti\`ere).  L'effet de 
+|\noboundary| est de supprimer le caract\`ere de fronti\`ere s'il est l\`a, 
+et de ce fait d'emp\^echer \TeX\ d'identifier la ligature ou le cr\'enage.
+\eix^^{ligatures}
+\enddesc
+
+%==========================================================================
+\section {S\'electionner des polices}
+
+\xrdef{selfont}
+
+%==========================================================================
+\subsection {Polices particuli\`eres}
+
+\begindesc
+^^{polices}
+%
+\ctsx fivebf {utilise une police grasse de $5$ points}
+\ctsx fivei {utilise une police math\'ematique italique de $5$ points}
+\ctsx fiverm {utilise une police romaine de $5$ points}
+\ctsx fivesy {utilise une police de symbole math\'ematique de $5$ points}
+\ctsx sevenbf {utilise une police grasse de $7$ points}
+\ctsx seveni {utilise une police math\'ematique italique de $7$ points}
+\ctsx sevenrm {utilise une police romaine de $7$ points}
+\ctsx sevensy {utilise une police de symbole math\'ematique de $7$ points}
+\ctsx tenbf {utilise une police grasse de texte de $10$ points}
+\ctsx tenex {utilise une police d'extension math\'ematique de $10$ points}
+\ctsx teni {utilise une police math\'ematique italique de $10$ points}
+\ctsx tenrm {utilise une police romaine de texte de $10$ points}
+\ctsx tensl {utilise une police romaine pench\'ee de $10$ points}
+\ctsx tensy {utilise une police de symbole math\'ematique de $10$ points}
+\ctsx tenit {utilise une police italique de $10$ points}
+\ctsx tentt {utilise une police de type machine \`a \'ecrire de $10$ points}
+\explain
+Le texte suivant ces commandes est compos\'e par \TeX\ dans la police 
+indiqu\'ee. Normalement vous devriez enfermer une de ces commandes de choix 
+de police dans un groupe avec le texte devant \^etre compos\'e dans la 
+police choisie. En dehors d'un groupe une commande de choix de police est 
+efficace jusqu'\`a la fin du document (\`a moins que vous ne l'annuliez 
+avec une autre commande de ce genre). 
+\example
+See how I've reduced my weight---from
+120 lbs.\ to {\sevenrm 140 lbs}.
+|
+\produces
+See how I've reduced my weight---from
+120 lbs.\ to {\sevenrm 140 lbs}.
+\endexample
+\enddesc
+
+\begindesc
+\cts nullfont {}
+\explain
+Cette commande s\'electionne une police, construite dans \TeX, qui ne 
+comporte aucun caract\`ere. \TeX\ l'utilise en remplacement d'une police 
+non d\'efinie dans une famille des polices math\'ematiques.
+\enddesc
+
+%==========================================================================
+\subsection {Styles de caract\`ere}
+
+\xrdef{seltype}
+\begindesc
+^^{styles de caract\`ere}
+\easy\ctsx bf {utilise un style gras}
+\ctsx it {utilise un style italique}
+\ctsx rm {utilise un style romain}
+\ctsx sl {utilise un style pench\'e}
+\ctsx tt {utilise un style machine \`a \'ecrire}
+\explain
+Ces commandes choisissent un style de caract\`ere sans changer l'oeil ou 
+la taille du caract\`ere.\footnote{\TeX\ ne fournit pas de commandes 
+pr\'ed\'efinies pour ne changer que la taille, par exemple, |\eightpoint|. 
+La fourniture de telles commandes exigerait un grand nombre de 
+polices, lesquelles ne seraient jamais utilis\'ees. De telles commandes 
+ont \'et\'e cependant employ\'ees dans la composition de \texbook.} 
+Normalement vous enfermeriez une de ces commandes de s\'election de 
+style de caract\`ere dans un groupe, avec le texte devant \^etre compos\'e 
+dans la police choisie. En dehors d'un groupe une commande de 
+s\'election de style est efficace jusqu'\`a la fin du document (\`a moins 
+que vous l'effaciez avec une autre commande de ce genre). 
+\example
+The Dormouse was {\it not} amused.
+|
+\produces
+The Dormouse was {\it not} amused.
+\endexample
+\enddesc
+
+\see ``Polices dans des formules math\'ematiques'' (\xref{mathfonts}).
+%==========================================================================
+\section {Majuscule et minuscule}
+
+\begindesc
+\bix^^{conversion de casse}
+\bix^^{majuscules//conversion en}
+\bix^^{minuscules//conversion en}
+\cts lccode {\<charcode> \tblentry{nombre}}
+\cts uccode {\<charcode> \tblentry{nombre}}
+\explain
+Les valeurs |\lccode| et |\uccode| pour les $256$ caract\`eres possibles 
+indiquent la correspondance entre les formes minuscules et majuscules 
+des lettres. Ces valeurs sont utilis\'ees par les commandes |\lowercase| 
+et |\uppercase| respectivement et par l'algorithme de c\'esure de \TeX.
+
+\TeX\ initialise les valeurs de |\lccode| et |\uccode| comme suit~:
+
+\ulist\compact
+\li Le |\lccode| d'une lettre minuscule est le code {\ascii} de cette lettre.
+\li Le |\lccode| d'une lettre majuscule est le code {\ascii} de la lettre minuscule
+correspondante.
+\li Le |\uccode| d'une lettre majuscule est le code {\ascii} de cette lettre.
+\li Le |\uccode| d'une lettre minuscule est le code {\ascii} de la lettre majuscule
+correspondante.
+\li Les |\lccode| et |\uccode| d'un caract\`ere qui n'est pas une lettre sont \`a z\'ero.
+\endulist
+
+La majeure partie du temps, il n'y a aucune raison de changer ces valeurs, 
+mais vous pourriez devoir les changer si vous vous servez d'une langue qui 
+a plus de lettres que l'anglais.
+\example
+\char\uccode`s \char\lccode`a \char\lccode`M
+|
+\produces
+\char\uccode`s \char\lccode`a \char\lccode`M
+\endexample
+\enddesc
+
+\begindesc
+\cts lowercase {\rqbraces{\<liste de token>}}
+\cts uppercase {\rqbraces{\<liste de token>}}
+\explain ^^{conversion de casse}
+Ces commandes convertissent les lettres de la \<token list>, c'est-\`a-dire, 
+les tokens avec le code de cat\'egorie $11$, dans leurs formes minuscules 
+et majuscules. La conversion d'une lettre est d\'efinie par sa valeur de 
+table |\lccode| (pour une minuscule) ou |\uccode| (pour une majuscule). Les 
+tokens de la liste qui ne sont pas des lettres ne sont pas affect\'ees---m\^eme 
+si les tokens sont des appels de \minref{macro} ou d'autres commandes qui 
+se d\'eveloppent en lettres.
+\example
+\def\x{Cd} \lowercase{Ab\x} \uppercase{Ab\x}
+|
+\produces
+\def\x{Cd} \lowercase{Ab\x} \uppercase{Ab\x}
+
+\eix^^{conversion de casse}
+\eix^^{majuscules//conversion en}
+\eix^^{minuscules//conversion en}
+\endexample
+\enddesc
+
+%==========================================================================
+\section {Espace inter-mot}
+
+\begindesc
+\bix^^{espace//inter-mots}
+\easy\ctsbasic {\\\vs}{}
+\blankidxref\ctsxrdef{@space}
+\explain
+Cette commande produit explicitement un espace entre les mots appel\'e 
+``^{espace contr\^ol\'e}''. un espace contr\^ol\'e est utile quand une lettre 
+appara\^\i t juste apr\`es une commande, ou dans n'importe quelle autre 
+circonstance o\`u vous ne voulez pas que deux tokens soient reli\'es dans 
+la sortie. La place produite par |\!vs| est ind\'ependante de la 
+ponctuation pr\'ec\'edente, c'est-\`a-dire, que son facteur d'espace 
+(\xref\spacefactor) est $1000$. 
+
+Par ailleurs, si vous voulez imprimer le caract\`ere `\vs' ^^{espace 
+visible} que nous avons utilis\'e ici pour noter un espace, vous pouvez 
+l'obtenir en saisissant |{\tt \char `\ }|. 
+
+\example
+The Dormouse was a \TeX\ expert, but he never let on.
+|
+\produces
+The Dormouse was a \TeX\ expert, but he never let on.
+\endexample
+\enddesc
+
+\begindesc
+\cts space {}
+\explain
+Cette commande est \'equivalente \`a la saisie d'un caract\`ere espace. Elle 
+diff\`ere de ^|\ | du fait que sa largeur \emph{peut} \^etre affect\'e par 
+la ponctuation pr\'ec\'edente. 
+\example
+Yes.\space No.\space Maybe.\par
+Yes.\!vs!.No.\!vs!.Maybe.
+
+|
+\produces
+Yes.\space No.\space Maybe.\par
+Yes.\ No.\ Maybe.
+\endexample
+\enddesc
+
+\begindesc
+\ctsact  ^^M \xrdef{@newline}
+\explain
+Cette construction produit le caract\`ere ^{fin de ligne}. Elle a 
+normalement deux effets quand \TeX\ la rencontre dans votre source~: 
+\olist
+\li Elle agit en tant que commande, en introduisant un espace (si elle 
+appara\^\i t \`a l'extr\'emit\'e d'une ligne non vide) ou un 
+token |\par| (si elle appara\^\i t \`a l'extr\'emit\'e d'une ligne vide). 
+^^|\par//d'une ligne vide| 
+\li Elle termine la ligne du source, faisant que \TeX\ ignore les 
+caract\`eres restants sur la ligne.
+\endolist
+\noindent
+Cependant, |^^M| \emph{ne} fait \emph{pas} terminer la ligne quand il 
+appara\^\i t dans le contexte |`\^^M|, d\'enotant le code ASCII du control-M 
+(le nombre $13$). Vous pouvez changer la signification du |^^M| en lui 
+donnant un \minref{code de cat\'egorie} diff\'erent. Voir 
+\xrefpg{twocarets} pour une explication plus g\'en\'erale de la notation 
+|^^|.
+\example
+Hello.^^MGoodbye.
+Goodbye again.\par
+The \char `\^^M\ character.\par
+% The fl ligature is at position 13 of font cmr10
+\number `\^^M\ is the end of line code.\par
+Again, \number `^^M is the end of line code,
+isn't it? % 32 is the ASCII code for a space
+|
+\produces
+{\catcode `\^ = 7 % disable indexing use within this display
+Hello.^^MGoodbye
+Goodbye again.\par
+The \char `\^^M\ character.\par
+\number `\^^M\ is the end of line code.\par
+Again, \number `^^M is the end of line code,
+isn't it?}
+\endexample
+\enddesc
+
+\begindesc
+\easy\ctsact ~ \xrdef{@not}
+\explain
+Le caract\`ere \minref{actif} `|~|' appel\'e un ``^{tilde}'', produit 
+une espace normale entre deux mots et lie ces mots pour 
+qu'une coupure de ligne ne se produise pas entre eux. Vous devez 
+employer un tilde dans n'importe quel contexte o\`u une coupure de 
+ligne serait embrouillante, par exemple, avant une initiale moyenne, 
+apr\`es une abr\'eviation telle que ``Dr'' ou apr\`es ``Fig.'' dans ``Fig.~8''. 
+
+\example
+P.D.Q.~Bach (1807--1742), the youngest and most
+imitative son of Johann~S. Bach, composed the
+{\sl Concerto for Horn and Hardart}.
+|
+\produces
+\margin{The inversion of dates is deliberate---cf. Peter Schickele.}
+P.D.Q.~Bach (1807--1742), the youngest and most
+imitative son of Johann~S. Bach, composed the
+{\sl Concerto for Horn and Hardart}.
+\endexample\enddesc
+
+\begindesc
+\easy\ctspecial / \ctsxrdef{@slash}
+\explain
+Chaque caract\`ere d'une \minref{fonte} \TeX\ a une correction d'``^{italique}''
+li\'ee \`a lui, bien que la correction d'italique soit 
+normalement \`a z\'ero pour un caract\`ere d'une police non pench\'ee (montante). 
+La correction d'italique indique l'espace suppl\'ementaire qui 
+est n\'ecessaire quand vous passez d'une police inclin\'ee (pas 
+n\'ecessairement une police italique) \`a une police non pench\'ee. 
+L'espace suppl\'ementaire est n\'ecessaire parce qu'un caract\`ere inclin\'e 
+d\'epasse dans l'espace qui le suit, r\'eduisant l'espace quand le caract\`ere 
+suivant est non pench\'e. Le dossier de 
+m\'etriques d'une police inclut la correction d'italique de chaque 
+caract\`ere dans la police. 
+^^{fichiers de m\'etriques//correction italique dans}
+
+La commande |\/|
+produit une correction d'^{italique} pour le caract\`ere pr\'ec\'edent. Vous 
+devez ins\'erer une correction d'italique quand vous passez d'une 
+police inclin\'ee vers une police droite, sauf quand le caract\`ere suivant 
+est un point ou une virgule. 
+\example
+However, {\it somebody} ate {\it something}: that's clear.
+
+However, {\it somebody\/} ate {\it something\/}:
+that's clear.
+|
+\produces
+However, {\it somebody} ate {\it something}: that's clear.
+
+However, {\it somebody\/} ate {\it something\/}:
+that's clear.
+\endexample
+\enddesc
+
+\begindesc
+\cts frenchspacing {}
+\cts nonfrenchspacing {}
+\explain
+^^{espacement inter-mots}
+\TeX\ ajuste normalement l'espacement entre les mots en 
+accord avec les signes de ponctuation. Par exemple, il ins\`ere de l'espace 
+suppl\'ementaire \`a la fin d'une phrase et ajoute un certain \'etirement 
+au \minref{ressort} apr\`es n'importe quel signe de ponctuation. La 
+commande |\frenchspacing| indique \`a \TeX\ de rendre l'espacement 
+entre les mots ind\'ependant de la ponctuation, alors que la commande  
+|\nonfrenchspacing| indique \`a \TeX\ d'utiliser les r\`egles normales 
+d'espacement. Si vous n'indiquez pas |\frenchspacing|, vous 
+obtiendrez l'espacement normal de \TeX. 
+
+Voyez \xrefpg{periodspacing} pour des conseils sur la fa\c con de 
+contr\^oler le traitement de la ponctuation de \TeX\ \`a la fin des 
+phrases. 
+
+\example
+{\frenchspacing  An example: two sentences. Right? No.\par}
+{An example: two sentences. Right? No. \par}%
+|
+\produces
+{\frenchspacing  An example: two sentences. Right? No.\par}
+{An example: two sentences. Right? No. \par}%
+\endexample
+
+\enddesc
+
+\begindesc
+\cts obeyspaces {}
+\explain
+\TeX\ condense normalement une suite de plusieurs espaces en un 
+espace simple. |\obeyspaces| demande \`a \TeX\ de produire un 
+espace dans le r\'esultat pour chaque espace dans le source. 
+Cependant,|\obeyspaces| ne met pas d'espace au d\'ebut d'une ligne~; 
+pour cela nous vous recommandons la commande de 
+|\obey!-white!-space| d\'efinie dans |eplain.tex|
+(\xref{ewhitesp}).
+^^|\obeywhitespace|
+|\obeyspaces| est souvent utile quand vous composez quelque chose, 
+un source informatique par exemple, dans une police \`a espacement fixe (une police dans 
+laquelle chaque caract\`ere a le m\^eme espacement) et que vous voulez montrer 
+exactement \`a quoi ressemble chaque ligne du source. 
+
+Vous pouvez utiliser la commande |\obeylines| (\xref{\obeylines}) 
+pour obtenir que \TeX\ suive les bords de ligne de votre source. 
+|\obeylines| est souvent utilis\'e en combinaison avec |\obeyspaces|. 
+
+\example 
+These     spaces    are    closed   up
+{\obeyspaces but   these  are     not   }.
+|
+\produces
+These     spaces    are    closed   up
+{\obeyspaces but   these  are     not   }.
+\endexample
+\enddesc
+
+\begindesc
+\cts spacefactor {\param{nombre}}
+\cts spaceskip {\param{ressort}}
+\cts xspaceskip {\param{ressort}}
+\cts sfcode {\<charcode> \tblentry{nombre}}
+\explain
+Ces \minref{param\`etres} primitifs affectent combien d'espace \TeX\ met 
+entre deux mots adjacents, c'est-\`a-dire, l'^{espacement inter-mots}. 
+L'espacement normal entre les mots est assur\'e par la police courante. 
+Pendant que \TeX\ traite une \minref{liste horizontale}, il garde trace 
+du facteur d'^{espacement} $f$ dans |\spacefactor|. pendant qu'il 
+traite chaque caract\`ere du source $c$, il met \`a jour $f$ selon la 
+valeur de $f_c$, le code de facteur d'espacement de $c$ (voir ci-
+dessous). Pour la plupart des caract\`eres, $f_c$ est \`a $1000$ et \TeX\ 
+met $f$ \`a $1000$. (la valeur initiale de $f$ est \'egalement $1000$.) 
+Quand \TeX\ voit un espace entre les mots, il ajuste la taille de cet 
+espace en multipliant l'\'etirement et le r\'etr\'ecissement de cet espace 
+par $f/1000$ et $1000/f$ respectivement. d'o\`u~:
+\olist\compact
+\li Si $f=1000$, l'espace inter-mots garde sa valeur normale.
+\li If $f<1000$, l'espace inter-mots prend moins d'\minref{\'etirement}
+et plus de \minref{r\'etr\'ecissement}.
+\li If $f>1000$, l'espace inter-mots prend plus d'\minref{\'etirement}
+et moins de \minref{r\'etr\'ecissement}.
+\endolist
+En outre, si $f\ge2000$ l'espace inter-mots est encore augment\'e par le 
+param\`etre ``d'espace suppl\'ementaire'' li\'e \`a la police courante.
+
+Chaque caract\`ere saisi $c$ a une adresse dans la table de |\sfcode| 
+(code de facteur d'espacement). L'adresse de la table |\sfcode| est 
+ind\'ependante de la police. Normalement \TeX\ met simplement $f$ \`a 
+$f_c$ apr\`es avoir trait\'e $c$. De toute mani\`ere~:
+\ulist
+\li Si $f_c$ est \`a z\'ero, \TeX\ laisse $f$ sans changement. Ainsi, un 
+caract\`ere tel que `|)|' dans \plainTeX, pour lequel $f_c$ est \`a z\'ero, 
+est essentiellement transparent pour le calcul de l'espacement entre 
+les mots.
+\li Si $f<1000<f_c$, \TeX\ met $f$ \`a $1000$ plut\^ot que $f_c$, c'est-\`a-
+dire, qu'il refuse d'augmenter $f$ tr\`es rapidement.
+\endulist
+La valeur de |\sfcode| pour un point est normalement de $3000$, c'est 
+pourquoi \TeX\ met habituellement un espace suppl\'ementaire apr\`es un 
+point 
+% > to \ge here, too, as above.
+(voir la r\`egle ci-dessus pour le cas $f\ge2000$). Les caract\`eres non 
+lettre d'une liste horizontale, par exemple, les traits verticaux, 
+agissent g\'en\'eralement comme des caract\`eres avec un facteur d'espace de 
+$1000$. 
+
+Vous pouvez changer le facteur d'espace explicitement en donnant une 
+valeur num\'erique diff\'erente \`a |\spacefactor|. Vous pouvez \'egalement 
+augmenter l'espacement normal entre les mots en donnant une valeur 
+num\'erique diff\'erente \`a |\xspaceskip| ou \`a |\spaceskip|~:
+\ulist
+\li |\xspaceskip| sp\'ecifie le ressort utilis\'e quand $f\ge2000$~;
+dans le cas o\`u
+|\xspaceskip| est \`a z\'ero, les r\`egles normales s'appliquent.
+\li |\spaceskip| sp\'ecifie le ressort utilis\'e quand $f<2000$ ou bien 
+quand \hbox{|\xspaceskip|} est \`a z\'ero~; si |\spaceskip| est \`a z\'ero, les 
+r\`egles normales s'appliquent. L'\'etirement et le r\'etr\'ecissement du 
+ressort |\spaceskip|, comme le ressort ordinaire entre les mots, est 
+modifi\'e selon la valeur de $f$. 
+\endulist
+Voir \knuth{page~76}{88--89} pour les r\`egles pr\'ecises que \TeX\ utilise pour 
+calculer le \minref{ressort} entre les mots et \knuth{pages~285--287}{331--334} 
+pour les ajustements faits \`a |\spacefactor| apr\`es diff\'erents items dans 
+une liste horizontale. 
+\eix^^{espace//inter-mots}
+\enddesc
+
+%==========================================================================
+\section {Centrer et justifier les lignes}
+
+\begindesc
+\bix^^{centrage}
+\bix^^{cadr\'e \`a gauche}
+\bix^^{cadr\'e \`a droite}
+\bix^^{justification}
+\easy\cts centerline {\<argument>}
+\cts leftline {\<argument>}
+\cts rightline {\<argument>}
+\explain
+La commande |\centerline| produit un \minref{hbox} aussi large que 
+la ligne courante et place \<argument> au centre de la bo\^\i te. Les 
+commandes |\leftline| et |\rightline| sont analogues~; elles placent 
+\<argument> au bord gauche ou droite de la bo\^\i te. Si vous voulez 
+appliquer une de ces commandes \`a plusieurs lignes cons\'ecutives, vous 
+devez l'appliquer \`a chacune individuellement. Voir 
+\xrefpg{eplaincenter} pour une autre approche.
+
+N'utilisez pas ces commandes dans un paragraphe---si vous le faites, 
+\TeX\ ne pourra probablement pas couper le paragraphe en lignes et se 
+plaindra au sujet d'un overfull hbox.
+\example
+\centerline{Grand Central Station}
+\leftline{left of Karl Marx}
+\rightline{right of Genghis Khan}
+|
+\produces
+\centerline{Grand Central Station}
+\leftline{left of Karl Marx}
+\rightline{right of Genghis Khan}
+
+\eix^^{centrage}
+\eix^^{cadr\'e \`a gauche}
+\eix^^{cadr\'e \`a droite}
+\eix^^{justification}
+
+\endexample
+\enddesc
+
+\begindesc
+\easy\cts line {\<argument>}
+\explain
+Cette commande produit une \minref{hbox} contenant l'\<argument>. Cette 
+hbox est exactement aussi large que la ligne courante, c'est-\`a-dire, 
+qu'elle s'\'e\-tend de la marge droite \`a la gauche.
+\example
+\line{ugly \hfil suburban \hfil sprawl}
+% Without \hfil you'd get an `underfull box' from this.
+|
+\produces
+\line{ugly \hfil suburban \hfil sprawl}%
+\endexample
+
+\enddesc
+
+\begindesc
+^^{texte recouvrant}
+\cts llap {\<argument>}
+\cts rlap {\<argument>}
+\explain
+Ces commandes vous permettent de produire un texte qui recouvre celui 
+qui est \`a gauche ou \`a droite de la position actuelle. |\llap| recule 
+par la largeur de l'\<argument> et puis compose l'\<argument>. Le 
+|\rlap| est semblable, sauf qu'il compose l'\<argument> d'abord et 
+recule. |\llap| et |\rlap| sont utiles pour placer du texte en dehors 
+des marges courantes. |\llap| et |\rlap| effectuent leur travail en 
+cr\'eant une \minref{box} de largeur z\'ero.
+
+Vous pouvez \'egalement utiliser |\llap| ou |\rlap| pour construire des 
+caract\`eres sp\'eciaux par ^{surimpression}, mais ne l'essayez pas \`a 
+moins d'\^etre s\^ur que les caract\`eres que vous utilisez aient la m\^eme 
+largeur (ce qui est le cas pour une police \`a espacement fixe telle que 
+^|cmtt10|, la Computer Modern $10$-points ^{police de type machine \`a 
+\'ecrire})..
+^^{police Computer Modern}
+\example
+\noindent\llap{off left }\line{\vrule $\Leftarrow$
+left margin of examples\hfil right margin of examples
+$\Rightarrow$\vrule}\rlap{ off right}
+|
+\produces
+\noindent\llap{off left }\line{\vrule $\Leftarrow$
+left margin of examples\hfil right margin of examples
+$\Rightarrow$\vrule}\rlap{ off right}
+\endexample
+
+%\example
+%{\tt O\llap{!|}}
+%|
+%\produces
+%{\cm \tt O\llap{\char `|}}
+%\endexample
+
+\nobreak % don't lose the \see
+\enddesc
+
+\see |\hsize| (\xref{\hsize}).
+
+%==========================================================================
+\section {Formation des paragraphes}
+
+\subsection {d\'ebuter, finir et indenter des paragraphes}
+
+\begindesc
+\bix^^{paragraphes//formation}
+\ctspecial par \ctsxrdef{@par}
+\explain
+Cette commande termine un paragraphe et met \TeX\ dans le mode 
+\minref{vertical}, pr\^et \`a ajouter plus d'articles sur la page. 
+Puisque \TeX\ convertit une ligne blanche dans votre fichier source 
+en un \minref{token} |\par|, vous n'avez normalement pas besoin de 
+saisir |\par| explicitement pour finir un paragraphe. 
+
+Un point important est que |\par| n'indique pas \`a \TeX\ de commencer 
+un paragraphe~; il ne lui dit que de le finir. \TeX\ d\'ebute un 
+paragraphe quand il est en mode vertical ordinaire (tel qu'il est 
+apr\`es un |\par|) et rencontre un article en soi horizontal tel qu'une 
+lettre. En tant qu'\'el\'ement du c\'er\'emonial de d\'ebut de paragraphe, \TeX\ 
+^^{paragraphes//d\'ebuter des} 
+ins\`ere une quantit\'e d'espace vertical donn\'ee par le param\`etre 
+|\parskip|  (\xref{\parskip }) et indente le paragraphe par un espace 
+horizontal donn\'e par |\parindent| (\xref{\parindent }). 
+
+Vous pouvez normalement effacer tout l'espace inter-paragraphe 
+produit avec |\par| en mettant la commande |\vskip -\lastskip|. Ceci 
+peut \^etre utile quand vous \'ecrivez une \minref{macro} cens\'e travailler 
+de la m\^eme mani\`ere si elle est pr\'ec\'ed\'ee ou non par une ligne blanche. 
+
+Vous pouvez obtenir que \TeX\ prenne certaines mesures sp\'eciales au 
+d\'ebut de chaque paragraphe en pla\c cant des instructions dans 
+^|\everypar| (\xref\everypar). 
+
+Voir \knuth{pages~283 et 286}{328 et 332} pour les effets pr\'ecis de |\par|.
+
+\example
+\parindent = 2em
+``Can you row?'' the Sheep asked, handing Alice a pair of
+knitting-needles as she was speaking.\par ``Yes, a little%
+---but not on land---and not with needles---'' Alice was
+starting to say, when suddenly the needles turned into oars.
+|
+\produces
+\parindent = 2em
+``Can you row?'' the Sheep asked, handing Alice a pair of
+knitting-needles as she was speaking.\par ``Yes, a little%
+---but not on land---and not with needles---'' Alice was
+starting to say, when suddenly the needles turned into oars.
+\endexample
+\enddesc
+
+\begindesc
+\cts endgraf {}
+\explain
+Cette commande est un synonyme de la commande primitive 
+^|\par|. Elle est utile quand vous avez red\'efini ^|\par| mais voulez 
+toujours avoir acc\`es \`a la d\'efinition originale de |\par|. 
+\enddesc
+
+\begindesc
+\cts parfillskip {\param{ressort}}
+\explain
+^^{paragraphes//ressort \`a la fin des}
+Ce param\`etre d\'esigne le ressort horizontal que \TeX\ insert \`a la fin 
+d'un paragraphe. La valeur par d\'efaut de |\parfillskip| est |0pt plus 
+1fil|, qui fait que la derni\`ere ligne d'un paragraphe soit compl\'et\'ee 
+de l'espace vide. Une valeur de |0pt| force \TeX\ \`a finir la derni\`ere 
+ligne d'un paragraphe sur la marge gauche. 
+\enddesc
+
+\bix^^{indentation}
+\begindesc
+\easy\cts indent {}
+\explain
+Si \TeX\ est en mode vertical, comme il l'est apr\`es avoir fini un 
+paragraphe, cette commande ins\`ert le ressort inter-paragraphe 
+^|\parskip|, met \TeX\ en mode horizontal, d\'ebute un paragraphe et 
+indente ce paragraphe de |\parindent|. Si \TeX\ est d\'ej\`a en mode 
+horizontal, cette commande produit simplement  un espace blanc de 
+largeur |\parindent|. Deux |\indent| \`a la suite produisent deux 
+indentations.
+^^{indentation}
+
+Comme dans l'exemple ci-dessous, un |\indent| \`a un endroit o\`u \TeX\ 
+commencerait de toute fa\c con un paragraphe est superflu. Quand \TeX\ 
+est en mode vertical et voit une lettre ou une autre commande en soi 
+horizontale, il commence un paragraphe en commutant vers le mode 
+horizontal, fait un |\indent| et traite la commande horizontale. 
+
+\example
+\parindent = 2em  This is the first in a series of three 
+paragraphs that show how you can control indentation. Note
+that it has the same indentation as the next paragraph.\par
+\indent This is the second in a series of three paragraphs.
+It has \indent an embedded indentation.\par
+\indent\indent This doubly indented paragraph
+is the third in the series.
+|
+\produces
+\parindent = 2em  This is the first in a series of three 
+paragraphs that show how you can control indentation. Note
+that it has the same indentation as the next paragraph.\par
+\indent This is the second in a series of three paragraphs.
+It has \indent an embedded indentation.\par
+\indent\indent This doubly indented paragraph
+is the third in the series.
+\endexample
+\enddesc
+
+
+\begindesc
+\easy\cts noindent {}
+\explain
+Si le \TeX\ est en mode vertical,  comme il l'est apr\`es la fin d'un 
+paragraphe, cette commande ins\`ert le ressort inter-paragraphe 
+^|\parskip|, met \TeX\ dans le mode horizontal, et commence 
+un paragraphe non indent\'e. Elle n'a aucun effet dans le mode horizontal, 
+c'est-\`a-dire, dans un paragraphe. Commencer un paragraphe avec 
+|\noindent| d\'ecommande ainsi l'indentation de |\parindent| qui se 
+produirait normalement.
+
+^^{indentation}
+
+Une utilisation commune de |\noindent| est d'interdire l'indentation 
+de la premi\`ere ligne d'un paragraphe quand le paragraphe suit un 
+certain mat\'eriel affich\'e.
+
+\example
+\parindent = 1em
+Tied round the neck of the bottle was a label with the
+words \smallskip \centerline{EAT ME}\smallskip
+\noindent beautifully printed on it in large letters.
+|
+\produces
+\parindent = 1em
+Tied round the neck of the bottle was a label with the
+words \smallskip \centerline{EAT ME}\smallskip
+\noindent beautifully printed on it in large letters.
+\endexample
+\enddesc
+
+\margin{{\tt\\textindent} moved here from later in the section.}
+\begindesc
+\cts textindent {\<argument>}
+
+\explain
+^^{indentation}
+Cette commande indique \`a \TeX\ de commencer un paragraphe et de l'indenter 
+de |\par!-indent|, comme d'habitude. \TeX\ alors justifie \`a droite 
+l'\<argument> de l'indentation et le fait suivre d'un espace demi-cadratin 
+(moiti\'e d'un cadratin). \PlainTeX\ utilise cette commande pour composer les 
+notes de pied de page. (\xref\footnote) ^^{notes de pied de page//utiliser 
+\b\tt\\textindent\e\ avec} et les articles dans les listes (voir |\item|, 
+\xref\item). 
+
+\example
+\parindent = 20pt \textindent{\raise 1pt\hbox{$\bullet$}}%
+You are allowed to use bullets in \TeX\ even if
+you don't join the militia, and many peace-loving
+typographers do so.
+|
+\produces
+\parindent = 20pt \textindent{\raise 1pt\hbox{$\bullet$}}%
+You are allowed to use bullets in \TeX\ even if
+you don't join the militia, and many peace-loving
+typographers do so.
+\endexample\enddesc
+
+\begindesc
+\cts parindent {\param{dimension}}
+
+\explain
+Ce \minref{param\`etre} indique la quantit\'e par laquelle la premi\`ere 
+ligne de chaque paragraphe doit \^etre indent\'ee. ^^{indentation} Comme 
+montr\'e dans l'exemple ci-dessous, placer |\parindent| et ^|\parskip| \`a 
+z\'ero est une mauvaise id\'ee puisque alors les coupures de paragraphe ne 
+sont plus \'evidentes. 
+\example
+\parindent = 2em This paragraph is indented by 2 ems.
+\par \parindent=0pt This paragraph is not indented at all.
+\par Since we haven't reset the paragraph indentation,
+this paragraph isn't indented either.
+|
+\produces
+\parindent = 2em This paragraph is indented by 2 ems.
+\par \parindent=0pt This paragraph is not indented at all.
+\par Since we haven't reset the paragraph indentation,
+this paragraph isn't indented either.
+\endexample\enddesc
+
+\begindesc
+\cts everypar {\param{liste de token}}
+
+\explain
+\TeX\ ex\'ecute les commandes des \<token list> toutes les fois qu'il entre dans le mode 
+horizontal, par exemple, quand il commence un paragraphe. Par d\'efaut 
+|\everypar| est vide, mais vous pouvez prendre des mesures 
+suppl\'ementaires au d\'ebut de chaque paragraphe en mettant des commandes 
+pour ces actions dans un token list
+%
+% This \vglue makes the example overwrite the example, but since we are
+% not reprinting this page, it doesn't matter.  For reasons I did not
+% attempt to track down, a page break happened before the example,
+% unlike in the first printing.
+% 
+%\secondprinting{\vglue-48pt}
+et assigner ce token list \`a |\everypar|.
+\example
+\everypar = {$\Longrightarrow$\enspace}
+Now pay attention!!\par
+I said, ``Pay attention!!''.\par
+I'll say it again!! Pay attention!!
+|
+\produces
+\everypar = {$\Longrightarrow$\enspace}
+Now pay attention!\par
+I said, ``Pay attention!''.\par
+I'll say it again! Pay attention!
+\endexample
+\enddesc
+%\secondprinting{\vfill\eject}
+
+%==========================================================================
+\subsection {Formation de paragraphes entiers}
+
+\begindesc
+\margin{Cette commande \'etait aussi d\'ecrite dans le chapitre `Pages'. La
+description actuelle combine les deux anciennes descriptions.}
+\bix^^{coupures de ligne//et formation de paragraphe}
+\easy\cts hsize {\param{dimension}}
+
+\explain
+Ce \minref{param\`etre} indique la longueur courante de la ^{ligne}, c'est-\`a-dire, 
+la largeur habituelle des lignes dans un paragraphe commen\c cant \`a la 
+marge gauche. Beaucoup de commandes \TeX emploient 
+implicitement la valeur de |\hsize|, comme par exemple, 
+|\center!-line| (\xref{\centerline}) et |\hrule| (\xref{\hrule}). En changeant le |\hsize| dans un 
+groupe vous pouvez changer la largeur des constructions produites par de 
+telles commandes. 
+
+Si vous placez |\hsize| dans un \minref{vbox} qui contient du texte, le 
+vbox aura la largeur que vous aurez donn\'ee au |\hsize|. 
+^^{vbox//largeur d\'etermin\'ee par \b\tt\\hsize\e}
+
+\PlainTeX\ fixe |\hsize| \`a |6.5in|.
+
+\example
+{\hsize = 3.5in % Set this paragraph 3.5 inches wide.
+The hedgehog was engaged in a fight with another hedgehog,
+which seemed to Alice an excellent opportunity for
+croqueting one of them with the other.\par}%
+|
+\produces
+{\hsize = 3.5in 
+The hedgehog was engaged in a fight with another hedgehog,
+which seemed to Alice an excellent opportunity for croqueting
+one of them with the other.\par}%
+
+\doruler{\8\8\8\tick\1\tick\2\tick\1\tick\3}{3.5}{in}
+\nextexample
+\leftline{\raggedright\vtop{\hsize = 1.5in
+Here is some text that we put into a paragraph that is
+an inch and a half wide.}\qquad
+\vtop{\hsize = 1.5in Here is some more text that
+we put into another paragraph that is an inch and a
+half wide.}}
+|
+\produces
+\leftline{\raggedright\vtop{\hsize = 1.5in
+Here is some text that we put into a paragraph that is
+an inch and a half wide.}\qquad
+\vtop{\hsize = 1.5in Here is some more text that
+we put into another paragraph that is an inch and a
+half wide.}}
+\endexample
+\enddesc
+
+\begindesc
+\easy\cts narrower {}
+
+\explain
+^^{paragraphes//\'etroit}
+Cette commande donne des paragraphes plus \'etroits, en augmentant les marges 
+gauches et droites de |\parindent|, l'^{indentation} de paragraphe 
+courante. Elle r\'ealise ceci en augmentant |\leftskip| et |\rightskip| de 
+|\parindent|. Normalement vous placez |\narrower| au d\'ebut d'un 
+\minref{groupe} contenant les paragraphes que vous voulez rendre plus 
+\'etroits. Si vous oubliez d'enfermer |\narrower| dans un groupe, vous 
+constaterez que tout le reste de votre document aura des paragraphes 
+\'etroits.
+
+|\narrower| n'affecte que les paragraphes qui terminent apr\`es que vous 
+l'ayez appel\'e. Si vous terminez un groupe |\narrower| avant d'avoir fini un 
+paragraphe, \TeX\ ne rendra pas ce paragraphe plus \'etroit.
+
+\example
+{\parindent = 12pt \narrower\narrower\narrower
+This is a short paragraph. Its margins are indented
+three times as much as they would be
+had we used just one ``narrower'' command.\par}
+|
+\produces
+{\parindent = 12pt \narrower\narrower\narrower
+This is a short paragraph. Its margins are indented
+three times as much as they would be
+had we used just one ``narrower'' command.\par}
+\endexample\enddesc
+
+\begindesc
+\cts leftskip {\param{ressort}}
+\cts rightskip {\param{ressort}}
+
+\explain
+Ces param\`etres indiquent \`a \TeX\ combien de ressort placer aux extr\'emit\'es 
+gauches et droites de chaque ligne du paragraphe courant. Nous n'expli\-%
+querons que le fonctionnement de |\leftskip| puisque |\rightskip| est 
+similaire.
+
+^^{indentation} Vous pouvez augmenter la marge gauche en pla\c cant 
+|\leftskip| \`a une \minref{dimension} diff\'erente de z\'ero. Si vous donnez \`a 
+|\leftskip| un certain \'etirement, vous pouvez produire du texte ^{cadr\'e \`a 
+droite}, c'est-\`a-dire, du texte qui a une marge gauche in\'egale.
+
+Normalement, vous devriez enfermer tout \minref{assignement} \`a |\leftskip| 
+dans un \minref{groupe} avec le texte affect\'e afin d'emp\^echer son effet de 
+continuer jusqu'\`a la fin de votre document. Cependant, il est injustifi\'e de 
+changer la valeur de |\leftskip| \`a l'int\'erieur d'un groupe qui est, lui 
+aussi, contenu dans un paragraphe---la valeur de |\leftskip| \`a la 
+\emph{fin} d'un paragraphe est celle qui d\'etermine comment \TeX\ coupera le 
+paragraphe en lignes. \minrefs{line break} 
+
+\example
+{\leftskip = 1in The White Rabbit trotted slowly back
+again, looking anxiously about as it went, as if it had
+lost something.  {\leftskip = 10in % has no effect
+It muttered to itself, ``The Duchess!! The Duchess!! She'll
+get me executed as sure as ferrets are ferrets!!''}\par}%
+|
+\produces
+{\leftskip = 1in The White Rabbit trotted slowly back
+again, looking anxiously about as it went, as if it had
+lost something.  {\leftskip = 10in % has no effect
+It muttered to itself, ``The Duchess! The Duchess!
+She'll get me executed as sure as ferrets are ferrets!''}\par}%
+\nextexample
+\pretolerance = 10000 % Don't hyphenate.
+\rightskip = .5in plus 2em
+The White Rabbit trotted slowly back again, looking
+anxiously about as it went, as if it had lost something.
+It muttered to itself, ``The Duchess!! The Duchess!! She'll
+get me executed as sure as ferrets are ferrets!!''
+|
+\produces
+\pretolerance = 10000 % Don't hyphenate.
+\rightskip = .5in plus 2em
+The White Rabbit trotted slowly back again, looking
+anxiously about as it went, as if it had lost something.
+It muttered to itself, ``The Duchess! The Duchess! She'll
+get me executed as sure as ferrets are ferrets!''
+\endexample
+\enddesc
+
+\begindesc
+\easy\cts raggedright {}
+\cts ttraggedright {}
+
+\explain
+Ces commandes font que \TeX\ compose votre document 
+``^{cadr\'e \`a gauche}''.  Les espaces inter-mots ont tous 
+leur taille naturelle, c'est-\`a-dire, ils ont tous la m\^eme largeur et
+ne s'\'etirent ni se r\'etr\'ecissent.
+En cons\'equence, leur marge droite n'est g\'en\'eralement pas la m\^eme.
+L'alternative, qui est le comportement par d\'efaut de \TeX, est de composer 
+votre document justifi\'e,
+^^{justification}
+c'est-\`a-dire, avec des marges gauches et droites uniformes.
+Dans du texte justifi\'e, les espaces inter-mots sont \'etir\'es pour
+aligner des marges de droite.
+Certains typographes pr\'ef\`erent cadrer \`a gauche parce que
+cela \'evite des ``rivi\`eres'' distractives d'espace sur la page imprim\'ee.
+\minrefs{justified text}
+
+Vous devez utiliser la commande |\ttraggedright| pour composer du texte dans 
+une police non proportionnelle et la commande |\raggedright| command pour 
+composer de texte dans toutes les autres polices. 
+
+La plupart du temps vous voudrez appliquer ces commandes \`a un document entier,
+mais vous pouvez limiter leurs effets en les englobant
+dans un \minref{groupe}.
+\example
+\raggedright ``You couldn't have it if you {\it did\/}
+want it,'' the Queen said. ``The rule is, jam tomorrow
+and jam yesterday---but never jam {\it today\/}.''
+``It {\it must\/} come sometimes to `jam today,%
+thinspace'' Alice objected. ``No, it can't'', said the
+Queen. ``It's jam every {\it other\/} day: today isn't
+any {\it other\/} day.''
+|
+\produces
+\raggedright ``You couldn't have it if you {\it did\/}
+want it,'' the Queen said. ``The rule is, jam tomorrow
+and jam yesterday---but never jam {\it today\/}.''
+``It {\it must\/} come sometimes to `jam today,%
+'\thinspace'' Alice objected. ``No, it can't'', said the
+Queen. ``It's jam every {\it other\/} day: today isn't
+any {\it other\/} day.''
+\endexample
+\enddesc
+
+\begindesc
+\cts hang {}
+\explain
+Cette commande indente la seconde ligne et les suivantes d'un paragraphe
+de |\parindent|, l'^{indentation} du paragraphe.
+(\xref{\parindent}).
+Puisque la premi\`ere ligne est d\'ej\`a indent\'ee par |\parindent|
+(\`a moins que vous ayez supprim\'e l'indentation avec |\noindent|), le
+paragraphe entier appara\^\i t \^etre indent\'e de |\parindent|.
+
+\example
+\parindent=24pt \hang  ``I said you {\it looked} like an
+egg, Sir,'' Alice gently explained to Humpty Dumpty. ``And
+some eggs are very pretty, you know,'' she added.
+|
+\produces
+\parindent=24pt \hang  ``I said you {\it looked} like an
+egg, Sir,'' Alice gently explained to Humpty Dumpty. ``And
+some eggs are very pretty, you know,'' she added.
+\endexample
+\enddesc
+
+\begindesc
+\cts hangafter {\param{nombre}}
+\cts hangindent {\param{dimension}}
+
+\explain
+Ces deux \minref{param\`etre}s associ\'es
+sp\'ecifient l'``^{indentation r\'emanente}'' pour un paragraphe.
+L'indentation r\'emanente indique \`a \TeX\ que certaines lignes
+du paragraphe doivent
+\^etre indent\'ees et que les lignes restantes doivent avoir leur largeur normale
+^^{indentation}
+|\hangafter| d\'etermine quelles lignes
+sont indent\'ees, tandis que |\hangindent| d\'etermine le montant d'inden\-tation
+et si elle appara\^\i t sur la gauche ou sur la droite~: 
+
+\ulist
+\li Soit $n$ la valeur de |\hangafter|.  Si $n < 0$, 
+Les $-n$ premi\`eres lignes du paragraphe seront indent\'ees.
+Si $n\ge0$, toutes sauf les $n$ premi\`eres lignes du paragraphe seront
+indent\'ees.
+
+\li Soit $x$ la valeur de |\hangindent|.
+Si $x\ge0$, les lignes seront indent\'ees
+de $x$ \`a gauche. Si $x<0$, les lignes seront indent\'ees de $-x$ sur
+la droite.  
+\endulist
+
+Quand vous sp\'ecifiez de l'indentation r\'emanente, elle ne s'applique 
+qu'au paragraphe suivant (si vous \^etes en mode vertical) ou au
+paragraphe courant (si vous \^etes en mode horizontal).
+\TeX\ utilise les valeurs de |\hangafter| et |\hangindent| \`a la fin d'un
+paragraphe, quand il coupe ce paragraphe en lignes.\minrefs{line
+break}
+ 
+\`A la diff\'erence de la plupart des autres param\`etres de mise en forme de paragraphe,
+|\hangafter| et |\hangindent| sont r\'einitialis\'es
+au d\'ebut de chaque paragraphe, soit,
+$1$ pour |\hangafter| et $0$ pour |\hangindent|.
+Si vous voulez composer une suite de paragraphes avec de l'indentation r\'emanente, 
+utilisez |\everypar| (\xref{\everypar}).
+^^|\everypar//pour indentation r\'emanente|
+Si vous sp\'ecifiez |\hangafter| et |\hangindent| de m\^eme que ^|\parshape|,
+\TeX\ ignorera |\hangafter| et |\hangindent|.
+
+\example
+\hangindent=6pc \hangafter=-2
+This is an example of a paragraph with hanging indentation. 
+In this case, the first two lines are indented on the left,
+but after that we return to unindented text.
+|
+\produces
+\hangindent=6pc \hangafter=-2
+This is an example of a paragraph with hanging indentation. 
+In this case, the first two lines are indented on the left,
+but after that we return to unindented text.
+\nextexample
+\hangindent=-6pc \hangafter=1
+This is another example of a paragraph with hanging
+indentation.  Here, all lines after the first have been
+indented on the right. The first line, on the other
+hand, has been left unindented.
+|
+\produces
+\hangindent=-6pc \hangafter=1
+This is another example of a paragraph with hanging
+indentation.  Here, all lines after the first have been
+indented on the right. The first line, on the other
+hand, has been left unindented.
+\endexample
+\enddesc
+
+\margin{{\tt\\textindent} has been moved to earlier in this section.}
+
+\begindesc
+\cts parshape {$n\; i_1 l_1\; i_2 l_2\; \ldots \;i_n l_n$}
+\explain
+Cette commande sp\'ecifie le gabarit des $n$ premi\`eres lignes d'un para\-graphe.
+Le prochain si vous \^etes en mode vertical et le paragraphe courant si vous 
+\^etes en mode horizontal.
+Les $i$ et les $l$ sont toutes des dimensions. La premi\`ere ligne est indent\'ee de
+$i_1$ et a une longueur de $l_1$, la seconde ligne est indent\'ee de $i_2$ et a
+une longueur de $l_2$, et ainsi de suite.
+si le paragraphe a plus de $n$ lignes, la derni\`ere paire indentation\slash 
+longueur est utilis\'ee pour les autres lignes.
+Pour parachever des effets sp\'eciaux comme celui montr\'e ici, vous devrez
+normalement faire beaucoup d'essais, ins\'erer des cr\'enages ici et l\`a et
+choisir votre mot pour remplir le gabarit.
+
+|\parshape|, comme ^|\hangafter| et ^|\hangindent|, n'est effectif que pour
+un paragraphe.
+Si vous sp\'ecifiez |\hangafter| et |\hangindent| de m\^eme que |\par!-shape|,
+\TeX\ ignorera ^|\hangafter| et ^|\hangindent|.
+\ifodd\pageno\vfill\eject\fi % so the wineglass is on a single page.
+
+\example
+% A small font and close interline spacing make this work
+\smallskip\font\sixrm=cmr6 \sixrm \baselineskip=7pt
+\fontdimen3\font = 1.8pt \fontdimen4\font = 0.9pt
+\noindent \hfuzz 0.1pt
+\parshape 30 0pt 120pt 1pt 118pt 2pt 116pt 4pt 112pt 6pt
+108pt 9pt 102pt 12pt 96pt 15pt 90pt 19pt 84pt 23pt 77pt
+27pt 68pt 30.5pt 60pt 35pt 52pt 39pt 45pt 43pt 36pt 48pt
+27pt 51.5pt 21pt 53pt 16.75pt 53pt 16.75pt 53pt 16.75pt 53pt
+16.75pt 53pt 16.75pt 53pt 16.75pt 53pt 16.75pt 53pt 16.75pt
+53pt 14.6pt 48pt 24pt 45pt 30.67pt 36.5pt 51pt 23pt 76.3pt
+Les vins de France et de Californie semblent \^etre 
+les plus connus, mais ne sont pas les seuls bons vins. 
+Les vins espagnols sont souvent sous-estim\'es, 
+et des assez vieux peu\-vent \^etre disponibles \`a des 
+prix raisonnables. Pour les vins espagnols, le mill\'esime 
+n'est pas important, mais le climat de la r\'egion de 
+Bordeaux varie selon les ann\'ees. Seuls certains sont 
+bons. Ceux que 
+vo\kern -.1pt us de\kern -.1pt v\kern -.1pt ez 
+noter tr\`es tr\`es bons~: 
+1962, 1964, 1966. 1958, 1959, 1960, 1961, 1964, 1966 sont de bons crus 
+californiens. \`A boire avec mod\'eration~! 
+|
+%\margin{Wineglass text replaced because of permissions problem.}
+\produces
+% A small font and close interline spacing make this work
+\smallskip\font\sixrm=cmr6 \sixrm \baselineskip=7pt
+\fontdimen3\font = 1.8pt \fontdimen4\font = 0.9pt
+\noindent \hfuzz 0.1pt
+\parshape 30 0pt 120pt 1pt 118pt 2pt 116pt 4pt 112pt 6pt 108pt 9pt 102pt
+12pt 96pt 15pt 90pt 19pt 84pt 23pt 77pt 27pt 68pt 30.5pt 60pt 35pt 52pt
+39pt 45pt 43pt 36pt 48pt 27pt 51.5pt 21pt 53pt 16.75pt 53pt 16.75pt
+53pt 16.75pt 53pt 16.75pt 53pt 16.75pt 53pt 16.75pt 53pt 16.75pt
+53pt 16.75pt 53pt 14.6pt 48pt 24pt 45pt 30.67pt 36.5pt 51pt 23pt 76.3pt
+Les vins de France et de Californie semblent \^etre 
+les plus connus, mais ne sont pas les seuls bons vins. 
+Les vins espagnols sont souvent sous-estim\'es, 
+et des assez vieux peu\-vent \^etre disponibles \`a des 
+prix raisonnables. Pour les vins espagnols, le mill\'esime 
+n'est pas important, mais le climat de la r\'egion de 
+Bordeaux varie selon les ann\'ees. Seuls certains sont 
+bons. Ceux que 
+vo\kern -.1pt us de\kern -.1pt v\kern -.1pt ez 
+noter tr\`es tr\`es bons~:  
+1962, 1964, 1966. 1958, 1959, 1960, 1961, 1964, 1966 sont de bons crus 
+californiens. \`A boire avec mod\'eration~! \endexample
+\eix^^{indentation}
+\enddesc
+
+\begindesc
+\cts prevgraf {\param{nombre}}
+\explain
+En mode horizontal, ce param\`etre sp\'ecifie le 
+nombre de lignes dans le paragraphe en cours~; en mode vertical,
+il sp\'ecifie le nombre de lignes dans le paragraphe pr\'ec\'edent.
+\TeX\ ne prend en compte |\prevgraf| qu'apr\`es avoir fini de couper du texte
+en ligne, c'est-\`a-dire, sur un affichage math\'ematique ou \`a la fin d'un 
+paragraphe.
+Voir la \knuth{page~103}{121} pour plus de d\'etails \`a son propos.
+\enddesc
+
+\begindesc
+\cts vadjust {\rqbraces{\<mat\'eriel en mode vertical>}}
+\explain
+Cette commande ins\`ere le \<mat\'eriel en mode vertical> sp\'ecifi\'e juste apr\`es 
+la ligne de sortie contenant la position o\`u la commande se trouve.
+^^{listes verticales//ins\'erer dans des paragraphes}
+Vous pouvez l'utiliser, par exemple, pour provoquer un saut de page ou 
+ins\'erer de l'espace suppl\'ementaire apr\`es une certaine ligne.
+
+\example
+Some of these words are \vadjust{\kern8pt\hrule} to be
+found above the line and others are to be found below it.
+|
+\produces
+Some of these words are \vadjust{\kern8pt
+\hbox to \hsize{\hfil\vbox{\advance\hsize by -\parindent
+\hrule width \hsize}}}
+to be found above the line and others are to be found below it.
+\endexample
+\enddesc
+
+\see |\parindent| (\xref\parindent),
+|\parskip| (\xref\parskip) ainsi que |\every!-par| (\xref\everypar).
+\eix^^{coupures de ligne//et formation de paragraphe}
+\eix^^{paragraphes//formation}
+
+%==========================================================================
+\section {coupures de lignes}
+
+%==========================================================================
+\subsection {Encourager ou d\'ecourager les coupures de ligne}
+
+\begindesc
+\bix^^{coupures de ligne}
+\bix^^{coupures de ligne//encouragement ou d\'ecouragement}
+\ctspecial break {} \xrdef{hbreak}
+\explain
+Cette commande force une coupure de ligne,
+\`a moins que vous fassiez quelque chose pour remplir la ligne, 
+Vous recevrez vraisemblablement une plainte ``underfull hbox''.
+|\break| peut aussi \^etre utilis\'e en mode vertical.
+\example
+Fill out this line\hfil\break and start another one.\par
+% Use \hfil here to fill out the line.
+This line is underfull---we ended it\break prematurely.
+% This line causes an `underfull hbox' complaint.
+|
+\produces
+\hbadness = 10000 % avoid hbadness message
+Fill out this line\hfil\break and start another one.\par
+% Use \hfil here to fill out the line.
+This line is underfull---we ended it\break prematurely.
+% This line causes an `underfull hbox' complaint.
+\endexample\enddesc
+
+\begindesc
+\ctspecial nobreak {} \xrdef{hnobreak}
+\explain
+Cette commande emp\^eche une coupure de ligne l\`a o\`u elle
+devrait se faire normalement.
+|\nobreak| peut aussi \^etre utilis\'ee en mode vertical.
+\example
+Sometimes you'll encounter a situation where
+a certain space\nobreak\qquad must not get lost.
+|
+\produces
+Sometimes you'll encounter a situation where
+a certain space\nobreak\qquad must not get lost.
+\endexample
+\enddesc
+
+\begindesc
+\ctspecial allowbreak {} \xrdef{hallowbreak}
+\explain
+Cette commande demande \`a \TeX\ d'autoriser une coupure de ligne l\`a o\`u elle
+n'arriverait pas normalement.
+Elle est plus souvent utile dans une formule math\'ematique, car \TeX\ est
+r\'eticent \`a couper de telles lignes. ^^{coupures de ligne//dans des formules math\'ematiques}
+|\allowbreak| peut aussi \^etre utilis\'ee en mode vertical.
+\example
+Under most circumstances we can state with some confidence
+that $2+2\allowbreak=4$, but skeptics may disagree.
+\par For such moronic automata, it is not difficult to
+analyze the input/\allowbreak output behavior in the limit.
+|
+\produces
+Under most circumstances we can state with some confidence
+that $2+2\allowbreak=4$, but skeptics may disagree.
+\par For such moronic automata, it is not difficult to
+analyze the input/\allowbreak output behavior in the limit.
+\endexample\enddesc
+
+\begindesc
+\ctspecial penalty {\<nombre>} \xrdef{hpenalty}
+\explain
+Cette commande produit un \'el\'ement de \minref{p\'enalit\'e}.
+L'\'el\'ement de p\'enalit\'e rend \TeX\ plus ou moins d\'esireux de couper une ligne
+\`a l'endroit o\`u cet \'el\'ement est plac\'e.
+Une p\'enalit\'e n\'egative, c'est-\`a-dire, un bonus, encourage une coupure de ligne~;
+une p\'enalit\'e positive d\'ecourage une coupure de ligne.  
+Une p\'enalit\'e de $10000$ ou plus emp\^eche une coupure quelle qu'elle soit,
+tandis qu'une p\'enalit\'e de $-10000$ ou moins force une coupure.
+|\penalty| peut aussi \^etre utilis\'ee en mode vertical.
+%\secondprinting{\vfill\eject}
+\example
+\def\break{\penalty -10000 } % as in plain TeX
+\def\nobreak{\penalty 10000 } % as in plain TeX
+\def\allowbreak{\penalty 0 } % as in plain TeX
+|
+\endexample
+\enddesc
+
+{\vglue-\baselineskip\vskip0pt}
+\begindesc
+\cts obeylines {}
+\explain
+\TeX\ normalement traite une fin de ligne comme un espace.
+|\obeylines| demande \`a \TeX\ de traiter chaque fin de ligne comme
+une fin de paragraphe, for\c cant ainsi une coupure de ligne.
+|\obeylines| est souvent utile quand vous composez un po\`eme ou
+un programme informatique.
+^^{vers, composer des}^^{po\'esie, composer de la}^^{programmes informatiques, composer des}
+Si quelques lignes sont plus longues que la longueur de ligne r\'eelle
+(|\hsize|\tminus|\parindent|),
+sinon,
+vous aurez une coupure de ligne suppl\'ementaire dans ces lignes.
+
+Parce que \TeX\ ins\`ere le ressort |\parskip| (\xref\parskip)
+entre des lignes contr\^ol\'ees par |\obeylines| (puisqu'il pense que chaque
+ligne est un paragraphe), vous devrez normalement mettre |\parskip| \`a z\'ero 
+quand vous utiliserez |\obeylines|.
+
+Vous pouvez utiliser la commande ^|\obeyspaces| (\xref{\obeyspaces}) pour que
+\TeX\ prenne en compte tous les espaces d'une ligne.  |\obeylines| et |\obey!-spaces|
+sont souvent utilis\'ees ensemble.
+\example 
+\obeylines
+``Beware the Jabberwock, my son!!
+\quad The jaws that bite, the claws that catch!!
+Beware the Jubjub bird, and shun
+\quad The frumious Bandersnatch!!''
+|
+\produces
+\obeylines
+``Beware the Jabberwock, my son!
+\quad The jaws that bite, the claws that catch!
+Beware the Jubjub bird, and shun
+\quad The frumious Bandersnatch!''
+\endexample
+\enddesc
+
+%\secondprinting{\vglue-\baselineskip\vskip0pt}
+
+\begindesc
+\easy\cts slash {}
+\explain
+Cette commande produit un ^{slash} (/) et pr\'evient aussi \TeX\ qu'il peut
+couper la ligne apr\`es le slash, si n\'ecessaire.
+\example
+Her oldest cat, while apparently friendly to most people,
+had a Jekyll\slash Hyde personality when it came to mice.
+|
+\produces
+Her oldest cat, while apparently friendly to most people,
+had a Jekyll\slash Hyde personality when it came to mice.
+\endexample
+\eix^^{coupures de ligne//encouragement ou d\'ecouragement}
+\enddesc
+
+%\secondprinting{\vfill\eject}
+
+
+%==========================================================================
+\subsection {param\`etres de coupure de lignes}
+
+\begindesc
+\bix^^{coupures de ligne//param\`etres affectant les}
+%
+\cts pretolerance {\param{nombre}}
+\cts tolerance {\param{nombre}}
+\explain
+Ces param\`etres d\'eterminent la \minref{m\'ediocrit\'e} que \TeX\ tol\`erera
+sur chaque ligne quand il choisit des coupures de ligne
+pour un paragraphe.
+La m\'ediocrit\'e est une mesure de combien l'espacement inter-mot d\'evie de
+l'id\'eal.
+|\pretolerance| sp\'ecifie la m\'ediocrit\'e tol\'erable pour
+des coupures de ligne sans c\'esure~;
+|\tolerance| sp\'ecifie la m\'ediocrit\'e tol\'erable pour des coupures de ligne 
+avec c\'esure.
+La m\'ediocrit\'e tol\'erable peut \^etre d\'epass\'ee de deux fa\c cons~:
+un ligne est trop serr\'ee (les espaces inter-mots sont trop
+petits) ou trop l\^ache (les espaces inter-mots sont trop grands).
+
+\ulist
+\li Si \TeX\ doit faire une ligne trop rel\^ach\'ee, il
+se plaint d'un ``underfull hbox''.
+\li Si \TeX\ doit faire une ligne trop resserr\'ee, 
+il laisse la ligne d\'epasser dans la marge droite et
+se plaint d'un ``overfull \minref{hbox}''.
+\endulist
+
+\noindent \TeX\ choisit des coupures de ligne selon les \'etapes suivantes~:
+\olist
+\li Il essaye de choisir des coupures de ligne sans c\'esures.
+Si aucune des lignes r\'esultantes n'a de m\'edio\-crit\'e d\'epassant |\pretolerance|, 
+les coupures de ligne sont accept\'ees et le paragraphe peut \^etre fait.
+\li Sinon, il essaye un autre jeu de coupures de ligne, cette fois
+en autorisant les c\'esures.  Si aucune des lignes r\'esultantes n'a une m\'edio\-crit\'e
+d\'epassant |\tolerance|, le nouveau jeu de coupures de ligne est
+acceptable et le paragraphe peut maintenant \^etre fait.
+\li Autrement, il ajoute ^|\emergencystretch| (voir plus bas) \`a l'\'etire\-ment
+de chaque ligne et essaye encore.
+\li Si aucun de ces essais n'a produit de jeu de coupures de ligne acceptable,
+il fait le paragraphe avec un ou plusieurs ``overfull hbox''
+et s'en plaint.
+\endolist
+
+\PlainTeX\ initialise |\tolerance| \`a $200$ et |\pretolerance| \`a $100$.
+Si vous mettez |\tolerance| \`a $10000$, \TeX\
+devient infiniment tol\'erant et accepte tout espacement, quelque soit sa laideur
+(\`a moins qu'il rencontre un mot qui ne tienne pas sur une ligne, m\^eme avec
+c\'esure).  Ainsi en changeant |\tolerance| vous pouvez \'eviter des 
+``overfull hbox'' et ``underfull hbox'', mais au prix de mauvais espacements.
+En rendant |\pretolerance| plus grand vous pouvez faire que \TeX\ \'evite les 
+c\'esure et s'ex\'ecute aussi plus rapidement,
+mais, encore, au prix d'\'eventuels mauvais espacements.
+Si vous mettez |\pretolerance| \`a $-1$,
+\TeX\ n'essayera m\^eme pas de faire le paragraphe sans c\'esure.
+
+Le param\`etre ^|\hbadness| (\xref \hbadness) d\'etermine le niveau de m\'ediocrit\'e
+que \TeX\ tol\`erera avant  de se plaindre, mais |\hbadness| n'affecte pas
+la mani\`ere dont \TeX\ compose votre document.
+Le param\`etre ^|\hfuzz| (\xref \hfuzz) d\'etermine le montant dont
+une hbox peut d\'epasser sa largeur sp\'ecifi\'ee avant que \TeX\ la consid\`ere 
+erron\'ee.
+\enddesc
+
+\begindesc
+\cts emergencystretch {\param{dimension}}
+\explain
+En mettant ce param\`etre sup\'erieur \`a z\'ero,
+vous pouvez rendre plus facile \`a \TeX\ la
+composition de votre document sans g\'en\'erer d'``overfull hbox''.
+^^{overfull boxes}
+C'est une meilleur alternative \`a |\tolerance=10000|,
+car cela tend \`a produire des lignes r\'eellement laides.
+Si \TeX\ ne peut pas composer un paragraphe sans d\'epasser ^|\tolerance|,
+il tentera encore, en ajoutant |\emergencystretch| \`a l'\'etirement de chaque
+ligne.
+L'effet du changement est de r\'eduire la m\'ediocrit\'e de chaque ligne,
+autorisant \TeX\ \`a faire des espaces plus larges qu'ils auraient \'et\'e autrement
+et ainsi de choisir des coupures de ligne qui seront aussi
+bons que possible selon les circonstances.
+\enddesc
+
+\begindesc
+\cts looseness {\param{nombre}}
+\explain
+\minrefs{line break}
+Ce param\`etre vous donne un moyen
+de changer le nombre total de lignes dans un paragraphe par rapport \`a celui 
+qu'il aurait \'et\'e de mani\`ere optimale.
+|\looseness| est ainsi nomm\'e parce que c'est une mesure de combien perd le
+paragraphe, c'est-\`a-dire, combien d'espace suppl\'ementaire il contient. 
+
+Normalement, |\looseness| est \`a $0$ et
+\TeX\ choisit des coupures de ligne selon sa mani\`ere habituelle.  Mais si
+|\looseness| est \`a, disons, $3$, \TeX\ fait ainsi~:
+\olist
+\li Il choisit des coupures de ligne normalement, obtenant un paragraphe de $n$ lignes.
+\li Il \'ecarte ces coupures de ligne et
+tente de trouver un nouveau jeu de coupure de ligne 
+qui donne le paragraphe en $n+3$ lignes.
+(Sans l'\'etape pr\'ec\'edente, \TeX\ ne saurait pas la valeur de $n$.)
+\li Si l'essai pr\'ec\'edent donne des lignes dont la m\'ediocrit\'e d\'epasse
+|\tol!-er!-ance|,
+^^|\tolerance|
+il tente d'obtenir $n+2$ lignes---et si cela \'echoue aussi,
+$n+1$ lignes, et finalement $n$ lignes encore.
+\endolist
+\noindent
+De m\^eme, si |\looseness| est \`a $-n$,
+\TeX\ tente de faire le paragraphe avec $n$ lignes de moins que la normale.
+Le moyen le plus simple pour \TeX\ de faire un paragraphe plus long d'une ligne est de mettre
+un seul mot sur la ligne en plus.  vous pouvez emp\^echer cela en
+mettant un tilde (\xref{@not}) entre les deux derniers mots du paragraphe. 
+
+Mettre |\looseness| est le meilleur moyen de forcer un paragraphe
+\`a occuper un nombre de lignes donn\'e.
+Le mettre \`a une valeur n\'egative est pratique quand vous essayez
+d'augmenter la quantit\'e de texte que vous pouvez placer sur une page.
+Similairement, le mettre \`a une valeur positive
+est pratique quand vous essayez de diminuer la quantit\'e de texte sur 
+une page.
+
+\TeX\ remet |\looseness| \`a $0$ quand il termine un paragraphe, apr\`es avoir
+coup\'e le paragraphe en lignes.
+Si vous voulez changer le rel\^achement de plusieurs paragraphes, vous devez 
+le faire individuellement pour chacun ou mettre le changement dans |\everypar|
+\ctsref\everypar.
+^^|\everypar//pour fixer \b\tt\\looseness\e|
+\enddesc
+
+\begindesc
+\cts linepenalty {\param{nombre}}
+\explain
+\minrefs{line break}
+Ce param\`etre sp\'ecifie les \minref{d\'em\'erites} que \TeX\ r\'epartit pour chaque coupure de ligne
+quand il coupe un paragraphe en lignes.
+La p\'enalit\'e est ind\'epen\-dante d'o\`u la coupure de ligne a lieu.
+Augmenter la valeur
+de ce param\`etre demande \`a \TeX\ d'essayer plus fortement de mettre un paragraphe avec 
+un nombre minimum de lignes, m\^eme au co\^ut d'autres consid\'erations esth\'etiques
+comme \'eviter des espacements inter-mots excessivement res\-serr\'es.
+Les d\'em\'erites sont en unit\'es de \minref{m\'ediocrit\'e} au carr\'e, donc
+vous devez assigner une valeur plut\^ot large \`a ce param\`etre (dans les
+milliers) pour qu'elle ait un quelconque effet.
+\PlainTeX\ met |\linepenalty| \`a $10$.
+\enddesc
+
+\begindesc
+\cts adjdemerits {\param{nombre}}
+\explain
+\minrefs{line break}
+^^{c\'esure//p\'enalit\'es pour}
+{\tighten
+Ce param\`etre sp\'ecifie des \minref{d\'em\'erites} additionnels que \TeX\ attache au
+point de coupure entre deux lignes adjacentes qui sont
+``incompatibles visuellement''. 
+De telles paires de lignes font qu'un paragraphe appara\^\i t in\'egal.
+Les incompatibilit\'es sont \'evalu\'ees en termes d'\'etroitesse ou de rel\^achement
+de lignes~:
+}
+\olist\compact
+\li Une ligne est resserr\'ee si son \minref{ressort} doit se r\'etr\'ecir d'au moins $50\%$.
+\li Une ligne est d\'ecente si sa m\'ediocrit\'e est de $12$ ou moins.
+\li Une ligne est rel\^ach\'ee si son \minref{ressort} doit s'\'etirer d'au moins $50\%$.
+\li Une ligne est tr\`es rel\^ach\'ee si son ressort doit tellement s'\'etirer
+que sa m\'ediocrit\'e d\'epasse $100$.
+\endolist
+Deux lignes adjacentes sont visuellement incompatibles
+si leurs cat\'ego\-ries ne sont pas adjacentes, c'est-\`a-dire, une ligne resserr\'ee
+est apr\`es une rel\^ach\'ee ou une ligne d\'ecente apr\`es une tr\`es rel\^ach\'ee.
+
+Les d\'em\'erites sont en unit\'es de \minref{m\'ediocrit\'e} au carr\'ee, donc 
+vous devez assigner une valeur plut\^ot large \`a ce param\`etre (dans les
+milliers) pour qu'elle ait un quelconque effet.
+\PlainTeX\ met |\adjdemerits| \`a~$10000$.
+\enddesc
+
+\begindesc
+\bix^^{c\'esure//p\'enalit\'es pour}
+\cts exhyphenpenalty {\param{nombre}}
+\explain
+\minrefs{line break}
+Ce param\`etre sp\'ecifie la \minref{p\'enalit\'e} que \TeX\ attache \`a un 
+point de coupure sur une c\'esure explicite comme celle de
+``helter-skelter''.  Augmenter ce param\`etre a l'effet de d\'ecourager
+\TeX\ de finir une ligne sur une c\'esure explicite.
+\PlainTeX\ met |\exhyphenpenalty| \`a $50$.
+\enddesc
+
+\begindesc
+\cts hyphenpenalty {\param{nombre}}
+\explain
+\minrefs{line break}
+Ce param\`etre sp\'ecifie la \minref{p\'enalit\'e} que \TeX\ attache \`a un 
+point de coupure sur une c\'esure implicite.
+Des c\'esures implicites peuvent survenir du dictionnaire de c\'esure de \TeX\ ou
+de ^{c\'esures optionnelles} que vous avez ins\'er\'e avec |\-|~(\xref{\@minus}).
+^^|-//m\`ene \`a {\tt\\hyphenpenalty}|
+Augmenter ce param\`etre a l'effet de d\'ecourager
+\TeX\ de couper des mots.
+\PlainTeX\ met |\hyphenpenalty| \`a $50$.
+\enddesc
+
+\begindesc
+\cts doublehyphendemerits {\param{nombre}}
+\explain
+\minrefs{line break}
+{\tighten
+Ce param\`etre sp\'ecifie les \minref{d\'em\'erites} additionnels que \TeX\
+attache \`a un point de coupure quand ce point de coupure arrive \`a
+deux lignes cons\'ecu\-tives qui se terminent sur une c\'esure.
+Augmenter la valeur de ce param\`etre d\'ecourage
+\TeX\ de c\'esurer deux lignes \`a suivre.
+Les d\'em\'erites sont en unit\'es de \minref{m\'ediocrit\'e} au carr\'e, donc
+vous devez assigner une valeur plut\^ot large \`a ce param\`etre (dans les
+milliers) pour qu'elle ait un quelconque effet.
+\PlainTeX\ met |\doublehyphendemerits| \`a $10000$.
+}
+\enddesc
+
+\begindesc
+\cts finalhyphendemerits {\param{nombre}}
+\explain
+\minrefs{line break}
+{\tighten
+Ce param\`etre sp\'ecifie les \minref{d\'em\'erites} additionnels que \TeX\
+attache \`a un point de coupure qui fait que l'avant derni\`ere ligne d'un
+paragraphe se termine avec une c\'esure.
+Une telle c\'esure est g\'en\'eralement consid\'er\'ee inesth\'etique
+parce que l'espace blanc \'eventuel provoqu\'e par une derni\`ere ligne courte
+la rend m\'eprisable.
+Augmenter la valeur de ce param\`etre d\'ecourage
+\TeX\ de finir l'avant derni\`ere ligne avec une c\'esure.
+Les d\'em\'erites sont en unit\'es de \minref{m\'ediocrit\'e} au carr\'e, donc
+vous devez assigner une valeur plut\^ot large \`a ce param\`etre (dans les
+milliers) pour qu'elle ait un quelconque effet.
+\PlainTeX\ met |\finalhyphendemerits| \`a $5000$.
+}
+\eix^^{c\'esure//p\'enalit\'es pour}
+\enddesc
+
+\begindesc
+\cts binoppenalty {\param{nombre}}
+\explain
+^^{op\'erateurs}
+Ce param\`etre sp\'ecifie la p\'enalit\'e d'une coupure d'une formule math\'e\-ma\-tique
+apr\`es un op\'erateur binaire quand la formule appara\^\i t dans un paragraphe.
+\PlainTeX\ met |\binoppenalty| \`a $700$.
+\enddesc
+
+\begindesc
+\cts relpenalty {\param{nombre}}
+\explain
+^^{relations}
+Ce param\`etre sp\'ecifie la p\'enalit\'e pour une coupure d'une formule math\'e\-ma\-tique
+apr\`es une relation quand la formule appara\^\i t dans un paragraphe.
+\PlainTeX\ met |\rel!-penal!-ty| \`a~$500$.
+
+\eix^^{coupures de ligne//param\`etres affectant les}
+\enddesc
+
+%==========================================================================
+\subsection {C\'esure}
+
+\begindesc
+\bix^^{c\'esure}
+%
+\easy\ctspecial - \ctsxrdef{@minus}
+\explain
+La commande |\-| ins\`ere une ``c\'esure optionnelle''
+^^{c\'esures optionnelles}
+dans un mot.
+La c\'esure optionnelle autorise \TeX\ de couper le mot \`a cet
+endroit.  \TeX\ n'est pas oblig\'e de couper l\`a---il ne le fera
+que s'il le faut.  Cette commande est utile quand un mot 
+qui appara\^\i t une ou deux fois dans votre document
+doit \^etre coup\'e,
+mais que \TeX\ ne peut pas trouver de point de coupure appropri\'ee de lui-m\^eme.
+\example
+Alice was exceedingly reluctant to shake hands first
+with either Twee\-dle\-dum or Twee\-dle\-dee, for
+fear of hurting the other one's feelings.
+|
+\produces
+Alice was exceedingly reluctant to shake hands first
+with either Twee\-dle\-dum or Twee\-dle\-dee, for
+fear of hurting the other one's feelings.
+\endexample
+\enddesc
+
+\begindesc
+\cts discretionary {\rqbraces{\<pre-break text>}
+   \rqbraces{\<post-break text>}
+   \rqbraces{\<no-break text>}}
+\explain
+\minrefs{line break}
+^^{c\'esure}
+Cette commande sp\'ecifie une ``coupure optionnelle'', autrement dit,
+un endroit o\`u \TeX\ peut couper une ligne.
+Elle dit aussi \`a \TeX\ quel texte mettre de chaque cot\'e de la coupure.
+\ulist
+\li Si \TeX\ ne doit pas couper l\`a, il utilise le \<no-break text>.
+\li Si \TeX\ doit couper l\`a, il met le \<pre-break text> juste avant
+la coupure et le \<post-break text> juste apr\`es la coupure.
+\endulist
+\noindent
+Comme avec |\-|,
+\TeX\ n'est pas oblig\'e de couper une ligne sur une coupure optionnelle.
+En fait, |\-| est normalement \'equivalent \`a |\discretionary!allowbreak{-}{}{}|.
+
+Parfois, \TeX\ ins\`ere des coupures optionnelles de lui-m\^eme.
+Par ex\-emple, il ins\`ere |\discretionary!allowbreak{}{}{}| apr\`es
+une c\'esure explicite ou un tiret.
+
+{\hyphenchar\tentt=-1 % needed to avoid weirdnesses
+\example
+% An ordinary discretionary hyphen (equivalent to \-):
+\discretionary{-}{}{}
+% A place where TeX can break a line, but should not
+% insert a space if the line isn't broken there, e.g.,
+% after a dash:
+\discretionary{}{}{}
+% Accounts for German usage: `flicken', but `flik-
+% ken':
+German ``fli\discretionary{k-}{k}{ck}en''
+|
+^^{c\'esure//allemande}
+\endexample}
+
+\enddesc
+
+\begindesc
+\cts hyphenation {\rqbraces{\<mot>\thinspace\vs\ $\ldots$\ \vs
+   \thinspace\<mot>}}
+\explain
+\TeX\ garde un dictionnaire des exceptions de ses r\`egles de ^{c\'esure}.
+Chaque entr\'ee du dictionnaire indique comment un mot particulier doit
+\^etre coup\'e.  
+La commande |\hyphenation| ajoute des mots au dictionnaire.
+Son argument est une suite de mots s\'epar\'ee par des blancs. 
+Les lettres majuscules et minuscules sont \'equivalentes.
+Les c\'esures dans chaque mot indiquent les endroits
+o\`u \TeX\ peut couper ce mot.
+Un mot sans c\'esure ne sera jamais coup\'e.
+Dans tous les cas, vous pouvez outrepasser le dictionnaire de c\'esure en
+utilisant |\-| pour une occurrence particuli\`ere d'un mot.
+Vous devez produire toutes les formes grammaticales d'un mot
+que vous voulez que \TeX\ coupe, c'est-\`a-dire, le singulier et le pluriel.
+
+\example
+\hyphenation{Gry-phon my-co-phagy}
+\hyphenation{man-u-script man-u-scripts piz-za}
+|
+\endexample
+\enddesc
+
+\begindesc
+\cts uchyph {\param{nombre}}
+\explain
+Une valeur positive de |\uchyph| (c\'esure majuscule)
+permet d\'ecouper des mots, comme des noms propres,
+qui commencent par une lettre capitale.
+Une valeur \`a z\'ero ou n\'egative
+inhibe de telle coupure.  \PlainTeX\ met |\uchyph| \`a $1$,
+donc \TeX\  essaye normalement de couper les mots qui commencent par une lettre capital.
+\enddesc
+
+\begindesc
+\cts showhyphens {\rqbraces{\<mot>\thinspace\vs\ $\ldots$\ \vs
+   \thinspace\<mot>}}
+\explain
+Cette commande n'est habituellement pas utilis\'ee dans des documents, 
+mais vous pouvez l'utiliser sur votre terminal pour voir comment \TeX\ 
+couperait certains jeux de mots al\'eatoires.
+Les mots, avec les coupures visibles, apparaissent dans le log et sur
+votre terminal.  Vous obtiendrez une plainte \`a propos d'une ``underfull 
+hbox''---ignorez la.
+\example
+\showhyphens{threshold quizzical draughts argumentative}
+|
+\logproduces
+Underfull \hbox (badness 10000) detected at line 0
+[] \tenrm thresh-old quizzi-cal draughts ar-gu-men-ta-tive
+|
+\endexample
+\enddesc
+
+\begindesc
+\cts language {\param{number}}
+\explain
+Des langages diff\'erents ont diff\'erents jeux de r\`egles de c\'esure.
+Ce para\-m\`etre d\'etermine le jeu de ^{r\`egles de c\'esure} que \TeX\ utilise.
+En changeant |\language| vous pouvez obtenir que \TeX\
+coupe des portions de texte ou des documents entiers en accord avec les 
+r\`egles de c\'esure appropri\'ees \`a un langage particulier.
+^^{langues europ\'eennes}
+Votre ^{support local} sur \TeX\ vous dira si des
+jeux additionnels de r\`egles de c\'esure sont accessibles (derri\`ere celui
+pour l'anglais)
+et quelles sont les valeurs appropri\'ees de |\language|.
+La valeur par d\'efaut de |\language| est $0$.
+
+\TeX\ met le langage courant \`a $0$ au d\'ebut de tous les paragraphes,
+et compare |\language| au langage courant \`a chaque fois qu'il ajoute
+un caract\`ere au paragraphe courant.
+Si ce n'est pas le m\^eme, \TeX\ ajoute un ^{\elementextra} indiquant 
+que le langage change.
+Cet \'el\'ement extraordinaire est la preuve pour les prochaines ex\'ecutions que les r\`egles de langage
+peuvent changer.
+\enddesc
+
+\begindesc
+\cts setlanguage {\<nombre>}
+\explain
+Cette commande met le langage courant \`a \<nombre>
+en ins\'erant le m\^eme \'el\'ement extraordinaire que vous obtiendrez en changeant 
+^|\language|.
+En outre, elle ne change pas la valeur de |\language|.
+\enddesc
+
+\begindesc
+\cts lefthyphenmin {\param{nombre}}
+\cts righthyphenmin {\param{nombre}}
+\explain
+Ces param\`etres sp\'ecifient les plus petits fragments de mots que \TeX\ autorise
+\`a gauche et \`a droite d'un mot coup\'e.
+\PlainTeX\ les initialise par d\'efaut \`a $2$ et $3$ respectivement~;
+ce sont les valeurs recommand\'ees pour l'anglais.
+\enddesc
+
+\begindesc
+\bix^^{polices//caract\`eres de c\'esure pour}
+\cts hyphenchar {\<police>\param{nombre}}
+\explain
+\TeX\ n'utilise pas n\'ecessairement le caract\`ere `-' aux points de c\'esure.
+A la place, il utilise le |\hyphenchar| de la police courante, qui est 
+habituellement `-' mais pas n\'ecessairement. Si une police a une valeur
+ |\hyphenchar| n\'egative,
+\TeX\ ne coupe pas de mots dans cette police.
+
+Notez que \<police> est une s\'equence de contr\^ole
+qui nomme une police, pas un \<nom de police> qui nomme des fichiers de
+police.
+Attention~: 
+un assignement \`a |\hyphenchar| n'est \emph{pas} r\'einitialis\'e \`a la fin
+d'un groupe.
+Si vous voulez changer |\hyphenchar| localement, vous devrez 
+sauvegarder et restaurer sa valeur originale explicitement.
+
+\example
+\hyphenchar\tenrm = `- 
+   % Set hyphenation for tenrm font to `-'.
+\hyphenchar\tentt = -1
+   % Don't hyphenate words in font tentt.
+|
+\endexample
+\enddesc
+
+\begindesc
+\cts defaulthyphenchar {\param{nombre}}
+\explain
+Quand \TeX\ lit le fichier de m\'etriques
+^^{fichiers de m\'etriques//tiret de c\'esure par d\'efaut dans}
+pour une police en r\'eponse \`a une commande
+^|\font|, il met le ^|\hyphenchar| de la police dans
+|\default!-hyphen!-char|.
+Si la valeur de |\default!-hyphen!-char| n'est
+pas dans la fourchette $0$--$255$ quand vous chargez une police,
+\TeX\ ne coupera aucun mot dans cette police \`a moins que vous
+outrepassiez la d\'ecision en mettant le |\hyphenchar| de la police apr\`es.
+\PlainTeX\  met |\default!-hyphen!-char| \`a $45$, le code \ascii\ 
+pour `|-|'.
+\example
+\defaulthyphenchar = `-
+   % Assume `-' is the hyphen, unless overridden.
+\defaulthyphenchar = -1
+   % Don't hyphenate, unless overridden.
+|
+\endexample
+
+\eix^^{polices//caract\`eres de c\'esure pour}
+\enddesc
+
+\see |\pretolerance| (\xref \pretolerance).
+\eix^^{c\'esure}
+\eix^^{coupures de ligne}
+
+%==========================================================================
+\section {Ent\^etes de section, listes et th\'eor\`emes}
+
+\begindesc
+^^{ent\^etes de section}
+\easy\ctspecial beginsection {\<argument>\thinspace{\bt\\par}}
+   \ctsxrdef{@beginsection}
+\explain
+Vous pouvez utiliser cette commande pour d\'ebuter une subdivision majeure de votre document.
+\<argument> est pr\'evu pour servir de titre de section.
+|\beginsection| amplifie \<argument>
+par de l'espace vertical suppl\'ementaire et le met en
+police grasse, justifi\'e \`a gauche.
+Vous pouvez produire le |\par| qui termine \<argument> avec une ligne blanche.
+\let\message = \gobble % Don't bother to tell us about Pig and Pepper.
+\example
+$\ldots$  till she had brought herself down to nine
+inches high.
+
+\beginsection Section 6. Pig and Pepper
+
+For a minute or two she stood looking at the house $\ldots$
+|
+\produces
+$\ldots$  till she had brought herself down to nine
+inches high.
+
+\beginsection Section 6. Pig and Pepper
+
+For a minute or two she stood looking at the house $\ldots$
+\endexample
+\enddesc
+
+\begindesc
+\cts item {\<argument>}
+\cts itemitem {\<argument>}
+\explain
+^^{listes d'\'el\'ements}
+Cette commande est utile pour cr\'eer des ^{listes d'\'el\'ements}.  Tout le paragraphe
+suivant \<argument> est indent\'e de |\parindent|
+^^|\parindent//indentation pour listes d'\'el\'ements|
+(pour |\item|) ou par |2\parindent| (pour |\itemitem|).
+(Voir \xrefpg{\parindent} pour une explication de |\parindent|.)
+Ensuite \<argument>,
+suivi par un espace demi-cadratin, est plac\'e juste \`a
+la gauche du texte de la
+premi\`ere ligne du paragraphe pour qu'il tombe avec l'indentation du paragraphe
+comme sp\'ecifi\'e par |\parindent|.
+
+Si vous voulez inclure plus d'un
+paragraphe dans un \'el\'ement, mettez |\item{}| devant les paragraphes additionnels.
+\example
+{\parindent = 18pt
+\noindent Here is what we require:
+\item{1.}Three eggs in their shells,
+but with the yolks removed.
+\item{2.}Two separate glass cups containing:
+\itemitem{(a)}One-half cup {\it used} motor oil.
+\itemitem{(b)}One cup port wine, preferably French.
+\item{3.}Juice and skin of one turnip.}
+|
+\produces
+{\parindent = 18pt
+\noindent Here is what we require:
+\item{1.}Three eggs in their shells,
+but with the yolks removed.
+\item{2.}Two separate glass cups containing:
+\itemitem{(a)}One-half cup {\it used} motor oil.
+\itemitem{(b)}One cup port wine, preferably French.
+\item{3.}Juice and skin of one turnip.}
+\endexample
+\enddesc
+
+\begindesc
+\easy\ctspecial proclaim {\<argument>{\tt.}\vs\thinspace
+   \<texte g\'en\'eral>\thinspace{\bt\\par}}
+   \ctsxrdef{@proclaim}
+\explain
+^^{th\'eor\`emes}
+^^{lemmes}
+^^{hypoth\`eses}
+Cette commande ``proclame'' un th\'eor\`eme, un lemme, une hypoth\`ese, etc.
+Elle met \<argument> en police grasse et le paragraphe suivant en
+italique.  \<arg\-u\-ment> doit \^etre suivi par un point et un token espace,
+qui servent \`a s\'eparer \<argument> du \<texte g\'en\'eral>.
+\<texte g\'en\'eral> est constitu\'e du texte jusqu'\`a la fronti\`ere du paragraphe suivant,
+sauf que vous pouvez inclure des paragraphes multiples en les mettant
+entre accolades et terminer un paragraphe apr\`es l'accolade droite fermante.
+\example
+\proclaim Theorem 1.
+What I say is not to be believed.
+
+\proclaim Corollary 1. Theorem 1 is false.\par
+|
+\produces
+\proclaim Theorem 1.
+What I say is not to be believed.
+
+\proclaim Corollary 1. Theorem 1 is false.\par
+\endexample
+\enddesc
+
+\enddescriptions
+\endchapter
+\byebye
+
