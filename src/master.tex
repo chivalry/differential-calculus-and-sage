@@ -7,7 +7,7 @@
 \usepackage{moreverb} % https://www.ctan.org/pkg/moreverb
 \usepackage{amsfonts} % https://www.ctan.org/pkg/amsfonts
 \usepackage{helvet} % https://www.ctan.org/pkg/helvet
-\usepackage{fancyheadings} % https://www.ctan.org/pkg/fancyheadings
+%\usepackage{fancyheadings} % https://www.ctan.org/pkg/fancyheadings
                            % reported obsolete, suggested replacement: fancyhdr
 \usepackage{amsbsy} % https://www.ctan.org/pkg/amsbsy
 \usepackage{amsthm} % https://www.ctan.org/pkg/amsthm
@@ -60,16 +60,20 @@
 \newcommand{\ccc}{\mathbb{C}}
 \newcommand{\zzz}{\mathbb{Z}}
 \newcommand{\ppp}{\mathbb{P}}
+
 \newcommand{\hhh}{{\cal H}}
 \newcommand{\pf}{{\bf Proof: \ }}
-\newcommand{\stab}{{\rm stab}}
+
 \newcommand{\beqn}{\begin{equation}}
 \newcommand{\eeqn}{\end{equation}}
-\newcommand{\arccot}{{\rm arccot}}
-\newcommand{\arcsec}{{\rm arcsec}}
-\newcommand{\arccsc}{{\rm arccsc}}
-\newcommand{\vers}{{\rm vers}}
-\newcommand{\arcvers}{{\rm arcvers}}
+
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\vers}{vers}
+\DeclareMathOperator{\arcvers}{arcvers}
+\DeclareMathOperator{\stab}{stab}
+
 \def\fps2{{\rm ft./(sec.)}^2} % \newcommand won't work here !?
 
 \newcommand{\SAGE}{{\sf Sage}\xspace}
@@ -78,10 +82,10 @@
 
 \begin{document} \sloppy
 
-\pagestyle{fancyplain} % probably use of fancyheaders package, will need to find out
+%\pagestyle{fancyplain} % probably use of fancyheaders package, will need to find out
                        % proper replacement
-\lhead[\fancyplain{}{\rightmark}]{\fancyplain{}}
-\rhead[\fancyplain{}]{\fancyplain{}{\rightmark}}
+%\lhead[\fancyplain{}{\rightmark}]{\fancyplain{}}
+%\rhead[\fancyplain{}]{\fancyplain{}{\rightmark}}
 
 \author{William Anthony Granville, \\
 with extra material added by David Joyner \\
@@ -93,34 +97,15 @@ and updates by Charles Ross}
 
 \maketitle
 
-
 \vskip .1in
 
-\addtocounter{page}{3}
-
-
-\newpage
-\addtocounter{page}{1}
-\begin{center}
-\large{
-{\bf Contents}
-}
-\end{center}
-\vskip .3in
-
-\newpage
 \tableofcontents
 
-\newpage
-
+%\input sandbox.tex
 \input forward.tex
-\newpage
+
 \addtocounter{chapter}{-1}
-
-\addtocounter{page}{1}
 \input preface.tex
-
-% \newpage
 
 \pagenumbering{arabic}
 % \input ch01.tex
