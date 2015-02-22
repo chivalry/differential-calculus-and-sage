@@ -1,0 +1,139 @@
+% last modified 2015-02-21
+
+\documentclass[runningheads]{book} % removed 10pt option as it's default,
+                                   % looking for what runningheads does
+
+\usepackage{fancyvrb} % https://www.ctan.org/pkg/fancyvrb
+\usepackage{moreverb} % https://www.ctan.org/pkg/moreverb
+\usepackage{amsfonts} % https://www.ctan.org/pkg/amsfonts
+\usepackage{helvet} % https://www.ctan.org/pkg/helvet
+\usepackage{fancyheadings} % https://www.ctan.org/pkg/fancyheadings
+                           % reported obsolete, suggested replacement: fancyhdr
+\usepackage{amsbsy} % https://www.ctan.org/pkg/amsbsy
+\usepackage{amsthm} % https://www.ctan.org/pkg/amsthm
+\usepackage{amsgen} % http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+\usepackage{amsfonts} % why twice?
+\usepackage{array, rotating} % https://www.ctan.org/pkg/array
+                             % https://www.ctan.org/pkg/rotating
+\usepackage{graphicx, amsmath} % https://www.ctan.org/pkg/graphicx
+                               % https://www.ctan.org/pkg/amsmath
+\usepackage{texdraw} % https://www.ctan.org/pkg/texdraw
+\usepackage{amssymb} % Looking for link for this package's documentation
+\usepackage{makeidx} % http://www.ctan.org/pkg/makeidx
+\usepackage[all,arc,dvips]{xy} % Looking for documentation for this package
+\usepackage{color} % http://www.ctan.org/pkg/color
+
+\definecolor{DarkOlive}{rgb}{0.1047,0.2412,0.0064}
+\definecolor{FireBrick}{rgb}{0.5812,0.0074,0.0083}
+\definecolor{RoyalBlue}{rgb}{0.0236,0.0894,0.6179}
+\definecolor{RoyalGreen}{rgb}{0.0236,0.6179,0.0894}
+\definecolor{RoyalRed}{rgb}{0.6179,0.0236,0.0894}
+\definecolor{LightBlue}{rgb}{0.8544,0.9511,1.0000}
+\definecolor{Black}{rgb}{0.0,0.0,0.0}
+\definecolor{FuncColor}{rgb}{1.0,0.0,0.0}
+\usepackage{hyperref} % http://www.ctan.org/pkg/hyperref
+\usepackage{url} % http://www.ctan.org/pkg/url
+\usepackage{xspace} % http://www.ctan.org/pkg/xspace
+
+\setlength{\parindent}{8pt} % reset the paragraph indent from 15 to 8 pts.
+
+\pagenumbering{roman} % roman numerals used before main content.
+\pagestyle{empty} % suppress page numbers for the time being.
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{axiom}{Axiom}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{exercise}{Exercise}[section]
+\newtheorem{ponderable}{Ponderable}[section]
+
+\newcommand{\aaa}{\mathbb{A}}
+\newcommand{\nnn}{\mathbb{N}}
+\newcommand{\fff}{\mathbb{F}}
+\newcommand{\qqq}{\mathbb{Q}}
+\newcommand{\rrr}{\mathbb{R}}
+\newcommand{\ccc}{\mathbb{C}}
+\newcommand{\zzz}{\mathbb{Z}}
+\newcommand{\ppp}{\mathbb{P}}
+\newcommand{\hhh}{{\cal H}}
+\newcommand{\pf}{{\bf Proof: \ }}
+\newcommand{\stab}{{\rm stab}}
+\newcommand{\beqn}{\begin{equation}}
+\newcommand{\eeqn}{\end{equation}}
+\newcommand{\arccot}{{\rm arccot}}
+\newcommand{\arcsec}{{\rm arcsec}}
+\newcommand{\arccsc}{{\rm arccsc}}
+\newcommand{\vers}{{\rm vers}}
+\newcommand{\arcvers}{{\rm arcvers}}
+\def\fps2{{\rm ft./(sec.)}^2} % \newcommand won't work here !?
+
+\newcommand{\SAGE}{{\sf Sage}\xspace}
+\newcommand{\sage}{\SAGE} % This will have to removed to make room for sagetex package
+
+\makeindex
+
+\begin{document}
+
+\pagestyle{fancyplain} % probably use of fancyheaders package, will need to find out
+                       % proper replacement
+\lhead[\fancyplain{}{\rightmark}]{\fancyplain{}}
+\rhead[\fancyplain{}]{\fancyplain{}{\rightmark}}
+
+\author{William Anthony Granville, \\
+with extra material added by David Joyner \\
+and updates by Charles Ross}
+\title{Differential Calculus and \SAGE\\
+{\footnotesize (revised edition)}}
+
+\date{2015-02-21}
+
+\maketitle
+
+\vskip .1in
+
+\addtocounter{page}{3}
+
+\newpage
+\addtocounter{page}{1}
+\begin{center}
+  \large{
+    {\bf Contents}
+  }
+\end{center}
+\vskip .3in
+
+\newpage
+\tableofcontents
+
+\newpage
+
+\addtocounter{chapter}{-1}
+
+% \input preface.tex
+
+\newpage
+
+\pagenumbering{arabic}
+% \input ch01.tex
+% \input ref.tex
+% \input ch02.tex
+% \input ch03.tex
+% \input ch04.tex
+% \input ch05.tex
+% \input ch06.tex
+% \input ch07.tex
+% \input ch08.tex
+% \input ch09.tex
+% \input ch10.tex
+% \input ch11.tex
+% \input ch12.tex
+% \input ch13.tex
+% \input ch14.tex
+
+\printindex
+\end{document}
