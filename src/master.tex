@@ -73,11 +73,10 @@
 \def\fps2{{\rm ft./(sec.)}^2} % \newcommand won't work here !?
 
 \newcommand{\SAGE}{{\sf Sage}\xspace}
-\newcommand{\sage}{\SAGE} % This will have to removed to make room for sagetex package
 
 \makeindex
 
-\begin{document}
+\begin{document} \sloppy
 
 \pagestyle{fancyplain} % probably use of fancyheaders package, will need to find out
                        % proper replacement
@@ -94,29 +93,34 @@ and updates by Charles Ross}
 
 \maketitle
 
+
 \vskip .1in
 
-% \addtocounter{page}{3}
+\addtocounter{page}{3}
 
-% \newpage
-% \addtocounter{page}{1}
-% \begin{center}
-  % \large{
-    % {\bf Contents}
-  % }
-% \end{center}
-% \vskip .3in
+
+\newpage
+\addtocounter{page}{1}
+\begin{center}
+\large{
+{\bf Contents}
+}
+\end{center}
+\vskip .3in
 
 \newpage
 \tableofcontents
 
 \newpage
 
+\input forward.tex
+\newpage
 \addtocounter{chapter}{-1}
 
-% \input preface.tex
+\addtocounter{page}{1}
+\input preface.tex
 
-\newpage
+% \newpage
 
 \pagenumbering{arabic}
 % \input ch01.tex
