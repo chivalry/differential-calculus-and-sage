@@ -15,8 +15,7 @@
 \usepackage{amsfonts} % https://www.ctan.org/pkg/amsfonts
 \usepackage{helvet} % "Load Helvetica, scaled"
                     % https://www.ctan.org/pkg/helvet
-%\usepackage{fancyheadings} % https://www.ctan.org/pkg/fancyheadings
-                           % reported obsolete, suggested replacement: fancyhdr
+\usepackage{fancyhdr}
 \usepackage{amsbsy} % https://www.ctan.org/pkg/amsbsy
 \usepackage{amsthm} % https://www.ctan.org/pkg/amsthm
 \usepackage{amsgen} % http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
@@ -89,10 +88,9 @@
 
 \begin{document} \sloppy
 
-%\pagestyle{fancyplain} % probably use of fancyheaders package, will need to find out
-                       % proper replacement
-%\lhead[\fancyplain{}{\rightmark}]{\fancyplain{}}
-%\rhead[\fancyplain{}]{\fancyplain{}{\rightmark}}
+\pagestyle{fancy}
+\lhead[\fancyplain{}{\rightmark}]{\fancyplain{}}
+\rhead[\fancyplain{}]{\fancyplain{}{\rightmark}}
 
 \author{William Anthony Granville, \\
 with extra material added by David Joyner \\
