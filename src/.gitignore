@@ -20,3 +20,7 @@
 *.mtc
 *.mtc1
 *.out
+
+*.sw*
+*.sagetex.*
+sage-plots*
