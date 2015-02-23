@@ -1,12 +1,462 @@
 \chapter{Collection of Formulas}
-\label{ch:01}
+\label{ch:01-collection-of-formulas}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a venenatis dolor. Fusce in elit vel ex feugiat rhoncus. Mauris vitae mi non odio sagittis ornare. Curabitur feugiat metus blandit suscipit pulvinar. In sed dui ipsum. Integer porta molestie ullamcorper. Morbi vitae vestibulum tortor.
+% ========================================
+\section{Formulas for Reference}
+\label{sec:1:1:formulas-for-reference}
+For the convenience of the student we give the following list of elementary
+formulas from Algebra, Geometry, Trigonometry, and Analytic Geometry.
+\begin{enumerate}
 
-Quisque risus urna, vulputate vitae faucibus sed, aliquet non purus. Integer rutrum pharetra tellus et cursus. Proin eget lorem posuere lectus placerat varius eget a turpis. Maecenas malesuada, augue eu varius euismod, neque est porta risus, nec fringilla magna sem nec eros. Pellentesque imperdiet, eros ac ultricies auctor, lectus neque laoreet lorem, vulputate feugiat arcu massa eget ex. Aliquam finibus interdum ex, nec convallis turpis blandit in. Curabitur ac sem felis. Sed euismod nec odio a condimentum. Aliquam hendrerit non nunc id placerat. Pellentesque eget viverra tortor, in accumsan erat. Praesent semper facilisis turpis, non placerat urna egestas ac. Vestibulum dignissim ac enim et facilisis. Vestibulum rutrum faucibus quam, ac posuere velit ornare eget. Etiam sollicitudin, lorem a lacinia accumsan, dolor est eleifend lacus, ac ornare lectus metus ullamcorper ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+% #1 ==========
+\item
+Binomial Theorem ($n$ being a postive integer):
+\[
+\begin{aligned}
+\left(a + b\right)^n =
+a^n + na^{n - 1}b &
++ \frac{n\left(n - 1\right)}{2!} a^{n - 2}b^2
++ \frac{n\left(n - 1\right)\left(n - 2\right)}{3!}a^{n - 3}b^3+\cdots\\ &
++ \frac{n\left(n - 1\right)\left(n - 2\right)\cdots
+    \left(n - r + 2\right)}{\left(r - 1\right)!}a^{n - r + 1}b^{r - 1}
++\cdots
+\end{aligned}
+\]
 
-Etiam pellentesque risus nulla, eu sollicitudin orci sodales vitae. Aliquam erat volutpat. Praesent a augue pharetra, molestie ante volutpat, gravida ligula. Fusce non consequat mauris, vitae ultricies nulla. Donec vitae neque id eros luctus tempus quis sit amet tellus. Vivamus ac pellentesque eros, nec fermentum sapien. Morbi tincidunt risus at ex finibus convallis. Donec at lacinia augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultrices faucibus est in ullamcorper. Suspendisse porttitor ipsum a eros porta ornare. Fusce pellentesque pulvinar ligula, vitae suscipit sapien. Aenean pretium dolor quis ex placerat, eget ultrices nulla bibendum. Pellentesque pretium volutpat ipsum, et sollicitudin elit vehicula ultricies.
+% #2 ====================
+\item
+$n! = 1 \cdot 2 \cdot 3 \cdot 4 \cdots \left(n - 1\right)n$.
 
-Duis varius turpis quis ultricies tincidunt. Suspendisse vitae ex id mauris venenatis pharetra id eu arcu. Integer libero ex, facilisis et dictum at, faucibus id lorem. Duis a purus at est malesuada vulputate. Cras a imperdiet arcu, sit amet elementum nisi. Praesent accumsan metus sed justo malesuada placerat. Mauris ante neque, venenatis sit amet tellus sit amet, mattis tristique lorem. Nulla facilisi.
+% #3 ====================
+\item
+In the quadratic equation $ax^2 + bx + c = 0$,
+\[
+\begin{aligned}
+\textnormal{when }b^2 - 4ac & > 0\textnormal{, the roots are real and unequal;}\\
+\textnormal{when }b^2 - 4ac & = 0\textnormal{, the roots are real and equal;}\\
+\textnormal{when }b^2 - 4ac & < 0\textnormal{, the roots are imaginary.}
+\end{aligned}
+\]
 
-Vestibulum blandit eros sit amet pretium suscipit. Suspendisse ornare justo a tincidunt feugiat. Aliquam tristique non diam ac gravida. Donec et viverra nibh. Praesent quis nisl ac orci bibendum commodo. Aenean vestibulum ligula neque, in lacinia justo vestibulum quis. Donec volutpat scelerisque iaculis. Nulla convallis massa eget arcu iaculis, ac accumsan leo vestibulum. Mauris rhoncus arcu vitae est scelerisque, et malesuada arcu aliquet. Proin ut vulputate ipsum, quis posuere velit. Donec mollis risus et nulla auctor, sed lacinia magna congue. Praesent a commodo nisl. Suspendisse potenti.
+% #4 ====================
+\item
+When a quadratic equation is reduced to the form $x^2 + px + q = 0$,
+\[
+\begin{aligned}
+p= & \textnormal{sum of roots with sign changed, and}\\
+q= & \textnormal{product of roots.}
+\end{aligned}
+\]
+
+% #5 ====================
+\item
+In an arithmetical series, $a$, $a + d$, $a + 2d$, \ldots,
+\[
+s = \sum_{i = 0}^{n - 1} a + id
+  = \frac{n}{2} \left[2a + \left(n - 1\right) d \right]
+\textnormal{.}
+\]
+
+% #6 ====================
+\item
+In a geometrical series, $a$, $ar$, $ar^2$, \ldots,
+\[
+s = \sum_{i = 0}^{n - 1}ar^i
+  = \frac{a \left(r^n - 1 \right)}{r-1}
+\textnormal{.}
+\]
+
+% #7 ====================
+\item
+$\log ab = \log a + \log b$.
+
+% #8 ====================
+\item
+$\log \frac{a}{b} = \log a - \log b$.
+
+% #9 ====================
+\item
+$\log a^n = n\log a$.
+
+% #10 ====================
+\item
+$\log \sqrt[n]{a} = \frac{1}{n} \log a$.
+
+% #11 ====================
+\item
+$\log 1 = 0$.
+
+% #12 ====================
+\item
+$\log e = 1$.
+
+% #13 ====================
+\item
+$\log \frac{1}{a} = -\log a$.
+
+% #14 ====================
+\item \footnote{In formulas 14-25, $r$ denotes radius, 
+$a$ altitude, $B$ area of base, and $s$ slant height.}
+Circumference of circle = $2 \pi r$. 
+
+% #15 ====================
+\item
+Area of circle = $\pi r^2$.
+
+% #16 ====================
+\item
+Volume of prism = $Ba$.
+ 
+% #17 ====================
+\item
+Volume of pyramid = $\frac{1}{3} Ba$.
+
+% #18 ====================
+\item
+Volume of right circular cylinder = $\pi r^2a$.
+ 
+% #19 ====================
+\item
+Lateral surface of right circular cylinder = $2 \pi ra$.
+
+% #20 ====================
+\item
+Total surface of right circular cylinder = $2 \pi r\left(r + a\right)$.
+
+% #21 ====================
+\item
+Volume of right circular cone = $2 \pi r\left(r + a\right)$.
+
+% #22 ====================
+\item
+Lateral surface of right circular cone = $\pi rs$.
+
+% #23 ====================
+\item
+Total surface of right circular cone = $\pi r\left(r + s\right)$.
+
+% #24 ====================
+\item
+Volume of sphere = $\frac{4}{3}\pi r^3$.
+
+% #25 ====================
+ \item
+Surface of sphere = $4\pi r^2$.
+
+% #26 ====================
+\item
+$\sin x = \displaystyle{\frac{1}{\csc x}}$,
+$\cos x = \displaystyle{\frac{1}{\sec x}}$,
+$\tan x = \displaystyle{\frac{1}{\cot x}}$.
+
+% #27 ====================
+\item
+$\tan x = \displaystyle{\frac{\sin x}{\cos x}}$,
+$\cot x = \displaystyle{\frac{\cos x}{\sin x}}$,
+
+% #28 ====================
+\item
+$\sin^2 x + \cos^2 x = 1$;
+$1 + \tan^2 x = \sec^2 x$;
+$1 + \cot^2 x = \csc^2 x$.
+
+% #29 ====================
+\item
+$\sin x = \cos\left(\frac{\pi}{2} - x\right)$;
+$\cos x = \sin\left(\frac{\pi}{2} - x\right)$;
+$\tan x = \cot\left(\frac{\pi}{2} - x\right)$.
+
+% #30 ====================
+\item
+$\sin\left(\pi - x\right) = \sin x$;
+$\cos\left(\pi - x\right) = -\cos x$;
+$\tan\left(\pi - x\right) = -\tan x$.
+
+% #31 ====================
+\item
+$\sin\left(x + y\right) = \sin x \cos y + \cos x \sin y$.
+
+% #32 ====================
+\item
+$\sin\left(x - y\right) = \sin x \cos y - \cos x \sin y$.
+
+% #33 ====================
+\item
+$\cos\left(x \pm y\right) = \cos x \cos y + \mp \sin x \sin y$.
+
+% #34 ====================
+\item
+$\tan\left(x + y\right) =
+\displaystyle{ \frac{\tan x + \tan y}{1 - \tan x \tan y} }$.
+
+% #35 ====================
+\item
+$\tan\left(x - y\right) =
+\displaystyle{ \frac{\tan x \tan y}{1 + \tan x \tan y} }$.
+
+% #36 ====================
+\item
+$\sin 2x = 2 \sin x \cos x$;
+$\cos 2x = \cos^2x - \sin^2x$;
+$\tan 2x = \displaystyle{ \frac{2 \tan x}{1 - \tan^2x} }$.
+
+% #37 ====================
+\item
+$\sin x = 2 \sin \frac{x}{2} \cos \frac{x}{2}$;
+$\cos x = \cos^2 \frac{x}{2} - \sin^2 \frac{x}{2}$;
+$\tan x = \displaystyle{ \frac{2 \tan \frac{1}{2} x}{1 - \tan^2 \frac{1}{2}x} }$.
+
+% #38 ====================
+\item
+$\cos^2 x = \frac{1}{2} + \frac{1}{2} \cos 2x$;
+$\sin^2 x = \frac{1}{2} - \frac{1}{2} \cos 2x$.
+
+% #39 ====================
+\item
+$1 + \cos x = 2 \cos^2 \frac{x}{2}$;
+$1 - \cos x = 2 \sin^2 \frac{x}{2}$.
+
+% #40 ====================
+\item
+$\sin \frac{x}{2} = \pm \displaystyle{ \sqrt{ \frac{1 - \cos x}{2} } }$;
+$\cos \frac{x}{2} = \pm \displaystyle{ \sqrt{ \frac{1 + \cos x}{2} } }$;
+$\tan \frac{x}{2} = \pm \displaystyle{ \sqrt{ \frac{1 - \cos x}{1 + \cos x} } }$.
+
+% #41 ====================
+\item
+$\sin x + \sin y = 2 \sin \frac{1}{2} \left(x + y\right) \cos \frac{1}{2} \left(x - y\right)$.
+
+% #42 ====================
+\item
+$\sin x - \sin y = 2 \cos \frac{1}{2} \left(x + y\right) \sin \frac{1}{2} \left(x - y\right)$.
+
+% #43 ====================
+\item
+$\cos x + \cos y = -2 \cos \frac{1}{2} \left(x + y\right) \cos \frac{1}{2} \left(x - y\right)$.
+
+% #44 ====================
+\item
+$\cos x - \cos y = -2 \sin \frac{1}{2} \left(x + y\right) \sin \frac{1}{2} \left(x - y\right)$.
+
+% #45 ====================
+\item
+$\displaystyle{ \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}}$; Law of Sines.
+
+% #46 ====================
+\item
+$a^2 = b^2 + c^2 - 2bc \cos A$; Law of Cosines.
+
+% #47 ====================
+\item
+$d = \sqrt{\left(x_1 - x_2\right)^2 + \left(y_1 - y_2\right)^2}$;
+distance between points $\left(x_1, y_1\right)$ and $\left(x_2, y_2\right)$.
+
+% #48 ====================
+\item
+$d = \displaystyle{ \frac{Ax_1 + By_1 + C}{\pm \sqrt{A^2 + B^2}}}$;
+distance from line $Ax + By + C = 0$ to $\left(x_1, y_1\right)$.
+
+% #49 ====================
+\item
+$x = \displaystyle{ \frac{x_1 + x_2}{2} }$, $y = \displaystyle{ \frac{y_1 + y_2}{2} }$; 
+co\"ordinates of middle point.
+
+% #50 ====================
+\item
+$x = x_0 + x'$, $y = y_0 + y'$; ransforming to new origin $\left(x_0, y_0\right)$.
+
+% #51 ====================
+\item
+$x = x' \cos \theta - y' \sin \theta$, $y = x' \sin \theta + y' \cos \theta$;
+transforming to new axes making the angle $\theta$ with old.
+
+% #52 ====================
+\item
+$x = \rho \cos \theta$, $y = \rho \sin \theta$; transforming from rectangular to polar
+co\"ordinates.
+
+% #53 ====================
+\item
+$\rho = \sqrt{x^2 + y^2}$, $\theta = \arctan \frac{y}{x}$; transforming from polarto
+rectangular co\"ordinates.
+
+% #54 ====================
+\item
+Different forms of equation of a straight line:
+  \begin{itemize}
+  \item[(a)]
+  $\displaystyle{ \frac{y - y_1}{x - x_1} = \frac{y_2 - y_1}{x_2 - x_1}}$,
+  two-point form;
+
+  \item[(b)]
+  $\frac{x}{a} + \frac{y}{b} = 1$;
+  intercept form;
+
+  \item[(c)]
+  $y - y_1 = m\left(x - x_1\right)$;
+  slope-point form;
+
+  \item[(d)]
+  $y = mx + b$,
+  slope-intercept form;
+
+  \item[(e)]
+  $x \cos \alpha + y \sin \alpha = p$,
+  normal form;
+
+  \item[(f)]
+  $Ax + By + C = 0$,
+  general form.
+
+  \end{itemize}
+
+% $55 ====================
+\item
+$\displaystyle{\tan \theta = \frac{m_1 - m_2}{1 + m_1 m_2}}$, angle between two
+lines whose slopes are $m_1$ and $m_2$.
+\[
+\begin{aligned}
+m_1 & = m_2 \textnormal{ when lines are parallel, and}\\
+m_1 & = - \frac{1}{m_2} \textnormal{ when lines are perpendicular.}\\
+\end{aligned}
+\]
+
+% #56 ====================
+\item
+$\left(x = \alpha\right)^2 + \left(y - \beta\right)^2 = r^2$, equation of circle with center $\left(\alpha,\beta\right)$ and radius $r$.
+
+\end{enumerate}
+
+Many of these facts are already know to \SAGE:
+
+\begin{Verbatim}[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\SAGE]
+
+sage: a,b = var("a,b")
+sage: log(sqrt(a))
+log(a)/2
+sage: log(a/b).simplify_log()
+log(a) - log(b)
+sage: sin(a+b).simplify_trig()
+cos(a)*sin(b) + sin(a)*cos(b)
+sage: cos(a+b).simplify_trig()
+cos(a)*cos(b) - sin(a)*sin(b)
+sage: (a+b)^5
+(b + a)^5
+sage: expand((a+b)^5)
+b^5 + 5*a*b^4 + 10*a^2*b^3 + 10*a^3*b^2 + 5*a^4*b + a^5
+
+\end{Verbatim}
+
+\noindent
+``Under the hood'' \SAGE used Maxima to do this simplification.
+
+% ========================================
+\section{Greek Alphabet}
+\label{sec:1:2:greek-alphabet}
+
+\begin{center}
+\begin{tabular}{cc|cc|cc}
+{\bf Letters}     & {\bf Names} & {\bf Letters}     & {\bf Names} & {\bf Letters}   & {\bf Names} \\ \hline
+A$,\alpha$        & alpha       & I$,\iota$         & iota        & P$,\rho$        & rho         \\
+B$,\beta$         & beta        & K$,\kappa$        & kappa       & $\Sigma,\sigma$ & sigma       \\
+$\Gamma, \gamma$  & gamma       & $\Lambda,\lambda$ & lambda      & T$,\tau$        & tau         \\
+$\Delta,\delta$   & delta       & M$,\mu$           & mu          & Y$,\upsilon$    & upsilon     \\
+E$,\epsilon$      & epsilon     & N$, \nu$          & nu          & $\Phi,\phi$     & phi         \\
+Z$,\zeta$         & zeta        & $\Xi,\xi$         & xi          & X$,\chi$        & chi         \\
+H$,\eta$          & eta         & O$,o$             & omicron     & $\Psi,\psi$     & psi         \\
+$\Theta,\theta$   & theta       & $\Pi,\pi$         & pi          & $\Omega,\omega$ & omega       \\
+\end{tabular}
+\end{center}
+
+% ========================================
+\section{Rules for Sings of the Trigonometric Functions}
+\label{sec:1:3:rules-for-signs-of-the-trigonometric-functions}
+
+\begin{center}
+\begin{tabular}{l|llllll}
+Quadrant & Sin & Cos & Tan & Cot & Sec & Csc \\ \hline
+First    &	+  &	+  &	+  &	+  &	+  &	+  \\
+Second   &  +  &	-  &	-  &	-  &	-  &	+  \\
+Third    &	-  &	-  &	+  &	+  &	-  &	-  \\
+Fourth   &  -  &	+  &	-  &	-  &	+  &  -  \\
+\end{tabular}
+\end{center}
+
+% ========================================
+\section{Natural Values of the Trigonometric Functions}
+\label{sec:1:3:natural-values-of-the-trigonometric-functions}
+
+\begin{center}
+\begin{tabular}{cccccccc}
+Angle in    &  Angle in &                &                &                &                &                  &                  \\
+Radians     &   Degrees &  Sin           &  Cos           & Tan            & Cot            &   Sec            & Csc              \\  \hline
+0           & 0         &  0             & 1              & 0              & $\infty$       & 1                & $\infty$         \\
+$\pi / 6$   & 30        & $1 / 2$        & $\sqrt{3} / 2$ & $\sqrt{3} / 3$ & $\sqrt{3}$     & $2 \sqrt{3} / 3$ & 2                \\
+$\pi / 4$   & 45        & $\sqrt{2} / 2$ & $\sqrt{2} / 2$ & 1              & 1              & $\sqrt{2}$       & $\sqrt{2}$       \\
+$\pi / 3$   & 60        & $\sqrt{3} / 2$ & $1 / 2$        & $\sqrt{3}$     & $\sqrt{3} / 3$ & 2                & $2 \sqrt{3} / 3$ \\
+$\pi / 2$   & 90        & 1              & 0              & $\infty$       & 0              & $\infty$         & 1                \\
+$\pi$       & 180       & 0              & -1             & 0              & $\infty$       & -1               & $\infty$         \\
+$3 \pi / 2$ & 270       & -1             & 0              & $\infty$       & 0              & $\infty$         & -1               \\
+$2 \pi$     & 360       & 0              & 1              & 0              & $\infty$       & 1                & $\infty$         \\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ccllllcc}
+Angle in & Angle in &        &        &        &        &          &          \\
+Radians  & Degrees  &  Sin   &  Cos   & Tan    & Cot    &          &          \\  \hline
+.0000    &	0       & .0000  & 1.0000 & .0000  & Inf.   & 90       & 1.5708   \\
+.0175    &	1       & .0175  & .9998  & .0175  & 57.290 & 89       & 1.5533   \\
+.0349    &	2       & .0349  & .9994  & .0349  & 28.636 & 88       & 1.5359   \\
+.0524    &	3       & .0523  & .9986  & .0524  & 19.081 & 87       & 1.5184   \\
+.0698    &	4       & .0698  & .9976  & .0699  & 14.300 & 86       & 1.5010   \\
+.0873    &	5       & .0872  & .9962  & .0875  & 11.430 & 85       & 1.4835   \\
+.1745    &	10      & .1736  & .9848  & .1763  & 5.671  & 80       & 1.3963   \\
+.2618    &	15      & .2588  & .9659  & .2679  & 3.732  & 75       & 1.3090   \\
+.3491    &	20      & .3420  & .9397  & .3640  & 2.747  & 70       & 1.2217   \\
+.4863    &	25      & .4226  & .9063  & .4663  & 2.145  & 65       & 1.1345   \\
+.5236    &	30      & .5000  & .8660  & .5774  & 1.732  & 60       & 1.0472   \\
+.6109    &	35      & .5736  & .8192  & .7002  & 1.428  & 55       & .9599    \\
+.6981    &	40      & .6428  & .7660  & .8391  & 1.192  & 50       &	.8727   \\
+.7854    &	45      & .7071  & .7071  & 1.0000 & 1.000  & 45       & .7854    \\  \hline
+         &          &        &        &        &        & Angle in & Angle in \\
+         &          &  Cos   &  Sin   & Cot    & Tan    & Degrees  & Radians  \\  
+\end{tabular}
+\end{center}
+
+You can create a table like this in \sage :
+
+\begin{Verbatim}[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\sage]
+
+sage: RR15 = RealField(15)
+sage: rads1 = [n*0.0175 for n in range(1,6)]
+sage: rads2 = [0.0875+n*0.0875 for n in range(1,9)]
+sage: rads = rads1+rads2
+sage: trigs = ["sin", "cos", "tan", "cot"]
+sage: tbl = [[eval(x+"(%s)"%y) for x in trigs] for y in rads]
+sage: tbl = [[RR15(eval(x+"(%s)"%y)) for x in trigs] for y in rads]
+sage: print Matrix(tbl)
+[0.01750  0.9998 0.01750   57.14]
+[0.03499  0.9994 0.03502   28.56]
+[0.05247  0.9986 0.05255   19.03]
+[0.06994  0.9976 0.07011   14.26]
+[0.08739  0.9962 0.08772   11.40]
+[ 0.1741  0.9847  0.1768   5.656]
+[ 0.2595  0.9658  0.2687   3.722]
+[ 0.3429  0.9394  0.3650   2.740]
+[ 0.4237  0.9058  0.4677   2.138]
+[ 0.5012  0.8653  0.5792   1.726]
+[ 0.5749  0.8182  0.7026   1.423]
+[ 0.6442  0.7648  0.8423   1.187]
+[ 0.7086  0.7056   1.004  0.9958]
+
+\end{Verbatim}
+
+\noindent
+The first column are the values of $\sin(x)$ at 
+$x\in \{0.01750, 0.03500, ... %0.05250, 0.07000, 0.08750, 0.1750, 0.2625, 
+%0.3500, 0.4375, 0.5250, 0.6125, 0.7000, 
+0.7875\}$ (measured in radians). The second, third and fourth 
+rows are the corresponding values for $\cos$, $\tan$ and $\cot$,
+resp.
+
