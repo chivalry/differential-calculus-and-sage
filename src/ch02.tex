@@ -4,23 +4,417 @@
 \section{Variables and Constants}
 \label{sec:02:01}
 
+\index{variable}
+\index{constant}
+A \emph{variable} is a quantity to which an unlimited number of values can be
+assigned. Variables are denoted by the later letters of the alphabet. Thus, in
+the equation of a straight line,
+\[
+\frac{x}{a} + \frac{y}{b} = 1
+\]
+$x$ and $y$ may be considered as the variable co\"ordinates of a point moving
+along the line. A quantity whose value remains unchanged is called a
+\emph{constant}.
+
+Numerical or absolute constants retain the same values in all problems, as $2$,
+$5$, $\sqrt{7}$, $\pi$, etc.
+
+\index{parameters}
+\emph{Arbitrary constants}, or \emph{parameters}, are constants to which any
+one of an unlimited set of numerical values may be assigned, and they are
+supposed to have these assigned values throughout the investigation. They are
+usually denoted by the earlier letters of the alphabet. Thus, for every pair of
+values arbitrarily assigned to $a$ and $b$, the equation
+\[
+\frac{x}{a} + \frac{y}{b} = 1
+\]
+represents some particular straight line.
+
 \section{Interval of a Variable}
 \label{sec:02:02}
+
+Very often we confine ourselves to a portion only of the number system. For
+example, we may restrict our variable so that it shall take on only such values
+as lie between $a$ and $b$, where $a$ and $b$ may be included, or either or
+both excluded. We shall employ the symbol $\left \lbrack a,\ b \right \rbrack$,
+$a$ being less than $b$, to represent the numbers $a,\ b$, and all the numbers
+between them, unless otherwise stated. This symbol
+$\left \lbrack a,\ b \right \rbrack$ is read the interval from $a$ to $b$.
 
 \section{Continuous Variation}
 \label{sec:02:03}
 
+A variable $x$ is said to vary continuously through an interval $\left \lbrack
+a, b \right \rbrack$, when $x$ starts with the value $a$ and increases until it
+takes on the value $b$ in such a manner as to assume the value of every number
+between $a$ and $b$ in the order of their magnitudes. This may be illustrated
+geometrically as follows:
+
+\begin{sagesilent}
+f = lambda x:0
+G1 = plot(f, -5, 6, thickness=3, rgbcolor=(0.0,1,0.5), axes=False)
+G2 = plot(f, 0, 5, thickness=5, rgbcolor=(0.5,0.3,0.5), axes=False)
+
+t1 = text('O', (-4.5, -0.25))
+t2 = text('A', (0.0, -0.25))
+t3 = text('a', (0.0, 0.25))
+t4 = text('B', (5.0, -0.25))
+t5 = text('b', (5.0, 0.25))
+t6 = text('P', (2.0, -0.25))
+t7 = text('x', (2.0, 0.25))
+
+p1 = disk((0.0, 0.0), 0.10, (0, 2*pi))
+p2 = disk((5.0, 0.0), 0.10, (0, 2*pi))
+p3 = disk((-4.5, 0.0), 0.10, (0, 2*pi))
+p4 = disk((2.0, 0.0), 0.10, (0, 2*pi))
+
+p = G1+G2+t1+t2+t3+t4+t5+t6+t7+p1+p2+p3+p4
+\end{sagesilent}
+
+\begin{figure}[h]
+\begin{center}
+\sageplot[width=10cm]{p}
+\end{center}
+\caption{Interval from $A$ to $B$}
+\label{fig:02:01}
+\end{figure}
+
+The origin being at $O$, layoff on the straight line the points 
+$A$ and $B$ corresponding to the numbers $a$ and $b$. Also 
+let the point $P$ correspond to a particular value of the variable $x$. 
+Evidently the interval $\left \lbrack a, b \right \rbrack$ is 
+represented by the segment $AB$. Now as $x$ varies continuously 
+from $a$ to $b$ inclusive, i.e. through the interval 
+$\left \lbrack a, b \right \rbrack$, the point $P$ 
+generates the segment $AB$.
+
 \section{Functions}
 \label{sec:02:04}
+
+\index{function}
+When two variables are so related that the value of the first variable
+depends on the value of the second variable, then the first variable is
+said to be a \emph{function} of the second variable.
+
+Nearly all scientific problems deal with quantities and relations of this sort,
+and in the experiences of everyday life we are continually meeting conditions
+illustrating the dependence of one quantity on another. For instance, the
+weight a man is able to lift depends on his strength, other things being equal.
+Similarly, the distance a boy can run may be considered as depending on the
+time. Or, we may say that the area of a square is a function of the length of a
+side, and the volume of a sphere is a function of its diameter.
+
+\begin{Verbatim}[fontsize=\tiny,fontfamily=courier,fontshape=tt,frame=single,label=\SAGE]
+sage: I1 = interval(1,3)
+sage: I2 = interval(2,6)
+sage: I3 = interval(min(I2),max(I1)) # the intersection
+sage: P1 = plot(0, xmin=min(I1), xmax = max(I1), thickness=10, rgbcolor=(1,0,0),linestyle="--")
+sage: P2 = plot(0, xmin=min(I2), xmax = max(I2), thickness=10, rgbcolor=(0,1,0),linestyle=":")
+sage: P3 = plot(0, xmin=min(I3), xmax = max(I3), thickness=10, rgbcolor=(1,1,0))
+sage: show(P1+P2+P3)
+\end{Verbatim}
+
+\begin{sagesilent}
+I1 = interval(1,3)
+I2 = interval(2,6)
+I3 = interval(min(I2),max(I1)) # the intersection
+P1 = plot(0, xmin=min(I1), xmax = max(I1), thickness=10, rgbcolor=(1,0,0),linestyle="--")
+P2 = plot(0, xmin=min(I2), xmax = max(I2), thickness=10, rgbcolor=(0,1,0),linestyle=":")
+P3 = plot(0, xmin=min(I3), xmax = max(I3), thickness=10, rgbcolor=(1,1,0))
+p = P1+P2+P3
+\end{sagesilent}
+
+\begin{figure}[h]
+\begin{center}
+\sageplot[width=10cm]{p}
+\end{center}
+\caption{Interval $[1,3]$ is dashed, $[2,5]$ is dotted, $[1,3]\cal [2,5]=[2,3]$ is solid.}
+\label{fig:02:02}
+\end{figure}
 
 \section{Independent and Dependent Variables}
 \label{sec:02:05}
 
+\index{argument}
+\index{independent variable}
+\index{dependent variable}
+\index{function}
+The second variable, to which values may be assigned at pleasure within limits
+depending on the particular problem, is called the \emph{independent variable},
+or \emph{argument}; and the first variable, whose value is determined as soon
+as the value of the independent variable is fixed, is called the
+\emph{dependent variable}, or \emph{function}.
+
+Frequently, when we are considering two related variables, it is in our power to
+fix upon whichever we please as the independent variable; but having once made
+the choice, no change of independent variable is allowed without certain
+precautions and transformations.
+
+One quantity (the dependent variable) may be a function of two or more other
+quantities (the independent variables, or arguments).  For example, the cost of
+cloth is a function of both the quality and quantity; the area of a triangle is
+a function of the base and altitude; the volume of a rectangular parallelepiped
+is a function of its three dimensions.
+
+In the \SAGE example below, $t$ is the independent variable and $f$ is the
+dependent variable. Though this example uses differentiation (\SAGE's {\tt
+f.diff} notation), you don't need to understand how to differentiate to
+appreciate the syntax \SAGE uses to express the command.
+
+\begin{Verbatim}[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\SAGE]
+sage: t = var('t')
+sage: f = function('f', t)
+sage: f(t).diff(t)
+diff(f(t), t, 1)
+sage: (2*f(t)+3).diff(t)
+2*diff(f(t), t, 1)
+sage: (f(t)^2).diff(t)
+2*f(t)*diff(f(t), t, 1)
+sage: f = cos
+sage: f(pi/2)
+0
+sage: f(t).diff(t)
+-sin(t)
+\end{Verbatim}
+
 \section{Notation of Functions}
 \label{sec:02:06}
 
-\section[Values for which a Function is Defined]{Values of the Independent Variable for which a Function is Defined}
+The symbol $f \left( x \right)$ is used to denote a function of $x$, and is
+read ``$f$ of $x$''. In order to distinguish between different functions, the
+prefixed letter is changed, as $F \left( x \right)$, $\phi \left( x \right)$,
+$f' \left( x \right)$, etc.
+
+During any investigation the same functional symbol always indicates the same
+law of dependence of the function upon the variable.  In the simpler cases this
+law takes the form of a series of analytical operations upon that variable.
+Hence, in such a case, the same functional symbol will indicate the same
+operations or series of operations, even though applied to different quantities.
+Thus, if
+\[
+  f \left( x \right) = x^2 - 9x + 14,
+\]
+then 	
+\[
+  f \left( y \right) 	= y^2 - 9y + 14.
+\]
+Also 	
+\[
+  f \left( a \right) 	= a^2 - 9a + 14,
+\]
+\[
+  f \left( b + 1 \right) =  \left( b + 1 \right)^2 - 9 \left( b + 1 \right) + 14
+  = b^2 - 7b + 6,
+\]
+\[
+  f \left( 0 \right) 	= 0^2 - 9 \cdot 0 + 14 = 14,
+\]
+\[
+  f \left( -1 \right) 	=  \left( -1 \right)^2 - 9 \left( -1 \right) + 14 = 24,
+\]
+\[
+  f \left( 3 \right) 	= 3^2 - 9 \cdot 3 + 14 = - 4,
+\]
+\[
+  f \left( 7 \right) 	= 7^2 - 9 \cdot 7 + 14 = 0,
+\]
+etc. Similarly, $\phi \left( x,\ y \right)$ denotes a function of $x$ and $y$,
+and is read ``$\phi$ of $x$ and $y$''. If 	
+\[
+  \phi \left( x,\ y \right) 	= \sin \left( x + y \right),
+\]
+then 	
+\[
+  \phi \left( a,\ b \right) 	= \sin \left( a + b \right),
+\]
+and 	
+\[
+  \phi \left( \frac{\pi}{2}, 0 \right)	= \sin \frac{\pi}{2} = 1.
+\]
+Again, if 	
+\[
+  F \left(  x,\ y,\ z  \right) 	= 2x + 3y - 12z,
+\]
+then 	
+\[
+  F \left( m,\ -m,\ m \right) 	= 2m - 3m - 12m = - 13m.
+\]
+and 	
+\[
+  F \left( 3,\ 2,\ 1 \right) 	= 2 \cdot 3 + 3 \cdot 2 - 12 \cdot 1 = 0.
+\]
+Evidently this system of notation may be extended indefinitely.
+
+You can define a function in \SAGE in several ways:
+
+\begin{Verbatim}[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\SAGE]
+sage: x,y = var("x,y")
+sage: f = log(sqrt(x))
+sage: f(4)
+log(4)/2
+sage: f(4).simplify_log()
+log(2)
+sage: f = lambda x: (x^2+1)/2
+sage: f(x)
+(x^2 + 1)/2
+sage: f(1)
+1
+sage: f = lambda x,y: x^2+y^2
+sage: f(3,4)
+25
+sage: R.<x> = PolynomialRing(CC,"x")
+sage: f = x^2+2
+sage: f.roots()
+[(1.41421356237309*I, 1), (2.77555756156289e-17 - 1.41421356237309*I, 1)]
+\end{Verbatim}
+
+\section[Values for which a Function is Defined]{Values of the Independent
+Variable for which a Function is Defined}
 \label{sec:02:07}
+
+Consider the functions
+\[
+  x^2 - 2x + 5,\qquad \sin x,\qquad \arctan x
+\]
+of the independent variable $x$. Denoting the dependent variable in each case
+by $y$, we may write
+\[
+  y = x^2 - 2 x + 5, y = \sin x,\ y = \arctan x.
+\]
+In each case $y$ (the value of the function) is known, or, as we say, defined,
+for all values of $x$. This is not by any means true of all functions, as the
+following examples illustrating the more common exceptions will show.
+
+\begin{equation}
+  y = \frac{a}{x - b}
+  \label{eqn:02:01}
+\end{equation}
+Here the value of $y$ (i.e. the function) is defined for all values of $x$
+except $x = b$. When $x = b$ the divisor becomes zero and the value of $y$
+cannot be computed from (\ref{eqn:02:01}).  Any value might be assigned to
+the function for this value of the argument.
+
+\begin{equation}
+  y = \sqrt{x}.
+  \label{eqn:02:02}
+\end{equation}
+In this case the function is defined only for positive values of $x$.
+Negative values of $x$ give imaginary values for $y$, and these must be
+excluded here, where we are confining ourselves to real numbers only.
+
+\begin{equation}
+  y = \log_a{x}. \qquad a > 0
+  \label{eqn:02:03}
+\end{equation}
+Here $y$ is defined only for positive values of $x$. For negative values of $x$
+this function does not exist (see \ref{sec:XXX}).
+
+\begin{equation}
+  y = \arcsin x,\ y = \arccos x.
+  \label{eqn:02:04}
+\end{equation}
+Since sines, and cosines cannot become greater than $+1$ nor less than $-1$, it
+follows that the above functions are defined for all values of $x$ ranging from
+$-1$ to $+1$ inclusive, but for no other values.
+
+\begin{Verbatim}[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\SAGE]
+sage: t = var("t'')
+sage: f = function('f', t)
+sage: g = function('g', t)
+sage: f = sin
+sage: g = asin
+sage: f(g(t))
+t
+sage: g(f(t))
+t
+sage: g(f(0.2))
+0.200000000000000
+\end{Verbatim}
 
 \section{Exercises}
 \label{sec:02:08}
+
+\begin{enumerate}
+\item
+Given $f \left( x \right) = x^3 - 10x^2 + 31x - 30$; show that
+
+\[
+  f \left( 0 \right) 	= -30,\ \ \ \ f \left( y \right) = y^3 - 10y^2 + 31y - 30,
+\]
+\[
+  f \left( 2 \right) = 0,\ \ \ \  f \left( a \right) 	= a^3 - 10a^2 + 31a - 30,
+\]
+\[
+  f \left( 3 \right) =	f \left( 5 \right),\ \ \ \ 
+  f \left( yz \right) = y^3z^3 - 10y^2z^2 + 31yz - 30,
+\]
+\[
+  f \left( 1 \right) > f \left(  -3 \right),\ \ \ \ 
+  f \left( x -2 \right) = x^3 - 16x^2 + 83x - 140,
+\]
+\[
+  f \left( -1 \right) = 6f \left( 6 \right). 
+\]
+
+\item
+If $f \left( x \right) = x^3 - 3x + 2$, find
+$f \left( 0 \right)$,
+$f \left( 1 \right)$,
+$f \left( -1 \right)$,
+$f \left ( -\frac{1}{2} \right )$,
+$f \left ( \frac{4}{3} \right )$.
+
+\item
+If $f \left( x \right) = x^3 - 10x^2 + 31x - 30$, and
+$\phi  \left( x \right) = x^4 -55x^2 -210x -216$, show that
+$f \left( 2 \right) = \phi \left(  - 2 \right)$,
+$f \left( 3 \right) = \phi \left(  - 3 \right),f \left( 5 \right) = \phi \left(  - 4 \right)$,
+$f \left( 0 \right) + \phi \left( 0 \right) + 246 = 0$.
+
+\item
+If $F \left( x \right) = 2x$, find $F \left( 0 \right)$,\ $F \left( -3 \right)$,\ 
+$F \left ( \frac{1}{3} \right )$, $F \left( -1 \right)$.
+
+\item
+Given $F(x) 
+= x \left( x - 1 \right) \left( x + 6 \right) \left( x - \frac{1}{2} \right) 
+\left(x + \frac{5}{4} \right)$, show that
+$F \left( 0 \right) = F \left( 1 \right) = F \left( -6 \right) = F \left(\frac{1}{2} \right) 
+= F \left( -\frac{5}{4} \right) = 0$.  
+
+\item
+If $f \left( m_1 \right) = \frac{m_1 - 1}{m_1 + 1}$, show that
+$\frac{f \left( m_1 \right) - f \left( m_2 \right)}{1 + f \left( m_1 \right)f \left( m_2 \right)} = \frac{m_1 - m_2}{1 + m_1 m_2}$.
+
+\item
+If $\phi \left( x \right) = a^x$, show that $\phi \left( y \right) \cdot \phi \left( z \right) = \phi \left( y + z \right)$.
+
+\item
+Given $\phi \left( x \right) = \log \frac{1 - x}{1 + x}$, show that
+$ \phi \left( x \right) + \phi \left( y \right) = \phi \left ( \frac{x + y}{1 + xy} \right )$. 
+
+\item
+If $f \left( \phi  \right) = \cos\phi$, show that
+$ f \left( \phi  \right) = f \left(  - \phi  \right) = - f \left( \pi- \phi \right) = - f \left( \pi + \phi \right)$.
+
+\item
+ If $F \left( \theta \right) = \tan\theta$, show that
+$F \left( 2\theta \right) = \frac{2F \left( \theta \right)}{1 - [ F \left( \theta \right) ]^2}$. 
+
+\item
+ Given $\psi \left( x \right) = x^{2n} + x^{2m} + 1$, show that
+$ \psi \left( 1 \right) = 3$,\ $\psi \left( 0 \right) = 1$, and $\psi \left( a \right) = \psi(-a)$. 
+
+\item
+If $f \left( x \right) = \frac{2x - 3}{x + 7}$, find $f \left( \sqrt{2} \right)$.
+
+\end{enumerate}
+
+Here's how to verify the double angle identity for $\tan$ in
+Exercise 10 above:
+
+\begin{Verbatim}[fontsize=\scriptsize,fontfamily=courier,fontshape=tt,frame=single,label=\SAGE]
+sage: theta = var("theta")
+sage: tan(2*theta).expand_trig()
+2*tan(theta)/(1 - tan(theta)^2)
+\end{Verbatim}
